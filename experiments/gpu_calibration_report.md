@@ -103,6 +103,11 @@ The sample is sparse in the largest buckets. At the largest successful
 attention case (static 1,082,261,504 bytes), the compiler difference was
 -8,257,552 bytes (-0.76%). Scale alone did not produce monotonic relative error.
 
+Using the JAX device limit as the target budget, the median absolute
+budget-normalized error was 0.048%; the maximum was 8.33% (the depth-16
+residual case). The absolute-error/budget metric is less distorted by the
+small residual compiler denominators.
+
 ## Workspace hypothesis
 
 Hypothesis: GPU underprediction is primarily explained by compiler temporary
@@ -175,7 +180,10 @@ compiler false-fit: 0/3 available compiler cases
 ```
 
 This is too small and too easy a boundary to establish production OOM
-classification accuracy.
+classification accuracy. An exploratory 70%, 80%, and 90% static safety-margin
+analysis gives the same classifications for all four trials: the three
+successful cases are below 70% of budget, and the failed case is above 100%.
+It therefore provides no evidence for selecting a production margin.
 
 ## Allocator findings
 
