@@ -1,0 +1,83 @@
+{
+  "artifact": "execution_memory_validation_2026-09-08.json",
+  "calibrated_upper_coverage": 23,
+  "calibrated_upper_miss_count": 1,
+  "dtypes": [
+    "float16",
+    "float32"
+  ],
+  "execution_over_compiler_ratio_max": 1.000070419559737,
+  "execution_over_compiler_ratio_median": 0.8573897924046157,
+  "execution_peak_observed_count": 24,
+  "execution_peak_source": "memory_stats_bytes_in_use_polling",
+  "families": [
+    "attention",
+    "convolution",
+    "fft",
+    "mlp",
+    "training",
+    "transformer"
+  ],
+  "interpretation": "Execution peaks are sampled allocator bytes-in-use observations during repeated calls to an already compiled executable. They can miss shorter-lived allocations and are not exact device-memory traces.",
+  "measurement_semantics": "execution_peak_bytes is the maximum sampled bytes_in_use during repeated calls to an already compiled executable. It is a sampled allocator observation and can miss shorter-lived allocations.",
+  "per_family": {
+    "attention": {
+      "calibrated_upper_coverage": 6,
+      "calibrated_upper_miss_count": 0,
+      "execution_over_compiler_ratio_max": 1.00000672872344,
+      "execution_over_compiler_ratio_median": 0.03029944151922527,
+      "trial_count": 6
+    },
+    "convolution": {
+      "calibrated_upper_coverage": 2,
+      "calibrated_upper_miss_count": 0,
+      "execution_over_compiler_ratio_max": 1.0,
+      "execution_over_compiler_ratio_median": 0.7499987321550827,
+      "trial_count": 2
+    },
+    "fft": {
+      "calibrated_upper_coverage": 2,
+      "calibrated_upper_miss_count": 0,
+      "execution_over_compiler_ratio_max": 1.0,
+      "execution_over_compiler_ratio_median": 1.0,
+      "trial_count": 2
+    },
+    "mlp": {
+      "calibrated_upper_coverage": 6,
+      "calibrated_upper_miss_count": 0,
+      "execution_over_compiler_ratio_max": 1.0,
+      "execution_over_compiler_ratio_median": 0.8857115827372117,
+      "trial_count": 6
+    },
+    "training": {
+      "calibrated_upper_coverage": 3,
+      "calibrated_upper_miss_count": 1,
+      "execution_over_compiler_ratio_max": 1.0000325912626826,
+      "execution_over_compiler_ratio_median": 0.8573897924046157,
+      "trial_count": 4
+    },
+    "transformer": {
+      "calibrated_upper_coverage": 4,
+      "calibrated_upper_miss_count": 0,
+      "execution_over_compiler_ratio_max": 1.000070419559737,
+      "execution_over_compiler_ratio_median": 0.384614933172981,
+      "trial_count": 4
+    }
+  },
+  "profile_method": "allocator_bytes_in_use_polling_during_compiled_execution",
+  "profile_window": "warmup_complete_to_end_of_repeated_compiled_calls",
+  "status": "OBSERVED",
+  "status_counts": {
+    "COMPILE_OOM": 0,
+    "EXECUTION_OOM": 0,
+    "FIT": 24,
+    "OTHER_FAILURE": 0
+  },
+  "trial_count": 24,
+  "xprof": {
+    "memory_profile_peak_available": false,
+    "memory_profile_result": "XProf memory_profile returned unavailable values and peak_allocations reported no memory viewer data for the pilot trace.",
+    "trace_capture_tested": true,
+    "version": "2.23.1"
+  }
+}
