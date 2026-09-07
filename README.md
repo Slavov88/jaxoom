@@ -67,6 +67,22 @@ argument bytes + output bytes + temporary bytes - alias bytes
 It is compiler accounting, not observed runtime peak memory. Compiler analysis
 may be unavailable or differ across JAX versions and backends.
 
+## Calibrated assessment
+
+Calibration is opt-in and does not change `estimated_peak_bytes`:
+
+```python
+interval = jaxoom.calibrate(static)
+assessment = jaxoom.assess(static, memory_limit="16 GiB")
+assessment.print()
+```
+
+The built-in summaries use empirical compiler/static ratios from recorded JAX
+0.6.x CPU and NVIDIA CUDA runs. They return a plausible compiler-accounted
+range and a qualitative budget risk level. The range is not a runtime peak
+interval and the risk level is not an OOM probability. Calibration applicability
+is reported when the backend or JAX version differs from the stored evidence.
+
 ## Preliminary GPU validation
 
 The repository includes a backend-portable calibration harness and an isolated

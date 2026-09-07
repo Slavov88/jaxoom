@@ -6,3 +6,4 @@
 - Added compiler-backed memory accounting and static/compiler comparison.
 - Added CPU and NVIDIA GPU calibration experiments.
 - Added isolated experimental fit-boundary and OOM validation.
+- Added opt-in empirical compiler-accounted memory intervals and qualitative budget risk assessment.

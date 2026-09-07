@@ -26,6 +26,15 @@ PYTHONPATH=src python experiments/runtime_validation.py \
   --output experiments/runtime_validation_YYYY-MM-DD.json
 ```
 
+Calibration evaluation:
+
+```bash
+PYTHONPATH=src python experiments/uncertainty_calibration.py \
+  --cpu-csv experiments/accelerator_calibration_cpu_2026-09-07_v2.csv \
+  --gpu-csv experiments/accelerator_calibration_gpu_2026-09-07_v2.csv \
+  --output-prefix experiments/uncertainty_calibration_YYYY-MM-DD
+```
+
 Stored CSV and JSON files include the environment and raw measured categories.
-Reports distinguish structural JAXPR memory, compiler accounting, and allocator
-counters.
+Reports distinguish structural JAXPR memory, compiler accounting, allocator
+counters, and calibrated compiler intervals.
