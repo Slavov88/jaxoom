@@ -152,7 +152,7 @@ this environment, no full visual timeline was claimed. The profile is not
 committed; only the harness and observations are retained.
 
 `Device.memory_stats()['peak_bytes_in_use']` was also recorded, but is labeled
-an allocator peak counter for the process—not an exact execution-interval peak.
+an allocator peak counter for the process, not an exact execution-interval peak.
 
 ## OOM classification
 

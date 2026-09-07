@@ -41,12 +41,12 @@ Relative values are signed `(static - compiler) / compiler`.
 
 | Family | N | Mean | Median | P90 absolute | Bias | Over | Under | Worst over | Worst under |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| elementwise | 18 | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% | — | — |
-| matmul | 3 | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% | — | — |
-| residual | 10 | 310.0% | 200.0% | 800.0% | 310.0% | 100.0% | 0.0% | 800.0% | — |
-| MLP | 6 | -11.1% | -10.5% | 21.4% | -11.1% | 0.0% | 100.0% | — | -21.4% |
+| elementwise | 18 | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% | n/a | n/a |
+| matmul | 3 | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% | n/a | n/a |
+| residual | 10 | 310.0% | 200.0% | 800.0% | 310.0% | 100.0% | 0.0% | 800.0% | n/a |
+| MLP | 6 | -11.1% | -10.5% | 21.4% | -11.1% | 0.0% | 100.0% | n/a | -21.4% |
 | reduction | 8 | 12.4% | -0.03% | 99.8% | 12.4% | 12.5% | 50.0% | 99.8% | -0.10% |
-| nested | 2 | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% | — | — |
+| nested | 2 | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% | n/a | n/a |
 | autodiff | 5 | 5.7% | -0.05% | 20.0% | 5.7% | 40.0% | 60.0% | 20.0% | -11.2% |
 | **overall** | **52** | **63.2%** | **0.0%** | **200.0%** | **63.2%** | **25.0%** | **25.0%** | **800.0%** | **-21.4%** |
 
@@ -139,4 +139,4 @@ No compiler-unavailable or benchmark-failure rows occurred in this run.
 
 **Choice C: primitive/workspace modeling should be next.**
 
-The evidence does not justify a fusion heuristic or recursive nested-JAXPR redesign yet. Nested cases were small and matched, while the most important dangerous errors came from compiler temporary memory in MLP/autodiff workloads. The next milestone should investigate which primitive/configuration patterns produce `temp_size_in_bytes` and add explicit, evidence-backed workspace accounting or uncertainty—not hand-tuned correction factors.
+The evidence does not justify a fusion heuristic or recursive nested-JAXPR redesign yet. Nested cases were small and matched, while the most important dangerous errors came from compiler temporary memory in MLP/autodiff workloads. The next milestone should investigate which primitive/configuration patterns produce `temp_size_in_bytes` and add explicit, evidence-backed workspace accounting or uncertainty, not hand-tuned correction factors.

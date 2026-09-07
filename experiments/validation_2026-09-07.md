@@ -1,4 +1,4 @@
-# MVP validation — 2026-09-07
+# MVP validation, 2026-09-07
 
 Status: COMPUTATIONALLY VERIFIED for the recorded environment only.
 

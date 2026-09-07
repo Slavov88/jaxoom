@@ -2,70 +2,113 @@
 
 **Know before you OOM.**
 
-`jaxoom` is an early static memory analyzer for JAX. The first milestone traces a function to a JAXPR and computes a conservative **sequential JAXPR live-value peak** for ordinary dense-array computations.
+`jaxoom` provides static and compiler-backed memory analysis for JAX programs.
+The static analyzer traces a function to JAXPR and estimates sequential logical
+live-value memory without numerically executing the workload.
 
-## Status
+**Status: experimental.** This project does not provide exact GPU peak-memory
+prediction or OOM guarantees.
 
-This is v0.1 exploratory software. It does not predict exact XLA or GPU memory.
-
-## Local development
+## Quick start
 
 ```bash
 python -m pip install -e ".[test]"
-pytest
 ```
 
-JAX is the only runtime dependency. The supported JAX version should be checked against the environment where the analysis is run.
-
-## Example
+Analyze shapes without allocating the corresponding array:
 
 ```python
 import jax
 import jax.numpy as jnp
 import jaxoom
 
+x = jax.ShapeDtypeStruct((4096, 4096), jnp.float32)
+
 
 def f(x):
-    y = x @ x.T
-    return y + jnp.sin(y)
+    y = jnp.sin(x)
+    return y + x
 
-report = jaxoom.estimate(
-    f,
-    jax.ShapeDtypeStruct((1024, 1024), "float32"),
-    memory_limit="16 GiB",
-)
+report = jaxoom.estimate(f, x, memory_limit="4 GiB")
 report.print()
 ```
 
-The result is a typed `MemoryReport` with `estimated_peak_bytes`, peak contributors, equation information, limitations, and a conservative analysis-confidence label.
+Output from the current test environment:
 
-## Static and compiler quantities
+```text
+JAXOOM STATIC ANALYSIS
+================================
 
-`jaxoom.estimate` computes a **sequential JAXPR live-value estimate** without compiling the function. `jaxoom.compile_analyze` lowers and compiles the function, then reads backend-reported compiler categories. Its `compiler_accounted_bytes` is defined as:
+Model                         sequential JAXPR live-value estimate
+Estimated structural peak    192.00 MiB
+Equations analyzed           2
+Confidence                   structural
+Memory limit                 4.00 GiB
+Assessment                   LIKELY FIT
+```
+
+## Static and compiler analysis
+
+`estimate()` uses the sequential JAXPR model and does not compile the function.
+
+```python
+static = jaxoom.estimate(f, x)
+compiler = jaxoom.compile_analyze(f, x)
+comparison = jaxoom.compare_memory(static, compiler)
+```
+
+`compile_analyze()` lowers and compiles the function, then reads the backend's
+memory categories. The reported compiler quantity is:
 
 ```text
 argument bytes + output bytes + temporary bytes - alias bytes
 ```
 
-This is compiler accounting, not exact runtime-observed memory or a GPU peak guarantee. Runtime-observed memory is not implemented yet. Compiler availability and categories can vary by backend and JAX/jaxlib version.
+It is compiler accounting, not observed runtime peak memory. Compiler analysis
+may be unavailable or differ across JAX versions and backends.
 
-```python
-static = jaxoom.estimate(fn, *args)
-compiler = jaxoom.compile_analyze(fn, *args)
-comparison = jaxoom.compare_memory(static, compiler)
-# comparison.signed_difference_bytes == static - compiler_accounted
+## Preliminary GPU validation
+
+The repository includes a backend-portable calibration harness and an isolated
+runtime/OOM experiment. One WSL2 run used an NVIDIA GeForce RTX 3050 Laptop GPU
+with 4 GiB VRAM, JAX 0.6.2, and the default allocator:
+
+| Attention sequence | Structural | Compiler accounting | Allocator peak | Result |
+|---:|---:|---:|---:|---|
+| 1024 | 69,238,784 B | 71,303,168 B | 104,857,600 B | FIT |
+| 2048 | 272,695,296 B | 276,824,064 B | 310,378,496 B | FIT |
+| 4096 | 1,082,261,504 B | 1,090,519,040 B | 1,124,073,472 B | FIT |
+| 8192 | 4,312,006,656 B | unavailable | unavailable | OOM during compilation |
+
+This is a small environment-specific validation run, not a GPU accuracy
+benchmark. The full measurements and configuration are in
+`experiments/gpu_calibration_report.md`.
+
+## Limitations
+
+- Sequential JAXPR logical liveness is not exact XLA or runtime memory.
+- Compiler fusion, aliasing, scheduling, allocator behavior, and workspaces are not modeled by the structural estimator.
+- Compiler temporary memory can cause underprediction.
+- Residual graphs can be substantially overpredicted.
+- Nested JAXPR and control-flow handling is limited.
+- Runtime OOM behavior depends on allocator settings and system state.
+- GPU validation remains limited to the recorded environments.
+
+The repository does not yet implement runtime profiling as a public API,
+checkpoint planning, batch-size optimization, or automatic memory optimization.
+
+## Development
+
+```bash
+python -m pip install -e ".[test]"
+python -m pytest
+python -m compileall -q src
+python examples/basic_estimate.py
 ```
 
-## GPU validation status
+Calibration scripts use abstract inputs for compiler comparisons where possible.
+They record environment metadata and should not be treated as production
+benchmarks without reviewing their reports.
 
-A backend-portable calibration harness exists under `experiments/accelerator_calibration.py`. GPU results are currently preliminary and environment-specific; the repository does not yet claim general GPU prediction or OOM-classification accuracy. Experimental runtime validation remains separate from the public API.
-
-## Current limitations
-
-The model counts logical dense JAXPR values and treats each equation as requiring its inputs and newly materialized outputs simultaneously. It does not model compiler fusion, buffer aliasing, scheduling, allocator behavior, device workspaces, control-flow execution semantics, sharding, or runtime observation. Nested/control-flow JAXPR constructs are detected and lower confidence rather than being treated as fully understood.
-
-This is a structural estimate, not an exact GPU-memory oracle and not a guarantee that a workload will or will not OOM.
-
-## Roadmap
-
-Next milestones are compiler-memory comparison, broader nested-JAXPR handling, and batch-size/donation advice—only after validation of this structural model.
+See `CONTRIBUTING.md` for the small development workflow. The project is
+licensed under the MIT License.

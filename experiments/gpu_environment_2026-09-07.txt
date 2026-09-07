@@ -1,7 +1,7 @@
 timestamp=2026-09-07
-venv=/home/slavov/.venvs/jaxoom-gpu
+venv=isolated WSL2 virtual environment
 command=python3 -m pip install jax[cuda12]==0.6.2
-uname=Linux DESKTOP-2PVQEU1 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+kernel=Linux WSL2 6.6.87.2-microsoft-standard x86_64
 os=PRETTY_NAME=Ubuntu 24.04.4 LTS
 nvidia=NVIDIA GeForce RTX 3050 Laptop GPU, 4096 MiB, 566.07
 jax==0.6.2
