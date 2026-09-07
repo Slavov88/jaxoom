@@ -2,7 +2,40 @@
 from __future__ import annotations
 
 from ..analysis.tensor_size import format_bytes
-from ..types import MemoryReport
+from ..types import MemoryAssessment, MemoryReport
+
+
+def render_assessment(assessment: MemoryAssessment) -> str:
+    interval = assessment.interval
+    lower = format_bytes(interval.lower_bytes) if interval.lower_bytes is not None else "unavailable"
+    headroom = (
+        format_bytes(assessment.headroom_to_upper_bytes)
+        if assessment.headroom_to_upper_bytes >= 0
+        else f"-{format_bytes(-assessment.headroom_to_upper_bytes)}"
+    )
+    lines = [
+        "JAXOOM MEMORY ASSESSMENT",
+        "=" * 32,
+        "",
+        f"Structural estimate         {format_bytes(assessment.structural_peak_bytes)}",
+        f"Calibrated central          {format_bytes(interval.central_bytes)}",
+        f"Calibrated range             {lower} to {format_bytes(interval.upper_bytes)}",
+        f"Conservative upper           {format_bytes(interval.upper_bytes)}",
+        f"Memory budget                {format_bytes(assessment.memory_limit_bytes)}",
+        f"Headroom to upper            {headroom}",
+        f"Risk                         {assessment.risk.value if assessment.risk else 'UNAVAILABLE'}",
+        "",
+        "Calibration",
+        f"Scope                       {interval.calibration_scope}",
+        f"Method                      {interval.calibration_method}",
+        f"Target coverage             {interval.coverage_target:.0%}" if interval.coverage_target is not None else "Target coverage             unavailable",
+        f"Dataset                     {interval.dataset_version or 'unavailable'}",
+        f"Samples                     {interval.sample_count or 'unavailable'}",
+        "",
+        "Limitations",
+    ]
+    lines.extend(f"- {limitation}" for limitation in assessment.limitations[:4])
+    return "\n".join(lines)
 
 
 def render_report(report: MemoryReport) -> str:

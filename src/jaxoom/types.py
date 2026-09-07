@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from enum import Enum
 
 
 @dataclass(frozen=True)
@@ -71,6 +72,75 @@ class CompilerMemoryReport:
     jaxlib_version: str
     available: bool
     limitations: tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class MemoryRiskLevel(str, Enum):
+    """Qualitative risk under a supplied memory budget."""
+
+    LOW = "LOW"
+    MODERATE = "MODERATE"
+    HIGH = "HIGH"
+    LIKELY_EXCEEDS_BUDGET = "LIKELY EXCEEDS BUDGET"
+
+
+@dataclass(frozen=True)
+class CalibrationSummary:
+    """Provenance and empirical quantiles for one calibration scope."""
+
+    backend: str
+    hardware_scope: str
+    jax_version_family: str
+    dataset_version: str
+    sample_count: int
+    families: tuple[str, ...]
+    method: str
+    lower_ratio: float
+    central_ratio: float
+    upper_ratio: float
+    coverage_target: float
+    applicability: str
+    limitations: tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class MemoryInterval:
+    """A compiler-accounted memory interval around a structural estimate."""
+
+    lower_bytes: int | None
+    central_bytes: int
+    upper_bytes: int
+    coverage_target: float | None
+    calibration_method: str
+    calibration_scope: str
+    dataset_version: str | None
+    sample_count: int | None
+    applicability: str
+    limitations: tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class MemoryAssessment:
+    """Budget comparison kept separate from the structural memory report."""
+
+    structural_peak_bytes: int
+    interval: MemoryInterval
+    memory_limit_bytes: int
+    risk: MemoryRiskLevel | None
+    calibrated: bool
+    headroom_to_upper_bytes: int
+    limitations: tuple[str, ...]
+
+    def render(self) -> str:
+        from .reports.console import render_assessment
+
+        return render_assessment(self)
+
+    def print(self) -> None:
+        print(self.render())
+
+    def __str__(self) -> str:
+        return self.render()
 
 
 @dataclass(frozen=True)

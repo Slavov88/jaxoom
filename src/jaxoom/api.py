@@ -4,11 +4,20 @@ from __future__ import annotations
 from typing import Any, Callable
 
 from .analysis.liveness import build_lifetimes
+from .calibration import assess as _assess
+from .calibration import calibrate as _calibrate
 from .analysis.peak import calculate_peak
 from .analysis.tensor_size import parse_memory_limit
 from .compiler.memory_analysis import compile_analyze as _compile_analyze
 from .tracing import trace
-from .types import CompilerMemoryReport, MemoryComparison, MemoryReport
+from .types import (
+    CalibrationSummary,
+    CompilerMemoryReport,
+    MemoryAssessment,
+    MemoryComparison,
+    MemoryInterval,
+    MemoryReport,
+)
 
 
 def compile_analyze(
@@ -25,6 +34,29 @@ def compare_memory(static_report: MemoryReport, compiler_report: CompilerMemoryR
     from .compiler.comparison import compare_memory as _compare_memory
 
     return _compare_memory(static_report, compiler_report)
+
+
+def calibrate(
+    report: MemoryReport,
+    *,
+    backend: str | None = None,
+    jax_version: str | None = None,
+    summary: CalibrationSummary | None = None,
+) -> MemoryInterval:
+    """Add an empirical compiler-accounted memory interval to a report."""
+    return _calibrate(report, backend=backend, jax_version=jax_version, summary=summary)
+
+
+def assess(
+    report: MemoryReport,
+    memory_limit: str | int,
+    *,
+    backend: str | None = None,
+    jax_version: str | None = None,
+    summary: CalibrationSummary | None = None,
+) -> MemoryAssessment:
+    """Assess qualitative memory risk under an explicit budget."""
+    return _assess(report, memory_limit, backend=backend, jax_version=jax_version, summary=summary)
 
 
 def estimate(
