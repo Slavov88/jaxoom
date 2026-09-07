@@ -99,9 +99,11 @@ Laptop GPU with 4 GiB VRAM, JAX 0.6.2, and the default allocator:
 The sequence-8192 float32 attention case failed during compilation. This is a
 small environment-specific validation run, not a GPU accuracy benchmark.
 Allocator high-water counters include compilation and backend overhead, so they
-are not execution-only runtime peaks. Full measurements and interpretation are
-in `experiments/runtime_validation_report_2026-09-07_v3.md`; raw data is in
-`experiments/runtime_validation_2026-09-07_v3.json`.
+are not execution-only runtime peaks. A follow-up study sampled allocator
+`bytes_in_use` during compiled execution, but did not establish an exact device
+memory trace. Full measurements and interpretation are in
+`experiments/runtime_validation_report_2026-09-07_v3.md` and
+`experiments/execution_memory_validation_report_2026-09-08.md`.
 
 ## Limitations
 

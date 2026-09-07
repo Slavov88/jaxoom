@@ -35,6 +35,12 @@ The 2026-09-07 expanded run is recorded in
 transformer, and training-like workloads. The report deliberately does not
 turn allocator counters into runtime-peak or OOM-probability claims.
 
+The execution-window study in `execution_memory_validation.py` samples
+`bytes_in_use` only while compiled calls run, after a separate warmup. It does
+not provide an exact device-memory trace. XProf was tested, but its memory
+viewer did not return usable data for the pilot trace. Results are recorded in
+`execution_memory_validation_2026-09-08.json` and its summary and report.
+
 Calibration evaluation:
 
 ```bash
