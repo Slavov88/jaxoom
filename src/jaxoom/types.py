@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Any
 
 
 @dataclass(frozen=True)
@@ -55,3 +54,34 @@ class MemoryReport:
 
     def __str__(self) -> str:
         return self.render()
+
+
+@dataclass(frozen=True)
+class CompilerMemoryReport:
+    """Memory categories returned by the compiled JAX program, when available."""
+
+    argument_bytes: int | None
+    output_bytes: int | None
+    temporary_bytes: int | None
+    alias_bytes: int | None
+    compiler_accounted_bytes: int | None
+    backend: str
+    platform: str | None
+    jax_version: str
+    jaxlib_version: str
+    available: bool
+    limitations: tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class MemoryComparison:
+    """Comparison with signed error defined as static minus compiler bytes."""
+
+    static_peak_bytes: int
+    compiler_accounted_bytes: int | None
+    signed_difference_bytes: int | None
+    absolute_difference_bytes: int | None
+    relative_difference: float | None
+    static_overpredicts: bool | None
+    static_underpredicts: bool | None
+    limitations: tuple[str, ...]

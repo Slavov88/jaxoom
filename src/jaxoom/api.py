@@ -6,8 +6,25 @@ from typing import Any, Callable
 from .analysis.liveness import build_lifetimes
 from .analysis.peak import calculate_peak
 from .analysis.tensor_size import parse_memory_limit
+from .compiler.memory_analysis import compile_analyze as _compile_analyze
 from .tracing import trace
-from .types import MemoryReport
+from .types import CompilerMemoryReport, MemoryComparison, MemoryReport
+
+
+def compile_analyze(
+    fn: Callable[..., Any],
+    *args: Any,
+    **kwargs: Any,
+) -> CompilerMemoryReport:
+    """Compile a function and return backend-reported memory categories."""
+    return _compile_analyze(fn, args, kwargs)
+
+
+def compare_memory(static_report: MemoryReport, compiler_report: CompilerMemoryReport) -> MemoryComparison:
+    """Compare static bytes with compiler accounting using static minus compiler."""
+    from .compiler.comparison import compare_memory as _compare_memory
+
+    return _compare_memory(static_report, compiler_report)
 
 
 def estimate(
