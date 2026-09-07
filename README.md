@@ -56,6 +56,10 @@ comparison = jaxoom.compare_memory(static, compiler)
 # comparison.signed_difference_bytes == static - compiler_accounted
 ```
 
+## GPU validation status
+
+A backend-portable calibration harness exists under `experiments/accelerator_calibration.py`. GPU results are currently preliminary and environment-specific; the repository does not yet claim general GPU prediction or OOM-classification accuracy. Experimental runtime validation remains separate from the public API.
+
 ## Current limitations
 
 The model counts logical dense JAXPR values and treats each equation as requiring its inputs and newly materialized outputs simultaneously. It does not model compiler fusion, buffer aliasing, scheduling, allocator behavior, device workspaces, control-flow execution semantics, sharding, or runtime observation. Nested/control-flow JAXPR constructs are detected and lower confidence rather than being treated as fully understood.
