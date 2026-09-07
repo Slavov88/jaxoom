@@ -1,0 +1,48 @@
+"""Public analysis API."""
+from __future__ import annotations
+
+from typing import Any, Callable
+
+from .analysis.liveness import build_lifetimes
+from .analysis.peak import calculate_peak
+from .analysis.tensor_size import parse_memory_limit
+from .tracing import trace
+from .types import MemoryReport
+
+
+def estimate(
+    fn: Callable[..., Any],
+    *args: Any,
+    memory_limit: str | int | None = None,
+    **kwargs: Any,
+) -> MemoryReport:
+    """Estimate a function's sequential JAXPR live-value peak.
+
+    The callable is traced with JAX abstract values. It is not intentionally
+    numerically executed. Concrete inputs are accepted, and
+    ``jax.ShapeDtypeStruct`` can be used to avoid allocating large arrays.
+    """
+    closed = trace(fn, args, kwargs)
+    model = build_lifetimes(closed)
+    primitives = tuple(str(eqn.primitive) for eqn in closed.jaxpr.eqns)
+    peak = calculate_peak(model, len(primitives), primitives)
+    limit = parse_memory_limit(memory_limit)
+    assessment = None
+    if limit is not None:
+        assessment = "LIKELY FIT" if peak.peak.live_bytes <= limit else "LIKELY OOM"
+    confidence = "limited" if model.unsupported_constructs else "structural"
+    return MemoryReport(
+        estimated_peak_bytes=peak.peak.live_bytes,
+        largest_buffers=peak.largest_buffers,
+        peak=peak.peak,
+        equations_analyzed=len(primitives),
+        confidence=confidence,
+        model="sequential JAXPR live-value estimate",
+        unsupported_constructs=model.unsupported_constructs,
+        limitations=(
+            "JAXPR logical liveness is not compiled buffer liveness.",
+            "Compiler fusion, buffer aliasing, scheduling, allocator behavior, and workspaces are not modeled.",
+        ),
+        memory_limit_bytes=limit,
+        assessment=assessment,
+    )
