@@ -1,0 +1,6 @@
+case,structural,argument,output,temp,alias
+elementwise,8192,4096,4096,0,0
+matmul,14336,12288,2048,0,0
+mlp,65536,49152,2048,16384,0
+residual,12288,4096,4096,0,0
+grad,16384,4096,4096,0,0
