@@ -126,7 +126,7 @@ calibration constants.
 No intrinsic execution OOM was observed. A separate controlled contention trial
 compiled attention with sequence 4096 first, then retained a 2,200,000,000-byte
 float32 background allocation before execution. The compiled execution failed
-with `RESOURCE_EXHAUSTED` while trying to allocate 1,073,741,824 bytes.
+with `RESOURCE_EXHAUSTED` while trying to allocate 1,073,741,840 bytes.
 
 This result is classified as `CONTENTION_EXECUTION_OOM`. It is not part of the
 intrinsic dataset and does not show that the workload alone would OOM. It shows
