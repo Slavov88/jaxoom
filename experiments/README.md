@@ -18,13 +18,22 @@ PYTHONPATH=src python experiments/accelerator_calibration.py \
   --output-prefix experiments/accelerator_calibration_YYYY-MM-DD
 ```
 
-The runtime validation harness launches each trial in a fresh subprocess. It is
-intended for an environment with a CUDA-capable JAX installation:
+The runtime validation harness launches each trial in a fresh subprocess. It
+records compiler accounting and allocator counters at explicit phases. The
+allocator `peak_bytes_in_use` field is a process high-water counter that includes
+compilation, not an execution-only runtime peak. It is intended for an
+environment with a CUDA-capable JAX installation:
 
 ```bash
 PYTHONPATH=src python experiments/runtime_validation.py \
   --output experiments/runtime_validation_YYYY-MM-DD.json
 ```
+
+The 2026-09-07 expanded run is recorded in
+`runtime_validation_2026-09-07_v3.json`, with interpretation in
+`runtime_validation_report_2026-09-07_v3.md`. It covers attention, MLP,
+transformer, and training-like workloads. The report deliberately does not
+turn allocator counters into runtime-peak or OOM-probability claims.
 
 Calibration evaluation:
 

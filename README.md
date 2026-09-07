@@ -86,19 +86,22 @@ is reported when the backend or JAX version differs from the stored evidence.
 ## Preliminary GPU validation
 
 The repository includes a backend-portable calibration harness and an isolated
-runtime/OOM experiment. One WSL2 run used an NVIDIA GeForce RTX 3050 Laptop GPU
-with 4 GiB VRAM, JAX 0.6.2, and the default allocator:
+runtime/OOM experiment. An expanded WSL2 run used an NVIDIA GeForce RTX 3050
+Laptop GPU with 4 GiB VRAM, JAX 0.6.2, and the default allocator:
 
-| Attention sequence | Structural | Compiler accounting | Allocator peak | Result |
-|---:|---:|---:|---:|---|
-| 1024 | 69,238,784 B | 71,303,168 B | 104,857,600 B | FIT |
-| 2048 | 272,695,296 B | 276,824,064 B | 310,378,496 B | FIT |
-| 4096 | 1,082,261,504 B | 1,090,519,040 B | 1,124,073,472 B | FIT |
-| 8192 | 4,312,006,656 B | unavailable | unavailable | OOM during compilation |
+| Workload family | FIT | Compile OOM | Execution OOM |
+|---|---:|---:|---:|
+| Attention | 8 | 1 | 0 |
+| MLP | 6 | 0 | 0 |
+| Transformer | 4 | 0 | 0 |
+| Training-like | 4 | 0 | 0 |
 
-This is a small environment-specific validation run, not a GPU accuracy
-benchmark. The full measurements and configuration are in
-`experiments/gpu_calibration_report.md`.
+The sequence-8192 float32 attention case failed during compilation. This is a
+small environment-specific validation run, not a GPU accuracy benchmark.
+Allocator high-water counters include compilation and backend overhead, so they
+are not execution-only runtime peaks. Full measurements and interpretation are
+in `experiments/runtime_validation_report_2026-09-07_v3.md`; raw data is in
+`experiments/runtime_validation_2026-09-07_v3.json`.
 
 ## Limitations
 
