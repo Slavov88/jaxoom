@@ -1,0 +1,42 @@
+{
+  "status": "OBSERVED",
+  "artifact": "runtime_validation_2026-09-07_v3.json",
+  "trial_count": 23,
+  "status_counts": {
+    "FIT": 22,
+    "COMPILE_OOM": 1,
+    "EXECUTION_OOM": 0,
+    "OTHER_FAILURE": 0
+  },
+  "family_counts": {
+    "attention": {
+      "FIT": 8,
+      "COMPILE_OOM": 1,
+      "EXECUTION_OOM": 0,
+      "OTHER_FAILURE": 0
+    },
+    "mlp": {
+      "FIT": 6,
+      "COMPILE_OOM": 0,
+      "EXECUTION_OOM": 0,
+      "OTHER_FAILURE": 0
+    },
+    "training": {
+      "FIT": 4,
+      "COMPILE_OOM": 0,
+      "EXECUTION_OOM": 0,
+      "OTHER_FAILURE": 0
+    },
+    "transformer": {
+      "FIT": 4,
+      "COMPILE_OOM": 0,
+      "EXECUTION_OOM": 0,
+      "OTHER_FAILURE": 0
+    }
+  },
+  "successful_compiler_accounting_count": 22,
+  "allocator_highwater_le_structural_count": 2,
+  "allocator_highwater_le_calibrated_upper_count": 3,
+  "measurement_semantics": "memory_stats fields are allocator counters; peak_bytes_in_use is a process high-water mark that includes compilation.",
+  "interpretation": "Allocator high-water includes compilation and is not an execution-interval runtime peak."
+}
