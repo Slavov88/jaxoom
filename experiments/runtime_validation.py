@@ -82,6 +82,44 @@ def transformer_workload(sequence: int, width: int, heads: int, dtype: str) -> W
     )
 
 
+def matmul_workload(batch: int, m: int, n: int, k: int, dtype: str) -> Workload:
+    def fn(x, weight):
+        return jnp.matmul(x, weight)
+
+    return Workload(
+        "matmul", f"matmul-b{batch}-m{m}-n{n}-k{k}-{dtype}", {"batch": batch, "m": m, "n": n, "k": k}, dtype,
+        fn, (jax.ShapeDtypeStruct((batch, m, k), dtype), jax.ShapeDtypeStruct((k, n), dtype)),
+    )
+
+
+def convolution_workload(batch: int, height: int, width: int, channels: int, out_channels: int, dtype: str) -> Workload:
+    def fn(x, kernel):
+        return jax.lax.conv_general_dilated(x, kernel, (1, 1), "SAME", dimension_numbers=("NHWC", "HWIO", "NHWC"))
+
+    return Workload(
+        "convolution", f"conv-b{batch}-h{height}-w{width}-c{channels}-o{out_channels}-{dtype}", {"batch": batch, "height": height, "width": width, "channels": channels, "out_channels": out_channels}, dtype,
+        fn, (jax.ShapeDtypeStruct((batch, height, width, channels), dtype), jax.ShapeDtypeStruct((3, 3, channels, out_channels), dtype)),
+    )
+
+
+def autodiff_workload(batch: int, width: int, layers: int, dtype: str) -> Workload:
+    def fn(x, *weights):
+        def loss(params):
+            y = x
+            for weight in params:
+                y = jnp.tanh(y @ weight)
+            return jnp.mean(y)
+        value, grads = jax.value_and_grad(loss)(weights)
+        return value, grads
+
+    args: list[Any] = [jax.ShapeDtypeStruct((batch, width), dtype)]
+    args.extend(jax.ShapeDtypeStruct((width, width), dtype) for _ in range(layers))
+    return Workload(
+        "autodiff", f"autodiff-b{batch}-w{width}-l{layers}-{dtype}", {"batch": batch, "width": width, "layers": layers}, dtype,
+        fn, tuple(args),
+    )
+
+
 def training_workload(batch: int, width: int, dtype: str) -> Workload:
     def fn(x, target, w1, b1, w2, b2):
         def loss(w1, b1, w2, b2):
@@ -107,6 +145,12 @@ def workload_from_config(family: str, config: dict[str, Any], dtype: str) -> Wor
         return transformer_workload(config["sequence"], config["width"], config.get("heads", 8), dtype)
     if family == "training":
         return training_workload(config["batch"], config["width"], dtype)
+    if family == "matmul":
+        return matmul_workload(config["batch"], config["m"], config["n"], config["k"], dtype)
+    if family == "convolution":
+        return convolution_workload(config["batch"], config["height"], config["width"], config["channels"], config["out_channels"], dtype)
+    if family == "autodiff":
+        return autodiff_workload(config["batch"], config["width"], config["layers"], dtype)
     raise ValueError(f"unknown workload family: {family}")
 
 
@@ -333,7 +377,7 @@ def run_parent(output: Path, trials: list[Workload], timeout: int) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--trial", choices=("attention", "mlp", "transformer", "training"))
+    parser.add_argument("--trial", choices=("attention", "mlp", "transformer", "training", "matmul", "convolution", "autodiff"))
     parser.add_argument("--config")
     parser.add_argument("--dtype", default="float32")
     parser.add_argument("--output", type=Path)
