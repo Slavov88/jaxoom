@@ -93,6 +93,29 @@ def attention(batch: int, heads: int, sequence: int, head_dim: int, dtype: str) 
     return Case(f"attention-b{batch}-h{heads}-s{sequence}-d{head_dim}-{dtype}", "attention", dtype, {"batch": batch, "heads": heads, "sequence": sequence, "head_dim": head_dim}, fn, (jax.ShapeDtypeStruct((batch, sequence, width), dtype),))
 
 
+def convolution(height: int, width: int, channels: int, features: int, dtype: str) -> Case:
+    def fn(x, kernel):
+        return jax.lax.conv_general_dilated(
+            x,
+            kernel,
+            (1, 1),
+            "SAME",
+            dimension_numbers=("NHWC", "HWIO", "NHWC"),
+        )
+
+    return Case(
+        f"convolution-{height}x{width}x{channels}x{features}-{dtype}",
+        "convolution",
+        dtype,
+        {"height": height, "width": width, "channels": channels, "features": features},
+        fn,
+        (
+            jax.ShapeDtypeStruct((1, height, width, channels), dtype),
+            jax.ShapeDtypeStruct((3, 3, channels, features), dtype),
+        ),
+    )
+
+
 def transformer(sequence: int, width: int, heads: int, dtype: str) -> Case:
     head_dim = width // heads
 
@@ -105,6 +128,16 @@ def transformer(sequence: int, width: int, heads: int, dtype: str) -> Case:
         return residual + hidden @ w2
 
     return Case(f"transformer-s{sequence}-w{width}-{dtype}", "transformer", dtype, {"sequence": sequence, "width": width, "heads": heads}, fn, (jax.ShapeDtypeStruct((1, sequence, width), dtype), jax.ShapeDtypeStruct((width, 4 * width), dtype), jax.ShapeDtypeStruct((4 * width, width), dtype)))
+
+
+def autodiff(batch: int, width: int, dtype: str) -> Case:
+    def fn(x, weight):
+        def loss(parameter):
+            return jnp.mean(jnp.tanh(x @ parameter) ** 2)
+
+        return jax.value_and_grad(loss)(weight)
+
+    return Case(f"autodiff-b{batch}-w{width}-{dtype}", "autodiff", dtype, {"batch": batch, "width": width}, fn, (jax.ShapeDtypeStruct((batch, width), dtype), jax.ShapeDtypeStruct((width, width), dtype)))
 
 
 def training_step(batch: int, width: int, dtype: str) -> Case:
@@ -134,7 +167,11 @@ def cases() -> list[Case]:
             result.append(mlp(batch, width, depth, dtype))
         for sequence in (512, 1024, 2048, 4096):
             result.append(attention(1, 8, sequence, 64, dtype))
+        for height, width, channels, features in ((128, 128, 16, 32), (256, 256, 32, 64)):
+            result.append(convolution(height, width, channels, features, dtype))
         result.append(transformer(512, 512, 8, dtype))
+        for batch, width in ((128, 256), (256, 512)):
+            result.append(autodiff(batch, width, dtype))
         result.append(training_step(512, 1024, dtype))
     return result
 

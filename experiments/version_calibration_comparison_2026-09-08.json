@@ -1,0 +1,472 @@
+{
+  "candidate_methods": {
+    "conservative_envelope": {
+      "bounds": {
+        "central": 1.0,
+        "lower": 0.3333333333333333,
+        "upper": 1.6676505193119118
+      },
+      "holdout": {
+        "interval_coverage": 0.9,
+        "interval_coverage_count": 9,
+        "median_width_over_static": 1.3343171859785785,
+        "p90_width_over_static": 1.3343171859785785,
+        "sample_count": 10,
+        "upper_coverage": 0.9,
+        "upper_coverage_count": 9,
+        "upper_miss_rate": 0.09999999999999998
+      },
+      "new_expanded": {
+        "interval_coverage": 0.9130434782608695,
+        "interval_coverage_count": 42,
+        "median_width_over_static": 1.3343171859785785,
+        "p90_width_over_static": 1.3343171859785785,
+        "sample_count": 46,
+        "upper_coverage": 0.9565217391304348,
+        "upper_coverage_count": 44,
+        "upper_miss_rate": 0.04347826086956519
+      },
+      "old_expanded": {
+        "interval_coverage": 0.9473684210526315,
+        "interval_coverage_count": 36,
+        "median_width_over_static": 1.3343171859785785,
+        "p90_width_over_static": 1.3343171859785785,
+        "sample_count": 38,
+        "upper_coverage": 1.0,
+        "upper_coverage_count": 38,
+        "upper_miss_rate": 0.0
+      }
+    },
+    "jax_0_11_global": {
+      "bounds": {
+        "central": 1.0,
+        "lower": 0.6734660838594787,
+        "upper": 1.6676505193119118
+      },
+      "cross_validation": {
+        "leave_family_out": {
+          "interval_coverage": 0.8043478260869565,
+          "interval_coverage_count": 37,
+          "upper_coverage": 0.8913043478260869,
+          "upper_coverage_count": 41
+        },
+        "leave_one_out": {
+          "interval_coverage": 0.8260869565217391,
+          "interval_coverage_count": 38,
+          "upper_coverage": 0.9347826086956522,
+          "upper_coverage_count": 43
+        }
+      },
+      "holdout": {
+        "interval_coverage": 0.9,
+        "interval_coverage_count": 9,
+        "median_width_over_static": 1.3343171859785785,
+        "p90_width_over_static": 1.3343171859785785,
+        "sample_count": 10,
+        "upper_coverage": 0.9,
+        "upper_coverage_count": 9,
+        "upper_miss_rate": 0.09999999999999998
+      },
+      "new_expanded": {
+        "interval_coverage": 0.8695652173913043,
+        "interval_coverage_count": 40,
+        "median_width_over_static": 0.9941844354524331,
+        "p90_width_over_static": 0.9941844354524331,
+        "sample_count": 46,
+        "upper_coverage": 0.9565217391304348,
+        "upper_coverage_count": 44,
+        "upper_miss_rate": 0.04347826086956519
+      }
+    },
+    "legacy_0_6_global": {
+      "bounds": {
+        "central": 1.0,
+        "lower": 0.3333333333333333,
+        "upper": 1.0937538146972656
+      },
+      "holdout": {
+        "interval_coverage": 0.7,
+        "interval_coverage_count": 7,
+        "median_width_over_static": 0.7604204813639324,
+        "p90_width_over_static": 0.7604204813639324,
+        "sample_count": 10,
+        "upper_coverage": 0.7,
+        "upper_coverage_count": 7,
+        "upper_miss_rate": 0.30000000000000004
+      },
+      "new_expanded": {
+        "interval_coverage": 0.8478260869565217,
+        "interval_coverage_count": 39,
+        "median_width_over_static": 0.7604204813639324,
+        "p90_width_over_static": 0.7604204813639324,
+        "sample_count": 46,
+        "upper_coverage": 0.8913043478260869,
+        "upper_coverage_count": 41,
+        "upper_miss_rate": 0.10869565217391308
+      }
+    },
+    "pooled_global": {
+      "bounds": {
+        "central": 1.0,
+        "lower": 0.6734660838594787,
+        "upper": 1.428588400063215
+      },
+      "holdout": {
+        "interval_coverage": 0.7,
+        "interval_coverage_count": 7,
+        "median_width_over_static": 0.8854395548502605,
+        "p90_width_over_static": 0.8854395548502605,
+        "sample_count": 10,
+        "upper_coverage": 0.7,
+        "upper_coverage_count": 7,
+        "upper_miss_rate": 0.30000000000000004
+      },
+      "new_expanded": {
+        "interval_coverage": 0.8260869565217391,
+        "interval_coverage_count": 38,
+        "median_width_over_static": 0.7551223162037363,
+        "p90_width_over_static": 0.7551223162037363,
+        "sample_count": 46,
+        "upper_coverage": 0.9130434782608695,
+        "upper_coverage_count": 42,
+        "upper_miss_rate": 0.08695652173913049
+      },
+      "old_expanded": {
+        "interval_coverage": 0.8947368421052632,
+        "interval_coverage_count": 34,
+        "median_width_over_static": 0.7551223162037363,
+        "p90_width_over_static": 0.7551223162037363,
+        "sample_count": 38,
+        "upper_coverage": 1.0,
+        "upper_coverage_count": 38,
+        "upper_miss_rate": 0.0
+      }
+    }
+  },
+  "datasets": {
+    "current_expanded_cases": 46,
+    "current_holdout_cases": 10,
+    "current_matched_cases": 14,
+    "current_train_cases": 36,
+    "holdout_groups": [
+      "autodiff:float16",
+      "autodiff:float32",
+      "mlp:float16",
+      "mlp:float32"
+    ],
+    "legacy_expanded_cases": 38,
+    "legacy_matched_cases": 14
+  },
+  "drift_by_family": {
+    "attention": [
+      {
+        "compiler_accounted_delta": -8208,
+        "compiler_alias_delta": 0,
+        "compiler_argument_delta": 0,
+        "compiler_output_delta": 0,
+        "compiler_ratio_0_11": 0.7191011235955056,
+        "compiler_ratio_0_6": 0.7197265625,
+        "compiler_temp_delta": -8208,
+        "name": "attention-f16",
+        "ratio_of_ratios": 0.9991310048328328,
+        "static_bytes_delta": 0
+      },
+      {
+        "compiler_accounted_delta": 0,
+        "compiler_alias_delta": 0,
+        "compiler_argument_delta": 0,
+        "compiler_output_delta": 0,
+        "compiler_ratio_0_11": 1.0578512396694215,
+        "compiler_ratio_0_6": 1.0578512396694215,
+        "compiler_temp_delta": 0,
+        "name": "attention-f32",
+        "ratio_of_ratios": 1.0,
+        "static_bytes_delta": 0
+      }
+    ],
+    "autodiff": [
+      {
+        "compiler_accounted_delta": 524288,
+        "compiler_alias_delta": 0,
+        "compiler_argument_delta": 0,
+        "compiler_output_delta": 0,
+        "compiler_ratio_0_11": 2.0,
+        "compiler_ratio_0_6": 1.2,
+        "compiler_temp_delta": 524288,
+        "name": "grad-f32",
+        "ratio_of_ratios": 1.6666666666666667,
+        "static_bytes_delta": 0
+      },
+      {
+        "compiler_accounted_delta": 524288,
+        "compiler_alias_delta": 0,
+        "compiler_argument_delta": 0,
+        "compiler_output_delta": 0,
+        "compiler_ratio_0_11": 2.500049590686106,
+        "compiler_ratio_0_6": 1.5000572200224302,
+        "compiler_temp_delta": 524288,
+        "name": "value-and-grad-f32",
+        "ratio_of_ratios": 1.6666361504854614,
+        "static_bytes_delta": 0
+      }
+    ],
+    "convolution": [
+      {
+        "compiler_accounted_delta": 0,
+        "compiler_alias_delta": 0,
+        "compiler_argument_delta": 0,
+        "compiler_output_delta": 0,
+        "compiler_ratio_0_11": 1.6686893203883495,
+        "compiler_ratio_0_6": 1.6686893203883495,
+        "compiler_temp_delta": 0,
+        "name": "convolution-f32",
+        "ratio_of_ratios": 1.0,
+        "static_bytes_delta": 0
+      }
+    ],
+    "elementwise": [
+      {
+        "compiler_accounted_delta": 0,
+        "compiler_alias_delta": 0,
+        "compiler_argument_delta": 0,
+        "compiler_output_delta": 0,
+        "compiler_ratio_0_11": 0.6666666666666666,
+        "compiler_ratio_0_6": 0.6666666666666666,
+        "compiler_temp_delta": 0,
+        "name": "elementwise-f32",
+        "ratio_of_ratios": 1.0,
+        "static_bytes_delta": 0
+      }
+    ],
+    "fft": [
+      {
+        "compiler_accounted_delta": 0,
+        "compiler_alias_delta": 0,
+        "compiler_argument_delta": 0,
+        "compiler_output_delta": 0,
+        "compiler_ratio_0_11": 1.0,
+        "compiler_ratio_0_6": 1.0,
+        "compiler_temp_delta": 0,
+        "name": "fft-f32",
+        "ratio_of_ratios": 1.0,
+        "static_bytes_delta": 0
+      }
+    ],
+    "matmul": [
+      {
+        "compiler_accounted_delta": 0,
+        "compiler_alias_delta": 0,
+        "compiler_argument_delta": 0,
+        "compiler_output_delta": 0,
+        "compiler_ratio_0_11": 1.0,
+        "compiler_ratio_0_6": 1.0,
+        "compiler_temp_delta": 0,
+        "name": "matmul-f16",
+        "ratio_of_ratios": 1.0,
+        "static_bytes_delta": 0
+      },
+      {
+        "compiler_accounted_delta": 0,
+        "compiler_alias_delta": 0,
+        "compiler_argument_delta": 0,
+        "compiler_output_delta": 0,
+        "compiler_ratio_0_11": 1.0,
+        "compiler_ratio_0_6": 1.0,
+        "compiler_temp_delta": 0,
+        "name": "matmul-f32",
+        "ratio_of_ratios": 1.0,
+        "static_bytes_delta": 0
+      }
+    ],
+    "mlp": [
+      {
+        "compiler_accounted_delta": 1048576,
+        "compiler_alias_delta": 0,
+        "compiler_argument_delta": 0,
+        "compiler_output_delta": 0,
+        "compiler_ratio_0_11": 1.3125,
+        "compiler_ratio_0_6": 1.0625,
+        "compiler_temp_delta": 1048576,
+        "name": "mlp-f16",
+        "ratio_of_ratios": 1.2352941176470589,
+        "static_bytes_delta": 0
+      },
+      {
+        "compiler_accounted_delta": 1048576,
+        "compiler_alias_delta": 0,
+        "compiler_argument_delta": 0,
+        "compiler_output_delta": 0,
+        "compiler_ratio_0_11": 1.1875,
+        "compiler_ratio_0_6": 1.0625,
+        "compiler_temp_delta": 1048576,
+        "name": "mlp-f32",
+        "ratio_of_ratios": 1.1176470588235294,
+        "static_bytes_delta": 0
+      }
+    ],
+    "reduction": [
+      {
+        "compiler_accounted_delta": 0,
+        "compiler_alias_delta": 0,
+        "compiler_argument_delta": 0,
+        "compiler_output_delta": 0,
+        "compiler_ratio_0_11": 1.0,
+        "compiler_ratio_0_6": 1.0,
+        "compiler_temp_delta": 0,
+        "name": "reduction-f32",
+        "ratio_of_ratios": 1.0,
+        "static_bytes_delta": 0
+      }
+    ],
+    "residual": [
+      {
+        "compiler_accounted_delta": 0,
+        "compiler_alias_delta": 0,
+        "compiler_argument_delta": 0,
+        "compiler_output_delta": 0,
+        "compiler_ratio_0_11": 1.0,
+        "compiler_ratio_0_6": 1.0,
+        "compiler_temp_delta": 0,
+        "name": "residual-f32",
+        "ratio_of_ratios": 1.0,
+        "static_bytes_delta": 0
+      }
+    ],
+    "transformer": [
+      {
+        "compiler_accounted_delta": 0,
+        "compiler_alias_delta": 0,
+        "compiler_argument_delta": 0,
+        "compiler_output_delta": 0,
+        "compiler_ratio_0_11": 0.9987995198079231,
+        "compiler_ratio_0_6": 0.9987995198079231,
+        "compiler_temp_delta": 0,
+        "name": "transformer-f32",
+        "ratio_of_ratios": 1.0,
+        "static_bytes_delta": 0
+      }
+    ]
+  },
+  "method": {
+    "central_quantile": 0.5,
+    "lower_quantile": 0.1,
+    "quantiles": "nearest-rank",
+    "ratio": "compiler_accounted_bytes / static_peak_bytes",
+    "upper_quantile": 0.95
+  },
+  "status": "COMPUTATIONALLY VERIFIED",
+  "transfer_both_directions": {
+    "current_to_legacy_expanded": {
+      "interval_coverage": 0.8947368421052632,
+      "interval_coverage_count": 34,
+      "median_width_over_static": 0.9941844354524331,
+      "p90_width_over_static": 0.9941844354524331,
+      "sample_count": 38,
+      "upper_coverage": 1.0,
+      "upper_coverage_count": 38,
+      "upper_miss_rate": 0.0
+    },
+    "legacy_0_6_to_current_expanded": {
+      "interval_coverage": 0.8478260869565217,
+      "interval_coverage_count": 39,
+      "median_width_over_static": 0.7604204813639324,
+      "p90_width_over_static": 0.7604204813639324,
+      "sample_count": 46,
+      "upper_coverage": 0.8913043478260869,
+      "upper_coverage_count": 41,
+      "upper_miss_rate": 0.10869565217391308
+    }
+  },
+  "transfer_failure": {
+    "misses": [
+      {
+        "compiler_alias_bytes": 0,
+        "compiler_temp_bytes": 2115840,
+        "configuration": {
+          "channels": 16,
+          "features": 32,
+          "height": 128,
+          "width": 128
+        },
+        "dtype": "float32",
+        "family": "convolution",
+        "jax_0_11_compiler_bytes": 5280000,
+        "legacy_upper_bytes": 3460812,
+        "name": "convolution-f32",
+        "shortfall_bytes": 1819188,
+        "shortfall_fraction_of_compiler": 0.34454318181818183,
+        "static_bytes": 3164160
+      },
+      {
+        "compiler_alias_bytes": 0,
+        "compiler_temp_bytes": 655360,
+        "configuration": {
+          "batch": 128,
+          "width": 256
+        },
+        "dtype": "float32",
+        "family": "autodiff",
+        "jax_0_11_compiler_bytes": 1310720,
+        "legacy_upper_bytes": 716802,
+        "name": "grad-f32",
+        "shortfall_bytes": 593918,
+        "shortfall_fraction_of_compiler": 0.45312347412109377,
+        "static_bytes": 655360
+      },
+      {
+        "compiler_alias_bytes": 0,
+        "compiler_temp_bytes": 1572864,
+        "configuration": {
+          "batch": 256,
+          "width": 1024
+        },
+        "dtype": "float16",
+        "family": "mlp",
+        "jax_0_11_compiler_bytes": 5505024,
+        "legacy_upper_bytes": 4587536,
+        "name": "mlp-f16",
+        "shortfall_bytes": 917488,
+        "shortfall_fraction_of_compiler": 0.16666376023065477,
+        "static_bytes": 4194304
+      },
+      {
+        "compiler_alias_bytes": 0,
+        "compiler_temp_bytes": 2097152,
+        "configuration": {
+          "batch": 256,
+          "width": 1024
+        },
+        "dtype": "float32",
+        "family": "mlp",
+        "jax_0_11_compiler_bytes": 9961472,
+        "legacy_upper_bytes": 9175072,
+        "name": "mlp-f32",
+        "shortfall_bytes": 786400,
+        "shortfall_fraction_of_compiler": 0.0789441560444079,
+        "static_bytes": 8388608
+      },
+      {
+        "compiler_alias_bytes": 0,
+        "compiler_temp_bytes": 655376,
+        "configuration": {
+          "batch": 128,
+          "width": 256
+        },
+        "dtype": "float32",
+        "family": "autodiff",
+        "jax_0_11_compiler_bytes": 1310756,
+        "legacy_upper_bytes": 573446,
+        "name": "value-and-grad-f32",
+        "shortfall_bytes": 737310,
+        "shortfall_fraction_of_compiler": 0.5625074384553647,
+        "static_bytes": 524292
+      }
+    ],
+    "summary": {
+      "sample_count": 14,
+      "upper_coverage": 0.6428571428571429,
+      "upper_coverage_count": 9,
+      "upper_miss_rate": 0.35714285714285715
+    }
+  }
+}
