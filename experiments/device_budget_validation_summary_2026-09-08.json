@@ -1,0 +1,33 @@
+{
+  "status": "OBSERVED",
+  "environment": {
+    "backend": "gpu",
+    "device": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "jax_version": "0.11.0",
+    "physical_total_bytes": 4294967296
+  },
+  "occupancy": {
+    "levels_mib": [256, 768, 1280],
+    "assessment_budget_bytes": [3868406579, 3519230771, 2642621235, 1568879411],
+    "upper_headroom_bytes": [-181813943, -530989751, -1407599287, -2481341111],
+    "risk_sequence": ["MODERATE", "MODERATE", "MODERATE", "LIKELY EXCEEDS BUDGET"],
+    "interpretation": "Observed budget and headroom decreased under retained external allocation; the highest pressure changed the classification. All allocations were released successfully."
+  },
+  "latency_ms_median": {
+    "estimate": 0.516,
+    "assess_auto": 60.716,
+    "device_query": 55.948,
+    "compile_analyze": 1.695,
+    "analyze_donation": 9.704
+  },
+  "boundary_trials": {
+    "status": "NOT RUN",
+    "reason": "The occupancy pilot was completed first; no additional compile or execution OOM trials were run in this artifact."
+  },
+  "limitations": [
+    "This is a small single-device pilot.",
+    "nvidia-smi subprocess latency dominated assess(auto) in this environment.",
+    "The calibrated interval is compiler-accounted memory, not exact runtime peak memory.",
+    "The snapshot does not reserve memory and free VRAM can change after it is taken."
+  ]
+}

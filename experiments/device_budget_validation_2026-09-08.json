@@ -1,0 +1,167 @@
+{
+  "environment": {
+    "backend": "gpu",
+    "device": "cuda:0",
+    "jax_version": "0.11.0"
+  },
+  "latency": {
+    "analyze_donation_ms_median": 9.703908988740295,
+    "assess_auto_ms_median": 60.716069012414664,
+    "compile_analyze_ms_median": 1.6949410201050341,
+    "device_query_ms_median": 55.94788503367454,
+    "estimate_ms_median": 0.5156259867362678
+  },
+  "occupancy": {
+    "records": [
+      {
+        "assessment_budget_bytes": 3868406579,
+        "central_bytes": 2428698624,
+        "driver_free_bytes": 4083154944,
+        "driver_used_bytes": 74448896,
+        "effective_available_bytes": 4083154944,
+        "external_used_bytes": 74448896,
+        "headroom_to_upper_bytes": -181813943,
+        "jax_bytes_in_use": 0,
+        "jax_pool_bytes": 0,
+        "label": "before",
+        "limitations": [
+          "current free GPU memory can change after this snapshot"
+        ],
+        "physical_total_bytes": 4294967296,
+        "risk": "MODERATE",
+        "safety_reserve_bytes": 214748365,
+        "structural_bytes": 2428698624,
+        "timestamp": "2026-09-08T12:09:55.616740+00:00",
+        "upper_bytes": 4050220522
+      },
+      {
+        "assessment_budget_bytes": 3519230771,
+        "central_bytes": 2428698624,
+        "driver_free_bytes": 3733979136,
+        "driver_used_bytes": 423624704,
+        "effective_available_bytes": 3733979136,
+        "external_used_bytes": 423624704,
+        "headroom_to_upper_bytes": -530989751,
+        "jax_bytes_in_use": 0,
+        "jax_pool_bytes": 0,
+        "label": "external_256MiB",
+        "limitations": [
+          "current free GPU memory can change after this snapshot"
+        ],
+        "physical_total_bytes": 4294967296,
+        "risk": "MODERATE",
+        "safety_reserve_bytes": 214748365,
+        "structural_bytes": 2428698624,
+        "timestamp": "2026-09-08T12:10:02.803462+00:00",
+        "upper_bytes": 4050220522
+      },
+      {
+        "assessment_budget_bytes": 3858969395,
+        "central_bytes": 2428698624,
+        "driver_free_bytes": 4073717760,
+        "driver_used_bytes": 83886080,
+        "effective_available_bytes": 4073717760,
+        "external_used_bytes": 83886080,
+        "headroom_to_upper_bytes": -191251127,
+        "jax_bytes_in_use": 0,
+        "jax_pool_bytes": 0,
+        "label": "after_release_256MiB",
+        "limitations": [
+          "current free GPU memory can change after this snapshot"
+        ],
+        "physical_total_bytes": 4294967296,
+        "risk": "MODERATE",
+        "safety_reserve_bytes": 214748365,
+        "structural_bytes": 2428698624,
+        "timestamp": "2026-09-08T12:10:03.487949+00:00",
+        "upper_bytes": 4050220522
+      },
+      {
+        "assessment_budget_bytes": 2642621235,
+        "central_bytes": 2428698624,
+        "driver_free_bytes": 2857369600,
+        "driver_used_bytes": 1300234240,
+        "effective_available_bytes": 2857369600,
+        "external_used_bytes": 1300234240,
+        "headroom_to_upper_bytes": -1407599287,
+        "jax_bytes_in_use": 0,
+        "jax_pool_bytes": 0,
+        "label": "external_768MiB",
+        "limitations": [
+          "current free GPU memory can change after this snapshot"
+        ],
+        "physical_total_bytes": 4294967296,
+        "risk": "MODERATE",
+        "safety_reserve_bytes": 214748365,
+        "structural_bytes": 2428698624,
+        "timestamp": "2026-09-08T12:10:09.626938+00:00",
+        "upper_bytes": 4050220522
+      },
+      {
+        "assessment_budget_bytes": 3796054835,
+        "central_bytes": 2428698624,
+        "driver_free_bytes": 4010803200,
+        "driver_used_bytes": 146800640,
+        "effective_available_bytes": 4010803200,
+        "external_used_bytes": 146800640,
+        "headroom_to_upper_bytes": -254165687,
+        "jax_bytes_in_use": 0,
+        "jax_pool_bytes": 0,
+        "label": "after_release_768MiB",
+        "limitations": [
+          "current free GPU memory can change after this snapshot"
+        ],
+        "physical_total_bytes": 4294967296,
+        "risk": "MODERATE",
+        "safety_reserve_bytes": 214748365,
+        "structural_bytes": 2428698624,
+        "timestamp": "2026-09-08T12:10:10.815529+00:00",
+        "upper_bytes": 4050220522
+      },
+      {
+        "assessment_budget_bytes": 1568879411,
+        "central_bytes": 2428698624,
+        "driver_free_bytes": 1783627776,
+        "driver_used_bytes": 2373976064,
+        "effective_available_bytes": 1783627776,
+        "external_used_bytes": 2373976064,
+        "headroom_to_upper_bytes": -2481341111,
+        "jax_bytes_in_use": 0,
+        "jax_pool_bytes": 0,
+        "label": "external_1280MiB",
+        "limitations": [
+          "current free GPU memory can change after this snapshot"
+        ],
+        "physical_total_bytes": 4294967296,
+        "risk": "LIKELY EXCEEDS BUDGET",
+        "safety_reserve_bytes": 214748365,
+        "structural_bytes": 2428698624,
+        "timestamp": "2026-09-08T12:10:17.390963+00:00",
+        "upper_bytes": 4050220522
+      },
+      {
+        "assessment_budget_bytes": 3796054835,
+        "central_bytes": 2428698624,
+        "driver_free_bytes": 4010803200,
+        "driver_used_bytes": 146800640,
+        "effective_available_bytes": 4010803200,
+        "external_used_bytes": 146800640,
+        "headroom_to_upper_bytes": -254165687,
+        "jax_bytes_in_use": 0,
+        "jax_pool_bytes": 0,
+        "label": "after_release_1280MiB",
+        "limitations": [
+          "current free GPU memory can change after this snapshot"
+        ],
+        "physical_total_bytes": 4294967296,
+        "risk": "MODERATE",
+        "safety_reserve_bytes": 214748365,
+        "structural_bytes": 2428698624,
+        "timestamp": "2026-09-08T12:10:18.682213+00:00",
+        "upper_bytes": 4050220522
+      }
+    ],
+    "status": "OBSERVED"
+  },
+  "status": "OBSERVED"
+}
