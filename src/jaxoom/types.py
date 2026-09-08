@@ -186,6 +186,10 @@ class DeviceMemorySnapshot:
     measurement_sources: tuple[str, ...]
     limitations: tuple[str, ...]
     timestamp: str
+    allocator_limit_bytes: int | None = None
+    allocator_largest_free_block_bytes: int | None = None
+    allocator_fraction_source: str | None = None
+    budget_provenance: str | None = None
 
     def render(self) -> str:
         from .reports.console import render_device_memory
@@ -209,6 +213,7 @@ class DeviceBudget:
     assessment_budget_bytes: int | None
     policy: str
     limitations: tuple[str, ...]
+    binding_constraint: str = "UNKNOWN"
 
 
 @dataclass(frozen=True)

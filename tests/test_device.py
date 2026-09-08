@@ -53,9 +53,18 @@ def test_nvidia_query_maps_visible_device(monkeypatch):
     assert result["free_bytes"] == 6144 * 1024**2
 
 
-def test_effective_available_accounts_for_free_pool():
-    effective = device_module._effective_available(100, 80, 20, 1000, None)
-    assert effective == 160
+def test_effective_available_respects_allocator_limit_without_pool_double_counting():
+    effective, provenance, binding = device_module._effective_available(400, 300)
+    assert effective == 300
+    assert provenance == "ALLOCATOR_AND_DRIVER"
+    assert binding == "ALLOCATOR_LIMITED"
+
+
+def test_driver_only_capacity_is_explicit():
+    effective, provenance, binding = device_module._effective_available(400, None)
+    assert effective == 400
+    assert provenance == "DRIVER_ONLY"
+    assert binding == "DRIVER_LIMITED"
 
 
 def test_device_budget_reserves_memory():
@@ -89,3 +98,24 @@ def test_high_risk_callable_has_donation_hint(monkeypatch):
     assessment = jaxoom.assess(lambda x: x + 1, jax.ShapeDtypeStruct((8,), "float32"), memory_limit="auto")
     assert assessment.risk is MemoryRiskLevel.LIKELY_EXCEEDS_BUDGET
     assert assessment.remediation_hint and "analyze_donation" in assessment.remediation_hint
+
+
+def test_snapshot_records_allocator_limit_and_binding(monkeypatch):
+    fake_device = SimpleNamespace(platform="gpu", device_kind="NVIDIA RTX", id=0)
+    monkeypatch.setattr(device_module.jax, "devices", lambda: [fake_device])
+    monkeypatch.setattr(device_module.jax, "default_backend", lambda: "gpu")
+    monkeypatch.setattr(device_module, "_jax_stats", lambda device: {"bytes_limit": 300, "pool_bytes": 80, "bytes_in_use": 20, "peak_bytes_in_use": 90, "largest_free_block_bytes": 40})
+    monkeypatch.setattr(device_module, "_nvidia_memory", lambda device_id, device_kind: {"uuid": "GPU-test", "total_bytes": 1000, "used_bytes": 100, "free_bytes": 900})
+    result = device_module.device_memory()
+    assert result.allocator_limit_bytes == 300
+    assert result.effective_available_bytes == 300
+    assert result.budget_provenance == "ALLOCATOR_AND_DRIVER"
+    assert result.allocator_largest_free_block_bytes == 40
+
+
+def test_current_fraction_variable_precedes_legacy(monkeypatch):
+    monkeypatch.setenv("XLA_CLIENT_MEM_FRACTION", "0.5")
+    monkeypatch.setenv("XLA_PYTHON_CLIENT_MEM_FRACTION", "0.25")
+    policy = device_module._allocator_policy()
+    assert policy["fraction"] == 0.5
+    assert policy["fraction_source"] == "XLA_CLIENT_MEM_FRACTION"

@@ -45,8 +45,10 @@ def device_memory() -> DeviceMemorySnapshot:
     jax_in_use = _stat(stats, "bytes_in_use")
     jax_peak = _stat(stats, "peak_bytes_in_use")
     jax_pool = _stat(stats, "pool_bytes")
-    if jax_pool is None:
-        jax_pool = _stat(stats, "bytes_limit") if allocator["preallocate"] is True else None
+    allocator_limit = _stat(stats, "bytes_limit")
+    if allocator_limit is None and allocator["fraction"] is not None and physical_total is not None:
+        allocator_limit = max(0, round(physical_total * allocator["fraction"]))
+    largest_free_block = _stat(stats, "largest_free_block_bytes")
     external = None
     if driver_used is not None and jax_pool is not None:
         external = max(0, driver_used - jax_pool)
@@ -54,7 +56,7 @@ def device_memory() -> DeviceMemorySnapshot:
         external = max(0, driver_used - jax_in_use)
         limitations.append("external_used_bytes is approximate because JAX pool size was unavailable.")
 
-    effective = _effective_available(driver_free, jax_pool, jax_in_use, physical_total, allocator["fraction"])
+    effective, provenance, binding = _effective_available(driver_free, allocator_limit)
     if effective is not None:
         sources.append("derived available-memory policy")
     else:
@@ -78,6 +80,10 @@ def device_memory() -> DeviceMemorySnapshot:
         measurement_sources=tuple(sources),
         limitations=tuple(limitations),
         timestamp=datetime.now(timezone.utc).isoformat(),
+        allocator_limit_bytes=allocator_limit,
+        allocator_largest_free_block_bytes=largest_free_block,
+        allocator_fraction_source=allocator["fraction_source"],
+        budget_provenance=provenance,
     )
 
 
@@ -88,10 +94,10 @@ def device_budget(snapshot: DeviceMemorySnapshot | None = None, *, reserve_fract
         raise ValueError("reserve_fraction must be in [0, 1)")
     total = snapshot.physical_total_bytes
     if total is None or snapshot.effective_available_bytes is None:
-        return DeviceBudget(snapshot, snapshot.effective_available_bytes, None, None, "current device memory unavailable", snapshot.limitations + ("auto device budget is unavailable; use an explicit memory limit",))
+        return DeviceBudget(snapshot, snapshot.effective_available_bytes, None, None, "current device memory unavailable", snapshot.limitations + ("auto device budget is unavailable; use an explicit memory limit",), snapshot.budget_provenance or "PARTIAL")
     reserve = max(_MIN_RESERVE_BYTES, min(_MAX_RESERVE_BYTES, round(total * reserve_fraction)))
     budget = max(0, snapshot.effective_available_bytes - reserve)
-    return DeviceBudget(snapshot, snapshot.effective_available_bytes, reserve, budget, "effective available memory minus 5% safety reserve, bounded to 64 MiB through 256 MiB", snapshot.limitations + ("current free GPU memory can change after this snapshot",))
+    return DeviceBudget(snapshot, snapshot.effective_available_bytes, reserve, budget, "minimum of driver-free and JAX allocator capacity minus 5% safety reserve, bounded to 64 MiB through 256 MiB", snapshot.limitations + ("current free GPU memory can change after this snapshot",), _binding_constraint(snapshot))
 
 
 def _jax_stats(device: Any) -> dict[str, Any]:
@@ -114,28 +120,44 @@ def _allocator_policy() -> dict[str, Any]:
     preallocate_text = os.environ.get("XLA_PYTHON_CLIENT_PREALLOCATE")
     preallocate = None if preallocate_text is None else preallocate_text.lower() in {"1", "true", "yes", "on"}
     fraction = None
-    for key in ("XLA_PYTHON_CLIENT_MEM_FRACTION", "XLA_CLIENT_MEM_FRACTION"):
+    fraction_source = None
+    for key in ("XLA_CLIENT_MEM_FRACTION", "XLA_PYTHON_CLIENT_MEM_FRACTION"):
         value = os.environ.get(key)
         if value is not None:
             try:
                 fraction = float(value)
+                fraction_source = key
                 break
             except ValueError:
                 pass
     mode = os.environ.get("XLA_PYTHON_CLIENT_ALLOCATOR") or os.environ.get("TF_GPU_ALLOCATOR")
-    return {"preallocate": preallocate, "fraction": fraction, "mode": mode or ("default" if preallocate is not False else "no preallocation")}
+    return {"preallocate": preallocate, "fraction": fraction, "fraction_source": fraction_source, "mode": mode or ("default" if preallocate is not False else "no preallocation")}
 
 
-def _effective_available(driver_free: int | None, pool: int | None, in_use: int | None, total: int | None, fraction: float | None) -> int | None:
+def _effective_available(driver_free: int | None, allocator_limit: int | None) -> tuple[int | None, str, str]:
+    """Return a conservative capacity without counting pool bytes twice."""
+    if driver_free is None and allocator_limit is None:
+        return None, "PARTIAL", "UNKNOWN"
     if driver_free is None:
-        return None
-    available = driver_free
-    if pool is not None and in_use is not None:
-        available += max(0, pool - in_use)
-    if fraction is not None and total is not None and in_use is not None:
-        cap = max(0, round(total * fraction))
-        available = min(available, driver_free + max(0, cap - in_use))
-    return max(0, available)
+        return max(0, allocator_limit), "ALLOCATOR_LIMIT", "ALLOCATOR_LIMITED"
+    if allocator_limit is None:
+        return max(0, driver_free), "DRIVER_ONLY", "DRIVER_LIMITED"
+    if allocator_limit < driver_free:
+        return max(0, allocator_limit), "ALLOCATOR_AND_DRIVER", "ALLOCATOR_LIMITED"
+    if driver_free < allocator_limit:
+        return max(0, driver_free), "ALLOCATOR_AND_DRIVER", "DRIVER_LIMITED"
+    return max(0, driver_free), "ALLOCATOR_AND_DRIVER", "BOTH_APPROXIMATELY_EQUAL"
+
+
+def _binding_constraint(snapshot: DeviceMemorySnapshot) -> str:
+    if snapshot.budget_provenance == "ALLOCATOR_AND_DRIVER":
+        if snapshot.allocator_limit_bytes is not None and snapshot.driver_free_bytes is not None:
+            if snapshot.allocator_limit_bytes < snapshot.driver_free_bytes:
+                return "ALLOCATOR_LIMITED"
+            if snapshot.driver_free_bytes < snapshot.allocator_limit_bytes:
+                return "DRIVER_LIMITED"
+            return "BOTH_APPROXIMATELY_EQUAL"
+    return snapshot.budget_provenance or "PARTIAL"
 
 
 def _nvidia_memory(device_id: int | None, device_kind: str | None) -> dict[str, Any] | None:
