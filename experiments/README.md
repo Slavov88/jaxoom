@@ -69,3 +69,17 @@ PYTHONPATH=src python experiments/uncertainty_calibration.py \
 Stored CSV and JSON files include the environment and raw measured categories.
 Reports distinguish structural JAXPR memory, compiler accounting, allocator
 counters, and calibrated compiler intervals.
+
+Portable cross-device validation uses the frozen JAX 0.11.0 GPU dataset as a
+reference and reruns the same logical cases on the active CUDA device:
+
+```bash
+PYTHONPATH=src:experiments python experiments/device_transfer_validation.py \
+  --reference experiments/jax_0_11_gpu_calibration_2026-09-08_v2.json \
+  --output-prefix experiments/device_transfer_validation_<gpu>_YYYY-MM-DD
+```
+
+The harness records paired compiler categories, frozen-calibration coverage,
+device metadata, family/dtype/size summaries, and a Markdown report. It
+refuses to label the RTX 3050 as an independent device. Use
+`--allow-same-device-smoke` only for a local harness smoke test.
