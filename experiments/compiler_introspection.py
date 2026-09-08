@@ -78,14 +78,17 @@ def compiler_record(compiled: Any) -> dict[str, Any]:
     result: dict[str, Any] = {"compiled_text_available": False}
     try:
         text = compiled.as_text()
+        custom_targets = sorted(set(re.findall(r"custom[-_]call[^\n]*?(?:target|call_target)[ ]*=\s*\"([^\"]+)\"", text, re.IGNORECASE)))
         result.update(
             compiled_text_available=True,
             text_sha256=digest(text),
             text_length=len(text),
             line_count=text.count("\n") + 1,
+            operation_histogram=operation_histogram(text),
             instruction_count=len(re.findall(r"^[ ]{2,}[A-Za-z0-9_.-]+[ (]", text, re.MULTILINE)),
             fusion_count=len(re.findall(r"fusion", text, re.IGNORECASE)),
             custom_call_count=text.lower().count("custom-call") + text.lower().count("custom_call"),
+            custom_call_targets=custom_targets,
             copy_count=len(re.findall(r"(?:^|[ .])copy(?:[ (]|$)", text, re.IGNORECASE)),
             dot_count=text.lower().count("dot("),
             convolution_count=text.lower().count("convolution"),
@@ -121,6 +124,7 @@ def environment() -> dict[str, Any]:
         "backend": jax.default_backend(),
         "devices": [str(device) for device in jax.devices()],
         "device_kind": [getattr(device, "device_kind", None) for device in jax.devices()],
+        "xla_flags": os.environ.get("XLA_FLAGS"),
         "allocator_environment": {key: os.environ.get(key) for key in ("XLA_PYTHON_CLIENT_PREALLOCATE", "XLA_PYTHON_CLIENT_MEM_FRACTION", "XLA_CLIENT_MEM_FRACTION", "XLA_PYTHON_CLIENT_ALLOCATOR", "TF_GPU_ALLOCATOR")},
     }
 
@@ -135,6 +139,25 @@ def configure_xla(path: Path | None, extra_flags: str) -> None:
     os.environ["XLA_FLAGS"] = " ".join(part for part in [current, *additions] if part).strip()
 
 
+def dump_paths(path: Path | None) -> set[Path]:
+    if path is None or not path.exists():
+        return set()
+    return {item for item in path.rglob("*") if item.is_file()}
+
+
+def dump_delta(before: set[Path], after: set[Path], root: Path | None) -> dict[str, Any]:
+    added = sorted(after - before)
+    relative = [str(item.relative_to(root)) for item in added] if root is not None else []
+    memory_totals = []
+    for item in added:
+        if "memory-usage-report" not in item.name:
+            continue
+        text = item.read_text(encoding="utf-8", errors="replace")
+        match = re.search(r"Total bytes:\s*(\d+)", text)
+        memory_totals.append({"path": str(item.relative_to(root)), "total_bytes": int(match.group(1)) if match else None, "parser_status": "PARSED_TOTAL_BYTES" if match else "UNKNOWN"})
+    return {"file_count": len(relative), "files": relative, "memory_usage_reports": memory_totals}
+
+
 def inventory_dumps(path: Path) -> dict[str, Any]:
     files = []
     if path.exists():
@@ -144,7 +167,7 @@ def inventory_dumps(path: Path) -> dict[str, Any]:
             record = {"path": str(item.relative_to(path)), "size_bytes": item.stat().st_size, "kind": _dump_kind(item.name)}
             if record["kind"] == "memory_usage_report":
                 text = item.read_text(encoding="utf-8", errors="replace")
-                match = re.search(r"Total bytes:\\s*(\\d+)", text)
+                match = re.search(r"Total bytes:\s*(\d+)", text)
                 record["parser_status"] = "PARSED_TOTAL_BYTES" if match else "UNKNOWN"
                 record["total_bytes"] = int(match.group(1)) if match else None
                 record["text_sha256"] = digest(text)
@@ -193,22 +216,26 @@ def run(args: argparse.Namespace) -> None:
         case_id = manifest_row["case_id"]
         case = definitions[case_id]
         row: dict[str, Any] = {"case_id": case_id, "family": case.family, "dtype": case.dtype, "status": "OK"}
+        dump_before = dump_paths(args.dump_dir)
         try:
             lowered = jax.jit(case.fn).lower(*case.args)
             compiled = lowered.compile()
             memory = memory_record(compiled)
             expected = manifest_rows[case_id]
+            dump_after = dump_paths(args.dump_dir)
             row.update(
                 configuration=case.config,
                 jaxpr=compact_jaxpr(case.fn, case.args),
                 lowered_ir={dialect: ir_record(lowered, dialect) for dialect in ("stablehlo", "hlo")},
                 compiled_hlo=compiler_record(compiled),
                 memory_analysis=memory,
+                dump_delta=dump_delta(dump_before, dump_after, args.dump_dir),
                 reproduction={
-                    "expected_accounted_bytes": expected.get("rtx3050_compiler_accounted"),
-                    "expected_temp_bytes": expected.get("rtx3050_temp"),
-                    "accounted_matches": memory["accounted_bytes"] == expected.get("rtx3050_compiler_accounted"),
-                    "temp_matches": memory["temp_size_in_bytes"] == expected.get("rtx3050_temp"),
+                    "expected_device": args.expected_device,
+                    "expected_accounted_bytes": expected.get(f"{args.expected_device}_compiler_accounted") if args.expected_device != "none" else None,
+                    "expected_temp_bytes": expected.get(f"{args.expected_device}_temp") if args.expected_device != "none" else None,
+                    "accounted_matches": (memory["accounted_bytes"] == expected.get(f"{args.expected_device}_compiler_accounted")) if args.expected_device != "none" else None,
+                    "temp_matches": (memory["temp_size_in_bytes"] == expected.get(f"{args.expected_device}_temp")) if args.expected_device != "none" else None,
                 },
             )
         except (KeyboardInterrupt, SystemExit):
@@ -218,8 +245,10 @@ def run(args: argparse.Namespace) -> None:
         results.append(row)
 
     capture_complete = all(row["status"] == "OK" for row in results)
-    reproduction_complete = capture_complete and all(row.get("reproduction", {}).get("accounted_matches") and row.get("reproduction", {}).get("temp_matches") for row in results)
-    payload = {"status": "COMPUTATIONALLY VERIFIED" if reproduction_complete else ("INCOMPLETE_REPRODUCTION" if capture_complete else "INCOMPLETE"), "capture_status": "COMPLETE" if capture_complete else "INCOMPLETE", "reproduction_status": "MATCHED" if reproduction_complete else "MISMATCHED_OR_UNAVAILABLE", "environment": environment(), "manifest": str(args.manifest), "cases": results, "dump_inventory": inventory_dumps(args.dump_dir) if args.dump_dir else {"status": "NOT_REQUESTED"}}
+    reproduction_requested = args.expected_device != "none"
+    reproduction_complete = capture_complete and reproduction_requested and all(row.get("reproduction", {}).get("accounted_matches") and row.get("reproduction", {}).get("temp_matches") for row in results)
+    reproduction_status = "MATCHED" if reproduction_complete else ("NOT_REQUESTED" if not reproduction_requested else "MISMATCHED_OR_UNAVAILABLE")
+    payload = {"status": "COMPUTATIONALLY VERIFIED" if capture_complete else "INCOMPLETE", "capture_status": "COMPLETE" if capture_complete else "INCOMPLETE", "reproduction_status": reproduction_status, "expected_device": args.expected_device, "environment": environment(), "manifest": str(args.manifest), "cases": results, "dump_inventory": inventory_dumps(args.dump_dir) if args.dump_dir else {"status": "NOT_REQUESTED"}}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps({"status": payload["status"], "case_count": len(results), "failed": sum(row["status"] != "OK" for row in results), "output": str(args.output)}, indent=2))
@@ -230,7 +259,8 @@ def main() -> None:
     parser.add_argument("--manifest", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--dump-dir", type=Path)
-    parser.add_argument("--xla-flags", default="--xla_gpu_autotune_level=0", help="XLA flags set before importing JAX; the default matches the recorded RTX calibration.")
+    parser.add_argument("--xla-flags", default="--xla_gpu_autotune_level=0", help="XLA flags set before importing JAX; the default matches the recorded diagnostic runs.")
+    parser.add_argument("--expected-device", choices=("rtx3050", "t4", "none"), default="rtx3050", help="Optional expected memory fields from the manifest. Use none for a new paired run with different compiler flags.")
     run(parser.parse_args())
 
 

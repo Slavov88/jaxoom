@@ -8,12 +8,14 @@
         "convolution_count": 0,
         "copy_count": 0,
         "custom_call_count": 0,
+        "custom_call_targets": [],
         "dot_count": 1,
         "fusion_count": 7,
         "instruction_count": 2,
         "line_count": 38,
+        "operation_histogram": {},
         "text_length": 2320,
-        "text_sha256": "b413c9eb444bf9a2b596bf8768d028726e3754a4e21c1ee072758178ec2092fb",
+        "text_sha256": "3ea6213b5e5bbe9f0736017c63de4f89cea17f3503ba21373a2448b23ec8c3da",
         "transpose_count": 0
       },
       "configuration": {
@@ -22,6 +24,41 @@
         "n": 1024
       },
       "dtype": "float32",
+      "dump_delta": {
+        "file_count": 23,
+        "files": [
+          "module_0000.jit__lambda/compile_options.textproto",
+          "module_0000.jit__lambda/module.mlir",
+          "module_0000.jit__lambda/topology.textproto",
+          "module_0000.jit__lambda.0.ir-no-opt.ll",
+          "module_0000.jit__lambda.1.ir-with-opt.ll",
+          "module_0000.jit__lambda.1.ptx",
+          "module_0000.jit__lambda.2.ir-no-opt.ll",
+          "module_0000.jit__lambda.3.ir-with-opt.ll",
+          "module_0000.jit__lambda.3.ptx",
+          "module_0000.jit__lambda.after_spmd_partitioner.txt",
+          "module_0000.jit__lambda.autotune_results.pbtxt",
+          "module_0000.jit__lambda.before_config_assignment.txt",
+          "module_0000.jit__lambda.before_optimizations.txt",
+          "module_0000.jit__lambda.config.pbtxt",
+          "module_0000.jit__lambda.debug_options",
+          "module_0000.jit__lambda.gpu_target_config.pbtxt",
+          "module_0000.jit__lambda.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+          "module_0000.jit__lambda.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+          "module_0000.jit__lambda.sm_8.6_gpu_after_optimizations-live-range.txt",
+          "module_0000.jit__lambda.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+          "module_0000.jit__lambda.sm_8.6_gpu_after_optimizations.txt",
+          "module_0000.jit__lambda.thunk_metadata.txt",
+          "module_0000.jit__lambda.thunk_sequence.txt"
+        ],
+        "memory_usage_reports": [
+          {
+            "parser_status": "PARSED_TOTAL_BYTES",
+            "path": "module_0000.jit__lambda.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+            "total_bytes": 37748736
+          }
+        ]
+      },
       "family": "matmul",
       "jaxpr": {
         "equation_count": 1,
@@ -70,6 +107,7 @@
       "reproduction": {
         "accounted_matches": true,
         "expected_accounted_bytes": 37748736,
+        "expected_device": "rtx3050",
         "expected_temp_bytes": 0,
         "temp_matches": true
       },
@@ -82,12 +120,14 @@
         "convolution_count": 0,
         "copy_count": 0,
         "custom_call_count": 0,
+        "custom_call_targets": [],
         "dot_count": 2,
         "fusion_count": 15,
         "instruction_count": 3,
         "line_count": 51,
+        "operation_histogram": {},
         "text_length": 3864,
-        "text_sha256": "b24817cd60dbb37ddc97572467768abf1fd2461e3d9301d9128acf40e4ed10c0",
+        "text_sha256": "a8e735e25b3b5b2e5c5de88d91ff86ce804cd8829f355cc9d39a162a74c59f43",
         "transpose_count": 0
       },
       "configuration": {
@@ -96,6 +136,44 @@
         "width": 2048
       },
       "dtype": "float32",
+      "dump_delta": {
+        "file_count": 26,
+        "files": [
+          "module_0004.jit_fn/compile_options.textproto",
+          "module_0004.jit_fn/module.mlir",
+          "module_0004.jit_fn/topology.textproto",
+          "module_0004.jit_fn.0.ir-no-opt.ll",
+          "module_0004.jit_fn.1.ir-with-opt.ll",
+          "module_0004.jit_fn.1.ptx",
+          "module_0004.jit_fn.2.ir-no-opt.ll",
+          "module_0004.jit_fn.3.ir-no-opt.ll",
+          "module_0004.jit_fn.4.ir-with-opt.ll",
+          "module_0004.jit_fn.4.ptx",
+          "module_0004.jit_fn.5.ir-with-opt.ll",
+          "module_0004.jit_fn.5.ptx",
+          "module_0004.jit_fn.after_spmd_partitioner.txt",
+          "module_0004.jit_fn.autotune_results.pbtxt",
+          "module_0004.jit_fn.before_config_assignment.txt",
+          "module_0004.jit_fn.before_optimizations.txt",
+          "module_0004.jit_fn.config.pbtxt",
+          "module_0004.jit_fn.debug_options",
+          "module_0004.jit_fn.gpu_target_config.pbtxt",
+          "module_0004.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+          "module_0004.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+          "module_0004.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+          "module_0004.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+          "module_0004.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+          "module_0004.jit_fn.thunk_metadata.txt",
+          "module_0004.jit_fn.thunk_sequence.txt"
+        ],
+        "memory_usage_reports": [
+          {
+            "parser_status": "PARSED_TOTAL_BYTES",
+            "path": "module_0004.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+            "total_bytes": 30408704
+          }
+        ]
+      },
       "family": "mlp",
       "jaxpr": {
         "equation_count": 3,
@@ -147,6 +225,7 @@
       "reproduction": {
         "accounted_matches": true,
         "expected_accounted_bytes": 30408704,
+        "expected_device": "rtx3050",
         "expected_temp_bytes": 2097152,
         "temp_matches": true
       },
@@ -159,12 +238,14 @@
         "convolution_count": 0,
         "copy_count": 0,
         "custom_call_count": 0,
+        "custom_call_targets": [],
         "dot_count": 2,
         "fusion_count": 19,
         "instruction_count": 6,
         "line_count": 85,
+        "operation_histogram": {},
         "text_length": 7079,
-        "text_sha256": "866085d126a8baba4c6fd32e07ddf68279375ab2a87d5e99a386296719ec444f",
+        "text_sha256": "a58f2adfec68da533e28bfc2c0ae11aef945e2401b0cebef96c06a93b8aaf165",
         "transpose_count": 11
       },
       "configuration": {
@@ -174,6 +255,47 @@
         "sequence": 512
       },
       "dtype": "float32",
+      "dump_delta": {
+        "file_count": 29,
+        "files": [
+          "module_0010.jit_fn/compile_options.textproto",
+          "module_0010.jit_fn/module.mlir",
+          "module_0010.jit_fn/topology.textproto",
+          "module_0010.jit_fn.0.ir-no-opt.ll",
+          "module_0010.jit_fn.1.ir-with-opt.ll",
+          "module_0010.jit_fn.1.ptx",
+          "module_0010.jit_fn.2.ir-no-opt.ll",
+          "module_0010.jit_fn.3.ir-with-opt.ll",
+          "module_0010.jit_fn.3.ptx",
+          "module_0010.jit_fn.4.ir-no-opt.ll",
+          "module_0010.jit_fn.5.ir-with-opt.ll",
+          "module_0010.jit_fn.5.ptx",
+          "module_0010.jit_fn.6.ir-no-opt.ll",
+          "module_0010.jit_fn.7.ir-with-opt.ll",
+          "module_0010.jit_fn.7.ptx",
+          "module_0010.jit_fn.after_spmd_partitioner.txt",
+          "module_0010.jit_fn.autotune_results.pbtxt",
+          "module_0010.jit_fn.before_config_assignment.txt",
+          "module_0010.jit_fn.before_optimizations.txt",
+          "module_0010.jit_fn.config.pbtxt",
+          "module_0010.jit_fn.debug_options",
+          "module_0010.jit_fn.gpu_target_config.pbtxt",
+          "module_0010.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+          "module_0010.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+          "module_0010.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+          "module_0010.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+          "module_0010.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+          "module_0010.jit_fn.thunk_metadata.txt",
+          "module_0010.jit_fn.thunk_sequence.txt"
+        ],
+        "memory_usage_reports": [
+          {
+            "parser_status": "PARSED_TOTAL_BYTES",
+            "path": "module_0010.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+            "total_bytes": 18874392
+          }
+        ]
+      },
       "family": "attention",
       "jaxpr": {
         "equation_count": 16,
@@ -243,6 +365,7 @@
       "reproduction": {
         "accounted_matches": true,
         "expected_accounted_bytes": 18874368,
+        "expected_device": "rtx3050",
         "expected_temp_bytes": 16777216,
         "temp_matches": true
       },
@@ -255,12 +378,16 @@
         "convolution_count": 1,
         "copy_count": 0,
         "custom_call_count": 2,
+        "custom_call_targets": [
+          "__cudnn$convForward"
+        ],
         "dot_count": 0,
         "fusion_count": 5,
         "instruction_count": 4,
         "line_count": 51,
+        "operation_histogram": {},
         "text_length": 3647,
-        "text_sha256": "ce18ed8417af3b308b28e0cae12f279a8a73880042d97b79dbca09e01270376b",
+        "text_sha256": "a2da32e9f9e53d15d5366b1fe57873b2372438528e7c4f8233c798cb56341098",
         "transpose_count": 17
       },
       "configuration": {
@@ -270,6 +397,47 @@
         "width": 128
       },
       "dtype": "float32",
+      "dump_delta": {
+        "file_count": 29,
+        "files": [
+          "module_0018.jit_fn/compile_options.textproto",
+          "module_0018.jit_fn/module.mlir",
+          "module_0018.jit_fn/topology.textproto",
+          "module_0018.jit_fn.0.ir-no-opt.ll",
+          "module_0018.jit_fn.1.ir-no-opt.ll",
+          "module_0018.jit_fn.2.ir-no-opt.ll",
+          "module_0018.jit_fn.3.ir-with-opt.ll",
+          "module_0018.jit_fn.3.ptx",
+          "module_0018.jit_fn.4.ir-with-opt.ll",
+          "module_0018.jit_fn.4.ptx",
+          "module_0018.jit_fn.5.ir-with-opt.ll",
+          "module_0018.jit_fn.5.ptx",
+          "module_0018.jit_fn.6.ir-no-opt.ll",
+          "module_0018.jit_fn.7.ir-with-opt.ll",
+          "module_0018.jit_fn.7.ptx",
+          "module_0018.jit_fn.after_spmd_partitioner.txt",
+          "module_0018.jit_fn.autotune_results.pbtxt",
+          "module_0018.jit_fn.before_config_assignment.txt",
+          "module_0018.jit_fn.before_optimizations.txt",
+          "module_0018.jit_fn.config.pbtxt",
+          "module_0018.jit_fn.debug_options",
+          "module_0018.jit_fn.gpu_target_config.pbtxt",
+          "module_0018.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+          "module_0018.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+          "module_0018.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+          "module_0018.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+          "module_0018.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+          "module_0018.jit_fn.thunk_metadata.txt",
+          "module_0018.jit_fn.thunk_sequence.txt"
+        ],
+        "memory_usage_reports": [
+          {
+            "parser_status": "PARSED_TOTAL_BYTES",
+            "path": "module_0018.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+            "total_bytes": 5280000
+          }
+        ]
+      },
       "family": "convolution",
       "jaxpr": {
         "equation_count": 1,
@@ -318,6 +486,7 @@
       "reproduction": {
         "accounted_matches": true,
         "expected_accounted_bytes": 5280000,
+        "expected_device": "rtx3050",
         "expected_temp_bytes": 2115840,
         "temp_matches": true
       },
@@ -330,12 +499,16 @@
         "convolution_count": 1,
         "copy_count": 0,
         "custom_call_count": 2,
+        "custom_call_targets": [
+          "__cudnn$convForward"
+        ],
         "dot_count": 0,
         "fusion_count": 5,
         "instruction_count": 4,
         "line_count": 51,
+        "operation_histogram": {},
         "text_length": 3648,
-        "text_sha256": "551b632d5994924116fa785b477105273921aaa26ad267c2c549b159cd4e9e75",
+        "text_sha256": "09d8b66c96a2c8581f414c2f6934c289e4bc1c2079d0df1ab48f30ff4baec7cb",
         "transpose_count": 17
       },
       "configuration": {
@@ -345,6 +518,47 @@
         "width": 256
       },
       "dtype": "float32",
+      "dump_delta": {
+        "file_count": 29,
+        "files": [
+          "module_0020.jit_fn/compile_options.textproto",
+          "module_0020.jit_fn/module.mlir",
+          "module_0020.jit_fn/topology.textproto",
+          "module_0020.jit_fn.0.ir-no-opt.ll",
+          "module_0020.jit_fn.1.ir-no-opt.ll",
+          "module_0020.jit_fn.2.ir-no-opt.ll",
+          "module_0020.jit_fn.3.ir-with-opt.ll",
+          "module_0020.jit_fn.3.ptx",
+          "module_0020.jit_fn.4.ir-with-opt.ll",
+          "module_0020.jit_fn.4.ptx",
+          "module_0020.jit_fn.5.ir-with-opt.ll",
+          "module_0020.jit_fn.5.ptx",
+          "module_0020.jit_fn.6.ir-no-opt.ll",
+          "module_0020.jit_fn.7.ir-with-opt.ll",
+          "module_0020.jit_fn.7.ptx",
+          "module_0020.jit_fn.after_spmd_partitioner.txt",
+          "module_0020.jit_fn.autotune_results.pbtxt",
+          "module_0020.jit_fn.before_config_assignment.txt",
+          "module_0020.jit_fn.before_optimizations.txt",
+          "module_0020.jit_fn.config.pbtxt",
+          "module_0020.jit_fn.debug_options",
+          "module_0020.jit_fn.gpu_target_config.pbtxt",
+          "module_0020.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+          "module_0020.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+          "module_0020.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+          "module_0020.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+          "module_0020.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+          "module_0020.jit_fn.thunk_metadata.txt",
+          "module_0020.jit_fn.thunk_sequence.txt"
+        ],
+        "memory_usage_reports": [
+          {
+            "parser_status": "PARSED_TOTAL_BYTES",
+            "path": "module_0020.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+            "total_bytes": 42090752
+          }
+        ]
+      },
       "family": "convolution",
       "jaxpr": {
         "equation_count": 1,
@@ -393,6 +607,7 @@
       "reproduction": {
         "accounted_matches": true,
         "expected_accounted_bytes": 42090752,
+        "expected_device": "rtx3050",
         "expected_temp_bytes": 16851200,
         "temp_matches": true
       },
@@ -405,12 +620,14 @@
         "convolution_count": 0,
         "copy_count": 0,
         "custom_call_count": 0,
+        "custom_call_targets": [],
         "dot_count": 2,
         "fusion_count": 29,
         "instruction_count": 9,
         "line_count": 108,
+        "operation_histogram": {},
         "text_length": 8090,
-        "text_sha256": "89c7b9d0e2fe7c0ea638fb5056e807efdd1c5ddfcac8ad5c748c7be665caed03",
+        "text_sha256": "ba269591cb408ff85c689ea07903ec269ff76324317fba25ee5f76d38caef5d3",
         "transpose_count": 12
       },
       "configuration": {
@@ -418,6 +635,57 @@
         "width": 256
       },
       "dtype": "float32",
+      "dump_delta": {
+        "file_count": 39,
+        "files": [
+          "module_0022.jit_fn/compile_options.textproto",
+          "module_0022.jit_fn/module.mlir",
+          "module_0022.jit_fn/topology.textproto",
+          "module_0022.jit_fn.0.ir-no-opt.ll",
+          "module_0022.jit_fn.1.ir-no-opt.ll",
+          "module_0022.jit_fn.10.ir-with-opt.ll",
+          "module_0022.jit_fn.10.ptx",
+          "module_0022.jit_fn.11.ir-with-opt.ll",
+          "module_0022.jit_fn.11.ptx",
+          "module_0022.jit_fn.12.ir-no-opt.ll",
+          "module_0022.jit_fn.13.ir-with-opt.ll",
+          "module_0022.jit_fn.13.ptx",
+          "module_0022.jit_fn.2.ir-no-opt.ll",
+          "module_0022.jit_fn.3.ir-no-opt.ll",
+          "module_0022.jit_fn.4.ir-no-opt.ll",
+          "module_0022.jit_fn.5.ir-with-opt.ll",
+          "module_0022.jit_fn.5.ptx",
+          "module_0022.jit_fn.6.ir-with-opt.ll",
+          "module_0022.jit_fn.6.ptx",
+          "module_0022.jit_fn.7.ir-with-opt.ll",
+          "module_0022.jit_fn.7.ptx",
+          "module_0022.jit_fn.8.ir-no-opt.ll",
+          "module_0022.jit_fn.9.ir-with-opt.ll",
+          "module_0022.jit_fn.9.ptx",
+          "module_0022.jit_fn.after_spmd_partitioner.txt",
+          "module_0022.jit_fn.autotune_results.pbtxt",
+          "module_0022.jit_fn.before_config_assignment.txt",
+          "module_0022.jit_fn.before_optimizations.txt",
+          "module_0022.jit_fn.config.pbtxt",
+          "module_0022.jit_fn.debug_options",
+          "module_0022.jit_fn.gpu_target_config.pbtxt",
+          "module_0022.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+          "module_0022.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+          "module_0022.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+          "module_0022.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+          "module_0022.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+          "module_0022.jit_fn.thunk_metadata.txt",
+          "module_0022.jit_fn.thunk_sequence.txt",
+          "module_0022.jit_fn.thunk_sequence_after_thunk_passes.txt"
+        ],
+        "memory_usage_reports": [
+          {
+            "parser_status": "PARSED_TOTAL_BYTES",
+            "path": "module_0022.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+            "total_bytes": 1310764
+          }
+        ]
+      },
       "family": "autodiff",
       "jaxpr": {
         "equation_count": 15,
@@ -485,6 +753,7 @@
       "reproduction": {
         "accounted_matches": true,
         "expected_accounted_bytes": 1310740,
+        "expected_device": "rtx3050",
         "expected_temp_bytes": 655360,
         "temp_matches": true
       },
@@ -497,12 +766,14 @@
         "convolution_count": 0,
         "copy_count": 0,
         "custom_call_count": 0,
+        "custom_call_targets": [],
         "dot_count": 2,
         "fusion_count": 29,
         "instruction_count": 9,
         "line_count": 108,
+        "operation_histogram": {},
         "text_length": 8094,
-        "text_sha256": "864b440757b282bb4c4a3453cb2050fd657f40ccce6cf18276f2f1cf92927135",
+        "text_sha256": "7ad98de018b0cf305eed629d4c5ea646367d1ac2b7a3fd83300e698561c2ccef",
         "transpose_count": 12
       },
       "configuration": {
@@ -510,6 +781,57 @@
         "width": 512
       },
       "dtype": "float32",
+      "dump_delta": {
+        "file_count": 39,
+        "files": [
+          "module_0028.jit_fn/compile_options.textproto",
+          "module_0028.jit_fn/module.mlir",
+          "module_0028.jit_fn/topology.textproto",
+          "module_0028.jit_fn.0.ir-no-opt.ll",
+          "module_0028.jit_fn.1.ir-no-opt.ll",
+          "module_0028.jit_fn.10.ir-with-opt.ll",
+          "module_0028.jit_fn.10.ptx",
+          "module_0028.jit_fn.11.ir-no-opt.ll",
+          "module_0028.jit_fn.12.ir-with-opt.ll",
+          "module_0028.jit_fn.12.ptx",
+          "module_0028.jit_fn.13.ir-with-opt.ll",
+          "module_0028.jit_fn.13.ptx",
+          "module_0028.jit_fn.2.ir-no-opt.ll",
+          "module_0028.jit_fn.3.ir-no-opt.ll",
+          "module_0028.jit_fn.4.ir-no-opt.ll",
+          "module_0028.jit_fn.5.ir-with-opt.ll",
+          "module_0028.jit_fn.5.ptx",
+          "module_0028.jit_fn.6.ir-with-opt.ll",
+          "module_0028.jit_fn.6.ptx",
+          "module_0028.jit_fn.7.ir-no-opt.ll",
+          "module_0028.jit_fn.8.ir-with-opt.ll",
+          "module_0028.jit_fn.8.ptx",
+          "module_0028.jit_fn.9.ir-with-opt.ll",
+          "module_0028.jit_fn.9.ptx",
+          "module_0028.jit_fn.after_spmd_partitioner.txt",
+          "module_0028.jit_fn.autotune_results.pbtxt",
+          "module_0028.jit_fn.before_config_assignment.txt",
+          "module_0028.jit_fn.before_optimizations.txt",
+          "module_0028.jit_fn.config.pbtxt",
+          "module_0028.jit_fn.debug_options",
+          "module_0028.jit_fn.gpu_target_config.pbtxt",
+          "module_0028.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+          "module_0028.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+          "module_0028.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+          "module_0028.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+          "module_0028.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+          "module_0028.jit_fn.thunk_metadata.txt",
+          "module_0028.jit_fn.thunk_sequence.txt",
+          "module_0028.jit_fn.thunk_sequence_after_thunk_passes.txt"
+        ],
+        "memory_usage_reports": [
+          {
+            "parser_status": "PARSED_TOTAL_BYTES",
+            "path": "module_0028.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+            "total_bytes": 3145772
+          }
+        ]
+      },
       "family": "autodiff",
       "jaxpr": {
         "equation_count": 15,
@@ -577,6 +899,7 @@
       "reproduction": {
         "accounted_matches": true,
         "expected_accounted_bytes": 3145748,
+        "expected_device": "rtx3050",
         "expected_temp_bytes": 524288,
         "temp_matches": true
       },
@@ -589,12 +912,14 @@
         "convolution_count": 0,
         "copy_count": 0,
         "custom_call_count": 0,
+        "custom_call_targets": [],
         "dot_count": 5,
         "fusion_count": 67,
         "instruction_count": 16,
         "line_count": 213,
+        "operation_histogram": {},
         "text_length": 18718,
-        "text_sha256": "dd1ead84a849a9fc6af3f464ffe66df1ef6c30485a8ad258f702580b092de7e5",
+        "text_sha256": "c2cb93fc6c7f14c69c9b5eb367958a31db87d21b3e8ac9f1acd4fe558c4832c0",
         "transpose_count": 33
       },
       "configuration": {
@@ -602,6 +927,75 @@
         "width": 1024
       },
       "dtype": "float32",
+      "dump_delta": {
+        "file_count": 57,
+        "files": [
+          "module_0034.jit_fn/compile_options.textproto",
+          "module_0034.jit_fn/module.mlir",
+          "module_0034.jit_fn/topology.textproto",
+          "module_0034.jit_fn.0.ir-no-opt.ll",
+          "module_0034.jit_fn.1.ir-no-opt.ll",
+          "module_0034.jit_fn.10.ir-with-opt.ll",
+          "module_0034.jit_fn.10.ptx",
+          "module_0034.jit_fn.11.ir-no-opt.ll",
+          "module_0034.jit_fn.12.ir-with-opt.ll",
+          "module_0034.jit_fn.12.ptx",
+          "module_0034.jit_fn.13.ir-with-opt.ll",
+          "module_0034.jit_fn.13.ptx",
+          "module_0034.jit_fn.14.ir-with-opt.ll",
+          "module_0034.jit_fn.14.ptx",
+          "module_0034.jit_fn.15.ir-no-opt.ll",
+          "module_0034.jit_fn.16.ir-no-opt.ll",
+          "module_0034.jit_fn.17.ir-with-opt.ll",
+          "module_0034.jit_fn.17.ptx",
+          "module_0034.jit_fn.18.ir-no-opt.ll",
+          "module_0034.jit_fn.19.ir-with-opt.ll",
+          "module_0034.jit_fn.19.ptx",
+          "module_0034.jit_fn.2.ir-no-opt.ll",
+          "module_0034.jit_fn.20.ir-with-opt.ll",
+          "module_0034.jit_fn.20.ptx",
+          "module_0034.jit_fn.21.ir-no-opt.ll",
+          "module_0034.jit_fn.22.ir-with-opt.ll",
+          "module_0034.jit_fn.22.ptx",
+          "module_0034.jit_fn.23.ir-no-opt.ll",
+          "module_0034.jit_fn.24.ir-with-opt.ll",
+          "module_0034.jit_fn.24.ptx",
+          "module_0034.jit_fn.25.ir-with-opt.ll",
+          "module_0034.jit_fn.25.ptx",
+          "module_0034.jit_fn.3.ir-no-opt.ll",
+          "module_0034.jit_fn.4.ir-no-opt.ll",
+          "module_0034.jit_fn.5.ir-no-opt.ll",
+          "module_0034.jit_fn.6.ir-no-opt.ll",
+          "module_0034.jit_fn.7.ir-with-opt.ll",
+          "module_0034.jit_fn.7.ptx",
+          "module_0034.jit_fn.8.ir-with-opt.ll",
+          "module_0034.jit_fn.8.ptx",
+          "module_0034.jit_fn.9.ir-with-opt.ll",
+          "module_0034.jit_fn.9.ptx",
+          "module_0034.jit_fn.after_spmd_partitioner.txt",
+          "module_0034.jit_fn.autotune_results.pbtxt",
+          "module_0034.jit_fn.before_config_assignment.txt",
+          "module_0034.jit_fn.before_optimizations.txt",
+          "module_0034.jit_fn.config.pbtxt",
+          "module_0034.jit_fn.debug_options",
+          "module_0034.jit_fn.gpu_target_config.pbtxt",
+          "module_0034.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+          "module_0034.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+          "module_0034.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+          "module_0034.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+          "module_0034.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+          "module_0034.jit_fn.thunk_metadata.txt",
+          "module_0034.jit_fn.thunk_sequence.txt",
+          "module_0034.jit_fn.thunk_sequence_after_thunk_passes.txt"
+        ],
+        "memory_usage_reports": [
+          {
+            "parser_status": "PARSED_TOTAL_BYTES",
+            "path": "module_0034.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+            "total_bytes": 18886752
+          }
+        ]
+      },
       "family": "training",
       "jaxpr": {
         "equation_count": 38,
@@ -679,6 +1073,7 @@
       "reproduction": {
         "accounted_matches": true,
         "expected_accounted_bytes": 18886716,
+        "expected_device": "rtx3050",
         "expected_temp_bytes": 3145744,
         "temp_matches": true
       },
@@ -691,12 +1086,14 @@
         "convolution_count": 0,
         "copy_count": 0,
         "custom_call_count": 0,
+        "custom_call_targets": [],
         "dot_count": 2,
         "fusion_count": 15,
         "instruction_count": 3,
         "line_count": 51,
+        "operation_histogram": {},
         "text_length": 3864,
-        "text_sha256": "4e6b775482efdc05e2304453aa41069aa71b8874746bf1cd75448e5a100145d2",
+        "text_sha256": "1f4987039a22e58234aedb43667aa9dda0082aea64f3170c503a28495f39ad2d",
         "transpose_count": 0
       },
       "configuration": {
@@ -705,6 +1102,44 @@
         "width": 2048
       },
       "dtype": "float16",
+      "dump_delta": {
+        "file_count": 26,
+        "files": [
+          "module_0046.jit_fn/compile_options.textproto",
+          "module_0046.jit_fn/module.mlir",
+          "module_0046.jit_fn/topology.textproto",
+          "module_0046.jit_fn.0.ir-no-opt.ll",
+          "module_0046.jit_fn.1.ir-with-opt.ll",
+          "module_0046.jit_fn.1.ptx",
+          "module_0046.jit_fn.2.ir-no-opt.ll",
+          "module_0046.jit_fn.3.ir-no-opt.ll",
+          "module_0046.jit_fn.4.ir-with-opt.ll",
+          "module_0046.jit_fn.4.ptx",
+          "module_0046.jit_fn.5.ir-with-opt.ll",
+          "module_0046.jit_fn.5.ptx",
+          "module_0046.jit_fn.after_spmd_partitioner.txt",
+          "module_0046.jit_fn.autotune_results.pbtxt",
+          "module_0046.jit_fn.before_config_assignment.txt",
+          "module_0046.jit_fn.before_optimizations.txt",
+          "module_0046.jit_fn.config.pbtxt",
+          "module_0046.jit_fn.debug_options",
+          "module_0046.jit_fn.gpu_target_config.pbtxt",
+          "module_0046.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+          "module_0046.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+          "module_0046.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+          "module_0046.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+          "module_0046.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+          "module_0046.jit_fn.thunk_metadata.txt",
+          "module_0046.jit_fn.thunk_sequence.txt"
+        ],
+        "memory_usage_reports": [
+          {
+            "parser_status": "PARSED_TOTAL_BYTES",
+            "path": "module_0046.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+            "total_bytes": 15204352
+          }
+        ]
+      },
       "family": "mlp",
       "jaxpr": {
         "equation_count": 3,
@@ -756,6 +1191,7 @@
       "reproduction": {
         "accounted_matches": true,
         "expected_accounted_bytes": 15204352,
+        "expected_device": "rtx3050",
         "expected_temp_bytes": 1048576,
         "temp_matches": true
       },
@@ -768,12 +1204,14 @@
         "convolution_count": 0,
         "copy_count": 0,
         "custom_call_count": 0,
+        "custom_call_targets": [],
         "dot_count": 2,
         "fusion_count": 19,
         "instruction_count": 6,
         "line_count": 87,
+        "operation_histogram": {},
         "text_length": 7375,
-        "text_sha256": "2d16322fc1475c6a7191839f431e1891051c6e02a73aa24b885bdecc26cf418e",
+        "text_sha256": "861ed0c99a76528b202621a7fc4548ca30b18be4bc930678a69283f7a2cc4dbb",
         "transpose_count": 11
       },
       "configuration": {
@@ -783,6 +1221,47 @@
         "sequence": 512
       },
       "dtype": "float16",
+      "dump_delta": {
+        "file_count": 29,
+        "files": [
+          "module_0052.jit_fn/compile_options.textproto",
+          "module_0052.jit_fn/module.mlir",
+          "module_0052.jit_fn/topology.textproto",
+          "module_0052.jit_fn.0.ir-no-opt.ll",
+          "module_0052.jit_fn.1.ir-no-opt.ll",
+          "module_0052.jit_fn.2.ir-no-opt.ll",
+          "module_0052.jit_fn.3.ir-no-opt.ll",
+          "module_0052.jit_fn.4.ir-with-opt.ll",
+          "module_0052.jit_fn.4.ptx",
+          "module_0052.jit_fn.5.ir-with-opt.ll",
+          "module_0052.jit_fn.5.ptx",
+          "module_0052.jit_fn.6.ir-with-opt.ll",
+          "module_0052.jit_fn.6.ptx",
+          "module_0052.jit_fn.7.ir-with-opt.ll",
+          "module_0052.jit_fn.7.ptx",
+          "module_0052.jit_fn.after_spmd_partitioner.txt",
+          "module_0052.jit_fn.autotune_results.pbtxt",
+          "module_0052.jit_fn.before_config_assignment.txt",
+          "module_0052.jit_fn.before_optimizations.txt",
+          "module_0052.jit_fn.config.pbtxt",
+          "module_0052.jit_fn.debug_options",
+          "module_0052.jit_fn.gpu_target_config.pbtxt",
+          "module_0052.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+          "module_0052.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+          "module_0052.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+          "module_0052.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+          "module_0052.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+          "module_0052.jit_fn.thunk_metadata.txt",
+          "module_0052.jit_fn.thunk_sequence.txt"
+        ],
+        "memory_usage_reports": [
+          {
+            "parser_status": "PARSED_TOTAL_BYTES",
+            "path": "module_0052.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+            "total_bytes": 9437202
+          }
+        ]
+      },
       "family": "attention",
       "jaxpr": {
         "equation_count": 18,
@@ -854,6 +1333,7 @@
       "reproduction": {
         "accounted_matches": true,
         "expected_accounted_bytes": 9437184,
+        "expected_device": "rtx3050",
         "expected_temp_bytes": 8388608,
         "temp_matches": true
       },
@@ -866,12 +1346,16 @@
         "convolution_count": 1,
         "copy_count": 0,
         "custom_call_count": 2,
+        "custom_call_targets": [
+          "__cudnn$convForward"
+        ],
         "dot_count": 0,
         "fusion_count": 1,
         "instruction_count": 2,
         "line_count": 39,
+        "operation_histogram": {},
         "text_length": 2402,
-        "text_sha256": "1d297ed95cf8e0c4aa7798a5077f4a93759197f841b28249a7db2536196f4326",
+        "text_sha256": "6a465a041f2cef11337d5323621a71d2b31d6eec3d059e284e4835fe8b5227bd",
         "transpose_count": 6
       },
       "configuration": {
@@ -881,6 +1365,41 @@
         "width": 128
       },
       "dtype": "float16",
+      "dump_delta": {
+        "file_count": 23,
+        "files": [
+          "module_0060.jit_fn/compile_options.textproto",
+          "module_0060.jit_fn/module.mlir",
+          "module_0060.jit_fn/topology.textproto",
+          "module_0060.jit_fn.0.ir-no-opt.ll",
+          "module_0060.jit_fn.1.ir-with-opt.ll",
+          "module_0060.jit_fn.1.ptx",
+          "module_0060.jit_fn.2.ir-no-opt.ll",
+          "module_0060.jit_fn.3.ir-with-opt.ll",
+          "module_0060.jit_fn.3.ptx",
+          "module_0060.jit_fn.after_spmd_partitioner.txt",
+          "module_0060.jit_fn.autotune_results.pbtxt",
+          "module_0060.jit_fn.before_config_assignment.txt",
+          "module_0060.jit_fn.before_optimizations.txt",
+          "module_0060.jit_fn.config.pbtxt",
+          "module_0060.jit_fn.debug_options",
+          "module_0060.jit_fn.gpu_target_config.pbtxt",
+          "module_0060.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+          "module_0060.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+          "module_0060.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+          "module_0060.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+          "module_0060.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+          "module_0060.jit_fn.thunk_metadata.txt",
+          "module_0060.jit_fn.thunk_sequence.txt"
+        ],
+        "memory_usage_reports": [
+          {
+            "parser_status": "PARSED_TOTAL_BYTES",
+            "path": "module_0060.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+            "total_bytes": 1591552
+          }
+        ]
+      },
       "family": "convolution",
       "jaxpr": {
         "equation_count": 1,
@@ -929,6 +1448,7 @@
       "reproduction": {
         "accounted_matches": true,
         "expected_accounted_bytes": 1591552,
+        "expected_device": "rtx3050",
         "expected_temp_bytes": 9472,
         "temp_matches": true
       },
@@ -941,12 +1461,16 @@
         "convolution_count": 1,
         "copy_count": 0,
         "custom_call_count": 2,
+        "custom_call_targets": [
+          "__cudnn$convForward"
+        ],
         "dot_count": 0,
         "fusion_count": 1,
         "instruction_count": 2,
         "line_count": 39,
+        "operation_histogram": {},
         "text_length": 2402,
-        "text_sha256": "367b2bdaee21cd82efeae8d1e2328be30d8c28c2ae4c96a7eb849912219082b9",
+        "text_sha256": "1590075e3434339e3342966785c4fcd81bee98be9245b665b5b25f2afda7a264",
         "transpose_count": 6
       },
       "configuration": {
@@ -956,6 +1480,41 @@
         "width": 256
       },
       "dtype": "float16",
+      "dump_delta": {
+        "file_count": 23,
+        "files": [
+          "module_0062.jit_fn/compile_options.textproto",
+          "module_0062.jit_fn/module.mlir",
+          "module_0062.jit_fn/topology.textproto",
+          "module_0062.jit_fn.0.ir-no-opt.ll",
+          "module_0062.jit_fn.1.ir-with-opt.ll",
+          "module_0062.jit_fn.1.ptx",
+          "module_0062.jit_fn.2.ir-no-opt.ll",
+          "module_0062.jit_fn.3.ir-with-opt.ll",
+          "module_0062.jit_fn.3.ptx",
+          "module_0062.jit_fn.after_spmd_partitioner.txt",
+          "module_0062.jit_fn.autotune_results.pbtxt",
+          "module_0062.jit_fn.before_config_assignment.txt",
+          "module_0062.jit_fn.before_optimizations.txt",
+          "module_0062.jit_fn.config.pbtxt",
+          "module_0062.jit_fn.debug_options",
+          "module_0062.jit_fn.gpu_target_config.pbtxt",
+          "module_0062.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+          "module_0062.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+          "module_0062.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+          "module_0062.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+          "module_0062.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+          "module_0062.jit_fn.thunk_metadata.txt",
+          "module_0062.jit_fn.thunk_sequence.txt"
+        ],
+        "memory_usage_reports": [
+          {
+            "parser_status": "PARSED_TOTAL_BYTES",
+            "path": "module_0062.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+            "total_bytes": 12656896
+          }
+        ]
+      },
       "family": "convolution",
       "jaxpr": {
         "equation_count": 1,
@@ -1004,6 +1563,7 @@
       "reproduction": {
         "accounted_matches": true,
         "expected_accounted_bytes": 12656896,
+        "expected_device": "rtx3050",
         "expected_temp_bytes": 37120,
         "temp_matches": true
       },
@@ -1016,12 +1576,14 @@
         "convolution_count": 0,
         "copy_count": 0,
         "custom_call_count": 0,
+        "custom_call_targets": [],
         "dot_count": 2,
         "fusion_count": 26,
         "instruction_count": 8,
         "line_count": 106,
+        "operation_histogram": {},
         "text_length": 8570,
-        "text_sha256": "05d4f0acfed14f903385ce213949ceebc9a791e594f948d94b65e573e08a17db",
+        "text_sha256": "b6e465c7c0acf3b18c05b3a543433c56a0185a406870cc08efd2b150c806f06c",
         "transpose_count": 11
       },
       "configuration": {
@@ -1029,6 +1591,54 @@
         "width": 256
       },
       "dtype": "float16",
+      "dump_delta": {
+        "file_count": 36,
+        "files": [
+          "module_0064.jit_fn/compile_options.textproto",
+          "module_0064.jit_fn/module.mlir",
+          "module_0064.jit_fn/topology.textproto",
+          "module_0064.jit_fn.0.ir-no-opt.ll",
+          "module_0064.jit_fn.1.ir-no-opt.ll",
+          "module_0064.jit_fn.10.ir-with-opt.ll",
+          "module_0064.jit_fn.10.ptx",
+          "module_0064.jit_fn.11.ir-with-opt.ll",
+          "module_0064.jit_fn.11.ptx",
+          "module_0064.jit_fn.2.ir-no-opt.ll",
+          "module_0064.jit_fn.3.ir-with-opt.ll",
+          "module_0064.jit_fn.3.ptx",
+          "module_0064.jit_fn.4.ir-no-opt.ll",
+          "module_0064.jit_fn.5.ir-with-opt.ll",
+          "module_0064.jit_fn.5.ptx",
+          "module_0064.jit_fn.6.ir-no-opt.ll",
+          "module_0064.jit_fn.7.ir-no-opt.ll",
+          "module_0064.jit_fn.8.ir-with-opt.ll",
+          "module_0064.jit_fn.8.ptx",
+          "module_0064.jit_fn.9.ir-with-opt.ll",
+          "module_0064.jit_fn.9.ptx",
+          "module_0064.jit_fn.after_spmd_partitioner.txt",
+          "module_0064.jit_fn.autotune_results.pbtxt",
+          "module_0064.jit_fn.before_config_assignment.txt",
+          "module_0064.jit_fn.before_optimizations.txt",
+          "module_0064.jit_fn.config.pbtxt",
+          "module_0064.jit_fn.debug_options",
+          "module_0064.jit_fn.gpu_target_config.pbtxt",
+          "module_0064.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+          "module_0064.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+          "module_0064.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+          "module_0064.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+          "module_0064.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+          "module_0064.jit_fn.thunk_metadata.txt",
+          "module_0064.jit_fn.thunk_sequence.txt",
+          "module_0064.jit_fn.thunk_sequence_after_thunk_passes.txt"
+        ],
+        "memory_usage_reports": [
+          {
+            "parser_status": "PARSED_TOTAL_BYTES",
+            "path": "module_0064.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+            "total_bytes": 917562
+          }
+        ]
+      },
       "family": "autodiff",
       "jaxpr": {
         "equation_count": 18,
@@ -1098,6 +1708,7 @@
       "reproduction": {
         "accounted_matches": true,
         "expected_accounted_bytes": 917538,
+        "expected_device": "rtx3050",
         "expected_temp_bytes": 589840,
         "temp_matches": true
       },
@@ -1110,12 +1721,14 @@
         "convolution_count": 0,
         "copy_count": 0,
         "custom_call_count": 0,
+        "custom_call_targets": [],
         "dot_count": 2,
         "fusion_count": 26,
         "instruction_count": 8,
         "line_count": 106,
+        "operation_histogram": {},
         "text_length": 8559,
-        "text_sha256": "8e4882d47678b22d7ce02e86d0f8769459624a4dc14520f1e984b88626501c7e",
+        "text_sha256": "1a3bd0bff0fe5889f5993399bd9dba15a2f71d72f59bf385aaac0fc3242ce436",
         "transpose_count": 10
       },
       "configuration": {
@@ -1123,6 +1736,54 @@
         "width": 512
       },
       "dtype": "float16",
+      "dump_delta": {
+        "file_count": 36,
+        "files": [
+          "module_0070.jit_fn/compile_options.textproto",
+          "module_0070.jit_fn/module.mlir",
+          "module_0070.jit_fn/topology.textproto",
+          "module_0070.jit_fn.0.ir-no-opt.ll",
+          "module_0070.jit_fn.1.ir-no-opt.ll",
+          "module_0070.jit_fn.10.ir-no-opt.ll",
+          "module_0070.jit_fn.11.ir-with-opt.ll",
+          "module_0070.jit_fn.11.ptx",
+          "module_0070.jit_fn.2.ir-no-opt.ll",
+          "module_0070.jit_fn.3.ir-no-opt.ll",
+          "module_0070.jit_fn.4.ir-with-opt.ll",
+          "module_0070.jit_fn.4.ptx",
+          "module_0070.jit_fn.5.ir-with-opt.ll",
+          "module_0070.jit_fn.5.ptx",
+          "module_0070.jit_fn.6.ir-with-opt.ll",
+          "module_0070.jit_fn.6.ptx",
+          "module_0070.jit_fn.7.ir-with-opt.ll",
+          "module_0070.jit_fn.7.ptx",
+          "module_0070.jit_fn.8.ir-no-opt.ll",
+          "module_0070.jit_fn.9.ir-with-opt.ll",
+          "module_0070.jit_fn.9.ptx",
+          "module_0070.jit_fn.after_spmd_partitioner.txt",
+          "module_0070.jit_fn.autotune_results.pbtxt",
+          "module_0070.jit_fn.before_config_assignment.txt",
+          "module_0070.jit_fn.before_optimizations.txt",
+          "module_0070.jit_fn.config.pbtxt",
+          "module_0070.jit_fn.debug_options",
+          "module_0070.jit_fn.gpu_target_config.pbtxt",
+          "module_0070.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+          "module_0070.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+          "module_0070.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+          "module_0070.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+          "module_0070.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+          "module_0070.jit_fn.thunk_metadata.txt",
+          "module_0070.jit_fn.thunk_sequence.txt",
+          "module_0070.jit_fn.thunk_sequence_after_thunk_passes.txt"
+        ],
+        "memory_usage_reports": [
+          {
+            "parser_status": "PARSED_TOTAL_BYTES",
+            "path": "module_0070.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+            "total_bytes": 2621498
+          }
+        ]
+      },
       "family": "autodiff",
       "jaxpr": {
         "equation_count": 18,
@@ -1192,6 +1853,7 @@
       "reproduction": {
         "accounted_matches": true,
         "expected_accounted_bytes": 2621474,
+        "expected_device": "rtx3050",
         "expected_temp_bytes": 1310736,
         "temp_matches": true
       },
@@ -1299,11 +1961,11 @@
       },
       {
         "kind": "memory_usage_report",
-        "parser_status": "UNKNOWN",
+        "parser_status": "PARSED_TOTAL_BYTES",
         "path": "module_0000.jit__lambda.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
         "size_bytes": 717,
         "text_sha256": "c44acc879f69f53c8a65ee2ba3ed1067c5f512184cb91216ea8bbdbbf081d1e8",
-        "total_bytes": null
+        "total_bytes": 37748736
       },
       {
         "kind": "other",
@@ -1432,11 +2094,11 @@
       },
       {
         "kind": "memory_usage_report",
-        "parser_status": "UNKNOWN",
+        "parser_status": "PARSED_TOTAL_BYTES",
         "path": "module_0004.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
         "size_bytes": 1148,
         "text_sha256": "fb214c298baeb9239dcb28109afe511714ff38efe9a2396c704af48e94918b91",
-        "total_bytes": null
+        "total_bytes": 30408704
       },
       {
         "kind": "other",
@@ -1475,48 +2137,48 @@
       },
       {
         "kind": "other",
-        "path": "module_0010.jit_fn.1.ir-no-opt.ll",
-        "size_bytes": 27914
-      },
-      {
-        "kind": "other",
-        "path": "module_0010.jit_fn.2.ir-no-opt.ll",
-        "size_bytes": 40397
-      },
-      {
-        "kind": "other",
-        "path": "module_0010.jit_fn.3.ir-no-opt.ll",
-        "size_bytes": 91866
-      },
-      {
-        "kind": "other",
-        "path": "module_0010.jit_fn.4.ir-with-opt.ll",
+        "path": "module_0010.jit_fn.1.ir-with-opt.ll",
         "size_bytes": 183
       },
       {
         "kind": "other",
-        "path": "module_0010.jit_fn.4.ptx",
+        "path": "module_0010.jit_fn.1.ptx",
         "size_bytes": 0
       },
       {
         "kind": "other",
-        "path": "module_0010.jit_fn.5.ir-with-opt.ll",
+        "path": "module_0010.jit_fn.2.ir-no-opt.ll",
+        "size_bytes": 27914
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.3.ir-with-opt.ll",
         "size_bytes": 34051
       },
       {
         "kind": "other",
-        "path": "module_0010.jit_fn.5.ptx",
+        "path": "module_0010.jit_fn.3.ptx",
         "size_bytes": 14926
       },
       {
         "kind": "other",
-        "path": "module_0010.jit_fn.6.ir-with-opt.ll",
+        "path": "module_0010.jit_fn.4.ir-no-opt.ll",
+        "size_bytes": 40397
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.5.ir-with-opt.ll",
         "size_bytes": 27068
       },
       {
         "kind": "other",
-        "path": "module_0010.jit_fn.6.ptx",
+        "path": "module_0010.jit_fn.5.ptx",
         "size_bytes": 10839
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.6.ir-no-opt.ll",
+        "size_bytes": 91866
       },
       {
         "kind": "other",
@@ -1580,11 +2242,11 @@
       },
       {
         "kind": "memory_usage_report",
-        "parser_status": "UNKNOWN",
+        "parser_status": "PARSED_TOTAL_BYTES",
         "path": "module_0010.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
         "size_bytes": 2042,
         "text_sha256": "d079157ae609053af2198ddfd7307c9c5fb32d10ab6d38be216ee67e35ed6779",
-        "total_bytes": null
+        "total_bytes": 18874392
       },
       {
         "kind": "other",
@@ -1653,18 +2315,18 @@
       },
       {
         "kind": "other",
-        "path": "module_0018.jit_fn.5.ir-no-opt.ll",
-        "size_bytes": 23480
-      },
-      {
-        "kind": "other",
-        "path": "module_0018.jit_fn.6.ir-with-opt.ll",
+        "path": "module_0018.jit_fn.5.ir-with-opt.ll",
         "size_bytes": 5447
       },
       {
         "kind": "other",
-        "path": "module_0018.jit_fn.6.ptx",
+        "path": "module_0018.jit_fn.5.ptx",
         "size_bytes": 2145
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.6.ir-no-opt.ll",
+        "size_bytes": 23480
       },
       {
         "kind": "other",
@@ -1728,11 +2390,11 @@
       },
       {
         "kind": "memory_usage_report",
-        "parser_status": "UNKNOWN",
+        "parser_status": "PARSED_TOTAL_BYTES",
         "path": "module_0018.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
         "size_bytes": 1135,
         "text_sha256": "bcdc2d5d5f5dd22019222cd38a632cbc945470e5516c27dd071b4cc0bfa13c52",
-        "total_bytes": null
+        "total_bytes": 5280000
       },
       {
         "kind": "other",
@@ -1876,11 +2538,11 @@
       },
       {
         "kind": "memory_usage_report",
-        "parser_status": "UNKNOWN",
+        "parser_status": "PARSED_TOTAL_BYTES",
         "path": "module_0020.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
         "size_bytes": 1137,
         "text_sha256": "9aaa99bd75fb9b44ed91b721c965c44d5b18211bfd055084d4ea4c64dd2649a9",
-        "total_bytes": null
+        "total_bytes": 42090752
       },
       {
         "kind": "other",
@@ -1925,27 +2587,27 @@
       {
         "kind": "other",
         "path": "module_0022.jit_fn.10.ir-with-opt.ll",
-        "size_bytes": 9821
+        "size_bytes": 18592
       },
       {
         "kind": "other",
         "path": "module_0022.jit_fn.10.ptx",
-        "size_bytes": 5231
+        "size_bytes": 10028
       },
       {
         "kind": "other",
-        "path": "module_0022.jit_fn.11.ir-no-opt.ll",
-        "size_bytes": 95507
-      },
-      {
-        "kind": "other",
-        "path": "module_0022.jit_fn.12.ir-with-opt.ll",
+        "path": "module_0022.jit_fn.11.ir-with-opt.ll",
         "size_bytes": 26967
       },
       {
         "kind": "other",
-        "path": "module_0022.jit_fn.12.ptx",
+        "path": "module_0022.jit_fn.11.ptx",
         "size_bytes": 11065
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.12.ir-no-opt.ll",
+        "size_bytes": 95507
       },
       {
         "kind": "other",
@@ -1965,27 +2627,32 @@
       {
         "kind": "other",
         "path": "module_0022.jit_fn.3.ir-no-opt.ll",
-        "size_bytes": 18480
-      },
-      {
-        "kind": "other",
-        "path": "module_0022.jit_fn.4.ir-no-opt.ll",
         "size_bytes": 9487
       },
       {
         "kind": "other",
-        "path": "module_0022.jit_fn.5.ir-no-opt.ll",
-        "size_bytes": 44326
+        "path": "module_0022.jit_fn.4.ir-no-opt.ll",
+        "size_bytes": 18480
       },
       {
         "kind": "other",
-        "path": "module_0022.jit_fn.6.ir-with-opt.ll",
+        "path": "module_0022.jit_fn.5.ir-with-opt.ll",
         "size_bytes": 2951
       },
       {
         "kind": "other",
-        "path": "module_0022.jit_fn.6.ptx",
+        "path": "module_0022.jit_fn.5.ptx",
         "size_bytes": 1286
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.6.ir-with-opt.ll",
+        "size_bytes": 945
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.6.ptx",
+        "size_bytes": 525
       },
       {
         "kind": "other",
@@ -1999,23 +2666,18 @@
       },
       {
         "kind": "other",
-        "path": "module_0022.jit_fn.8.ir-with-opt.ll",
-        "size_bytes": 945
-      },
-      {
-        "kind": "other",
-        "path": "module_0022.jit_fn.8.ptx",
-        "size_bytes": 525
+        "path": "module_0022.jit_fn.8.ir-no-opt.ll",
+        "size_bytes": 44326
       },
       {
         "kind": "other",
         "path": "module_0022.jit_fn.9.ir-with-opt.ll",
-        "size_bytes": 18592
+        "size_bytes": 9821
       },
       {
         "kind": "other",
         "path": "module_0022.jit_fn.9.ptx",
-        "size_bytes": 10028
+        "size_bytes": 5231
       },
       {
         "kind": "other",
@@ -2069,11 +2731,11 @@
       },
       {
         "kind": "memory_usage_report",
-        "parser_status": "UNKNOWN",
+        "parser_status": "PARSED_TOTAL_BYTES",
         "path": "module_0022.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
         "size_bytes": 2695,
         "text_sha256": "8a602fb55376127349dc7be369d59fe75fc1b9884a7fb836c209fba1b443df9b",
-        "total_bytes": null
+        "total_bytes": 1310764
       },
       {
         "kind": "other",
@@ -2113,22 +2775,22 @@
       {
         "kind": "other",
         "path": "module_0028.jit_fn.0.ir-no-opt.ll",
-        "size_bytes": 3766
-      },
-      {
-        "kind": "other",
-        "path": "module_0028.jit_fn.1.ir-no-opt.ll",
         "size_bytes": 629
       },
       {
         "kind": "other",
+        "path": "module_0028.jit_fn.1.ir-no-opt.ll",
+        "size_bytes": 3766
+      },
+      {
+        "kind": "other",
         "path": "module_0028.jit_fn.10.ir-with-opt.ll",
-        "size_bytes": 945
+        "size_bytes": 8892
       },
       {
         "kind": "other",
         "path": "module_0028.jit_fn.10.ptx",
-        "size_bytes": 525
+        "size_bytes": 4811
       },
       {
         "kind": "other",
@@ -2158,12 +2820,12 @@
       {
         "kind": "other",
         "path": "module_0028.jit_fn.2.ir-no-opt.ll",
-        "size_bytes": 16026
+        "size_bytes": 183
       },
       {
         "kind": "other",
         "path": "module_0028.jit_fn.3.ir-no-opt.ll",
-        "size_bytes": 183
+        "size_bytes": 16026
       },
       {
         "kind": "other",
@@ -2173,32 +2835,27 @@
       {
         "kind": "other",
         "path": "module_0028.jit_fn.5.ir-with-opt.ll",
-        "size_bytes": 16552
+        "size_bytes": 945
       },
       {
         "kind": "other",
         "path": "module_0028.jit_fn.5.ptx",
-        "size_bytes": 9292
+        "size_bytes": 525
       },
       {
         "kind": "other",
         "path": "module_0028.jit_fn.6.ir-with-opt.ll",
-        "size_bytes": 183
+        "size_bytes": 16552
       },
       {
         "kind": "other",
         "path": "module_0028.jit_fn.6.ptx",
-        "size_bytes": 0
+        "size_bytes": 9292
       },
       {
         "kind": "other",
-        "path": "module_0028.jit_fn.7.ir-with-opt.ll",
-        "size_bytes": 8892
-      },
-      {
-        "kind": "other",
-        "path": "module_0028.jit_fn.7.ptx",
-        "size_bytes": 4811
+        "path": "module_0028.jit_fn.7.ir-no-opt.ll",
+        "size_bytes": 84129
       },
       {
         "kind": "other",
@@ -2212,8 +2869,13 @@
       },
       {
         "kind": "other",
-        "path": "module_0028.jit_fn.9.ir-no-opt.ll",
-        "size_bytes": 84129
+        "path": "module_0028.jit_fn.9.ir-with-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.9.ptx",
+        "size_bytes": 0
       },
       {
         "kind": "other",
@@ -2267,11 +2929,11 @@
       },
       {
         "kind": "memory_usage_report",
-        "parser_status": "UNKNOWN",
+        "parser_status": "PARSED_TOTAL_BYTES",
         "path": "module_0028.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
         "size_bytes": 2633,
         "text_sha256": "590552f7fe71c8407e64c61e4a5dfee51fe4c2a3689fd41cb6e78c735699659e",
-        "total_bytes": null
+        "total_bytes": 3145772
       },
       {
         "kind": "other",
@@ -2321,12 +2983,12 @@
       {
         "kind": "other",
         "path": "module_0034.jit_fn.10.ir-with-opt.ll",
-        "size_bytes": 4732
+        "size_bytes": 945
       },
       {
         "kind": "other",
         "path": "module_0034.jit_fn.10.ptx",
-        "size_bytes": 1950
+        "size_bytes": 525
       },
       {
         "kind": "other",
@@ -2336,132 +2998,132 @@
       {
         "kind": "other",
         "path": "module_0034.jit_fn.12.ir-with-opt.ll",
-        "size_bytes": 10926
-      },
-      {
-        "kind": "other",
-        "path": "module_0034.jit_fn.12.ptx",
-        "size_bytes": 5348
-      },
-      {
-        "kind": "other",
-        "path": "module_0034.jit_fn.13.ir-with-opt.ll",
         "size_bytes": 2064
       },
       {
         "kind": "other",
-        "path": "module_0034.jit_fn.13.ptx",
+        "path": "module_0034.jit_fn.12.ptx",
         "size_bytes": 911
       },
       {
         "kind": "other",
-        "path": "module_0034.jit_fn.14.ir-no-opt.ll",
-        "size_bytes": 84974
-      },
-      {
-        "kind": "other",
-        "path": "module_0034.jit_fn.15.ir-no-opt.ll",
-        "size_bytes": 87510
-      },
-      {
-        "kind": "other",
-        "path": "module_0034.jit_fn.16.ir-with-opt.ll",
+        "path": "module_0034.jit_fn.13.ir-with-opt.ll",
         "size_bytes": 183
       },
       {
         "kind": "other",
-        "path": "module_0034.jit_fn.16.ptx",
+        "path": "module_0034.jit_fn.13.ptx",
         "size_bytes": 0
       },
       {
         "kind": "other",
-        "path": "module_0034.jit_fn.17.ir-no-opt.ll",
-        "size_bytes": 78226
+        "path": "module_0034.jit_fn.14.ir-with-opt.ll",
+        "size_bytes": 4732
       },
       {
         "kind": "other",
-        "path": "module_0034.jit_fn.18.ir-no-opt.ll",
-        "size_bytes": 99753
+        "path": "module_0034.jit_fn.14.ptx",
+        "size_bytes": 1950
       },
       {
         "kind": "other",
-        "path": "module_0034.jit_fn.19.ir-no-opt.ll",
-        "size_bytes": 103187
+        "path": "module_0034.jit_fn.15.ir-no-opt.ll",
+        "size_bytes": 84974
       },
       {
         "kind": "other",
-        "path": "module_0034.jit_fn.2.ir-no-opt.ll",
-        "size_bytes": 5302
+        "path": "module_0034.jit_fn.16.ir-no-opt.ll",
+        "size_bytes": 87510
       },
       {
         "kind": "other",
-        "path": "module_0034.jit_fn.20.ir-with-opt.ll",
+        "path": "module_0034.jit_fn.17.ir-with-opt.ll",
         "size_bytes": 13905
       },
       {
         "kind": "other",
-        "path": "module_0034.jit_fn.20.ptx",
+        "path": "module_0034.jit_fn.17.ptx",
         "size_bytes": 7299
       },
       {
         "kind": "other",
-        "path": "module_0034.jit_fn.21.ir-with-opt.ll",
+        "path": "module_0034.jit_fn.18.ir-no-opt.ll",
+        "size_bytes": 78226
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.19.ir-with-opt.ll",
         "size_bytes": 57075
       },
       {
         "kind": "other",
-        "path": "module_0034.jit_fn.21.ptx",
+        "path": "module_0034.jit_fn.19.ptx",
         "size_bytes": 23493
       },
       {
         "kind": "other",
-        "path": "module_0034.jit_fn.22.ir-with-opt.ll",
-        "size_bytes": 52535
-      },
-      {
-        "kind": "other",
-        "path": "module_0034.jit_fn.22.ptx",
-        "size_bytes": 21099
-      },
-      {
-        "kind": "other",
-        "path": "module_0034.jit_fn.23.ir-with-opt.ll",
-        "size_bytes": 52566
-      },
-      {
-        "kind": "other",
-        "path": "module_0034.jit_fn.23.ptx",
-        "size_bytes": 21968
-      },
-      {
-        "kind": "other",
-        "path": "module_0034.jit_fn.24.ir-with-opt.ll",
-        "size_bytes": 51128
-      },
-      {
-        "kind": "other",
-        "path": "module_0034.jit_fn.24.ptx",
-        "size_bytes": 20891
-      },
-      {
-        "kind": "other",
-        "path": "module_0034.jit_fn.25.ir-with-opt.ll",
-        "size_bytes": 54332
-      },
-      {
-        "kind": "other",
-        "path": "module_0034.jit_fn.25.ptx",
-        "size_bytes": 24063
-      },
-      {
-        "kind": "other",
-        "path": "module_0034.jit_fn.3.ir-no-opt.ll",
+        "path": "module_0034.jit_fn.2.ir-no-opt.ll",
         "size_bytes": 12829
       },
       {
         "kind": "other",
-        "path": "module_0034.jit_fn.4.ir-no-opt.ll",
+        "path": "module_0034.jit_fn.20.ir-with-opt.ll",
+        "size_bytes": 52535
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.20.ptx",
+        "size_bytes": 21099
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.21.ir-no-opt.ll",
+        "size_bytes": 103187
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.22.ir-with-opt.ll",
+        "size_bytes": 52566
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.22.ptx",
+        "size_bytes": 21968
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.23.ir-no-opt.ll",
+        "size_bytes": 99753
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.24.ir-with-opt.ll",
+        "size_bytes": 54332
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.24.ptx",
+        "size_bytes": 24063
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.25.ir-with-opt.ll",
+        "size_bytes": 51128
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.25.ptx",
+        "size_bytes": 20891
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.3.ir-no-opt.ll",
         "size_bytes": 6301
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.4.ir-no-opt.ll",
+        "size_bytes": 5302
       },
       {
         "kind": "other",
@@ -2486,22 +3148,22 @@
       {
         "kind": "other",
         "path": "module_0034.jit_fn.8.ir-with-opt.ll",
-        "size_bytes": 5872
+        "size_bytes": 10926
       },
       {
         "kind": "other",
         "path": "module_0034.jit_fn.8.ptx",
-        "size_bytes": 2778
+        "size_bytes": 5348
       },
       {
         "kind": "other",
         "path": "module_0034.jit_fn.9.ir-with-opt.ll",
-        "size_bytes": 945
+        "size_bytes": 5872
       },
       {
         "kind": "other",
         "path": "module_0034.jit_fn.9.ptx",
-        "size_bytes": 525
+        "size_bytes": 2778
       },
       {
         "kind": "other",
@@ -2555,11 +3217,11 @@
       },
       {
         "kind": "memory_usage_report",
-        "parser_status": "UNKNOWN",
+        "parser_status": "PARSED_TOTAL_BYTES",
         "path": "module_0034.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
         "size_bytes": 4970,
         "text_sha256": "ae54efe9281e70550a9d9a049d512a51de012b28fd07f6cd3d3ecbabe5cd6fb8",
-        "total_bytes": null
+        "total_bytes": 18886752
       },
       {
         "kind": "other",
@@ -2603,8 +3265,13 @@
       },
       {
         "kind": "other",
-        "path": "module_0046.jit_fn.1.ir-no-opt.ll",
-        "size_bytes": 56694
+        "path": "module_0046.jit_fn.1.ir-with-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.1.ptx",
+        "size_bytes": 0
       },
       {
         "kind": "other",
@@ -2613,33 +3280,28 @@
       },
       {
         "kind": "other",
-        "path": "module_0046.jit_fn.3.ir-with-opt.ll",
-        "size_bytes": 183
-      },
-      {
-        "kind": "other",
-        "path": "module_0046.jit_fn.3.ptx",
-        "size_bytes": 0
+        "path": "module_0046.jit_fn.3.ir-no-opt.ll",
+        "size_bytes": 56694
       },
       {
         "kind": "other",
         "path": "module_0046.jit_fn.4.ir-with-opt.ll",
-        "size_bytes": 21322
-      },
-      {
-        "kind": "other",
-        "path": "module_0046.jit_fn.4.ptx",
-        "size_bytes": 7827
-      },
-      {
-        "kind": "other",
-        "path": "module_0046.jit_fn.5.ir-with-opt.ll",
         "size_bytes": 25111
       },
       {
         "kind": "other",
-        "path": "module_0046.jit_fn.5.ptx",
+        "path": "module_0046.jit_fn.4.ptx",
         "size_bytes": 9521
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.5.ir-with-opt.ll",
+        "size_bytes": 21322
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.5.ptx",
+        "size_bytes": 7827
       },
       {
         "kind": "other",
@@ -2693,11 +3355,11 @@
       },
       {
         "kind": "memory_usage_report",
-        "parser_status": "UNKNOWN",
+        "parser_status": "PARSED_TOTAL_BYTES",
         "path": "module_0046.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
         "size_bytes": 1148,
         "text_sha256": "77cbbf2cbd3ae22afa9348c7c069d5313673dc94181c4edaac94557dcb223b4e",
-        "total_bytes": null
+        "total_bytes": 15204352
       },
       {
         "kind": "other",
@@ -2752,22 +3414,22 @@
       {
         "kind": "other",
         "path": "module_0052.jit_fn.4.ir-with-opt.ll",
-        "size_bytes": 183
-      },
-      {
-        "kind": "other",
-        "path": "module_0052.jit_fn.4.ptx",
-        "size_bytes": 0
-      },
-      {
-        "kind": "other",
-        "path": "module_0052.jit_fn.5.ir-with-opt.ll",
         "size_bytes": 20731
       },
       {
         "kind": "other",
-        "path": "module_0052.jit_fn.5.ptx",
+        "path": "module_0052.jit_fn.4.ptx",
         "size_bytes": 9959
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.5.ir-with-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.5.ptx",
+        "size_bytes": 0
       },
       {
         "kind": "other",
@@ -2841,11 +3503,11 @@
       },
       {
         "kind": "memory_usage_report",
-        "parser_status": "UNKNOWN",
+        "parser_status": "PARSED_TOTAL_BYTES",
         "path": "module_0052.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
         "size_bytes": 2040,
         "text_sha256": "6ed5c84ed90897fa16ff5fde55f96efb45e1c9e53d7f0ac665223a6c3acf95a6",
-        "total_bytes": null
+        "total_bytes": 9437202
       },
       {
         "kind": "other",
@@ -2884,18 +3546,18 @@
       },
       {
         "kind": "other",
-        "path": "module_0060.jit_fn.1.ir-no-opt.ll",
-        "size_bytes": 21968
-      },
-      {
-        "kind": "other",
-        "path": "module_0060.jit_fn.2.ir-with-opt.ll",
+        "path": "module_0060.jit_fn.1.ir-with-opt.ll",
         "size_bytes": 183
       },
       {
         "kind": "other",
-        "path": "module_0060.jit_fn.2.ptx",
+        "path": "module_0060.jit_fn.1.ptx",
         "size_bytes": 0
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn.2.ir-no-opt.ll",
+        "size_bytes": 21968
       },
       {
         "kind": "other",
@@ -2959,11 +3621,11 @@
       },
       {
         "kind": "memory_usage_report",
-        "parser_status": "UNKNOWN",
+        "parser_status": "PARSED_TOTAL_BYTES",
         "path": "module_0060.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
         "size_bytes": 1035,
         "text_sha256": "7b38d472deddf949c157b7fa767c1100add49a1947591d1e7d8286741e3aa923",
-        "total_bytes": null
+        "total_bytes": 1591552
       },
       {
         "kind": "other",
@@ -3002,18 +3664,18 @@
       },
       {
         "kind": "other",
-        "path": "module_0062.jit_fn.1.ir-no-opt.ll",
-        "size_bytes": 18474
-      },
-      {
-        "kind": "other",
-        "path": "module_0062.jit_fn.2.ir-with-opt.ll",
+        "path": "module_0062.jit_fn.1.ir-with-opt.ll",
         "size_bytes": 183
       },
       {
         "kind": "other",
-        "path": "module_0062.jit_fn.2.ptx",
+        "path": "module_0062.jit_fn.1.ptx",
         "size_bytes": 0
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn.2.ir-no-opt.ll",
+        "size_bytes": 18474
       },
       {
         "kind": "other",
@@ -3077,11 +3739,11 @@
       },
       {
         "kind": "memory_usage_report",
-        "parser_status": "UNKNOWN",
+        "parser_status": "PARSED_TOTAL_BYTES",
         "path": "module_0062.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
         "size_bytes": 1037,
         "text_sha256": "b223afd3ebf09cefae69b4134062feda42f5b6f36e55c8d87724eef0e653efcd",
-        "total_bytes": null
+        "total_bytes": 12656896
       },
       {
         "kind": "other",
@@ -3121,7 +3783,7 @@
       {
         "kind": "other",
         "path": "module_0064.jit_fn.1.ir-no-opt.ll",
-        "size_bytes": 2995
+        "size_bytes": 183
       },
       {
         "kind": "other",
@@ -3146,7 +3808,7 @@
       {
         "kind": "other",
         "path": "module_0064.jit_fn.2.ir-no-opt.ll",
-        "size_bytes": 183
+        "size_bytes": 2995
       },
       {
         "kind": "other",
@@ -3166,42 +3828,42 @@
       {
         "kind": "other",
         "path": "module_0064.jit_fn.5.ir-with-opt.ll",
-        "size_bytes": 2949
-      },
-      {
-        "kind": "other",
-        "path": "module_0064.jit_fn.5.ptx",
-        "size_bytes": 1274
-      },
-      {
-        "kind": "other",
-        "path": "module_0064.jit_fn.6.ir-with-opt.ll",
         "size_bytes": 183
       },
       {
         "kind": "other",
-        "path": "module_0064.jit_fn.6.ptx",
+        "path": "module_0064.jit_fn.5.ptx",
         "size_bytes": 0
       },
       {
         "kind": "other",
-        "path": "module_0064.jit_fn.7.ir-no-opt.ll",
+        "path": "module_0064.jit_fn.6.ir-no-opt.ll",
         "size_bytes": 31472
       },
       {
         "kind": "other",
+        "path": "module_0064.jit_fn.7.ir-no-opt.ll",
+        "size_bytes": 55213
+      },
+      {
+        "kind": "other",
         "path": "module_0064.jit_fn.8.ir-with-opt.ll",
-        "size_bytes": 22933
+        "size_bytes": 2949
       },
       {
         "kind": "other",
         "path": "module_0064.jit_fn.8.ptx",
-        "size_bytes": 12941
+        "size_bytes": 1274
       },
       {
         "kind": "other",
-        "path": "module_0064.jit_fn.9.ir-no-opt.ll",
-        "size_bytes": 55213
+        "path": "module_0064.jit_fn.9.ir-with-opt.ll",
+        "size_bytes": 22933
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.9.ptx",
+        "size_bytes": 12941
       },
       {
         "kind": "other",
@@ -3255,11 +3917,11 @@
       },
       {
         "kind": "memory_usage_report",
-        "parser_status": "UNKNOWN",
+        "parser_status": "PARSED_TOTAL_BYTES",
         "path": "module_0064.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
         "size_bytes": 2787,
         "text_sha256": "ea36f95b576d654c659453470a2d01fec9af7645b2a033aaf429ca925e2b1f7b",
-        "total_bytes": null
+        "total_bytes": 917562
       },
       {
         "kind": "other",
@@ -3299,7 +3961,7 @@
       {
         "kind": "other",
         "path": "module_0070.jit_fn.0.ir-no-opt.ll",
-        "size_bytes": 751
+        "size_bytes": 3764
       },
       {
         "kind": "other",
@@ -3308,28 +3970,23 @@
       },
       {
         "kind": "other",
-        "path": "module_0070.jit_fn.10.ir-with-opt.ll",
-        "size_bytes": 33519
-      },
-      {
-        "kind": "other",
-        "path": "module_0070.jit_fn.10.ptx",
-        "size_bytes": 11481
+        "path": "module_0070.jit_fn.10.ir-no-opt.ll",
+        "size_bytes": 56652
       },
       {
         "kind": "other",
         "path": "module_0070.jit_fn.11.ir-with-opt.ll",
-        "size_bytes": 34000
+        "size_bytes": 33519
       },
       {
         "kind": "other",
         "path": "module_0070.jit_fn.11.ptx",
-        "size_bytes": 11893
+        "size_bytes": 11481
       },
       {
         "kind": "other",
         "path": "module_0070.jit_fn.2.ir-no-opt.ll",
-        "size_bytes": 3764
+        "size_bytes": 751
       },
       {
         "kind": "other",
@@ -3379,12 +4036,17 @@
       {
         "kind": "other",
         "path": "module_0070.jit_fn.8.ir-no-opt.ll",
-        "size_bytes": 56652
+        "size_bytes": 56823
       },
       {
         "kind": "other",
-        "path": "module_0070.jit_fn.9.ir-no-opt.ll",
-        "size_bytes": 56823
+        "path": "module_0070.jit_fn.9.ir-with-opt.ll",
+        "size_bytes": 34000
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.9.ptx",
+        "size_bytes": 11893
       },
       {
         "kind": "other",
@@ -3438,11 +4100,11 @@
       },
       {
         "kind": "memory_usage_report",
-        "parser_status": "UNKNOWN",
+        "parser_status": "PARSED_TOTAL_BYTES",
         "path": "module_0070.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
         "size_bytes": 2787,
         "text_sha256": "41ac9ab3d1119380cbc8941da19b7cda8b3e61fd11c1b7090a8e518b2c77358c",
-        "total_bytes": null
+        "total_bytes": 2621498
       },
       {
         "kind": "other",
@@ -3487,8 +4149,10 @@
     "jaxlib_version": "0.11.0",
     "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
     "python_version": "3.12.3",
-    "timestamp_utc": "2026-09-08T09:52:56.039663+00:00"
+    "timestamp_utc": "2026-09-08T10:21:33.144247+00:00",
+    "xla_flags": "--xla_gpu_autotune_level=0 --xla_dump_to=experiments/_compiler_dumps/rtx3050_2026-09-08 --xla_dump_hlo_as_text"
   },
+  "expected_device": "rtx3050",
   "manifest": "experiments/compiler_drift_cases_2026-09-08.json",
   "reproduction_status": "MATCHED",
   "status": "COMPUTATIONALLY VERIFIED"
