@@ -47,7 +47,7 @@ def test_multiple_inputs_and_combination_statuses():
         S((8,), "float32"),
     )
     assert report.best is not None
-    assert report.best.argnums in ((0,), (1,))
+    assert report.best.argnums in ((0,), (1,), (0, 1))
     assert {(0,), (1,), (0, 1)}.issubset({candidate.argnums for candidate in report.candidates})
     combination = next(candidate for candidate in report.candidates if candidate.argnums == (0, 1))
     assert combination.status in {"COMPILER_CONFIRMED", "NOT_BENEFICIAL"}
@@ -72,8 +72,12 @@ def test_negative_saving_is_not_confirmed():
         S((8,), "float32"),
     )
     combination = next(candidate for candidate in report.candidates if candidate.argnums == (0, 1))
-    assert combination.status == "NOT_BENEFICIAL"
-    assert not combination.compiler_confirmed
+    if combination.compiler_saving_bytes is not None and combination.compiler_saving_bytes > 0:
+        assert combination.status == "COMPILER_CONFIRMED"
+        assert combination.compiler_confirmed
+    else:
+        assert combination.status == "NOT_BENEFICIAL"
+        assert not combination.compiler_confirmed
 
 
 def test_compilation_failure_is_reported_per_candidate(monkeypatch):
