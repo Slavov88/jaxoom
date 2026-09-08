@@ -11,3 +11,4 @@
 - Added version-aware compiler calibration selection and explicit uncalibrated fallback behavior.
 - Added compiler-confirmed positional buffer donation advice with explicit caller-safety warnings.
 - Added observational current-device memory snapshots and conservative auto budgets for pre-compilation assessment.
+- Corrected auto budgets to respect known JAX allocator limits without adding pool bytes to driver free memory.

@@ -104,10 +104,11 @@ snapshot.print()
 
 On NVIDIA CUDA, the snapshot queries physical total, used, and free VRAM with
 `nvidia-smi`, reads available JAX allocator counters, and records relevant
-allocator environment variables. The default budget is the effective available
-memory minus a safety reserve of 5% of physical VRAM, bounded to 64 MiB through
-256 MiB. Existing JAX pool bytes that are not in use are included in the
-available amount when those counters are provided. Explicit limits such as
+allocator environment variables. The default budget is the minimum of
+nvidia-smi free memory and the known JAX allocator limit, minus a safety reserve
+of 5% of physical VRAM, bounded to 64 MiB through 256 MiB. JAX pool bytes are
+reported separately and are not added to driver free memory as if all pool
+capacity were independently reusable. Explicit limits such as
 `memory_limit="8 GiB"` remain authoritative.
 
 This is a pre-compilation risk assessment, not an OOM guarantee. Free VRAM can

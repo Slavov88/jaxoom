@@ -84,6 +84,12 @@ device metadata, family/dtype/size summaries, and a Markdown report. It
 refuses to label the RTX 3050 as an independent device. Use
 `--allow-same-device-smoke` only for a local harness smoke test.
 
+The device-budget correction replay compares the legacy driver-plus-pool
+policy with the allocator-aware policy using the frozen 18-trial dataset. The
+replay, occupancy regression, and remaining false fits are recorded in
+`device_budget_correction_summary_2026-09-08.json` and
+`device_budget_correction_report_2026-09-08.md`.
+
 The execution OOM diagnostic harness instruments device, CUDA runtime, and
 JAX allocator state around inputs, compilation, and repeated execution:
 
