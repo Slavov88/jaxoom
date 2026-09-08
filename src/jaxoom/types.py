@@ -157,3 +157,57 @@ class MemoryComparison:
     static_overpredicts: bool | None
     static_underpredicts: bool | None
     limitations: tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class DonationLeaf:
+    """One array leaf in a positional donation argument."""
+
+    shape: tuple[int, ...]
+    dtype: str
+    nbytes: int
+
+
+@dataclass(frozen=True)
+class DonationCandidate:
+    """Compiler result for donating one or more positional arguments."""
+
+    argnums: tuple[int, ...]
+    input_bytes: int
+    input_leaves: tuple[DonationLeaf, ...]
+    compatible_leaf_count: int
+    status: str
+    baseline_compiler_bytes: int | None
+    donated_compiler_bytes: int | None
+    compiler_saving_bytes: int | None
+    saving_fraction: float | None
+    baseline_alias_bytes: int | None
+    donated_alias_bytes: int | None
+    alias_gain_bytes: int | None
+    compiler_confirmed: bool
+    warnings: tuple[str, ...] = ()
+    error: str | None = None
+
+
+@dataclass(frozen=True)
+class DonationReport:
+    """Compiler-confirmed donation opportunities for one callable."""
+
+    baseline: CompilerMemoryReport
+    candidates: tuple[DonationCandidate, ...]
+    best: DonationCandidate | None
+    compiler_evaluations: int
+    backend: str
+    jax_version: str
+    limitations: tuple[str, ...]
+
+    def render(self) -> str:
+        from .reports.console import render_donation
+
+        return render_donation(self)
+
+    def print(self) -> None:
+        print(self.render())
+
+    def __str__(self) -> str:
+        return self.render()

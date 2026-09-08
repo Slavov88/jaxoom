@@ -13,6 +13,15 @@ def compile_analyze(
     args: tuple[Any, ...],
     kwargs: dict[str, Any] | None = None,
 ) -> CompilerMemoryReport:
+    return _compile_analyze(fn, args, kwargs)
+
+
+def _compile_analyze(
+    fn: Callable[..., Any],
+    args: tuple[Any, ...],
+    kwargs: dict[str, Any] | None = None,
+    donate_argnums: tuple[int, ...] = (),
+) -> CompilerMemoryReport:
     """Lower and compile ``fn``, then read ``Compiled.memory_analysis()``.
 
     This is compiler accounting, not an exact runtime peak. All JAX-specific
@@ -29,7 +38,8 @@ def compile_analyze(
         jaxlib_version=_jaxlib_version(),
     )
     try:
-        compiled = jax.jit(fn).lower(*args, **kwargs).compile()
+        jitted = jax.jit(fn) if not donate_argnums else jax.jit(fn, donate_argnums=donate_argnums)
+        compiled = jitted.lower(*args, **kwargs).compile()
     except Exception as exc:  # compiler availability is backend/version dependent
         return CompilerMemoryReport(
             **base,

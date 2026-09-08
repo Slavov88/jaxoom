@@ -1,7 +1,10 @@
 """JAXOOM: know before you OOM."""
-from .api import assess, calibrate, compare_memory, compile_analyze, estimate
+from .api import analyze_donation, assess, calibrate, compare_memory, compile_analyze, estimate
 from .types import (
     BufferInfo,
+    DonationCandidate,
+    DonationLeaf,
+    DonationReport,
     CalibrationSummary,
     CompilerMemoryReport,
     MemoryAssessment,
@@ -13,8 +16,12 @@ from .types import (
 )
 
 __all__ = [
+    "analyze_donation",
     "assess",
     "BufferInfo",
+    "DonationCandidate",
+    "DonationLeaf",
+    "DonationReport",
     "calibrate",
     "CalibrationSummary",
     "CompilerMemoryReport",

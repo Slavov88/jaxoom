@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from ..analysis.tensor_size import format_bytes
-from ..types import MemoryAssessment, MemoryReport
+from ..types import DonationReport, MemoryAssessment, MemoryReport
 
 
 def render_assessment(assessment: MemoryAssessment) -> str:
@@ -35,6 +35,41 @@ def render_assessment(assessment: MemoryAssessment) -> str:
         "Limitations",
     ]
     lines.extend(f"- {limitation}" for limitation in assessment.limitations[:4])
+    return "\n".join(lines)
+
+
+def render_donation(report: DonationReport) -> str:
+    baseline = report.baseline.compiler_accounted_bytes
+    lines = [
+        "JAXOOM DONATION ANALYSIS",
+        "=" * 32,
+        "",
+        f"Backend                      {report.backend}",
+        f"JAX version                  {report.jax_version}",
+        f"Baseline compiler memory    {format_bytes(baseline) if baseline is not None else 'unavailable'}",
+        f"Compiler evaluations        {report.compiler_evaluations}",
+        "",
+        "Best candidate",
+    ]
+    if report.best is None:
+        lines.append("No compiler-confirmed beneficial donation.")
+    else:
+        best = report.best
+        lines.extend(
+            [
+                f"donate_argnums              {best.argnums}",
+                f"Compiler memory             {format_bytes(best.donated_compiler_bytes)}",
+                f"Compiler saving             {format_bytes(best.compiler_saving_bytes)}",
+                f"Saving                      {best.saving_fraction:.1%}" if best.saving_fraction is not None else "Saving                      unavailable",
+                f"Alias gain                  {format_bytes(best.alias_gain_bytes)}" if best.alias_gain_bytes is not None else "Alias gain                  unavailable",
+            ]
+        )
+    lines.extend(["", "Candidates"])
+    for candidate in report.candidates[:10]:
+        saving = format_bytes(candidate.compiler_saving_bytes) if candidate.compiler_saving_bytes is not None else "unavailable"
+        lines.append(f"{candidate.argnums!s:<28} {candidate.status:<20} {saving}")
+    lines.extend(["", "Warnings"])
+    lines.extend(f"- {warning}" for warning in report.limitations[:3])
     return "\n".join(lines)
 
 

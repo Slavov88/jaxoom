@@ -9,6 +9,7 @@ from .calibration import calibrate as _calibrate
 from .analysis.peak import calculate_peak
 from .analysis.tensor_size import parse_memory_limit
 from .compiler.memory_analysis import compile_analyze as _compile_analyze
+from .donation import analyze_donation as _analyze_donation
 from .tracing import trace
 from .types import (
     CalibrationSummary,
@@ -17,6 +18,7 @@ from .types import (
     MemoryComparison,
     MemoryInterval,
     MemoryReport,
+    DonationReport,
 )
 
 
@@ -27,6 +29,16 @@ def compile_analyze(
 ) -> CompilerMemoryReport:
     """Compile a function and return backend-reported memory categories."""
     return _compile_analyze(fn, args, kwargs)
+
+
+def analyze_donation(
+    fn: Callable[..., Any],
+    *args: Any,
+    max_compilations: int = 32,
+    **kwargs: Any,
+) -> DonationReport:
+    """Recommend compiler-confirmed positional buffer donation opportunities."""
+    return _analyze_donation(fn, *args, max_compilations=max_compilations, **kwargs)
 
 
 def compare_memory(static_report: MemoryReport, compiler_report: CompilerMemoryReport) -> MemoryComparison:
