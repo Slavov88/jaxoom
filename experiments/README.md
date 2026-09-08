@@ -84,6 +84,23 @@ device metadata, family/dtype/size summaries, and a Markdown report. It
 refuses to label the RTX 3050 as an independent device. Use
 `--allow-same-device-smoke` only for a local harness smoke test.
 
+The execution OOM diagnostic harness instruments device, CUDA runtime, and
+JAX allocator state around inputs, compilation, and repeated execution:
+
+```bash
+XLA_PYTHON_CLIENT_PREALLOCATE=false PYTHONPATH=src:experiments \
+  python experiments/execution_oom_diagnosis.py \
+  --threshold-output experiments/execution_oom_diagnosis_YYYY-MM-DD.json
+```
+
+The RTX 3050 false-fit reproduction found that compilation grew the JAX pool to
+about 2.2 GiB while the JAX allocator limit was 3 GiB. The failed first
+execution requested about 1 GiB, while the remaining allocator capacity was
+about 996 MiB. A platform-allocator diagnostic FIT where the default BFC-style
+configuration failed. This identifies allocator state and JAX capacity limits
+as contributors. It does not justify a production predictor change yet. See
+`execution_oom_diagnosis_report_2026-09-08.md`.
+
 The OOM boundary harness runs each target trial in a fresh subprocess and
 keeps intrinsic and controlled-contention tracks separate:
 
