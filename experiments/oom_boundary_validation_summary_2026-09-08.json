@@ -1,0 +1,308 @@
+{
+  "environment": {
+    "allocator_environment": {
+      "TF_GPU_ALLOCATOR": null,
+      "XLA_CLIENT_MEM_FRACTION": null,
+      "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+      "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+      "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+    },
+    "host_platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "jax_backend": "recorded per trial",
+    "python_version": "3.12.3"
+  },
+  "families": {
+    "attention": {
+      "families": {
+        "attention": 11
+      },
+      "median_compile_ms": 10387.542602,
+      "median_execution_ms": null,
+      "median_snapshot_to_compile_ms": 0.022043,
+      "outcomes": {
+        "COMPILE_OOM": 1,
+        "EXECUTION_OOM": 10
+      },
+      "pressures_mib": [
+        0,
+        768,
+        1280
+      ],
+      "trials": 11
+    },
+    "mlp": {
+      "families": {
+        "mlp": 3
+      },
+      "median_compile_ms": 7751.827428,
+      "median_execution_ms": 34.938248,
+      "median_snapshot_to_compile_ms": 0.020759,
+      "outcomes": {
+        "FIT": 3
+      },
+      "pressures_mib": [
+        0
+      ],
+      "trials": 3
+    },
+    "training": {
+      "families": {
+        "training": 2
+      },
+      "median_compile_ms": 16186.161501,
+      "median_execution_ms": 32.013014,
+      "median_snapshot_to_compile_ms": 0.023484,
+      "outcomes": {
+        "FIT": 2
+      },
+      "pressures_mib": [
+        0
+      ],
+      "trials": 2
+    },
+    "transformer": {
+      "families": {
+        "transformer": 2
+      },
+      "median_compile_ms": 12098.768146999999,
+      "median_execution_ms": 21.514975,
+      "median_snapshot_to_compile_ms": 0.021866,
+      "outcomes": {
+        "FIT": 2
+      },
+      "pressures_mib": [
+        0
+      ],
+      "trials": 2
+    }
+  },
+  "overall": {
+    "false_fit_count": 4,
+    "false_fit_ids": [
+      "intrinsic-000",
+      "intrinsic-001",
+      "contention-0000-000",
+      "contention-0768-000"
+    ],
+    "false_oom_count": 0,
+    "false_oom_ids": [],
+    "likely_exceeds_trials": {
+      "COMPILE_OOM": 1,
+      "EXECUTION_OOM": 1,
+      "FIT": 0,
+      "OTHER_FAILURE": 0
+    },
+    "low_trials": {
+      "COMPILE_OOM": 0,
+      "EXECUTION_OOM": 4,
+      "FIT": 7,
+      "OTHER_FAILURE": 0
+    },
+    "outcomes": {
+      "COMPILE_OOM": 1,
+      "EXECUTION_OOM": 10,
+      "FIT": 7
+    },
+    "risk_x_outcome": {
+      "HIGH": {
+        "COMPILE_OOM": 0,
+        "EXECUTION_OOM": 0,
+        "FIT": 0,
+        "OTHER_FAILURE": 0
+      },
+      "LIKELY EXCEEDS BUDGET": {
+        "COMPILE_OOM": 1,
+        "EXECUTION_OOM": 1,
+        "FIT": 0,
+        "OTHER_FAILURE": 0
+      },
+      "LOW": {
+        "COMPILE_OOM": 0,
+        "EXECUTION_OOM": 4,
+        "FIT": 7,
+        "OTHER_FAILURE": 0
+      },
+      "MODERATE": {
+        "COMPILE_OOM": 0,
+        "EXECUTION_OOM": 5,
+        "FIT": 0,
+        "OTHER_FAILURE": 0
+      },
+      "UNAVAILABLE": {
+        "COMPILE_OOM": 0,
+        "EXECUTION_OOM": 0,
+        "FIT": 0,
+        "OTHER_FAILURE": 0
+      }
+    },
+    "trial_count": 18
+  },
+  "prediction_metrics": {
+    "compiler_upper_coverage_successful_compiles": {
+      "covered": 17,
+      "denominator": 17
+    },
+    "false_fit_rate_all_trials": 0.2222222222222222,
+    "false_fit_rate_among_predicted_fit": 0.36363636363636365,
+    "false_oom_rate_all_trials": 0,
+    "predicted_fit_actual_oom": 4,
+    "predicted_fit_rows": 11
+  },
+  "reserve_sensitivity": {
+    "0 MiB": {
+      "false_fit_count": 6,
+      "false_oom_count": 0,
+      "low_fit": 7,
+      "low_oom": 6,
+      "mean_budget_lost_bytes": -214748365.0
+    },
+    "128 MiB": {
+      "false_fit_count": 4,
+      "false_oom_count": 0,
+      "low_fit": 7,
+      "low_oom": 4,
+      "mean_budget_lost_bytes": -80530637.0
+    },
+    "256 MiB": {
+      "false_fit_count": 4,
+      "false_oom_count": 0,
+      "low_fit": 7,
+      "low_oom": 4,
+      "mean_budget_lost_bytes": 53687091.0
+    },
+    "64 MiB": {
+      "false_fit_count": 4,
+      "false_oom_count": 0,
+      "low_fit": 7,
+      "low_oom": 4,
+      "mean_budget_lost_bytes": -147639501.0
+    },
+    "current 5%-bounded": {
+      "false_fit_count": 4,
+      "false_oom_count": 0,
+      "low_fit": 7,
+      "low_oom": 4,
+      "mean_budget_lost_bytes": 0.0
+    }
+  },
+  "snapshot_race": {
+    "rows": [
+      {
+        "delta_bytes": 0,
+        "first_free": 4083154944,
+        "iteration": 0,
+        "pair_latency_ms": 4604.059112,
+        "second_free": 4083154944
+      },
+      {
+        "delta_bytes": 0,
+        "first_free": 4083154944,
+        "iteration": 1,
+        "pair_latency_ms": 115.763859,
+        "second_free": 4083154944
+      },
+      {
+        "delta_bytes": 0,
+        "first_free": 4083154944,
+        "iteration": 2,
+        "pair_latency_ms": 123.363857,
+        "second_free": 4083154944
+      },
+      {
+        "delta_bytes": 0,
+        "first_free": 4083154944,
+        "iteration": 3,
+        "pair_latency_ms": 119.460885,
+        "second_free": 4083154944
+      },
+      {
+        "delta_bytes": 0,
+        "first_free": 4083154944,
+        "iteration": 4,
+        "pair_latency_ms": 111.649207,
+        "second_free": 4083154944
+      },
+      {
+        "delta_bytes": 0,
+        "first_free": 4083154944,
+        "iteration": 5,
+        "pair_latency_ms": 125.944823,
+        "second_free": 4083154944
+      },
+      {
+        "delta_bytes": 0,
+        "first_free": 4083154944,
+        "iteration": 6,
+        "pair_latency_ms": 172.291324,
+        "second_free": 4083154944
+      },
+      {
+        "delta_bytes": 0,
+        "first_free": 4083154944,
+        "iteration": 7,
+        "pair_latency_ms": 119.589108,
+        "second_free": 4083154944
+      },
+      {
+        "delta_bytes": 0,
+        "first_free": 4083154944,
+        "iteration": 8,
+        "pair_latency_ms": 144.409499,
+        "second_free": 4083154944
+      },
+      {
+        "delta_bytes": 0,
+        "first_free": 4083154944,
+        "iteration": 9,
+        "pair_latency_ms": 128.736477,
+        "second_free": 4083154944
+      }
+    ],
+    "status": "OBSERVED"
+  },
+  "status": "OBSERVED",
+  "timing_ms": {
+    "median_compile_success": 11412.074321,
+    "median_execution_success": 27.459117,
+    "median_snapshot_to_compile": 0.022007
+  },
+  "tracks": {
+    "contention": {
+      "families": {
+        "attention": 6
+      },
+      "median_compile_ms": 72512.4446805,
+      "median_execution_ms": null,
+      "median_snapshot_to_compile_ms": 0.0206685,
+      "outcomes": {
+        "EXECUTION_OOM": 6
+      },
+      "pressures_mib": [
+        0,
+        768,
+        1280
+      ],
+      "trials": 6
+    },
+    "intrinsic": {
+      "families": {
+        "attention": 5,
+        "mlp": 3,
+        "training": 2,
+        "transformer": 2
+      },
+      "median_compile_ms": 10565.808506000001,
+      "median_execution_ms": 27.459117,
+      "median_snapshot_to_compile_ms": 0.0223975,
+      "outcomes": {
+        "COMPILE_OOM": 1,
+        "EXECUTION_OOM": 4,
+        "FIT": 7
+      },
+      "pressures_mib": [
+        0
+      ],
+      "trials": 12
+    }
+  }
+}

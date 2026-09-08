@@ -1,0 +1,75 @@
+{
+  "status": "OBSERVED",
+  "rows": [
+    {
+      "iteration": 0,
+      "first_free": 4083154944,
+      "second_free": 4083154944,
+      "delta_bytes": 0,
+      "pair_latency_ms": 4604.059112
+    },
+    {
+      "iteration": 1,
+      "first_free": 4083154944,
+      "second_free": 4083154944,
+      "delta_bytes": 0,
+      "pair_latency_ms": 115.763859
+    },
+    {
+      "iteration": 2,
+      "first_free": 4083154944,
+      "second_free": 4083154944,
+      "delta_bytes": 0,
+      "pair_latency_ms": 123.363857
+    },
+    {
+      "iteration": 3,
+      "first_free": 4083154944,
+      "second_free": 4083154944,
+      "delta_bytes": 0,
+      "pair_latency_ms": 119.460885
+    },
+    {
+      "iteration": 4,
+      "first_free": 4083154944,
+      "second_free": 4083154944,
+      "delta_bytes": 0,
+      "pair_latency_ms": 111.649207
+    },
+    {
+      "iteration": 5,
+      "first_free": 4083154944,
+      "second_free": 4083154944,
+      "delta_bytes": 0,
+      "pair_latency_ms": 125.944823
+    },
+    {
+      "iteration": 6,
+      "first_free": 4083154944,
+      "second_free": 4083154944,
+      "delta_bytes": 0,
+      "pair_latency_ms": 172.291324
+    },
+    {
+      "iteration": 7,
+      "first_free": 4083154944,
+      "second_free": 4083154944,
+      "delta_bytes": 0,
+      "pair_latency_ms": 119.589108
+    },
+    {
+      "iteration": 8,
+      "first_free": 4083154944,
+      "second_free": 4083154944,
+      "delta_bytes": 0,
+      "pair_latency_ms": 144.409499
+    },
+    {
+      "iteration": 9,
+      "first_free": 4083154944,
+      "second_free": 4083154944,
+      "delta_bytes": 0,
+      "pair_latency_ms": 128.736477
+    }
+  ]
+}

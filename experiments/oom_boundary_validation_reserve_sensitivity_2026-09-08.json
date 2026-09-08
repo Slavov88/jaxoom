@@ -1,0 +1,37 @@
+{
+  "0 MiB": {
+    "false_fit_count": 6,
+    "false_oom_count": 0,
+    "low_fit": 7,
+    "low_oom": 6,
+    "mean_budget_lost_bytes": -214748365.0
+  },
+  "128 MiB": {
+    "false_fit_count": 4,
+    "false_oom_count": 0,
+    "low_fit": 7,
+    "low_oom": 4,
+    "mean_budget_lost_bytes": -80530637.0
+  },
+  "256 MiB": {
+    "false_fit_count": 4,
+    "false_oom_count": 0,
+    "low_fit": 7,
+    "low_oom": 4,
+    "mean_budget_lost_bytes": 53687091.0
+  },
+  "64 MiB": {
+    "false_fit_count": 4,
+    "false_oom_count": 0,
+    "low_fit": 7,
+    "low_oom": 4,
+    "mean_budget_lost_bytes": -147639501.0
+  },
+  "current 5%-bounded": {
+    "false_fit_count": 4,
+    "false_oom_count": 0,
+    "low_fit": 7,
+    "low_oom": 4,
+    "mean_budget_lost_bytes": 0.0
+  }
+}

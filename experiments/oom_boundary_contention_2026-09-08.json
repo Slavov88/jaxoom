@@ -1,0 +1,488 @@
+{
+  "metadata": {
+    "allocator_environment": {
+      "TF_GPU_ALLOCATOR": null,
+      "XLA_CLIENT_MEM_FRACTION": null,
+      "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+      "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+      "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+    },
+    "host_platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "jax_backend": "recorded per trial",
+    "python_version": "3.12.3"
+  },
+  "status": "OBSERVED",
+  "summary": {
+    "false_fit_count": 2,
+    "false_fit_ids": [
+      "contention-0000-000",
+      "contention-0768-000"
+    ],
+    "false_oom_count": 0,
+    "false_oom_ids": [],
+    "likely_exceeds_trials": {
+      "COMPILE_OOM": 0,
+      "EXECUTION_OOM": 1,
+      "FIT": 0,
+      "OTHER_FAILURE": 0
+    },
+    "low_trials": {
+      "COMPILE_OOM": 0,
+      "EXECUTION_OOM": 2,
+      "FIT": 0,
+      "OTHER_FAILURE": 0
+    },
+    "outcomes": {
+      "EXECUTION_OOM": 6
+    },
+    "risk_x_outcome": {
+      "HIGH": {
+        "COMPILE_OOM": 0,
+        "EXECUTION_OOM": 0,
+        "FIT": 0,
+        "OTHER_FAILURE": 0
+      },
+      "LIKELY EXCEEDS BUDGET": {
+        "COMPILE_OOM": 0,
+        "EXECUTION_OOM": 1,
+        "FIT": 0,
+        "OTHER_FAILURE": 0
+      },
+      "LOW": {
+        "COMPILE_OOM": 0,
+        "EXECUTION_OOM": 2,
+        "FIT": 0,
+        "OTHER_FAILURE": 0
+      },
+      "MODERATE": {
+        "COMPILE_OOM": 0,
+        "EXECUTION_OOM": 3,
+        "FIT": 0,
+        "OTHER_FAILURE": 0
+      },
+      "UNAVAILABLE": {
+        "COMPILE_OOM": 0,
+        "EXECUTION_OOM": 0,
+        "FIT": 0,
+        "OTHER_FAILURE": 0
+      }
+    },
+    "trial_count": 6
+  },
+  "trials": [
+    {
+      "assessment_budget_bytes": 3855823667,
+      "calibrated_central_bytes": 1082261504,
+      "calibrated_lower_bytes": 728866417,
+      "calibrated_upper_bytes": 1804833959,
+      "calibration_applicability": "EXACT_TESTED",
+      "central_headroom_bytes": 2773562163,
+      "compile_status": "SUCCESS",
+      "compiler_memory": {
+        "alias_bytes": 0,
+        "argument_bytes": 8388608,
+        "compiler_accounted_bytes": 1090519056,
+        "output_bytes": 8388608,
+        "temporary_bytes": 1073741840
+      },
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 4096
+      },
+      "device": "cuda:0",
+      "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "dtype": "float32",
+      "execution_status": "FAILED",
+      "external_pressure_bytes": 0,
+      "failure_message": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.00GiB. [tf-allocator-allocation-error=''] [executable_name='jit_fn']",
+      "failure_stage": "execute",
+      "family": "attention",
+      "jax_version": "0.11.0",
+      "jaxlib_version": "0.11.0",
+      "prediction": "PREDICTED FIT",
+      "risk": "LOW",
+      "safety_reserve_bytes": 214748365,
+      "snapshot": {
+        "allocator_memory_fraction": null,
+        "allocator_mode": "no preallocation",
+        "allocator_preallocate": false,
+        "backend": "gpu",
+        "device_id": 0,
+        "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+        "driver_free_bytes": 4068474880,
+        "driver_used_bytes": 89128960,
+        "effective_available_bytes": 4070572032,
+        "external_used_bytes": 78643200,
+        "jax_bytes_in_use": 8388608,
+        "jax_peak_bytes_in_use": 8388864,
+        "jax_pool_bytes": 10485760,
+        "limitations": [],
+        "measurement_sources": [
+          "nvidia-smi query",
+          "JAX device.memory_stats",
+          "derived available-memory policy"
+        ],
+        "physical_total_bytes": 4294967296,
+        "timestamp": "2026-09-08T12:43:12.803519+00:00"
+      },
+      "snapshot_to_compile_ms": 0.025145,
+      "status": "EXECUTION_OOM",
+      "structural_bytes": 1082261504,
+      "structural_headroom_bytes": 2773562163,
+      "subprocess_returncode": 0,
+      "timings_ms": {
+        "snapshot_and_assessment": 0.025145
+      },
+      "track": "contention",
+      "trial_id": "contention-0000-000",
+      "upper_headroom_bytes": 2050989708,
+      "upper_headroom_fraction": 1.1363869223384886
+    },
+    {
+      "assessment_budget_bytes": 3847435059,
+      "calibrated_central_bytes": 2428698624,
+      "calibrated_lower_bytes": 1635646151,
+      "calibrated_upper_bytes": 4050220522,
+      "calibration_applicability": "EXACT_TESTED",
+      "central_headroom_bytes": 1418736435,
+      "compile_status": "SUCCESS",
+      "compiler_memory": {
+        "alias_bytes": 0,
+        "argument_bytes": 12582912,
+        "compiler_accounted_bytes": 2441085200,
+        "output_bytes": 12582912,
+        "temporary_bytes": 2415919376
+      },
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 6144
+      },
+      "device": "cuda:0",
+      "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "dtype": "float32",
+      "execution_status": "FAILED",
+      "external_pressure_bytes": 0,
+      "failure_message": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.25GiB. [executable_name='jit_fn'] [tf-allocator-allocation-error='']",
+      "failure_stage": "execute",
+      "family": "attention",
+      "jax_version": "0.11.0",
+      "jaxlib_version": "0.11.0",
+      "prediction": "UNCERTAIN",
+      "risk": "MODERATE",
+      "safety_reserve_bytes": 214748365,
+      "snapshot": {
+        "allocator_memory_fraction": null,
+        "allocator_mode": "no preallocation",
+        "allocator_preallocate": false,
+        "backend": "gpu",
+        "device_id": 0,
+        "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+        "driver_free_bytes": 4060086272,
+        "driver_used_bytes": 97517568,
+        "effective_available_bytes": 4062183424,
+        "external_used_bytes": 78643200,
+        "jax_bytes_in_use": 16777216,
+        "jax_peak_bytes_in_use": 16777472,
+        "jax_pool_bytes": 18874368,
+        "limitations": [],
+        "measurement_sources": [
+          "nvidia-smi query",
+          "JAX device.memory_stats",
+          "derived available-memory policy"
+        ],
+        "physical_total_bytes": 4294967296,
+        "timestamp": "2026-09-08T12:43:33.655814+00:00"
+      },
+      "snapshot_to_compile_ms": 0.021913,
+      "status": "EXECUTION_OOM",
+      "structural_bytes": 2428698624,
+      "structural_headroom_bytes": 1418736435,
+      "subprocess_returncode": 0,
+      "timings_ms": {
+        "snapshot_and_assessment": 0.021913
+      },
+      "track": "contention",
+      "trial_id": "contention-0000-001",
+      "upper_headroom_bytes": -202785463,
+      "upper_headroom_fraction": -0.050067758508088464
+    },
+    {
+      "assessment_budget_bytes": 2701341491,
+      "calibrated_central_bytes": 1082261504,
+      "calibrated_lower_bytes": 728866417,
+      "calibrated_upper_bytes": 1804833959,
+      "calibration_applicability": "EXACT_TESTED",
+      "central_headroom_bytes": 1619079987,
+      "compile_status": "SUCCESS",
+      "compiler_memory": {
+        "alias_bytes": 0,
+        "argument_bytes": 8388608,
+        "compiler_accounted_bytes": 1090519056,
+        "output_bytes": 8388608,
+        "temporary_bytes": 1073741840
+      },
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 4096
+      },
+      "device": "cuda:0",
+      "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "dtype": "float32",
+      "execution_status": "FAILED",
+      "external_pressure_bytes": 805306368,
+      "failure_message": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.00GiB. [executable_name='jit_fn'] [tf-allocator-allocation-error='']",
+      "failure_stage": "execute",
+      "family": "attention",
+      "jax_version": "0.11.0",
+      "jaxlib_version": "0.11.0",
+      "prediction": "PREDICTED FIT",
+      "risk": "LOW",
+      "safety_reserve_bytes": 214748365,
+      "snapshot": {
+        "allocator_memory_fraction": null,
+        "allocator_mode": "no preallocation",
+        "allocator_preallocate": false,
+        "backend": "gpu",
+        "device_id": 0,
+        "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+        "driver_free_bytes": 2913992704,
+        "driver_used_bytes": 1243611136,
+        "effective_available_bytes": 2916089856,
+        "external_used_bytes": 1233125376,
+        "jax_bytes_in_use": 8388608,
+        "jax_peak_bytes_in_use": 8388864,
+        "jax_pool_bytes": 10485760,
+        "limitations": [],
+        "measurement_sources": [
+          "nvidia-smi query",
+          "JAX device.memory_stats",
+          "derived available-memory policy"
+        ],
+        "physical_total_bytes": 4294967296,
+        "timestamp": "2026-09-08T12:46:07.203555+00:00"
+      },
+      "snapshot_to_compile_ms": 0.022903,
+      "status": "EXECUTION_OOM",
+      "structural_bytes": 1082261504,
+      "structural_headroom_bytes": 1619079987,
+      "subprocess_returncode": 0,
+      "timings_ms": {
+        "snapshot_and_assessment": 0.022903
+      },
+      "track": "contention",
+      "trial_id": "contention-0768-000",
+      "upper_headroom_bytes": 896507532,
+      "upper_headroom_fraction": 0.49672576667203544
+    },
+    {
+      "assessment_budget_bytes": 2692952883,
+      "calibrated_central_bytes": 2428698624,
+      "calibrated_lower_bytes": 1635646151,
+      "calibrated_upper_bytes": 4050220522,
+      "calibration_applicability": "EXACT_TESTED",
+      "central_headroom_bytes": 264254259,
+      "compile_status": "SUCCESS",
+      "compiler_memory": {
+        "alias_bytes": 0,
+        "argument_bytes": 12582912,
+        "compiler_accounted_bytes": 2441085200,
+        "output_bytes": 12582912,
+        "temporary_bytes": 2415919376
+      },
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 6144
+      },
+      "device": "cuda:0",
+      "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "dtype": "float32",
+      "execution_status": "FAILED",
+      "external_pressure_bytes": 805306368,
+      "failure_message": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.25GiB. [tf-allocator-allocation-error=''] [executable_name='jit_fn']",
+      "failure_stage": "execute",
+      "family": "attention",
+      "jax_version": "0.11.0",
+      "jaxlib_version": "0.11.0",
+      "prediction": "UNCERTAIN",
+      "risk": "MODERATE",
+      "safety_reserve_bytes": 214748365,
+      "snapshot": {
+        "allocator_memory_fraction": null,
+        "allocator_mode": "no preallocation",
+        "allocator_preallocate": false,
+        "backend": "gpu",
+        "device_id": 0,
+        "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+        "driver_free_bytes": 2905604096,
+        "driver_used_bytes": 1251999744,
+        "effective_available_bytes": 2907701248,
+        "external_used_bytes": 1233125376,
+        "jax_bytes_in_use": 16777216,
+        "jax_peak_bytes_in_use": 16777472,
+        "jax_pool_bytes": 18874368,
+        "limitations": [],
+        "measurement_sources": [
+          "nvidia-smi query",
+          "JAX device.memory_stats",
+          "derived available-memory policy"
+        ],
+        "physical_total_bytes": 4294967296,
+        "timestamp": "2026-09-08T12:46:30.156285+00:00"
+      },
+      "snapshot_to_compile_ms": 0.028654,
+      "status": "EXECUTION_OOM",
+      "structural_bytes": 2428698624,
+      "structural_headroom_bytes": 264254259,
+      "subprocess_returncode": 0,
+      "timings_ms": {
+        "snapshot_and_assessment": 0.028654
+      },
+      "track": "contention",
+      "trial_id": "contention-0768-001",
+      "upper_headroom_bytes": -1357267639,
+      "upper_headroom_fraction": -0.33510956542429965
+    },
+    {
+      "assessment_budget_bytes": 1627599667,
+      "calibrated_central_bytes": 1082261504,
+      "calibrated_lower_bytes": 728866417,
+      "calibrated_upper_bytes": 1804833959,
+      "calibration_applicability": "EXACT_TESTED",
+      "central_headroom_bytes": 545338163,
+      "compile_status": "SUCCESS",
+      "compiler_memory": {
+        "alias_bytes": 0,
+        "argument_bytes": 8388608,
+        "compiler_accounted_bytes": 1090519056,
+        "output_bytes": 8388608,
+        "temporary_bytes": 1073741840
+      },
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 4096
+      },
+      "device": "cuda:0",
+      "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "dtype": "float32",
+      "execution_status": "FAILED",
+      "external_pressure_bytes": 1342177280,
+      "failure_message": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.00GiB. [tf-allocator-allocation-error=''] [executable_name='jit_fn']",
+      "failure_stage": "execute",
+      "family": "attention",
+      "jax_version": "0.11.0",
+      "jaxlib_version": "0.11.0",
+      "prediction": "UNCERTAIN",
+      "risk": "MODERATE",
+      "safety_reserve_bytes": 214748365,
+      "snapshot": {
+        "allocator_memory_fraction": null,
+        "allocator_mode": "no preallocation",
+        "allocator_preallocate": false,
+        "backend": "gpu",
+        "device_id": 0,
+        "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+        "driver_free_bytes": 1840250880,
+        "driver_used_bytes": 2317352960,
+        "effective_available_bytes": 1842348032,
+        "external_used_bytes": 2306867200,
+        "jax_bytes_in_use": 8388608,
+        "jax_peak_bytes_in_use": 8388864,
+        "jax_pool_bytes": 10485760,
+        "limitations": [],
+        "measurement_sources": [
+          "nvidia-smi query",
+          "JAX device.memory_stats",
+          "derived available-memory policy"
+        ],
+        "physical_total_bytes": 4294967296,
+        "timestamp": "2026-09-08T12:49:06.463899+00:00"
+      },
+      "snapshot_to_compile_ms": 0.020659,
+      "status": "EXECUTION_OOM",
+      "structural_bytes": 1082261504,
+      "structural_headroom_bytes": 545338163,
+      "subprocess_returncode": 0,
+      "timings_ms": {
+        "snapshot_and_assessment": 0.020659
+      },
+      "track": "contention",
+      "trial_id": "contention-1280-000",
+      "upper_headroom_bytes": -177234292,
+      "upper_headroom_fraction": -0.09819977683609177
+    },
+    {
+      "assessment_budget_bytes": 1619211059,
+      "calibrated_central_bytes": 2428698624,
+      "calibrated_lower_bytes": 1635646151,
+      "calibrated_upper_bytes": 4050220522,
+      "calibration_applicability": "EXACT_TESTED",
+      "central_headroom_bytes": -809487565,
+      "compile_status": "SUCCESS",
+      "compiler_memory": {
+        "alias_bytes": 0,
+        "argument_bytes": 12582912,
+        "compiler_accounted_bytes": 2441085200,
+        "output_bytes": 12582912,
+        "temporary_bytes": 2415919376
+      },
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 6144
+      },
+      "device": "cuda:0",
+      "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "dtype": "float32",
+      "execution_status": "FAILED",
+      "external_pressure_bytes": 1342177280,
+      "failure_message": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.25GiB. [executable_name='jit_fn'] [tf-allocator-allocation-error='']",
+      "failure_stage": "execute",
+      "family": "attention",
+      "jax_version": "0.11.0",
+      "jaxlib_version": "0.11.0",
+      "prediction": "PREDICTED EXCEEDS",
+      "risk": "LIKELY EXCEEDS BUDGET",
+      "safety_reserve_bytes": 214748365,
+      "snapshot": {
+        "allocator_memory_fraction": null,
+        "allocator_mode": "no preallocation",
+        "allocator_preallocate": false,
+        "backend": "gpu",
+        "device_id": 0,
+        "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+        "driver_free_bytes": 1831862272,
+        "driver_used_bytes": 2325741568,
+        "effective_available_bytes": 1833959424,
+        "external_used_bytes": 2306867200,
+        "jax_bytes_in_use": 16777216,
+        "jax_peak_bytes_in_use": 16777472,
+        "jax_pool_bytes": 18874368,
+        "limitations": [],
+        "measurement_sources": [
+          "nvidia-smi query",
+          "JAX device.memory_stats",
+          "derived available-memory policy"
+        ],
+        "physical_total_bytes": 4294967296,
+        "timestamp": "2026-09-08T12:49:36.819594+00:00"
+      },
+      "snapshot_to_compile_ms": 0.02137,
+      "status": "EXECUTION_OOM",
+      "structural_bytes": 2428698624,
+      "structural_headroom_bytes": -809487565,
+      "subprocess_returncode": 0,
+      "timings_ms": {
+        "snapshot_and_assessment": 0.02137
+      },
+      "track": "contention",
+      "trial_id": "contention-1280-001",
+      "upper_headroom_bytes": -2431009463,
+      "upper_headroom_fraction": -0.6002165684054079
+    }
+  ]
+}
