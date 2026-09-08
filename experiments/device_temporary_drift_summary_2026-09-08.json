@@ -1,0 +1,288 @@
+{
+  "candidate_methods": {
+    "rtx_to_t4_additive": {
+      "count": 46,
+      "fit_bounds": {
+        "additive_bytes": {
+          "central": 0,
+          "lower": -65077248,
+          "upper": 12582912
+        },
+        "ratio": {
+          "central": 1.0,
+          "lower": 0.6734660838594787,
+          "upper": 1.6676505193119118
+        }
+      },
+      "fit_device": "rtx3050",
+      "interval_coverage": 0.8478260869565217,
+      "interval_coverage_count": 39,
+      "maximum_width_over_static": 169.28497626178736,
+      "median_width_over_static": 2.314453125,
+      "method": "additive",
+      "p90_width_over_static": 24.687468608260335,
+      "test_device": "t4",
+      "upper_coverage": 0.9347826086956522,
+      "upper_coverage_count": 43,
+      "upper_miss_rate": 0.06521739130434782
+    },
+    "rtx_to_t4_hybrid": {
+      "count": 46,
+      "fit_bounds": {
+        "additive_bytes": {
+          "central": 0,
+          "lower": -65077248,
+          "upper": 12582912
+        },
+        "ratio": {
+          "central": 1.0,
+          "lower": 0.6734660838594787,
+          "upper": 1.6676505193119118
+        }
+      },
+      "fit_device": "rtx3050",
+      "interval_coverage": 0.9130434782608695,
+      "interval_coverage_count": 42,
+      "maximum_width_over_static": 169.28497626178736,
+      "median_width_over_static": 2.6071036443119118,
+      "method": "hybrid",
+      "p90_width_over_static": 24.687468608260335,
+      "test_device": "t4",
+      "upper_coverage": 0.9782608695652174,
+      "upper_coverage_count": 45,
+      "upper_miss_rate": 0.021739130434782608
+    },
+    "rtx_to_t4_ratio": {
+      "count": 46,
+      "fit_bounds": {
+        "additive_bytes": {
+          "central": 0,
+          "lower": -65077248,
+          "upper": 12582912
+        },
+        "ratio": {
+          "central": 1.0,
+          "lower": 0.6734660838594787,
+          "upper": 1.6676505193119118
+        }
+      },
+      "fit_device": "rtx3050",
+      "interval_coverage": 0.782608695652174,
+      "interval_coverage_count": 36,
+      "maximum_width_over_static": 0.9941844354524333,
+      "median_width_over_static": 0.9941844354524331,
+      "method": "ratio",
+      "p90_width_over_static": 0.9941844354524332,
+      "test_device": "t4",
+      "upper_coverage": 0.8695652173913043,
+      "upper_coverage_count": 40,
+      "upper_miss_rate": 0.13043478260869565
+    },
+    "t4_to_rtx_additive": {
+      "count": 46,
+      "fit_bounds": {
+        "additive_bytes": {
+          "central": 17168,
+          "lower": -65011184,
+          "upper": 12583936
+        },
+        "ratio": {
+          "central": 1.0029414151249594,
+          "lower": 0.6736286268933644,
+          "upper": 3.143151263480853
+        }
+      },
+      "fit_device": "t4",
+      "interval_coverage": 0.8478260869565217,
+      "interval_coverage_count": 39,
+      "maximum_width_over_static": 169.14320093121805,
+      "median_width_over_static": 2.3125147819519043,
+      "method": "additive",
+      "p90_width_over_static": 24.666792975371074,
+      "test_device": "rtx3050",
+      "upper_coverage": 0.9565217391304348,
+      "upper_coverage_count": 44,
+      "upper_miss_rate": 0.043478260869565216
+    },
+    "t4_to_rtx_hybrid": {
+      "count": 46,
+      "fit_bounds": {
+        "additive_bytes": {
+          "central": 17168,
+          "lower": -65011184,
+          "upper": 12583936
+        },
+        "ratio": {
+          "central": 1.0029414151249594,
+          "lower": 0.6736286268933644,
+          "upper": 3.143151263480853
+        }
+      },
+      "fit_device": "t4",
+      "interval_coverage": 0.9130434782608695,
+      "interval_coverage_count": 42,
+      "maximum_width_over_static": 169.14320093121805,
+      "median_width_over_static": 4.080635527854632,
+      "method": "hybrid",
+      "p90_width_over_static": 24.666792975371074,
+      "test_device": "rtx3050",
+      "upper_coverage": 1.0,
+      "upper_coverage_count": 46,
+      "upper_miss_rate": 0.0
+    },
+    "t4_to_rtx_ratio": {
+      "count": 46,
+      "fit_bounds": {
+        "additive_bytes": {
+          "central": 17168,
+          "lower": -65011184,
+          "upper": 12583936
+        },
+        "ratio": {
+          "central": 1.0029414151249594,
+          "lower": 0.6736286268933644,
+          "upper": 3.143151263480853
+        }
+      },
+      "fit_device": "t4",
+      "interval_coverage": 0.8913043478260869,
+      "interval_coverage_count": 41,
+      "maximum_width_over_static": 2.469522636587489,
+      "median_width_over_static": 2.469522636587489,
+      "method": "ratio",
+      "p90_width_over_static": 2.469522636587489,
+      "test_device": "rtx3050",
+      "upper_coverage": 1.0,
+      "upper_coverage_count": 46,
+      "upper_miss_rate": 0.0
+    }
+  },
+  "ir_status": "REFERENCE_DEVICE_ONLY",
+  "misses": [
+    {
+      "configuration": {
+        "channels": 16,
+        "features": 32,
+        "height": 128,
+        "width": 128
+      },
+      "current_alias_bytes": 0,
+      "current_compiler_bytes": 5331456,
+      "current_temp_bytes": 2167296,
+      "dtype": "float32",
+      "family": "convolution",
+      "frozen_upper_bytes": 5276713,
+      "name": "convolution-128x128x16x32-float32",
+      "reference_alias_bytes": 0,
+      "reference_compiler_bytes": 5280000,
+      "reference_temp_bytes": 2115840,
+      "shortfall_bytes": 54743,
+      "shortfall_over_static": 0.017300958232200646,
+      "static_bytes": 3164160,
+      "temp_delta": 51456
+    },
+    {
+      "configuration": {
+        "channels": 32,
+        "features": 64,
+        "height": 256,
+        "width": 256
+      },
+      "current_alias_bytes": 0,
+      "current_compiler_bytes": 42295808,
+      "current_temp_bytes": 17056256,
+      "dtype": "float32",
+      "family": "convolution",
+      "frozen_upper_bytes": 42090752,
+      "name": "convolution-256x256x32x64-float32",
+      "reference_alias_bytes": 0,
+      "reference_compiler_bytes": 42090752,
+      "reference_temp_bytes": 16851200,
+      "shortfall_bytes": 205056,
+      "shortfall_over_static": 0.008124391431353456,
+      "static_bytes": 25239552,
+      "temp_delta": 205056
+    },
+    {
+      "configuration": {
+        "batch": 128,
+        "width": 256
+      },
+      "current_alias_bytes": 0,
+      "current_compiler_bytes": 4981284,
+      "current_temp_bytes": 4325904,
+      "dtype": "float32",
+      "family": "autodiff",
+      "frozen_upper_bytes": 1311500,
+      "name": "autodiff-b128-w256-float32",
+      "reference_alias_bytes": 0,
+      "reference_compiler_bytes": 1310740,
+      "reference_temp_bytes": 655360,
+      "shortfall_bytes": 3669784,
+      "shortfall_over_static": 4.666347929138544,
+      "static_bytes": 786436,
+      "temp_delta": 3670544
+    },
+    {
+      "configuration": {
+        "batch": 256,
+        "width": 512
+      },
+      "current_alias_bytes": 0,
+      "current_compiler_bytes": 7340580,
+      "current_temp_bytes": 4719120,
+      "dtype": "float32",
+      "family": "autodiff",
+      "frozen_upper_bytes": 5245982,
+      "name": "autodiff-b256-w512-float32",
+      "reference_alias_bytes": 0,
+      "reference_compiler_bytes": 3145748,
+      "reference_temp_bytes": 524288,
+      "shortfall_bytes": 2094598,
+      "shortfall_over_static": 0.6658539252549168,
+      "static_bytes": 3145732,
+      "temp_delta": 4194832
+    },
+    {
+      "configuration": {
+        "batch": 128,
+        "width": 256
+      },
+      "current_alias_bytes": 0,
+      "current_compiler_bytes": 4588066,
+      "current_temp_bytes": 4260368,
+      "dtype": "float16",
+      "family": "autodiff",
+      "frozen_upper_bytes": 765041,
+      "name": "autodiff-b128-w256-float16",
+      "reference_alias_bytes": 0,
+      "reference_compiler_bytes": 917538,
+      "reference_temp_bytes": 589840,
+      "shortfall_bytes": 3823025,
+      "shortfall_over_static": 8.333496819646259,
+      "static_bytes": 458754,
+      "temp_delta": 3670528
+    },
+    {
+      "configuration": {
+        "batch": 256,
+        "width": 512
+      },
+      "current_alias_bytes": 0,
+      "current_compiler_bytes": 5767714,
+      "current_temp_bytes": 4456976,
+      "dtype": "float16",
+      "family": "autodiff",
+      "frozen_upper_bytes": 3060155,
+      "name": "autodiff-b256-w512-float16",
+      "reference_alias_bytes": 0,
+      "reference_compiler_bytes": 2621474,
+      "reference_temp_bytes": 1310736,
+      "shortfall_bytes": 2707559,
+      "shortfall_over_static": 1.4755009509484962,
+      "static_bytes": 1835010,
+      "temp_delta": 3146240
+    }
+  ],
+  "status": "COMPUTATIONALLY VERIFIED"
+}
