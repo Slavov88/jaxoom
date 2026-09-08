@@ -2,8 +2,8 @@
 
 Status: OBSERVED
 
-Environment: NVIDIA GeForce RTX 3050 Laptop GPU, 4 GiB VRAM, JAX 0.11.0,
-jaxlib 0.11.0, CUDA backend, Python 3.12.3. Trials used
+Environment: NVIDIA GeForce RTX 3050 Laptop GPU, 4 GiB VRAM, driver 566.07,
+JAX 0.11.0, jaxlib 0.11.0, CUDA backend, Python 3.12.3. Trials used
 `XLA_PYTHON_CLIENT_PREALLOCATE=false`. Each target trial ran in a fresh
 subprocess. The contention holder ran in a separate process.
 
