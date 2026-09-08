@@ -10,3 +10,4 @@
 - Added cross-version validation artifacts for JAX 0.6.2 and JAX 0.11.0.
 - Added version-aware compiler calibration selection and explicit uncalibrated fallback behavior.
 - Added compiler-confirmed positional buffer donation advice with explicit caller-safety warnings.
+- Added observational current-device memory snapshots and conservative auto budgets for pre-compilation assessment.

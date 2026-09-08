@@ -85,6 +85,37 @@ unknown family is `UNCALIBRATED`. The range is compiler-accounted memory, not a
 runtime peak interval, and the risk level is not an OOM probability. See
 `experiments/version_calibration_report_2026-09-08.md` for the validation.
 
+## Current-device assessment
+
+`assess()` can compare the calibrated demand interval with a fresh, observational
+GPU budget without compiling the target workload:
+
+```python
+assessment = jaxoom.assess(
+    fn,
+    jax.ShapeDtypeStruct((8192, 4096), "float32"),
+    memory_limit="auto",
+)
+assessment.print()
+
+snapshot = jaxoom.device_memory()
+snapshot.print()
+```
+
+On NVIDIA CUDA, the snapshot queries physical total, used, and free VRAM with
+`nvidia-smi`, reads available JAX allocator counters, and records relevant
+allocator environment variables. The default budget is the effective available
+memory minus a safety reserve of 5% of physical VRAM, bounded to 64 MiB through
+256 MiB. Existing JAX pool bytes that are not in use are included in the
+available amount when those counters are provided. Explicit limits such as
+`memory_limit="8 GiB"` remain authoritative.
+
+This is a pre-compilation risk assessment, not an OOM guarantee. Free VRAM can
+change after the snapshot, and the calibrated interval remains compiler-accounted
+rather than an exact runtime peak. CPU and unsupported accelerator snapshots
+return unavailable capacity fields instead of pretending that system RAM is GPU
+VRAM.
+
 ## Compiler-confirmed donation advice
 
 `analyze_donation()` compares ordinary and donated compilations for positional

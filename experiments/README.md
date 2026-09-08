@@ -92,6 +92,22 @@ drift was concentrated in small autodiff cases, so calibration remains
 exact-tested rather than generalized across NVIDIA GPUs. The diagnostic
 analysis is in `device_temporary_drift_report_2026-09-08.md`.
 
+Current-device budget validation uses a fresh subprocess to hold separate JAX
+allocations while the parent takes non-compiling snapshots and assessments:
+
+```bash
+XLA_PYTHON_CLIENT_PREALLOCATE=false PYTHONPATH=src:experiments \
+  python experiments/device_budget_validation.py \
+  --output experiments/device_budget_validation_YYYY-MM-DD.json
+```
+
+The 2026-09-08 RTX 3050 pilot is recorded in
+`device_budget_validation_2026-09-08.json`. It observed monotonic reductions in
+assessment budget and upper-bound headroom under 256 MiB, 768 MiB, and 1280 MiB
+of retained external allocation. The 1280 MiB condition moved the fixed
+attention workload from `MODERATE` to `LIKELY EXCEEDS BUDGET`; the pilot did not
+claim a production OOM rate or run a broad compile boundary sweep.
+
 Donation validation uses the public advisor over a focused pure-JAX workload
 matrix:
 
