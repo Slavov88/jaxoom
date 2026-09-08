@@ -1,0 +1,212 @@
+{
+  "by_configuration": [
+    {
+      "dtype": "float32",
+      "family": "attention",
+      "first_execution_statuses": [
+        "FIT",
+        "FIT",
+        "FIT"
+      ],
+      "pressures_mib": [
+        0,
+        768,
+        1280
+      ],
+      "risks": [
+        "LOW",
+        "LOW",
+        "LOW"
+      ],
+      "sequence": 1024
+    },
+    {
+      "dtype": "float16",
+      "family": "attention",
+      "first_execution_statuses": [
+        "FIT",
+        "FIT",
+        "FIT"
+      ],
+      "pressures_mib": [
+        0,
+        768,
+        1280
+      ],
+      "risks": [
+        "LOW",
+        "LOW",
+        "LOW"
+      ],
+      "sequence": 2048
+    },
+    {
+      "dtype": "float32",
+      "family": "attention",
+      "first_execution_statuses": [
+        "FIT",
+        "FIT",
+        "FIT"
+      ],
+      "pressures_mib": [
+        0,
+        768,
+        1280
+      ],
+      "risks": [
+        "LOW",
+        "LOW",
+        "LOW"
+      ],
+      "sequence": 2048
+    },
+    {
+      "dtype": "float32",
+      "family": "attention",
+      "first_execution_statuses": [
+        "FIT",
+        "FIT",
+        "FIT"
+      ],
+      "pressures_mib": [
+        0,
+        768,
+        1280
+      ],
+      "risks": [
+        "LOW",
+        "LOW",
+        "LOW"
+      ],
+      "sequence": 3072
+    },
+    {
+      "dtype": "float32",
+      "family": "attention",
+      "first_execution_statuses": [
+        "EXECUTION_OOM",
+        "EXECUTION_OOM",
+        "EXECUTION_OOM"
+      ],
+      "pressures_mib": [
+        0,
+        768,
+        1280
+      ],
+      "risks": [
+        "LOW",
+        "LOW",
+        "MODERATE"
+      ],
+      "sequence": 4096
+    },
+    {
+      "dtype": "float32",
+      "family": "mlp",
+      "first_execution_statuses": [
+        "FIT",
+        "FIT",
+        "FIT"
+      ],
+      "pressures_mib": [
+        0,
+        768,
+        1280
+      ],
+      "risks": [
+        "LOW",
+        "LOW",
+        "LIKELY EXCEEDS BUDGET"
+      ],
+      "sequence": null
+    },
+    {
+      "dtype": "float32",
+      "family": "training",
+      "first_execution_statuses": [
+        "FIT",
+        "FIT",
+        "FIT"
+      ],
+      "pressures_mib": [
+        0,
+        768,
+        1280
+      ],
+      "risks": [
+        "LOW",
+        "LOW",
+        "MODERATE"
+      ],
+      "sequence": null
+    }
+  ],
+  "environment": {
+    "allocator": "XLA_PYTHON_CLIENT_PREALLOCATE=false",
+    "device": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "driver_version": "566.07",
+    "jax_version": "0.11.0",
+    "jaxlib_version": "0.11.0",
+    "physical_total_bytes": 4294967296
+  },
+  "execution_threshold_brackets": [
+    {
+      "dtype": "float32",
+      "family": "attention",
+      "fit_at_lower": true,
+      "oom_at_upper": true,
+      "sequence": "between 3072 and 4096 at tested pressures 0, 768, and 1280 MiB"
+    },
+    {
+      "dtype": "float16",
+      "family": "attention",
+      "fit_at_tested_pressures_mib": [
+        0,
+        768,
+        1280
+      ],
+      "oom_at_tested_pressures_mib": [],
+      "sequence": 2048
+    },
+    {
+      "configuration": {
+        "batch": 256,
+        "depth": 4,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "family": "mlp",
+      "fit_at_tested_pressures_mib": [
+        0,
+        768,
+        1280
+      ],
+      "oom_at_tested_pressures_mib": []
+    },
+    {
+      "configuration": {
+        "batch": 256,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "family": "training",
+      "fit_at_tested_pressures_mib": [
+        0,
+        768,
+        1280
+      ],
+      "oom_at_tested_pressures_mib": []
+    }
+  ],
+  "first_vs_steady_state": "attention 1024 float32 and all successful control cases remained FIT across three executions; attention 1024 pool_bytes remained 274726912 and bytes_in_use changed only from 2097152 to 4194304.",
+  "limitations": [
+    "This is a coarse pressure grid, not an exact binary-search threshold for every configuration.",
+    "No production predictor was changed."
+  ],
+  "outcomes": {
+    "EXECUTION_OOM": 3,
+    "FIT": 18
+  },
+  "status": "OBSERVED",
+  "trial_count": 21
+}

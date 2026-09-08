@@ -1,0 +1,202 @@
+{
+  "assessment_budget_bytes": 3855823667,
+  "calibrated_central_bytes": 1082261504,
+  "calibrated_lower_bytes": 728866417,
+  "calibrated_upper_bytes": 1804833959,
+  "calibration_applicability": "EXACT_TESTED",
+  "compile_status": "SUCCESS",
+  "compiler_memory": {
+    "alias_bytes": 0,
+    "argument_bytes": 8388608,
+    "compiler_accounted_bytes": 1090519056,
+    "output_bytes": 8388608,
+    "temporary_bytes": 1073741840
+  },
+  "configuration": {
+    "head_dim": 64,
+    "heads": 8,
+    "sequence": 4096
+  },
+  "device": "cuda:0",
+  "diagnostics": [
+    {
+      "iteration": 1,
+      "message": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.00GiB. [executable_name='jit_fn'] [tf-allocator-allocation-error='']",
+      "parsed_oom": {
+        "requested_bytes": 1073741824
+      },
+      "stage": "execute"
+    }
+  ],
+  "dtype": "float32",
+  "execution_statuses": [
+    "EXECUTION_OOM"
+  ],
+  "external_pressure_bytes": 0,
+  "family": "attention",
+  "hlo": {
+    "custom_call_targets": [],
+    "text_bytes": 2535,
+    "text_sha256": "89f7786a58fbcdc1c0906d3a1528eac8228fccf506a1ebfac2ff0e520e19ac13"
+  },
+  "jax_version": "0.11.0",
+  "risk": "LOW",
+  "safety_reserve_bytes": 214748365,
+  "snapshots": [
+    {
+      "cuda_mem_get_info": {
+        "available": true,
+        "free_bytes": 3459671655,
+        "library": "libcudart.so.12",
+        "total_bytes": 4294443008
+      },
+      "driver_free_bytes": 4083154944,
+      "driver_used_bytes": 74448896,
+      "effective_available_bytes": 4083154944,
+      "external_used_bytes": 74448896,
+      "jax_bytes_in_use": 0,
+      "jax_memory_stats": {
+        "bytes_in_use": 0,
+        "bytes_limit": 3221225472,
+        "bytes_reserved": 0,
+        "largest_alloc_size": 0,
+        "largest_free_block_bytes": 0,
+        "num_allocs": 0,
+        "peak_bytes_in_use": 0,
+        "peak_bytes_reserved": 0,
+        "peak_pool_bytes": 0,
+        "pool_bytes": 0
+      },
+      "jax_peak_bytes_in_use": 0,
+      "jax_pool_bytes": 0,
+      "label": "before_inputs",
+      "physical_total_bytes": 4294967296,
+      "timestamp": "2026-09-08T15:54:54.956628+00:00"
+    },
+    {
+      "cuda_mem_get_info": {
+        "available": true,
+        "free_bytes": 3444991591,
+        "library": "libcudart.so.12",
+        "total_bytes": 4294443008
+      },
+      "driver_free_bytes": 4068474880,
+      "driver_used_bytes": 89128960,
+      "effective_available_bytes": 4070572032,
+      "external_used_bytes": 78643200,
+      "jax_bytes_in_use": 8388608,
+      "jax_memory_stats": {
+        "bytes_in_use": 8388608,
+        "bytes_limit": 3221225472,
+        "bytes_reserved": 0,
+        "largest_alloc_size": 8388608,
+        "largest_free_block_bytes": 2097152,
+        "num_allocs": 3,
+        "peak_bytes_in_use": 8388864,
+        "peak_bytes_reserved": 0,
+        "peak_pool_bytes": 10485760,
+        "pool_bytes": 10485760
+      },
+      "jax_peak_bytes_in_use": 8388864,
+      "jax_pool_bytes": 10485760,
+      "label": "after_inputs",
+      "physical_total_bytes": 4294967296,
+      "timestamp": "2026-09-08T15:54:57.209579+00:00"
+    },
+    {
+      "cuda_mem_get_info": {
+        "available": true,
+        "free_bytes": 3444991591,
+        "library": "libcudart.so.12",
+        "total_bytes": 4294443008
+      },
+      "driver_free_bytes": 4068474880,
+      "driver_used_bytes": 89128960,
+      "effective_available_bytes": 4070572032,
+      "external_used_bytes": 78643200,
+      "jax_bytes_in_use": 8388608,
+      "jax_memory_stats": {
+        "bytes_in_use": 8388608,
+        "bytes_limit": 3221225472,
+        "bytes_reserved": 0,
+        "largest_alloc_size": 8388608,
+        "largest_free_block_bytes": 2097152,
+        "num_allocs": 3,
+        "peak_bytes_in_use": 8388864,
+        "peak_bytes_reserved": 0,
+        "peak_pool_bytes": 10485760,
+        "pool_bytes": 10485760
+      },
+      "jax_peak_bytes_in_use": 8388864,
+      "jax_pool_bytes": 10485760,
+      "label": "immediately_before_compile",
+      "physical_total_bytes": 4294967296,
+      "timestamp": "2026-09-08T15:54:57.829967+00:00"
+    },
+    {
+      "cuda_mem_get_info": {
+        "available": true,
+        "free_bytes": 1219913319,
+        "library": "libcudart.so.12",
+        "total_bytes": 4294443008
+      },
+      "driver_free_bytes": 1843396608,
+      "driver_used_bytes": 2314207232,
+      "effective_available_bytes": 4060086272,
+      "external_used_bytes": 89128960,
+      "jax_bytes_in_use": 8388608,
+      "jax_memory_stats": {
+        "bytes_in_use": 8388608,
+        "bytes_limit": 3221225472,
+        "bytes_reserved": 0,
+        "largest_alloc_size": 553648128,
+        "largest_free_block_bytes": 1073741824,
+        "num_allocs": 107,
+        "peak_bytes_in_use": 1170211072,
+        "peak_bytes_reserved": 0,
+        "peak_pool_bytes": 2225078272,
+        "pool_bytes": 2225078272
+      },
+      "jax_peak_bytes_in_use": 1170211072,
+      "jax_pool_bytes": 2225078272,
+      "label": "after_compile",
+      "physical_total_bytes": 4294967296,
+      "timestamp": "2026-09-08T15:55:05.398290+00:00"
+    },
+    {
+      "cuda_mem_get_info": {
+        "available": true,
+        "free_bytes": 1219913319,
+        "library": "libcudart.so.12",
+        "total_bytes": 4294443008
+      },
+      "driver_free_bytes": 1843396608,
+      "driver_used_bytes": 2314207232,
+      "effective_available_bytes": 4051697664,
+      "external_used_bytes": 89128960,
+      "jax_bytes_in_use": 16777216,
+      "jax_memory_stats": {
+        "bytes_in_use": 16777216,
+        "bytes_limit": 3221225472,
+        "bytes_reserved": 0,
+        "largest_alloc_size": 553648128,
+        "largest_free_block_bytes": 1073741824,
+        "num_allocs": 108,
+        "peak_bytes_in_use": 1170211072,
+        "peak_bytes_reserved": 0,
+        "peak_pool_bytes": 2225078272,
+        "pool_bytes": 2225078272
+      },
+      "jax_peak_bytes_in_use": 1170211072,
+      "jax_pool_bytes": 2225078272,
+      "label": "after_execution_1_failure",
+      "physical_total_bytes": 4294967296,
+      "timestamp": "2026-09-08T15:55:15.913318+00:00"
+    }
+  ],
+  "structural_bytes": 1082261504,
+  "timings_ms": {
+    "compile": 6974.939117
+  },
+  "upper_headroom_bytes": 2050989708
+}

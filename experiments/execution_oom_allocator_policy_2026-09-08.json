@@ -1,0 +1,20 @@
+{
+  "allocator_cases": {
+    "XLA_PYTHON_CLIENT_ALLOCATOR=platform": {
+      "execution_statuses": [
+        "FIT"
+      ],
+      "jax_memory_stats_available": false,
+      "outcome": "FIT"
+    },
+    "XLA_PYTHON_CLIENT_PREALLOCATE=false": {
+      "outcome": "EXECUTION_OOM",
+      "requested_bytes": 1073741824
+    },
+    "default_preallocation": {
+      "diagnostic": "CUDA_ERROR_OUT_OF_MEMORY while allocating pinned host memory during diagnostic startup; no target trial row produced",
+      "outcome": "INITIALIZATION_FAILURE"
+    }
+  },
+  "status": "OBSERVED"
+}
