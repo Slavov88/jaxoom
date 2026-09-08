@@ -90,6 +90,19 @@ replay, occupancy regression, and remaining false fits are recorded in
 `device_budget_correction_summary_2026-09-08.json` and
 `device_budget_correction_report_2026-09-08.md`.
 
+Allocator-residency validation varies `XLA_CLIENT_MEM_FRACTION` in fresh
+subprocesses and records the allocator capacity bracket for end-to-end FIT:
+
+```bash
+PYTHONPATH=src:experiments python experiments/allocator_residency_validation.py \
+  --output experiments/allocator_residency_validation_YYYY-MM-DD.json
+```
+
+The 2026-09-08 RTX 3050 study found an attention-4096 FIT/OOM bracket between
+3,265,265,664 and 3,307,208,704 bytes. The fresh probes were not sufficient to
+validate a general pre-compilation residency model, so production behavior was
+left unchanged. See `allocator_residency_report_2026-09-08.md`.
+
 The execution OOM diagnostic harness instruments device, CUDA runtime, and
 JAX allocator state around inputs, compilation, and repeated execution:
 
