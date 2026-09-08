@@ -1,0 +1,687 @@
+{
+  "cases": [
+    {
+      "assessment_calibrated": true,
+      "assessment_risk": "LOW",
+      "calibrated_central_bytes": 12873979,
+      "calibrated_lower_bytes": 4194304,
+      "calibrated_upper_bytes": 37355520,
+      "calibration_applicability": "calibrated for the recorded JAX 0.6.x CPU dataset",
+      "calibration_dataset": "accelerator_calibration_cpu_2026-09-07_v2",
+      "comparison_compiler_bytes": 8388608,
+      "comparison_static_bytes": 12582912,
+      "compiler_accounted_bytes": 8388608,
+      "compiler_alias_bytes": 0,
+      "compiler_argument_bytes": 4194304,
+      "compiler_available": true,
+      "compiler_limitations": [
+        "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+        "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+      ],
+      "compiler_output_bytes": 4194304,
+      "compiler_temp_bytes": 0,
+      "configuration": {
+        "shape": [
+          1024,
+          1024
+        ]
+      },
+      "dtype": "float32",
+      "family": "elementwise",
+      "jaxpr": {
+        "dropvar_count": 0,
+        "equation_count": 2,
+        "input_count": 1,
+        "nested_jaxpr_count": 0,
+        "output_count": 1,
+        "primitive_names": [
+          "sin",
+          "add"
+        ]
+      },
+      "name": "elementwise-f32",
+      "static_compiler_ratio": 1.5,
+      "status": "PASS",
+      "structural_peak_bytes": 12582912
+    },
+    {
+      "assessment_calibrated": true,
+      "assessment_risk": "LOW",
+      "calibrated_central_bytes": 12873979,
+      "calibrated_lower_bytes": 4194304,
+      "calibrated_upper_bytes": 37355520,
+      "calibration_applicability": "calibrated for the recorded JAX 0.6.x CPU dataset",
+      "calibration_dataset": "accelerator_calibration_cpu_2026-09-07_v2",
+      "comparison_compiler_bytes": 12582912,
+      "comparison_static_bytes": 12582912,
+      "compiler_accounted_bytes": 12582912,
+      "compiler_alias_bytes": 0,
+      "compiler_argument_bytes": 8388608,
+      "compiler_available": true,
+      "compiler_limitations": [
+        "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+        "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+      ],
+      "compiler_output_bytes": 4194304,
+      "compiler_temp_bytes": 0,
+      "configuration": {
+        "shape": [
+          1024,
+          1024
+        ]
+      },
+      "dtype": "float32",
+      "family": "matmul",
+      "jaxpr": {
+        "dropvar_count": 0,
+        "equation_count": 1,
+        "input_count": 2,
+        "nested_jaxpr_count": 0,
+        "output_count": 1,
+        "primitive_names": [
+          "dot_general"
+        ]
+      },
+      "name": "matmul-f32",
+      "static_compiler_ratio": 1.0,
+      "status": "PASS",
+      "structural_peak_bytes": 12582912
+    },
+    {
+      "assessment_calibrated": true,
+      "assessment_risk": "LOW",
+      "calibrated_central_bytes": 6436989,
+      "calibrated_lower_bytes": 2097152,
+      "calibrated_upper_bytes": 18677760,
+      "calibration_applicability": "calibrated for the recorded JAX 0.6.x CPU dataset",
+      "calibration_dataset": "accelerator_calibration_cpu_2026-09-07_v2",
+      "comparison_compiler_bytes": 18874368,
+      "comparison_static_bytes": 6291456,
+      "compiler_accounted_bytes": 18874368,
+      "compiler_alias_bytes": 0,
+      "compiler_argument_bytes": 4194304,
+      "compiler_available": true,
+      "compiler_limitations": [
+        "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+        "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+      ],
+      "compiler_output_bytes": 2097152,
+      "compiler_temp_bytes": 12582912,
+      "configuration": {
+        "shape": [
+          1024,
+          1024
+        ]
+      },
+      "dtype": "float16",
+      "family": "matmul",
+      "jaxpr": {
+        "dropvar_count": 0,
+        "equation_count": 1,
+        "input_count": 2,
+        "nested_jaxpr_count": 0,
+        "output_count": 1,
+        "primitive_names": [
+          "dot_general"
+        ]
+      },
+      "name": "matmul-f16",
+      "static_compiler_ratio": 0.3333333333333333,
+      "status": "PASS",
+      "structural_peak_bytes": 6291456
+    },
+    {
+      "assessment_calibrated": true,
+      "assessment_risk": "LOW",
+      "calibrated_central_bytes": 3218495,
+      "calibrated_lower_bytes": 1048576,
+      "calibrated_upper_bytes": 9338880,
+      "calibration_applicability": "calibrated for the recorded JAX 0.6.x CPU dataset",
+      "calibration_dataset": "accelerator_calibration_cpu_2026-09-07_v2",
+      "comparison_compiler_bytes": 3145728,
+      "comparison_static_bytes": 3145728,
+      "compiler_accounted_bytes": 3145728,
+      "compiler_alias_bytes": 0,
+      "compiler_argument_bytes": 2097152,
+      "compiler_available": true,
+      "compiler_limitations": [
+        "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+        "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+      ],
+      "compiler_output_bytes": 1048576,
+      "compiler_temp_bytes": 0,
+      "configuration": {
+        "shape": [
+          512,
+          512
+        ]
+      },
+      "dtype": "float32",
+      "family": "residual",
+      "jaxpr": {
+        "dropvar_count": 0,
+        "equation_count": 2,
+        "input_count": 2,
+        "nested_jaxpr_count": 0,
+        "output_count": 1,
+        "primitive_names": [
+          "dot_general",
+          "add"
+        ]
+      },
+      "name": "residual-f32",
+      "static_compiler_ratio": 1.0,
+      "status": "PASS",
+      "structural_peak_bytes": 3145728
+    },
+    {
+      "assessment_calibrated": true,
+      "assessment_risk": "LOW",
+      "calibrated_central_bytes": 8591034,
+      "calibrated_lower_bytes": 2798933,
+      "calibrated_upper_bytes": 24928000,
+      "calibration_applicability": "calibrated for the recorded JAX 0.6.x CPU dataset",
+      "calibration_dataset": "accelerator_calibration_cpu_2026-09-07_v2",
+      "comparison_compiler_bytes": 8658944,
+      "comparison_static_bytes": 8396800,
+      "compiler_accounted_bytes": 8658944,
+      "compiler_alias_bytes": 0,
+      "compiler_argument_bytes": 8388608,
+      "compiler_available": true,
+      "compiler_limitations": [
+        "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+        "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+      ],
+      "compiler_output_bytes": 8192,
+      "compiler_temp_bytes": 262144,
+      "configuration": {
+        "shape": [
+          2048,
+          1024
+        ]
+      },
+      "dtype": "float32",
+      "family": "reduction",
+      "jaxpr": {
+        "dropvar_count": 0,
+        "equation_count": 1,
+        "input_count": 1,
+        "nested_jaxpr_count": 0,
+        "output_count": 1,
+        "primitive_names": [
+          "reduce_sum"
+        ]
+      },
+      "name": "reduction-f32",
+      "static_compiler_ratio": 0.9697256385998108,
+      "status": "PASS",
+      "structural_peak_bytes": 8396800
+    },
+    {
+      "assessment_calibrated": true,
+      "assessment_risk": "LOW",
+      "calibrated_central_bytes": 8582652,
+      "calibrated_lower_bytes": 2796203,
+      "calibrated_upper_bytes": 24903680,
+      "calibration_applicability": "calibrated for the recorded JAX 0.6.x CPU dataset",
+      "calibration_dataset": "accelerator_calibration_cpu_2026-09-07_v2",
+      "comparison_compiler_bytes": 9961472,
+      "comparison_static_bytes": 8388608,
+      "compiler_accounted_bytes": 9961472,
+      "compiler_alias_bytes": 0,
+      "compiler_argument_bytes": 7340032,
+      "compiler_available": true,
+      "compiler_limitations": [
+        "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+        "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+      ],
+      "compiler_output_bytes": 524288,
+      "compiler_temp_bytes": 2097152,
+      "configuration": {
+        "batch": 256,
+        "width": 1024
+      },
+      "dtype": "float32",
+      "family": "mlp",
+      "jaxpr": {
+        "dropvar_count": 0,
+        "equation_count": 3,
+        "input_count": 3,
+        "nested_jaxpr_count": 0,
+        "output_count": 1,
+        "primitive_names": [
+          "dot_general",
+          "tanh",
+          "dot_general"
+        ]
+      },
+      "name": "mlp-f32",
+      "static_compiler_ratio": 0.8421052631578947,
+      "status": "PASS",
+      "structural_peak_bytes": 8388608
+    },
+    {
+      "assessment_calibrated": true,
+      "assessment_risk": "LOW",
+      "calibrated_central_bytes": 4291326,
+      "calibrated_lower_bytes": 1398101,
+      "calibrated_upper_bytes": 12451840,
+      "calibration_applicability": "calibrated for the recorded JAX 0.6.x CPU dataset",
+      "calibration_dataset": "accelerator_calibration_cpu_2026-09-07_v2",
+      "comparison_compiler_bytes": 12320768,
+      "comparison_static_bytes": 4194304,
+      "compiler_accounted_bytes": 12320768,
+      "compiler_alias_bytes": 0,
+      "compiler_argument_bytes": 3670016,
+      "compiler_available": true,
+      "compiler_limitations": [
+        "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+        "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+      ],
+      "compiler_output_bytes": 262144,
+      "compiler_temp_bytes": 8388608,
+      "configuration": {
+        "batch": 256,
+        "width": 1024
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "jaxpr": {
+        "dropvar_count": 0,
+        "equation_count": 3,
+        "input_count": 3,
+        "nested_jaxpr_count": 0,
+        "output_count": 1,
+        "primitive_names": [
+          "dot_general",
+          "tanh",
+          "dot_general"
+        ]
+      },
+      "name": "mlp-f16",
+      "static_compiler_ratio": 0.3404255319148936,
+      "status": "PASS",
+      "structural_peak_bytes": 4194304
+    },
+    {
+      "assessment_calibrated": true,
+      "assessment_risk": "LOW",
+      "calibrated_central_bytes": 18254899,
+      "calibrated_lower_bytes": 5947392,
+      "calibrated_upper_bytes": 52968960,
+      "calibration_applicability": "calibrated for the recorded JAX 0.6.x CPU dataset",
+      "calibration_dataset": "accelerator_calibration_cpu_2026-09-07_v2",
+      "comparison_compiler_bytes": 18890752,
+      "comparison_static_bytes": 17842176,
+      "compiler_accounted_bytes": 18890752,
+      "compiler_alias_bytes": 0,
+      "compiler_argument_bytes": 1048576,
+      "compiler_available": true,
+      "compiler_limitations": [
+        "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+        "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+      ],
+      "compiler_output_bytes": 1048576,
+      "compiler_temp_bytes": 16793600,
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 512
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "jaxpr": {
+        "dropvar_count": 0,
+        "equation_count": 14,
+        "input_count": 1,
+        "nested_jaxpr_count": 0,
+        "output_count": 1,
+        "primitive_names": [
+          "reshape",
+          "dot_general",
+          "reduce_max",
+          "max",
+          "broadcast_in_dim",
+          "stop_gradient",
+          "sub",
+          "exp",
+          "reduce_sum",
+          "broadcast_in_dim",
+          "div",
+          "dot_general",
+          "transpose",
+          "reshape"
+        ]
+      },
+      "name": "attention-f32",
+      "static_compiler_ratio": 0.9444926279271466,
+      "status": "PASS",
+      "structural_peak_bytes": 17842176
+    },
+    {
+      "assessment_calibrated": true,
+      "assessment_risk": "LOW",
+      "calibrated_central_bytes": 13427157,
+      "calibrated_lower_bytes": 4374528,
+      "calibrated_upper_bytes": 38960640,
+      "calibration_applicability": "calibrated for the recorded JAX 0.6.x CPU dataset",
+      "calibration_dataset": "accelerator_calibration_cpu_2026-09-07_v2",
+      "comparison_compiler_bytes": 14696448,
+      "comparison_static_bytes": 13123584,
+      "compiler_accounted_bytes": 14696448,
+      "compiler_alias_bytes": 0,
+      "compiler_argument_bytes": 524288,
+      "compiler_available": true,
+      "compiler_limitations": [
+        "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+        "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+      ],
+      "compiler_output_bytes": 524288,
+      "compiler_temp_bytes": 13647872,
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 512
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "jaxpr": {
+        "dropvar_count": 0,
+        "equation_count": 16,
+        "input_count": 1,
+        "nested_jaxpr_count": 0,
+        "output_count": 1,
+        "primitive_names": [
+          "reshape",
+          "dot_general",
+          "reduce_max",
+          "max",
+          "broadcast_in_dim",
+          "stop_gradient",
+          "sub",
+          "exp",
+          "convert_element_type",
+          "reduce_sum",
+          "broadcast_in_dim",
+          "convert_element_type",
+          "div",
+          "dot_general",
+          "transpose",
+          "reshape"
+        ]
+      },
+      "name": "attention-f16",
+      "static_compiler_ratio": 0.8929765886287625,
+      "status": "PASS",
+      "structural_peak_bytes": 13123584
+    },
+    {
+      "assessment_calibrated": true,
+      "assessment_risk": "LOW",
+      "calibrated_central_bytes": 6981787,
+      "calibrated_lower_bytes": 2274645,
+      "calibrated_upper_bytes": 20258560,
+      "calibration_applicability": "calibrated for the recorded JAX 0.6.x CPU dataset",
+      "calibration_dataset": "accelerator_calibration_cpu_2026-09-07_v2",
+      "comparison_compiler_bytes": 7086080,
+      "comparison_static_bytes": 6823936,
+      "compiler_accounted_bytes": 7086080,
+      "compiler_alias_bytes": 0,
+      "compiler_argument_bytes": 2359296,
+      "compiler_available": true,
+      "compiler_limitations": [
+        "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+        "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+      ],
+      "compiler_output_bytes": 262144,
+      "compiler_temp_bytes": 4464640,
+      "configuration": {
+        "heads": 8,
+        "sequence": 256,
+        "width": 256
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "jaxpr": {
+        "dropvar_count": 0,
+        "equation_count": 19,
+        "input_count": 3,
+        "nested_jaxpr_count": 0,
+        "output_count": 1,
+        "primitive_names": [
+          "reshape",
+          "dot_general",
+          "reduce_max",
+          "max",
+          "broadcast_in_dim",
+          "stop_gradient",
+          "sub",
+          "exp",
+          "reduce_sum",
+          "broadcast_in_dim",
+          "div",
+          "dot_general",
+          "transpose",
+          "reshape",
+          "add",
+          "dot_general",
+          "tanh",
+          "dot_general",
+          "add"
+        ]
+      },
+      "name": "transformer-f32",
+      "static_compiler_ratio": 0.9630057803468208,
+      "status": "PASS",
+      "structural_peak_bytes": 6823936
+    },
+    {
+      "assessment_calibrated": true,
+      "assessment_risk": "LOW",
+      "calibrated_central_bytes": 670520,
+      "calibrated_lower_bytes": 218453,
+      "calibrated_upper_bytes": 1945600,
+      "calibration_applicability": "calibrated for the recorded JAX 0.6.x CPU dataset",
+      "calibration_dataset": "accelerator_calibration_cpu_2026-09-07_v2",
+      "comparison_compiler_bytes": 786432,
+      "comparison_static_bytes": 655360,
+      "compiler_accounted_bytes": 786432,
+      "compiler_alias_bytes": 0,
+      "compiler_argument_bytes": 393216,
+      "compiler_available": true,
+      "compiler_limitations": [
+        "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+        "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+      ],
+      "compiler_output_bytes": 262144,
+      "compiler_temp_bytes": 131072,
+      "configuration": {
+        "batch": 128,
+        "width": 256
+      },
+      "dtype": "float32",
+      "family": "autodiff",
+      "jaxpr": {
+        "dropvar_count": 1,
+        "equation_count": 10,
+        "input_count": 2,
+        "nested_jaxpr_count": 0,
+        "output_count": 1,
+        "primitive_names": [
+          "dot_general",
+          "tanh",
+          "sub",
+          "reduce_sum",
+          "broadcast_in_dim",
+          "mul",
+          "mul",
+          "add_any",
+          "dot_general",
+          "transpose"
+        ]
+      },
+      "name": "grad-f32",
+      "static_compiler_ratio": 0.8333333333333334,
+      "status": "PASS",
+      "structural_peak_bytes": 655360
+    },
+    {
+      "assessment_calibrated": true,
+      "assessment_risk": "LOW",
+      "calibrated_central_bytes": 536420,
+      "calibrated_lower_bytes": 174764,
+      "calibrated_upper_bytes": 1556492,
+      "calibration_applicability": "calibrated for the recorded JAX 0.6.x CPU dataset",
+      "calibration_dataset": "accelerator_calibration_cpu_2026-09-07_v2",
+      "comparison_compiler_bytes": 917652,
+      "comparison_static_bytes": 524292,
+      "compiler_accounted_bytes": 917652,
+      "compiler_alias_bytes": 0,
+      "compiler_argument_bytes": 393216,
+      "compiler_available": true,
+      "compiler_limitations": [
+        "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+        "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+      ],
+      "compiler_output_bytes": 262164,
+      "compiler_temp_bytes": 262272,
+      "configuration": {
+        "batch": 128,
+        "width": 256
+      },
+      "dtype": "float32",
+      "family": "autodiff",
+      "jaxpr": {
+        "dropvar_count": 0,
+        "equation_count": 11,
+        "input_count": 2,
+        "nested_jaxpr_count": 0,
+        "output_count": 2,
+        "primitive_names": [
+          "dot_general",
+          "integer_pow",
+          "integer_pow",
+          "mul",
+          "reduce_sum",
+          "div",
+          "div",
+          "broadcast_in_dim",
+          "mul",
+          "dot_general",
+          "transpose"
+        ]
+      },
+      "name": "value-and-grad-f32",
+      "static_compiler_ratio": 0.5713407697035477,
+      "status": "PASS",
+      "structural_peak_bytes": 524292
+    },
+    {
+      "assessment_calibrated": true,
+      "assessment_risk": "LOW",
+      "calibrated_central_bytes": 3237353,
+      "calibrated_lower_bytes": 1054720,
+      "calibrated_upper_bytes": 9393600,
+      "calibration_applicability": "calibrated for the recorded JAX 0.6.x CPU dataset",
+      "calibration_dataset": "accelerator_calibration_cpu_2026-09-07_v2",
+      "comparison_compiler_bytes": 3164160,
+      "comparison_static_bytes": 3164160,
+      "compiler_accounted_bytes": 3164160,
+      "compiler_alias_bytes": 0,
+      "compiler_argument_bytes": 1067008,
+      "compiler_available": true,
+      "compiler_limitations": [
+        "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+        "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+      ],
+      "compiler_output_bytes": 2097152,
+      "compiler_temp_bytes": 0,
+      "configuration": {
+        "channels": 16,
+        "features": 32,
+        "height": 128,
+        "width": 128
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "jaxpr": {
+        "dropvar_count": 0,
+        "equation_count": 1,
+        "input_count": 2,
+        "nested_jaxpr_count": 0,
+        "output_count": 1,
+        "primitive_names": [
+          "conv_general_dilated"
+        ]
+      },
+      "name": "convolution-f32",
+      "static_compiler_ratio": 1.0,
+      "status": "PASS",
+      "structural_peak_bytes": 3164160
+    },
+    {
+      "assessment_calibrated": true,
+      "assessment_risk": "LOW",
+      "calibrated_central_bytes": 1077022,
+      "calibrated_lower_bytes": 350891,
+      "calibrated_upper_bytes": 3125120,
+      "calibration_applicability": "calibrated for the recorded JAX 0.6.x CPU dataset",
+      "calibration_dataset": "accelerator_calibration_cpu_2026-09-07_v2",
+      "comparison_compiler_bytes": 1052672,
+      "comparison_static_bytes": 1052672,
+      "compiler_accounted_bytes": 1052672,
+      "compiler_alias_bytes": 0,
+      "compiler_argument_bytes": 524288,
+      "compiler_available": true,
+      "compiler_limitations": [
+        "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+        "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+      ],
+      "compiler_output_bytes": 528384,
+      "compiler_temp_bytes": 0,
+      "configuration": {
+        "batch": 2,
+        "height": 256,
+        "width": 256
+      },
+      "dtype": "float32",
+      "family": "fft",
+      "jaxpr": {
+        "dropvar_count": 0,
+        "equation_count": 1,
+        "input_count": 1,
+        "nested_jaxpr_count": 1,
+        "output_count": 1,
+        "primitive_names": [
+          "pjit"
+        ]
+      },
+      "name": "fft-f32",
+      "static_compiler_ratio": 1.0,
+      "status": "PASS",
+      "structural_peak_bytes": 1052672
+    }
+  ],
+  "environment": {
+    "allocator_environment": {
+      "TF_GPU_ALLOCATOR": null,
+      "XLA_CLIENT_MEM_FRACTION": null,
+      "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+      "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+      "XLA_PYTHON_CLIENT_PREALLOCATE": null
+    },
+    "backend": "cpu",
+    "device_kind": [
+      "cpu"
+    ],
+    "devices": [
+      "TFRT_CPU_0"
+    ],
+    "jax_version": "0.6.2",
+    "jaxlib_version": "0.6.2",
+    "ml_dtypes_version": "0.6.0",
+    "numpy_version": "2.5.3",
+    "python_version": "3.12.3",
+    "xla_flags": null
+  }
+}

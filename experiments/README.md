@@ -41,6 +41,20 @@ not provide an exact device-memory trace. XProf was tested, but its memory
 viewer did not return usable data for the pilot trace. Results are recorded in
 `execution_memory_validation_2026-09-08.json` and its summary and report.
 
+Cross-version validation uses matched abstract-input cases to compare JAXPR
+summaries, structural estimates, compiler accounting, and calibration transfer
+between JAX 0.6.2 and JAX 0.11.0:
+
+```bash
+PYTHONPATH=src python experiments/jax_version_validation.py \
+  --output experiments/jax_version_validation_YYYY-MM-DD.json
+```
+
+The recorded comparison is in `jax_version_validation_report_2026-09-08.md`.
+It found identical structural estimates in all 14 matched cases, with
+compiler-accounting drift in selected workloads. Existing calibration constants
+were retained because the JAX 0.11.0 transfer evidence is limited.
+
 Calibration evaluation:
 
 ```bash
