@@ -127,11 +127,16 @@ class MemoryAssessment:
 
     structural_peak_bytes: int
     interval: MemoryInterval
-    memory_limit_bytes: int
+    memory_limit_bytes: int | None
     risk: MemoryRiskLevel | None
     calibrated: bool
-    headroom_to_upper_bytes: int
+    headroom_to_upper_bytes: int | None
     limitations: tuple[str, ...]
+    headroom_to_structural_bytes: int | None = None
+    headroom_to_central_bytes: int | None = None
+    headroom_fraction: float | None = None
+    device_budget: "DeviceBudget | None" = None
+    remediation_hint: str | None = None
 
     def render(self) -> str:
         from .reports.console import render_assessment
@@ -156,6 +161,53 @@ class MemoryComparison:
     relative_difference: float | None
     static_overpredicts: bool | None
     static_underpredicts: bool | None
+    limitations: tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class DeviceMemorySnapshot:
+    """Observed device and allocator memory state at one point in time."""
+
+    backend: str
+    device_kind: str | None
+    device_id: int | None
+    device_uuid: str | None
+    physical_total_bytes: int | None
+    driver_used_bytes: int | None
+    driver_free_bytes: int | None
+    jax_bytes_in_use: int | None
+    jax_peak_bytes_in_use: int | None
+    jax_pool_bytes: int | None
+    external_used_bytes: int | None
+    allocator_mode: str | None
+    allocator_preallocate: bool | None
+    allocator_memory_fraction: float | None
+    effective_available_bytes: int | None
+    measurement_sources: tuple[str, ...]
+    limitations: tuple[str, ...]
+    timestamp: str
+
+    def render(self) -> str:
+        from .reports.console import render_device_memory
+
+        return render_device_memory(self)
+
+    def print(self) -> None:
+        print(self.render())
+
+    def __str__(self) -> str:
+        return self.render()
+
+
+@dataclass(frozen=True)
+class DeviceBudget:
+    """Policy-derived budget for a pre-compilation assessment."""
+
+    snapshot: DeviceMemorySnapshot
+    effective_available_bytes: int | None
+    safety_reserve_bytes: int | None
+    assessment_budget_bytes: int | None
+    policy: str
     limitations: tuple[str, ...]
 
 

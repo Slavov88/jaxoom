@@ -2,17 +2,18 @@
 from __future__ import annotations
 
 from ..analysis.tensor_size import format_bytes
-from ..types import DonationReport, MemoryAssessment, MemoryReport
+from ..types import DeviceMemorySnapshot, DonationReport, MemoryAssessment, MemoryReport
 
 
 def render_assessment(assessment: MemoryAssessment) -> str:
     interval = assessment.interval
     lower = format_bytes(interval.lower_bytes) if interval.lower_bytes is not None else "unavailable"
-    headroom = (
-        format_bytes(assessment.headroom_to_upper_bytes)
-        if assessment.headroom_to_upper_bytes >= 0
-        else f"-{format_bytes(-assessment.headroom_to_upper_bytes)}"
-    )
+    if assessment.headroom_to_upper_bytes is None:
+        headroom = "unavailable"
+    elif assessment.headroom_to_upper_bytes >= 0:
+        headroom = format_bytes(assessment.headroom_to_upper_bytes)
+    else:
+        headroom = f"-{format_bytes(-assessment.headroom_to_upper_bytes)}"
     lines = [
         "JAXOOM MEMORY ASSESSMENT",
         "=" * 32,
@@ -21,8 +22,9 @@ def render_assessment(assessment: MemoryAssessment) -> str:
         f"Calibrated central          {format_bytes(interval.central_bytes)}",
         f"Calibrated range             {lower} to {format_bytes(interval.upper_bytes)}",
         f"Conservative upper           {format_bytes(interval.upper_bytes)}",
-        f"Memory budget                {format_bytes(assessment.memory_limit_bytes)}",
+        f"Memory budget                {format_bytes(assessment.memory_limit_bytes) if assessment.memory_limit_bytes is not None else 'unavailable'}",
         f"Headroom to upper            {headroom}",
+        f"Headroom fraction            {assessment.headroom_fraction:.1%}" if assessment.headroom_fraction is not None else "Headroom fraction            unavailable",
         f"Risk                         {assessment.risk.value if assessment.risk else 'UNAVAILABLE'}",
         "",
         "Calibration",
@@ -34,7 +36,35 @@ def render_assessment(assessment: MemoryAssessment) -> str:
         "",
         "Limitations",
     ]
+    if assessment.remediation_hint:
+        lines += ["", "Potential next step", assessment.remediation_hint]
     lines.extend(f"- {limitation}" for limitation in assessment.limitations[:4])
+    return "\n".join(lines)
+
+
+def render_device_memory(snapshot: DeviceMemorySnapshot) -> str:
+    def shown(value: int | None) -> str:
+        return format_bytes(value) if value is not None else "unavailable"
+
+    lines = [
+        "JAXOOM DEVICE MEMORY",
+        "=" * 32,
+        "",
+        f"Backend                     {snapshot.backend}",
+        f"Device                      {snapshot.device_kind or 'unknown'}",
+        f"Physical total              {shown(snapshot.physical_total_bytes)}",
+        f"Driver used                 {shown(snapshot.driver_used_bytes)}",
+        f"Driver free                 {shown(snapshot.driver_free_bytes)}",
+        f"JAX bytes in use            {shown(snapshot.jax_bytes_in_use)}",
+        f"JAX pool                   {shown(snapshot.jax_pool_bytes)}",
+        f"External used estimate      {shown(snapshot.external_used_bytes)}",
+        f"Effective available         {shown(snapshot.effective_available_bytes)}",
+        f"Allocator                   {snapshot.allocator_mode or 'unknown'}",
+        f"Timestamp                   {snapshot.timestamp}",
+        "",
+        "Limitations",
+    ]
+    lines.extend(f"- {limitation}" for limitation in snapshot.limitations[:5])
     return "\n".join(lines)
 
 

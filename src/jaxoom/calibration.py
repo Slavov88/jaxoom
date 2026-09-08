@@ -7,7 +7,7 @@ import jax
 
 from .analysis.tensor_size import parse_memory_limit
 from .calibration_defaults import CALIBRATIONS
-from .types import CalibrationSummary, MemoryAssessment, MemoryInterval, MemoryReport, MemoryRiskLevel
+from .types import CalibrationSummary, DeviceBudget, MemoryAssessment, MemoryInterval, MemoryReport, MemoryRiskLevel
 
 
 def calibrate(
@@ -61,20 +61,33 @@ def calibrate(
 
 def assess(
     report: MemoryReport,
-    memory_limit: str | int,
+    memory_limit: str | int | None,
     *,
     backend: str | None = None,
     jax_version: str | None = None,
     summary: CalibrationSummary | None = None,
+    device_budget: DeviceBudget | None = None,
 ) -> MemoryAssessment:
     """Compare a calibrated interval with a memory budget.
 
     Risk is qualitative. It is not an estimated probability of OOM.
     """
     limit = parse_memory_limit(memory_limit)
-    if limit is None:
-        raise ValueError("memory_limit is required for risk assessment")
     interval = calibrate(report, backend=backend, jax_version=jax_version, summary=summary)
+    if limit is None:
+        limitations = interval.limitations + ("no usable assessment budget is available; provide an explicit memory limit",)
+        if device_budget is not None:
+            limitations += device_budget.limitations
+        return MemoryAssessment(
+            structural_peak_bytes=report.estimated_peak_bytes,
+            interval=interval,
+            memory_limit_bytes=None,
+            risk=None,
+            calibrated=interval.dataset_version is not None and interval.applicability != "UNCALIBRATED",
+            headroom_to_upper_bytes=None,
+            limitations=tuple(dict.fromkeys(limitations)),
+            device_budget=device_budget,
+        )
     calibrated = interval.dataset_version is not None and interval.applicability != "UNCALIBRATED"
     if not calibrated:
         risk = (
@@ -102,7 +115,11 @@ def assess(
         risk=risk,
         calibrated=calibrated,
         headroom_to_upper_bytes=limit - interval.upper_bytes,
+        headroom_to_structural_bytes=limit - report.estimated_peak_bytes,
+        headroom_to_central_bytes=limit - interval.central_bytes,
+        headroom_fraction=(limit - interval.upper_bytes) / interval.upper_bytes if interval.upper_bytes else None,
         limitations=limitations,
+        device_budget=device_budget,
     )
 
 

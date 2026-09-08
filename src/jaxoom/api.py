@@ -9,6 +9,8 @@ from .calibration import calibrate as _calibrate
 from .analysis.peak import calculate_peak
 from .analysis.tensor_size import parse_memory_limit
 from .compiler.memory_analysis import compile_analyze as _compile_analyze
+from .device import device_budget as _device_budget
+from .device import device_memory as _device_memory
 from .donation import analyze_donation as _analyze_donation
 from .tracing import trace
 from .types import (
@@ -18,6 +20,7 @@ from .types import (
     MemoryComparison,
     MemoryInterval,
     MemoryReport,
+    DeviceBudget,
     DonationReport,
 )
 
@@ -29,6 +32,49 @@ def compile_analyze(
 ) -> CompilerMemoryReport:
     """Compile a function and return backend-reported memory categories."""
     return _compile_analyze(fn, args, kwargs)
+
+
+def device_memory():
+    """Return an observational, non-compiling device-memory snapshot."""
+    return _device_memory()
+
+
+def assess(
+    report_or_fn: MemoryReport | Callable[..., Any],
+    *args: Any,
+    memory_limit: str | int = "auto",
+    backend: str | None = None,
+    jax_version: str | None = None,
+    summary: CalibrationSummary | None = None,
+    device_budget: DeviceBudget | None = None,
+    **kwargs: Any,
+) -> MemoryAssessment:
+    """Assess a report or callable against an explicit or current-device budget."""
+    from dataclasses import replace
+
+    if isinstance(report_or_fn, MemoryReport):
+        if args:
+            if memory_limit != "auto" or len(args) != 1:
+                raise TypeError("a MemoryReport assessment accepts at most one positional memory limit")
+            memory_limit = args[0]
+            args = ()
+        if kwargs:
+            raise TypeError("a MemoryReport assessment does not accept function keyword arguments")
+        report = report_or_fn
+        callable_input = False
+    else:
+        report = estimate(report_or_fn, *args, **kwargs)
+        callable_input = True
+    budget = None
+    if memory_limit == "auto":
+        budget = device_budget or _device_budget()
+        limit = budget.assessment_budget_bytes
+    else:
+        limit = memory_limit
+    result = _assess(report, limit, backend=backend, jax_version=jax_version, summary=summary, device_budget=budget)
+    if callable_input and len(args) > 0 and result.risk is not None and result.risk.value != "LOW":
+        result = replace(result, remediation_hint="Potential next step: run jaxoom.analyze_donation(...) to check for compiler-confirmed buffer reuse.")
+    return result
 
 
 def analyze_donation(
@@ -57,18 +103,6 @@ def calibrate(
 ) -> MemoryInterval:
     """Add an empirical compiler-accounted memory interval to a report."""
     return _calibrate(report, backend=backend, jax_version=jax_version, summary=summary)
-
-
-def assess(
-    report: MemoryReport,
-    memory_limit: str | int,
-    *,
-    backend: str | None = None,
-    jax_version: str | None = None,
-    summary: CalibrationSummary | None = None,
-) -> MemoryAssessment:
-    """Assess qualitative memory risk under an explicit budget."""
-    return _assess(report, memory_limit, backend=backend, jax_version=jax_version, summary=summary)
 
 
 def estimate(

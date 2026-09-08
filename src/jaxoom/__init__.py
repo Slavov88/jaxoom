@@ -1,7 +1,9 @@
 """JAXOOM: know before you OOM."""
-from .api import analyze_donation, assess, calibrate, compare_memory, compile_analyze, estimate
+from .api import analyze_donation, assess, calibrate, compare_memory, compile_analyze, device_memory, estimate
 from .types import (
     BufferInfo,
+    DeviceBudget,
+    DeviceMemorySnapshot,
     DonationCandidate,
     DonationLeaf,
     DonationReport,
@@ -19,6 +21,8 @@ __all__ = [
     "analyze_donation",
     "assess",
     "BufferInfo",
+    "DeviceBudget",
+    "DeviceMemorySnapshot",
     "DonationCandidate",
     "DonationLeaf",
     "DonationReport",
@@ -32,6 +36,7 @@ __all__ = [
     "MemoryRiskLevel",
     "PeakPoint",
     "compare_memory",
+    "device_memory",
     "compile_analyze",
     "estimate",
 ]
