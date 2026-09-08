@@ -1,0 +1,57 @@
+{
+  "combined_with_historical_18": 39,
+  "current_compiler_upper_baseline": {
+    "fresh_false_fit_count": 2,
+    "fresh_false_fit_ids": [
+      "attention:{'head_dim': 64, 'heads': 8, 'sequence': 4096}:fraction=0.75",
+      "attention:{'head_dim': 64, 'heads': 8, 'sequence': 4096}:fraction=0.76"
+    ],
+    "fresh_false_oom_count": 0
+  },
+  "data_split": "Historical 18-trial benchmark retained separately; fresh threshold probes are diagnostic and not a sufficient held-out model-validation set.",
+  "environment": {
+    "allocator": "BFC-style",
+    "device": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "fractions_tested": [
+      0.35,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.7,
+      0.75,
+      0.76,
+      0.77
+    ],
+    "jax_version": "0.11.0",
+    "jaxlib_version": "0.11.0",
+    "preallocate": false
+  },
+  "fresh_outcomes": {
+    "COMPILE_OOM": 0,
+    "EXECUTION_OOM": 2,
+    "FIT": 19
+  },
+  "fresh_probe_trials": 21,
+  "known_attention_4096_threshold": {
+    "bracket_width_bytes": 41943040,
+    "fit_fraction": 0.77,
+    "fit_limit_bytes": 3307208704,
+    "oom_fraction": 0.76,
+    "oom_limit_bytes": 3265265664
+  },
+  "model_evaluation": {
+    "additive_allocator_overhead": "NOT FIT: same identifiability limitation",
+    "global_allocator_ratio": "NOT FIT: only one configuration supplied an OOM/FIT threshold; applying the ratio to controls would overpredict required capacity",
+    "primitive_aware": "NOT FIT: insufficient held-out threshold labels",
+    "two_part_max": "Equivalent to current compiler upper on this dataset; does not remove 2 threshold false fits"
+  },
+  "post_compile_residency": {
+    "pool_growth_max_bytes": 2214592512,
+    "pool_growth_median_bytes": 849346560,
+    "pool_growth_min_bytes": 268435456,
+    "post_pool_fraction_median": 0.4467046379170057
+  },
+  "production_decision": "KEEP EXPERIMENTAL",
+  "status": "OBSERVED"
+}

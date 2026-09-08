@@ -1,0 +1,151 @@
+{
+  "status": "OBSERVED",
+  "thresholds": [
+    {
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 2048
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "outcomes": [
+        "FIT",
+        "FIT",
+        "FIT"
+      ],
+      "required_capacity_lower_bytes": null,
+      "required_capacity_upper_bytes": 1503657984,
+      "tested_limits": [
+        1503657984,
+        1933574144,
+        2363490304
+      ]
+    },
+    {
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 2048
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "outcomes": [
+        "FIT",
+        "FIT",
+        "FIT"
+      ],
+      "required_capacity_lower_bytes": null,
+      "required_capacity_upper_bytes": 1503657984,
+      "tested_limits": [
+        1503657984,
+        1933574144,
+        2363490304
+      ]
+    },
+    {
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 3072
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "outcomes": [
+        "FIT",
+        "FIT",
+        "FIT"
+      ],
+      "required_capacity_lower_bytes": null,
+      "required_capacity_upper_bytes": 2147483648,
+      "tested_limits": [
+        2147483648,
+        2577399808,
+        3007315968
+      ]
+    },
+    {
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 4096
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "outcomes": [
+        "EXECUTION_OOM",
+        "EXECUTION_OOM",
+        "FIT"
+      ],
+      "required_capacity_lower_bytes": 3265265664,
+      "required_capacity_upper_bytes": 3307208704,
+      "tested_limits": [
+        3221225472,
+        3265265664,
+        3307208704
+      ]
+    },
+    {
+      "configuration": {
+        "batch": 256,
+        "depth": 4,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "family": "mlp",
+      "outcomes": [
+        "FIT",
+        "FIT",
+        "FIT"
+      ],
+      "required_capacity_lower_bytes": null,
+      "required_capacity_upper_bytes": 1503657984,
+      "tested_limits": [
+        1503657984,
+        1933574144,
+        2363490304
+      ]
+    },
+    {
+      "configuration": {
+        "batch": 256,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "family": "training",
+      "outcomes": [
+        "FIT",
+        "FIT",
+        "FIT"
+      ],
+      "required_capacity_lower_bytes": null,
+      "required_capacity_upper_bytes": 1503657984,
+      "tested_limits": [
+        1503657984,
+        1933574144,
+        2363490304
+      ]
+    },
+    {
+      "configuration": {
+        "heads": 8,
+        "sequence": 2048,
+        "width": 2048
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "outcomes": [
+        "FIT",
+        "FIT",
+        "FIT"
+      ],
+      "required_capacity_lower_bytes": null,
+      "required_capacity_upper_bytes": 1503657984,
+      "tested_limits": [
+        1503657984,
+        1933574144,
+        2363490304
+      ]
+    }
+  ]
+}
