@@ -1,0 +1,264 @@
+{
+  "data_sufficiency": "STILL INSUFFICIENT",
+  "environment": {
+    "allocator": "BFC-style",
+    "device": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "jax_version": "0.11.0",
+    "preallocate": false
+  },
+  "production_changed": false,
+  "screening": {
+    "candidate_rows": 138,
+    "status_counts": {
+      "SCREENED_OUT_TOO_SMALL": 112,
+      "THRESHOLD_CANDIDATE": 26
+    }
+  },
+  "status": "OBSERVED",
+  "stop_reason": "The campaign produced fewer than the minimum 12 independent useful thresholds. Compile timeouts dominate several large candidates.",
+  "threshold_probes": {
+    "outcome_counts": {
+      "COMPILE_OOM": 16,
+      "COMPILE_TIMEOUT": 40,
+      "EXECUTION_OOM": 9,
+      "FIT": 62,
+      "OTHER_FAILURE": 3
+    },
+    "total": 130
+  },
+  "useful_thresholds": {
+    "count": 10,
+    "dtypes": {
+      "float16": 1,
+      "float32": 9
+    },
+    "families": {
+      "attention": 4,
+      "matmul": 1,
+      "mlp": 2,
+      "training": 3
+    },
+    "median_bracket_width_bytes": 429916160.0,
+    "rows": [
+      {
+        "bracket_width_bytes": 429916160,
+        "configuration": {
+          "head_dim": 64,
+          "heads": 8,
+          "sequence": 3584
+        },
+        "configuration_id": "4d2963f3e1c70c24",
+        "dtype": "float32",
+        "family": "attention",
+        "outcomes": [
+          "EXECUTION_OOM",
+          "EXECUTION_OOM",
+          "FIT",
+          "FIT",
+          "FIT",
+          "FIT"
+        ],
+        "required_allocator_lower_bytes": 1933574144,
+        "required_allocator_upper_bytes": 2363490304
+      },
+      {
+        "bracket_width_bytes": 429916160,
+        "configuration": {
+          "head_dim": 64,
+          "heads": 8,
+          "sequence": 3840
+        },
+        "configuration_id": "b4147577a0d722ae",
+        "dtype": "float32",
+        "family": "attention",
+        "outcomes": [
+          "EXECUTION_OOM",
+          "EXECUTION_OOM",
+          "FIT",
+          "FIT",
+          "FIT",
+          "FIT"
+        ],
+        "required_allocator_lower_bytes": 1933574144,
+        "required_allocator_upper_bytes": 2363490304
+      },
+      {
+        "bracket_width_bytes": 85983232,
+        "configuration": {
+          "head_dim": 64,
+          "heads": 8,
+          "sequence": 4096
+        },
+        "configuration_id": "bdb3421b7da45ee4",
+        "dtype": "float32",
+        "family": "attention",
+        "outcomes": [
+          "COMPILE_OOM",
+          "EXECUTION_OOM",
+          "EXECUTION_OOM",
+          "EXECUTION_OOM",
+          "EXECUTION_OOM",
+          "FIT"
+        ],
+        "required_allocator_lower_bytes": 3221225472,
+        "required_allocator_upper_bytes": 3307208704
+      },
+      {
+        "bracket_width_bytes": 429916160,
+        "configuration": {
+          "head_dim": 64,
+          "heads": 8,
+          "sequence": 4096
+        },
+        "configuration_id": "a3fdaea2d5ee4dab",
+        "dtype": "float16",
+        "family": "attention",
+        "outcomes": [
+          "EXECUTION_OOM",
+          "FIT",
+          "FIT",
+          "FIT",
+          "FIT"
+        ],
+        "required_allocator_lower_bytes": 1503657984,
+        "required_allocator_upper_bytes": 1933574144
+      },
+      {
+        "bracket_width_bytes": 213909504,
+        "configuration": {
+          "batch": 64,
+          "depth": 4,
+          "width": 8192
+        },
+        "configuration_id": "ddf0741cf3c105c7",
+        "dtype": "float32",
+        "family": "mlp",
+        "outcomes": [
+          "FIT",
+          "FIT",
+          "FIT",
+          "FIT",
+          "FIT",
+          "OTHER_FAILURE",
+          "COMPILE_OOM",
+          "COMPILE_OOM"
+        ],
+        "required_allocator_lower_bytes": 1289748480,
+        "required_allocator_upper_bytes": 1503657984
+      },
+      {
+        "bracket_width_bytes": 213909504,
+        "configuration": {
+          "batch": 128,
+          "depth": 4,
+          "width": 8192
+        },
+        "configuration_id": "bbe4b80b210af516",
+        "dtype": "float32",
+        "family": "mlp",
+        "outcomes": [
+          "FIT",
+          "FIT",
+          "FIT",
+          "FIT",
+          "FIT",
+          "OTHER_FAILURE",
+          "COMPILE_OOM",
+          "COMPILE_OOM"
+        ],
+        "required_allocator_lower_bytes": 1289748480,
+        "required_allocator_upper_bytes": 1503657984
+      },
+      {
+        "bracket_width_bytes": 1287651328,
+        "configuration": {
+          "batch": 64,
+          "width": 8192
+        },
+        "configuration_id": "caecac6baf0cc3ea",
+        "dtype": "float32",
+        "family": "training",
+        "outcomes": [
+          "COMPILE_TIMEOUT",
+          "FIT",
+          "FIT",
+          "FIT",
+          "FIT",
+          "COMPILE_TIMEOUT",
+          "COMPILE_TIMEOUT",
+          "COMPILE_TIMEOUT",
+          "COMPILE_OOM"
+        ],
+        "required_allocator_lower_bytes": 645922816,
+        "required_allocator_upper_bytes": 1933574144
+      },
+      {
+        "bracket_width_bytes": 1717567488,
+        "configuration": {
+          "batch": 128,
+          "width": 8192
+        },
+        "configuration_id": "46020d752ffdd17c",
+        "dtype": "float32",
+        "family": "training",
+        "outcomes": [
+          "COMPILE_TIMEOUT",
+          "COMPILE_TIMEOUT",
+          "FIT",
+          "FIT",
+          "FIT",
+          "COMPILE_TIMEOUT",
+          "COMPILE_TIMEOUT",
+          "COMPILE_TIMEOUT",
+          "COMPILE_OOM"
+        ],
+        "required_allocator_lower_bytes": 645922816,
+        "required_allocator_upper_bytes": 2363490304
+      },
+      {
+        "bracket_width_bytes": 1287651328,
+        "configuration": {
+          "batch": 256,
+          "width": 8192
+        },
+        "configuration_id": "75678cc906ea4ce7",
+        "dtype": "float32",
+        "family": "training",
+        "outcomes": [
+          "COMPILE_TIMEOUT",
+          "FIT",
+          "FIT",
+          "FIT",
+          "COMPILE_TIMEOUT",
+          "COMPILE_TIMEOUT",
+          "COMPILE_TIMEOUT",
+          "COMPILE_TIMEOUT",
+          "COMPILE_OOM"
+        ],
+        "required_allocator_lower_bytes": 645922816,
+        "required_allocator_upper_bytes": 1933574144
+      },
+      {
+        "bracket_width_bytes": 859832320,
+        "configuration": {
+          "batch": 1,
+          "k": 8192,
+          "m": 8192,
+          "n": 8192
+        },
+        "configuration_id": "1d992aa04c602165",
+        "dtype": "float32",
+        "family": "matmul",
+        "outcomes": [
+          "COMPILE_OOM",
+          "COMPILE_OOM",
+          "COMPILE_TIMEOUT",
+          "FIT",
+          "FIT"
+        ],
+        "required_allocator_lower_bytes": 1073741824,
+        "required_allocator_upper_bytes": 1933574144
+      }
+    ]
+  }
+}
