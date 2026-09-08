@@ -16,12 +16,29 @@ from pathlib import Path
 from typing import Any
 
 from accelerator_calibration import cases, environment, run_case
+from jaxoom.calibration_defaults import CALIBRATIONS
 
 
 FROZEN_REFERENCE_DEVICE = "NVIDIA GeForce RTX 3050 Laptop GPU"
-FROZEN_LOWER_RATIO = 0.6734660838594787
-FROZEN_CENTRAL_RATIO = 1.0
-FROZEN_UPPER_RATIO = 1.6676505193119118
+
+
+def frozen_calibration() -> dict[str, Any]:
+    matches = [
+        summary
+        for summary in CALIBRATIONS
+        if summary.backend == "gpu"
+        and summary.jax_version_family == "0.11"
+        and "0.11.0" in summary.tested_jax_versions
+    ]
+    if len(matches) != 1:
+        raise RuntimeError(f"expected one exact JAX 0.11 GPU calibration, found {len(matches)}")
+    summary = matches[0]
+    return {
+        "lower_ratio": summary.lower_ratio,
+        "central_ratio": summary.central_ratio,
+        "upper_ratio": summary.upper_ratio,
+        "dataset_version": summary.dataset_version,
+    }
 
 
 def nearest_percentile(values: list[float], probability: float) -> float | None:
@@ -53,13 +70,13 @@ def size_bucket(static_bytes: int) -> str:
     return ">500 MiB"
 
 
-def pair_case(reference: dict[str, Any], current: dict[str, Any]) -> dict[str, Any]:
+def pair_case(reference: dict[str, Any], current: dict[str, Any], calibration: dict[str, Any]) -> dict[str, Any]:
     static = current.get("static_peak_bytes")
     reference_compiler = reference.get("compiler_accounted_bytes")
     current_compiler = current.get("compiler_accounted_bytes")
-    lower = round(static * FROZEN_LOWER_RATIO) if static is not None else None
-    central = round(static * FROZEN_CENTRAL_RATIO) if static is not None else None
-    upper = round(static * FROZEN_UPPER_RATIO) if static is not None else None
+    lower = round(static * calibration["lower_ratio"]) if static is not None else None
+    central = round(static * calibration["central_ratio"]) if static is not None else None
+    upper = round(static * calibration["upper_ratio"]) if static is not None else None
     return {
         "name": current["name"],
         "family": current["family"],
@@ -98,7 +115,8 @@ def summarize(pairs: list[dict[str, Any]]) -> dict[str, Any]:
     relative = [abs(row["compiler_relative_drift"]) for row in valid if row["compiler_relative_drift"] is not None]
     signed = [row["compiler_relative_drift"] for row in valid if row["compiler_relative_drift"] is not None]
     temp_ratios = [row["current_temp_bytes"] / row["reference_temp_bytes"] for row in valid if row["reference_temp_bytes"] not in (None, 0) and row["current_temp_bytes"] is not None]
-    interval_width = FROZEN_UPPER_RATIO - FROZEN_LOWER_RATIO
+    calibration = frozen_calibration()
+    interval_width = calibration["upper_ratio"] - calibration["lower_ratio"]
 
     def grouped(key: str) -> dict[str, Any]:
         result = {}
@@ -184,6 +202,7 @@ def main() -> None:
     args = parser.parse_args()
 
     reference_env, reference_rows = load_reference(args.reference)
+    calibration = frozen_calibration()
     current_env = environment()
     current_label = device_label(current_env)
     independent = current_label != FROZEN_REFERENCE_DEVICE
@@ -202,7 +221,7 @@ def main() -> None:
         reference = reference_rows.get(case.name)
         if reference is None:
             raise SystemExit(f"reference is missing matched case {case.name}")
-        rows.append(pair_case(reference, current))
+        rows.append(pair_case(reference, current, calibration))
 
     summary = summarize(rows)
     payload = {
@@ -210,7 +229,7 @@ def main() -> None:
         "independent_device": independent,
         "reference_environment": reference_env,
         "current_environment": current_env,
-        "frozen_calibration": {"lower_ratio": FROZEN_LOWER_RATIO, "central_ratio": FROZEN_CENTRAL_RATIO, "upper_ratio": FROZEN_UPPER_RATIO, "dataset_version": "jax_0_11_gpu_calibration_2026-09-08_v2"},
+        "frozen_calibration": calibration,
         "summary": summary,
         "cases": rows,
     }
