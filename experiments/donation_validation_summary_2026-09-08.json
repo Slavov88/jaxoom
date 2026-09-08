@@ -1,0 +1,175 @@
+{
+  "limitations": [
+    "Compiler-accounted memory is not runtime peak memory.",
+    "Compiler-confirmed donation does not establish caller semantic safety.",
+    "The six-workload matrix is focused validation, not a benchmark."
+  ],
+  "runs": {
+    "jax011_cpu": {
+      "artifact": "donation_validation_2026-09-08.json",
+      "environment": {
+        "backend": "cpu",
+        "command": [
+          "/home/slavov/.venvs/jaxoom-jax011/bin/python",
+          "experiments/donation_validation.py",
+          "--output-prefix",
+          "experiments/donation_validation_2026-09-08"
+        ],
+        "devices": [
+          "cpu:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "python_version": "3.12.3",
+        "repository_commit": "3cc22b97cd0ac83292eb8939966955b75168983f",
+        "seed": 0,
+        "xla_flags": null
+      },
+      "summary": {
+        "compiler_confirmed_beneficial_single_candidates": 7,
+        "compiler_confirmed_candidates_including_combinations": 9,
+        "maximum_compiler_evaluations": 4,
+        "maximum_saving_bytes": 263168,
+        "maximum_saving_fraction": 0.5,
+        "median_compiler_evaluations": 3.0,
+        "median_saving_bytes": 262144,
+        "median_saving_fraction": 0.33332657817408046,
+        "runtime_smoke_failures": 0,
+        "runtime_smoke_matches": 5,
+        "static_candidate_precision": 0.875,
+        "static_compatible_single_candidates": 8,
+        "static_false_positive_single_candidates": 1,
+        "workloads": 6,
+        "workloads_without_useful_donation": 1
+      }
+    },
+    "jax011_rtx3050": {
+      "artifact": "donation_validation_2026-09-08_gpu.json",
+      "environment": {
+        "backend": "gpu",
+        "command": [
+          "/home/slavov/.venvs/jaxoom-jax011/bin/python",
+          "experiments/donation_validation.py",
+          "--output-prefix",
+          "experiments/donation_validation_2026-09-08_gpu"
+        ],
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "python_version": "3.12.3",
+        "repository_commit": "3cc22b97cd0ac83292eb8939966955b75168983f",
+        "seed": 0,
+        "xla_flags": null
+      },
+      "summary": {
+        "compiler_confirmed_beneficial_single_candidates": 8,
+        "compiler_confirmed_candidates_including_combinations": 11,
+        "maximum_compiler_evaluations": 4,
+        "maximum_saving_bytes": 263168,
+        "maximum_saving_fraction": 0.5,
+        "median_compiler_evaluations": 3.0,
+        "median_saving_bytes": 262144,
+        "median_saving_fraction": 0.24999618536094115,
+        "runtime_smoke_failures": 0,
+        "runtime_smoke_matches": 5,
+        "static_candidate_precision": 1.0,
+        "static_compatible_single_candidates": 8,
+        "static_false_positive_single_candidates": 0,
+        "workloads": 6,
+        "workloads_without_useful_donation": 1
+      }
+    },
+    "jax062_cpu": {
+      "artifact": "donation_validation_2026-09-08_jax062.json",
+      "environment": {
+        "backend": "cpu",
+        "command": [
+          "/home/slavov/.venvs/jaxoom-gpu/bin/python",
+          "experiments/donation_validation.py",
+          "--output-prefix",
+          "experiments/donation_validation_2026-09-08_jax062"
+        ],
+        "devices": [
+          "TFRT_CPU_0"
+        ],
+        "jax_version": "0.6.2",
+        "jaxlib_version": "0.6.2",
+        "python_version": "3.12.3",
+        "repository_commit": "3cc22b97cd0ac83292eb8939966955b75168983f",
+        "seed": 0,
+        "xla_flags": null
+      },
+      "summary": {
+        "compiler_confirmed_beneficial_single_candidates": 8,
+        "compiler_confirmed_candidates_including_combinations": 10,
+        "maximum_compiler_evaluations": 4,
+        "maximum_saving_bytes": 263168,
+        "maximum_saving_fraction": 0.5,
+        "median_compiler_evaluations": 3.0,
+        "median_saving_bytes": 262144.0,
+        "median_saving_fraction": 0.2916613817675108,
+        "runtime_smoke_failures": 0,
+        "runtime_smoke_matches": 5,
+        "static_candidate_precision": 1.0,
+        "static_compatible_single_candidates": 8,
+        "static_false_positive_single_candidates": 0,
+        "workloads": 6,
+        "workloads_without_useful_donation": 1
+      }
+    }
+  },
+  "status": "COMPUTATIONALLY VERIFIED",
+  "training_like_comparison": [
+    {
+      "alias_gain_bytes": 8320,
+      "best_argnums": [
+        1
+      ],
+      "compiler_saving_bytes": 8320,
+      "run": "jax011_cpu",
+      "runtime_smoke": {
+        "argnums": [
+          1
+        ],
+        "status": "MATCH"
+      },
+      "saving_fraction": 0.08415941735787982
+    },
+    {
+      "alias_gain_bytes": 16640,
+      "best_argnums": [
+        0,
+        1
+      ],
+      "compiler_saving_bytes": 16512,
+      "run": "jax062_cpu",
+      "runtime_smoke": {
+        "argnums": [
+          0,
+          1
+        ],
+        "status": "MATCH"
+      },
+      "saving_fraction": 0.14327860886466975
+    },
+    {
+      "alias_gain_bytes": 16640,
+      "best_argnums": [
+        0,
+        1
+      ],
+      "compiler_saving_bytes": 16512,
+      "run": "jax011_rtx3050",
+      "runtime_smoke": {
+        "argnums": [
+          0,
+          1
+        ],
+        "status": "MATCH"
+      },
+      "saving_fraction": 0.16702407444871537
+    }
+  ]
+}

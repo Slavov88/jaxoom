@@ -1,0 +1,739 @@
+{
+  "environment": {
+    "backend": "cpu",
+    "command": [
+      "/home/slavov/.venvs/jaxoom-jax011/bin/python",
+      "experiments/donation_validation.py",
+      "--output-prefix",
+      "experiments/donation_validation_2026-09-08"
+    ],
+    "devices": [
+      "cpu:0"
+    ],
+    "jax_version": "0.11.0",
+    "jaxlib_version": "0.11.0",
+    "python_version": "3.12.3",
+    "repository_commit": "3cc22b97cd0ac83292eb8939966955b75168983f",
+    "seed": 0,
+    "xla_flags": null
+  },
+  "max_compilations": 32,
+  "rows": [
+    {
+      "family": "simple",
+      "name": "simple_update",
+      "report": {
+        "backend": "cpu",
+        "baseline": {
+          "alias_bytes": 0,
+          "argument_bytes": 262144,
+          "available": true,
+          "compiler_accounted_bytes": 524288,
+          "output_bytes": 262144,
+          "temporary_bytes": 0
+        },
+        "best_argnums": [
+          0
+        ],
+        "candidates": [
+          {
+            "alias_gain_bytes": 262144,
+            "argnums": [
+              0
+            ],
+            "baseline_alias_bytes": 0,
+            "baseline_compiler_bytes": 524288,
+            "compatible_leaf_count": 1,
+            "compiler_confirmed": true,
+            "compiler_saving_bytes": 262144,
+            "donated_alias_bytes": 262144,
+            "donated_compiler_bytes": 262144,
+            "error": null,
+            "input_bytes": 262144,
+            "input_leaves": [
+              {
+                "dtype": "float32",
+                "nbytes": 262144,
+                "shape": [
+                  256,
+                  256
+                ]
+              }
+            ],
+            "saving_fraction": 0.5,
+            "status": "COMPILER_CONFIRMED",
+            "warnings": [
+              "Caller safety unknown: donated argument buffers must not be used after the compiled call.",
+              "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+              "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+            ]
+          }
+        ],
+        "compiler_evaluations": 2,
+        "jax_version": "0.11.0",
+        "limitations": [
+          "Caller safety unknown: donated argument buffers must not be used after the compiled call.",
+          "Compiler-confirmed saving is compiler-accounted memory, not runtime peak memory.",
+          "Donation is evaluated for positional arguments; donating a pytree argument may donate eligible leaves within it."
+        ]
+      },
+      "runtime_smoke": {
+        "argnums": [
+          0
+        ],
+        "status": "MATCH"
+      }
+    },
+    {
+      "family": "negative_control",
+      "name": "shape_mismatch",
+      "report": {
+        "backend": "cpu",
+        "baseline": {
+          "alias_bytes": 0,
+          "argument_bytes": 0,
+          "available": true,
+          "compiler_accounted_bytes": 131072,
+          "output_bytes": 131072,
+          "temporary_bytes": 0
+        },
+        "best_argnums": null,
+        "candidates": [
+          {
+            "alias_gain_bytes": null,
+            "argnums": [
+              0
+            ],
+            "baseline_alias_bytes": 0,
+            "baseline_compiler_bytes": 131072,
+            "compatible_leaf_count": 0,
+            "compiler_confirmed": false,
+            "compiler_saving_bytes": null,
+            "donated_alias_bytes": null,
+            "donated_compiler_bytes": null,
+            "error": "no input array leaf has an output leaf with the same shape and dtype",
+            "input_bytes": 262144,
+            "input_leaves": [
+              {
+                "dtype": "float32",
+                "nbytes": 262144,
+                "shape": [
+                  256,
+                  256
+                ]
+              }
+            ],
+            "saving_fraction": null,
+            "status": "NOT_COMPATIBLE",
+            "warnings": [
+              "Caller safety unknown: donated argument buffers must not be used after the compiled call."
+            ]
+          }
+        ],
+        "compiler_evaluations": 1,
+        "jax_version": "0.11.0",
+        "limitations": [
+          "Caller safety unknown: donated argument buffers must not be used after the compiled call.",
+          "Compiler-confirmed saving is compiler-accounted memory, not runtime peak memory.",
+          "Donation is evaluated for positional arguments; donating a pytree argument may donate eligible leaves within it."
+        ]
+      },
+      "runtime_smoke": {
+        "reason": "no compiler-confirmed candidate",
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "family": "residual",
+      "name": "residual",
+      "report": {
+        "backend": "cpu",
+        "baseline": {
+          "alias_bytes": 0,
+          "argument_bytes": 262144,
+          "available": true,
+          "compiler_accounted_bytes": 524288,
+          "output_bytes": 262144,
+          "temporary_bytes": 0
+        },
+        "best_argnums": [
+          0
+        ],
+        "candidates": [
+          {
+            "alias_gain_bytes": 262144,
+            "argnums": [
+              0
+            ],
+            "baseline_alias_bytes": 0,
+            "baseline_compiler_bytes": 524288,
+            "compatible_leaf_count": 1,
+            "compiler_confirmed": true,
+            "compiler_saving_bytes": 262144,
+            "donated_alias_bytes": 262144,
+            "donated_compiler_bytes": 262144,
+            "error": null,
+            "input_bytes": 262144,
+            "input_leaves": [
+              {
+                "dtype": "float32",
+                "nbytes": 262144,
+                "shape": [
+                  256,
+                  256
+                ]
+              }
+            ],
+            "saving_fraction": 0.5,
+            "status": "COMPILER_CONFIRMED",
+            "warnings": [
+              "Caller safety unknown: donated argument buffers must not be used after the compiled call.",
+              "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+              "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+            ]
+          }
+        ],
+        "compiler_evaluations": 2,
+        "jax_version": "0.11.0",
+        "limitations": [
+          "Caller safety unknown: donated argument buffers must not be used after the compiled call.",
+          "Compiler-confirmed saving is compiler-accounted memory, not runtime peak memory.",
+          "Donation is evaluated for positional arguments; donating a pytree argument may donate eligible leaves within it."
+        ]
+      },
+      "runtime_smoke": {
+        "argnums": [
+          0
+        ],
+        "status": "MATCH"
+      }
+    },
+    {
+      "family": "multiple_inputs",
+      "name": "multiple_inputs",
+      "report": {
+        "backend": "cpu",
+        "baseline": {
+          "alias_bytes": 0,
+          "argument_bytes": 524288,
+          "available": true,
+          "compiler_accounted_bytes": 1048592,
+          "output_bytes": 524304,
+          "temporary_bytes": 0
+        },
+        "best_argnums": [
+          0
+        ],
+        "candidates": [
+          {
+            "alias_gain_bytes": 262144,
+            "argnums": [
+              0
+            ],
+            "baseline_alias_bytes": 0,
+            "baseline_compiler_bytes": 1048592,
+            "compatible_leaf_count": 1,
+            "compiler_confirmed": true,
+            "compiler_saving_bytes": 262144,
+            "donated_alias_bytes": 262144,
+            "donated_compiler_bytes": 786448,
+            "error": null,
+            "input_bytes": 262144,
+            "input_leaves": [
+              {
+                "dtype": "float32",
+                "nbytes": 262144,
+                "shape": [
+                  256,
+                  256
+                ]
+              }
+            ],
+            "saving_fraction": 0.24999618536094115,
+            "status": "COMPILER_CONFIRMED",
+            "warnings": [
+              "Caller safety unknown: donated argument buffers must not be used after the compiled call.",
+              "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+              "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+            ]
+          },
+          {
+            "alias_gain_bytes": 262144,
+            "argnums": [
+              1
+            ],
+            "baseline_alias_bytes": 0,
+            "baseline_compiler_bytes": 1048592,
+            "compatible_leaf_count": 1,
+            "compiler_confirmed": true,
+            "compiler_saving_bytes": 262144,
+            "donated_alias_bytes": 262144,
+            "donated_compiler_bytes": 786448,
+            "error": null,
+            "input_bytes": 262144,
+            "input_leaves": [
+              {
+                "dtype": "float32",
+                "nbytes": 262144,
+                "shape": [
+                  256,
+                  256
+                ]
+              }
+            ],
+            "saving_fraction": 0.24999618536094115,
+            "status": "COMPILER_CONFIRMED",
+            "warnings": [
+              "Caller safety unknown: donated argument buffers must not be used after the compiled call.",
+              "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+              "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+            ]
+          },
+          {
+            "alias_gain_bytes": 524288,
+            "argnums": [
+              0,
+              1
+            ],
+            "baseline_alias_bytes": 0,
+            "baseline_compiler_bytes": 1048592,
+            "compatible_leaf_count": 2,
+            "compiler_confirmed": false,
+            "compiler_saving_bytes": 0,
+            "donated_alias_bytes": 524288,
+            "donated_compiler_bytes": 1048592,
+            "error": null,
+            "input_bytes": 524288,
+            "input_leaves": [
+              {
+                "dtype": "float32",
+                "nbytes": 262144,
+                "shape": [
+                  256,
+                  256
+                ]
+              },
+              {
+                "dtype": "float32",
+                "nbytes": 262144,
+                "shape": [
+                  256,
+                  256
+                ]
+              }
+            ],
+            "saving_fraction": 0.0,
+            "status": "NOT_BENEFICIAL",
+            "warnings": [
+              "Caller safety unknown: donated argument buffers must not be used after the compiled call.",
+              "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+              "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+            ]
+          }
+        ],
+        "compiler_evaluations": 4,
+        "jax_version": "0.11.0",
+        "limitations": [
+          "Caller safety unknown: donated argument buffers must not be used after the compiled call.",
+          "Compiler-confirmed saving is compiler-accounted memory, not runtime peak memory.",
+          "Donation is evaluated for positional arguments; donating a pytree argument may donate eligible leaves within it."
+        ]
+      },
+      "runtime_smoke": {
+        "argnums": [
+          0
+        ],
+        "status": "MATCH"
+      }
+    },
+    {
+      "family": "parameter_update",
+      "name": "parameter_update",
+      "report": {
+        "backend": "cpu",
+        "baseline": {
+          "alias_bytes": 0,
+          "argument_bytes": 526336,
+          "available": true,
+          "compiler_accounted_bytes": 789520,
+          "output_bytes": 263184,
+          "temporary_bytes": 0
+        },
+        "best_argnums": [
+          0
+        ],
+        "candidates": [
+          {
+            "alias_gain_bytes": 263168,
+            "argnums": [
+              0
+            ],
+            "baseline_alias_bytes": 0,
+            "baseline_compiler_bytes": 789520,
+            "compatible_leaf_count": 2,
+            "compiler_confirmed": true,
+            "compiler_saving_bytes": 263168,
+            "donated_alias_bytes": 263168,
+            "donated_compiler_bytes": 526352,
+            "error": null,
+            "input_bytes": 263168,
+            "input_leaves": [
+              {
+                "dtype": "float32",
+                "nbytes": 1024,
+                "shape": [
+                  256
+                ]
+              },
+              {
+                "dtype": "float32",
+                "nbytes": 262144,
+                "shape": [
+                  256,
+                  256
+                ]
+              }
+            ],
+            "saving_fraction": 0.33332657817408046,
+            "status": "COMPILER_CONFIRMED",
+            "warnings": [
+              "Caller safety unknown: donated argument buffers must not be used after the compiled call.",
+              "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+              "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+            ]
+          },
+          {
+            "alias_gain_bytes": 263168,
+            "argnums": [
+              1
+            ],
+            "baseline_alias_bytes": 0,
+            "baseline_compiler_bytes": 789520,
+            "compatible_leaf_count": 2,
+            "compiler_confirmed": true,
+            "compiler_saving_bytes": 263168,
+            "donated_alias_bytes": 263168,
+            "donated_compiler_bytes": 526352,
+            "error": null,
+            "input_bytes": 263168,
+            "input_leaves": [
+              {
+                "dtype": "float32",
+                "nbytes": 1024,
+                "shape": [
+                  256
+                ]
+              },
+              {
+                "dtype": "float32",
+                "nbytes": 262144,
+                "shape": [
+                  256,
+                  256
+                ]
+              }
+            ],
+            "saving_fraction": 0.33332657817408046,
+            "status": "COMPILER_CONFIRMED",
+            "warnings": [
+              "Caller safety unknown: donated argument buffers must not be used after the compiled call.",
+              "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+              "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+            ]
+          },
+          {
+            "alias_gain_bytes": 263168,
+            "argnums": [
+              0,
+              1
+            ],
+            "baseline_alias_bytes": 0,
+            "baseline_compiler_bytes": 789520,
+            "compatible_leaf_count": 4,
+            "compiler_confirmed": true,
+            "compiler_saving_bytes": 263168,
+            "donated_alias_bytes": 263168,
+            "donated_compiler_bytes": 526352,
+            "error": null,
+            "input_bytes": 526336,
+            "input_leaves": [
+              {
+                "dtype": "float32",
+                "nbytes": 1024,
+                "shape": [
+                  256
+                ]
+              },
+              {
+                "dtype": "float32",
+                "nbytes": 262144,
+                "shape": [
+                  256,
+                  256
+                ]
+              },
+              {
+                "dtype": "float32",
+                "nbytes": 1024,
+                "shape": [
+                  256
+                ]
+              },
+              {
+                "dtype": "float32",
+                "nbytes": 262144,
+                "shape": [
+                  256,
+                  256
+                ]
+              }
+            ],
+            "saving_fraction": 0.33332657817408046,
+            "status": "COMPILER_CONFIRMED",
+            "warnings": [
+              "Caller safety unknown: donated argument buffers must not be used after the compiled call.",
+              "Some donated buffers were not usable: float32[256], float32[256,256].\nSee an explanation at https://docs.jax.dev/en/latest/faq.html#buffer-donation.",
+              "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+              "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+            ]
+          }
+        ],
+        "compiler_evaluations": 4,
+        "jax_version": "0.11.0",
+        "limitations": [
+          "Caller safety unknown: donated argument buffers must not be used after the compiled call.",
+          "Compiler-confirmed saving is compiler-accounted memory, not runtime peak memory.",
+          "Donation is evaluated for positional arguments; donating a pytree argument may donate eligible leaves within it."
+        ]
+      },
+      "runtime_smoke": {
+        "argnums": [
+          0
+        ],
+        "status": "MATCH"
+      }
+    },
+    {
+      "family": "training",
+      "name": "training_like",
+      "report": {
+        "backend": "cpu",
+        "baseline": {
+          "alias_bytes": 0,
+          "argument_bytes": 65792,
+          "available": true,
+          "compiler_accounted_bytes": 98860,
+          "output_bytes": 16684,
+          "temporary_bytes": 16384
+        },
+        "best_argnums": [
+          1
+        ],
+        "candidates": [
+          {
+            "alias_gain_bytes": 8320,
+            "argnums": [
+              1
+            ],
+            "baseline_alias_bytes": 0,
+            "baseline_compiler_bytes": 98860,
+            "compatible_leaf_count": 2,
+            "compiler_confirmed": true,
+            "compiler_saving_bytes": 8320,
+            "donated_alias_bytes": 8320,
+            "donated_compiler_bytes": 90540,
+            "error": null,
+            "input_bytes": 8320,
+            "input_leaves": [
+              {
+                "dtype": "float32",
+                "nbytes": 128,
+                "shape": [
+                  32
+                ]
+              },
+              {
+                "dtype": "float32",
+                "nbytes": 8192,
+                "shape": [
+                  64,
+                  32
+                ]
+              }
+            ],
+            "saving_fraction": 0.08415941735787982,
+            "status": "COMPILER_CONFIRMED",
+            "warnings": [
+              "Caller safety unknown: donated argument buffers must not be used after the compiled call.",
+              "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+              "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+            ]
+          },
+          {
+            "alias_gain_bytes": 16640,
+            "argnums": [
+              0,
+              1
+            ],
+            "baseline_alias_bytes": 0,
+            "baseline_compiler_bytes": 98860,
+            "compatible_leaf_count": 4,
+            "compiler_confirmed": true,
+            "compiler_saving_bytes": 8320,
+            "donated_alias_bytes": 16640,
+            "donated_compiler_bytes": 90540,
+            "error": null,
+            "input_bytes": 16640,
+            "input_leaves": [
+              {
+                "dtype": "float32",
+                "nbytes": 128,
+                "shape": [
+                  32
+                ]
+              },
+              {
+                "dtype": "float32",
+                "nbytes": 8192,
+                "shape": [
+                  64,
+                  32
+                ]
+              },
+              {
+                "dtype": "float32",
+                "nbytes": 128,
+                "shape": [
+                  32
+                ]
+              },
+              {
+                "dtype": "float32",
+                "nbytes": 8192,
+                "shape": [
+                  64,
+                  32
+                ]
+              }
+            ],
+            "saving_fraction": 0.08415941735787982,
+            "status": "COMPILER_CONFIRMED",
+            "warnings": [
+              "Caller safety unknown: donated argument buffers must not be used after the compiled call.",
+              "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+              "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+            ]
+          },
+          {
+            "alias_gain_bytes": 8320,
+            "argnums": [
+              0
+            ],
+            "baseline_alias_bytes": 0,
+            "baseline_compiler_bytes": 98860,
+            "compatible_leaf_count": 2,
+            "compiler_confirmed": false,
+            "compiler_saving_bytes": 0,
+            "donated_alias_bytes": 8320,
+            "donated_compiler_bytes": 98860,
+            "error": null,
+            "input_bytes": 8320,
+            "input_leaves": [
+              {
+                "dtype": "float32",
+                "nbytes": 128,
+                "shape": [
+                  32
+                ]
+              },
+              {
+                "dtype": "float32",
+                "nbytes": 8192,
+                "shape": [
+                  64,
+                  32
+                ]
+              }
+            ],
+            "saving_fraction": 0.0,
+            "status": "NOT_BENEFICIAL",
+            "warnings": [
+              "Caller safety unknown: donated argument buffers must not be used after the compiled call.",
+              "compiler_accounted_bytes = arguments + outputs + temporaries - aliases; it is not runtime peak memory.",
+              "reported fields and their meaning may vary by backend and JAX/jaxlib version."
+            ]
+          },
+          {
+            "alias_gain_bytes": null,
+            "argnums": [
+              2
+            ],
+            "baseline_alias_bytes": 0,
+            "baseline_compiler_bytes": 98860,
+            "compatible_leaf_count": 0,
+            "compiler_confirmed": false,
+            "compiler_saving_bytes": null,
+            "donated_alias_bytes": null,
+            "donated_compiler_bytes": null,
+            "error": "no input array leaf has an output leaf with the same shape and dtype",
+            "input_bytes": 49152,
+            "input_leaves": [
+              {
+                "dtype": "float32",
+                "nbytes": 32768,
+                "shape": [
+                  128,
+                  64
+                ]
+              },
+              {
+                "dtype": "float32",
+                "nbytes": 16384,
+                "shape": [
+                  128,
+                  32
+                ]
+              }
+            ],
+            "saving_fraction": null,
+            "status": "NOT_COMPATIBLE",
+            "warnings": [
+              "Caller safety unknown: donated argument buffers must not be used after the compiled call."
+            ]
+          }
+        ],
+        "compiler_evaluations": 4,
+        "jax_version": "0.11.0",
+        "limitations": [
+          "Caller safety unknown: donated argument buffers must not be used after the compiled call.",
+          "Compiler-confirmed saving is compiler-accounted memory, not runtime peak memory.",
+          "Donation is evaluated for positional arguments; donating a pytree argument may donate eligible leaves within it."
+        ]
+      },
+      "runtime_smoke": {
+        "argnums": [
+          1
+        ],
+        "status": "MATCH"
+      }
+    }
+  ],
+  "status": "COMPUTATIONALLY VERIFIED",
+  "summary": {
+    "compiler_confirmed_beneficial_single_candidates": 7,
+    "compiler_confirmed_candidates_including_combinations": 9,
+    "maximum_compiler_evaluations": 4,
+    "maximum_saving_bytes": 263168,
+    "maximum_saving_fraction": 0.5,
+    "median_compiler_evaluations": 3.0,
+    "median_saving_bytes": 262144,
+    "median_saving_fraction": 0.33332657817408046,
+    "runtime_smoke_failures": 0,
+    "runtime_smoke_matches": 5,
+    "static_candidate_precision": 0.875,
+    "static_compatible_single_candidates": 8,
+    "static_false_positive_single_candidates": 1,
+    "workloads": 6,
+    "workloads_without_useful_donation": 1
+  }
+}
