@@ -1,0 +1,28 @@
+{
+  "allocator_environment": {
+    "TF_GPU_ALLOCATOR": null,
+    "XLA_CLIENT_MEM_FRACTION": null,
+    "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+    "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+    "XLA_PYTHON_CLIENT_PREALLOCATE": null
+  },
+  "backend": "gpu",
+  "baseline_artifact": "/content/jaxoom/experiments/jax_0_11_gpu_calibration_2026-09-08_v2.json",
+  "colab_detected": true,
+  "cuda_driver_version": "13.0     ",
+  "device_kind": [
+    "Tesla T4"
+  ],
+  "devices": [
+    "cuda:0"
+  ],
+  "driver_version": "580.82.07",
+  "gpu_memory_mib": "15360",
+  "gpu_name": "Tesla T4",
+  "jax_version": "0.11.0",
+  "jaxlib_version": "0.11.0",
+  "pinned_repository_commit": "c5925ff7404953c3640756d9b15bea898e60477d",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+  "python_version": "3.13.15",
+  "timestamp_utc": "2026-09-08T08:29:49.025813+00:00"
+}
