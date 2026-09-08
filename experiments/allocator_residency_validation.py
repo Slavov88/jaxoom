@@ -24,6 +24,9 @@ CONFIGS = [
     ("mlp", {"batch": 256, "width": 8192, "depth": 4}, "float32", (0.35, 0.45, 0.55)),
     ("training", {"batch": 256, "width": 8192}, "float32", (0.35, 0.45, 0.55)),
     ("transformer", {"sequence": 2048, "width": 2048, "heads": 8}, "float32", (0.35, 0.45, 0.55)),
+    ("mlp", {"batch": 256, "width": 12288, "depth": 4}, "float32", (0.45, 0.55, 0.65, 0.75)),
+    ("training", {"batch": 256, "width": 12288}, "float32", (0.45, 0.55, 0.65, 0.75)),
+    ("transformer", {"sequence": 4096, "width": 2048, "heads": 8}, "float32", (0.55, 0.65, 0.75, 0.85)),
 ]
 
 
@@ -45,7 +48,10 @@ def run_probe(family: str, config: dict[str, Any], dtype: str, fraction: float, 
     env["XLA_CLIENT_MEM_FRACTION"] = str(fraction)
     env.pop("XLA_PYTHON_CLIENT_MEM_FRACTION", None)
     env["XLA_PYTHON_CLIENT_PREALLOCATE"] = "false"
-    completed = subprocess.run(command, capture_output=True, text=True, timeout=timeout, env=env)
+    try:
+        completed = subprocess.run(command, capture_output=True, text=True, timeout=timeout, env=env)
+    except subprocess.TimeoutExpired as exc:
+        return {"family": family, "configuration": config, "dtype": dtype, "configured_fraction": fraction, "status": "OTHER_FAILURE", "failure_stage": "timeout", "message": str(exc)}
     for line in reversed(completed.stdout.splitlines()):
         try:
             row = json.loads(line)
