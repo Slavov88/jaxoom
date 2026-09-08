@@ -85,6 +85,24 @@ unknown family is `UNCALIBRATED`. The range is compiler-accounted memory, not a
 runtime peak interval, and the risk level is not an OOM probability. See
 `experiments/version_calibration_report_2026-09-08.md` for the validation.
 
+## Compiler-confirmed donation advice
+
+`analyze_donation()` compares ordinary and donated compilations for positional
+arguments. It recommends only candidates with positive compiler-accounted
+savings:
+
+```python
+donation = jaxoom.analyze_donation(train_step, params, state, batch)
+donation.print()
+```
+
+The result is backend- and JAX-version-specific compiler evidence. It does not
+prove caller safety. Donated argument buffers must not be used after the
+compiled call. A positional pytree argument is treated as one donation
+argument, and eligible leaves inside it may be donated together. See
+`experiments/donation_validation_report_2026-09-08.md` for the focused
+validation.
+
 ## Preliminary GPU validation
 
 The repository includes a backend-portable calibration harness and an isolated

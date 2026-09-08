@@ -91,3 +91,17 @@ in all 46 cases and achieved 87.0% frozen upper coverage. Temporary-memory
 drift was concentrated in small autodiff cases, so calibration remains
 exact-tested rather than generalized across NVIDIA GPUs. The diagnostic
 analysis is in `device_temporary_drift_report_2026-09-08.md`.
+
+Donation validation uses the public advisor over a focused pure-JAX workload
+matrix:
+
+```bash
+PYTHONPATH=src python experiments/donation_validation.py \
+  --output-prefix experiments/donation_validation_YYYY-MM-DD
+```
+
+The recorded JAX 0.6.2 CPU, JAX 0.11.0 CPU, and RTX 3050 JAX 0.11.0 runs are
+summarized in `donation_validation_summary_2026-09-08.json` and
+`donation_validation_report_2026-09-08.md`. The result measures compiler-
+accounted before and after memory only. It does not establish that the caller
+can safely reuse a donated input.
