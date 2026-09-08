@@ -52,8 +52,10 @@ PYTHONPATH=src python experiments/jax_version_validation.py \
 
 The recorded comparison is in `jax_version_validation_report_2026-09-08.md`.
 It found identical structural estimates in all 14 matched cases, with
-compiler-accounting drift in selected workloads. Existing calibration constants
-were retained because the JAX 0.11.0 transfer evidence is limited.
+compiler-accounting drift in selected workloads. The expanded version-aware
+calibration study is recorded in `version_calibration_report_2026-09-08.md`.
+It keeps raw datasets under `experiments/` and stores only quantile parameters
+and provenance in the package.
 
 Calibration evaluation:
 

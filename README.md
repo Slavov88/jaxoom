@@ -77,11 +77,13 @@ assessment = jaxoom.assess(static, memory_limit="16 GiB")
 assessment.print()
 ```
 
-The built-in summaries use empirical compiler/static ratios from recorded JAX
-0.6.x CPU and NVIDIA CUDA runs. They return a plausible compiler-accounted
-range and a qualitative budget risk level. The range is not a runtime peak
-interval and the risk level is not an OOM probability. Calibration applicability
-is reported when the backend or JAX version differs from the stored evidence.
+The built-in summaries use empirical compiler/static ratios from recorded
+JAX 0.6.2 CPU, JAX 0.6.2 CUDA, and JAX 0.11.0 CUDA runs. Selection is
+version-aware. An exact tested version is marked `EXACT_TESTED`, an untested
+minor release in a tested family is marked `VERSION_FAMILY_MATCH`, and an
+unknown family is `UNCALIBRATED`. The range is compiler-accounted memory, not a
+runtime peak interval, and the risk level is not an OOM probability. See
+`experiments/version_calibration_report_2026-09-08.md` for the validation.
 
 ## Preliminary GPU validation
 
