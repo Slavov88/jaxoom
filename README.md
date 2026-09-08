@@ -107,6 +107,12 @@ memory trace. Full measurements and interpretation are in
 `experiments/runtime_validation_report_2026-09-07_v3.md` and
 `experiments/execution_memory_validation_report_2026-09-08.md`.
 
+A matched JAX 0.11.0 matrix was also run on a Google Colab Tesla T4. Static
+estimates matched the RTX 3050 in 46/46 cases. The frozen compiler upper bound
+covered 40/46 T4 cases, with misses concentrated in autodiff and selected
+convolution workloads. This result remains exact-tested evidence rather than a
+claim of general NVIDIA GPU calibration.
+
 ## Limitations
 
 - Sequential JAXPR logical liveness is not exact XLA or runtime memory.

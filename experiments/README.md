@@ -83,3 +83,11 @@ The harness records paired compiler categories, frozen-calibration coverage,
 device metadata, family/dtype/size summaries, and a Markdown report. It
 refuses to label the RTX 3050 as an independent device. Use
 `--allow-same-device-smoke` only for a local harness smoke test.
+
+The returned Tesla T4 validation is recorded in
+`device_transfer_validation_t4_2026-09-08.json` and summarized in
+`device_transfer_validation_report_2026-09-08.md`. It matched static estimates
+in all 46 cases and achieved 87.0% frozen upper coverage. Temporary-memory
+drift was concentrated in small autodiff cases, so calibration remains
+exact-tested rather than generalized across NVIDIA GPUs. The diagnostic
+analysis is in `device_temporary_drift_report_2026-09-08.md`.
