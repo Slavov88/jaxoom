@@ -1,0 +1,54 @@
+{
+  "status": "REDUCED",
+  "environment": {
+    "device": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "physical_total_bytes": 4294967296,
+    "driver_version": "566.07",
+    "jax_version": "0.11.0",
+    "jaxlib_version": "0.11.0",
+    "allocator_environment": "XLA_PYTHON_CLIENT_PREALLOCATE=false"
+  },
+  "legacy_formula": "driver_free + max(pool_bytes - bytes_in_use, 0), with optional fraction cap",
+  "corrected_formula": "min(driver_free, allocator_limit) when both are known, minus unchanged bounded reserve",
+  "allocator_limit_bytes": 3221225472,
+  "raw_capacity_probe": {
+    "256_mib_chunks_fit_through": 3072,
+    "first_failed_total_mib": 3328
+  },
+  "strongest_false_fit": {
+    "configuration": "attention batch=1 heads=8 sequence=4096 head_dim=64 float32",
+    "legacy_budget_bytes": 3855823667,
+    "corrected_budget_bytes": 3006477107,
+    "legacy_upper_headroom_bytes": 2050989708,
+    "corrected_upper_headroom_bytes": 1201643148,
+    "legacy_risk": "LOW",
+    "corrected_risk": "LOW",
+    "actual": "EXECUTION_OOM"
+  },
+  "frozen_18_trial_replay": {
+    "legacy_false_fits": 4,
+    "corrected_false_fits": 4,
+    "legacy_false_compile_fits": 0,
+    "corrected_false_compile_fits": 0,
+    "legacy_false_execution_fits": 4,
+    "corrected_false_execution_fits": 4,
+    "legacy_false_ooms": 0,
+    "corrected_false_ooms": 0,
+    "legacy_low_fit": 7,
+    "corrected_low_fit": 7,
+    "legacy_low_oom": 4,
+    "corrected_low_oom": 4
+  },
+  "occupancy_regression": [
+    {"external_pressure_mib": 256, "corrected_budget_bytes": 3006477107, "risk": "MODERATE"},
+    {"external_pressure_mib": 768, "corrected_budget_bytes": 2642621235, "risk": "MODERATE"},
+    {"external_pressure_mib": 1280, "corrected_budget_bytes": 1568879411, "risk": "LIKELY EXCEEDS BUDGET"}
+  ],
+  "allocator_modes": {
+    "XLA_PYTHON_CLIENT_PREALLOCATE=false": "EXECUTION_OOM",
+    "XLA_PYTHON_CLIENT_ALLOCATOR=platform": "FIT",
+    "default_preallocation": "INITIALIZATION_FAILURE"
+  },
+  "production_change": "corrected allocator-aware capacity accounting; calibration and risk thresholds unchanged",
+  "remaining_issue": "execution allocator residency or fragmentation remains outside the pre-compilation demand interval"
+}
