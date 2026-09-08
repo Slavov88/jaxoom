@@ -101,6 +101,8 @@ class CalibrationSummary:
     coverage_target: float
     applicability: str
     limitations: tuple[str, ...]
+    tested_jax_versions: tuple[str, ...] = ()
+    tested_jaxlib_versions: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)

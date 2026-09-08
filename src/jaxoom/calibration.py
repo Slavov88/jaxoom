@@ -1,6 +1,8 @@
 """Inspectably calibrated compiler-memory intervals and budget risk."""
 from __future__ import annotations
 
+import re
+
 import jax
 
 from .analysis.tensor_size import parse_memory_limit
@@ -20,19 +22,20 @@ def calibrate(
     The structural report remains unchanged. Built-in summaries are selected by
     backend and are limited to the recorded JAX 0.6.x CPU/CUDA datasets.
     """
-    selected = summary or _select_summary(backend or jax.default_backend())
+    version = jax_version or jax.__version__
+    selected = summary or _select_summary(backend or jax.default_backend(), version)
     if selected is None:
         return _fallback_interval(
             report,
-            "no built-in calibration is available for this backend",
+            f"no validated calibration is available for backend {backend or jax.default_backend()} and JAX {version}",
         )
 
-    version = jax_version or jax.__version__
     limitations = list(selected.limitations)
-    applicability = selected.applicability
-    if not version.startswith(selected.jax_version_family + "."):
-        applicability = f"limited: calibration uses JAX {selected.jax_version_family}.x, running {version}"
-        limitations.append("JAX version family differs from the calibration dataset.")
+    applicability = _applicability(selected, version)
+    if applicability == "VERSION_FAMILY_MATCH":
+        limitations.append(
+            f"calibration family {selected.jax_version_family}.x was tested on {', '.join(selected.tested_jax_versions) or 'unspecified versions'}"
+        )
 
     static = report.estimated_peak_bytes
     if static == 0:
@@ -72,7 +75,7 @@ def assess(
     if limit is None:
         raise ValueError("memory_limit is required for risk assessment")
     interval = calibrate(report, backend=backend, jax_version=jax_version, summary=summary)
-    calibrated = interval.dataset_version is not None
+    calibrated = interval.dataset_version is not None and interval.applicability != "UNCALIBRATED"
     if not calibrated:
         risk = (
             MemoryRiskLevel.LIKELY_EXCEEDS_BUDGET
@@ -103,8 +106,26 @@ def assess(
     )
 
 
-def _select_summary(backend: str) -> CalibrationSummary | None:
-    return next((item for item in CALIBRATIONS if item.backend == backend), None)
+def _version_family(version: str) -> str | None:
+    match = re.match(r"^(\d+\.\d+)(?:\.|$)", version)
+    return match.group(1) if match else None
+
+
+def _select_summary(backend: str, version: str) -> CalibrationSummary | None:
+    candidates = [item for item in CALIBRATIONS if item.backend == backend]
+    for item in candidates:
+        if version in item.tested_jax_versions:
+            return item
+    family = _version_family(version)
+    return next((item for item in candidates if item.jax_version_family == family), None)
+
+
+def _applicability(summary: CalibrationSummary, version: str) -> str:
+    if version in summary.tested_jax_versions:
+        return "EXACT_TESTED"
+    if _version_family(version) == summary.jax_version_family:
+        return "VERSION_FAMILY_MATCH"
+    return "UNCALIBRATED"
 
 
 def _fallback_interval(report: MemoryReport, reason: str) -> MemoryInterval:
@@ -117,6 +138,6 @@ def _fallback_interval(report: MemoryReport, reason: str) -> MemoryInterval:
         calibration_scope="none",
         dataset_version=None,
         sample_count=None,
-        applicability="unavailable",
+        applicability="UNCALIBRATED",
         limitations=(reason, "compiler-accounted calibration is unavailable"),
     )
