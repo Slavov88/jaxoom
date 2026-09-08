@@ -1,0 +1,27 @@
+{
+  "dataset": "21 fresh probes plus historical 18-trial benchmark",
+  "models": {
+    "additive_allocator_overhead": {
+      "reason": "same identifiability limitation",
+      "status": "NOT EVALUATED FOR SHIPMENT"
+    },
+    "existing_compiler_upper": {
+      "fresh_false_fits": 2,
+      "fresh_false_ooms": 0
+    },
+    "global_allocator_ratio": {
+      "reason": "only one useful OOM/FIT threshold and insufficient independent threshold labels",
+      "status": "NOT EVALUATED FOR SHIPMENT"
+    },
+    "primitive_aware": {
+      "reason": "insufficient family thresholds",
+      "status": "NOT EVALUATED FOR SHIPMENT"
+    },
+    "two_part_model": {
+      "reason": "no held-out threshold set",
+      "status": "NOT EVALUATED FOR SHIPMENT"
+    }
+  },
+  "production_decision": "KEEP EXPERIMENTAL",
+  "status": "INSUFFICIENT EVIDENCE"
+}

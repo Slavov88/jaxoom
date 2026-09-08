@@ -14,10 +14,12 @@ Primary environment:
 - BFC-style allocator
 - `XLA_PYTHON_CLIENT_PREALLOCATE=false`
 
-The fresh fraction-probe set contained 21 trials across attention, MLP,
-training, and transformer workloads. It was combined analytically with the
-historical 18-trial OOM benchmark, giving 39 recorded configurations, but the
-historical rows are not treated as pristine held-out data.
+The fresh fraction-probe set contained 21 trials across seven workload
+configurations from attention, MLP, training, and transformer workloads. It was
+combined analytically with the historical 18-trial OOM benchmark, giving 39
+recorded rows, but the historical rows are not treated as pristine held-out
+data. An attempted expansion to width-12288 MLP/training cases timed out in a
+fresh subprocess and was not included as successful threshold evidence.
 
 Fresh outcomes:
 
@@ -105,6 +107,13 @@ allocation.
 The platform allocator remains a diagnostic control only. It FIT the attention
 4096 case where BFC-style allocation failed. Its JAX allocator statistics were
 not available and its rows are excluded from the primary BFC dataset.
+
+## Holdout evaluation
+
+A genuine 70/30 or family-holdout evaluation was not run. The available fresh
+set contains only one useful nearby OOM/FIT threshold, so fitting and reporting
+held-out model performance would be misleading. The holdout artifact records
+this as `NOT RUN`.
 
 ## Historical 18-trial benchmark
 

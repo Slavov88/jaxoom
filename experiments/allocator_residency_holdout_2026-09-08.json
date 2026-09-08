@@ -1,0 +1,6 @@
+{
+  "fresh_probe_count": 21,
+  "historical_benchmark_count": 18,
+  "reason": "The expanded threshold matrix did not produce enough independent labels for a genuine 70/30 or family-holdout evaluation. No production model was fit or selected.",
+  "status": "NOT RUN"
+}
