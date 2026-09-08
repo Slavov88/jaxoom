@@ -116,6 +116,12 @@ rather than an exact runtime peak. CPU and unsupported accelerator snapshots
 return unavailable capacity fields instead of pretending that system RAM is GPU
 VRAM.
 
+A small RTX 3050/JAX 0.11.0 boundary study covered 18 isolated trials, including
+controlled external occupancy. It found 7 FIT, 1 COMPILE_OOM, and 10
+EXECUTION_OOM outcomes. This device-specific result is diagnostic evidence, not
+a general OOM accuracy claim. See
+`experiments/oom_boundary_validation_report_2026-09-08.md`.
+
 ## Compiler-confirmed donation advice
 
 `analyze_donation()` compares ordinary and donated compilations for positional

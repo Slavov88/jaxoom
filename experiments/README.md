@@ -84,6 +84,22 @@ device metadata, family/dtype/size summaries, and a Markdown report. It
 refuses to label the RTX 3050 as an independent device. Use
 `--allow-same-device-smoke` only for a local harness smoke test.
 
+The OOM boundary harness runs each target trial in a fresh subprocess and
+keeps intrinsic and controlled-contention tracks separate:
+
+```bash
+XLA_PYTHON_CLIENT_PREALLOCATE=false PYTHONPATH=src:experiments \
+  python experiments/oom_boundary_validation.py \
+  --output experiments/oom_boundary_validation_YYYY-MM-DD.json
+```
+
+The RTX 3050/JAX 0.11.0 run on 2026-09-08 recorded 18 trials: 7 FIT,
+1 COMPILE_OOM, and 10 EXECUTION_OOM. Four were false fits under the frozen
+upper-bound rule, all execution OOMs. The report deliberately does not turn
+this small, single-device dataset into a general accuracy claim. Raw trials,
+summary, reserve sensitivity, and snapshot-race measurements are stored under
+`oom_boundary_*_2026-09-08.*`.
+
 The returned Tesla T4 validation is recorded in
 `device_transfer_validation_t4_2026-09-08.json` and summarized in
 `device_transfer_validation_report_2026-09-08.md`. It matched static estimates
