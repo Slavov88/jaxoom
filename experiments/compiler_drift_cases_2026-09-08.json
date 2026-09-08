@@ -1,0 +1,259 @@
+{
+  "cases": [
+    {
+      "case_id": "matmul-1024x4096x1024-float32",
+      "configuration": {
+        "k": 4096,
+        "m": 1024,
+        "n": 1024
+      },
+      "control_reason": "covered dot-general control",
+      "dtype": "float32",
+      "family": "matmul",
+      "frozen_upper": 62951699,
+      "role": "control",
+      "rtx3050_compiler_accounted": 37748736,
+      "rtx3050_temp": 0,
+      "static_bytes": 37748736,
+      "t4_compiler_accounted": 41943296,
+      "t4_temp": 4194560
+    },
+    {
+      "case_id": "mlp-b256-w2048-d2-float32",
+      "configuration": {
+        "batch": 256,
+        "depth": 2,
+        "width": 2048
+      },
+      "control_reason": "covered nearby compiler control",
+      "dtype": "float32",
+      "family": "mlp",
+      "frozen_upper": 48962433,
+      "role": "control",
+      "rtx3050_compiler_accounted": 30408704,
+      "rtx3050_temp": 2097152,
+      "static_bytes": 29360128,
+      "t4_compiler_accounted": 36700672,
+      "t4_temp": 8389120
+    },
+    {
+      "case_id": "attention-b1-h8-s512-d64-float32",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 512
+      },
+      "control_reason": "covered non-autodiff control",
+      "dtype": "float32",
+      "family": "attention",
+      "frozen_upper": 29754514,
+      "role": "control",
+      "rtx3050_compiler_accounted": 18874368,
+      "rtx3050_temp": 16777216,
+      "static_bytes": 17842176,
+      "t4_compiler_accounted": 18907408,
+      "t4_temp": 16810256
+    },
+    {
+      "case_id": "convolution-128x128x16x32-float32",
+      "configuration": {
+        "channels": 16,
+        "features": 32,
+        "height": 128,
+        "width": 128
+      },
+      "control_reason": null,
+      "dtype": "float32",
+      "family": "convolution",
+      "frozen_upper": 5276713,
+      "role": "miss",
+      "rtx3050_compiler_accounted": 5280000,
+      "rtx3050_temp": 2115840,
+      "static_bytes": 3164160,
+      "t4_compiler_accounted": 5331456,
+      "t4_temp": 2167296
+    },
+    {
+      "case_id": "convolution-256x256x32x64-float32",
+      "configuration": {
+        "channels": 32,
+        "features": 64,
+        "height": 256,
+        "width": 256
+      },
+      "control_reason": null,
+      "dtype": "float32",
+      "family": "convolution",
+      "frozen_upper": 42090752,
+      "role": "miss",
+      "rtx3050_compiler_accounted": 42090752,
+      "rtx3050_temp": 16851200,
+      "static_bytes": 25239552,
+      "t4_compiler_accounted": 42295808,
+      "t4_temp": 17056256
+    },
+    {
+      "case_id": "autodiff-b128-w256-float32",
+      "configuration": {
+        "batch": 128,
+        "width": 256
+      },
+      "control_reason": null,
+      "dtype": "float32",
+      "family": "autodiff",
+      "frozen_upper": 1311500,
+      "role": "miss",
+      "rtx3050_compiler_accounted": 1310740,
+      "rtx3050_temp": 655360,
+      "static_bytes": 786436,
+      "t4_compiler_accounted": 4981284,
+      "t4_temp": 4325904
+    },
+    {
+      "case_id": "autodiff-b256-w512-float32",
+      "configuration": {
+        "batch": 256,
+        "width": 512
+      },
+      "control_reason": null,
+      "dtype": "float32",
+      "family": "autodiff",
+      "frozen_upper": 5245982,
+      "role": "miss",
+      "rtx3050_compiler_accounted": 3145748,
+      "rtx3050_temp": 524288,
+      "static_bytes": 3145732,
+      "t4_compiler_accounted": 7340580,
+      "t4_temp": 4719120
+    },
+    {
+      "case_id": "training-b512-w1024-float32",
+      "configuration": {
+        "batch": 512,
+        "width": 1024
+      },
+      "control_reason": "covered training control",
+      "dtype": "float32",
+      "family": "training",
+      "frozen_upper": 31489518,
+      "role": "control",
+      "rtx3050_compiler_accounted": 18886716,
+      "rtx3050_temp": 3145744,
+      "static_bytes": 18882564,
+      "t4_compiler_accounted": 22033980,
+      "t4_temp": 6293008
+    },
+    {
+      "case_id": "mlp-b256-w2048-d2-float16",
+      "configuration": {
+        "batch": 256,
+        "depth": 2,
+        "width": 2048
+      },
+      "control_reason": "covered nearby compiler control",
+      "dtype": "float16",
+      "family": "mlp",
+      "frozen_upper": 24481216,
+      "role": "control",
+      "rtx3050_compiler_accounted": 15204352,
+      "rtx3050_temp": 1048576,
+      "static_bytes": 14680064,
+      "t4_compiler_accounted": 20447744,
+      "t4_temp": 6291968
+    },
+    {
+      "case_id": "attention-b1-h8-s512-d64-float16",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 512
+      },
+      "control_reason": "covered non-autodiff dtype control",
+      "dtype": "float16",
+      "family": "attention",
+      "frozen_upper": 21885552,
+      "role": "control",
+      "rtx3050_compiler_accounted": 9437184,
+      "rtx3050_temp": 8388608,
+      "static_bytes": 13123584,
+      "t4_compiler_accounted": 9962000,
+      "t4_temp": 8913424
+    },
+    {
+      "case_id": "convolution-128x128x16x32-float16",
+      "configuration": {
+        "channels": 16,
+        "features": 32,
+        "height": 128,
+        "width": 128
+      },
+      "control_reason": "same shape as float32 miss, dtype control",
+      "dtype": "float16",
+      "family": "convolution",
+      "frozen_upper": 2638357,
+      "role": "control",
+      "rtx3050_compiler_accounted": 1591552,
+      "rtx3050_temp": 9472,
+      "static_bytes": 1582080,
+      "t4_compiler_accounted": 1591552,
+      "t4_temp": 9472
+    },
+    {
+      "case_id": "convolution-256x256x32x64-float16",
+      "configuration": {
+        "channels": 32,
+        "features": 64,
+        "height": 256,
+        "width": 256
+      },
+      "control_reason": "same shape as float32 miss, dtype control",
+      "dtype": "float16",
+      "family": "convolution",
+      "frozen_upper": 21045376,
+      "role": "control",
+      "rtx3050_compiler_accounted": 12656896,
+      "rtx3050_temp": 37120,
+      "static_bytes": 12619776,
+      "t4_compiler_accounted": 12656896,
+      "t4_temp": 37120
+    },
+    {
+      "case_id": "autodiff-b128-w256-float16",
+      "configuration": {
+        "batch": 128,
+        "width": 256
+      },
+      "control_reason": null,
+      "dtype": "float16",
+      "family": "autodiff",
+      "frozen_upper": 765041,
+      "role": "miss",
+      "rtx3050_compiler_accounted": 917538,
+      "rtx3050_temp": 589840,
+      "static_bytes": 458754,
+      "t4_compiler_accounted": 4588066,
+      "t4_temp": 4260368
+    },
+    {
+      "case_id": "autodiff-b256-w512-float16",
+      "configuration": {
+        "batch": 256,
+        "width": 512
+      },
+      "control_reason": null,
+      "dtype": "float16",
+      "family": "autodiff",
+      "frozen_upper": 3060155,
+      "role": "miss",
+      "rtx3050_compiler_accounted": 2621474,
+      "rtx3050_temp": 1310736,
+      "static_bytes": 1835010,
+      "t4_compiler_accounted": 5767714,
+      "t4_temp": 4456976
+    }
+  ],
+  "source_artifact": "device_transfer_validation_t4_2026-09-08.json",
+  "status": "COMPUTATIONALLY VERIFIED"
+}

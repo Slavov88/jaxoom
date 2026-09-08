@@ -9,3 +9,4 @@ build/
 dist/
 *.prof
 .DS_Store
+experiments/_compiler_dumps/

@@ -1,0 +1,3495 @@
+{
+  "capture_status": "COMPLETE",
+  "cases": [
+    {
+      "case_id": "matmul-1024x4096x1024-float32",
+      "compiled_hlo": {
+        "compiled_text_available": true,
+        "convolution_count": 0,
+        "copy_count": 0,
+        "custom_call_count": 0,
+        "dot_count": 1,
+        "fusion_count": 7,
+        "instruction_count": 2,
+        "line_count": 38,
+        "text_length": 2320,
+        "text_sha256": "b413c9eb444bf9a2b596bf8768d028726e3754a4e21c1ee072758178ec2092fb",
+        "transpose_count": 0
+      },
+      "configuration": {
+        "k": 4096,
+        "m": 1024,
+        "n": 1024
+      },
+      "dtype": "float32",
+      "family": "matmul",
+      "jaxpr": {
+        "equation_count": 1,
+        "input_aval_summaries": [
+          "float32[1024,4096]",
+          "float32[4096,1024]"
+        ],
+        "nested_jaxpr_count": 0,
+        "output_aval_summaries": [
+          "float32[1024,1024]"
+        ],
+        "primitive_histogram": {
+          "dot_general": 1
+        },
+        "text_sha256": "409bac8a312654a319285c9b1b2daf9f95969618e31ab763d93bfab3fed24cc0"
+      },
+      "lowered_ir": {
+        "hlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 9,
+          "operation_histogram": {},
+          "text_length": 324,
+          "text_sha256": "1225e249e1e99a4132a9b0f78c1b6cd6ee392966dfac1235dc09dbe0636b96b3"
+        },
+        "stablehlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 7,
+          "operation_histogram": {
+            "dot_general": 1,
+            "num_partitions": 1,
+            "num_replicas": 1
+          },
+          "text_length": 461,
+          "text_sha256": "fcfbfd77fc83b8e93a4add31b496377575aeaa5d90cc6fe4ae44ccb39a8a05db"
+        }
+      },
+      "memory_analysis": {
+        "accounted_bytes": 37748736,
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 33554432,
+        "output_size_in_bytes": 4194304,
+        "temp_size_in_bytes": 0
+      },
+      "reproduction": {
+        "accounted_matches": true,
+        "expected_accounted_bytes": 37748736,
+        "expected_temp_bytes": 0,
+        "temp_matches": true
+      },
+      "status": "OK"
+    },
+    {
+      "case_id": "mlp-b256-w2048-d2-float32",
+      "compiled_hlo": {
+        "compiled_text_available": true,
+        "convolution_count": 0,
+        "copy_count": 0,
+        "custom_call_count": 0,
+        "dot_count": 2,
+        "fusion_count": 15,
+        "instruction_count": 3,
+        "line_count": 51,
+        "text_length": 3864,
+        "text_sha256": "b24817cd60dbb37ddc97572467768abf1fd2461e3d9301d9128acf40e4ed10c0",
+        "transpose_count": 0
+      },
+      "configuration": {
+        "batch": 256,
+        "depth": 2,
+        "width": 2048
+      },
+      "dtype": "float32",
+      "family": "mlp",
+      "jaxpr": {
+        "equation_count": 3,
+        "input_aval_summaries": [
+          "float32[256,2048]",
+          "float32[2048,2048]",
+          "float32[2048,1024]"
+        ],
+        "nested_jaxpr_count": 0,
+        "output_aval_summaries": [
+          "float32[256,1024]"
+        ],
+        "primitive_histogram": {
+          "dot_general": 2,
+          "tanh": 1
+        },
+        "text_sha256": "bf2aaf98c8f8b23773209077d5c0706d597f0ab9581e9ba6683c33cc27b2b6db"
+      },
+      "lowered_ir": {
+        "hlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 12,
+          "operation_histogram": {},
+          "text_length": 569,
+          "text_sha256": "2d827c3b6a80fa381cf664d1297445fcdc43d28a598dbdcd62dbf3ddb3997a99"
+        },
+        "stablehlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 9,
+          "operation_histogram": {
+            "dot_general": 2,
+            "num_partitions": 1,
+            "num_replicas": 1,
+            "tanh": 1
+          },
+          "text_length": 706,
+          "text_sha256": "29c6f714a2f9b680dc4a2465e35650cfae3ee24251f903d07bf647de9119292a"
+        }
+      },
+      "memory_analysis": {
+        "accounted_bytes": 30408704,
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 27262976,
+        "output_size_in_bytes": 1048576,
+        "temp_size_in_bytes": 2097152
+      },
+      "reproduction": {
+        "accounted_matches": true,
+        "expected_accounted_bytes": 30408704,
+        "expected_temp_bytes": 2097152,
+        "temp_matches": true
+      },
+      "status": "OK"
+    },
+    {
+      "case_id": "attention-b1-h8-s512-d64-float32",
+      "compiled_hlo": {
+        "compiled_text_available": true,
+        "convolution_count": 0,
+        "copy_count": 0,
+        "custom_call_count": 0,
+        "dot_count": 2,
+        "fusion_count": 19,
+        "instruction_count": 6,
+        "line_count": 85,
+        "text_length": 7079,
+        "text_sha256": "866085d126a8baba4c6fd32e07ddf68279375ab2a87d5e99a386296719ec444f",
+        "transpose_count": 11
+      },
+      "configuration": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 512
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "jaxpr": {
+        "equation_count": 16,
+        "input_aval_summaries": [
+          "float32[1,512,512]"
+        ],
+        "nested_jaxpr_count": 0,
+        "output_aval_summaries": [
+          "float32[1,512,512]"
+        ],
+        "primitive_histogram": {
+          "broadcast_in_dim": 2,
+          "div": 2,
+          "dot_general": 2,
+          "exp": 1,
+          "max": 1,
+          "reduce_max": 1,
+          "reduce_sum": 1,
+          "reshape": 2,
+          "sqrt": 1,
+          "stop_gradient": 1,
+          "sub": 1,
+          "transpose": 1
+        },
+        "text_sha256": "da6575da8af83cda9ac89c550388d71244723135bc908026d1b8bbb99f49beed"
+      },
+      "lowered_ir": {
+        "hlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 45,
+          "operation_histogram": {},
+          "text_length": 2299,
+          "text_sha256": "201156c99bf6e9637efa4ee9f5045dde40f44e9fa58230c1b5d5fc0bef434a2c"
+        },
+        "stablehlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 29,
+          "operation_histogram": {
+            "add": 1,
+            "broadcast_in_dim": 6,
+            "constant": 4,
+            "divide": 2,
+            "dot_general": 2,
+            "exponential": 1,
+            "maximum": 2,
+            "num_partitions": 1,
+            "num_replicas": 1,
+            "reduce": 2,
+            "reshape": 2,
+            "sqrt": 1,
+            "subtract": 1,
+            "transpose": 1
+          },
+          "text_length": 2490,
+          "text_sha256": "e61915d102a5af93f1cf5334837ec27984db56d3d045fce5ac0b51c367a9ac0a"
+        }
+      },
+      "memory_analysis": {
+        "accounted_bytes": 18874368,
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 1048576,
+        "output_size_in_bytes": 1048576,
+        "temp_size_in_bytes": 16777216
+      },
+      "reproduction": {
+        "accounted_matches": true,
+        "expected_accounted_bytes": 18874368,
+        "expected_temp_bytes": 16777216,
+        "temp_matches": true
+      },
+      "status": "OK"
+    },
+    {
+      "case_id": "convolution-128x128x16x32-float32",
+      "compiled_hlo": {
+        "compiled_text_available": true,
+        "convolution_count": 1,
+        "copy_count": 0,
+        "custom_call_count": 2,
+        "dot_count": 0,
+        "fusion_count": 5,
+        "instruction_count": 4,
+        "line_count": 51,
+        "text_length": 3647,
+        "text_sha256": "ce18ed8417af3b308b28e0cae12f279a8a73880042d97b79dbca09e01270376b",
+        "transpose_count": 17
+      },
+      "configuration": {
+        "channels": 16,
+        "features": 32,
+        "height": 128,
+        "width": 128
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "jaxpr": {
+        "equation_count": 1,
+        "input_aval_summaries": [
+          "float32[1,128,128,16]",
+          "float32[3,3,16,32]"
+        ],
+        "nested_jaxpr_count": 0,
+        "output_aval_summaries": [
+          "float32[1,128,128,32]"
+        ],
+        "primitive_histogram": {
+          "conv_general_dilated": 1
+        },
+        "text_sha256": "98e3b02733e8cb86126c9c4db57e932eab6360a0f65e114353fc4e9b25ebc57d"
+      },
+      "lowered_ir": {
+        "hlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 9,
+          "operation_histogram": {},
+          "text_length": 389,
+          "text_sha256": "6c402bf64b8d18c047fdfd0da7808b34810394956fe992a0df6cf985b58f3dcf"
+        },
+        "stablehlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 7,
+          "operation_histogram": {
+            "convolution": 1,
+            "num_partitions": 1,
+            "num_replicas": 1
+          },
+          "text_length": 728,
+          "text_sha256": "a77e899cdefce0ea674356ea4baf1acf8092abaadb0e56176f8b9987ee9d14ad"
+        }
+      },
+      "memory_analysis": {
+        "accounted_bytes": 5280000,
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 1067008,
+        "output_size_in_bytes": 2097152,
+        "temp_size_in_bytes": 2115840
+      },
+      "reproduction": {
+        "accounted_matches": true,
+        "expected_accounted_bytes": 5280000,
+        "expected_temp_bytes": 2115840,
+        "temp_matches": true
+      },
+      "status": "OK"
+    },
+    {
+      "case_id": "convolution-256x256x32x64-float32",
+      "compiled_hlo": {
+        "compiled_text_available": true,
+        "convolution_count": 1,
+        "copy_count": 0,
+        "custom_call_count": 2,
+        "dot_count": 0,
+        "fusion_count": 5,
+        "instruction_count": 4,
+        "line_count": 51,
+        "text_length": 3648,
+        "text_sha256": "551b632d5994924116fa785b477105273921aaa26ad267c2c549b159cd4e9e75",
+        "transpose_count": 17
+      },
+      "configuration": {
+        "channels": 32,
+        "features": 64,
+        "height": 256,
+        "width": 256
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "jaxpr": {
+        "equation_count": 1,
+        "input_aval_summaries": [
+          "float32[1,256,256,32]",
+          "float32[3,3,32,64]"
+        ],
+        "nested_jaxpr_count": 0,
+        "output_aval_summaries": [
+          "float32[1,256,256,64]"
+        ],
+        "primitive_histogram": {
+          "conv_general_dilated": 1
+        },
+        "text_sha256": "556c02daaa2e53f0b91f0b19f27e39925a6acf05a3fccd9a639a32bb82919ecc"
+      },
+      "lowered_ir": {
+        "hlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 9,
+          "operation_histogram": {},
+          "text_length": 389,
+          "text_sha256": "9062bd2bc39fed1240886c48eb361c3fb684174671962c0574091e1e31efb4f5"
+        },
+        "stablehlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 7,
+          "operation_histogram": {
+            "convolution": 1,
+            "num_partitions": 1,
+            "num_replicas": 1
+          },
+          "text_length": 728,
+          "text_sha256": "89e3dd85f7cb1d2e3ec3c8c008f77dc0a9bb83229ad5da54a5ff443a3ac3c20e"
+        }
+      },
+      "memory_analysis": {
+        "accounted_bytes": 42090752,
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 8462336,
+        "output_size_in_bytes": 16777216,
+        "temp_size_in_bytes": 16851200
+      },
+      "reproduction": {
+        "accounted_matches": true,
+        "expected_accounted_bytes": 42090752,
+        "expected_temp_bytes": 16851200,
+        "temp_matches": true
+      },
+      "status": "OK"
+    },
+    {
+      "case_id": "autodiff-b128-w256-float32",
+      "compiled_hlo": {
+        "compiled_text_available": true,
+        "convolution_count": 0,
+        "copy_count": 0,
+        "custom_call_count": 0,
+        "dot_count": 2,
+        "fusion_count": 29,
+        "instruction_count": 9,
+        "line_count": 108,
+        "text_length": 8090,
+        "text_sha256": "89c7b9d0e2fe7c0ea638fb5056e807efdd1c5ddfcac8ad5c748c7be665caed03",
+        "transpose_count": 12
+      },
+      "configuration": {
+        "batch": 128,
+        "width": 256
+      },
+      "dtype": "float32",
+      "family": "autodiff",
+      "jaxpr": {
+        "equation_count": 15,
+        "input_aval_summaries": [
+          "float32[128,256]",
+          "float32[256,256]"
+        ],
+        "nested_jaxpr_count": 0,
+        "output_aval_summaries": [
+          "float32[]",
+          "float32[256,256]"
+        ],
+        "primitive_histogram": {
+          "add_any": 1,
+          "broadcast_in_dim": 1,
+          "div": 2,
+          "dot_general": 2,
+          "integer_pow": 1,
+          "mul": 4,
+          "reduce_sum": 1,
+          "sub": 1,
+          "tanh": 1,
+          "transpose": 1
+        },
+        "text_sha256": "fd329d339efb6b82ca6722f3a3568503a61da37b4b8d3dbfcea98fe3884ef2f5"
+      },
+      "lowered_ir": {
+        "hlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 36,
+          "operation_histogram": {},
+          "text_length": 1716,
+          "text_sha256": "1b07c18b4c7e8038b28bfbd9c9f7ecb0358d25c89889810a741959cd6f3b222a"
+        },
+        "stablehlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 29,
+          "operation_histogram": {
+            "add": 2,
+            "broadcast_in_dim": 3,
+            "constant": 6,
+            "divide": 2,
+            "dot_general": 2,
+            "multiply": 5,
+            "num_partitions": 1,
+            "num_replicas": 1,
+            "reduce": 1,
+            "subtract": 1,
+            "tanh": 1,
+            "transpose": 1
+          },
+          "text_length": 2147,
+          "text_sha256": "0d8d298fd61334636c68d7efb824d9bc9e64d97beab15fe6a537f202b3b3ff3b"
+        }
+      },
+      "memory_analysis": {
+        "accounted_bytes": 1310740,
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 393216,
+        "output_size_in_bytes": 262164,
+        "temp_size_in_bytes": 655360
+      },
+      "reproduction": {
+        "accounted_matches": true,
+        "expected_accounted_bytes": 1310740,
+        "expected_temp_bytes": 655360,
+        "temp_matches": true
+      },
+      "status": "OK"
+    },
+    {
+      "case_id": "autodiff-b256-w512-float32",
+      "compiled_hlo": {
+        "compiled_text_available": true,
+        "convolution_count": 0,
+        "copy_count": 0,
+        "custom_call_count": 0,
+        "dot_count": 2,
+        "fusion_count": 29,
+        "instruction_count": 9,
+        "line_count": 108,
+        "text_length": 8094,
+        "text_sha256": "864b440757b282bb4c4a3453cb2050fd657f40ccce6cf18276f2f1cf92927135",
+        "transpose_count": 12
+      },
+      "configuration": {
+        "batch": 256,
+        "width": 512
+      },
+      "dtype": "float32",
+      "family": "autodiff",
+      "jaxpr": {
+        "equation_count": 15,
+        "input_aval_summaries": [
+          "float32[256,512]",
+          "float32[512,512]"
+        ],
+        "nested_jaxpr_count": 0,
+        "output_aval_summaries": [
+          "float32[]",
+          "float32[512,512]"
+        ],
+        "primitive_histogram": {
+          "add_any": 1,
+          "broadcast_in_dim": 1,
+          "div": 2,
+          "dot_general": 2,
+          "integer_pow": 1,
+          "mul": 4,
+          "reduce_sum": 1,
+          "sub": 1,
+          "tanh": 1,
+          "transpose": 1
+        },
+        "text_sha256": "10f24d47952feb45fbfda1b26a20e90c77c8d2af5fb2e806e11e6871eb16879a"
+      },
+      "lowered_ir": {
+        "hlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 36,
+          "operation_histogram": {},
+          "text_length": 1717,
+          "text_sha256": "505c2c6f9e7aa26e76068b65a9e3fb31fe7b1bfdde73b56afbd0a6ea2f23e66f"
+        },
+        "stablehlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 29,
+          "operation_histogram": {
+            "add": 2,
+            "broadcast_in_dim": 3,
+            "constant": 6,
+            "divide": 2,
+            "dot_general": 2,
+            "multiply": 5,
+            "num_partitions": 1,
+            "num_replicas": 1,
+            "reduce": 1,
+            "subtract": 1,
+            "tanh": 1,
+            "transpose": 1
+          },
+          "text_length": 2147,
+          "text_sha256": "700227d25fa853186fd08222a91c8d8c90e5aad23d3271da41cde1eff6518433"
+        }
+      },
+      "memory_analysis": {
+        "accounted_bytes": 3145748,
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 1572864,
+        "output_size_in_bytes": 1048596,
+        "temp_size_in_bytes": 524288
+      },
+      "reproduction": {
+        "accounted_matches": true,
+        "expected_accounted_bytes": 3145748,
+        "expected_temp_bytes": 524288,
+        "temp_matches": true
+      },
+      "status": "OK"
+    },
+    {
+      "case_id": "training-b512-w1024-float32",
+      "compiled_hlo": {
+        "compiled_text_available": true,
+        "convolution_count": 0,
+        "copy_count": 0,
+        "custom_call_count": 0,
+        "dot_count": 5,
+        "fusion_count": 67,
+        "instruction_count": 16,
+        "line_count": 213,
+        "text_length": 18718,
+        "text_sha256": "dd1ead84a849a9fc6af3f464ffe66df1ef6c30485a8ad258f702580b092de7e5",
+        "transpose_count": 33
+      },
+      "configuration": {
+        "batch": 512,
+        "width": 1024
+      },
+      "dtype": "float32",
+      "family": "training",
+      "jaxpr": {
+        "equation_count": 38,
+        "input_aval_summaries": [
+          "float32[512,1024]",
+          "float32[512,512]",
+          "float32[1024,1024]",
+          "float32[1024]",
+          "float32[1024,512]",
+          "float32[512]"
+        ],
+        "nested_jaxpr_count": 0,
+        "output_aval_summaries": [
+          "float32[]",
+          "float32[1024,1024]",
+          "float32[1024]",
+          "float32[1024,512]",
+          "float32[512]"
+        ],
+        "primitive_histogram": {
+          "add": 2,
+          "add_any": 1,
+          "broadcast_in_dim": 3,
+          "div": 2,
+          "dot_general": 5,
+          "integer_pow": 1,
+          "mul": 8,
+          "reduce_sum": 5,
+          "reshape": 2,
+          "sub": 6,
+          "tanh": 1,
+          "transpose": 2
+        },
+        "text_sha256": "bf3ab7b5f59fccfdd4868b5bb213e89afe1447c5dd7ac2bd27bc5839b222a317"
+      },
+      "lowered_ir": {
+        "hlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 101,
+          "operation_histogram": {},
+          "text_length": 5096,
+          "text_sha256": "351189bc6b84c65750e1f79c019a2f04ac5a70a7dbcbb6df3832f5cfb6e64b87"
+        },
+        "stablehlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 66,
+          "operation_histogram": {
+            "add": 8,
+            "broadcast_in_dim": 11,
+            "constant": 14,
+            "divide": 2,
+            "dot_general": 5,
+            "multiply": 9,
+            "num_partitions": 1,
+            "num_replicas": 1,
+            "reduce": 5,
+            "reshape": 2,
+            "subtract": 6,
+            "tanh": 1,
+            "transpose": 2
+          },
+          "text_length": 5818,
+          "text_sha256": "ad6ba41020ad53866d2163ba047d10a9e4757e81514f87869d098d8bd408e336"
+        }
+      },
+      "memory_analysis": {
+        "accounted_bytes": 18886716,
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 9443328,
+        "output_size_in_bytes": 6297644,
+        "temp_size_in_bytes": 3145744
+      },
+      "reproduction": {
+        "accounted_matches": true,
+        "expected_accounted_bytes": 18886716,
+        "expected_temp_bytes": 3145744,
+        "temp_matches": true
+      },
+      "status": "OK"
+    },
+    {
+      "case_id": "mlp-b256-w2048-d2-float16",
+      "compiled_hlo": {
+        "compiled_text_available": true,
+        "convolution_count": 0,
+        "copy_count": 0,
+        "custom_call_count": 0,
+        "dot_count": 2,
+        "fusion_count": 15,
+        "instruction_count": 3,
+        "line_count": 51,
+        "text_length": 3864,
+        "text_sha256": "4e6b775482efdc05e2304453aa41069aa71b8874746bf1cd75448e5a100145d2",
+        "transpose_count": 0
+      },
+      "configuration": {
+        "batch": 256,
+        "depth": 2,
+        "width": 2048
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "jaxpr": {
+        "equation_count": 3,
+        "input_aval_summaries": [
+          "float16[256,2048]",
+          "float16[2048,2048]",
+          "float16[2048,1024]"
+        ],
+        "nested_jaxpr_count": 0,
+        "output_aval_summaries": [
+          "float16[256,1024]"
+        ],
+        "primitive_histogram": {
+          "dot_general": 2,
+          "tanh": 1
+        },
+        "text_sha256": "920080014546478d7199495468f8cbc4933f2655bc7f9b8a5ec7a4b6728b2516"
+      },
+      "lowered_ir": {
+        "hlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 12,
+          "operation_histogram": {},
+          "text_length": 569,
+          "text_sha256": "dde018f75347260837465536698d9be110cf6d91e7731119132bc83552b9765c"
+        },
+        "stablehlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 9,
+          "operation_histogram": {
+            "dot_general": 2,
+            "num_partitions": 1,
+            "num_replicas": 1,
+            "tanh": 1
+          },
+          "text_length": 706,
+          "text_sha256": "7b5bf6ea95046b5a3d98dea49a9392691499a2af4cea4cc90f05ca87c19cd9d3"
+        }
+      },
+      "memory_analysis": {
+        "accounted_bytes": 15204352,
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 13631488,
+        "output_size_in_bytes": 524288,
+        "temp_size_in_bytes": 1048576
+      },
+      "reproduction": {
+        "accounted_matches": true,
+        "expected_accounted_bytes": 15204352,
+        "expected_temp_bytes": 1048576,
+        "temp_matches": true
+      },
+      "status": "OK"
+    },
+    {
+      "case_id": "attention-b1-h8-s512-d64-float16",
+      "compiled_hlo": {
+        "compiled_text_available": true,
+        "convolution_count": 0,
+        "copy_count": 0,
+        "custom_call_count": 0,
+        "dot_count": 2,
+        "fusion_count": 19,
+        "instruction_count": 6,
+        "line_count": 87,
+        "text_length": 7375,
+        "text_sha256": "2d16322fc1475c6a7191839f431e1891051c6e02a73aa24b885bdecc26cf418e",
+        "transpose_count": 11
+      },
+      "configuration": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 512
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "jaxpr": {
+        "equation_count": 18,
+        "input_aval_summaries": [
+          "float16[1,512,512]"
+        ],
+        "nested_jaxpr_count": 0,
+        "output_aval_summaries": [
+          "float16[1,512,512]"
+        ],
+        "primitive_histogram": {
+          "broadcast_in_dim": 2,
+          "convert_element_type": 2,
+          "div": 2,
+          "dot_general": 2,
+          "exp": 1,
+          "max": 1,
+          "reduce_max": 1,
+          "reduce_sum": 1,
+          "reshape": 2,
+          "sqrt": 1,
+          "stop_gradient": 1,
+          "sub": 1,
+          "transpose": 1
+        },
+        "text_sha256": "74479190ecfc03f8022802a170144d6e4c05f5fe84eea104dc69aefebbb5d8cb"
+      },
+      "lowered_ir": {
+        "hlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 47,
+          "operation_histogram": {},
+          "text_length": 2467,
+          "text_sha256": "40dccfaed905c04cf3658629bb07ca1b6cbaedd21ad50fba0f0ae29f33e06549"
+        },
+        "stablehlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 31,
+          "operation_histogram": {
+            "add": 1,
+            "broadcast_in_dim": 6,
+            "constant": 4,
+            "convert": 2,
+            "divide": 2,
+            "dot_general": 2,
+            "exponential": 1,
+            "maximum": 2,
+            "num_partitions": 1,
+            "num_replicas": 1,
+            "reduce": 2,
+            "reshape": 2,
+            "sqrt": 1,
+            "subtract": 1,
+            "transpose": 1
+          },
+          "text_length": 2652,
+          "text_sha256": "83676644c1d2a31a5784d8e05cacdb57566bf6d0e3c705ea1bbb206bdd192c16"
+        }
+      },
+      "memory_analysis": {
+        "accounted_bytes": 9437184,
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 524288,
+        "output_size_in_bytes": 524288,
+        "temp_size_in_bytes": 8388608
+      },
+      "reproduction": {
+        "accounted_matches": true,
+        "expected_accounted_bytes": 9437184,
+        "expected_temp_bytes": 8388608,
+        "temp_matches": true
+      },
+      "status": "OK"
+    },
+    {
+      "case_id": "convolution-128x128x16x32-float16",
+      "compiled_hlo": {
+        "compiled_text_available": true,
+        "convolution_count": 1,
+        "copy_count": 0,
+        "custom_call_count": 2,
+        "dot_count": 0,
+        "fusion_count": 1,
+        "instruction_count": 2,
+        "line_count": 39,
+        "text_length": 2402,
+        "text_sha256": "1d297ed95cf8e0c4aa7798a5077f4a93759197f841b28249a7db2536196f4326",
+        "transpose_count": 6
+      },
+      "configuration": {
+        "channels": 16,
+        "features": 32,
+        "height": 128,
+        "width": 128
+      },
+      "dtype": "float16",
+      "family": "convolution",
+      "jaxpr": {
+        "equation_count": 1,
+        "input_aval_summaries": [
+          "float16[1,128,128,16]",
+          "float16[3,3,16,32]"
+        ],
+        "nested_jaxpr_count": 0,
+        "output_aval_summaries": [
+          "float16[1,128,128,32]"
+        ],
+        "primitive_histogram": {
+          "conv_general_dilated": 1
+        },
+        "text_sha256": "3264948918378e003132ea752127e6ed4c7c002303c5714813a7e958233ce21a"
+      },
+      "lowered_ir": {
+        "hlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 9,
+          "operation_histogram": {},
+          "text_length": 389,
+          "text_sha256": "d1d34eb77f62e2ee71345c96c96bcc7d7ab392426b22a2cbb9b3dbdac75b5f40"
+        },
+        "stablehlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 7,
+          "operation_histogram": {
+            "convolution": 1,
+            "num_partitions": 1,
+            "num_replicas": 1
+          },
+          "text_length": 728,
+          "text_sha256": "e547c8bbf06b9d24f10e26f910ddeebd57ad131f0bf93becfcd5d5053955be48"
+        }
+      },
+      "memory_analysis": {
+        "accounted_bytes": 1591552,
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 533504,
+        "output_size_in_bytes": 1048576,
+        "temp_size_in_bytes": 9472
+      },
+      "reproduction": {
+        "accounted_matches": true,
+        "expected_accounted_bytes": 1591552,
+        "expected_temp_bytes": 9472,
+        "temp_matches": true
+      },
+      "status": "OK"
+    },
+    {
+      "case_id": "convolution-256x256x32x64-float16",
+      "compiled_hlo": {
+        "compiled_text_available": true,
+        "convolution_count": 1,
+        "copy_count": 0,
+        "custom_call_count": 2,
+        "dot_count": 0,
+        "fusion_count": 1,
+        "instruction_count": 2,
+        "line_count": 39,
+        "text_length": 2402,
+        "text_sha256": "367b2bdaee21cd82efeae8d1e2328be30d8c28c2ae4c96a7eb849912219082b9",
+        "transpose_count": 6
+      },
+      "configuration": {
+        "channels": 32,
+        "features": 64,
+        "height": 256,
+        "width": 256
+      },
+      "dtype": "float16",
+      "family": "convolution",
+      "jaxpr": {
+        "equation_count": 1,
+        "input_aval_summaries": [
+          "float16[1,256,256,32]",
+          "float16[3,3,32,64]"
+        ],
+        "nested_jaxpr_count": 0,
+        "output_aval_summaries": [
+          "float16[1,256,256,64]"
+        ],
+        "primitive_histogram": {
+          "conv_general_dilated": 1
+        },
+        "text_sha256": "f9228871926ee620a33180bfa6c94e2c95b01af75b152bd72ea7749bd7959c1f"
+      },
+      "lowered_ir": {
+        "hlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 9,
+          "operation_histogram": {},
+          "text_length": 389,
+          "text_sha256": "e39a7adfe103802e626a0815bbbe76cacb84fbd67ddf996a588834725a940d0b"
+        },
+        "stablehlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 7,
+          "operation_histogram": {
+            "convolution": 1,
+            "num_partitions": 1,
+            "num_replicas": 1
+          },
+          "text_length": 728,
+          "text_sha256": "67f0fc3858050204892706a2ad25946cac02d9b1ce0d96e9e9f6ebbcb75afaae"
+        }
+      },
+      "memory_analysis": {
+        "accounted_bytes": 12656896,
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 4231168,
+        "output_size_in_bytes": 8388608,
+        "temp_size_in_bytes": 37120
+      },
+      "reproduction": {
+        "accounted_matches": true,
+        "expected_accounted_bytes": 12656896,
+        "expected_temp_bytes": 37120,
+        "temp_matches": true
+      },
+      "status": "OK"
+    },
+    {
+      "case_id": "autodiff-b128-w256-float16",
+      "compiled_hlo": {
+        "compiled_text_available": true,
+        "convolution_count": 0,
+        "copy_count": 0,
+        "custom_call_count": 0,
+        "dot_count": 2,
+        "fusion_count": 26,
+        "instruction_count": 8,
+        "line_count": 106,
+        "text_length": 8570,
+        "text_sha256": "05d4f0acfed14f903385ce213949ceebc9a791e594f948d94b65e573e08a17db",
+        "transpose_count": 11
+      },
+      "configuration": {
+        "batch": 128,
+        "width": 256
+      },
+      "dtype": "float16",
+      "family": "autodiff",
+      "jaxpr": {
+        "equation_count": 18,
+        "input_aval_summaries": [
+          "float16[128,256]",
+          "float16[256,256]"
+        ],
+        "nested_jaxpr_count": 0,
+        "output_aval_summaries": [
+          "float16[]",
+          "float16[256,256]"
+        ],
+        "primitive_histogram": {
+          "add_any": 1,
+          "broadcast_in_dim": 1,
+          "convert_element_type": 3,
+          "div": 2,
+          "dot_general": 2,
+          "integer_pow": 1,
+          "mul": 4,
+          "reduce_sum": 1,
+          "sub": 1,
+          "tanh": 1,
+          "transpose": 1
+        },
+        "text_sha256": "27af3be42adcdff5125eacd044a34c40576fb0cb328c5bed032a19f9ff96eb69"
+      },
+      "lowered_ir": {
+        "hlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 38,
+          "operation_histogram": {},
+          "text_length": 1870,
+          "text_sha256": "d710617dfdce52370af49b8548edf43fe7ac8e63b4dcee77a9c19fcb96703114"
+        },
+        "stablehlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 32,
+          "operation_histogram": {
+            "add": 2,
+            "broadcast_in_dim": 3,
+            "constant": 6,
+            "convert": 3,
+            "divide": 2,
+            "dot_general": 2,
+            "multiply": 5,
+            "num_partitions": 1,
+            "num_replicas": 1,
+            "reduce": 1,
+            "subtract": 1,
+            "tanh": 1,
+            "transpose": 1
+          },
+          "text_length": 2368,
+          "text_sha256": "c666a8d7782fa9d14fe37839d144018fb837d49fcb95d3b5922cd7cc36ba6872"
+        }
+      },
+      "memory_analysis": {
+        "accounted_bytes": 917538,
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 196608,
+        "output_size_in_bytes": 131090,
+        "temp_size_in_bytes": 589840
+      },
+      "reproduction": {
+        "accounted_matches": true,
+        "expected_accounted_bytes": 917538,
+        "expected_temp_bytes": 589840,
+        "temp_matches": true
+      },
+      "status": "OK"
+    },
+    {
+      "case_id": "autodiff-b256-w512-float16",
+      "compiled_hlo": {
+        "compiled_text_available": true,
+        "convolution_count": 0,
+        "copy_count": 0,
+        "custom_call_count": 0,
+        "dot_count": 2,
+        "fusion_count": 26,
+        "instruction_count": 8,
+        "line_count": 106,
+        "text_length": 8559,
+        "text_sha256": "8e4882d47678b22d7ce02e86d0f8769459624a4dc14520f1e984b88626501c7e",
+        "transpose_count": 10
+      },
+      "configuration": {
+        "batch": 256,
+        "width": 512
+      },
+      "dtype": "float16",
+      "family": "autodiff",
+      "jaxpr": {
+        "equation_count": 18,
+        "input_aval_summaries": [
+          "float16[256,512]",
+          "float16[512,512]"
+        ],
+        "nested_jaxpr_count": 0,
+        "output_aval_summaries": [
+          "float16[]",
+          "float16[512,512]"
+        ],
+        "primitive_histogram": {
+          "add_any": 1,
+          "broadcast_in_dim": 1,
+          "convert_element_type": 3,
+          "div": 2,
+          "dot_general": 2,
+          "integer_pow": 1,
+          "mul": 4,
+          "reduce_sum": 1,
+          "sub": 1,
+          "tanh": 1,
+          "transpose": 1
+        },
+        "text_sha256": "00b58f52a1d833395e88d965e3bdd3152875deaeb9fa91306fbd7ab0e5b6757f"
+      },
+      "lowered_ir": {
+        "hlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 39,
+          "operation_histogram": {},
+          "text_length": 1910,
+          "text_sha256": "c6020ca97c59834c7daa2d4ceed21e37064aacce5617f9b4ca3d9375d08e671c"
+        },
+        "stablehlo": {
+          "available": true,
+          "custom_call_count": 0,
+          "line_count": 32,
+          "operation_histogram": {
+            "add": 2,
+            "broadcast_in_dim": 3,
+            "constant": 6,
+            "convert": 3,
+            "divide": 2,
+            "dot_general": 2,
+            "multiply": 5,
+            "num_partitions": 1,
+            "num_replicas": 1,
+            "reduce": 1,
+            "subtract": 1,
+            "tanh": 1,
+            "transpose": 1
+          },
+          "text_length": 2368,
+          "text_sha256": "38987585cc9ace9f12d77b16579331494e0ae588b46109a357db2ee24d93fad3"
+        }
+      },
+      "memory_analysis": {
+        "accounted_bytes": 2621474,
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 786432,
+        "output_size_in_bytes": 524306,
+        "temp_size_in_bytes": 1310736
+      },
+      "reproduction": {
+        "accounted_matches": true,
+        "expected_accounted_bytes": 2621474,
+        "expected_temp_bytes": 1310736,
+        "temp_matches": true
+      },
+      "status": "OK"
+    }
+  ],
+  "dump_inventory": {
+    "buffer_assignment_file_count": 28,
+    "file_count": 444,
+    "files": [
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda/compile_options.textproto",
+        "size_bytes": 14251
+      },
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda/module.mlir",
+        "size_bytes": 1257
+      },
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda/topology.textproto",
+        "size_bytes": 1229
+      },
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda.0.ir-no-opt.ll",
+        "size_bytes": 193
+      },
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda.1.ir-with-opt.ll",
+        "size_bytes": 193
+      },
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda.1.ptx",
+        "size_bytes": 0
+      },
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda.2.ir-no-opt.ll",
+        "size_bytes": 83980
+      },
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda.3.ir-with-opt.ll",
+        "size_bytes": 50598
+      },
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda.3.ptx",
+        "size_bytes": 19907
+      },
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda.after_spmd_partitioner.txt",
+        "size_bytes": 1362
+      },
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda.autotune_results.pbtxt",
+        "size_bytes": 11
+      },
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda.before_config_assignment.txt",
+        "size_bytes": 1981
+      },
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda.before_optimizations.txt",
+        "size_bytes": 1362
+      },
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda.config.pbtxt",
+        "size_bytes": 14533
+      },
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda.debug_options",
+        "size_bytes": 283
+      },
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda.gpu_target_config.pbtxt",
+        "size_bytes": 1522
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0000.jit__lambda.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+        "size_bytes": 1057
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0000.jit__lambda.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+        "size_bytes": 478
+      },
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda.sm_8.6_gpu_after_optimizations-live-range.txt",
+        "size_bytes": 875
+      },
+      {
+        "kind": "memory_usage_report",
+        "parser_status": "UNKNOWN",
+        "path": "module_0000.jit__lambda.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+        "size_bytes": 717,
+        "text_sha256": "c44acc879f69f53c8a65ee2ba3ed1067c5f512184cb91216ea8bbdbbf081d1e8",
+        "total_bytes": null
+      },
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda.sm_8.6_gpu_after_optimizations.txt",
+        "size_bytes": 2320
+      },
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda.thunk_metadata.txt",
+        "size_bytes": 136
+      },
+      {
+        "kind": "other",
+        "path": "module_0000.jit__lambda.thunk_sequence.txt",
+        "size_bytes": 127
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn/compile_options.textproto",
+        "size_bytes": 14305
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn/module.mlir",
+        "size_bytes": 1966
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn/topology.textproto",
+        "size_bytes": 1229
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.0.ir-no-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.1.ir-with-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.1.ptx",
+        "size_bytes": 0
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.2.ir-no-opt.ll",
+        "size_bytes": 84167
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.3.ir-no-opt.ll",
+        "size_bytes": 83977
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.4.ir-with-opt.ll",
+        "size_bytes": 56361
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.4.ptx",
+        "size_bytes": 22977
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.5.ir-with-opt.ll",
+        "size_bytes": 50556
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.5.ptx",
+        "size_bytes": 19915
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.after_spmd_partitioner.txt",
+        "size_bytes": 2037
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.autotune_results.pbtxt",
+        "size_bytes": 11
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.before_config_assignment.txt",
+        "size_bytes": 3286
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.before_optimizations.txt",
+        "size_bytes": 2037
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.config.pbtxt",
+        "size_bytes": 14865
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.debug_options",
+        "size_bytes": 283
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.gpu_target_config.pbtxt",
+        "size_bytes": 1522
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0004.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+        "size_bytes": 2032
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0004.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+        "size_bytes": 770
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+        "size_bytes": 1263
+      },
+      {
+        "kind": "memory_usage_report",
+        "parser_status": "UNKNOWN",
+        "path": "module_0004.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+        "size_bytes": 1148,
+        "text_sha256": "fb214c298baeb9239dcb28109afe511714ff38efe9a2396c704af48e94918b91",
+        "total_bytes": null
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+        "size_bytes": 3864
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.thunk_metadata.txt",
+        "size_bytes": 272
+      },
+      {
+        "kind": "other",
+        "path": "module_0004.jit_fn.thunk_sequence.txt",
+        "size_bytes": 282
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn/compile_options.textproto",
+        "size_bytes": 14196
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn/module.mlir",
+        "size_bytes": 5049
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn/topology.textproto",
+        "size_bytes": 1229
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.0.ir-no-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.1.ir-no-opt.ll",
+        "size_bytes": 27914
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.2.ir-no-opt.ll",
+        "size_bytes": 40397
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.3.ir-no-opt.ll",
+        "size_bytes": 91866
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.4.ir-with-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.4.ptx",
+        "size_bytes": 0
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.5.ir-with-opt.ll",
+        "size_bytes": 34051
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.5.ptx",
+        "size_bytes": 14926
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.6.ir-with-opt.ll",
+        "size_bytes": 27068
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.6.ptx",
+        "size_bytes": 10839
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.7.ir-with-opt.ll",
+        "size_bytes": 51673
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.7.ptx",
+        "size_bytes": 21137
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.after_spmd_partitioner.txt",
+        "size_bytes": 5368
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.autotune_results.pbtxt",
+        "size_bytes": 11
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.before_config_assignment.txt",
+        "size_bytes": 6617
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.before_optimizations.txt",
+        "size_bytes": 5368
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.config.pbtxt",
+        "size_bytes": 14342
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.debug_options",
+        "size_bytes": 255
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.gpu_target_config.pbtxt",
+        "size_bytes": 1522
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0010.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+        "size_bytes": 3488
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0010.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+        "size_bytes": 1078
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+        "size_bytes": 991
+      },
+      {
+        "kind": "memory_usage_report",
+        "parser_status": "UNKNOWN",
+        "path": "module_0010.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+        "size_bytes": 2042,
+        "text_sha256": "d079157ae609053af2198ddfd7307c9c5fb32d10ab6d38be216ee67e35ed6779",
+        "total_bytes": null
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+        "size_bytes": 7202
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.thunk_metadata.txt",
+        "size_bytes": 383
+      },
+      {
+        "kind": "other",
+        "path": "module_0010.jit_fn.thunk_sequence.txt",
+        "size_bytes": 398
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn/compile_options.textproto",
+        "size_bytes": 14251
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn/module.mlir",
+        "size_bytes": 1394
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn/topology.textproto",
+        "size_bytes": 1229
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.0.ir-no-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.1.ir-no-opt.ll",
+        "size_bytes": 5727
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.2.ir-no-opt.ll",
+        "size_bytes": 6708
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.3.ir-with-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.3.ptx",
+        "size_bytes": 0
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.4.ir-with-opt.ll",
+        "size_bytes": 6091
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.4.ptx",
+        "size_bytes": 2328
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.5.ir-no-opt.ll",
+        "size_bytes": 23480
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.6.ir-with-opt.ll",
+        "size_bytes": 5447
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.6.ptx",
+        "size_bytes": 2145
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.7.ir-with-opt.ll",
+        "size_bytes": 12039
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.7.ptx",
+        "size_bytes": 5738
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.after_spmd_partitioner.txt",
+        "size_bytes": 1443
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.autotune_results.pbtxt",
+        "size_bytes": 11
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.before_config_assignment.txt",
+        "size_bytes": 2136
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.before_optimizations.txt",
+        "size_bytes": 1443
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.config.pbtxt",
+        "size_bytes": 14971
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.debug_options",
+        "size_bytes": 283
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.gpu_target_config.pbtxt",
+        "size_bytes": 1522
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0018.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+        "size_bytes": 3500
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0018.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+        "size_bytes": 952
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+        "size_bytes": 1278
+      },
+      {
+        "kind": "memory_usage_report",
+        "parser_status": "UNKNOWN",
+        "path": "module_0018.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+        "size_bytes": 1135,
+        "text_sha256": "bcdc2d5d5f5dd22019222cd38a632cbc945470e5516c27dd071b4cc0bfa13c52",
+        "total_bytes": null
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+        "size_bytes": 3544
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.thunk_metadata.txt",
+        "size_bytes": 510
+      },
+      {
+        "kind": "other",
+        "path": "module_0018.jit_fn.thunk_sequence.txt",
+        "size_bytes": 457
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn/compile_options.textproto",
+        "size_bytes": 14251
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn/module.mlir",
+        "size_bytes": 1394
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn/topology.textproto",
+        "size_bytes": 1229
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.0.ir-no-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.1.ir-no-opt.ll",
+        "size_bytes": 6722
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.2.ir-no-opt.ll",
+        "size_bytes": 7107
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.3.ir-with-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.3.ptx",
+        "size_bytes": 0
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.4.ir-with-opt.ll",
+        "size_bytes": 6094
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.4.ptx",
+        "size_bytes": 2318
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.5.ir-with-opt.ll",
+        "size_bytes": 6518
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.5.ptx",
+        "size_bytes": 2672
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.6.ir-no-opt.ll",
+        "size_bytes": 42185
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.7.ir-with-opt.ll",
+        "size_bytes": 19597
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.7.ptx",
+        "size_bytes": 8910
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.after_spmd_partitioner.txt",
+        "size_bytes": 1443
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.autotune_results.pbtxt",
+        "size_bytes": 11
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.before_config_assignment.txt",
+        "size_bytes": 2136
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.before_optimizations.txt",
+        "size_bytes": 1443
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.config.pbtxt",
+        "size_bytes": 14971
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.debug_options",
+        "size_bytes": 283
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.gpu_target_config.pbtxt",
+        "size_bytes": 1522
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0020.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+        "size_bytes": 3503
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0020.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+        "size_bytes": 957
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+        "size_bytes": 1292
+      },
+      {
+        "kind": "memory_usage_report",
+        "parser_status": "UNKNOWN",
+        "path": "module_0020.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+        "size_bytes": 1137,
+        "text_sha256": "9aaa99bd75fb9b44ed91b721c965c44d5b18211bfd055084d4ea4c64dd2649a9",
+        "total_bytes": null
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+        "size_bytes": 3545
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.thunk_metadata.txt",
+        "size_bytes": 510
+      },
+      {
+        "kind": "other",
+        "path": "module_0020.jit_fn.thunk_sequence.txt",
+        "size_bytes": 459
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn/compile_options.textproto",
+        "size_bytes": 14300
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn/module.mlir",
+        "size_bytes": 4462
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn/topology.textproto",
+        "size_bytes": 1229
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.0.ir-no-opt.ll",
+        "size_bytes": 2997
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.1.ir-no-opt.ll",
+        "size_bytes": 629
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.10.ir-with-opt.ll",
+        "size_bytes": 9821
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.10.ptx",
+        "size_bytes": 5231
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.11.ir-no-opt.ll",
+        "size_bytes": 95507
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.12.ir-with-opt.ll",
+        "size_bytes": 26967
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.12.ptx",
+        "size_bytes": 11065
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.13.ir-with-opt.ll",
+        "size_bytes": 47218
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.13.ptx",
+        "size_bytes": 19809
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.2.ir-no-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.3.ir-no-opt.ll",
+        "size_bytes": 18480
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.4.ir-no-opt.ll",
+        "size_bytes": 9487
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.5.ir-no-opt.ll",
+        "size_bytes": 44326
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.6.ir-with-opt.ll",
+        "size_bytes": 2951
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.6.ptx",
+        "size_bytes": 1286
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.7.ir-with-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.7.ptx",
+        "size_bytes": 0
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.8.ir-with-opt.ll",
+        "size_bytes": 945
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.8.ptx",
+        "size_bytes": 525
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.9.ir-with-opt.ll",
+        "size_bytes": 18592
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.9.ptx",
+        "size_bytes": 10028
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.after_spmd_partitioner.txt",
+        "size_bytes": 4423
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.autotune_results.pbtxt",
+        "size_bytes": 11
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.before_config_assignment.txt",
+        "size_bytes": 7509
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.before_optimizations.txt",
+        "size_bytes": 4423
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.config.pbtxt",
+        "size_bytes": 14761
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.debug_options",
+        "size_bytes": 255
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.gpu_target_config.pbtxt",
+        "size_bytes": 1522
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0022.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+        "size_bytes": 4040
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0022.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+        "size_bytes": 1527
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+        "size_bytes": 1535
+      },
+      {
+        "kind": "memory_usage_report",
+        "parser_status": "UNKNOWN",
+        "path": "module_0022.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+        "size_bytes": 2695,
+        "text_sha256": "8a602fb55376127349dc7be369d59fe75fc1b9884a7fb836c209fba1b443df9b",
+        "total_bytes": null
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+        "size_bytes": 8090
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.thunk_metadata.txt",
+        "size_bytes": 951
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.thunk_sequence.txt",
+        "size_bytes": 781
+      },
+      {
+        "kind": "other",
+        "path": "module_0022.jit_fn.thunk_sequence_after_thunk_passes.txt",
+        "size_bytes": 842
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn/compile_options.textproto",
+        "size_bytes": 14300
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn/module.mlir",
+        "size_bytes": 4462
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn/topology.textproto",
+        "size_bytes": 1229
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.0.ir-no-opt.ll",
+        "size_bytes": 3766
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.1.ir-no-opt.ll",
+        "size_bytes": 629
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.10.ir-with-opt.ll",
+        "size_bytes": 945
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.10.ptx",
+        "size_bytes": 525
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.11.ir-no-opt.ll",
+        "size_bytes": 96950
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.12.ir-with-opt.ll",
+        "size_bytes": 50622
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.12.ptx",
+        "size_bytes": 20051
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.13.ir-with-opt.ll",
+        "size_bytes": 49459
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.13.ptx",
+        "size_bytes": 20010
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.2.ir-no-opt.ll",
+        "size_bytes": 16026
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.3.ir-no-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.4.ir-no-opt.ll",
+        "size_bytes": 7950
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.5.ir-with-opt.ll",
+        "size_bytes": 16552
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.5.ptx",
+        "size_bytes": 9292
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.6.ir-with-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.6.ptx",
+        "size_bytes": 0
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.7.ir-with-opt.ll",
+        "size_bytes": 8892
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.7.ptx",
+        "size_bytes": 4811
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.8.ir-with-opt.ll",
+        "size_bytes": 3544
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.8.ptx",
+        "size_bytes": 1506
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.9.ir-no-opt.ll",
+        "size_bytes": 84129
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.after_spmd_partitioner.txt",
+        "size_bytes": 4424
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.autotune_results.pbtxt",
+        "size_bytes": 11
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.before_config_assignment.txt",
+        "size_bytes": 7512
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.before_optimizations.txt",
+        "size_bytes": 4424
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.config.pbtxt",
+        "size_bytes": 14761
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.debug_options",
+        "size_bytes": 255
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.gpu_target_config.pbtxt",
+        "size_bytes": 1522
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0028.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+        "size_bytes": 4040
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0028.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+        "size_bytes": 1528
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+        "size_bytes": 1560
+      },
+      {
+        "kind": "memory_usage_report",
+        "parser_status": "UNKNOWN",
+        "path": "module_0028.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+        "size_bytes": 2633,
+        "text_sha256": "590552f7fe71c8407e64c61e4a5dfee51fe4c2a3689fd41cb6e78c735699659e",
+        "total_bytes": null
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+        "size_bytes": 8094
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.thunk_metadata.txt",
+        "size_bytes": 951
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.thunk_sequence.txt",
+        "size_bytes": 783
+      },
+      {
+        "kind": "other",
+        "path": "module_0028.jit_fn.thunk_sequence_after_thunk_passes.txt",
+        "size_bytes": 844
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn/compile_options.textproto",
+        "size_bytes": 14666
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn/module.mlir",
+        "size_bytes": 11286
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn/topology.textproto",
+        "size_bytes": 1229
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.0.ir-no-opt.ll",
+        "size_bytes": 1494
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.1.ir-no-opt.ll",
+        "size_bytes": 629
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.10.ir-with-opt.ll",
+        "size_bytes": 4732
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.10.ptx",
+        "size_bytes": 1950
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.11.ir-no-opt.ll",
+        "size_bytes": 14563
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.12.ir-with-opt.ll",
+        "size_bytes": 10926
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.12.ptx",
+        "size_bytes": 5348
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.13.ir-with-opt.ll",
+        "size_bytes": 2064
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.13.ptx",
+        "size_bytes": 911
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.14.ir-no-opt.ll",
+        "size_bytes": 84974
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.15.ir-no-opt.ll",
+        "size_bytes": 87510
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.16.ir-with-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.16.ptx",
+        "size_bytes": 0
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.17.ir-no-opt.ll",
+        "size_bytes": 78226
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.18.ir-no-opt.ll",
+        "size_bytes": 99753
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.19.ir-no-opt.ll",
+        "size_bytes": 103187
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.2.ir-no-opt.ll",
+        "size_bytes": 5302
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.20.ir-with-opt.ll",
+        "size_bytes": 13905
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.20.ptx",
+        "size_bytes": 7299
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.21.ir-with-opt.ll",
+        "size_bytes": 57075
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.21.ptx",
+        "size_bytes": 23493
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.22.ir-with-opt.ll",
+        "size_bytes": 52535
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.22.ptx",
+        "size_bytes": 21099
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.23.ir-with-opt.ll",
+        "size_bytes": 52566
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.23.ptx",
+        "size_bytes": 21968
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.24.ir-with-opt.ll",
+        "size_bytes": 51128
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.24.ptx",
+        "size_bytes": 20891
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.25.ir-with-opt.ll",
+        "size_bytes": 54332
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.25.ptx",
+        "size_bytes": 24063
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.3.ir-no-opt.ll",
+        "size_bytes": 12829
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.4.ir-no-opt.ll",
+        "size_bytes": 6301
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.5.ir-no-opt.ll",
+        "size_bytes": 1494
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.6.ir-no-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.7.ir-with-opt.ll",
+        "size_bytes": 2066
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.7.ptx",
+        "size_bytes": 925
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.8.ir-with-opt.ll",
+        "size_bytes": 5872
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.8.ptx",
+        "size_bytes": 2778
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.9.ir-with-opt.ll",
+        "size_bytes": 945
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.9.ptx",
+        "size_bytes": 525
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.after_spmd_partitioner.txt",
+        "size_bytes": 12385
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.autotune_results.pbtxt",
+        "size_bytes": 11
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.before_config_assignment.txt",
+        "size_bytes": 17101
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.before_optimizations.txt",
+        "size_bytes": 12385
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.config.pbtxt",
+        "size_bytes": 16772
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.debug_options",
+        "size_bytes": 255
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.gpu_target_config.pbtxt",
+        "size_bytes": 1522
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0034.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+        "size_bytes": 9964
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0034.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+        "size_bytes": 3286
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+        "size_bytes": 3805
+      },
+      {
+        "kind": "memory_usage_report",
+        "parser_status": "UNKNOWN",
+        "path": "module_0034.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+        "size_bytes": 4970,
+        "text_sha256": "ae54efe9281e70550a9d9a049d512a51de012b28fd07f6cd3d3ecbabe5cd6fb8",
+        "total_bytes": null
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+        "size_bytes": 18396
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.thunk_metadata.txt",
+        "size_bytes": 1766
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.thunk_sequence.txt",
+        "size_bytes": 1611
+      },
+      {
+        "kind": "other",
+        "path": "module_0034.jit_fn.thunk_sequence_after_thunk_passes.txt",
+        "size_bytes": 1696
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn/compile_options.textproto",
+        "size_bytes": 14305
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn/module.mlir",
+        "size_bytes": 1966
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn/topology.textproto",
+        "size_bytes": 1229
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.0.ir-no-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.1.ir-no-opt.ll",
+        "size_bytes": 56694
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.2.ir-no-opt.ll",
+        "size_bytes": 56940
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.3.ir-with-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.3.ptx",
+        "size_bytes": 0
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.4.ir-with-opt.ll",
+        "size_bytes": 21322
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.4.ptx",
+        "size_bytes": 7827
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.5.ir-with-opt.ll",
+        "size_bytes": 25111
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.5.ptx",
+        "size_bytes": 9521
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.after_spmd_partitioner.txt",
+        "size_bytes": 2037
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.autotune_results.pbtxt",
+        "size_bytes": 11
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.before_config_assignment.txt",
+        "size_bytes": 3286
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.before_optimizations.txt",
+        "size_bytes": 2037
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.config.pbtxt",
+        "size_bytes": 14865
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.debug_options",
+        "size_bytes": 283
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.gpu_target_config.pbtxt",
+        "size_bytes": 1522
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0046.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+        "size_bytes": 2032
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0046.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+        "size_bytes": 766
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+        "size_bytes": 1257
+      },
+      {
+        "kind": "memory_usage_report",
+        "parser_status": "UNKNOWN",
+        "path": "module_0046.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+        "size_bytes": 1148,
+        "text_sha256": "77cbbf2cbd3ae22afa9348c7c069d5313673dc94181c4edaac94557dcb223b4e",
+        "total_bytes": null
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+        "size_bytes": 3864
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.thunk_metadata.txt",
+        "size_bytes": 272
+      },
+      {
+        "kind": "other",
+        "path": "module_0046.jit_fn.thunk_sequence.txt",
+        "size_bytes": 282
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn/compile_options.textproto",
+        "size_bytes": 14196
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn/module.mlir",
+        "size_bytes": 5292
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn/topology.textproto",
+        "size_bytes": 1229
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.0.ir-no-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.1.ir-no-opt.ll",
+        "size_bytes": 21649
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.2.ir-no-opt.ll",
+        "size_bytes": 30846
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.3.ir-no-opt.ll",
+        "size_bytes": 58018
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.4.ir-with-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.4.ptx",
+        "size_bytes": 0
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.5.ir-with-opt.ll",
+        "size_bytes": 20731
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.5.ptx",
+        "size_bytes": 9959
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.6.ir-with-opt.ll",
+        "size_bytes": 12490
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.6.ptx",
+        "size_bytes": 5247
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.7.ir-with-opt.ll",
+        "size_bytes": 22501
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.7.ptx",
+        "size_bytes": 8838
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.after_spmd_partitioner.txt",
+        "size_bytes": 5676
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.autotune_results.pbtxt",
+        "size_bytes": 11
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.before_config_assignment.txt",
+        "size_bytes": 6913
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.before_optimizations.txt",
+        "size_bytes": 5676
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.config.pbtxt",
+        "size_bytes": 14342
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.debug_options",
+        "size_bytes": 255
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.gpu_target_config.pbtxt",
+        "size_bytes": 1522
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0052.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+        "size_bytes": 3486
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0052.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+        "size_bytes": 1073
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+        "size_bytes": 975
+      },
+      {
+        "kind": "memory_usage_report",
+        "parser_status": "UNKNOWN",
+        "path": "module_0052.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+        "size_bytes": 2040,
+        "text_sha256": "6ed5c84ed90897fa16ff5fde55f96efb45e1c9e53d7f0ac665223a6c3acf95a6",
+        "total_bytes": null
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+        "size_bytes": 7498
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.thunk_metadata.txt",
+        "size_bytes": 383
+      },
+      {
+        "kind": "other",
+        "path": "module_0052.jit_fn.thunk_sequence.txt",
+        "size_bytes": 398
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn/compile_options.textproto",
+        "size_bytes": 14251
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn/module.mlir",
+        "size_bytes": 1394
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn/topology.textproto",
+        "size_bytes": 1229
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn.0.ir-no-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn.1.ir-no-opt.ll",
+        "size_bytes": 21968
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn.2.ir-with-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn.2.ptx",
+        "size_bytes": 0
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn.3.ir-with-opt.ll",
+        "size_bytes": 16307
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn.3.ptx",
+        "size_bytes": 9398
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn.after_spmd_partitioner.txt",
+        "size_bytes": 1443
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn.autotune_results.pbtxt",
+        "size_bytes": 11
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn.before_config_assignment.txt",
+        "size_bytes": 2017
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn.before_optimizations.txt",
+        "size_bytes": 1443
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn.config.pbtxt",
+        "size_bytes": 14971
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn.debug_options",
+        "size_bytes": 283
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn.gpu_target_config.pbtxt",
+        "size_bytes": 1522
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0060.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+        "size_bytes": 2513
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0060.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+        "size_bytes": 760
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+        "size_bytes": 1243
+      },
+      {
+        "kind": "memory_usage_report",
+        "parser_status": "UNKNOWN",
+        "path": "module_0060.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+        "size_bytes": 1035,
+        "text_sha256": "7b38d472deddf949c157b7fa767c1100add49a1947591d1e7d8286741e3aa923",
+        "total_bytes": null
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+        "size_bytes": 2402
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn.thunk_metadata.txt",
+        "size_bytes": 250
+      },
+      {
+        "kind": "other",
+        "path": "module_0060.jit_fn.thunk_sequence.txt",
+        "size_bytes": 190
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn/compile_options.textproto",
+        "size_bytes": 14251
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn/module.mlir",
+        "size_bytes": 1394
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn/topology.textproto",
+        "size_bytes": 1229
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn.0.ir-no-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn.1.ir-no-opt.ll",
+        "size_bytes": 18474
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn.2.ir-with-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn.2.ptx",
+        "size_bytes": 0
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn.3.ir-with-opt.ll",
+        "size_bytes": 17664
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn.3.ptx",
+        "size_bytes": 11470
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn.after_spmd_partitioner.txt",
+        "size_bytes": 1443
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn.autotune_results.pbtxt",
+        "size_bytes": 11
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn.before_config_assignment.txt",
+        "size_bytes": 2017
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn.before_optimizations.txt",
+        "size_bytes": 1443
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn.config.pbtxt",
+        "size_bytes": 14971
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn.debug_options",
+        "size_bytes": 283
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn.gpu_target_config.pbtxt",
+        "size_bytes": 1522
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0062.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+        "size_bytes": 2515
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0062.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+        "size_bytes": 766
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+        "size_bytes": 1260
+      },
+      {
+        "kind": "memory_usage_report",
+        "parser_status": "UNKNOWN",
+        "path": "module_0062.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+        "size_bytes": 1037,
+        "text_sha256": "b223afd3ebf09cefae69b4134062feda42f5b6f36e55c8d87724eef0e653efcd",
+        "total_bytes": null
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+        "size_bytes": 2402
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn.thunk_metadata.txt",
+        "size_bytes": 250
+      },
+      {
+        "kind": "other",
+        "path": "module_0062.jit_fn.thunk_sequence.txt",
+        "size_bytes": 190
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn/compile_options.textproto",
+        "size_bytes": 14300
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn/module.mlir",
+        "size_bytes": 4930
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn/topology.textproto",
+        "size_bytes": 1229
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.0.ir-no-opt.ll",
+        "size_bytes": 751
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.1.ir-no-opt.ll",
+        "size_bytes": 2995
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.10.ir-with-opt.ll",
+        "size_bytes": 14835
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.10.ptx",
+        "size_bytes": 6118
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.11.ir-with-opt.ll",
+        "size_bytes": 19729
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.11.ptx",
+        "size_bytes": 7126
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.2.ir-no-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.3.ir-with-opt.ll",
+        "size_bytes": 1082
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.3.ptx",
+        "size_bytes": 657
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.4.ir-no-opt.ll",
+        "size_bytes": 13403
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.5.ir-with-opt.ll",
+        "size_bytes": 2949
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.5.ptx",
+        "size_bytes": 1274
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.6.ir-with-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.6.ptx",
+        "size_bytes": 0
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.7.ir-no-opt.ll",
+        "size_bytes": 31472
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.8.ir-with-opt.ll",
+        "size_bytes": 22933
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.8.ptx",
+        "size_bytes": 12941
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.9.ir-no-opt.ll",
+        "size_bytes": 55213
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.after_spmd_partitioner.txt",
+        "size_bytes": 4737
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.autotune_results.pbtxt",
+        "size_bytes": 11
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.before_config_assignment.txt",
+        "size_bytes": 7691
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.before_optimizations.txt",
+        "size_bytes": 4737
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.config.pbtxt",
+        "size_bytes": 14761
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.debug_options",
+        "size_bytes": 255
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.gpu_target_config.pbtxt",
+        "size_bytes": 1522
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0064.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+        "size_bytes": 4508
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0064.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+        "size_bytes": 1639
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+        "size_bytes": 1794
+      },
+      {
+        "kind": "memory_usage_report",
+        "parser_status": "UNKNOWN",
+        "path": "module_0064.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+        "size_bytes": 2787,
+        "text_sha256": "ea36f95b576d654c659453470a2d01fec9af7645b2a033aaf429ca925e2b1f7b",
+        "total_bytes": null
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+        "size_bytes": 8272
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.thunk_metadata.txt",
+        "size_bytes": 826
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.thunk_sequence.txt",
+        "size_bytes": 655
+      },
+      {
+        "kind": "other",
+        "path": "module_0064.jit_fn.thunk_sequence_after_thunk_passes.txt",
+        "size_bytes": 712
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn/compile_options.textproto",
+        "size_bytes": 14300
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn/module.mlir",
+        "size_bytes": 4930
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn/topology.textproto",
+        "size_bytes": 1229
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.0.ir-no-opt.ll",
+        "size_bytes": 751
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.1.ir-no-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.10.ir-with-opt.ll",
+        "size_bytes": 33519
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.10.ptx",
+        "size_bytes": 11481
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.11.ir-with-opt.ll",
+        "size_bytes": 34000
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.11.ptx",
+        "size_bytes": 11893
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.2.ir-no-opt.ll",
+        "size_bytes": 3764
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.3.ir-no-opt.ll",
+        "size_bytes": 10964
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.4.ir-with-opt.ll",
+        "size_bytes": 1082
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.4.ptx",
+        "size_bytes": 657
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.5.ir-with-opt.ll",
+        "size_bytes": 3542
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.5.ptx",
+        "size_bytes": 1494
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.6.ir-with-opt.ll",
+        "size_bytes": 183
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.6.ptx",
+        "size_bytes": 0
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.7.ir-with-opt.ll",
+        "size_bytes": 20584
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.7.ptx",
+        "size_bytes": 12133
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.8.ir-no-opt.ll",
+        "size_bytes": 56652
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.9.ir-no-opt.ll",
+        "size_bytes": 56823
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.after_spmd_partitioner.txt",
+        "size_bytes": 4831
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.autotune_results.pbtxt",
+        "size_bytes": 11
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.before_config_assignment.txt",
+        "size_bytes": 7679
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.before_optimizations.txt",
+        "size_bytes": 4831
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.config.pbtxt",
+        "size_bytes": 14761
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.debug_options",
+        "size_bytes": 255
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.gpu_target_config.pbtxt",
+        "size_bytes": 1522
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0070.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment-values.txt",
+        "size_bytes": 4508
+      },
+      {
+        "kind": "buffer_assignment_candidate",
+        "path": "module_0070.jit_fn.sm_8.6_gpu_after_optimizations-buffer-assignment.txt",
+        "size_bytes": 1647
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.sm_8.6_gpu_after_optimizations-live-range.txt",
+        "size_bytes": 1829
+      },
+      {
+        "kind": "memory_usage_report",
+        "parser_status": "UNKNOWN",
+        "path": "module_0070.jit_fn.sm_8.6_gpu_after_optimizations-memory-usage-report.txt",
+        "size_bytes": 2787,
+        "text_sha256": "41ac9ab3d1119380cbc8941da19b7cda8b3e61fd11c1b7090a8e518b2c77358c",
+        "total_bytes": null
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.sm_8.6_gpu_after_optimizations.txt",
+        "size_bytes": 8261
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.thunk_metadata.txt",
+        "size_bytes": 826
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.thunk_sequence.txt",
+        "size_bytes": 656
+      },
+      {
+        "kind": "other",
+        "path": "module_0070.jit_fn.thunk_sequence_after_thunk_passes.txt",
+        "size_bytes": 713
+      }
+    ],
+    "memory_usage_report_count": 14,
+    "root": "experiments/_compiler_dumps/rtx3050_2026-09-08"
+  },
+  "environment": {
+    "allocator_environment": {
+      "TF_GPU_ALLOCATOR": null,
+      "XLA_CLIENT_MEM_FRACTION": null,
+      "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+      "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+      "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+    },
+    "backend": "gpu",
+    "device_kind": [
+      "NVIDIA GeForce RTX 3050 Laptop GPU"
+    ],
+    "devices": [
+      "cuda:0"
+    ],
+    "jax_version": "0.11.0",
+    "jaxlib_version": "0.11.0",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python_version": "3.12.3",
+    "timestamp_utc": "2026-09-08T09:52:56.039663+00:00"
+  },
+  "manifest": "experiments/compiler_drift_cases_2026-09-08.json",
+  "reproduction_status": "MATCHED",
+  "status": "COMPUTATIONALLY VERIFIED"
+}
