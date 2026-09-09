@@ -1,0 +1,98 @@
+{
+  "status": "OBSERVED",
+  "rows": [
+    {
+      "configuration_id": "4d2963f3e1c70c24",
+      "family": "attention",
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 3584
+      },
+      "dtype": "float32",
+      "known_oom_capacity": 1564475392,
+      "known_fit_capacity": 2034237440,
+      "bracket_width_bytes": 469762048
+    },
+    {
+      "configuration_id": "b4147577a0d722ae",
+      "family": "attention",
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 3840
+      },
+      "dtype": "float32",
+      "known_oom_capacity": 2034237440,
+      "known_fit_capacity": 2659188736,
+      "bracket_width_bytes": 624951296
+    },
+    {
+      "configuration_id": "bdb3421b7da45ee4",
+      "family": "attention",
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 4096
+      },
+      "dtype": "float32",
+      "known_oom_capacity": 3128950784,
+      "known_fit_capacity": 3911188480,
+      "bracket_width_bytes": 782237696
+    },
+    {
+      "configuration_id": "a3fdaea2d5ee4dab",
+      "family": "attention",
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 4096
+      },
+      "dtype": "float16",
+      "known_oom_capacity": 1564475392,
+      "known_fit_capacity": 2034237440,
+      "bracket_width_bytes": 469762048
+    },
+    {
+      "configuration_id": "21ed3ee099a0a446",
+      "family": "transformer",
+      "configuration": {
+        "heads": 8,
+        "sequence": 3072,
+        "width": 2048
+      },
+      "dtype": "float32",
+      "known_oom_capacity": 1564475392,
+      "known_fit_capacity": 2034237440,
+      "bracket_width_bytes": 469762048
+    },
+    {
+      "configuration_id": "1d992aa04c602165",
+      "family": "matmul",
+      "configuration": {
+        "batch": 1,
+        "k": 8192,
+        "m": 8192,
+        "n": 8192
+      },
+      "dtype": "float32",
+      "known_oom_capacity": 1564475392,
+      "known_fit_capacity": 2034237440,
+      "bracket_width_bytes": 469762048
+    },
+    {
+      "configuration_id": "6e9bab1c12a484e0",
+      "family": "matmul",
+      "configuration": {
+        "batch": 1,
+        "k": 10240,
+        "m": 10240,
+        "n": 10240
+      },
+      "dtype": "float32",
+      "known_oom_capacity": 2034237440,
+      "known_fit_capacity": 2659188736,
+      "bracket_width_bytes": 624951296
+    }
+  ]
+}

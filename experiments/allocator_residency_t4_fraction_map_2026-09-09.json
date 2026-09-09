@@ -1,0 +1,125 @@
+{
+  "rows": [
+    {
+      "allocator_limit_bytes": 1564475392,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 1564475392,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.1
+    },
+    {
+      "allocator_limit_bytes": 2034237440,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 2034237440,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.13
+    },
+    {
+      "allocator_limit_bytes": 2659188736,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 2659188736,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.17
+    },
+    {
+      "allocator_limit_bytes": 3128950784,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 3128950784,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.2
+    },
+    {
+      "allocator_limit_bytes": 3911188480,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 3911188480,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.25
+    },
+    {
+      "allocator_limit_bytes": 4691329024,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 4691329024,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.3
+    },
+    {
+      "allocator_limit_bytes": 5473566720,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 5473566720,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.35
+    },
+    {
+      "allocator_limit_bytes": 6255804416,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 6255804416,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.4
+    },
+    {
+      "allocator_limit_bytes": 7038042112,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 7038042112,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.45
+    },
+    {
+      "allocator_limit_bytes": 7820279808,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 7820279808,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.5
+    }
+  ],
+  "status": "OBSERVED"
+}

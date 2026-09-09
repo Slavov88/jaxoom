@@ -1,0 +1,107 @@
+{
+  "environment": {
+    "backend": "gpu",
+    "device": "cuda:0",
+    "device_kind": "Tesla T4",
+    "jax_version": "0.11.0",
+    "jaxlib_version": "0.11.0",
+    "pinned_commit": "fe3be15a3ebcfb4fbc5164c14fbfb682c53302c1",
+    "preallocate": false
+  },
+  "paired_metrics": {
+    "count": 5,
+    "median_absolute_threshold_drift_bytes": 295698432,
+    "median_pool_over_threshold": 0.8367507886435331,
+    "median_threshold_ratio": 1.052060737527115,
+    "p90_threshold_ratio": 1.1826252377932784
+  },
+  "paired_rows": [
+    {
+      "configuration_id": "4d2963f3e1c70c24",
+      "dtype": "float32",
+      "family": "attention",
+      "rtx_upper": 2363490304,
+      "t4_over_compiler_upper": 1.4704835005553207,
+      "t4_over_structural": 2.452252572534613,
+      "t4_pool_over_threshold": 1.0,
+      "t4_post_compile_pool_median": 2191523840,
+      "t4_threshold_fit_pool_bytes": 2034237440,
+      "t4_upper": 2034237440,
+      "threshold_ratio": 0.8606921029281278
+    },
+    {
+      "configuration_id": "b4147577a0d722ae",
+      "dtype": "float32",
+      "family": "attention",
+      "rtx_upper": 2363490304,
+      "t4_over_compiler_upper": 1.6754886672678617,
+      "t4_over_structural": 2.7941295459436195,
+      "t4_pool_over_threshold": 0.8367507886435331,
+      "t4_post_compile_pool_median": 2225078272.0,
+      "t4_threshold_fit_pool_bytes": 2225078272,
+      "t4_upper": 2659188736,
+      "threshold_ratio": 1.1251109139307898
+    },
+    {
+      "configuration_id": "bdb3421b7da45ee4",
+      "dtype": "float32",
+      "family": "attention",
+      "rtx_upper": 3307208704,
+      "t4_over_compiler_upper": 2.16706277078644,
+      "t4_over_structural": 3.6139033547293207,
+      "t4_pool_over_threshold": 0.5689008042895443,
+      "t4_post_compile_pool_median": 2191523840,
+      "t4_threshold_fit_pool_bytes": 2225078272,
+      "t4_upper": 3911188480,
+      "threshold_ratio": 1.1826252377932784
+    },
+    {
+      "configuration_id": "a3fdaea2d5ee4dab",
+      "dtype": "float16",
+      "family": "attention",
+      "rtx_upper": 1933574144,
+      "t4_over_compiler_upper": 1.5066385403615548,
+      "t4_over_structural": 2.5125465436295937,
+      "t4_pool_over_threshold": 0.5639175257731959,
+      "t4_post_compile_pool_median": 1147142144,
+      "t4_threshold_fit_pool_bytes": 1147142144,
+      "t4_upper": 2034237440,
+      "threshold_ratio": 1.052060737527115
+    },
+    {
+      "configuration_id": "1d992aa04c602165",
+      "dtype": "float32",
+      "family": "matmul",
+      "rtx_upper": 1933574144,
+      "t4_over_compiler_upper": 1.514730836610467,
+      "t4_over_structural": 2.5260416666666665,
+      "t4_pool_over_threshold": 1.0,
+      "t4_post_compile_pool_median": 2149580800,
+      "t4_threshold_fit_pool_bytes": 2034237440,
+      "t4_upper": 2034237440,
+      "threshold_ratio": 1.052060737527115
+    }
+  ],
+  "production_decision": "NO CHANGE",
+  "status": "OBSERVED",
+  "summary": {
+    "dtypes": {
+      "float16": 1,
+      "float32": 6
+    },
+    "families": {
+      "attention": 4,
+      "matmul": 2,
+      "transformer": 1
+    },
+    "outcomes": {
+      "COMPILE_OOM": 4,
+      "EXECUTION_OOM": 6,
+      "EXECUTION_TIMEOUT": 4,
+      "FIT": 65
+    },
+    "probe_count": 79,
+    "status": "OBSERVED",
+    "useful_threshold_count": 7
+  }
+}
