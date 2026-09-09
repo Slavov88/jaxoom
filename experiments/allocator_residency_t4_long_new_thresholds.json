@@ -1,0 +1,33 @@
+{
+  "status": "OBSERVED",
+  "rows": [
+    {
+      "configuration_id": "98a93c8c74327b13",
+      "family": "transformer",
+      "configuration": {
+        "heads": 8,
+        "sequence": 3072,
+        "width": 2048
+      },
+      "dtype": "float32",
+      "known_oom_capacity": 1876951040,
+      "known_fit_capacity": 2346713088,
+      "bracket_width_bytes": 469762048
+    },
+    {
+      "configuration_id": "936cef2f5423ca94",
+      "family": "convolution",
+      "configuration": {
+        "batch": 4,
+        "channels": 96,
+        "height": 512,
+        "out_channels": 192,
+        "width": 512
+      },
+      "dtype": "float32",
+      "known_oom_capacity": 627048448,
+      "known_fit_capacity": 5473566720,
+      "bracket_width_bytes": 4846518272
+    }
+  ]
+}

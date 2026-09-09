@@ -1,0 +1,58 @@
+{
+  "dtypes": {
+    "float16": 4,
+    "float32": 7
+  },
+  "duplicate_labels_against_frozen_dataset": 1,
+  "environment": {
+    "backend": "gpu",
+    "device": "cuda:0",
+    "device_kind": "Tesla T4",
+    "jax_version": "0.11.0",
+    "jaxlib_version": "0.11.0",
+    "pinned_commit": "7dbf22056cef25b0d77ecf90b453cfe5cac4cebb",
+    "preallocate": false
+  },
+  "families": {
+    "attention": 5,
+    "convolution": 1,
+    "matmul": 3,
+    "transformer": 2
+  },
+  "long_distinct_new_labels": 1,
+  "long_new_labels": 2,
+  "model_gate": {
+    "met": false,
+    "reason": "fewer than 14 diverse thresholds and no MLP/training/autodiff labels"
+  },
+  "production_decision": "NO CHANGE",
+  "scale_search": {
+    "outcomes": {
+      "COMPILE_OOM": 6,
+      "EXECUTION_OOM": 1,
+      "EXECUTION_TIMEOUT": 13,
+      "FIT": 54
+    },
+    "probe_count": 74,
+    "selected_count": 7,
+    "selected_families": {
+      "autodiff": 3,
+      "convolution": 2,
+      "mlp": 1,
+      "training": 0,
+      "transformer": 1
+    }
+  },
+  "status": "OBSERVED",
+  "threshold_probes": {
+    "outcomes": {
+      "COMPILE_OOM": 2,
+      "EXECUTION_OOM": 3,
+      "EXECUTION_TIMEOUT": 1,
+      "FIT": 8,
+      "OTHER_FAILURE": 4
+    },
+    "probe_count": 18
+  },
+  "total_distinct_useful_thresholds": 11
+}
