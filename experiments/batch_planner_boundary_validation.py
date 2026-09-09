@@ -75,8 +75,12 @@ def main():
                     if batch is None: continue
                     try:
                         values = factory(batch, concrete=True)
+                        compile_started = time.perf_counter()
                         compiled = jax.jit(fn).lower(*values).compile()
+                        row[label + "_compile_latency_ms"] = (time.perf_counter() - compile_started) * 1000
+                        execute_started = time.perf_counter()
                         jax.tree_util.tree_map(lambda x: x.block_until_ready(), compiled(*values))
+                        row[label + "_execution_latency_ms"] = (time.perf_counter() - execute_started) * 1000
                         row[label + "_actual_outcome"] = "FIT"
                     except Exception as exc:
                         row[label + "_actual_outcome"] = "EXECUTION_OOM" if "out of memory" in str(exc).lower() else "OTHER_FAILURE"

@@ -1,0 +1,2440 @@
+{
+  "device_snapshot": {
+    "backend": "gpu",
+    "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "effective_available_bytes": 1920991232,
+    "timestamp": "2026-09-09T19:28:32.999888+00:00"
+  },
+  "environment": {
+    "backend": "gpu",
+    "device": "cuda:0",
+    "jax_version": "0.11.0"
+  },
+  "rows": [
+    {
+      "budget_bytes": 16777216,
+      "evaluations": 1,
+      "monotonic": true,
+      "next_tested": {
+        "batch_size": 1,
+        "calibrated": true,
+        "central_bytes": 12591104,
+        "memory_limit_bytes": 16777216,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 12591104,
+        "upper_bytes": 20997561
+      },
+      "planner_latency_ms": 5228.820623000502,
+      "recommended_batch_size": null,
+      "status": "NOTHING_FITS",
+      "trials": [
+        {
+          "batch_size": 1,
+          "calibrated": true,
+          "central_bytes": 12591104,
+          "memory_limit_bytes": 16777216,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 12591104,
+          "upper_bytes": 20997561
+        }
+      ],
+      "workload": "mlp"
+    },
+    {
+      "budget_bytes": 33554432,
+      "evaluations": 20,
+      "monotonic": true,
+      "next_actual_outcome": "FIT",
+      "next_compile_latency_ms": 13907.038834993728,
+      "next_execution_latency_ms": 58.80061499919975,
+      "next_tested": {
+        "batch_size": 921,
+        "calibrated": true,
+        "central_bytes": 20127744,
+        "memory_limit_bytes": 33554432,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 20127744,
+        "upper_bytes": 33566043
+      },
+      "planner_latency_ms": 223.86554399417946,
+      "recommended_actual_outcome": "FIT",
+      "recommended_batch_size": 920,
+      "recommended_compile_latency_ms": 15697.640003003471,
+      "recommended_execution_latency_ms": 37.512918999709655,
+      "status": "COMPLETE",
+      "trials": [
+        {
+          "batch_size": 1,
+          "calibrated": true,
+          "central_bytes": 12591104,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 12591104,
+          "upper_bytes": 20997561
+        },
+        {
+          "batch_size": 2,
+          "calibrated": true,
+          "central_bytes": 12599296,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 12599296,
+          "upper_bytes": 21011223
+        },
+        {
+          "batch_size": 4,
+          "calibrated": true,
+          "central_bytes": 12615680,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 12615680,
+          "upper_bytes": 21038545
+        },
+        {
+          "batch_size": 8,
+          "calibrated": true,
+          "central_bytes": 12648448,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 12648448,
+          "upper_bytes": 21093191
+        },
+        {
+          "batch_size": 16,
+          "calibrated": true,
+          "central_bytes": 12713984,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 12713984,
+          "upper_bytes": 21202482
+        },
+        {
+          "batch_size": 32,
+          "calibrated": true,
+          "central_bytes": 12845056,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 12845056,
+          "upper_bytes": 21421064
+        },
+        {
+          "batch_size": 64,
+          "calibrated": true,
+          "central_bytes": 13107200,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 13107200,
+          "upper_bytes": 21858229
+        },
+        {
+          "batch_size": 128,
+          "calibrated": true,
+          "central_bytes": 13631488,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 13631488,
+          "upper_bytes": 22732558
+        },
+        {
+          "batch_size": 256,
+          "calibrated": true,
+          "central_bytes": 14680064,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 14680064,
+          "upper_bytes": 24481216
+        },
+        {
+          "batch_size": 512,
+          "calibrated": true,
+          "central_bytes": 16777216,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 16777216,
+          "upper_bytes": 27978533
+        },
+        {
+          "batch_size": 768,
+          "calibrated": true,
+          "central_bytes": 18874368,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 18874368,
+          "upper_bytes": 31475850
+        },
+        {
+          "batch_size": 896,
+          "calibrated": true,
+          "central_bytes": 19922944,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 19922944,
+          "upper_bytes": 33224508
+        },
+        {
+          "batch_size": 912,
+          "calibrated": true,
+          "central_bytes": 20054016,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 20054016,
+          "upper_bytes": 33443090
+        },
+        {
+          "batch_size": 920,
+          "calibrated": true,
+          "central_bytes": 20119552,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 20119552,
+          "upper_bytes": 33552381
+        },
+        {
+          "batch_size": 921,
+          "calibrated": true,
+          "central_bytes": 20127744,
+          "memory_limit_bytes": 33554432,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 20127744,
+          "upper_bytes": 33566043
+        },
+        {
+          "batch_size": 922,
+          "calibrated": true,
+          "central_bytes": 20135936,
+          "memory_limit_bytes": 33554432,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 20135936,
+          "upper_bytes": 33579704
+        },
+        {
+          "batch_size": 924,
+          "calibrated": true,
+          "central_bytes": 20152320,
+          "memory_limit_bytes": 33554432,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 20152320,
+          "upper_bytes": 33607027
+        },
+        {
+          "batch_size": 928,
+          "calibrated": true,
+          "central_bytes": 20185088,
+          "memory_limit_bytes": 33554432,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 20185088,
+          "upper_bytes": 33661672
+        },
+        {
+          "batch_size": 960,
+          "calibrated": true,
+          "central_bytes": 20447232,
+          "memory_limit_bytes": 33554432,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 20447232,
+          "upper_bytes": 34098837
+        },
+        {
+          "batch_size": 1024,
+          "calibrated": true,
+          "central_bytes": 20971520,
+          "memory_limit_bytes": 33554432,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 20971520,
+          "upper_bytes": 34973166
+        }
+      ],
+      "workload": "mlp"
+    },
+    {
+      "budget_bytes": 67108864,
+      "evaluations": 12,
+      "monotonic": true,
+      "next_tested": null,
+      "planner_latency_ms": 53.21094099781476,
+      "recommended_actual_outcome": "FIT",
+      "recommended_batch_size": 2048,
+      "recommended_compile_latency_ms": 13414.096697997593,
+      "recommended_execution_latency_ms": 23.452483997971285,
+      "status": "UPPER_BOUND_REACHED",
+      "trials": [
+        {
+          "batch_size": 1,
+          "calibrated": true,
+          "central_bytes": 12591104,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 12591104,
+          "upper_bytes": 20997561
+        },
+        {
+          "batch_size": 2,
+          "calibrated": true,
+          "central_bytes": 12599296,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 12599296,
+          "upper_bytes": 21011223
+        },
+        {
+          "batch_size": 4,
+          "calibrated": true,
+          "central_bytes": 12615680,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 12615680,
+          "upper_bytes": 21038545
+        },
+        {
+          "batch_size": 8,
+          "calibrated": true,
+          "central_bytes": 12648448,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 12648448,
+          "upper_bytes": 21093191
+        },
+        {
+          "batch_size": 16,
+          "calibrated": true,
+          "central_bytes": 12713984,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 12713984,
+          "upper_bytes": 21202482
+        },
+        {
+          "batch_size": 32,
+          "calibrated": true,
+          "central_bytes": 12845056,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 12845056,
+          "upper_bytes": 21421064
+        },
+        {
+          "batch_size": 64,
+          "calibrated": true,
+          "central_bytes": 13107200,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 13107200,
+          "upper_bytes": 21858229
+        },
+        {
+          "batch_size": 128,
+          "calibrated": true,
+          "central_bytes": 13631488,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 13631488,
+          "upper_bytes": 22732558
+        },
+        {
+          "batch_size": 256,
+          "calibrated": true,
+          "central_bytes": 14680064,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 14680064,
+          "upper_bytes": 24481216
+        },
+        {
+          "batch_size": 512,
+          "calibrated": true,
+          "central_bytes": 16777216,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 16777216,
+          "upper_bytes": 27978533
+        },
+        {
+          "batch_size": 1024,
+          "calibrated": true,
+          "central_bytes": 20971520,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 20971520,
+          "upper_bytes": 34973166
+        },
+        {
+          "batch_size": 2048,
+          "calibrated": true,
+          "central_bytes": 33554432,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 33554432,
+          "upper_bytes": 55957066
+        }
+      ],
+      "workload": "mlp"
+    },
+    {
+      "budget_bytes": 16777216,
+      "evaluations": 1,
+      "monotonic": true,
+      "next_tested": {
+        "batch_size": 1,
+        "calibrated": true,
+        "central_bytes": 16793600,
+        "memory_limit_bytes": 16777216,
+        "risk": "LIKELY EXCEEDS BUDGET",
+        "structural_peak_bytes": 16793600,
+        "upper_bytes": 28005856
+      },
+      "planner_latency_ms": 15.409913998155389,
+      "recommended_batch_size": null,
+      "status": "NOTHING_FITS",
+      "trials": [
+        {
+          "batch_size": 1,
+          "calibrated": true,
+          "central_bytes": 16793600,
+          "memory_limit_bytes": 16777216,
+          "risk": "LIKELY EXCEEDS BUDGET",
+          "structural_peak_bytes": 16793600,
+          "upper_bytes": 28005856
+        }
+      ],
+      "workload": "training_like"
+    },
+    {
+      "budget_bytes": 33554432,
+      "evaluations": 18,
+      "monotonic": true,
+      "next_actual_outcome": "FIT",
+      "next_compile_latency_ms": 178.8695560026099,
+      "next_execution_latency_ms": 21.47162100300193,
+      "next_tested": {
+        "batch_size": 272,
+        "calibrated": true,
+        "central_bytes": 20123648,
+        "memory_limit_bytes": 33554432,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 20123648,
+        "upper_bytes": 33559212
+      },
+      "planner_latency_ms": 222.5978650021716,
+      "recommended_actual_outcome": "FIT",
+      "recommended_batch_size": 271,
+      "recommended_compile_latency_ms": 210.18003900098847,
+      "recommended_execution_latency_ms": 8.525413999450393,
+      "status": "COMPLETE",
+      "trials": [
+        {
+          "batch_size": 1,
+          "calibrated": true,
+          "central_bytes": 16793600,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 16793600,
+          "upper_bytes": 28005856
+        },
+        {
+          "batch_size": 2,
+          "calibrated": true,
+          "central_bytes": 16805888,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 16805888,
+          "upper_bytes": 28026348
+        },
+        {
+          "batch_size": 4,
+          "calibrated": true,
+          "central_bytes": 16830464,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 16830464,
+          "upper_bytes": 28067332
+        },
+        {
+          "batch_size": 8,
+          "calibrated": true,
+          "central_bytes": 16879616,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 16879616,
+          "upper_bytes": 28149300
+        },
+        {
+          "batch_size": 16,
+          "calibrated": true,
+          "central_bytes": 16977920,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 16977920,
+          "upper_bytes": 28313237
+        },
+        {
+          "batch_size": 32,
+          "calibrated": true,
+          "central_bytes": 17174528,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 17174528,
+          "upper_bytes": 28641111
+        },
+        {
+          "batch_size": 64,
+          "calibrated": true,
+          "central_bytes": 17567744,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 17567744,
+          "upper_bytes": 29296857
+        },
+        {
+          "batch_size": 128,
+          "calibrated": true,
+          "central_bytes": 18354176,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 18354176,
+          "upper_bytes": 30608351
+        },
+        {
+          "batch_size": 256,
+          "calibrated": true,
+          "central_bytes": 19927040,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 19927040,
+          "upper_bytes": 33231339
+        },
+        {
+          "batch_size": 264,
+          "calibrated": true,
+          "central_bytes": 20025344,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 20025344,
+          "upper_bytes": 33395275
+        },
+        {
+          "batch_size": 268,
+          "calibrated": true,
+          "central_bytes": 20074496,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 20074496,
+          "upper_bytes": 33477244
+        },
+        {
+          "batch_size": 270,
+          "calibrated": true,
+          "central_bytes": 20099072,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 20099072,
+          "upper_bytes": 33518228
+        },
+        {
+          "batch_size": 271,
+          "calibrated": true,
+          "central_bytes": 20111360,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 20111360,
+          "upper_bytes": 33538720
+        },
+        {
+          "batch_size": 272,
+          "calibrated": true,
+          "central_bytes": 20123648,
+          "memory_limit_bytes": 33554432,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 20123648,
+          "upper_bytes": 33559212
+        },
+        {
+          "batch_size": 288,
+          "calibrated": true,
+          "central_bytes": 20320256,
+          "memory_limit_bytes": 33554432,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 20320256,
+          "upper_bytes": 33887085
+        },
+        {
+          "batch_size": 320,
+          "calibrated": true,
+          "central_bytes": 20713472,
+          "memory_limit_bytes": 33554432,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 20713472,
+          "upper_bytes": 34542832
+        },
+        {
+          "batch_size": 384,
+          "calibrated": true,
+          "central_bytes": 21499904,
+          "memory_limit_bytes": 33554432,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 21499904,
+          "upper_bytes": 35854326
+        },
+        {
+          "batch_size": 512,
+          "calibrated": true,
+          "central_bytes": 23072768,
+          "memory_limit_bytes": 33554432,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 23072768,
+          "upper_bytes": 38477314
+        }
+      ],
+      "workload": "training_like"
+    },
+    {
+      "budget_bytes": 67108864,
+      "evaluations": 22,
+      "monotonic": true,
+      "next_actual_outcome": "FIT",
+      "next_compile_latency_ms": 201.54285200260347,
+      "next_execution_latency_ms": 10.229127001366578,
+      "next_tested": {
+        "batch_size": 1910,
+        "calibrated": true,
+        "central_bytes": 40251392,
+        "memory_limit_bytes": 67108864,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 40251392,
+        "upper_bytes": 67125255
+      },
+      "planner_latency_ms": 188.06166500144172,
+      "recommended_actual_outcome": "FIT",
+      "recommended_batch_size": 1909,
+      "recommended_compile_latency_ms": 192.15845099824946,
+      "recommended_execution_latency_ms": 10.497114999452606,
+      "status": "COMPLETE",
+      "trials": [
+        {
+          "batch_size": 1,
+          "calibrated": true,
+          "central_bytes": 16793600,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 16793600,
+          "upper_bytes": 28005856
+        },
+        {
+          "batch_size": 2,
+          "calibrated": true,
+          "central_bytes": 16805888,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 16805888,
+          "upper_bytes": 28026348
+        },
+        {
+          "batch_size": 4,
+          "calibrated": true,
+          "central_bytes": 16830464,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 16830464,
+          "upper_bytes": 28067332
+        },
+        {
+          "batch_size": 8,
+          "calibrated": true,
+          "central_bytes": 16879616,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 16879616,
+          "upper_bytes": 28149300
+        },
+        {
+          "batch_size": 16,
+          "calibrated": true,
+          "central_bytes": 16977920,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 16977920,
+          "upper_bytes": 28313237
+        },
+        {
+          "batch_size": 32,
+          "calibrated": true,
+          "central_bytes": 17174528,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 17174528,
+          "upper_bytes": 28641111
+        },
+        {
+          "batch_size": 64,
+          "calibrated": true,
+          "central_bytes": 17567744,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 17567744,
+          "upper_bytes": 29296857
+        },
+        {
+          "batch_size": 128,
+          "calibrated": true,
+          "central_bytes": 18354176,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 18354176,
+          "upper_bytes": 30608351
+        },
+        {
+          "batch_size": 256,
+          "calibrated": true,
+          "central_bytes": 19927040,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 19927040,
+          "upper_bytes": 33231339
+        },
+        {
+          "batch_size": 512,
+          "calibrated": true,
+          "central_bytes": 23072768,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 23072768,
+          "upper_bytes": 38477314
+        },
+        {
+          "batch_size": 1024,
+          "calibrated": true,
+          "central_bytes": 29364224,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 29364224,
+          "upper_bytes": 48969263
+        },
+        {
+          "batch_size": 1536,
+          "calibrated": true,
+          "central_bytes": 35655680,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 35655680,
+          "upper_bytes": 59461213
+        },
+        {
+          "batch_size": 1792,
+          "calibrated": true,
+          "central_bytes": 38801408,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 38801408,
+          "upper_bytes": 64707188
+        },
+        {
+          "batch_size": 1856,
+          "calibrated": true,
+          "central_bytes": 39587840,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 39587840,
+          "upper_bytes": 66018682
+        },
+        {
+          "batch_size": 1888,
+          "calibrated": true,
+          "central_bytes": 39981056,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 39981056,
+          "upper_bytes": 66674429
+        },
+        {
+          "batch_size": 1904,
+          "calibrated": true,
+          "central_bytes": 40177664,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 40177664,
+          "upper_bytes": 67002302
+        },
+        {
+          "batch_size": 1908,
+          "calibrated": true,
+          "central_bytes": 40226816,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 40226816,
+          "upper_bytes": 67084271
+        },
+        {
+          "batch_size": 1909,
+          "calibrated": true,
+          "central_bytes": 40239104,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 40239104,
+          "upper_bytes": 67104763
+        },
+        {
+          "batch_size": 1910,
+          "calibrated": true,
+          "central_bytes": 40251392,
+          "memory_limit_bytes": 67108864,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 40251392,
+          "upper_bytes": 67125255
+        },
+        {
+          "batch_size": 1912,
+          "calibrated": true,
+          "central_bytes": 40275968,
+          "memory_limit_bytes": 67108864,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 40275968,
+          "upper_bytes": 67166239
+        },
+        {
+          "batch_size": 1920,
+          "calibrated": true,
+          "central_bytes": 40374272,
+          "memory_limit_bytes": 67108864,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 40374272,
+          "upper_bytes": 67330176
+        },
+        {
+          "batch_size": 2048,
+          "calibrated": true,
+          "central_bytes": 41947136,
+          "memory_limit_bytes": 67108864,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 41947136,
+          "upper_bytes": 69953163
+        }
+      ],
+      "workload": "training_like"
+    },
+    {
+      "budget_bytes": 16777216,
+      "evaluations": 14,
+      "monotonic": true,
+      "next_actual_outcome": "FIT",
+      "next_compile_latency_ms": 188.85138499899767,
+      "next_execution_latency_ms": 3.302113000245299,
+      "next_tested": {
+        "batch_size": 77,
+        "calibrated": true,
+        "central_bytes": 10171392,
+        "memory_limit_bytes": 16777216,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 10171392,
+        "upper_bytes": 16962327
+      },
+      "planner_latency_ms": 186.91243899957044,
+      "recommended_actual_outcome": "FIT",
+      "recommended_batch_size": 76,
+      "recommended_compile_latency_ms": 179.8117150028702,
+      "recommended_execution_latency_ms": 3.5650930003612302,
+      "status": "COMPLETE",
+      "trials": [
+        {
+          "batch_size": 1,
+          "calibrated": true,
+          "central_bytes": 132096,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 132096,
+          "upper_bytes": 220290
+        },
+        {
+          "batch_size": 2,
+          "calibrated": true,
+          "central_bytes": 264192,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 264192,
+          "upper_bytes": 440580
+        },
+        {
+          "batch_size": 4,
+          "calibrated": true,
+          "central_bytes": 528384,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 528384,
+          "upper_bytes": 881160
+        },
+        {
+          "batch_size": 8,
+          "calibrated": true,
+          "central_bytes": 1056768,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 1056768,
+          "upper_bytes": 1762320
+        },
+        {
+          "batch_size": 16,
+          "calibrated": true,
+          "central_bytes": 2113536,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 2113536,
+          "upper_bytes": 3524639
+        },
+        {
+          "batch_size": 32,
+          "calibrated": true,
+          "central_bytes": 4227072,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 4227072,
+          "upper_bytes": 7049279
+        },
+        {
+          "batch_size": 64,
+          "calibrated": true,
+          "central_bytes": 8454144,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 8454144,
+          "upper_bytes": 14098558
+        },
+        {
+          "batch_size": 72,
+          "calibrated": true,
+          "central_bytes": 9510912,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 9510912,
+          "upper_bytes": 15860877
+        },
+        {
+          "batch_size": 76,
+          "calibrated": true,
+          "central_bytes": 10039296,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 10039296,
+          "upper_bytes": 16742037
+        },
+        {
+          "batch_size": 77,
+          "calibrated": true,
+          "central_bytes": 10171392,
+          "memory_limit_bytes": 16777216,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 10171392,
+          "upper_bytes": 16962327
+        },
+        {
+          "batch_size": 78,
+          "calibrated": true,
+          "central_bytes": 10303488,
+          "memory_limit_bytes": 16777216,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 10303488,
+          "upper_bytes": 17182617
+        },
+        {
+          "batch_size": 80,
+          "calibrated": true,
+          "central_bytes": 10567680,
+          "memory_limit_bytes": 16777216,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 10567680,
+          "upper_bytes": 17623197
+        },
+        {
+          "batch_size": 96,
+          "calibrated": true,
+          "central_bytes": 12681216,
+          "memory_limit_bytes": 16777216,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 12681216,
+          "upper_bytes": 21147836
+        },
+        {
+          "batch_size": 128,
+          "calibrated": true,
+          "central_bytes": 16908288,
+          "memory_limit_bytes": 16777216,
+          "risk": "LIKELY EXCEEDS BUDGET",
+          "structural_peak_bytes": 16908288,
+          "upper_bytes": 28197115
+        }
+      ],
+      "workload": "attention"
+    },
+    {
+      "budget_bytes": 33554432,
+      "evaluations": 16,
+      "monotonic": true,
+      "next_actual_outcome": "FIT",
+      "next_compile_latency_ms": 197.38084499840625,
+      "next_execution_latency_ms": 21.232221995887812,
+      "next_tested": {
+        "batch_size": 153,
+        "calibrated": true,
+        "central_bytes": 20210688,
+        "memory_limit_bytes": 33554432,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 20210688,
+        "upper_bytes": 33704364
+      },
+      "planner_latency_ms": 338.67573899624404,
+      "recommended_actual_outcome": "FIT",
+      "recommended_batch_size": 152,
+      "recommended_compile_latency_ms": 185.95255699619884,
+      "recommended_execution_latency_ms": 4.397039003379177,
+      "status": "COMPLETE",
+      "trials": [
+        {
+          "batch_size": 1,
+          "calibrated": true,
+          "central_bytes": 132096,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 132096,
+          "upper_bytes": 220290
+        },
+        {
+          "batch_size": 2,
+          "calibrated": true,
+          "central_bytes": 264192,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 264192,
+          "upper_bytes": 440580
+        },
+        {
+          "batch_size": 4,
+          "calibrated": true,
+          "central_bytes": 528384,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 528384,
+          "upper_bytes": 881160
+        },
+        {
+          "batch_size": 8,
+          "calibrated": true,
+          "central_bytes": 1056768,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 1056768,
+          "upper_bytes": 1762320
+        },
+        {
+          "batch_size": 16,
+          "calibrated": true,
+          "central_bytes": 2113536,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 2113536,
+          "upper_bytes": 3524639
+        },
+        {
+          "batch_size": 32,
+          "calibrated": true,
+          "central_bytes": 4227072,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 4227072,
+          "upper_bytes": 7049279
+        },
+        {
+          "batch_size": 64,
+          "calibrated": true,
+          "central_bytes": 8454144,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 8454144,
+          "upper_bytes": 14098558
+        },
+        {
+          "batch_size": 128,
+          "calibrated": true,
+          "central_bytes": 16908288,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 16908288,
+          "upper_bytes": 28197115
+        },
+        {
+          "batch_size": 144,
+          "calibrated": true,
+          "central_bytes": 19021824,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 19021824,
+          "upper_bytes": 31721755
+        },
+        {
+          "batch_size": 152,
+          "calibrated": true,
+          "central_bytes": 20078592,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 20078592,
+          "upper_bytes": 33484074
+        },
+        {
+          "batch_size": 153,
+          "calibrated": true,
+          "central_bytes": 20210688,
+          "memory_limit_bytes": 33554432,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 20210688,
+          "upper_bytes": 33704364
+        },
+        {
+          "batch_size": 154,
+          "calibrated": true,
+          "central_bytes": 20342784,
+          "memory_limit_bytes": 33554432,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 20342784,
+          "upper_bytes": 33924654
+        },
+        {
+          "batch_size": 156,
+          "calibrated": true,
+          "central_bytes": 20606976,
+          "memory_limit_bytes": 33554432,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 20606976,
+          "upper_bytes": 34365234
+        },
+        {
+          "batch_size": 160,
+          "calibrated": true,
+          "central_bytes": 21135360,
+          "memory_limit_bytes": 33554432,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 21135360,
+          "upper_bytes": 35246394
+        },
+        {
+          "batch_size": 192,
+          "calibrated": true,
+          "central_bytes": 25362432,
+          "memory_limit_bytes": 33554432,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 25362432,
+          "upper_bytes": 42295673
+        },
+        {
+          "batch_size": 256,
+          "calibrated": true,
+          "central_bytes": 33816576,
+          "memory_limit_bytes": 33554432,
+          "risk": "LIKELY EXCEEDS BUDGET",
+          "structural_peak_bytes": 33816576,
+          "upper_bytes": 56394231
+        }
+      ],
+      "workload": "attention"
+    },
+    {
+      "budget_bytes": 67108864,
+      "evaluations": 18,
+      "monotonic": true,
+      "next_actual_outcome": "FIT",
+      "next_compile_latency_ms": 177.72687900287565,
+      "next_execution_latency_ms": 19.97880300041288,
+      "next_tested": {
+        "batch_size": 305,
+        "calibrated": true,
+        "central_bytes": 40289280,
+        "memory_limit_bytes": 67108864,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 40289280,
+        "upper_bytes": 67188439
+      },
+      "planner_latency_ms": 156.7775259973132,
+      "recommended_actual_outcome": "FIT",
+      "recommended_batch_size": 304,
+      "recommended_compile_latency_ms": 169.80300200521015,
+      "recommended_execution_latency_ms": 5.607389000942931,
+      "status": "COMPLETE",
+      "trials": [
+        {
+          "batch_size": 1,
+          "calibrated": true,
+          "central_bytes": 132096,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 132096,
+          "upper_bytes": 220290
+        },
+        {
+          "batch_size": 2,
+          "calibrated": true,
+          "central_bytes": 264192,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 264192,
+          "upper_bytes": 440580
+        },
+        {
+          "batch_size": 4,
+          "calibrated": true,
+          "central_bytes": 528384,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 528384,
+          "upper_bytes": 881160
+        },
+        {
+          "batch_size": 8,
+          "calibrated": true,
+          "central_bytes": 1056768,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 1056768,
+          "upper_bytes": 1762320
+        },
+        {
+          "batch_size": 16,
+          "calibrated": true,
+          "central_bytes": 2113536,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 2113536,
+          "upper_bytes": 3524639
+        },
+        {
+          "batch_size": 32,
+          "calibrated": true,
+          "central_bytes": 4227072,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 4227072,
+          "upper_bytes": 7049279
+        },
+        {
+          "batch_size": 64,
+          "calibrated": true,
+          "central_bytes": 8454144,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 8454144,
+          "upper_bytes": 14098558
+        },
+        {
+          "batch_size": 128,
+          "calibrated": true,
+          "central_bytes": 16908288,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 16908288,
+          "upper_bytes": 28197115
+        },
+        {
+          "batch_size": 256,
+          "calibrated": true,
+          "central_bytes": 33816576,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 33816576,
+          "upper_bytes": 56394231
+        },
+        {
+          "batch_size": 288,
+          "calibrated": true,
+          "central_bytes": 38043648,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 38043648,
+          "upper_bytes": 63443509
+        },
+        {
+          "batch_size": 304,
+          "calibrated": true,
+          "central_bytes": 40157184,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 40157184,
+          "upper_bytes": 66968149
+        },
+        {
+          "batch_size": 305,
+          "calibrated": true,
+          "central_bytes": 40289280,
+          "memory_limit_bytes": 67108864,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 40289280,
+          "upper_bytes": 67188439
+        },
+        {
+          "batch_size": 306,
+          "calibrated": true,
+          "central_bytes": 40421376,
+          "memory_limit_bytes": 67108864,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 40421376,
+          "upper_bytes": 67408729
+        },
+        {
+          "batch_size": 308,
+          "calibrated": true,
+          "central_bytes": 40685568,
+          "memory_limit_bytes": 67108864,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 40685568,
+          "upper_bytes": 67849309
+        },
+        {
+          "batch_size": 312,
+          "calibrated": true,
+          "central_bytes": 41213952,
+          "memory_limit_bytes": 67108864,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 41213952,
+          "upper_bytes": 68730468
+        },
+        {
+          "batch_size": 320,
+          "calibrated": true,
+          "central_bytes": 42270720,
+          "memory_limit_bytes": 67108864,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 42270720,
+          "upper_bytes": 70492788
+        },
+        {
+          "batch_size": 384,
+          "calibrated": true,
+          "central_bytes": 50724864,
+          "memory_limit_bytes": 67108864,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 50724864,
+          "upper_bytes": 84591346
+        },
+        {
+          "batch_size": 512,
+          "calibrated": true,
+          "central_bytes": 67633152,
+          "memory_limit_bytes": 67108864,
+          "risk": "LIKELY EXCEEDS BUDGET",
+          "structural_peak_bytes": 67633152,
+          "upper_bytes": 112788461
+        }
+      ],
+      "workload": "attention"
+    },
+    {
+      "budget_bytes": 16777216,
+      "evaluations": 16,
+      "monotonic": true,
+      "next_actual_outcome": "FIT",
+      "next_compile_latency_ms": 3909.021441002551,
+      "next_execution_latency_ms": 8.665776003908832,
+      "next_tested": {
+        "batch_size": 224,
+        "calibrated": true,
+        "central_bytes": 10093408,
+        "memory_limit_bytes": 16777216,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 10093408,
+        "upper_bytes": 16832277
+      },
+      "planner_latency_ms": 84.70682700135512,
+      "recommended_actual_outcome": "FIT",
+      "recommended_batch_size": 223,
+      "recommended_compile_latency_ms": 6030.373242996575,
+      "recommended_execution_latency_ms": 23.450588996638544,
+      "status": "COMPLETE",
+      "trials": [
+        {
+          "batch_size": 1,
+          "calibrated": true,
+          "central_bytes": 45920,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 45920,
+          "upper_bytes": 76579
+        },
+        {
+          "batch_size": 2,
+          "calibrated": true,
+          "central_bytes": 90976,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 90976,
+          "upper_bytes": 151716
+        },
+        {
+          "batch_size": 4,
+          "calibrated": true,
+          "central_bytes": 181088,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 181088,
+          "upper_bytes": 301991
+        },
+        {
+          "batch_size": 8,
+          "calibrated": true,
+          "central_bytes": 361312,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 361312,
+          "upper_bytes": 602542
+        },
+        {
+          "batch_size": 16,
+          "calibrated": true,
+          "central_bytes": 721760,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 721760,
+          "upper_bytes": 1203643
+        },
+        {
+          "batch_size": 32,
+          "calibrated": true,
+          "central_bytes": 1442656,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 1442656,
+          "upper_bytes": 2405846
+        },
+        {
+          "batch_size": 64,
+          "calibrated": true,
+          "central_bytes": 2884448,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 2884448,
+          "upper_bytes": 4810251
+        },
+        {
+          "batch_size": 128,
+          "calibrated": true,
+          "central_bytes": 5768032,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 5768032,
+          "upper_bytes": 9619062
+        },
+        {
+          "batch_size": 192,
+          "calibrated": true,
+          "central_bytes": 8651616,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 8651616,
+          "upper_bytes": 14427872
+        },
+        {
+          "batch_size": 208,
+          "calibrated": true,
+          "central_bytes": 9372512,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 9372512,
+          "upper_bytes": 15630075
+        },
+        {
+          "batch_size": 216,
+          "calibrated": true,
+          "central_bytes": 9732960,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 9732960,
+          "upper_bytes": 16231176
+        },
+        {
+          "batch_size": 220,
+          "calibrated": true,
+          "central_bytes": 9913184,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 9913184,
+          "upper_bytes": 16531726
+        },
+        {
+          "batch_size": 222,
+          "calibrated": true,
+          "central_bytes": 10003296,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 10003296,
+          "upper_bytes": 16682002
+        },
+        {
+          "batch_size": 223,
+          "calibrated": true,
+          "central_bytes": 10048352,
+          "memory_limit_bytes": 16777216,
+          "risk": "LOW",
+          "structural_peak_bytes": 10048352,
+          "upper_bytes": 16757139
+        },
+        {
+          "batch_size": 224,
+          "calibrated": true,
+          "central_bytes": 10093408,
+          "memory_limit_bytes": 16777216,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 10093408,
+          "upper_bytes": 16832277
+        },
+        {
+          "batch_size": 256,
+          "calibrated": true,
+          "central_bytes": 11535200,
+          "memory_limit_bytes": 16777216,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 11535200,
+          "upper_bytes": 19236682
+        }
+      ],
+      "workload": "convolution"
+    },
+    {
+      "budget_bytes": 33554432,
+      "evaluations": 18,
+      "monotonic": true,
+      "next_actual_outcome": "FIT",
+      "next_compile_latency_ms": 3819.810635999602,
+      "next_execution_latency_ms": 8.629150994238444,
+      "next_tested": {
+        "batch_size": 447,
+        "calibrated": true,
+        "central_bytes": 20140896,
+        "memory_limit_bytes": 33554432,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 20140896,
+        "upper_bytes": 33587976
+      },
+      "planner_latency_ms": 61.55457199929515,
+      "recommended_actual_outcome": "FIT",
+      "recommended_batch_size": 446,
+      "recommended_compile_latency_ms": 4176.072019996354,
+      "recommended_execution_latency_ms": 7.1028179954737425,
+      "status": "COMPLETE",
+      "trials": [
+        {
+          "batch_size": 1,
+          "calibrated": true,
+          "central_bytes": 45920,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 45920,
+          "upper_bytes": 76579
+        },
+        {
+          "batch_size": 2,
+          "calibrated": true,
+          "central_bytes": 90976,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 90976,
+          "upper_bytes": 151716
+        },
+        {
+          "batch_size": 4,
+          "calibrated": true,
+          "central_bytes": 181088,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 181088,
+          "upper_bytes": 301991
+        },
+        {
+          "batch_size": 8,
+          "calibrated": true,
+          "central_bytes": 361312,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 361312,
+          "upper_bytes": 602542
+        },
+        {
+          "batch_size": 16,
+          "calibrated": true,
+          "central_bytes": 721760,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 721760,
+          "upper_bytes": 1203643
+        },
+        {
+          "batch_size": 32,
+          "calibrated": true,
+          "central_bytes": 1442656,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 1442656,
+          "upper_bytes": 2405846
+        },
+        {
+          "batch_size": 64,
+          "calibrated": true,
+          "central_bytes": 2884448,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 2884448,
+          "upper_bytes": 4810251
+        },
+        {
+          "batch_size": 128,
+          "calibrated": true,
+          "central_bytes": 5768032,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 5768032,
+          "upper_bytes": 9619062
+        },
+        {
+          "batch_size": 256,
+          "calibrated": true,
+          "central_bytes": 11535200,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 11535200,
+          "upper_bytes": 19236682
+        },
+        {
+          "batch_size": 384,
+          "calibrated": true,
+          "central_bytes": 17302368,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 17302368,
+          "upper_bytes": 28854303
+        },
+        {
+          "batch_size": 416,
+          "calibrated": true,
+          "central_bytes": 18744160,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 18744160,
+          "upper_bytes": 31258708
+        },
+        {
+          "batch_size": 432,
+          "calibrated": true,
+          "central_bytes": 19465056,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 19465056,
+          "upper_bytes": 32460911
+        },
+        {
+          "batch_size": 440,
+          "calibrated": true,
+          "central_bytes": 19825504,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 19825504,
+          "upper_bytes": 33062012
+        },
+        {
+          "batch_size": 444,
+          "calibrated": true,
+          "central_bytes": 20005728,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 20005728,
+          "upper_bytes": 33362563
+        },
+        {
+          "batch_size": 446,
+          "calibrated": true,
+          "central_bytes": 20095840,
+          "memory_limit_bytes": 33554432,
+          "risk": "LOW",
+          "structural_peak_bytes": 20095840,
+          "upper_bytes": 33512838
+        },
+        {
+          "batch_size": 447,
+          "calibrated": true,
+          "central_bytes": 20140896,
+          "memory_limit_bytes": 33554432,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 20140896,
+          "upper_bytes": 33587976
+        },
+        {
+          "batch_size": 448,
+          "calibrated": true,
+          "central_bytes": 20185952,
+          "memory_limit_bytes": 33554432,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 20185952,
+          "upper_bytes": 33663113
+        },
+        {
+          "batch_size": 512,
+          "calibrated": true,
+          "central_bytes": 23069536,
+          "memory_limit_bytes": 33554432,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 23069536,
+          "upper_bytes": 38471924
+        }
+      ],
+      "workload": "convolution"
+    },
+    {
+      "budget_bytes": 67108864,
+      "evaluations": 20,
+      "monotonic": true,
+      "next_actual_outcome": "FIT",
+      "next_compile_latency_ms": 2256.490797997685,
+      "next_execution_latency_ms": 4.0145599996321835,
+      "next_tested": {
+        "batch_size": 894,
+        "calibrated": true,
+        "central_bytes": 40280928,
+        "memory_limit_bytes": 67108864,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 40280928,
+        "upper_bytes": 67174510
+      },
+      "planner_latency_ms": 70.27654600096866,
+      "recommended_actual_outcome": "FIT",
+      "recommended_batch_size": 893,
+      "recommended_compile_latency_ms": 4179.039967995777,
+      "recommended_execution_latency_ms": 8.656320002046414,
+      "status": "COMPLETE",
+      "trials": [
+        {
+          "batch_size": 1,
+          "calibrated": true,
+          "central_bytes": 45920,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 45920,
+          "upper_bytes": 76579
+        },
+        {
+          "batch_size": 2,
+          "calibrated": true,
+          "central_bytes": 90976,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 90976,
+          "upper_bytes": 151716
+        },
+        {
+          "batch_size": 4,
+          "calibrated": true,
+          "central_bytes": 181088,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 181088,
+          "upper_bytes": 301991
+        },
+        {
+          "batch_size": 8,
+          "calibrated": true,
+          "central_bytes": 361312,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 361312,
+          "upper_bytes": 602542
+        },
+        {
+          "batch_size": 16,
+          "calibrated": true,
+          "central_bytes": 721760,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 721760,
+          "upper_bytes": 1203643
+        },
+        {
+          "batch_size": 32,
+          "calibrated": true,
+          "central_bytes": 1442656,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 1442656,
+          "upper_bytes": 2405846
+        },
+        {
+          "batch_size": 64,
+          "calibrated": true,
+          "central_bytes": 2884448,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 2884448,
+          "upper_bytes": 4810251
+        },
+        {
+          "batch_size": 128,
+          "calibrated": true,
+          "central_bytes": 5768032,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 5768032,
+          "upper_bytes": 9619062
+        },
+        {
+          "batch_size": 256,
+          "calibrated": true,
+          "central_bytes": 11535200,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 11535200,
+          "upper_bytes": 19236682
+        },
+        {
+          "batch_size": 512,
+          "calibrated": true,
+          "central_bytes": 23069536,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 23069536,
+          "upper_bytes": 38471924
+        },
+        {
+          "batch_size": 768,
+          "calibrated": true,
+          "central_bytes": 34603872,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 34603872,
+          "upper_bytes": 57707165
+        },
+        {
+          "batch_size": 832,
+          "calibrated": true,
+          "central_bytes": 37487456,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 37487456,
+          "upper_bytes": 62515975
+        },
+        {
+          "batch_size": 864,
+          "calibrated": true,
+          "central_bytes": 38929248,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 38929248,
+          "upper_bytes": 64920381
+        },
+        {
+          "batch_size": 880,
+          "calibrated": true,
+          "central_bytes": 39650144,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 39650144,
+          "upper_bytes": 66122583
+        },
+        {
+          "batch_size": 888,
+          "calibrated": true,
+          "central_bytes": 40010592,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 40010592,
+          "upper_bytes": 66723685
+        },
+        {
+          "batch_size": 892,
+          "calibrated": true,
+          "central_bytes": 40190816,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 40190816,
+          "upper_bytes": 67024235
+        },
+        {
+          "batch_size": 893,
+          "calibrated": true,
+          "central_bytes": 40235872,
+          "memory_limit_bytes": 67108864,
+          "risk": "LOW",
+          "structural_peak_bytes": 40235872,
+          "upper_bytes": 67099373
+        },
+        {
+          "batch_size": 894,
+          "calibrated": true,
+          "central_bytes": 40280928,
+          "memory_limit_bytes": 67108864,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 40280928,
+          "upper_bytes": 67174510
+        },
+        {
+          "batch_size": 896,
+          "calibrated": true,
+          "central_bytes": 40371040,
+          "memory_limit_bytes": 67108864,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 40371040,
+          "upper_bytes": 67324786
+        },
+        {
+          "batch_size": 1024,
+          "calibrated": true,
+          "central_bytes": 46138208,
+          "memory_limit_bytes": 67108864,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 46138208,
+          "upper_bytes": 76942407
+        }
+      ],
+      "workload": "convolution"
+    },
+    {
+      "budget_bytes": 3006477107,
+      "device_snapshot": {
+        "effective_available_bytes": 3221225472,
+        "timestamp": "2026-09-09T19:28:30.925471+00:00"
+      },
+      "evaluations": 14,
+      "monotonic": true,
+      "next_tested": null,
+      "planner_latency_ms": 241.9495550057036,
+      "pressure_bytes": 0,
+      "recommended_batch_size": 8192,
+      "scenario": "auto_pressure",
+      "status": "UPPER_BOUND_REACHED",
+      "trials": [
+        {
+          "batch_size": 1,
+          "calibrated": true,
+          "central_bytes": 132096,
+          "memory_limit_bytes": 3006477107,
+          "risk": "LOW",
+          "structural_peak_bytes": 132096,
+          "upper_bytes": 220290
+        },
+        {
+          "batch_size": 2,
+          "calibrated": true,
+          "central_bytes": 264192,
+          "memory_limit_bytes": 3006477107,
+          "risk": "LOW",
+          "structural_peak_bytes": 264192,
+          "upper_bytes": 440580
+        },
+        {
+          "batch_size": 4,
+          "calibrated": true,
+          "central_bytes": 528384,
+          "memory_limit_bytes": 3006477107,
+          "risk": "LOW",
+          "structural_peak_bytes": 528384,
+          "upper_bytes": 881160
+        },
+        {
+          "batch_size": 8,
+          "calibrated": true,
+          "central_bytes": 1056768,
+          "memory_limit_bytes": 3006477107,
+          "risk": "LOW",
+          "structural_peak_bytes": 1056768,
+          "upper_bytes": 1762320
+        },
+        {
+          "batch_size": 16,
+          "calibrated": true,
+          "central_bytes": 2113536,
+          "memory_limit_bytes": 3006477107,
+          "risk": "LOW",
+          "structural_peak_bytes": 2113536,
+          "upper_bytes": 3524639
+        },
+        {
+          "batch_size": 32,
+          "calibrated": true,
+          "central_bytes": 4227072,
+          "memory_limit_bytes": 3006477107,
+          "risk": "LOW",
+          "structural_peak_bytes": 4227072,
+          "upper_bytes": 7049279
+        },
+        {
+          "batch_size": 64,
+          "calibrated": true,
+          "central_bytes": 8454144,
+          "memory_limit_bytes": 3006477107,
+          "risk": "LOW",
+          "structural_peak_bytes": 8454144,
+          "upper_bytes": 14098558
+        },
+        {
+          "batch_size": 128,
+          "calibrated": true,
+          "central_bytes": 16908288,
+          "memory_limit_bytes": 3006477107,
+          "risk": "LOW",
+          "structural_peak_bytes": 16908288,
+          "upper_bytes": 28197115
+        },
+        {
+          "batch_size": 256,
+          "calibrated": true,
+          "central_bytes": 33816576,
+          "memory_limit_bytes": 3006477107,
+          "risk": "LOW",
+          "structural_peak_bytes": 33816576,
+          "upper_bytes": 56394231
+        },
+        {
+          "batch_size": 512,
+          "calibrated": true,
+          "central_bytes": 67633152,
+          "memory_limit_bytes": 3006477107,
+          "risk": "LOW",
+          "structural_peak_bytes": 67633152,
+          "upper_bytes": 112788461
+        },
+        {
+          "batch_size": 1024,
+          "calibrated": true,
+          "central_bytes": 135266304,
+          "memory_limit_bytes": 3006477107,
+          "risk": "LOW",
+          "structural_peak_bytes": 135266304,
+          "upper_bytes": 225576922
+        },
+        {
+          "batch_size": 2048,
+          "calibrated": true,
+          "central_bytes": 270532608,
+          "memory_limit_bytes": 3006477107,
+          "risk": "LOW",
+          "structural_peak_bytes": 270532608,
+          "upper_bytes": 451153844
+        },
+        {
+          "batch_size": 4096,
+          "calibrated": true,
+          "central_bytes": 541065216,
+          "memory_limit_bytes": 3006477107,
+          "risk": "LOW",
+          "structural_peak_bytes": 541065216,
+          "upper_bytes": 902307688
+        },
+        {
+          "batch_size": 8192,
+          "calibrated": true,
+          "central_bytes": 1082130432,
+          "memory_limit_bytes": 3006477107,
+          "risk": "LOW",
+          "structural_peak_bytes": 1082130432,
+          "upper_bytes": 1804615377
+        }
+      ],
+      "workload": "attention"
+    },
+    {
+      "budget_bytes": 2779984691,
+      "device_snapshot": {
+        "effective_available_bytes": 2994733056,
+        "timestamp": "2026-09-09T19:28:31.706759+00:00"
+      },
+      "evaluations": 14,
+      "monotonic": true,
+      "next_tested": null,
+      "planner_latency_ms": 316.8963399948552,
+      "pressure_bytes": 536870912,
+      "recommended_batch_size": 8192,
+      "scenario": "auto_pressure",
+      "status": "UPPER_BOUND_REACHED",
+      "trials": [
+        {
+          "batch_size": 1,
+          "calibrated": true,
+          "central_bytes": 132096,
+          "memory_limit_bytes": 2779984691,
+          "risk": "LOW",
+          "structural_peak_bytes": 132096,
+          "upper_bytes": 220290
+        },
+        {
+          "batch_size": 2,
+          "calibrated": true,
+          "central_bytes": 264192,
+          "memory_limit_bytes": 2779984691,
+          "risk": "LOW",
+          "structural_peak_bytes": 264192,
+          "upper_bytes": 440580
+        },
+        {
+          "batch_size": 4,
+          "calibrated": true,
+          "central_bytes": 528384,
+          "memory_limit_bytes": 2779984691,
+          "risk": "LOW",
+          "structural_peak_bytes": 528384,
+          "upper_bytes": 881160
+        },
+        {
+          "batch_size": 8,
+          "calibrated": true,
+          "central_bytes": 1056768,
+          "memory_limit_bytes": 2779984691,
+          "risk": "LOW",
+          "structural_peak_bytes": 1056768,
+          "upper_bytes": 1762320
+        },
+        {
+          "batch_size": 16,
+          "calibrated": true,
+          "central_bytes": 2113536,
+          "memory_limit_bytes": 2779984691,
+          "risk": "LOW",
+          "structural_peak_bytes": 2113536,
+          "upper_bytes": 3524639
+        },
+        {
+          "batch_size": 32,
+          "calibrated": true,
+          "central_bytes": 4227072,
+          "memory_limit_bytes": 2779984691,
+          "risk": "LOW",
+          "structural_peak_bytes": 4227072,
+          "upper_bytes": 7049279
+        },
+        {
+          "batch_size": 64,
+          "calibrated": true,
+          "central_bytes": 8454144,
+          "memory_limit_bytes": 2779984691,
+          "risk": "LOW",
+          "structural_peak_bytes": 8454144,
+          "upper_bytes": 14098558
+        },
+        {
+          "batch_size": 128,
+          "calibrated": true,
+          "central_bytes": 16908288,
+          "memory_limit_bytes": 2779984691,
+          "risk": "LOW",
+          "structural_peak_bytes": 16908288,
+          "upper_bytes": 28197115
+        },
+        {
+          "batch_size": 256,
+          "calibrated": true,
+          "central_bytes": 33816576,
+          "memory_limit_bytes": 2779984691,
+          "risk": "LOW",
+          "structural_peak_bytes": 33816576,
+          "upper_bytes": 56394231
+        },
+        {
+          "batch_size": 512,
+          "calibrated": true,
+          "central_bytes": 67633152,
+          "memory_limit_bytes": 2779984691,
+          "risk": "LOW",
+          "structural_peak_bytes": 67633152,
+          "upper_bytes": 112788461
+        },
+        {
+          "batch_size": 1024,
+          "calibrated": true,
+          "central_bytes": 135266304,
+          "memory_limit_bytes": 2779984691,
+          "risk": "LOW",
+          "structural_peak_bytes": 135266304,
+          "upper_bytes": 225576922
+        },
+        {
+          "batch_size": 2048,
+          "calibrated": true,
+          "central_bytes": 270532608,
+          "memory_limit_bytes": 2779984691,
+          "risk": "LOW",
+          "structural_peak_bytes": 270532608,
+          "upper_bytes": 451153844
+        },
+        {
+          "batch_size": 4096,
+          "calibrated": true,
+          "central_bytes": 541065216,
+          "memory_limit_bytes": 2779984691,
+          "risk": "LOW",
+          "structural_peak_bytes": 541065216,
+          "upper_bytes": 902307688
+        },
+        {
+          "batch_size": 8192,
+          "calibrated": true,
+          "central_bytes": 1082130432,
+          "memory_limit_bytes": 2779984691,
+          "risk": "LOW",
+          "structural_peak_bytes": 1082130432,
+          "upper_bytes": 1804615377
+        }
+      ],
+      "workload": "attention"
+    },
+    {
+      "budget_bytes": 1706242867,
+      "device_snapshot": {
+        "effective_available_bytes": 1920991232,
+        "timestamp": "2026-09-09T19:28:32.443155+00:00"
+      },
+      "evaluations": 26,
+      "monotonic": true,
+      "next_tested": {
+        "batch_size": 7746,
+        "calibrated": true,
+        "central_bytes": 1023215616,
+        "memory_limit_bytes": 1706242867,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 1023215616,
+        "upper_bytes": 1706366053
+      },
+      "planner_latency_ms": 558.0858399989665,
+      "pressure_bytes": 1073741824,
+      "recommended_batch_size": 7745,
+      "scenario": "auto_pressure",
+      "status": "COMPLETE",
+      "trials": [
+        {
+          "batch_size": 1,
+          "calibrated": true,
+          "central_bytes": 132096,
+          "memory_limit_bytes": 1706242867,
+          "risk": "LOW",
+          "structural_peak_bytes": 132096,
+          "upper_bytes": 220290
+        },
+        {
+          "batch_size": 2,
+          "calibrated": true,
+          "central_bytes": 264192,
+          "memory_limit_bytes": 1706242867,
+          "risk": "LOW",
+          "structural_peak_bytes": 264192,
+          "upper_bytes": 440580
+        },
+        {
+          "batch_size": 4,
+          "calibrated": true,
+          "central_bytes": 528384,
+          "memory_limit_bytes": 1706242867,
+          "risk": "LOW",
+          "structural_peak_bytes": 528384,
+          "upper_bytes": 881160
+        },
+        {
+          "batch_size": 8,
+          "calibrated": true,
+          "central_bytes": 1056768,
+          "memory_limit_bytes": 1706242867,
+          "risk": "LOW",
+          "structural_peak_bytes": 1056768,
+          "upper_bytes": 1762320
+        },
+        {
+          "batch_size": 16,
+          "calibrated": true,
+          "central_bytes": 2113536,
+          "memory_limit_bytes": 1706242867,
+          "risk": "LOW",
+          "structural_peak_bytes": 2113536,
+          "upper_bytes": 3524639
+        },
+        {
+          "batch_size": 32,
+          "calibrated": true,
+          "central_bytes": 4227072,
+          "memory_limit_bytes": 1706242867,
+          "risk": "LOW",
+          "structural_peak_bytes": 4227072,
+          "upper_bytes": 7049279
+        },
+        {
+          "batch_size": 64,
+          "calibrated": true,
+          "central_bytes": 8454144,
+          "memory_limit_bytes": 1706242867,
+          "risk": "LOW",
+          "structural_peak_bytes": 8454144,
+          "upper_bytes": 14098558
+        },
+        {
+          "batch_size": 128,
+          "calibrated": true,
+          "central_bytes": 16908288,
+          "memory_limit_bytes": 1706242867,
+          "risk": "LOW",
+          "structural_peak_bytes": 16908288,
+          "upper_bytes": 28197115
+        },
+        {
+          "batch_size": 256,
+          "calibrated": true,
+          "central_bytes": 33816576,
+          "memory_limit_bytes": 1706242867,
+          "risk": "LOW",
+          "structural_peak_bytes": 33816576,
+          "upper_bytes": 56394231
+        },
+        {
+          "batch_size": 512,
+          "calibrated": true,
+          "central_bytes": 67633152,
+          "memory_limit_bytes": 1706242867,
+          "risk": "LOW",
+          "structural_peak_bytes": 67633152,
+          "upper_bytes": 112788461
+        },
+        {
+          "batch_size": 1024,
+          "calibrated": true,
+          "central_bytes": 135266304,
+          "memory_limit_bytes": 1706242867,
+          "risk": "LOW",
+          "structural_peak_bytes": 135266304,
+          "upper_bytes": 225576922
+        },
+        {
+          "batch_size": 2048,
+          "calibrated": true,
+          "central_bytes": 270532608,
+          "memory_limit_bytes": 1706242867,
+          "risk": "LOW",
+          "structural_peak_bytes": 270532608,
+          "upper_bytes": 451153844
+        },
+        {
+          "batch_size": 4096,
+          "calibrated": true,
+          "central_bytes": 541065216,
+          "memory_limit_bytes": 1706242867,
+          "risk": "LOW",
+          "structural_peak_bytes": 541065216,
+          "upper_bytes": 902307688
+        },
+        {
+          "batch_size": 6144,
+          "calibrated": true,
+          "central_bytes": 811597824,
+          "memory_limit_bytes": 1706242867,
+          "risk": "LOW",
+          "structural_peak_bytes": 811597824,
+          "upper_bytes": 1353461533
+        },
+        {
+          "batch_size": 7168,
+          "calibrated": true,
+          "central_bytes": 946864128,
+          "memory_limit_bytes": 1706242867,
+          "risk": "LOW",
+          "structural_peak_bytes": 946864128,
+          "upper_bytes": 1579038455
+        },
+        {
+          "batch_size": 7680,
+          "calibrated": true,
+          "central_bytes": 1014497280,
+          "memory_limit_bytes": 1706242867,
+          "risk": "LOW",
+          "structural_peak_bytes": 1014497280,
+          "upper_bytes": 1691826916
+        },
+        {
+          "batch_size": 7744,
+          "calibrated": true,
+          "central_bytes": 1022951424,
+          "memory_limit_bytes": 1706242867,
+          "risk": "LOW",
+          "structural_peak_bytes": 1022951424,
+          "upper_bytes": 1705925473
+        },
+        {
+          "batch_size": 7745,
+          "calibrated": true,
+          "central_bytes": 1023083520,
+          "memory_limit_bytes": 1706242867,
+          "risk": "LOW",
+          "structural_peak_bytes": 1023083520,
+          "upper_bytes": 1706145763
+        },
+        {
+          "batch_size": 7746,
+          "calibrated": true,
+          "central_bytes": 1023215616,
+          "memory_limit_bytes": 1706242867,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 1023215616,
+          "upper_bytes": 1706366053
+        },
+        {
+          "batch_size": 7748,
+          "calibrated": true,
+          "central_bytes": 1023479808,
+          "memory_limit_bytes": 1706242867,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 1023479808,
+          "upper_bytes": 1706806633
+        },
+        {
+          "batch_size": 7752,
+          "calibrated": true,
+          "central_bytes": 1024008192,
+          "memory_limit_bytes": 1706242867,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 1024008192,
+          "upper_bytes": 1707687793
+        },
+        {
+          "batch_size": 7760,
+          "calibrated": true,
+          "central_bytes": 1025064960,
+          "memory_limit_bytes": 1706242867,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 1025064960,
+          "upper_bytes": 1709450113
+        },
+        {
+          "batch_size": 7776,
+          "calibrated": true,
+          "central_bytes": 1027178496,
+          "memory_limit_bytes": 1706242867,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 1027178496,
+          "upper_bytes": 1712974752
+        },
+        {
+          "batch_size": 7808,
+          "calibrated": true,
+          "central_bytes": 1031405568,
+          "memory_limit_bytes": 1706242867,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 1031405568,
+          "upper_bytes": 1720024031
+        },
+        {
+          "batch_size": 7936,
+          "calibrated": true,
+          "central_bytes": 1048313856,
+          "memory_limit_bytes": 1706242867,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 1048313856,
+          "upper_bytes": 1748221146
+        },
+        {
+          "batch_size": 8192,
+          "calibrated": true,
+          "central_bytes": 1082130432,
+          "memory_limit_bytes": 1706242867,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 1082130432,
+          "upper_bytes": 1804615377
+        }
+      ],
+      "workload": "attention"
+    }
+  ],
+  "status": "COMPUTATIONALLY_VERIFIED",
+  "target_compilation_during_planning": false,
+  "target_execution_during_planning": false,
+  "validation_execution_enabled": true
+}

@@ -1,0 +1,35 @@
+{
+  "status": "COMPUTATIONALLY_VERIFIED",
+  "scenarios": 15,
+  "explicit_scenarios": 12,
+  "interior_boundaries": 9,
+  "upper_bound_reached": 1,
+  "nothing_fits": 2,
+  "families": [
+    "attention",
+    "convolution",
+    "mlp",
+    "training_like"
+  ],
+  "recommended_outcomes": {
+    "FIT": 9
+  },
+  "next_outcomes": {
+    "FIT": 9
+  },
+  "false_safe_count": 0,
+  "false_safe_rate": 0.0,
+  "conservative_miss_count": 9,
+  "conservative_miss_rate": 1.0,
+  "explicit_budget_monotonic": true,
+  "occupancy_scenarios": 3,
+  "occupancy_monotonic": true,
+  "evaluations_median": 17.0,
+  "evaluations_max": 22,
+  "planner_latency_median_ms": 171.84498249844182,
+  "compile_latency_median_ms": 205.86144550179597,
+  "execution_latency_median_ms": 8.661048002977623,
+  "target_compilation_during_planning": false,
+  "target_execution_during_planning": false,
+  "decision": "BOUNDARY VALIDATION PASSED BUT CONSERVATIVE"
+}
