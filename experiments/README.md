@@ -91,7 +91,23 @@ replay, occupancy regression, and remaining false fits are recorded in
 `device_budget_correction_report_2026-09-08.md`.
 
 Allocator-residency validation varies `XLA_CLIENT_MEM_FRACTION` in fresh
-subprocesses and records the allocator capacity bracket for end-to-end FIT:
+subprocesses and records the allocator capacity bracket for end-to-end FIT.
+The scan-based missing-family study is closed without shipping a residency
+model: its final 14-row T4 dataset did not meet the diversity and precision
+gate. See `allocator_residency_t4_missing_family_report_2026-09-09.md` and the
+recorded JSON artifacts.
+
+Pre-compilation batch planning is validated by:
+
+```bash
+PYTHONPATH=src:experiments python experiments/batch_planner_validation.py \
+  --output experiments/batch_planner_validation_YYYY-MM-DD.json
+```
+
+Planning itself does not compile or execute the target. Add
+`--validate-execution` only for the explicit post-planning GPU harness step.
+
+The original allocator-residency harness remains available:
 
 ```bash
 PYTHONPATH=src:experiments python experiments/allocator_residency_validation.py \
