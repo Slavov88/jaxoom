@@ -1,0 +1,35 @@
+{
+  "status": "COMPUTATIONALLY_VERIFIED_PARTIAL",
+  "scenarios_completed": 3,
+  "scenarios_requested": 6,
+  "exact_runtime_boundaries": 0,
+  "lower_bound_only": 3,
+  "not_completed": [
+    "convolution-32m",
+    "attention-auto",
+    "mlp-auto"
+  ],
+  "probe_outcomes": {
+    "FIT": 27
+  },
+  "recommended_outcomes": {
+    "FIT": 3
+  },
+  "false_safe_count": 0,
+  "false_safe_rate": 0.0,
+  "runtime_gap_lower_bounds": {
+    "attention-32m": 8.0,
+    "mlp-32m": 8.0,
+    "training-32m": 8.0
+  },
+  "median_gap_lower_bound": 8.0,
+  "auto_budget_scenarios_completed": 0,
+  "decision": "VALIDATION INSUFFICIENT",
+  "target_compilation_during_planning": false,
+  "target_execution_during_planning": false,
+  "limitations": [
+    "No OOM boundary was reached before the configured caps.",
+    "The convolution scenario timed out during runtime probing and the auto scenarios were not completed.",
+    "Runtime gap values are lower bounds, not exact maxima."
+  ]
+}

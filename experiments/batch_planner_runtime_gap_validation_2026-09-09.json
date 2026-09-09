@@ -1,0 +1,564 @@
+{
+  "completed_scenarios": 4,
+  "probe_cap": 60,
+  "scenarios": {
+    "attention-32m": {
+      "budget_bytes": 33554432,
+      "budget_type": "explicit",
+      "evaluations": 16,
+      "exact_runtime_boundary": false,
+      "family": "attention",
+      "first_known_oom": null,
+      "highest_known_fit": 1216,
+      "next_batch": null,
+      "planner_latency_ms": 431.6984599936404,
+      "planner_recommended_batch": 152,
+      "planner_recommended_upper": 33484074,
+      "planner_utilization": 0.125,
+      "runtime_batches_tested": [
+        {
+          "batch": 152,
+          "compile_latency_ms": 439.23504899430554,
+          "execution_latency_ms": 23.79039000516059,
+          "outcome": "FIT",
+          "predicted_excess_bytes": -70358,
+          "predicted_structural_bytes": 20078592,
+          "predicted_upper_bytes": 33484074
+        },
+        {
+          "batch": 153,
+          "compile_latency_ms": 467.07292400242295,
+          "execution_latency_ms": 23.169886000687256,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 149932,
+          "predicted_structural_bytes": 20210688,
+          "predicted_upper_bytes": 33704364
+        },
+        {
+          "batch": 207,
+          "compile_latency_ms": 636.9031390058808,
+          "execution_latency_ms": 10.41822799743386,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 12045590,
+          "predicted_structural_bytes": 27343872,
+          "predicted_upper_bytes": 45600022
+        },
+        {
+          "batch": 280,
+          "compile_latency_ms": 414.6931960058282,
+          "execution_latency_ms": 22.297194998827763,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 28126758,
+          "predicted_structural_bytes": 36986880,
+          "predicted_upper_bytes": 61681190
+        },
+        {
+          "batch": 378,
+          "compile_latency_ms": 578.8700089979102,
+          "execution_latency_ms": 28.74738900572993,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 49715174,
+          "predicted_structural_bytes": 49932288,
+          "predicted_upper_bytes": 83269606
+        },
+        {
+          "batch": 511,
+          "compile_latency_ms": 218.48532700096257,
+          "execution_latency_ms": 7.938171998830512,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 79013739,
+          "predicted_structural_bytes": 67501056,
+          "predicted_upper_bytes": 112568171
+        },
+        {
+          "batch": 690,
+          "compile_latency_ms": 243.1115480067092,
+          "execution_latency_ms": 9.30075699579902,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 118445642,
+          "predicted_structural_bytes": 91146240,
+          "predicted_upper_bytes": 152000074
+        },
+        {
+          "batch": 932,
+          "compile_latency_ms": 208.92733099753968,
+          "execution_latency_ms": 8.825634999084286,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 171755814,
+          "predicted_structural_bytes": 123113472,
+          "predicted_upper_bytes": 205310246
+        },
+        {
+          "batch": 1216,
+          "compile_latency_ms": 231.57036100019468,
+          "execution_latency_ms": 19.70224300021073,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 234318163,
+          "predicted_structural_bytes": 160628736,
+          "predicted_upper_bytes": 267872595
+        }
+      ],
+      "runtime_boundary_reached": false,
+      "runtime_gap_absolute": 1064,
+      "runtime_gap_ratio": 8.0,
+      "scenario_id": "attention-32m",
+      "status": "RUNTIME_BOUNDARY_NOT_REACHED"
+    },
+    "mlp-32m": {
+      "budget_bytes": 33554432,
+      "budget_type": "explicit",
+      "evaluations": 20,
+      "exact_runtime_boundary": false,
+      "family": "mlp",
+      "first_known_oom": null,
+      "highest_known_fit": 7360,
+      "next_batch": null,
+      "planner_latency_ms": 14259.99931700062,
+      "planner_recommended_batch": 920,
+      "planner_recommended_upper": 33552381,
+      "planner_utilization": 0.125,
+      "runtime_batches_tested": [
+        {
+          "batch": 920,
+          "compile_latency_ms": 11173.861971001315,
+          "execution_latency_ms": 79.11515700106975,
+          "outcome": "FIT",
+          "predicted_excess_bytes": -2051,
+          "predicted_structural_bytes": 20119552,
+          "predicted_upper_bytes": 33552381
+        },
+        {
+          "batch": 921,
+          "compile_latency_ms": 17216.43609500461,
+          "execution_latency_ms": 76.11598399671493,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 11611,
+          "predicted_structural_bytes": 20127744,
+          "predicted_upper_bytes": 33566043
+        },
+        {
+          "batch": 1244,
+          "compile_latency_ms": 19232.121829998505,
+          "execution_latency_ms": 156.45113099890295,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 4424241,
+          "predicted_structural_bytes": 22773760,
+          "predicted_upper_bytes": 37978673
+        },
+        {
+          "batch": 1680,
+          "compile_latency_ms": 18658.595638997213,
+          "execution_latency_ms": 168.69611100264592,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 12347849,
+          "predicted_structural_bytes": 27525120,
+          "predicted_upper_bytes": 45902281
+        },
+        {
+          "batch": 2268,
+          "compile_latency_ms": 11230.372284000623,
+          "execution_latency_ms": 48.08983799739508,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 28413647,
+          "predicted_structural_bytes": 37158912,
+          "predicted_upper_bytes": 61968079
+        },
+        {
+          "batch": 3062,
+          "compile_latency_ms": 14799.481427995488,
+          "execution_latency_ms": 12.117862999730278,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 50107939,
+          "predicted_structural_bytes": 50167808,
+          "predicted_upper_bytes": 83662371
+        },
+        {
+          "batch": 4134,
+          "compile_latency_ms": 12213.1303319984,
+          "execution_latency_ms": 93.52886700071394,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 79397966,
+          "predicted_structural_bytes": 67731456,
+          "predicted_upper_bytes": 112952398
+        },
+        {
+          "batch": 5581,
+          "compile_latency_ms": 12911.040617000253,
+          "execution_latency_ms": 92.68792600050801,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 118934037,
+          "predicted_structural_bytes": 91439104,
+          "predicted_upper_bytes": 152488469
+        },
+        {
+          "batch": 7360,
+          "compile_latency_ms": 16385.67963999958,
+          "execution_latency_ms": 99.23357900697738,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 167541274,
+          "predicted_structural_bytes": 120586240,
+          "predicted_upper_bytes": 201095706
+        }
+      ],
+      "runtime_boundary_reached": false,
+      "runtime_gap_absolute": 6440,
+      "runtime_gap_ratio": 8.0,
+      "scenario_id": "mlp-32m",
+      "status": "RUNTIME_BOUNDARY_NOT_REACHED"
+    },
+    "probe_cache": {
+      "attention-32m": {
+        "1216": {
+          "batch": 1216,
+          "compile_latency_ms": 231.57036100019468,
+          "execution_latency_ms": 19.70224300021073,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 234318163,
+          "predicted_structural_bytes": 160628736,
+          "predicted_upper_bytes": 267872595
+        },
+        "152": {
+          "batch": 152,
+          "compile_latency_ms": 439.23504899430554,
+          "execution_latency_ms": 23.79039000516059,
+          "outcome": "FIT",
+          "predicted_excess_bytes": -70358,
+          "predicted_structural_bytes": 20078592,
+          "predicted_upper_bytes": 33484074
+        },
+        "153": {
+          "batch": 153,
+          "compile_latency_ms": 467.07292400242295,
+          "execution_latency_ms": 23.169886000687256,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 149932,
+          "predicted_structural_bytes": 20210688,
+          "predicted_upper_bytes": 33704364
+        },
+        "207": {
+          "batch": 207,
+          "compile_latency_ms": 636.9031390058808,
+          "execution_latency_ms": 10.41822799743386,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 12045590,
+          "predicted_structural_bytes": 27343872,
+          "predicted_upper_bytes": 45600022
+        },
+        "280": {
+          "batch": 280,
+          "compile_latency_ms": 414.6931960058282,
+          "execution_latency_ms": 22.297194998827763,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 28126758,
+          "predicted_structural_bytes": 36986880,
+          "predicted_upper_bytes": 61681190
+        },
+        "378": {
+          "batch": 378,
+          "compile_latency_ms": 578.8700089979102,
+          "execution_latency_ms": 28.74738900572993,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 49715174,
+          "predicted_structural_bytes": 49932288,
+          "predicted_upper_bytes": 83269606
+        },
+        "511": {
+          "batch": 511,
+          "compile_latency_ms": 218.48532700096257,
+          "execution_latency_ms": 7.938171998830512,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 79013739,
+          "predicted_structural_bytes": 67501056,
+          "predicted_upper_bytes": 112568171
+        },
+        "690": {
+          "batch": 690,
+          "compile_latency_ms": 243.1115480067092,
+          "execution_latency_ms": 9.30075699579902,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 118445642,
+          "predicted_structural_bytes": 91146240,
+          "predicted_upper_bytes": 152000074
+        },
+        "932": {
+          "batch": 932,
+          "compile_latency_ms": 208.92733099753968,
+          "execution_latency_ms": 8.825634999084286,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 171755814,
+          "predicted_structural_bytes": 123113472,
+          "predicted_upper_bytes": 205310246
+        }
+      },
+      "mlp-32m": {
+        "1244": {
+          "batch": 1244,
+          "compile_latency_ms": 19232.121829998505,
+          "execution_latency_ms": 156.45113099890295,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 4424241,
+          "predicted_structural_bytes": 22773760,
+          "predicted_upper_bytes": 37978673
+        },
+        "1680": {
+          "batch": 1680,
+          "compile_latency_ms": 18658.595638997213,
+          "execution_latency_ms": 168.69611100264592,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 12347849,
+          "predicted_structural_bytes": 27525120,
+          "predicted_upper_bytes": 45902281
+        },
+        "2268": {
+          "batch": 2268,
+          "compile_latency_ms": 11230.372284000623,
+          "execution_latency_ms": 48.08983799739508,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 28413647,
+          "predicted_structural_bytes": 37158912,
+          "predicted_upper_bytes": 61968079
+        },
+        "3062": {
+          "batch": 3062,
+          "compile_latency_ms": 14799.481427995488,
+          "execution_latency_ms": 12.117862999730278,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 50107939,
+          "predicted_structural_bytes": 50167808,
+          "predicted_upper_bytes": 83662371
+        },
+        "4134": {
+          "batch": 4134,
+          "compile_latency_ms": 12213.1303319984,
+          "execution_latency_ms": 93.52886700071394,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 79397966,
+          "predicted_structural_bytes": 67731456,
+          "predicted_upper_bytes": 112952398
+        },
+        "5581": {
+          "batch": 5581,
+          "compile_latency_ms": 12911.040617000253,
+          "execution_latency_ms": 92.68792600050801,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 118934037,
+          "predicted_structural_bytes": 91439104,
+          "predicted_upper_bytes": 152488469
+        },
+        "7360": {
+          "batch": 7360,
+          "compile_latency_ms": 16385.67963999958,
+          "execution_latency_ms": 99.23357900697738,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 167541274,
+          "predicted_structural_bytes": 120586240,
+          "predicted_upper_bytes": 201095706
+        },
+        "920": {
+          "batch": 920,
+          "compile_latency_ms": 11173.861971001315,
+          "execution_latency_ms": 79.11515700106975,
+          "outcome": "FIT",
+          "predicted_excess_bytes": -2051,
+          "predicted_structural_bytes": 20119552,
+          "predicted_upper_bytes": 33552381
+        },
+        "921": {
+          "batch": 921,
+          "compile_latency_ms": 17216.43609500461,
+          "execution_latency_ms": 76.11598399671493,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 11611,
+          "predicted_structural_bytes": 20127744,
+          "predicted_upper_bytes": 33566043
+        }
+      },
+      "training-32m": {
+        "1224": {
+          "batch": 1224,
+          "compile_latency_ms": 224.12078399793245,
+          "execution_latency_ms": 7.539915997767821,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 19513249,
+          "predicted_structural_bytes": 31821824,
+          "predicted_upper_bytes": 53067681
+        },
+        "1653": {
+          "batch": 1653,
+          "compile_latency_ms": 242.6781860049232,
+          "execution_latency_ms": 27.420682003139518,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 28304356,
+          "predicted_structural_bytes": 37093376,
+          "predicted_upper_bytes": 61858788
+        },
+        "2168": {
+          "batch": 2168,
+          "compile_latency_ms": 179.9852549956995,
+          "execution_latency_ms": 28.260022001632024,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 38857782,
+          "predicted_structural_bytes": 43421696,
+          "predicted_upper_bytes": 72412214
+        },
+        "271": {
+          "batch": 271,
+          "compile_latency_ms": 392.54958699893905,
+          "execution_latency_ms": 22.34051199775422,
+          "outcome": "FIT",
+          "predicted_excess_bytes": -15712,
+          "predicted_structural_bytes": 20111360,
+          "predicted_upper_bytes": 33538720
+        },
+        "272": {
+          "batch": 272,
+          "compile_latency_ms": 195.14573399646906,
+          "execution_latency_ms": 6.840318004833534,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 4780,
+          "predicted_structural_bytes": 20123648,
+          "predicted_upper_bytes": 33559212
+        },
+        "368": {
+          "batch": 368,
+          "compile_latency_ms": 269.2368729985901,
+          "execution_latency_ms": 26.818190002813935,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 1972021,
+          "predicted_structural_bytes": 21303296,
+          "predicted_upper_bytes": 35526453
+        },
+        "497": {
+          "batch": 497,
+          "compile_latency_ms": 362.30257100396557,
+          "execution_latency_ms": 6.4484709946555085,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 4615500,
+          "predicted_structural_bytes": 22888448,
+          "predicted_upper_bytes": 38169932
+        },
+        "671": {
+          "batch": 671,
+          "compile_latency_ms": 235.10852600156795,
+          "execution_latency_ms": 28.4297489997698,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 8181124,
+          "predicted_structural_bytes": 25026560,
+          "predicted_upper_bytes": 41735556
+        },
+        "906": {
+          "batch": 906,
+          "compile_latency_ms": 237.84795100073097,
+          "execution_latency_ms": 23.998309996386524,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 12996765,
+          "predicted_structural_bytes": 27914240,
+          "predicted_upper_bytes": 46551197
+        }
+      }
+    },
+    "training-32m": {
+      "budget_bytes": 33554432,
+      "budget_type": "explicit",
+      "evaluations": 18,
+      "exact_runtime_boundary": false,
+      "family": "training_like",
+      "first_known_oom": null,
+      "highest_known_fit": 2168,
+      "next_batch": null,
+      "planner_latency_ms": 548.0602419993374,
+      "planner_recommended_batch": 271,
+      "planner_recommended_upper": 33538720,
+      "planner_utilization": 0.125,
+      "runtime_batches_tested": [
+        {
+          "batch": 271,
+          "compile_latency_ms": 392.54958699893905,
+          "execution_latency_ms": 22.34051199775422,
+          "outcome": "FIT",
+          "predicted_excess_bytes": -15712,
+          "predicted_structural_bytes": 20111360,
+          "predicted_upper_bytes": 33538720
+        },
+        {
+          "batch": 272,
+          "compile_latency_ms": 195.14573399646906,
+          "execution_latency_ms": 6.840318004833534,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 4780,
+          "predicted_structural_bytes": 20123648,
+          "predicted_upper_bytes": 33559212
+        },
+        {
+          "batch": 368,
+          "compile_latency_ms": 269.2368729985901,
+          "execution_latency_ms": 26.818190002813935,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 1972021,
+          "predicted_structural_bytes": 21303296,
+          "predicted_upper_bytes": 35526453
+        },
+        {
+          "batch": 497,
+          "compile_latency_ms": 362.30257100396557,
+          "execution_latency_ms": 6.4484709946555085,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 4615500,
+          "predicted_structural_bytes": 22888448,
+          "predicted_upper_bytes": 38169932
+        },
+        {
+          "batch": 671,
+          "compile_latency_ms": 235.10852600156795,
+          "execution_latency_ms": 28.4297489997698,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 8181124,
+          "predicted_structural_bytes": 25026560,
+          "predicted_upper_bytes": 41735556
+        },
+        {
+          "batch": 906,
+          "compile_latency_ms": 237.84795100073097,
+          "execution_latency_ms": 23.998309996386524,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 12996765,
+          "predicted_structural_bytes": 27914240,
+          "predicted_upper_bytes": 46551197
+        },
+        {
+          "batch": 1224,
+          "compile_latency_ms": 224.12078399793245,
+          "execution_latency_ms": 7.539915997767821,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 19513249,
+          "predicted_structural_bytes": 31821824,
+          "predicted_upper_bytes": 53067681
+        },
+        {
+          "batch": 1653,
+          "compile_latency_ms": 242.6781860049232,
+          "execution_latency_ms": 27.420682003139518,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 28304356,
+          "predicted_structural_bytes": 37093376,
+          "predicted_upper_bytes": 61858788
+        },
+        {
+          "batch": 2168,
+          "compile_latency_ms": 179.9852549956995,
+          "execution_latency_ms": 28.260022001632024,
+          "outcome": "FIT",
+          "predicted_excess_bytes": 38857782,
+          "predicted_structural_bytes": 43421696,
+          "predicted_upper_bytes": 72412214
+        }
+      ],
+      "runtime_boundary_reached": false,
+      "runtime_gap_absolute": 1897,
+      "runtime_gap_ratio": 8.0,
+      "scenario_id": "training-32m",
+      "status": "RUNTIME_BOUNDARY_NOT_REACHED"
+    }
+  },
+  "status": "OBSERVED"
+}
