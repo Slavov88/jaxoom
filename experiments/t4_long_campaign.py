@@ -17,7 +17,7 @@ from typing import Any
 
 
 def configuration_id(family: str, config: dict[str, Any], dtype: str) -> str:
-    payload = json.dumps({"family": family, "configuration": config, "dtype": dtype}, sort_keys=True, separators=(",", ":"))
+    payload = json.dumps({"family": family, "config": config, "dtype": dtype}, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(payload.encode()).hexdigest()[:16]
 
 

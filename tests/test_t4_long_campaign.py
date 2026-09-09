@@ -5,6 +5,7 @@ def test_long_campaign_candidate_ids_are_unique():
     candidates = default_candidates()
     ids = [row["configuration_id"] for row in candidates]
     assert len(ids) == len(set(ids))
+    assert configuration_id("transformer", {"sequence": 3072, "width": 2048, "heads": 8}, "float32") == "21ed3ee099a0a446"
 
 
 def test_scale_selection_only_uses_real_oom_rows(tmp_path):
