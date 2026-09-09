@@ -1,0 +1,45 @@
+{
+  "rows": [
+    {
+      "configuration_id": "4d2963f3e1c70c24",
+      "dtype": "float32",
+      "family": "attention",
+      "rtx_upper": 2363490304,
+      "t4_upper": 1975517184,
+      "upper_ratio": 0.8358473824312334
+    },
+    {
+      "configuration_id": "b4147577a0d722ae",
+      "dtype": "float32",
+      "family": "attention",
+      "rtx_upper": 2363490304,
+      "t4_upper": 2111832064,
+      "upper_ratio": 0.8935226264418811
+    },
+    {
+      "configuration_id": "bdb3421b7da45ee4",
+      "dtype": "float32",
+      "family": "attention",
+      "rtx_upper": 3307208704,
+      "t4_upper": 3275751424,
+      "upper_ratio": 0.9904882688649335
+    },
+    {
+      "configuration_id": "a3fdaea2d5ee4dab",
+      "dtype": "float16",
+      "family": "attention",
+      "rtx_upper": 1933574144,
+      "t4_upper": 1740636160,
+      "upper_ratio": 0.9002169197396963
+    },
+    {
+      "configuration_id": "1d992aa04c602165",
+      "dtype": "float32",
+      "family": "matmul",
+      "rtx_upper": 1933574144,
+      "t4_upper": 1681915904,
+      "upper_ratio": 0.8698481561822126
+    }
+  ],
+  "status": "OBSERVED"
+}
