@@ -1,0 +1,905 @@
+{
+  "auto_device_pressure": {
+    "recommendation_non_increasing": true,
+    "rows": [
+      {
+        "frozen_auto_budget_bytes": 3006477107,
+        "observed_free_bytes": 4008706048,
+        "observed_occupied_bytes": 148897792,
+        "planner_status": "COMPLETE",
+        "pressure_bytes_requested": 0,
+        "raw_record": "experiments/auto_pressure_MLP-1_2026-09-09_v5.json",
+        "recommended_batch": 292916
+      },
+      {
+        "frozen_auto_budget_bytes": 2713924403,
+        "observed_free_bytes": 2928672768,
+        "observed_occupied_bytes": 1228931072,
+        "planner_status": "COMPLETE",
+        "pressure_bytes_requested": 1073741824,
+        "raw_record": "experiments/auto_pressure_MLP-1_2026-09-09_v5.json",
+        "recommended_batch": 264363
+      },
+      {
+        "frozen_auto_budget_bytes": 1640182579,
+        "observed_free_bytes": 1854930944,
+        "observed_occupied_bytes": 2302672896,
+        "planner_status": "COMPLETE",
+        "pressure_bytes_requested": 2147483648,
+        "raw_record": "experiments/auto_pressure_MLP-1_2026-09-09_v5.json",
+        "recommended_batch": 159567
+      }
+    ],
+    "status": "PASS",
+    "workload": "MLP-1"
+  },
+  "boundaries": [
+    {
+      "absolute_gap": 1,
+      "budget_bytes": 134217728,
+      "classification": "CONSERVATIVE_SAFE",
+      "dimensions": {
+        "depth": 3,
+        "hidden": 768,
+        "input": 256
+      },
+      "dtype": "float32",
+      "empirical_max_batch": 12588,
+      "empirical_max_is_exact": false,
+      "false_safe": false,
+      "family": "MLP",
+      "harness_commit": null,
+      "id": "MLP-1",
+      "memory_mode": "explicit",
+      "next_tested_batch": 12588,
+      "next_tested_outcome": "FIT",
+      "planned_batch": 12587,
+      "planned_batch_fits": true,
+      "planned_empirical_ratio": 0.99992055926279,
+      "planned_estimated_bytes": 134212941,
+      "planner_evaluations": 28,
+      "planner_monotonic": true,
+      "planner_next_riskier": {
+        "batch_size": 12588,
+        "calibrated": true,
+        "central_bytes": 80486400,
+        "memory_limit_bytes": 134217728,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 80486400,
+        "upper_bytes": 134223187
+      },
+      "planner_seconds": 0.715120859000308,
+      "planner_status": "COMPLETE",
+      "probes": [
+        {
+          "batch": 12587,
+          "compile_seconds": 30.006658767000772,
+          "driver_free_after_compile": 3464495104,
+          "driver_free_after_execute": 3464495104,
+          "driver_free_before": 3935305728,
+          "error": null,
+          "execute_seconds": 0.12159218499436975,
+          "failure_phase": null,
+          "jax_peak_after_compile": 198312704,
+          "outcome": "FIT",
+          "parent_wall_seconds": 50.443814741003735
+        },
+        {
+          "batch": 12588,
+          "compile_seconds": 24.678559792999295,
+          "driver_free_after_compile": 3616538624,
+          "driver_free_after_execute": 3616538624,
+          "driver_free_before": 3935305728,
+          "error": null,
+          "execute_seconds": 0.12044368199713062,
+          "failure_phase": null,
+          "jax_peak_after_compile": 198315776,
+          "outcome": "FIT",
+          "parent_wall_seconds": 48.45883827000216
+        }
+      ],
+      "raw_record": "experiments/pilot_MLP-1_2026-09-09.json",
+      "relative_gap": 7.944073721004132e-05
+    },
+    {
+      "absolute_gap": 1,
+      "budget_bytes": 134217728,
+      "classification": "CONSERVATIVE_SAFE",
+      "dimensions": {
+        "depth": 2,
+        "hidden": 1024,
+        "input": 384
+      },
+      "dtype": "float32",
+      "empirical_max_batch": 9633,
+      "empirical_max_is_exact": false,
+      "false_safe": false,
+      "family": "MLP",
+      "harness_commit": null,
+      "id": "MLP-2",
+      "memory_mode": "explicit",
+      "next_tested_batch": 9633,
+      "next_tested_outcome": "FIT",
+      "planned_batch": 9632,
+      "planned_batch_fits": true,
+      "planned_empirical_ratio": 0.999896190179591,
+      "planned_estimated_bytes": 134209525,
+      "planner_evaluations": 28,
+      "planner_monotonic": true,
+      "planner_next_riskier": {
+        "batch_size": 9633,
+        "calibrated": true,
+        "central_bytes": 80486400,
+        "memory_limit_bytes": 134217728,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 80486400,
+        "upper_bytes": 134223187
+      },
+      "planner_seconds": 0.620315895001113,
+      "planner_status": "COMPLETE",
+      "probes": [
+        {
+          "batch": 9632,
+          "compile_seconds": 20.87979229699704,
+          "driver_free_after_compile": 3723493376,
+          "driver_free_after_execute": 3723493376,
+          "driver_free_before": 4008706048,
+          "error": null,
+          "execute_seconds": 0.05765129599603824,
+          "failure_phase": null,
+          "jax_peak_after_compile": 164757248,
+          "outcome": "FIT",
+          "parent_wall_seconds": 48.38776823700027
+        },
+        {
+          "batch": 9633,
+          "compile_seconds": 24.422203599999193,
+          "driver_free_after_compile": 3689938944,
+          "driver_free_after_execute": 3689938944,
+          "driver_free_before": 4008706048,
+          "error": null,
+          "execute_seconds": 0.048087320996273775,
+          "failure_phase": null,
+          "jax_peak_after_compile": 198315776,
+          "outcome": "FIT",
+          "parent_wall_seconds": 48.33726699899853
+        }
+      ],
+      "raw_record": "experiments/validation_MLP-2_2026-09-09.json",
+      "relative_gap": 0.00010380982040901069
+    },
+    {
+      "absolute_gap": 1,
+      "budget_bytes": 134217728,
+      "classification": "CONSERVATIVE_SAFE",
+      "dimensions": {
+        "hidden": 768,
+        "input": 256,
+        "output": 256
+      },
+      "dtype": "float32",
+      "empirical_max_batch": 5987,
+      "empirical_max_is_exact": false,
+      "false_safe": false,
+      "family": "training",
+      "harness_commit": null,
+      "id": "TRAIN-1",
+      "memory_mode": "explicit",
+      "next_tested_batch": 5987,
+      "next_tested_outcome": "FIT",
+      "planned_batch": 5986,
+      "planned_batch_fits": true,
+      "planned_empirical_ratio": 0.9998329714381159,
+      "planned_estimated_bytes": 134200994,
+      "planner_evaluations": 26,
+      "planner_monotonic": true,
+      "planner_next_riskier": {
+        "batch_size": 5987,
+        "calibrated": true,
+        "central_bytes": 80486404,
+        "memory_limit_bytes": 134217728,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 80486404,
+        "upper_bytes": 134223193
+      },
+      "planner_seconds": 3.0605635719985003,
+      "planner_status": "COMPLETE",
+      "probes": [
+        {
+          "batch": 5986,
+          "compile_seconds": 32.142572894001205,
+          "driver_free_after_compile": 3723493376,
+          "driver_free_after_execute": 3723493376,
+          "driver_free_before": 4008706048,
+          "error": null,
+          "execute_seconds": 0.22514352900179802,
+          "failure_phase": null,
+          "jax_peak_after_compile": 180194048,
+          "outcome": "FIT",
+          "parent_wall_seconds": 85.64131669999915
+        },
+        {
+          "batch": 5987,
+          "compile_seconds": 30.762056738996762,
+          "driver_free_after_compile": 3723493376,
+          "driver_free_after_execute": 3723493376,
+          "driver_free_before": 4008706048,
+          "error": null,
+          "execute_seconds": 0.1550240959986695,
+          "failure_phase": null,
+          "jax_peak_after_compile": 180195072,
+          "outcome": "FIT",
+          "parent_wall_seconds": 74.36161448500206
+        }
+      ],
+      "raw_record": "experiments/validation_TRAIN-1_2026-09-09.json",
+      "relative_gap": 0.00016702856188408218
+    },
+    {
+      "absolute_gap": 1,
+      "budget_bytes": 134217728,
+      "classification": "CONSERVATIVE_SAFE",
+      "dimensions": {
+        "input": 512,
+        "output": 512
+      },
+      "dtype": "float32",
+      "empirical_max_batch": 6550,
+      "empirical_max_is_exact": false,
+      "false_safe": false,
+      "family": "training",
+      "harness_commit": null,
+      "id": "TRAIN-2",
+      "memory_mode": "explicit",
+      "next_tested_batch": 6550,
+      "next_tested_outcome": "FIT",
+      "planned_batch": 6549,
+      "planned_batch_fits": true,
+      "planned_empirical_ratio": 0.9998473282442748,
+      "planned_estimated_bytes": 134202701,
+      "planner_evaluations": 26,
+      "planner_monotonic": true,
+      "planner_next_riskier": {
+        "batch_size": 6550,
+        "calibrated": true,
+        "central_bytes": 80486404,
+        "memory_limit_bytes": 134217728,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 80486404,
+        "upper_bytes": 134223193
+      },
+      "planner_seconds": 2.7671947260023444,
+      "planner_status": "COMPLETE",
+      "probes": [
+        {
+          "batch": 6549,
+          "compile_seconds": 16.927612227998907,
+          "driver_free_after_compile": 3857711104,
+          "driver_free_after_execute": 3857711104,
+          "driver_free_before": 4008706048,
+          "error": null,
+          "execute_seconds": 0.15041934100008802,
+          "failure_phase": null,
+          "jax_peak_after_compile": 118050560,
+          "outcome": "FIT",
+          "parent_wall_seconds": 49.9086766870023
+        },
+        {
+          "batch": 6550,
+          "compile_seconds": 21.03736162700079,
+          "driver_free_after_compile": 3857711104,
+          "driver_free_after_execute": 3857711104,
+          "driver_free_before": 4008706048,
+          "error": null,
+          "execute_seconds": 0.03730171400093241,
+          "failure_phase": null,
+          "jax_peak_after_compile": 118054656,
+          "outcome": "FIT",
+          "parent_wall_seconds": 60.188922139997885
+        }
+      ],
+      "raw_record": "experiments/validation_TRAIN-2_2026-09-09.json",
+      "relative_gap": 0.00015267175572519084
+    },
+    {
+      "absolute_gap": 0,
+      "budget_bytes": 3221225472,
+      "classification": "EXACT_BOUNDARY",
+      "dimensions": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 4096
+      },
+      "dtype": "float32",
+      "empirical_max_batch": 1,
+      "empirical_max_is_exact": true,
+      "false_safe": false,
+      "family": "attention",
+      "harness_commit": null,
+      "id": "ATT-1",
+      "memory_mode": "explicit",
+      "next_tested_batch": 2,
+      "next_tested_outcome": "OOM",
+      "planned_batch": 1,
+      "planned_batch_fits": true,
+      "planned_empirical_ratio": 1.0,
+      "planned_estimated_bytes": 1804833959,
+      "planner_evaluations": 2,
+      "planner_monotonic": true,
+      "planner_next_riskier": {
+        "batch_size": 2,
+        "calibrated": true,
+        "central_bytes": 2164523008,
+        "memory_limit_bytes": 3221225472,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 2164523008,
+        "upper_bytes": 3609667918
+      },
+      "planner_seconds": 0.15682159599964507,
+      "planner_status": "COMPLETE",
+      "probes": [
+        {
+          "batch": 1,
+          "compile_seconds": 14.67577955500019,
+          "driver_free_after_compile": 1710227456,
+          "driver_free_after_execute": 1710227456,
+          "driver_free_before": 4008706048,
+          "error": null,
+          "execute_seconds": 0.04874288200517185,
+          "failure_phase": null,
+          "jax_peak_after_compile": 1166016512,
+          "outcome": "FIT",
+          "parent_wall_seconds": 33.55404229799751
+        },
+        {
+          "batch": 2,
+          "compile_seconds": null,
+          "driver_free_after_compile": 1777336320,
+          "driver_free_after_execute": null,
+          "driver_free_before": 4008706048,
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.00GiB. [executable_name='jit__attention_1_fn'] [tf-allocator-allocation-error='']",
+          "execute_seconds": null,
+          "failure_phase": "execute",
+          "jax_peak_after_compile": 1212154112,
+          "outcome": "OOM",
+          "parent_wall_seconds": 195.47699229600403
+        }
+      ],
+      "raw_record": "experiments/validation_ATT-1_2026-09-09_v2.json",
+      "relative_gap": 0.0
+    },
+    {
+      "absolute_gap": null,
+      "budget_bytes": 3221225472,
+      "classification": "INVALID/INCONCLUSIVE",
+      "dimensions": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 5120
+      },
+      "dtype": "float32",
+      "empirical_max_batch": null,
+      "empirical_max_is_exact": false,
+      "false_safe": true,
+      "family": "attention",
+      "harness_commit": null,
+      "id": "ATT-2",
+      "memory_mode": "explicit",
+      "next_tested_batch": 2,
+      "next_tested_outcome": "OOM",
+      "planned_batch": 1,
+      "planned_batch_fits": false,
+      "planned_empirical_ratio": null,
+      "planned_estimated_bytes": 2833099692,
+      "planner_evaluations": 2,
+      "planner_monotonic": true,
+      "planner_next_riskier": {
+        "batch_size": 2,
+        "calibrated": true,
+        "central_bytes": 3397713920,
+        "memory_limit_bytes": 3221225472,
+        "risk": "LIKELY EXCEEDS BUDGET",
+        "structural_peak_bytes": 3397713920,
+        "upper_bytes": 5666199383
+      },
+      "planner_seconds": 0.5519346129949554,
+      "planner_status": "COMPLETE",
+      "probes": [
+        {
+          "batch": 1,
+          "compile_seconds": null,
+          "driver_free_after_compile": 1710227456,
+          "driver_free_after_execute": null,
+          "driver_free_before": 4008706048,
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.56GiB. [executable_name='jit__attention_2_fn'] [tf-allocator-allocation-error='']",
+          "execute_seconds": null,
+          "failure_phase": "execute",
+          "jax_peak_after_compile": 1793065216,
+          "outcome": "OOM",
+          "parent_wall_seconds": 75.76492625899846
+        },
+        {
+          "batch": 2,
+          "compile_seconds": null,
+          "driver_free_after_compile": 1576009728,
+          "driver_free_after_execute": null,
+          "driver_free_before": 4008706048,
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 3.12GiB. [tf-allocator-allocation-error=''] [executable_name='jit__attention_2_fn']",
+          "execute_seconds": null,
+          "failure_phase": "execute",
+          "jax_peak_after_compile": 1912602880,
+          "outcome": "OOM",
+          "parent_wall_seconds": 206.21525321199442
+        }
+      ],
+      "raw_record": "experiments/validation_ATT-2_2026-09-09_v2.json",
+      "relative_gap": null
+    },
+    {
+      "absolute_gap": 1,
+      "budget_bytes": 536870912,
+      "classification": "CONSERVATIVE_SAFE",
+      "dimensions": {
+        "channels": 3,
+        "filters": 32,
+        "height": 64,
+        "width": 64
+      },
+      "dtype": "float32",
+      "empirical_max_batch": 410,
+      "empirical_max_is_exact": false,
+      "false_safe": false,
+      "family": "convolution",
+      "harness_commit": null,
+      "id": "CONV-1",
+      "memory_mode": "explicit",
+      "next_tested_batch": 410,
+      "next_tested_outcome": "FIT",
+      "planned_batch": 409,
+      "planned_batch_fits": true,
+      "planned_empirical_ratio": 0.9975609756097561,
+      "planned_estimated_bytes": 536431675,
+      "planner_evaluations": 18,
+      "planner_monotonic": true,
+      "planner_next_riskier": {
+        "batch_size": 410,
+        "calibrated": true,
+        "central_bytes": 322455552,
+        "memory_limit_bytes": 536870912,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 322455552,
+        "upper_bytes": 537743169
+      },
+      "planner_seconds": 0.5236778899998171,
+      "planner_status": "COMPLETE",
+      "probes": [
+        {
+          "batch": 409,
+          "compile_seconds": 25.420530003997555,
+          "driver_free_after_compile": 1280311296,
+          "driver_free_after_execute": 1280311296,
+          "driver_free_before": 4008706048,
+          "error": null,
+          "execute_seconds": 0.013974952998978551,
+          "failure_phase": null,
+          "jax_peak_after_compile": 1955633664,
+          "outcome": "FIT",
+          "parent_wall_seconds": 55.36541264200059
+        },
+        {
+          "batch": 410,
+          "compile_seconds": 18.417792370993993,
+          "driver_free_after_compile": 1817182208,
+          "driver_free_after_execute": 1817182208,
+          "driver_free_before": 4008706048,
+          "error": null,
+          "execute_seconds": 0.016477509001560975,
+          "failure_phase": null,
+          "jax_peak_after_compile": 2053675520,
+          "outcome": "FIT",
+          "parent_wall_seconds": 53.87032747000194
+        }
+      ],
+      "raw_record": "experiments/validation_CONV-1_2026-09-09.json",
+      "relative_gap": 0.0024390243902439024
+    },
+    {
+      "absolute_gap": 1,
+      "budget_bytes": 536870912,
+      "classification": "CONSERVATIVE_SAFE",
+      "dimensions": {
+        "channels": 3,
+        "filters": 32,
+        "height": 96,
+        "width": 96
+      },
+      "dtype": "float32",
+      "empirical_max_batch": 273,
+      "empirical_max_is_exact": false,
+      "false_safe": false,
+      "family": "convolution",
+      "harness_commit": null,
+      "id": "CONV-2",
+      "memory_mode": "explicit",
+      "next_tested_batch": 273,
+      "next_tested_outcome": "FIT",
+      "planned_batch": 272,
+      "planned_batch_fits": true,
+      "planned_empirical_ratio": 0.9963369963369964,
+      "planned_estimated_bytes": 535123597,
+      "planner_evaluations": 18,
+      "planner_monotonic": true,
+      "planner_next_riskier": {
+        "batch_size": 273,
+        "calibrated": true,
+        "central_bytes": 322064384,
+        "memory_limit_bytes": 536870912,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 322064384,
+        "upper_bytes": 537090837
+      },
+      "planner_seconds": 0.6224879349974799,
+      "planner_status": "COMPLETE",
+      "probes": [
+        {
+          "batch": 272,
+          "compile_seconds": 14.510134329997527,
+          "driver_free_after_compile": 1850736640,
+          "driver_free_after_execute": 1850736640,
+          "driver_free_before": 4008706048,
+          "error": null,
+          "execute_seconds": 0.039209253001899924,
+          "failure_phase": null,
+          "jax_peak_after_compile": 1159232256,
+          "outcome": "FIT",
+          "parent_wall_seconds": 38.307808728000964
+        },
+        {
+          "batch": 273,
+          "compile_seconds": 8.668904447004024,
+          "driver_free_after_compile": 1817182208,
+          "driver_free_after_execute": 1817182208,
+          "driver_free_before": 4008706048,
+          "error": null,
+          "execute_seconds": 0.020958240995241795,
+          "failure_phase": null,
+          "jax_peak_after_compile": 1151924736,
+          "outcome": "FIT",
+          "parent_wall_seconds": 34.09633751400543
+        }
+      ],
+      "raw_record": "experiments/validation_CONV-2_2026-09-09.json",
+      "relative_gap": 0.003663003663003663
+    }
+  ],
+  "environment": {
+    "allocator_environment": {
+      "TF_GPU_ALLOCATOR": null,
+      "XLA_CLIENT_MEM_FRACTION": null,
+      "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+      "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+      "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+    },
+    "backend": "gpu",
+    "devices": [
+      "cuda:0"
+    ],
+    "jax_version": "0.11.0",
+    "jaxlib_version": "0.11.0",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "explicit_budget_monotonicity": {
+    "families": [
+      "MLP",
+      "attention",
+      "convolution",
+      "training"
+    ],
+    "status": "PASS",
+    "workloads": [
+      {
+        "family": "MLP",
+        "id": "MLP-1",
+        "points": [
+          {
+            "budget_bytes": 16777216,
+            "evaluations": 22,
+            "monotonic": true,
+            "recommended_batch": 1125,
+            "seconds": 8.988951744002406,
+            "status": "COMPLETE"
+          },
+          {
+            "budget_bytes": 67108864,
+            "evaluations": 26,
+            "monotonic": true,
+            "recommended_batch": 6037,
+            "seconds": 0.34699219599860953,
+            "status": "COMPLETE"
+          },
+          {
+            "budget_bytes": 134217728,
+            "evaluations": 28,
+            "monotonic": true,
+            "recommended_batch": 12587,
+            "seconds": 0.2083794379941537,
+            "status": "COMPLETE"
+          }
+        ],
+        "recommendations_non_decreasing": true
+      },
+      {
+        "family": "MLP",
+        "id": "MLP-2",
+        "points": [
+          {
+            "budget_bytes": 16777216,
+            "evaluations": 22,
+            "monotonic": true,
+            "recommended_batch": 1036,
+            "seconds": 0.24909654899965972,
+            "status": "COMPLETE"
+          },
+          {
+            "budget_bytes": 67108864,
+            "evaluations": 26,
+            "monotonic": true,
+            "recommended_batch": 4720,
+            "seconds": 0.13185878600052092,
+            "status": "COMPLETE"
+          },
+          {
+            "budget_bytes": 134217728,
+            "evaluations": 28,
+            "monotonic": true,
+            "recommended_batch": 9632,
+            "seconds": 0.12329053699795622,
+            "status": "COMPLETE"
+          }
+        ],
+        "recommendations_non_decreasing": true
+      },
+      {
+        "family": "training",
+        "id": "TRAIN-1",
+        "points": [
+          {
+            "budget_bytes": 16777216,
+            "evaluations": 20,
+            "monotonic": true,
+            "recommended_batch": 696,
+            "seconds": 1.240800407002098,
+            "status": "COMPLETE"
+          },
+          {
+            "budget_bytes": 67108864,
+            "evaluations": 24,
+            "monotonic": true,
+            "recommended_batch": 2963,
+            "seconds": 0.8686271390033653,
+            "status": "COMPLETE"
+          },
+          {
+            "budget_bytes": 134217728,
+            "evaluations": 26,
+            "monotonic": true,
+            "recommended_batch": 5986,
+            "seconds": 0.5610060550025082,
+            "status": "COMPLETE"
+          }
+        ],
+        "recommendations_non_decreasing": true
+      },
+      {
+        "family": "training",
+        "id": "TRAIN-2",
+        "points": [
+          {
+            "budget_bytes": 16777216,
+            "evaluations": 20,
+            "monotonic": true,
+            "recommended_batch": 818,
+            "seconds": 0.6300681130014709,
+            "status": "COMPLETE"
+          },
+          {
+            "budget_bytes": 67108864,
+            "evaluations": 24,
+            "monotonic": true,
+            "recommended_batch": 3274,
+            "seconds": 0.5402131869996083,
+            "status": "COMPLETE"
+          },
+          {
+            "budget_bytes": 134217728,
+            "evaluations": 26,
+            "monotonic": true,
+            "recommended_batch": 6549,
+            "seconds": 0.5632943989985506,
+            "status": "COMPLETE"
+          }
+        ],
+        "recommendations_non_decreasing": true
+      },
+      {
+        "family": "attention",
+        "id": "ATT-1",
+        "points": [
+          {
+            "budget_bytes": 2147483648,
+            "evaluations": 2,
+            "monotonic": true,
+            "recommended_batch": 1,
+            "seconds": 0.0955141279991949,
+            "status": "COMPLETE"
+          },
+          {
+            "budget_bytes": 3221225472,
+            "evaluations": 2,
+            "monotonic": true,
+            "recommended_batch": 1,
+            "seconds": 0.0033322279996355064,
+            "status": "COMPLETE"
+          },
+          {
+            "budget_bytes": 4294967296,
+            "evaluations": 4,
+            "monotonic": true,
+            "recommended_batch": 2,
+            "seconds": 0.11203015899809543,
+            "status": "COMPLETE"
+          }
+        ],
+        "recommendations_non_decreasing": true
+      },
+      {
+        "family": "attention",
+        "id": "ATT-2",
+        "points": [
+          {
+            "budget_bytes": 2147483648,
+            "evaluations": 1,
+            "monotonic": true,
+            "recommended_batch": null,
+            "seconds": 0.05950976799795171,
+            "status": "NOTHING_FITS"
+          },
+          {
+            "budget_bytes": 3221225472,
+            "evaluations": 2,
+            "monotonic": true,
+            "recommended_batch": 1,
+            "seconds": 0.048515989001316484,
+            "status": "COMPLETE"
+          },
+          {
+            "budget_bytes": 4294967296,
+            "evaluations": 2,
+            "monotonic": true,
+            "recommended_batch": 1,
+            "seconds": 0.003820837002422195,
+            "status": "COMPLETE"
+          }
+        ],
+        "recommendations_non_decreasing": true
+      },
+      {
+        "family": "convolution",
+        "id": "CONV-1",
+        "points": [
+          {
+            "budget_bytes": 134217728,
+            "evaluations": 14,
+            "monotonic": true,
+            "recommended_batch": 102,
+            "seconds": 0.22574160999647574,
+            "status": "COMPLETE"
+          },
+          {
+            "budget_bytes": 268435456,
+            "evaluations": 16,
+            "monotonic": true,
+            "recommended_batch": 204,
+            "seconds": 0.07873775500047486,
+            "status": "COMPLETE"
+          },
+          {
+            "budget_bytes": 536870912,
+            "evaluations": 18,
+            "monotonic": true,
+            "recommended_batch": 409,
+            "seconds": 0.08540707899373956,
+            "status": "COMPLETE"
+          }
+        ],
+        "recommendations_non_decreasing": true
+      },
+      {
+        "family": "convolution",
+        "id": "CONV-2",
+        "points": [
+          {
+            "budget_bytes": 134217728,
+            "evaluations": 14,
+            "monotonic": true,
+            "recommended_batch": 68,
+            "seconds": 0.16591924899694277,
+            "status": "COMPLETE"
+          },
+          {
+            "budget_bytes": 268435456,
+            "evaluations": 16,
+            "monotonic": true,
+            "recommended_batch": 136,
+            "seconds": 0.1029548370061093,
+            "status": "COMPLETE"
+          },
+          {
+            "budget_bytes": 536870912,
+            "evaluations": 18,
+            "monotonic": true,
+            "recommended_batch": 272,
+            "seconds": 0.27186144900042564,
+            "status": "COMPLETE"
+          }
+        ],
+        "recommendations_non_decreasing": true
+      }
+    ]
+  },
+  "limitations": [
+    "One false-safe occurred for ATT-2 at batch 1; do not tune it away before root-cause analysis.",
+    "Six conservative rows only tested B and B+1, so their empirical maxima are lower bounds, not exact physical maxima.",
+    "All execution was on one RTX 3050 Laptop GPU under WSL2 and JAX 0.11.0.",
+    "The auto-pressure experiment validates snapshot response but did not execute each auto recommendation."
+  ],
+  "methodology": {
+    "allocator_settings": {
+      "TF_GPU_ALLOCATOR": null,
+      "XLA_CLIENT_MEM_FRACTION": null,
+      "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+      "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+      "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+    },
+    "boundary_definition": "recommended B plus adjacent B+1; larger bracket only when budget allowed",
+    "empirical_max_note": "empirical_max_batch is exact only when an OOM bracket was found; otherwise it is a lower bound on the highest tested FIT batch",
+    "planning_no_target_compilation": true,
+    "planning_no_target_execution": true,
+    "probe_isolation": "one fresh subprocess per batch probe",
+    "validation_compiles_and_executes": true
+  },
+  "planner_commit": "135a646",
+  "raw_records": [
+    "experiments/pilot_MLP-1_2026-09-09.json",
+    "experiments/validation_MLP-2_2026-09-09.json",
+    "experiments/validation_TRAIN-1_2026-09-09.json",
+    "experiments/validation_TRAIN-2_2026-09-09.json",
+    "experiments/validation_ATT-1_2026-09-09_v2.json",
+    "experiments/validation_ATT-2_2026-09-09_v2.json",
+    "experiments/validation_CONV-1_2026-09-09.json",
+    "experiments/validation_CONV-2_2026-09-09.json",
+    "experiments/auto_pressure_MLP-1_2026-09-09_v5.json",
+    "experiments/planner_explicit_monotonicity_v1_2026-09-09.json"
+  ],
+  "status": "PARTIAL",
+  "status_reason": "Eight real planner recommendations were probed, but one false-safe recommendation was observed; positive validation is stopped pending investigation.",
+  "summary": {
+    "conservative_safe_boundaries": 6,
+    "exact_boundaries": 1,
+    "false_safe_count": 1,
+    "false_safe_rate": 0.125,
+    "inconclusive_boundaries": 1,
+    "median_planned_empirical_max_ratio": 0.9998473282442748,
+    "minimum_planned_empirical_max_ratio": 0.9963369963369964,
+    "recommendations_that_fit": 7,
+    "total_boundaries": 8
+  },
+  "tests": {
+    "command": "PYTHONPATH=src:experiments python -m pytest -q",
+    "environment": "WSL2 CUDA JAX 0.11.0",
+    "returncode": 0,
+    "tests": 77
+  },
+  "validation_harness_commit": "3035876b1e914355789b4ee9d67674497861ed2b"
+}

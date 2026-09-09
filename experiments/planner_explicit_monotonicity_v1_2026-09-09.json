@@ -1,0 +1,254 @@
+{
+  "commit": "3035876b1e914355789b4ee9d67674497861ed2b",
+  "rows": [
+    {
+      "family": "MLP",
+      "id": "MLP-1",
+      "points": [
+        {
+          "budget_bytes": 16777216,
+          "evaluations": 22,
+          "monotonic": true,
+          "recommended_batch": 1125,
+          "seconds": 8.988951744002406,
+          "status": "COMPLETE"
+        },
+        {
+          "budget_bytes": 67108864,
+          "evaluations": 26,
+          "monotonic": true,
+          "recommended_batch": 6037,
+          "seconds": 0.34699219599860953,
+          "status": "COMPLETE"
+        },
+        {
+          "budget_bytes": 134217728,
+          "evaluations": 28,
+          "monotonic": true,
+          "recommended_batch": 12587,
+          "seconds": 0.2083794379941537,
+          "status": "COMPLETE"
+        }
+      ],
+      "recommendations_non_decreasing": true
+    },
+    {
+      "family": "MLP",
+      "id": "MLP-2",
+      "points": [
+        {
+          "budget_bytes": 16777216,
+          "evaluations": 22,
+          "monotonic": true,
+          "recommended_batch": 1036,
+          "seconds": 0.24909654899965972,
+          "status": "COMPLETE"
+        },
+        {
+          "budget_bytes": 67108864,
+          "evaluations": 26,
+          "monotonic": true,
+          "recommended_batch": 4720,
+          "seconds": 0.13185878600052092,
+          "status": "COMPLETE"
+        },
+        {
+          "budget_bytes": 134217728,
+          "evaluations": 28,
+          "monotonic": true,
+          "recommended_batch": 9632,
+          "seconds": 0.12329053699795622,
+          "status": "COMPLETE"
+        }
+      ],
+      "recommendations_non_decreasing": true
+    },
+    {
+      "family": "training",
+      "id": "TRAIN-1",
+      "points": [
+        {
+          "budget_bytes": 16777216,
+          "evaluations": 20,
+          "monotonic": true,
+          "recommended_batch": 696,
+          "seconds": 1.240800407002098,
+          "status": "COMPLETE"
+        },
+        {
+          "budget_bytes": 67108864,
+          "evaluations": 24,
+          "monotonic": true,
+          "recommended_batch": 2963,
+          "seconds": 0.8686271390033653,
+          "status": "COMPLETE"
+        },
+        {
+          "budget_bytes": 134217728,
+          "evaluations": 26,
+          "monotonic": true,
+          "recommended_batch": 5986,
+          "seconds": 0.5610060550025082,
+          "status": "COMPLETE"
+        }
+      ],
+      "recommendations_non_decreasing": true
+    },
+    {
+      "family": "training",
+      "id": "TRAIN-2",
+      "points": [
+        {
+          "budget_bytes": 16777216,
+          "evaluations": 20,
+          "monotonic": true,
+          "recommended_batch": 818,
+          "seconds": 0.6300681130014709,
+          "status": "COMPLETE"
+        },
+        {
+          "budget_bytes": 67108864,
+          "evaluations": 24,
+          "monotonic": true,
+          "recommended_batch": 3274,
+          "seconds": 0.5402131869996083,
+          "status": "COMPLETE"
+        },
+        {
+          "budget_bytes": 134217728,
+          "evaluations": 26,
+          "monotonic": true,
+          "recommended_batch": 6549,
+          "seconds": 0.5632943989985506,
+          "status": "COMPLETE"
+        }
+      ],
+      "recommendations_non_decreasing": true
+    },
+    {
+      "family": "attention",
+      "id": "ATT-1",
+      "points": [
+        {
+          "budget_bytes": 2147483648,
+          "evaluations": 2,
+          "monotonic": true,
+          "recommended_batch": 1,
+          "seconds": 0.0955141279991949,
+          "status": "COMPLETE"
+        },
+        {
+          "budget_bytes": 3221225472,
+          "evaluations": 2,
+          "monotonic": true,
+          "recommended_batch": 1,
+          "seconds": 0.0033322279996355064,
+          "status": "COMPLETE"
+        },
+        {
+          "budget_bytes": 4294967296,
+          "evaluations": 4,
+          "monotonic": true,
+          "recommended_batch": 2,
+          "seconds": 0.11203015899809543,
+          "status": "COMPLETE"
+        }
+      ],
+      "recommendations_non_decreasing": true
+    },
+    {
+      "family": "attention",
+      "id": "ATT-2",
+      "points": [
+        {
+          "budget_bytes": 2147483648,
+          "evaluations": 1,
+          "monotonic": true,
+          "recommended_batch": null,
+          "seconds": 0.05950976799795171,
+          "status": "NOTHING_FITS"
+        },
+        {
+          "budget_bytes": 3221225472,
+          "evaluations": 2,
+          "monotonic": true,
+          "recommended_batch": 1,
+          "seconds": 0.048515989001316484,
+          "status": "COMPLETE"
+        },
+        {
+          "budget_bytes": 4294967296,
+          "evaluations": 2,
+          "monotonic": true,
+          "recommended_batch": 1,
+          "seconds": 0.003820837002422195,
+          "status": "COMPLETE"
+        }
+      ],
+      "recommendations_non_decreasing": true
+    },
+    {
+      "family": "convolution",
+      "id": "CONV-1",
+      "points": [
+        {
+          "budget_bytes": 134217728,
+          "evaluations": 14,
+          "monotonic": true,
+          "recommended_batch": 102,
+          "seconds": 0.22574160999647574,
+          "status": "COMPLETE"
+        },
+        {
+          "budget_bytes": 268435456,
+          "evaluations": 16,
+          "monotonic": true,
+          "recommended_batch": 204,
+          "seconds": 0.07873775500047486,
+          "status": "COMPLETE"
+        },
+        {
+          "budget_bytes": 536870912,
+          "evaluations": 18,
+          "monotonic": true,
+          "recommended_batch": 409,
+          "seconds": 0.08540707899373956,
+          "status": "COMPLETE"
+        }
+      ],
+      "recommendations_non_decreasing": true
+    },
+    {
+      "family": "convolution",
+      "id": "CONV-2",
+      "points": [
+        {
+          "budget_bytes": 134217728,
+          "evaluations": 14,
+          "monotonic": true,
+          "recommended_batch": 68,
+          "seconds": 0.16591924899694277,
+          "status": "COMPLETE"
+        },
+        {
+          "budget_bytes": 268435456,
+          "evaluations": 16,
+          "monotonic": true,
+          "recommended_batch": 136,
+          "seconds": 0.1029548370061093,
+          "status": "COMPLETE"
+        },
+        {
+          "budget_bytes": 536870912,
+          "evaluations": 18,
+          "monotonic": true,
+          "recommended_batch": 272,
+          "seconds": 0.27186144900042564,
+          "status": "COMPLETE"
+        }
+      ],
+      "recommendations_non_decreasing": true
+    }
+  ],
+  "status": "COMPUTATIONALLY_VERIFIED"
+}

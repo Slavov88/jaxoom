@@ -1,0 +1,526 @@
+{
+  "commit": "e771f08387bfd1473f8fe349a706eadd3a8be7de",
+  "environment": {
+    "allocator_environment": {
+      "TF_GPU_ALLOCATOR": null,
+      "XLA_CLIENT_MEM_FRACTION": null,
+      "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+      "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+      "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+    },
+    "backend": "gpu",
+    "devices": [
+      "cuda:0"
+    ],
+    "jax_version": "0.11.0",
+    "jaxlib_version": "0.11.0",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "planning_target_compilation": false,
+  "planning_target_execution": false,
+  "rows": [
+    {
+      "absolute_gap": 1,
+      "budget_bytes": 134217728,
+      "classification": "CONSERVATIVE_SAFE",
+      "dimensions": {
+        "input": 512,
+        "output": 512
+      },
+      "dtype": "float32",
+      "empirical_max_batch": 6550,
+      "empirical_max_is_exact": false,
+      "false_safe": false,
+      "family": "training",
+      "id": "TRAIN-2",
+      "memory_mode": "explicit",
+      "next_tested_batch": 6550,
+      "next_tested_outcome": "FIT",
+      "planned_batch": 6549,
+      "planned_batch_fits": true,
+      "planned_empirical_ratio": 0.9998473282442748,
+      "planned_estimated_bytes": 134202701,
+      "planner_evaluations": 26,
+      "planner_monotonic": true,
+      "planner_next_riskier": {
+        "batch_size": 6550,
+        "calibrated": true,
+        "central_bytes": 80486404,
+        "memory_limit_bytes": 134217728,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 80486404,
+        "upper_bytes": 134223193
+      },
+      "planner_seconds": 2.7671947260023444,
+      "planner_status": "COMPLETE",
+      "probe_timeout_seconds": 240.0,
+      "probes": [
+        {
+          "after_compile": {
+            "allocator_fraction_source": null,
+            "allocator_largest_free_block_bytes": 67108864,
+            "allocator_limit_bytes": 3221225472,
+            "allocator_memory_fraction": null,
+            "allocator_mode": "no preallocation",
+            "allocator_preallocate": false,
+            "backend": "gpu",
+            "budget_provenance": "ALLOCATOR_AND_DRIVER",
+            "device_id": 0,
+            "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+            "driver_free_bytes": 3857711104,
+            "driver_used_bytes": 299892736,
+            "effective_available_bytes": 3221225472,
+            "external_used_bytes": 163577856,
+            "jax_bytes_in_use": 35651072,
+            "jax_peak_bytes_in_use": 118050560,
+            "jax_pool_bytes": 136314880,
+            "limitations": [],
+            "measurement_sources": [
+              "nvidia-smi query",
+              "JAX device.memory_stats",
+              "derived available-memory policy"
+            ],
+            "physical_total_bytes": 4294967296,
+            "timestamp": "2026-09-09T21:14:12.595112+00:00"
+          },
+          "after_execute": {
+            "allocator_fraction_source": null,
+            "allocator_largest_free_block_bytes": 67108864,
+            "allocator_limit_bytes": 3221225472,
+            "allocator_memory_fraction": null,
+            "allocator_mode": "no preallocation",
+            "allocator_preallocate": false,
+            "backend": "gpu",
+            "budget_provenance": "ALLOCATOR_AND_DRIVER",
+            "device_id": 0,
+            "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+            "driver_free_bytes": 3857711104,
+            "driver_used_bytes": 299892736,
+            "effective_available_bytes": 3221225472,
+            "external_used_bytes": 163577856,
+            "jax_bytes_in_use": 36699904,
+            "jax_peak_bytes_in_use": 118050560,
+            "jax_pool_bytes": 136314880,
+            "limitations": [],
+            "measurement_sources": [
+              "nvidia-smi query",
+              "JAX device.memory_stats",
+              "derived available-memory policy"
+            ],
+            "physical_total_bytes": 4294967296,
+            "timestamp": "2026-09-09T21:14:13.002549+00:00"
+          },
+          "batch_size": 6549,
+          "before": {
+            "allocator_fraction_source": null,
+            "allocator_largest_free_block_bytes": 0,
+            "allocator_limit_bytes": 3221225472,
+            "allocator_memory_fraction": null,
+            "allocator_mode": "no preallocation",
+            "allocator_preallocate": false,
+            "backend": "gpu",
+            "budget_provenance": "ALLOCATOR_AND_DRIVER",
+            "device_id": 0,
+            "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+            "driver_free_bytes": 4008706048,
+            "driver_used_bytes": 148897792,
+            "effective_available_bytes": 3221225472,
+            "external_used_bytes": 148897792,
+            "jax_bytes_in_use": 0,
+            "jax_peak_bytes_in_use": 0,
+            "jax_pool_bytes": 0,
+            "limitations": [],
+            "measurement_sources": [
+              "nvidia-smi query",
+              "JAX device.memory_stats",
+              "derived available-memory policy"
+            ],
+            "physical_total_bytes": 4294967296,
+            "timestamp": "2026-09-09T21:13:55.459669+00:00"
+          },
+          "compile_seconds": 16.927612227998907,
+          "environment": {
+            "allocator_environment": {
+              "TF_GPU_ALLOCATOR": null,
+              "XLA_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+              "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+            },
+            "backend": "gpu",
+            "devices": [
+              "cuda:0"
+            ],
+            "jax_version": "0.11.0",
+            "jaxlib_version": "0.11.0",
+            "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+            "python": "3.12.3"
+          },
+          "error": null,
+          "execute_seconds": 0.15041934100008802,
+          "failure_phase": null,
+          "outcome": "FIT",
+          "parent_returncode": 0,
+          "parent_wall_seconds": 49.9086766870023,
+          "wall_seconds": 21.815419965001638,
+          "workload_id": "TRAIN-2"
+        },
+        {
+          "after_compile": {
+            "allocator_fraction_source": null,
+            "allocator_largest_free_block_bytes": 67108864,
+            "allocator_limit_bytes": 3221225472,
+            "allocator_memory_fraction": null,
+            "allocator_mode": "no preallocation",
+            "allocator_preallocate": false,
+            "backend": "gpu",
+            "budget_provenance": "ALLOCATOR_AND_DRIVER",
+            "device_id": 0,
+            "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+            "driver_free_bytes": 3857711104,
+            "driver_used_bytes": 299892736,
+            "effective_available_bytes": 3221225472,
+            "external_used_bytes": 163577856,
+            "jax_bytes_in_use": 35651072,
+            "jax_peak_bytes_in_use": 118054656,
+            "jax_pool_bytes": 136314880,
+            "limitations": [],
+            "measurement_sources": [
+              "nvidia-smi query",
+              "JAX device.memory_stats",
+              "derived available-memory policy"
+            ],
+            "physical_total_bytes": 4294967296,
+            "timestamp": "2026-09-09T21:15:13.980639+00:00"
+          },
+          "after_execute": {
+            "allocator_fraction_source": null,
+            "allocator_largest_free_block_bytes": 67108864,
+            "allocator_limit_bytes": 3221225472,
+            "allocator_memory_fraction": null,
+            "allocator_mode": "no preallocation",
+            "allocator_preallocate": false,
+            "backend": "gpu",
+            "budget_provenance": "ALLOCATOR_AND_DRIVER",
+            "device_id": 0,
+            "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+            "driver_free_bytes": 3857711104,
+            "driver_used_bytes": 299892736,
+            "effective_available_bytes": 3221225472,
+            "external_used_bytes": 163577856,
+            "jax_bytes_in_use": 36699904,
+            "jax_peak_bytes_in_use": 118054656,
+            "jax_pool_bytes": 136314880,
+            "limitations": [],
+            "measurement_sources": [
+              "nvidia-smi query",
+              "JAX device.memory_stats",
+              "derived available-memory policy"
+            ],
+            "physical_total_bytes": 4294967296,
+            "timestamp": "2026-09-09T21:15:14.449664+00:00"
+          },
+          "batch_size": 6550,
+          "before": {
+            "allocator_fraction_source": null,
+            "allocator_largest_free_block_bytes": 0,
+            "allocator_limit_bytes": 3221225472,
+            "allocator_memory_fraction": null,
+            "allocator_mode": "no preallocation",
+            "allocator_preallocate": false,
+            "backend": "gpu",
+            "budget_provenance": "ALLOCATOR_AND_DRIVER",
+            "device_id": 0,
+            "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+            "driver_free_bytes": 4008706048,
+            "driver_used_bytes": 148897792,
+            "effective_available_bytes": 3221225472,
+            "external_used_bytes": 148897792,
+            "jax_bytes_in_use": 0,
+            "jax_peak_bytes_in_use": 0,
+            "jax_pool_bytes": 0,
+            "limitations": [],
+            "measurement_sources": [
+              "nvidia-smi query",
+              "JAX device.memory_stats",
+              "derived available-memory policy"
+            ],
+            "physical_total_bytes": 4294967296,
+            "timestamp": "2026-09-09T21:14:52.486299+00:00"
+          },
+          "compile_seconds": 21.03736162700079,
+          "environment": {
+            "allocator_environment": {
+              "TF_GPU_ALLOCATOR": null,
+              "XLA_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+              "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+            },
+            "backend": "gpu",
+            "devices": [
+              "cuda:0"
+            ],
+            "jax_version": "0.11.0",
+            "jaxlib_version": "0.11.0",
+            "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+            "python": "3.12.3"
+          },
+          "error": null,
+          "execute_seconds": 0.03730171400093241,
+          "failure_phase": null,
+          "outcome": "FIT",
+          "parent_returncode": 0,
+          "parent_wall_seconds": 60.188922139997885,
+          "wall_seconds": 25.611599723000836,
+          "workload_id": "TRAIN-2"
+        }
+      ],
+      "relative_gap": 0.00015267175572519084,
+      "trials": [
+        {
+          "batch_size": 1,
+          "calibrated": true,
+          "central_bytes": 2097156,
+          "memory_limit_bytes": 134217728,
+          "risk": "LOW",
+          "structural_peak_bytes": 2097156,
+          "upper_bytes": 3497323
+        },
+        {
+          "batch_size": 2,
+          "calibrated": true,
+          "central_bytes": 2097156,
+          "memory_limit_bytes": 134217728,
+          "risk": "LOW",
+          "structural_peak_bytes": 2097156,
+          "upper_bytes": 3497323
+        },
+        {
+          "batch_size": 4,
+          "calibrated": true,
+          "central_bytes": 2097156,
+          "memory_limit_bytes": 134217728,
+          "risk": "LOW",
+          "structural_peak_bytes": 2097156,
+          "upper_bytes": 3497323
+        },
+        {
+          "batch_size": 8,
+          "calibrated": true,
+          "central_bytes": 2097156,
+          "memory_limit_bytes": 134217728,
+          "risk": "LOW",
+          "structural_peak_bytes": 2097156,
+          "upper_bytes": 3497323
+        },
+        {
+          "batch_size": 16,
+          "calibrated": true,
+          "central_bytes": 2097156,
+          "memory_limit_bytes": 134217728,
+          "risk": "LOW",
+          "structural_peak_bytes": 2097156,
+          "upper_bytes": 3497323
+        },
+        {
+          "batch_size": 32,
+          "calibrated": true,
+          "central_bytes": 2097156,
+          "memory_limit_bytes": 134217728,
+          "risk": "LOW",
+          "structural_peak_bytes": 2097156,
+          "upper_bytes": 3497323
+        },
+        {
+          "batch_size": 64,
+          "calibrated": true,
+          "central_bytes": 2097156,
+          "memory_limit_bytes": 134217728,
+          "risk": "LOW",
+          "structural_peak_bytes": 2097156,
+          "upper_bytes": 3497323
+        },
+        {
+          "batch_size": 128,
+          "calibrated": true,
+          "central_bytes": 2097156,
+          "memory_limit_bytes": 134217728,
+          "risk": "LOW",
+          "structural_peak_bytes": 2097156,
+          "upper_bytes": 3497323
+        },
+        {
+          "batch_size": 256,
+          "calibrated": true,
+          "central_bytes": 3145732,
+          "memory_limit_bytes": 134217728,
+          "risk": "LOW",
+          "structural_peak_bytes": 3145732,
+          "upper_bytes": 5245982
+        },
+        {
+          "batch_size": 512,
+          "calibrated": true,
+          "central_bytes": 6291460,
+          "memory_limit_bytes": 134217728,
+          "risk": "LOW",
+          "structural_peak_bytes": 6291460,
+          "upper_bytes": 10491957
+        },
+        {
+          "batch_size": 1024,
+          "calibrated": true,
+          "central_bytes": 12582916,
+          "memory_limit_bytes": 134217728,
+          "risk": "LOW",
+          "structural_peak_bytes": 12582916,
+          "upper_bytes": 20983906
+        },
+        {
+          "batch_size": 2048,
+          "calibrated": true,
+          "central_bytes": 25165828,
+          "memory_limit_bytes": 134217728,
+          "risk": "LOW",
+          "structural_peak_bytes": 25165828,
+          "upper_bytes": 41967806
+        },
+        {
+          "batch_size": 4096,
+          "calibrated": true,
+          "central_bytes": 50331652,
+          "memory_limit_bytes": 134217728,
+          "risk": "LOW",
+          "structural_peak_bytes": 50331652,
+          "upper_bytes": 83935606
+        },
+        {
+          "batch_size": 6144,
+          "calibrated": true,
+          "central_bytes": 75497476,
+          "memory_limit_bytes": 134217728,
+          "risk": "LOW",
+          "structural_peak_bytes": 75497476,
+          "upper_bytes": 125903405
+        },
+        {
+          "batch_size": 6400,
+          "calibrated": true,
+          "central_bytes": 78643204,
+          "memory_limit_bytes": 134217728,
+          "risk": "LOW",
+          "structural_peak_bytes": 78643204,
+          "upper_bytes": 131149380
+        },
+        {
+          "batch_size": 6528,
+          "calibrated": true,
+          "central_bytes": 80216068,
+          "memory_limit_bytes": 134217728,
+          "risk": "LOW",
+          "structural_peak_bytes": 80216068,
+          "upper_bytes": 133772367
+        },
+        {
+          "batch_size": 6544,
+          "calibrated": true,
+          "central_bytes": 80412676,
+          "memory_limit_bytes": 134217728,
+          "risk": "LOW",
+          "structural_peak_bytes": 80412676,
+          "upper_bytes": 134100241
+        },
+        {
+          "batch_size": 6548,
+          "calibrated": true,
+          "central_bytes": 80461828,
+          "memory_limit_bytes": 134217728,
+          "risk": "LOW",
+          "structural_peak_bytes": 80461828,
+          "upper_bytes": 134182209
+        },
+        {
+          "batch_size": 6549,
+          "calibrated": true,
+          "central_bytes": 80474116,
+          "memory_limit_bytes": 134217728,
+          "risk": "LOW",
+          "structural_peak_bytes": 80474116,
+          "upper_bytes": 134202701
+        },
+        {
+          "batch_size": 6550,
+          "calibrated": true,
+          "central_bytes": 80486404,
+          "memory_limit_bytes": 134217728,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 80486404,
+          "upper_bytes": 134223193
+        },
+        {
+          "batch_size": 6552,
+          "calibrated": true,
+          "central_bytes": 80510980,
+          "memory_limit_bytes": 134217728,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 80510980,
+          "upper_bytes": 134264178
+        },
+        {
+          "batch_size": 6560,
+          "calibrated": true,
+          "central_bytes": 80609284,
+          "memory_limit_bytes": 134217728,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 80609284,
+          "upper_bytes": 134428114
+        },
+        {
+          "batch_size": 6592,
+          "calibrated": true,
+          "central_bytes": 81002500,
+          "memory_limit_bytes": 134217728,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 81002500,
+          "upper_bytes": 135083861
+        },
+        {
+          "batch_size": 6656,
+          "calibrated": true,
+          "central_bytes": 81788932,
+          "memory_limit_bytes": 134217728,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 81788932,
+          "upper_bytes": 136395355
+        },
+        {
+          "batch_size": 7168,
+          "calibrated": true,
+          "central_bytes": 88080388,
+          "memory_limit_bytes": 134217728,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 88080388,
+          "upper_bytes": 146887305
+        },
+        {
+          "batch_size": 8192,
+          "calibrated": true,
+          "central_bytes": 100663300,
+          "memory_limit_bytes": 134217728,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 100663300,
+          "upper_bytes": 167871205
+        }
+      ]
+    }
+  ],
+  "status": "COMPUTATIONALLY_VERIFIED"
+}
