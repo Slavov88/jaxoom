@@ -39,11 +39,12 @@ def base_env(fraction: float) -> dict[str, str]:
 def calibrate_fractions(output: Path, fractions: list[float], timeout: int) -> None:
     rows = []
     probe = (
-        "import json, jax; d=jax.devices()[0]; "
-        "s=d.memory_stats() if hasattr(d, 'memory_stats') else {}; "
+        "import json, jax, jaxoom; d=jax.devices()[0]; "
+        "s=d.memory_stats() if hasattr(d, 'memory_stats') else {}; v=jaxoom.device_memory(); "
         "print(json.dumps({'device':str(d),'device_kind':getattr(d,'device_kind',None),"
         "'backend':jax.default_backend(),'jax_version':jax.__version__,'bytes_limit':s.get('bytes_limit'),"
-        "'bytes_in_use':s.get('bytes_in_use')}))"
+        "'bytes_in_use':s.get('bytes_in_use'),'driver_free_bytes':v.driver_free_bytes,"
+        "'physical_total_bytes':v.physical_total_bytes,'allocator_limit_bytes':v.allocator_limit_bytes}))"
     )
     for fraction in fractions:
         row = run_json([sys.executable, "-c", probe], base_env(fraction), timeout)
