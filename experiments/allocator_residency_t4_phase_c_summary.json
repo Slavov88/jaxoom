@@ -1,0 +1,21 @@
+{
+  "status": "OBSERVED",
+  "refined_count": 7,
+  "new_count": 3,
+  "total_useful_t4_thresholds": 10,
+  "families": {
+    "attention": 5,
+    "transformer": 2,
+    "matmul": 3
+  },
+  "dtypes": {
+    "float32": 6,
+    "float16": 4
+  },
+  "outcomes": {
+    "EXECUTION_OOM": 17,
+    "FIT": 46,
+    "COMPILE_OOM": 7,
+    "EXECUTION_TIMEOUT": 1
+  }
+}

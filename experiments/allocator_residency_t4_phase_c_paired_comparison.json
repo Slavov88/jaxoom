@@ -1,0 +1,45 @@
+{
+  "status": "OBSERVED",
+  "rows": [
+    {
+      "configuration_id": "4d2963f3e1c70c24",
+      "family": "attention",
+      "dtype": "float32",
+      "t4_upper": 1975517184,
+      "rtx_upper": 2363490304,
+      "upper_ratio": 0.8358473824312334
+    },
+    {
+      "configuration_id": "b4147577a0d722ae",
+      "family": "attention",
+      "dtype": "float32",
+      "t4_upper": 2111832064,
+      "rtx_upper": 2363490304,
+      "upper_ratio": 0.8935226264418811
+    },
+    {
+      "configuration_id": "bdb3421b7da45ee4",
+      "family": "attention",
+      "dtype": "float32",
+      "t4_upper": 3323985920,
+      "rtx_upper": 3307208704,
+      "upper_ratio": 1.0050729232720355
+    },
+    {
+      "configuration_id": "a3fdaea2d5ee4dab",
+      "family": "attention",
+      "dtype": "float16",
+      "t4_upper": 1740636160,
+      "rtx_upper": 1933574144,
+      "upper_ratio": 0.9002169197396963
+    },
+    {
+      "configuration_id": "1d992aa04c602165",
+      "family": "matmul",
+      "dtype": "float32",
+      "t4_upper": 1681915904,
+      "rtx_upper": 1933574144,
+      "upper_ratio": 0.8698481561822126
+    }
+  ]
+}

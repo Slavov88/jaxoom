@@ -1,0 +1,27 @@
+{
+  "combined_bracket_metrics": {
+    "count": 10,
+    "count_le_64_mib": 6,
+    "max_width_bytes": 312475648,
+    "median_width_bytes": 58720256.0
+  },
+  "dtypes": {
+    "float16": 4,
+    "float32": 6
+  },
+  "families": {
+    "attention": 5,
+    "matmul": 3,
+    "transformer": 2
+  },
+  "new_count": 3,
+  "outcomes": {
+    "COMPILE_OOM": 7,
+    "EXECUTION_OOM": 17,
+    "EXECUTION_TIMEOUT": 1,
+    "FIT": 46
+  },
+  "refined_count": 7,
+  "status": "OBSERVED",
+  "total_useful_t4_thresholds": 10
+}

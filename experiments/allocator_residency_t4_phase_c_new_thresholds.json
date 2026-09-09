@@ -1,0 +1,45 @@
+{
+  "status": "OBSERVED",
+  "rows": [
+    {
+      "configuration_id": "f9632d6960319a15",
+      "family": "transformer",
+      "configuration": {
+        "heads": 8,
+        "sequence": 3072,
+        "width": 2048
+      },
+      "dtype": "float16",
+      "known_oom_capacity": 782237696,
+      "known_fit_capacity": 939524096,
+      "bracket_width_bytes": 157286400
+    },
+    {
+      "configuration_id": "0f21bd4d0d66760b",
+      "family": "matmul",
+      "configuration": {
+        "batch": 1,
+        "k": 10240,
+        "m": 10240,
+        "n": 10240
+      },
+      "dtype": "float16",
+      "known_oom_capacity": 1409286144,
+      "known_fit_capacity": 1564475392,
+      "bracket_width_bytes": 155189248
+    },
+    {
+      "configuration_id": "72393cb9433dd83f",
+      "family": "attention",
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 3840
+      },
+      "dtype": "float16",
+      "known_oom_capacity": 939524096,
+      "known_fit_capacity": 1094713344,
+      "bracket_width_bytes": 155189248
+    }
+  ]
+}

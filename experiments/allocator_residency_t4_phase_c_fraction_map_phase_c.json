@@ -1,0 +1,149 @@
+{
+  "rows": [
+    {
+      "allocator_limit_bytes": 782237696,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 782237696,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.05
+    },
+    {
+      "allocator_limit_bytes": 939524096,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 939524096,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.06
+    },
+    {
+      "allocator_limit_bytes": 1094713344,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 1094713344,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.07
+    },
+    {
+      "allocator_limit_bytes": 1251999744,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 1251999744,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.08
+    },
+    {
+      "allocator_limit_bytes": 1409286144,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 1409286144,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.09
+    },
+    {
+      "allocator_limit_bytes": 1564475392,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 1564475392,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.1
+    },
+    {
+      "allocator_limit_bytes": 1876951040,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 1876951040,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.12
+    },
+    {
+      "allocator_limit_bytes": 2346713088,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 2346713088,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.15
+    },
+    {
+      "allocator_limit_bytes": 3128950784,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 3128950784,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.2
+    },
+    {
+      "allocator_limit_bytes": 3911188480,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 3911188480,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.25
+    },
+    {
+      "allocator_limit_bytes": 4691329024,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 4691329024,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.3
+    },
+    {
+      "allocator_limit_bytes": 5473566720,
+      "backend": "gpu",
+      "bytes_in_use": 0,
+      "bytes_limit": 5473566720,
+      "device": "cuda:0",
+      "device_kind": "Tesla T4",
+      "driver_free_bytes": null,
+      "jax_version": "0.11.0",
+      "physical_total_bytes": null,
+      "requested_fraction": 0.35
+    }
+  ],
+  "status": "OBSERVED"
+}
