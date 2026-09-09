@@ -1,0 +1,44 @@
+{
+  "status": "COMPUTATIONALLY_VERIFIED",
+  "environment": {
+    "backend": "gpu",
+    "device": "cuda:0",
+    "jax_version": "0.11.0"
+  },
+  "scenarios": 12,
+  "workloads": {
+    "mlp": 3,
+    "training_like": 3,
+    "attention": 3,
+    "convolution": 3
+  },
+  "recommended_batches": [
+    128,
+    128,
+    128,
+    128,
+    128,
+    128,
+    128,
+    128,
+    128,
+    128,
+    128,
+    128
+  ],
+  "evaluations_total": 96,
+  "planner_latency_ms_total": 7827.625550999073,
+  "actual_recommended_fit": 12,
+  "false_safe_count": 0,
+  "conservative_miss_count": 0,
+  "upper_bound_reached": 12,
+  "external_occupancy": "NOT_RUN",
+  "explicit_budget_monotonic": true,
+  "target_compilation_during_planning": false,
+  "target_execution_during_planning": false,
+  "limitations": [
+    "All tested workloads reached the configured maximum batch size 128; no next-riskier batch was available.",
+    "External occupancy scenarios were not run.",
+    "A FIT result is execution validation, not a runtime guarantee."
+  ]
+}

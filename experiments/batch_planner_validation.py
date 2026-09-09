@@ -38,9 +38,9 @@ def workloads():
 
     return {
         "mlp": (lambda x, w: jnp.tanh(x @ w), mlp),
-        "training_like": (lambda x, target, params: jnp.mean((x + params[0] - target) ** 2), training),
+        "training_like": (lambda x, target, params: jnp.mean((x + params[0, 0, :] - target) ** 2), training),
         "attention": (lambda q, k, v: jnp.einsum("bhd,bhe->bhde", q, k) + v[:, :, :, None], attention),
-        "convolution": (lambda x, kernel: jax.lax.conv_general_dilated(x, kernel, (1, 1), "SAME", dimension_numbers=("NHWC", "HWIO")), convolution),
+        "convolution": (lambda x, kernel: jax.lax.conv_general_dilated(x, kernel, (1, 1), "SAME", dimension_numbers=("NHWC", "HWIO", "NHWC")), convolution),
     }
 
 
