@@ -458,27 +458,27 @@ def _run_boundary(args: argparse.Namespace) -> dict[str, Any]:
     return row
 
 
-def _run_auto_pressure(args: argparse.Namespace) -> list[dict[str, Any]]:
+def _auto_pressure_child(args: argparse.Namespace) -> None:
     workload = workloads()[args.pressure_workload]
-    rows = []
-    for pressure_bytes in args.pressure_bytes:
-        allocation = None
-        try:
-            before = _snapshot()
-            if pressure_bytes:
-                allocation = jnp.ones((pressure_bytes // 4,), jnp.float32)
-                allocation.block_until_ready()
-            occupied = _snapshot()
-            started = time.perf_counter()
-            plan = jaxoom.plan_batch_size(
-                workload.fn,
-                lambda batch: workload.args(batch, False),
-                memory_limit="auto",
-                min_batch_size=1,
-                max_batch_size=args.auto_max_batch,
-                max_evaluations=args.max_evaluations,
-            )
-            rows.append(
+    pressure_bytes = args.pressure_bytes[0]
+    allocation = None
+    try:
+        before = _snapshot()
+        if pressure_bytes:
+            allocation = jnp.ones((pressure_bytes // 4,), jnp.float32)
+            allocation.block_until_ready()
+        occupied = _snapshot()
+        started = time.perf_counter()
+        plan = jaxoom.plan_batch_size(
+            workload.fn,
+            lambda batch: workload.args(batch, False),
+            memory_limit="auto",
+            min_batch_size=1,
+            max_batch_size=args.auto_max_batch,
+            max_evaluations=args.max_evaluations,
+        )
+        print(
+            json.dumps(
                 {
                     "pressure_bytes_requested": pressure_bytes,
                     "before": before,
@@ -488,11 +488,65 @@ def _run_auto_pressure(args: argparse.Namespace) -> list[dict[str, Any]]:
                     "planner_status": plan.status,
                     "planner_seconds": time.perf_counter() - started,
                     "device_budget": dataclasses.asdict(plan.device_budget) if plan.device_budget else None,
-                }
+                },
+                sort_keys=True,
+            ),
+            flush=True,
+        )
+    except Exception as exc:
+        print(
+            json.dumps(
+                {
+                    "pressure_bytes_requested": pressure_bytes,
+                    "outcome": "OOM" if _is_oom(f"{type(exc).__name__}: {exc}") else "OTHER_FAILURE",
+                    "error": f"{type(exc).__name__}: {exc}",
+                },
+                sort_keys=True,
+            ),
+            flush=True,
+        )
+        raise SystemExit(2)
+
+
+def _run_auto_pressure(args: argparse.Namespace) -> list[dict[str, Any]]:
+    rows = []
+    for pressure_bytes in args.pressure_bytes:
+        command = [
+            sys.executable,
+            __file__,
+            "--auto-pressure-child",
+            "--pressure-workload",
+            args.pressure_workload,
+            "--pressure-bytes",
+            str(pressure_bytes),
+            "--auto-max-batch",
+            str(args.auto_max_batch),
+            "--max-evaluations",
+            str(args.max_evaluations),
+        ]
+        try:
+            completed = subprocess.run(
+                command,
+                check=False,
+                capture_output=True,
+                text=True,
+                timeout=args.probe_timeout,
+                env=os.environ.copy(),
             )
-        finally:
-            del allocation
-            jax.clear_caches()
+            lines = [line for line in completed.stdout.splitlines() if line.strip()]
+            row = json.loads(lines[-1]) if lines else {
+                "pressure_bytes_requested": pressure_bytes,
+                "outcome": "OOM" if _is_oom(completed.stderr) else "OTHER_FAILURE",
+                "error": completed.stderr[-4000:],
+            }
+            row["parent_returncode"] = completed.returncode
+        except subprocess.TimeoutExpired as exc:
+            row = {
+                "pressure_bytes_requested": pressure_bytes,
+                "outcome": "TIMEOUT",
+                "error": str(exc),
+            }
+        rows.append(row)
     return rows
 
 
@@ -508,6 +562,7 @@ def main() -> None:
     parser.add_argument("--probe", action="store_true")
     parser.add_argument("--batch", type=int)
     parser.add_argument("--auto-pressure", action="store_true")
+    parser.add_argument("--auto-pressure-child", action="store_true")
     parser.add_argument("--pressure-workload", default="ATT-1", choices=sorted(workloads()))
     parser.add_argument("--pressure-bytes", type=int, nargs="+", default=[0, 256 * 1024**2, 512 * 1024**2])
     parser.add_argument("--auto-max-batch", type=int, default=65536)
@@ -517,6 +572,9 @@ def main() -> None:
         if args.workload is None or args.batch is None:
             parser.error("--probe requires --workload and --batch")
         _probe(args.workload, args.batch)
+    if args.auto_pressure_child:
+        _auto_pressure_child(args)
+        return
     if args.output is None:
         parser.error("--output is required outside probe mode")
     payload: dict[str, Any] = {
