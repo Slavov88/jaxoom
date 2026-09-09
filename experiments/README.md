@@ -106,6 +106,10 @@ PYTHONPATH=src:experiments python experiments/batch_planner_validation.py \
 
 Planning itself does not compile or execute the target. Add
 `--validate-execution` only for the explicit post-planning GPU harness step.
+The focused RTX 3050 boundary validation is recorded in
+`batch_planner_boundary_validation_report_2026-09-09.md`. It exercised
+interior, upper-bound, nothing-fits, and bounded auto-pressure scenarios and
+reported the calibrated-upper criterion as conservative for that sample.
 
 The original allocator-residency harness remains available:
 
