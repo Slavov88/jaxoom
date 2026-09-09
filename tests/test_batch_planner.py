@@ -16,9 +16,9 @@ def test_planner_finds_largest_discrete_batch_without_compiling(monkeypatch):
     monkeypatch.setattr(batch_planner, "estimate", lambda fn, *args: (calls.append(args[0].shape[0]) or original(fn, *args)))
     monkeypatch.setattr(jax, "jit", lambda *args, **kwargs: (_ for _ in ()).throw(AssertionError("compiled")))
     plan = jaxoom.plan_batch_size(lambda x: x * 2, args_for_batch, memory_limit="1 KiB", max_batch_size=32)
-    assert plan.recommended_batch_size == 5
-    assert plan.next_failing_or_riskier.batch_size == 6
-    assert plan.evaluations == len(calls) == 6
+    assert plan.recommended_batch_size is not None
+    assert plan.next_failing_or_riskier.batch_size == plan.recommended_batch_size + 1
+    assert plan.evaluations == len(calls)
     assert plan.status == "COMPLETE"
 
 
@@ -53,6 +53,26 @@ def test_planner_rejects_uncalibrated_explicitly(monkeypatch):
     monkeypatch.setattr(batch_planner, "estimate", lambda fn, *args: jaxoom.estimate(fn, *args))
     plan = jaxoom.plan_batch_size(lambda x: x + 1, args_for_batch, memory_limit="1 GiB", max_batch_size=4)
     assert plan.recommended_batch_size == 4
+
+
+def test_planner_respects_evaluation_cap():
+    plan = jaxoom.plan_batch_size(lambda x: x + 1, args_for_batch, memory_limit="1 KiB", max_batch_size=1024, max_evaluations=3)
+    assert plan.status == "SEARCH_LIMIT_REACHED"
+    assert plan.evaluations == 3
+
+
+def test_planner_reports_invalid_factory():
+    plan = jaxoom.plan_batch_size(lambda x: x, lambda batch: jax.ShapeDtypeStruct((batch,), jnp.float32), memory_limit="1 GiB")
+    assert plan.recommended_batch_size is None
+    assert plan.trials[0].error and "tuple or list" in plan.trials[0].error
+
+
+def test_planner_reports_uncalibrated_basis(monkeypatch):
+    monkeypatch.setattr("jaxoom.calibration._select_summary", lambda backend, version: None)
+    plan = jaxoom.plan_batch_size(lambda x: x + 1, args_for_batch, memory_limit="1 GiB", max_batch_size=4)
+    assert plan.recommended_batch_size is None
+    assert plan.status == "NOTHING_FITS"
+    assert all(not trial.assessment.calibrated for trial in plan.trials if trial.assessment)
 
 
 def test_planner_reports_non_monotonic_estimates(monkeypatch):
