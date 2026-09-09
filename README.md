@@ -123,6 +123,36 @@ EXECUTION_OOM outcomes. This device-specific result is diagnostic evidence, not
 a general OOM accuracy claim. See
 `experiments/oom_boundary_validation_report_2026-09-08.md`.
 
+## Pre-compilation batch planning
+
+`plan_batch_size()` searches discrete batch sizes using only abstract tracing,
+structural estimation, calibration, and one frozen auto-device budget snapshot.
+The factory makes the batch-to-argument shape relationship explicit:
+
+```python
+
+def args_for_batch(batch):
+    return (jax.ShapeDtypeStruct((batch, 4096), jnp.float32),)
+
+plan = jaxoom.plan_batch_size(
+    fn,
+    args_for_batch,
+    memory_limit="auto",
+    min_batch_size=1,
+    max_batch_size=1024,
+)
+plan.print()
+```
+
+The planner uses geometric expansion followed by integer binary search and
+returns both the largest conservatively assessed batch and the next tested
+riskier batch. Its conservative criterion is a calibrated upper bound no
+larger than the selected budget. If calibration is unavailable, no batch is
+reported as conservatively fitting. Planning does not compile or execute the
+target function. The auto-device budget is sampled once at planning start and
+is not reserved; this remains a risk assessment rather than a runtime fit
+guarantee.
+
 ## Compiler-confirmed donation advice
 
 `analyze_donation()` compares ordinary and donated compilations for positional

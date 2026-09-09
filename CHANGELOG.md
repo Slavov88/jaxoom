@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Added compilation-free discrete batch-size planning through `plan_batch_size()`.
+- Closed the allocator-residency investigation without shipping a residency predictor.
+
+## Unreleased
+
 - Added static sequential JAXPR live-value analysis.
 - Added compiler-backed memory accounting and static/compiler comparison.
 - Added CPU and NVIDIA GPU calibration experiments.
