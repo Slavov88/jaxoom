@@ -3,11 +3,14 @@ import jax.numpy as jnp
 
 import jaxoom
 from jaxoom import batch_planner
-from jaxoom.types import DeviceBudget, DeviceMemorySnapshot
+from jaxoom.types import CalibrationSummary, DeviceBudget, DeviceMemorySnapshot
 
 
 def args_for_batch(batch):
     return (jax.ShapeDtypeStruct((batch, 8), jnp.float32),)
+
+
+SUMMARY = CalibrationSummary("test", "test", "0.6", "test", 1, (), "test", 1.0, 1.0, 1.0, 0.95, "EXACT_TESTED", (), ("0.6.2", "0.11.0"))
 
 
 def test_planner_finds_largest_discrete_batch_without_compiling(monkeypatch):
@@ -15,7 +18,7 @@ def test_planner_finds_largest_discrete_batch_without_compiling(monkeypatch):
     original = batch_planner.estimate
     monkeypatch.setattr(batch_planner, "estimate", lambda fn, *args: (calls.append(args[0].shape[0]) or original(fn, *args)))
     monkeypatch.setattr(jax, "jit", lambda *args, **kwargs: (_ for _ in ()).throw(AssertionError("compiled")))
-    plan = jaxoom.plan_batch_size(lambda x: x * 2, args_for_batch, memory_limit="1 KiB", max_batch_size=32)
+    plan = jaxoom.plan_batch_size(lambda x: x * 2, args_for_batch, memory_limit="1 KiB", max_batch_size=32, summary=SUMMARY)
     assert plan.recommended_batch_size is not None
     assert plan.next_failing_or_riskier.batch_size == plan.recommended_batch_size + 1
     assert plan.evaluations == len(calls)
@@ -27,7 +30,7 @@ def test_planner_nothing_and_everything_fit():
     none = jaxoom.plan_batch_size(fn, args_for_batch, memory_limit=1, max_batch_size=8)
     assert none.recommended_batch_size is None
     assert none.status == "NOTHING_FITS"
-    all_fit = jaxoom.plan_batch_size(fn, args_for_batch, memory_limit="1 GiB", max_batch_size=8)
+    all_fit = jaxoom.plan_batch_size(fn, args_for_batch, memory_limit="1 GiB", max_batch_size=8, summary=SUMMARY)
     assert all_fit.recommended_batch_size == 8
     assert all_fit.upper_bound_reached
 
@@ -49,14 +52,14 @@ def test_planner_uses_one_frozen_auto_budget(monkeypatch):
     assert plan.memory_limit_source == "AUTO_DEVICE_SNAPSHOT"
 
 
-def test_planner_rejects_uncalibrated_explicitly(monkeypatch):
+def test_planner_accepts_explicit_calibration_summary(monkeypatch):
     monkeypatch.setattr(batch_planner, "estimate", lambda fn, *args: jaxoom.estimate(fn, *args))
-    plan = jaxoom.plan_batch_size(lambda x: x + 1, args_for_batch, memory_limit="1 GiB", max_batch_size=4)
+    plan = jaxoom.plan_batch_size(lambda x: x + 1, args_for_batch, memory_limit="1 GiB", max_batch_size=4, summary=SUMMARY)
     assert plan.recommended_batch_size == 4
 
 
 def test_planner_respects_evaluation_cap():
-    plan = jaxoom.plan_batch_size(lambda x: x + 1, args_for_batch, memory_limit="1 KiB", max_batch_size=1024, max_evaluations=3)
+    plan = jaxoom.plan_batch_size(lambda x: x + 1, args_for_batch, memory_limit="1 KiB", max_batch_size=1024, max_evaluations=3, summary=SUMMARY)
     assert plan.status == "SEARCH_LIMIT_REACHED"
     assert plan.evaluations == 3
 
@@ -88,6 +91,6 @@ def test_planner_reports_non_monotonic_estimates(monkeypatch):
     monkeypatch.setattr(batch_planner, "estimate", fake_estimate)
     def larger_args(batch):
         return (jax.ShapeDtypeStruct((batch, 1024), jnp.float32),)
-    plan = jaxoom.plan_batch_size(lambda x: x + 1, larger_args, memory_limit="1 MiB", max_batch_size=8)
+    plan = jaxoom.plan_batch_size(lambda x: x + 1, larger_args, memory_limit="1 MiB", max_batch_size=8, summary=SUMMARY)
     assert plan.status == "NON_MONOTONIC"
     assert not plan.monotonic
