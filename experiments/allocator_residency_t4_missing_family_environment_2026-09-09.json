@@ -1,0 +1,9 @@
+{
+  "device": "cuda:0",
+  "device_kind": "Tesla T4",
+  "jax_version": "0.11.0",
+  "jaxlib_version": "0.11.0",
+  "backend": "gpu",
+  "pinned_commit": "78fadda8bcb16adbd02f8035705297c3c41f5d3a",
+  "preallocate": false
+}

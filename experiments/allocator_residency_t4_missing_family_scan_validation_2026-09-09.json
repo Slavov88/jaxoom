@@ -1,0 +1,23 @@
+{
+  "status": "OBSERVED",
+  "rows": [
+    {
+      "family": "mlp_scan",
+      "equation_count": 1,
+      "scan_count": 1,
+      "structural_peak_bytes": 1088
+    },
+    {
+      "family": "training_scan",
+      "equation_count": 20,
+      "scan_count": 2,
+      "structural_peak_bytes": 3204
+    },
+    {
+      "family": "autodiff_scan",
+      "equation_count": 8,
+      "scan_count": 2,
+      "structural_peak_bytes": 2436
+    }
+  ]
+}

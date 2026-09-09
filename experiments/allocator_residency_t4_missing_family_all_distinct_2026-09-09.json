@@ -1,0 +1,192 @@
+{
+  "status": "OBSERVED",
+  "rows": [
+    {
+      "bracket_width_bytes": 58720256,
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 3584
+      },
+      "configuration_id": "4d2963f3e1c70c24",
+      "dtype": "float32",
+      "family": "attention",
+      "known_fit_capacity": 1975517184,
+      "known_oom_capacity": 1916796928
+    },
+    {
+      "bracket_width_bytes": 39845888,
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 3840
+      },
+      "configuration_id": "b4147577a0d722ae",
+      "dtype": "float32",
+      "family": "attention",
+      "known_fit_capacity": 2111832064,
+      "known_oom_capacity": 2071986176
+    },
+    {
+      "bracket_width_bytes": 50331648,
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 4096
+      },
+      "configuration_id": "bdb3421b7da45ee4",
+      "dtype": "float32",
+      "family": "attention",
+      "known_fit_capacity": 3275751424,
+      "known_oom_capacity": 3225419776
+    },
+    {
+      "bracket_width_bytes": 58720256,
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 4096
+      },
+      "configuration_id": "a3fdaea2d5ee4dab",
+      "dtype": "float16",
+      "family": "attention",
+      "known_fit_capacity": 1740636160,
+      "known_oom_capacity": 1681915904
+    },
+    {
+      "configuration_id": "98a93c8c74327b13",
+      "family": "transformer",
+      "configuration": {
+        "heads": 8,
+        "sequence": 3072,
+        "width": 2048
+      },
+      "dtype": "float32",
+      "known_oom_capacity": 1876951040,
+      "known_fit_capacity": 2346713088,
+      "bracket_width_bytes": 469762048
+    },
+    {
+      "bracket_width_bytes": 58720256,
+      "configuration": {
+        "batch": 1,
+        "k": 8192,
+        "m": 8192,
+        "n": 8192
+      },
+      "configuration_id": "1d992aa04c602165",
+      "dtype": "float32",
+      "family": "matmul",
+      "known_fit_capacity": 1681915904,
+      "known_oom_capacity": 1623195648
+    },
+    {
+      "bracket_width_bytes": 312475648,
+      "configuration": {
+        "batch": 1,
+        "k": 10240,
+        "m": 10240,
+        "n": 10240
+      },
+      "configuration_id": "6e9bab1c12a484e0",
+      "dtype": "float32",
+      "family": "matmul",
+      "known_fit_capacity": 2659188736,
+      "known_oom_capacity": 2346713088
+    },
+    {
+      "configuration_id": "f9632d6960319a15",
+      "family": "transformer",
+      "configuration": {
+        "heads": 8,
+        "sequence": 3072,
+        "width": 2048
+      },
+      "dtype": "float16",
+      "known_oom_capacity": 782237696,
+      "known_fit_capacity": 939524096,
+      "bracket_width_bytes": 157286400
+    },
+    {
+      "configuration_id": "0f21bd4d0d66760b",
+      "family": "matmul",
+      "configuration": {
+        "batch": 1,
+        "k": 10240,
+        "m": 10240,
+        "n": 10240
+      },
+      "dtype": "float16",
+      "known_oom_capacity": 1409286144,
+      "known_fit_capacity": 1564475392,
+      "bracket_width_bytes": 155189248
+    },
+    {
+      "configuration_id": "72393cb9433dd83f",
+      "family": "attention",
+      "configuration": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 3840
+      },
+      "dtype": "float16",
+      "known_oom_capacity": 939524096,
+      "known_fit_capacity": 1094713344,
+      "bracket_width_bytes": 155189248
+    },
+    {
+      "configuration_id": "936cef2f5423ca94",
+      "family": "convolution",
+      "configuration": {
+        "batch": 4,
+        "channels": 96,
+        "height": 512,
+        "out_channels": 192,
+        "width": 512
+      },
+      "dtype": "float32",
+      "known_oom_capacity": 627048448,
+      "known_fit_capacity": 5473566720,
+      "bracket_width_bytes": 4846518272
+    },
+    {
+      "configuration_id": "9166f0287c0a9aae",
+      "family": "autodiff_scan",
+      "configuration": {
+        "batch": 128,
+        "layers": 64,
+        "width": 1536
+      },
+      "dtype": "float32",
+      "known_oom_capacity": 1564475392,
+      "known_fit_capacity": 1876951040,
+      "bracket_width_bytes": 312475648
+    },
+    {
+      "configuration_id": "404726769fd86b46",
+      "family": "autodiff_scan",
+      "configuration": {
+        "batch": 256,
+        "layers": 64,
+        "width": 1536
+      },
+      "dtype": "float32",
+      "known_oom_capacity": 1564475392,
+      "known_fit_capacity": 1876951040,
+      "bracket_width_bytes": 312475648
+    },
+    {
+      "configuration_id": "9fad9baf12629329",
+      "family": "training_scan",
+      "configuration": {
+        "batch": 128,
+        "layers": 32,
+        "width": 1536
+      },
+      "dtype": "float16",
+      "known_oom_capacity": 939524096,
+      "known_fit_capacity": 1094713344,
+      "bracket_width_bytes": 155189248
+    }
+  ]
+}
