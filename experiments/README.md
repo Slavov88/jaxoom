@@ -104,9 +104,27 @@ PYTHONPATH=src:experiments python experiments/batch_planner_validation.py \
   --output experiments/batch_planner_validation_YYYY-MM-DD.json
 ```
 
-Planning itself does not compile or execute the target. Add
-`--validate-execution` only for the explicit post-planning GPU harness step.
-The focused RTX 3050 boundary validation is recorded in
+The isolated empirical boundary harness is:
+
+```bash
+XLA_PYTHON_CLIENT_PREALLOCATE=false PYTHONPATH=src:experiments \
+  python experiments/planner_boundary_validation_v1.py \
+  --output experiments/planner_boundaries_YYYY-MM-DD.json \
+  --workload MLP-1 --budget-bytes 134217728
+```
+
+The 2026-09-09 eight-workload matrix is summarized in
+`reports/PLANNER_BOUNDARY_VALIDATION_V1.md` and stored in
+`reports/planner_boundaries_v1.json`. It is **PARTIAL**, not a safety
+validation: seven recommendations fit, one large-attention recommendation was
+false-safe. Every recommendation and adjacent larger batch was run in a fresh
+subprocess; six conservative cases stopped at `B+1` rather than claiming an
+exact physical maximum. Explicit-budget monotonicity passed, and real device
+pressure produced non-increasing auto recommendations.
+
+Planning itself does not compile or execute the target. The boundary harness
+performs validation only after planning, in fresh subprocesses. The focused RTX
+3050 boundary validation is recorded in
 `batch_planner_boundary_validation_report_2026-09-09.md`. It exercised
 interior, upper-bound, nothing-fits, and bounded auto-pressure scenarios and
 reported the calibrated-upper criterion as conservative for that sample.

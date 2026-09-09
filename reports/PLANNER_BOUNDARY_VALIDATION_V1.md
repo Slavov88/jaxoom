@@ -171,6 +171,7 @@ Raw record: `experiments/auto_pressure_MLP-1_2026-09-09_v5.json`.
 4. Runtime device snapshots include allocator and driver observations; precise execution-only peak memory is not claimed.
 5. Auto-pressure recommendations were not separately compiled/executed.
 6. A pre-existing `batch_planner_runtime_gap_validation.py` experiment was not incorporated into this report because its workload matrix and checkpoint were separate from this controlled eight-row matrix.
+7. Early harness pilots are retained but excluded from the aggregate: one exposed a list/scalar pressure-plumbing bug, and another hit OOM while creating a 2.5 GiB pressure allocation before planning. The final pressure run uses fresh processes and the corrected plumbing.
 
 ## FINAL VERDICT
 

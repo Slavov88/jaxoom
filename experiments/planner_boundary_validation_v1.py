@@ -567,6 +567,7 @@ def main() -> None:
     parser.add_argument("--pressure-bytes", type=int, nargs="+", default=[0, 256 * 1024**2, 512 * 1024**2])
     parser.add_argument("--auto-max-batch", type=int, default=65536)
     parser.add_argument("--plan-only", action="store_true")
+    parser.add_argument("--summary", action="store_true", help="print a concise human-readable result")
     args = parser.parse_args()
     if args.probe:
         if args.workload is None or args.batch is None:
@@ -595,6 +596,24 @@ def main() -> None:
         parser.error("provide --workload/--budget-bytes or --auto-pressure")
     payload["status"] = "COMPUTATIONALLY_VERIFIED"
     args.output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    if args.summary:
+        if payload["rows"]:
+            row = payload["rows"][0]
+            print(
+                f"{row['id']}: planned={row['planned_batch']} "
+                f"fits={row['planned_batch_fits']} "
+                f"next={row.get('next_tested_batch')} "
+                f"outcome={row.get('next_tested_outcome')} "
+                f"classification={row['classification']}"
+            )
+        elif payload.get("auto_pressure"):
+            for row in payload["auto_pressure"]:
+                print(
+                    f"pressure={row['pressure_bytes_requested']} "
+                    f"free={row.get('after_allocation', {}).get('driver_free_bytes')} "
+                    f"budget={row.get('frozen_auto_budget_bytes')} "
+                    f"recommended={row.get('recommended_batch')}"
+                )
 
 
 def _git_commit() -> str | None:

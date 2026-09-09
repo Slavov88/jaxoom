@@ -1,0 +1,171 @@
+{
+  "commit": "e771f08387bfd1473f8fe349a706eadd3a8be7de",
+  "environment": {
+    "allocator_environment": {
+      "TF_GPU_ALLOCATOR": null,
+      "XLA_CLIENT_MEM_FRACTION": null,
+      "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+      "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+      "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+    },
+    "backend": "gpu",
+    "devices": [
+      "cuda:0"
+    ],
+    "jax_version": "0.11.0",
+    "jaxlib_version": "0.11.0",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "planning_target_compilation": false,
+  "planning_target_execution": false,
+  "rows": [
+    {
+      "absolute_gap": null,
+      "budget_bytes": 3221225472,
+      "classification": "INVALID/INCONCLUSIVE",
+      "dimensions": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 4096
+      },
+      "dtype": "float32",
+      "empirical_max_batch": null,
+      "empirical_max_is_exact": false,
+      "false_safe": true,
+      "family": "attention",
+      "id": "ATT-1",
+      "memory_mode": "explicit",
+      "next_tested_batch": null,
+      "next_tested_outcome": null,
+      "planned_batch": 1,
+      "planned_batch_fits": false,
+      "planned_empirical_ratio": null,
+      "planned_estimated_bytes": 1804833959,
+      "planner_evaluations": 2,
+      "planner_monotonic": true,
+      "planner_next_riskier": {
+        "batch_size": 2,
+        "calibrated": true,
+        "central_bytes": 2164523008,
+        "memory_limit_bytes": 3221225472,
+        "risk": "MODERATE",
+        "structural_peak_bytes": 2164523008,
+        "upper_bytes": 3609667918
+      },
+      "planner_seconds": 0.7867457389947958,
+      "planner_status": "COMPLETE",
+      "probe_timeout_seconds": 300.0,
+      "probes": [
+        {
+          "after_compile": {
+            "allocator_fraction_source": null,
+            "allocator_largest_free_block_bytes": 1073741824,
+            "allocator_limit_bytes": 3221225472,
+            "allocator_memory_fraction": null,
+            "allocator_mode": "no preallocation",
+            "allocator_preallocate": false,
+            "backend": "gpu",
+            "budget_provenance": "ALLOCATOR_AND_DRIVER",
+            "device_id": 0,
+            "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+            "driver_free_bytes": 1810890752,
+            "driver_used_bytes": 2346713088,
+            "effective_available_bytes": 1810890752,
+            "external_used_bytes": 163577856,
+            "jax_bytes_in_use": 33554432,
+            "jax_peak_bytes_in_use": 1157627904,
+            "jax_pool_bytes": 2183135232,
+            "limitations": [],
+            "measurement_sources": [
+              "nvidia-smi query",
+              "JAX device.memory_stats",
+              "derived available-memory policy"
+            ],
+            "physical_total_bytes": 4294967296,
+            "timestamp": "2026-09-09T21:17:52.493173+00:00"
+          },
+          "after_execute": null,
+          "batch_size": 1,
+          "before": {
+            "allocator_fraction_source": null,
+            "allocator_largest_free_block_bytes": 0,
+            "allocator_limit_bytes": 3221225472,
+            "allocator_memory_fraction": null,
+            "allocator_mode": "no preallocation",
+            "allocator_preallocate": false,
+            "backend": "gpu",
+            "budget_provenance": "ALLOCATOR_AND_DRIVER",
+            "device_id": 0,
+            "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+            "driver_free_bytes": 4008706048,
+            "driver_used_bytes": 148897792,
+            "effective_available_bytes": 3221225472,
+            "external_used_bytes": 148897792,
+            "jax_bytes_in_use": 0,
+            "jax_peak_bytes_in_use": 0,
+            "jax_pool_bytes": 0,
+            "limitations": [],
+            "measurement_sources": [
+              "nvidia-smi query",
+              "JAX device.memory_stats",
+              "derived available-memory policy"
+            ],
+            "physical_total_bytes": 4294967296,
+            "timestamp": "2026-09-09T21:17:24.572214+00:00"
+          },
+          "compile_seconds": null,
+          "environment": {
+            "allocator_environment": {
+              "TF_GPU_ALLOCATOR": null,
+              "XLA_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+              "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+            },
+            "backend": "gpu",
+            "devices": [
+              "cuda:0"
+            ],
+            "jax_version": "0.11.0",
+            "jaxlib_version": "0.11.0",
+            "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+            "python": "3.12.3"
+          },
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.00GiB. [tf-allocator-allocation-error=''] [executable_name='jit__attention_1_fn']",
+          "execute_seconds": null,
+          "failure_phase": "execute",
+          "outcome": "OOM",
+          "parent_returncode": 2,
+          "parent_wall_seconds": 59.42168692899577,
+          "wall_seconds": 32.32216024400259,
+          "workload_id": "ATT-1"
+        }
+      ],
+      "relative_gap": null,
+      "trials": [
+        {
+          "batch_size": 1,
+          "calibrated": true,
+          "central_bytes": 1082261504,
+          "memory_limit_bytes": 3221225472,
+          "risk": "LOW",
+          "structural_peak_bytes": 1082261504,
+          "upper_bytes": 1804833959
+        },
+        {
+          "batch_size": 2,
+          "calibrated": true,
+          "central_bytes": 2164523008,
+          "memory_limit_bytes": 3221225472,
+          "risk": "MODERATE",
+          "structural_peak_bytes": 2164523008,
+          "upper_bytes": 3609667918
+        }
+      ]
+    }
+  ],
+  "status": "COMPUTATIONALLY_VERIFIED"
+}

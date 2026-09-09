@@ -589,6 +589,14 @@
     "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
     "python": "3.12.3"
   },
+  "excluded_pilot_reason": "Retained implementation/plumbing pilots; not included in aggregate metrics because the first pressure run did not move the allocator binding point, v3 exposed a list/scalar bug, v4 OOMed while allocating pressure, and the first ATT records predated the always-adjacent-probe correction.",
+  "excluded_pilot_records": [
+    "experiments/auto_pressure_MLP-1_2026-09-09.json",
+    "experiments/auto_pressure_MLP-1_2026-09-09_v3.json",
+    "experiments/auto_pressure_MLP-1_2026-09-09_v4.json",
+    "experiments/validation_ATT-1_2026-09-09.json",
+    "experiments/validation_ATT-2_2026-09-09.json"
+  ],
   "explicit_budget_monotonicity": {
     "families": [
       "MLP",

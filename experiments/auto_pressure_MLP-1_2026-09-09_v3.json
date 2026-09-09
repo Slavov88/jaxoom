@@ -1,0 +1,59 @@
+{
+  "auto_pressure": [
+    {
+      "error": "TypeError: unsupported operand type(s) for //: 'list' and 'int'",
+      "outcome": "OTHER_FAILURE",
+      "parent_returncode": 2,
+      "pressure_bytes_requested": [
+        0
+      ]
+    },
+    {
+      "error": "TypeError: unsupported operand type(s) for //: 'list' and 'int'",
+      "outcome": "OTHER_FAILURE",
+      "parent_returncode": 2,
+      "pressure_bytes_requested": [
+        1073741824
+      ]
+    },
+    {
+      "error": "TypeError: unsupported operand type(s) for //: 'list' and 'int'",
+      "outcome": "OTHER_FAILURE",
+      "parent_returncode": 2,
+      "pressure_bytes_requested": [
+        2147483648
+      ]
+    },
+    {
+      "error": "TypeError: unsupported operand type(s) for //: 'list' and 'int'",
+      "outcome": "OTHER_FAILURE",
+      "parent_returncode": 2,
+      "pressure_bytes_requested": [
+        2684354560
+      ]
+    }
+  ],
+  "commit": "c2ca450d84397a5f552c513cf9ce579af6a577e0",
+  "environment": {
+    "allocator_environment": {
+      "TF_GPU_ALLOCATOR": null,
+      "XLA_CLIENT_MEM_FRACTION": null,
+      "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+      "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+      "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+    },
+    "backend": "gpu",
+    "devices": [
+      "cuda:0"
+    ],
+    "jax_version": "0.11.0",
+    "jaxlib_version": "0.11.0",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "planning_target_compilation": false,
+  "planning_target_execution": false,
+  "pressure_workload": "MLP-1",
+  "rows": [],
+  "status": "COMPUTATIONALLY_VERIFIED"
+}
