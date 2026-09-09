@@ -97,9 +97,10 @@ def scale_search(screening: Path, output: Path, fraction: float, timeout: int, m
 
 
 def main() -> None:
-    parser=argparse.ArgumentParser(); parser.add_argument("--screening",type=Path,required=True); parser.add_argument("--scale-output",type=Path,required=True); parser.add_argument("--screen-only",action="store_true"); parser.add_argument("--fraction",type=float,default=0.06); parser.add_argument("--timeout",type=int,default=60); parser.add_argument("--max-probes",type=int,default=100); parser.add_argument("--max-per-family",type=int,default=2)
+    parser=argparse.ArgumentParser(); parser.add_argument("--screening",type=Path,required=True); parser.add_argument("--scale-output",type=Path); parser.add_argument("--screen-only",action="store_true"); parser.add_argument("--fraction",type=float,default=0.06); parser.add_argument("--timeout",type=int,default=60); parser.add_argument("--max-probes",type=int,default=100); parser.add_argument("--max-per-family",type=int,default=2)
     args=parser.parse_args();
     if args.screen_only: screen(args.screening)
+    elif args.scale_output is None: parser.error("--scale-output is required unless --screen-only is used")
     else: scale_search(args.screening,args.scale_output,args.fraction,args.timeout,args.max_probes,args.max_per_family)
 
 if __name__ == "__main__": main()
