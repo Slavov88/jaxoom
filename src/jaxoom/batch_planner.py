@@ -5,7 +5,7 @@ from typing import Any, Callable
 
 from .api import assess, estimate
 from .device import device_budget
-from .types import BatchSizePlan, BatchSizeTrial, DeviceBudget
+from .types import BatchSizePlan, BatchSizeTrial, CalibrationSummary, DeviceBudget
 
 
 def plan_batch_size(
@@ -16,6 +16,7 @@ def plan_batch_size(
     min_batch_size: int = 1,
     max_batch_size: int = 1024,
     max_evaluations: int = 64,
+    summary: CalibrationSummary | None = None,
     device_budget_override: DeviceBudget | None = None,
 ) -> BatchSizePlan:
     """Find the largest conservatively assessed batch without compiling it.
@@ -45,7 +46,7 @@ def plan_batch_size(
             if not isinstance(args, (tuple, list)):
                 raise TypeError("args_for_batch must return a tuple or list of positional arguments")
             report = estimate(fn, *tuple(args))
-            assessment = assess(report, parsed_limit if not auto else "auto", device_budget=frozen_budget)
+            assessment = assess(report, parsed_limit if not auto else "auto", summary=summary, device_budget=frozen_budget)
             trial = BatchSizeTrial(batch, assessment, None)
         except _SearchLimit:
             raise

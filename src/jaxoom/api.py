@@ -34,11 +34,12 @@ def plan_batch_size(
     min_batch_size: int = 1,
     max_batch_size: int = 1024,
     max_evaluations: int = 64,
+    summary: CalibrationSummary | None = None,
 ) -> BatchSizePlan:
     """Plan a discrete batch size using tracing and assessment only."""
     from .batch_planner import plan_batch_size as _plan_batch_size
 
-    return _plan_batch_size(fn, args_for_batch, memory_limit=memory_limit, min_batch_size=min_batch_size, max_batch_size=max_batch_size, max_evaluations=max_evaluations)
+    return _plan_batch_size(fn, args_for_batch, memory_limit=memory_limit, min_batch_size=min_batch_size, max_batch_size=max_batch_size, max_evaluations=max_evaluations, summary=summary)
 
 
 def compile_analyze(
