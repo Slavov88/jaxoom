@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from ..analysis.tensor_size import format_bytes
-from ..types import DeviceMemorySnapshot, DonationReport, MemoryAssessment, MemoryReport
+from ..types import BatchSizePlan, DeviceMemorySnapshot, DonationReport, MemoryAssessment, MemoryReport
 
 
 def render_assessment(assessment: MemoryAssessment) -> str:
@@ -39,6 +39,32 @@ def render_assessment(assessment: MemoryAssessment) -> str:
     if assessment.remediation_hint:
         lines += ["", "Potential next step", assessment.remediation_hint]
     lines.extend(f"- {limitation}" for limitation in assessment.limitations[:4])
+    return "\n".join(lines)
+
+
+def render_batch_plan(plan: BatchSizePlan) -> str:
+    def shown(value: int | None) -> str:
+        return format_bytes(value) if value is not None else "unavailable"
+
+    recommended = next((trial for trial in plan.trials if trial.batch_size == plan.recommended_batch_size), None)
+    lines = [
+        "JAXOOM BATCH PLAN",
+        "=" * 32,
+        "",
+        f"Budget                     {shown(plan.memory_limit_bytes)}",
+        f"Basis                      {plan.memory_limit_source}",
+        f"Recommended batch          {plan.recommended_batch_size if plan.recommended_batch_size is not None else 'none'}",
+    ]
+    if recommended and recommended.assessment:
+        lines.append(f"Predicted upper             {shown(recommended.assessment.interval.upper_bytes)}")
+        lines.append(f"Headroom                    {shown(recommended.assessment.headroom_to_upper_bytes)}")
+    if plan.next_failing_or_riskier:
+        trial = plan.next_failing_or_riskier
+        lines.append(f"Next tested batch           {trial.batch_size}")
+        if trial.assessment:
+            lines.append(f"Next predicted upper        {shown(trial.assessment.interval.upper_bytes)}")
+    lines += [f"Evaluations                 {plan.evaluations}", f"Status                      {plan.status}", "", "This is a pre-compilation risk estimate, not a runtime fit guarantee."]
+    lines.extend(f"- {warning}" for warning in plan.warnings)
     return "\n".join(lines)
 
 

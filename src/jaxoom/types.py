@@ -151,6 +151,44 @@ class MemoryAssessment:
 
 
 @dataclass(frozen=True)
+class BatchSizeTrial:
+    """One compilation-free assessment at a discrete batch size."""
+
+    batch_size: int
+    assessment: MemoryAssessment | None
+    error: str | None = None
+
+
+@dataclass(frozen=True)
+class BatchSizePlan:
+    """Result of a compilation-free discrete batch-size search."""
+
+    recommended_batch_size: int | None
+    max_tested_batch_size: int | None
+    next_failing_or_riskier: BatchSizeTrial | None
+    trials: tuple[BatchSizeTrial, ...]
+    evaluations: int
+    memory_limit_bytes: int | None
+    memory_limit_source: str
+    device_budget: "DeviceBudget | None"
+    status: str
+    upper_bound_reached: bool
+    monotonic: bool
+    warnings: tuple[str, ...] = ()
+
+    def render(self) -> str:
+        from .reports.console import render_batch_plan
+
+        return render_batch_plan(self)
+
+    def print(self) -> None:
+        print(self.render())
+
+    def __str__(self) -> str:
+        return self.render()
+
+
+@dataclass(frozen=True)
 class MemoryComparison:
     """Comparison with signed error defined as static minus compiler bytes."""
 

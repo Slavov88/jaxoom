@@ -14,6 +14,7 @@ from .device import device_memory as _device_memory
 from .donation import analyze_donation as _analyze_donation
 from .tracing import trace
 from .types import (
+    BatchSizePlan,
     CalibrationSummary,
     CompilerMemoryReport,
     MemoryAssessment,
@@ -23,6 +24,21 @@ from .types import (
     DeviceBudget,
     DonationReport,
 )
+
+
+def plan_batch_size(
+    fn: Callable[..., Any],
+    args_for_batch: Callable[[int], Any],
+    *,
+    memory_limit: str | int = "auto",
+    min_batch_size: int = 1,
+    max_batch_size: int = 1024,
+    max_evaluations: int = 64,
+) -> BatchSizePlan:
+    """Plan a discrete batch size using tracing and assessment only."""
+    from .batch_planner import plan_batch_size as _plan_batch_size
+
+    return _plan_batch_size(fn, args_for_batch, memory_limit=memory_limit, min_batch_size=min_batch_size, max_batch_size=max_batch_size, max_evaluations=max_evaluations)
 
 
 def compile_analyze(
