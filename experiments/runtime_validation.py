@@ -120,6 +120,56 @@ def autodiff_workload(batch: int, width: int, layers: int, dtype: str) -> Worklo
     )
 
 
+def scan_mlp_workload(batch: int, width: int, layers: int, dtype: str, retain: bool = False) -> Workload:
+    def fn(x, weights):
+        def step(carry, weight):
+            y = jnp.tanh(carry @ weight)
+            return y, y if retain else None
+        carry, outputs = jax.lax.scan(step, x, weights)
+        return (carry, outputs) if retain else carry
+
+    return Workload(
+        "mlp_scan", f"mlp-scan-b{batch}-w{width}-l{layers}-retain{retain}-{dtype}", {"batch": batch, "width": width, "layers": layers, "retain": retain}, dtype,
+        fn, (jax.ShapeDtypeStruct((batch, width), dtype), jax.ShapeDtypeStruct((layers, width, width), dtype)),
+    )
+
+
+def scan_autodiff_workload(batch: int, width: int, layers: int, dtype: str) -> Workload:
+    def fn(x, weights):
+        def loss(params):
+            def step(carry, weight):
+                y = jnp.tanh(carry @ weight)
+                return y, y
+            _, activations = jax.lax.scan(step, x, params)
+            return jnp.mean(activations)
+        value, gradients = jax.value_and_grad(loss)(weights)
+        return value, gradients
+
+    return Workload(
+        "autodiff_scan", f"autodiff-scan-b{batch}-w{width}-l{layers}-{dtype}", {"batch": batch, "width": width, "layers": layers}, dtype,
+        fn, (jax.ShapeDtypeStruct((batch, width), dtype), jax.ShapeDtypeStruct((layers, width, width), dtype)),
+    )
+
+
+def scan_training_workload(batch: int, width: int, layers: int, dtype: str) -> Workload:
+    def fn(x, target, weights, velocity):
+        def loss(params):
+            def step(carry, weight):
+                y = jnp.tanh(carry @ weight)
+                return y, y
+            _, activations = jax.lax.scan(step, x, params)
+            return jnp.mean((activations[-1] - target) ** 2)
+        value, gradients = jax.value_and_grad(loss)(weights)
+        new_velocity = 0.9 * velocity + gradients
+        new_weights = weights - 0.001 * new_velocity
+        return value, new_weights, new_velocity
+
+    return Workload(
+        "training_scan", f"training-scan-b{batch}-w{width}-l{layers}-{dtype}", {"batch": batch, "width": width, "layers": layers}, dtype,
+        fn, (jax.ShapeDtypeStruct((batch, width), dtype), jax.ShapeDtypeStruct((batch, width), dtype), jax.ShapeDtypeStruct((layers, width, width), dtype), jax.ShapeDtypeStruct((layers, width, width), dtype)),
+    )
+
+
 def training_workload(batch: int, width: int, dtype: str) -> Workload:
     def fn(x, target, w1, b1, w2, b2):
         def loss(w1, b1, w2, b2):
@@ -145,6 +195,12 @@ def workload_from_config(family: str, config: dict[str, Any], dtype: str) -> Wor
         return transformer_workload(config["sequence"], config["width"], config.get("heads", 8), dtype)
     if family == "training":
         return training_workload(config["batch"], config["width"], dtype)
+    if family == "mlp_scan":
+        return scan_mlp_workload(config["batch"], config["width"], config["layers"], dtype, config.get("retain", False))
+    if family == "training_scan":
+        return scan_training_workload(config["batch"], config["width"], config["layers"], dtype)
+    if family == "autodiff_scan":
+        return scan_autodiff_workload(config["batch"], config["width"], config["layers"], dtype)
     if family == "matmul":
         return matmul_workload(config["batch"], config["m"], config["n"], config["k"], dtype)
     if family == "convolution":
@@ -377,7 +433,7 @@ def run_parent(output: Path, trials: list[Workload], timeout: int) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--trial", choices=("attention", "mlp", "transformer", "training", "matmul", "convolution", "autodiff"))
+    parser.add_argument("--trial", choices=("attention", "mlp", "transformer", "training", "matmul", "convolution", "autodiff", "mlp_scan", "training_scan", "autodiff_scan"))
     parser.add_argument("--config")
     parser.add_argument("--dtype", default="float32")
     parser.add_argument("--output", type=Path)
