@@ -366,12 +366,14 @@ def _probe_sequence(
         return cache[batch]
 
     first = probe(planned_batch)
-    if first["outcome"] != "FIT":
-        return probes, None, False
     next_batch = planned_batch + 1
     if next_batch > max_batch:
-        return probes, planned_batch, False
+        return probes, planned_batch if first["outcome"] == "FIT" else None, False
+    # Always test the immediate larger batch, including after a false-safe
+    # recommendation, so the boundary record is not recommendation-only.
     next_result = probe(next_batch)
+    if first["outcome"] != "FIT":
+        return probes, None, False
     if next_result["outcome"] != "FIT":
         return probes, planned_batch, True
 
