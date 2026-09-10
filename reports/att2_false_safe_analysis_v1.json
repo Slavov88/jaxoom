@@ -775,7 +775,7 @@
       "status": "REJECTED"
     }
   ],
-  "investigation_harness_commit": "PENDING_COMMIT",
+  "investigation_harness_commit": "e84057f0c7377bfd5761f7f678d7719e5baa9834",
   "limitations": [
     "Allocator preallocation/fraction controls were infrastructure failures in WSL2 and are not assigned FIT/OOM outcomes.",
     "External free-VRAM holder sensitivity was not completed for exact ATT-2.",

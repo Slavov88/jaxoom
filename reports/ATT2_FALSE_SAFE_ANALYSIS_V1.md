@@ -194,7 +194,7 @@ The V1 real-pressure result remains **PASS**. No planner code changed. A new pre
 ## COMMITS
 
 - `4bee85f` — previous V1 boundary validation baseline
-- Investigation changes: pending commit
+- `e84057f` — ATT-2 reproduction and root-cause analysis
 
 ## FILES / RECORDS
 
