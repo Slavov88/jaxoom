@@ -1,0 +1,138 @@
+{
+  "allocator_environment": {
+    "TF_GPU_ALLOCATOR": null,
+    "XLA_CLIENT_MEM_FRACTION": null,
+    "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+    "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+    "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+  },
+  "hold_bytes": 0,
+  "repetitions": 1,
+  "rows": [
+    {
+      "after_compile": {
+        "allocator_fraction_source": null,
+        "allocator_largest_free_block_bytes": null,
+        "allocator_limit_bytes": null,
+        "allocator_memory_fraction": null,
+        "allocator_mode": "no preallocation",
+        "allocator_preallocate": false,
+        "backend": "cpu",
+        "budget_provenance": "PARTIAL",
+        "device_id": 0,
+        "device_kind": "cpu",
+        "device_uuid": null,
+        "driver_free_bytes": null,
+        "driver_used_bytes": null,
+        "effective_available_bytes": null,
+        "external_used_bytes": null,
+        "jax_bytes_in_use": null,
+        "jax_peak_bytes_in_use": null,
+        "jax_pool_bytes": null,
+        "limitations": [
+          "NVIDIA driver memory query unavailable or backend is not CUDA.",
+          "JAX device memory_stats unavailable.",
+          "effective available memory could not be derived."
+        ],
+        "measurement_sources": [],
+        "physical_total_bytes": null,
+        "timestamp": "2026-09-10T06:59:34.355000+00:00"
+      },
+      "after_execute": {
+        "allocator_fraction_source": null,
+        "allocator_largest_free_block_bytes": null,
+        "allocator_limit_bytes": null,
+        "allocator_memory_fraction": null,
+        "allocator_mode": "no preallocation",
+        "allocator_preallocate": false,
+        "backend": "cpu",
+        "budget_provenance": "PARTIAL",
+        "device_id": 0,
+        "device_kind": "cpu",
+        "device_uuid": null,
+        "driver_free_bytes": null,
+        "driver_used_bytes": null,
+        "effective_available_bytes": null,
+        "external_used_bytes": null,
+        "jax_bytes_in_use": null,
+        "jax_peak_bytes_in_use": null,
+        "jax_pool_bytes": null,
+        "limitations": [
+          "NVIDIA driver memory query unavailable or backend is not CUDA.",
+          "JAX device memory_stats unavailable.",
+          "effective available memory could not be derived."
+        ],
+        "measurement_sources": [],
+        "physical_total_bytes": null,
+        "timestamp": "2026-09-10T06:59:35.116357+00:00"
+      },
+      "batch_size": 1,
+      "before": {
+        "allocator_fraction_source": null,
+        "allocator_largest_free_block_bytes": null,
+        "allocator_limit_bytes": null,
+        "allocator_memory_fraction": null,
+        "allocator_mode": "no preallocation",
+        "allocator_preallocate": false,
+        "backend": "cpu",
+        "budget_provenance": "PARTIAL",
+        "device_id": 0,
+        "device_kind": "cpu",
+        "device_uuid": null,
+        "driver_free_bytes": null,
+        "driver_used_bytes": null,
+        "effective_available_bytes": null,
+        "external_used_bytes": null,
+        "jax_bytes_in_use": null,
+        "jax_peak_bytes_in_use": null,
+        "jax_pool_bytes": null,
+        "limitations": [
+          "NVIDIA driver memory query unavailable or backend is not CUDA.",
+          "JAX device memory_stats unavailable.",
+          "effective available memory could not be derived."
+        ],
+        "measurement_sources": [],
+        "physical_total_bytes": null,
+        "timestamp": "2026-09-10T06:59:34.317589+00:00"
+      },
+      "compile_seconds": 0.037259926999922754,
+      "compiler_memory": {
+        "alias_bytes": 0,
+        "argument_bytes": 31457280,
+        "available": true,
+        "compiler_accounted_bytes": 41943040,
+        "output_bytes": 10485760,
+        "temporary_bytes": 0
+      },
+      "environment": {
+        "allocator_environment": {
+          "TF_GPU_ALLOCATOR": null,
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "cpu",
+        "devices": [
+          "cpu:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]"
+      },
+      "error": null,
+      "error_type": null,
+      "execute_seconds": 0.7610938570001053,
+      "failure_phase": null,
+      "outcome": "FIT",
+      "parent_returncode": 0,
+      "parent_wall_seconds": 5.321429929000033,
+      "rep": 1,
+      "requested_allocation": null,
+      "wall_seconds": 0.7988920380000764,
+      "workload_id": "ATT-2"
+    }
+  ],
+  "status": "OBSERVED",
+  "workload_id": "ATT-2"
+}

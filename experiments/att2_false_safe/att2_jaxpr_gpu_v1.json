@@ -1,0 +1,7 @@
+{
+  "backend": "gpu",
+  "jax_version": "0.11.0",
+  "jaxpr_sha256": "88dd35cc732fcb472b7c914512b727a09a9a000446798ae25b3da8e525970e93",
+  "equation_count": 15,
+  "jaxpr": "{ lambda ; a:f32[1,8,5120,64] b:f32[1,8,5120,64] c:f32[1,8,5120,64]. let\n    d:f32[1,8,5120,5120] = dot_general[\n      dimension_numbers=(([3], [3]), ([0, 1], [0, 1]))\n      preferred_element_type=float32\n    ] a b\n    e:f32[] = sqrt 64.0:f32[]\n    f:f32[] = convert_element_type[new_dtype=float32 weak_type=False] e\n    g:f32[1,8,5120,5120] = div d f\n    h:f32[1,8,5120] = reduce_max[axes=(3,)] g\n    i:f32[1,8,5120] = max -inf:f32[] h\n    j:f32[1,8,5120,1] = broadcast_in_dim[broadcast_dimensions=(0, 1, 2)] i\n    k:f32[1,8,5120,1] = stop_gradient j\n    l:f32[1,8,5120,5120] = sub g k\n    m:f32[1,8,5120,5120] = exp l\n    n:f32[1,8,5120] = reduce_sum[axes=(3,) out_sharding=None] m\n    o:f32[1,8,5120,1] = broadcast_in_dim[broadcast_dimensions=(0, 1, 2)] n\n    p:f32[1,8,5120,5120] = div m o\n    q:f32[1,8,5120,64] = dot_general[\n      dimension_numbers=(([3], [2]), ([0, 1], [0, 1]))\n      preferred_element_type=float32\n    ] p c\n    r:f32[1,8,5120,64] = add q a\n  in (r,) }"
+}

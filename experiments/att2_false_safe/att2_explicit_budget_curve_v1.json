@@ -1,0 +1,87 @@
+{
+  "backend": "gpu",
+  "jax_version": "0.11.0",
+  "rows": [
+    {
+      "budget_bytes": 1610612736,
+      "recommended_batch": null,
+      "status": "NOTHING_FITS",
+      "trial_central_bytes": 1698856960,
+      "trial_risk": "LIKELY EXCEEDS BUDGET",
+      "trial_upper_bytes": 2833099692
+    },
+    {
+      "budget_bytes": 1879048192,
+      "recommended_batch": null,
+      "status": "NOTHING_FITS",
+      "trial_central_bytes": 1698856960,
+      "trial_risk": "MODERATE",
+      "trial_upper_bytes": 2833099692
+    },
+    {
+      "budget_bytes": 2147483648,
+      "recommended_batch": null,
+      "status": "NOTHING_FITS",
+      "trial_central_bytes": 1698856960,
+      "trial_risk": "MODERATE",
+      "trial_upper_bytes": 2833099692
+    },
+    {
+      "budget_bytes": 2415919104,
+      "recommended_batch": null,
+      "status": "NOTHING_FITS",
+      "trial_central_bytes": 1698856960,
+      "trial_risk": "MODERATE",
+      "trial_upper_bytes": 2833099692
+    },
+    {
+      "budget_bytes": 2684354560,
+      "recommended_batch": null,
+      "status": "NOTHING_FITS",
+      "trial_central_bytes": 1698856960,
+      "trial_risk": "MODERATE",
+      "trial_upper_bytes": 2833099692
+    },
+    {
+      "budget_bytes": 2952790016,
+      "recommended_batch": 1,
+      "status": "COMPLETE",
+      "trial_central_bytes": 1698856960,
+      "trial_risk": "LOW",
+      "trial_upper_bytes": 2833099692
+    },
+    {
+      "budget_bytes": 3221225472,
+      "recommended_batch": 1,
+      "status": "COMPLETE",
+      "trial_central_bytes": 1698856960,
+      "trial_risk": "LOW",
+      "trial_upper_bytes": 2833099692
+    },
+    {
+      "budget_bytes": 3489660928,
+      "recommended_batch": 1,
+      "status": "COMPLETE",
+      "trial_central_bytes": 1698856960,
+      "trial_risk": "LOW",
+      "trial_upper_bytes": 2833099692
+    },
+    {
+      "budget_bytes": 3758096384,
+      "recommended_batch": 1,
+      "status": "COMPLETE",
+      "trial_central_bytes": 1698856960,
+      "trial_risk": "LOW",
+      "trial_upper_bytes": 2833099692
+    },
+    {
+      "budget_bytes": 4294967296,
+      "recommended_batch": 1,
+      "status": "COMPLETE",
+      "trial_central_bytes": 1698856960,
+      "trial_risk": "LOW",
+      "trial_upper_bytes": 2833099692
+    }
+  ],
+  "status": "OBSERVED"
+}

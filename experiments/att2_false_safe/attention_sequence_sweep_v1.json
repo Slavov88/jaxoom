@@ -1,0 +1,452 @@
+{
+  "budget_bytes": 3221225472,
+  "environment": {
+    "allocator": "false",
+    "backend": "gpu",
+    "devices": [
+      "cuda:0"
+    ],
+    "jax": "0.11.0"
+  },
+  "rows": [
+    {
+      "actual": {
+        "after_compile": {
+          "allocator_fraction_source": null,
+          "allocator_largest_free_block_bytes": 268435456,
+          "allocator_limit_bytes": 3221225472,
+          "allocator_memory_fraction": null,
+          "allocator_mode": "no preallocation",
+          "allocator_preallocate": false,
+          "backend": "gpu",
+          "budget_provenance": "ALLOCATOR_AND_DRIVER",
+          "device_id": 0,
+          "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+          "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+          "driver_free_bytes": 3375366144,
+          "driver_used_bytes": 782237696,
+          "effective_available_bytes": 3221225472,
+          "external_used_bytes": 163577856,
+          "jax_bytes_in_use": 12582912,
+          "jax_peak_bytes_in_use": 360710400,
+          "jax_pool_bytes": 618659840,
+          "limitations": [],
+          "measurement_sources": [
+            "nvidia-smi query",
+            "JAX device.memory_stats",
+            "derived available-memory policy"
+          ],
+          "physical_total_bytes": 4294967296,
+          "timestamp": "2026-09-10T07:01:58.929427+00:00"
+        },
+        "before": {
+          "allocator_fraction_source": null,
+          "allocator_largest_free_block_bytes": 2097152,
+          "allocator_limit_bytes": 3221225472,
+          "allocator_memory_fraction": null,
+          "allocator_mode": "no preallocation",
+          "allocator_preallocate": false,
+          "backend": "gpu",
+          "budget_provenance": "ALLOCATOR_AND_DRIVER",
+          "device_id": 0,
+          "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+          "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+          "driver_free_bytes": 3989831680,
+          "driver_used_bytes": 167772160,
+          "effective_available_bytes": 3221225472,
+          "external_used_bytes": 153092096,
+          "jax_bytes_in_use": 12582912,
+          "jax_peak_bytes_in_use": 12583168,
+          "jax_pool_bytes": 14680064,
+          "limitations": [],
+          "measurement_sources": [
+            "nvidia-smi query",
+            "JAX device.memory_stats",
+            "derived available-memory policy"
+          ],
+          "physical_total_bytes": 4294967296,
+          "timestamp": "2026-09-10T07:01:56.174502+00:00"
+        },
+        "compile_seconds": 2.7163418820000516,
+        "compiler_memory": {
+          "alias_bytes": 0,
+          "argument_bytes": 12582912,
+          "available": true,
+          "compiler_accounted_bytes": 285212672,
+          "output_bytes": 4194304,
+          "temporary_bytes": 268435456
+        },
+        "execute_seconds": 0.005050301000210311,
+        "failure_phase": null,
+        "head_dim": 64,
+        "heads": 8,
+        "outcome": "FIT",
+        "returncode": 0,
+        "sequence": 2048
+      },
+      "axis": "sequence",
+      "head_dim": 64,
+      "heads": 8,
+      "planner": {
+        "central_bytes": 276889600,
+        "input_bytes": 12582912,
+        "peak_primitive": "sub",
+        "risk": "LOW",
+        "structural_bytes": 276889600,
+        "upper_bytes": 461755085
+      },
+      "sequence": 2048
+    },
+    {
+      "actual": {
+        "after_compile": {
+          "allocator_fraction_source": null,
+          "allocator_largest_free_block_bytes": 536870912,
+          "allocator_limit_bytes": 3221225472,
+          "allocator_memory_fraction": null,
+          "allocator_mode": "no preallocation",
+          "allocator_preallocate": false,
+          "backend": "gpu",
+          "budget_provenance": "ALLOCATOR_AND_DRIVER",
+          "device_id": 0,
+          "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+          "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+          "driver_free_bytes": 2783969280,
+          "driver_used_bytes": 1373634560,
+          "effective_available_bytes": 2783969280,
+          "external_used_bytes": 163577856,
+          "jax_bytes_in_use": 23068672,
+          "jax_peak_bytes_in_use": 687866112,
+          "jax_pool_bytes": 1210056704,
+          "limitations": [],
+          "measurement_sources": [
+            "nvidia-smi query",
+            "JAX device.memory_stats",
+            "derived available-memory policy"
+          ],
+          "physical_total_bytes": 4294967296,
+          "timestamp": "2026-09-10T07:02:05.108293+00:00"
+        },
+        "before": {
+          "allocator_fraction_source": null,
+          "allocator_largest_free_block_bytes": 10485760,
+          "allocator_limit_bytes": 3221225472,
+          "allocator_memory_fraction": null,
+          "allocator_mode": "no preallocation",
+          "allocator_preallocate": false,
+          "backend": "gpu",
+          "budget_provenance": "ALLOCATOR_AND_DRIVER",
+          "device_id": 0,
+          "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+          "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+          "driver_free_bytes": 3968860160,
+          "driver_used_bytes": 188743680,
+          "effective_available_bytes": 3221225472,
+          "external_used_bytes": 153092096,
+          "jax_bytes_in_use": 23068672,
+          "jax_peak_bytes_in_use": 23068928,
+          "jax_pool_bytes": 35651584,
+          "limitations": [],
+          "measurement_sources": [
+            "nvidia-smi query",
+            "JAX device.memory_stats",
+            "derived available-memory policy"
+          ],
+          "physical_total_bytes": 4294967296,
+          "timestamp": "2026-09-10T07:02:02.216909+00:00"
+        },
+        "compile_seconds": 2.8520866009998826,
+        "compiler_memory": {
+          "alias_bytes": 0,
+          "argument_bytes": 18874368,
+          "available": true,
+          "compiler_accounted_bytes": 629145600,
+          "output_bytes": 6291456,
+          "temporary_bytes": 603979776
+        },
+        "execute_seconds": 0.03751592899971001,
+        "failure_phase": null,
+        "head_dim": 64,
+        "heads": 8,
+        "outcome": "FIT",
+        "returncode": 0,
+        "sequence": 3072
+      },
+      "axis": "sequence",
+      "head_dim": 64,
+      "heads": 8,
+      "planner": {
+        "central_bytes": 616660992,
+        "input_bytes": 18874368,
+        "peak_primitive": "sub",
+        "risk": "LOW",
+        "structural_bytes": 616660992,
+        "upper_bytes": 1028375024
+      },
+      "sequence": 3072
+    },
+    {
+      "actual": {
+        "after_compile": {
+          "allocator_fraction_source": null,
+          "allocator_largest_free_block_bytes": 1073741824,
+          "allocator_limit_bytes": 3221225472,
+          "allocator_memory_fraction": null,
+          "allocator_mode": "no preallocation",
+          "allocator_preallocate": false,
+          "backend": "gpu",
+          "budget_provenance": "ALLOCATOR_AND_DRIVER",
+          "device_id": 0,
+          "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+          "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+          "driver_free_bytes": 1710227456,
+          "driver_used_bytes": 2447376384,
+          "effective_available_bytes": 1710227456,
+          "external_used_bytes": 163577856,
+          "jax_bytes_in_use": 25165824,
+          "jax_peak_bytes_in_use": 1166016512,
+          "jax_pool_bytes": 2283798528,
+          "limitations": [],
+          "measurement_sources": [
+            "nvidia-smi query",
+            "JAX device.memory_stats",
+            "derived available-memory policy"
+          ],
+          "physical_total_bytes": 4294967296,
+          "timestamp": "2026-09-10T07:02:11.094455+00:00"
+        },
+        "before": {
+          "allocator_fraction_source": null,
+          "allocator_largest_free_block_bytes": 8388608,
+          "allocator_limit_bytes": 3221225472,
+          "allocator_memory_fraction": null,
+          "allocator_mode": "no preallocation",
+          "allocator_preallocate": false,
+          "backend": "gpu",
+          "budget_provenance": "ALLOCATOR_AND_DRIVER",
+          "device_id": 0,
+          "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+          "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+          "driver_free_bytes": 3968860160,
+          "driver_used_bytes": 188743680,
+          "effective_available_bytes": 3221225472,
+          "external_used_bytes": 153092096,
+          "jax_bytes_in_use": 25165824,
+          "jax_peak_bytes_in_use": 25166080,
+          "jax_pool_bytes": 35651584,
+          "limitations": [],
+          "measurement_sources": [
+            "nvidia-smi query",
+            "JAX device.memory_stats",
+            "derived available-memory policy"
+          ],
+          "physical_total_bytes": 4294967296,
+          "timestamp": "2026-09-10T07:02:07.973387+00:00"
+        },
+        "compile_seconds": 3.083948375000091,
+        "compiler_memory": {
+          "alias_bytes": 0,
+          "argument_bytes": 25165824,
+          "available": true,
+          "compiler_accounted_bytes": 1107296256,
+          "output_bytes": 8388608,
+          "temporary_bytes": 1073741824
+        },
+        "execute_seconds": 0.013947548000032839,
+        "failure_phase": null,
+        "head_dim": 64,
+        "heads": 8,
+        "outcome": "FIT",
+        "returncode": 0,
+        "sequence": 4096
+      },
+      "axis": "sequence",
+      "head_dim": 64,
+      "heads": 8,
+      "planner": {
+        "central_bytes": 1090650112,
+        "input_bytes": 25165824,
+        "peak_primitive": "sub",
+        "risk": "LOW",
+        "structural_bytes": 1090650112,
+        "upper_bytes": 1818823226
+      },
+      "sequence": 4096
+    },
+    {
+      "actual": {
+        "after_compile": {
+          "allocator_fraction_source": null,
+          "allocator_largest_free_block_bytes": 1073741824,
+          "allocator_limit_bytes": 3221225472,
+          "allocator_memory_fraction": null,
+          "allocator_mode": "no preallocation",
+          "allocator_preallocate": false,
+          "backend": "gpu",
+          "budget_provenance": "ALLOCATOR_AND_DRIVER",
+          "device_id": 0,
+          "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+          "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+          "driver_free_bytes": 1777336320,
+          "driver_used_bytes": 2380267520,
+          "effective_available_bytes": 1777336320,
+          "external_used_bytes": 163577856,
+          "jax_bytes_in_use": 52428800,
+          "jax_peak_bytes_in_use": 1458569472,
+          "jax_pool_bytes": 2216689664,
+          "limitations": [],
+          "measurement_sources": [
+            "nvidia-smi query",
+            "JAX device.memory_stats",
+            "derived available-memory policy"
+          ],
+          "physical_total_bytes": 4294967296,
+          "timestamp": "2026-09-10T07:02:27.072640+00:00"
+        },
+        "before": {
+          "allocator_fraction_source": null,
+          "allocator_largest_free_block_bytes": 24117248,
+          "allocator_limit_bytes": 3221225472,
+          "allocator_memory_fraction": null,
+          "allocator_mode": "no preallocation",
+          "allocator_preallocate": false,
+          "backend": "gpu",
+          "budget_provenance": "ALLOCATOR_AND_DRIVER",
+          "device_id": 0,
+          "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+          "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+          "driver_free_bytes": 3935305728,
+          "driver_used_bytes": 222298112,
+          "effective_available_bytes": 3221225472,
+          "external_used_bytes": 153092096,
+          "jax_bytes_in_use": 42991616,
+          "jax_peak_bytes_in_use": 42991872,
+          "jax_pool_bytes": 69206016,
+          "limitations": [],
+          "measurement_sources": [
+            "nvidia-smi query",
+            "JAX device.memory_stats",
+            "derived available-memory policy"
+          ],
+          "physical_total_bytes": 4294967296,
+          "timestamp": "2026-09-10T07:02:13.920455+00:00"
+        },
+        "compiler_memory": {
+          "alias_bytes": 0,
+          "argument_bytes": 28311552,
+          "available": true,
+          "compiler_accounted_bytes": 1396703248,
+          "output_bytes": 9437184,
+          "temporary_bytes": 1358954512
+        },
+        "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.27GiB. [executable_name='jit_attention'] [tf-allocator-allocation-error='']",
+        "failure_phase": "FIRST_EXECUTION",
+        "head_dim": 64,
+        "heads": 8,
+        "outcome": "OOM",
+        "returncode": 2,
+        "sequence": 4608
+      },
+      "axis": "sequence",
+      "head_dim": 64,
+      "heads": 8,
+      "planner": {
+        "central_bytes": 1377976320,
+        "input_bytes": 28311552,
+        "peak_primitive": "sub",
+        "risk": "LOW",
+        "structural_bytes": 1377976320,
+        "upper_bytes": 2297982926
+      },
+      "sequence": 4608
+    },
+    {
+      "actual": {
+        "after_compile": {
+          "allocator_fraction_source": null,
+          "allocator_largest_free_block_bytes": 1073741824,
+          "allocator_limit_bytes": 3221225472,
+          "allocator_memory_fraction": null,
+          "allocator_mode": "no preallocation",
+          "allocator_preallocate": false,
+          "backend": "gpu",
+          "budget_provenance": "ALLOCATOR_AND_DRIVER",
+          "device_id": 0,
+          "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+          "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+          "driver_free_bytes": 1710227456,
+          "driver_used_bytes": 2447376384,
+          "effective_available_bytes": 1710227456,
+          "external_used_bytes": 163577856,
+          "jax_bytes_in_use": 54525952,
+          "jax_peak_bytes_in_use": 1793065216,
+          "jax_pool_bytes": 2283798528,
+          "limitations": [],
+          "measurement_sources": [
+            "nvidia-smi query",
+            "JAX device.memory_stats",
+            "derived available-memory policy"
+          ],
+          "physical_total_bytes": 4294967296,
+          "timestamp": "2026-09-10T07:02:43.340429+00:00"
+        },
+        "before": {
+          "allocator_fraction_source": null,
+          "allocator_largest_free_block_bytes": 23068672,
+          "allocator_limit_bytes": 3221225472,
+          "allocator_memory_fraction": null,
+          "allocator_mode": "no preallocation",
+          "allocator_preallocate": false,
+          "backend": "gpu",
+          "budget_provenance": "ALLOCATOR_AND_DRIVER",
+          "device_id": 0,
+          "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+          "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+          "driver_free_bytes": 3935305728,
+          "driver_used_bytes": 222298112,
+          "effective_available_bytes": 3221225472,
+          "external_used_bytes": 153092096,
+          "jax_bytes_in_use": 44040192,
+          "jax_peak_bytes_in_use": 44040448,
+          "jax_pool_bytes": 69206016,
+          "limitations": [],
+          "measurement_sources": [
+            "nvidia-smi query",
+            "JAX device.memory_stats",
+            "derived available-memory policy"
+          ],
+          "physical_total_bytes": 4294967296,
+          "timestamp": "2026-09-10T07:02:29.884374+00:00"
+        },
+        "compiler_memory": {
+          "alias_bytes": 0,
+          "argument_bytes": 31457280,
+          "available": true,
+          "compiler_accounted_bytes": 1719664640,
+          "output_bytes": 10485760,
+          "temporary_bytes": 1677721600
+        },
+        "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.56GiB. [executable_name='jit_attention'] [tf-allocator-allocation-error='']",
+        "failure_phase": "FIRST_EXECUTION",
+        "head_dim": 64,
+        "heads": 8,
+        "outcome": "OOM",
+        "returncode": 2,
+        "sequence": 5120
+      },
+      "axis": "sequence",
+      "head_dim": 64,
+      "heads": 8,
+      "planner": {
+        "central_bytes": 1698856960,
+        "input_bytes": 31457280,
+        "peak_primitive": "sub",
+        "risk": "LOW",
+        "structural_bytes": 1698856960,
+        "upper_bytes": 2833099692
+      },
+      "sequence": 5120
+    }
+  ],
+  "status": "OBSERVED"
+}

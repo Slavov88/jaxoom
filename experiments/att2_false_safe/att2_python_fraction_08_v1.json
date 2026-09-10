@@ -1,0 +1,13 @@
+{
+  "status": "INFRASTRUCTURE_FAILURE",
+  "workload_id": "ATT-2",
+  "repetitions_requested": 3,
+  "allocator_environment": {
+    "XLA_PYTHON_CLIENT_PREALLOCATE": "false",
+    "XLA_CLIENT_MEM_FRACTION": null,
+    "XLA_PYTHON_CLIENT_MEM_FRACTION": "0.8"
+  },
+  "command_completed": false,
+  "observed": "The WSL2 service terminated with Wsl/Service/E_UNEXPECTED before producing probe records.",
+  "interpretation": "No FIT/OOM conclusion is drawn from this control."
+}
