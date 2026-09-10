@@ -1,0 +1,131 @@
+{
+  "status": "OBSERVED",
+  "rows": [
+    {
+      "configuration_id": "attention-S2048-f32-B1-H8-D64",
+      "family": "attention",
+      "shape": {
+        "batch": 1,
+        "heads": 8,
+        "sequence": 2048,
+        "head_dim": 64
+      },
+      "dtype": "float32",
+      "actual_outcome": "FIT",
+      "static_features": {
+        "large_allocation_proxy_bytes": 268435456,
+        "safe_capacity_bytes": 2766465020,
+        "structural_bytes": 272695296,
+        "upper_bytes": 454760452
+      }
+    },
+    {
+      "configuration_id": "attention-S3072-f32-B1-H8-D64",
+      "family": "attention",
+      "shape": {
+        "batch": 1,
+        "heads": 8,
+        "sequence": 3072,
+        "head_dim": 64
+      },
+      "dtype": "float32",
+      "actual_outcome": "FIT",
+      "static_features": {
+        "large_allocation_proxy_bytes": 603979776,
+        "safe_capacity_bytes": 2203342398,
+        "structural_bytes": 610369536,
+        "upper_bytes": 1017883074
+      }
+    },
+    {
+      "configuration_id": "attention-S4096-f32-B1-H8-D64",
+      "family": "attention",
+      "shape": {
+        "batch": 1,
+        "heads": 8,
+        "sequence": 4096,
+        "head_dim": 64
+      },
+      "dtype": "float32",
+      "actual_outcome": "FIT",
+      "static_features": {
+        "large_allocation_proxy_bytes": 1073741824,
+        "safe_capacity_bytes": 1416391513,
+        "structural_bytes": 1082261504,
+        "upper_bytes": 1804833959
+      }
+    },
+    {
+      "configuration_id": "attention-S4608-f32-B1-H8-D64",
+      "family": "attention",
+      "shape": {
+        "batch": 1,
+        "heads": 8,
+        "sequence": 4608,
+        "head_dim": 64
+      },
+      "dtype": "float32",
+      "actual_outcome": "EXECUTION_OOM",
+      "static_features": {
+        "large_allocation_proxy_bytes": 1358954496,
+        "safe_capacity_bytes": 938980471,
+        "structural_bytes": 1368539136,
+        "upper_bytes": 2282245001
+      }
+    },
+    {
+      "configuration_id": "attention-S5120-f32-B1-H8-D64",
+      "family": "attention",
+      "shape": {
+        "batch": 1,
+        "heads": 8,
+        "sequence": 5120,
+        "head_dim": 64
+      },
+      "dtype": "float32",
+      "actual_outcome": "EXECUTION_OOM",
+      "static_features": {
+        "large_allocation_proxy_bytes": 1677721600,
+        "safe_capacity_bytes": 405612364,
+        "structural_bytes": 1688371200,
+        "upper_bytes": 2815613108
+      }
+    },
+    {
+      "configuration_id": "MLP-2",
+      "family": "mlp",
+      "planned_batch": 9632,
+      "actual_outcome": "FIT",
+      "static_features": {
+        "large_allocation_proxy_bytes": 78905344,
+        "safe_capacity_bytes": 3087015947,
+        "structural_bytes": 80478208,
+        "upper_bytes": 134209525
+      }
+    },
+    {
+      "configuration_id": "TRAIN-1",
+      "family": "train",
+      "planned_batch": 5986,
+      "actual_outcome": "FIT",
+      "static_features": {
+        "large_allocation_proxy_bytes": 36777984,
+        "safe_capacity_bytes": 3087024478,
+        "structural_bytes": 80473092,
+        "upper_bytes": 134200994
+      }
+    },
+    {
+      "configuration_id": "CONV-1",
+      "family": "conv",
+      "planned_batch": 409,
+      "actual_outcome": "FIT",
+      "static_features": {
+        "large_allocation_proxy_bytes": 321650688,
+        "safe_capacity_bytes": 2684793797,
+        "structural_bytes": 321669120,
+        "upper_bytes": 536431675
+      }
+    }
+  ]
+}

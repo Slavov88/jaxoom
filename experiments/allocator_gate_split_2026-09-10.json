@@ -1,0 +1,17 @@
+{
+  "status": "FROZEN",
+  "development": [
+    "attention-S2048-f32-B1-H8-D64",
+    "attention-S3072-f32-B1-H8-D64",
+    "attention-S5120-f32-B1-H8-D64"
+  ],
+  "held_out": [
+    "attention-S4096-f32-B1-H8-D64",
+    "attention-S4608-f32-B1-H8-D64"
+  ],
+  "controls": [
+    "MLP-2",
+    "TRAIN-1",
+    "CONV-1"
+  ]
+}

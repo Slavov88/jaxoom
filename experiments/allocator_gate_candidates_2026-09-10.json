@@ -1,0 +1,474 @@
+{
+  "budget_bytes": 3221225472,
+  "candidate_formulas": {
+    "aggregate": "calibrated_upper <= budget",
+    "largest_buffer": "upper + largest_peak_live_buffer <= budget",
+    "peak_live": "upper + peak_live_bytes <= budget",
+    "top_two_live": "upper + sum(two_largest_peak_live_buffers) <= budget"
+  },
+  "candidate_metrics": {
+    "aggregate": {
+      "development": {
+        "false_reject": 0,
+        "false_safe": 1,
+        "rows": 3
+      },
+      "held_out": {
+        "false_reject": 0,
+        "false_safe": 1,
+        "rows": 2
+      }
+    },
+    "largest_buffer": {
+      "development": {
+        "false_reject": 0,
+        "false_safe": 0,
+        "rows": 3
+      },
+      "held_out": {
+        "false_reject": 0,
+        "false_safe": 1,
+        "rows": 2
+      }
+    },
+    "peak_live": {
+      "development": {
+        "false_reject": 0,
+        "false_safe": 0,
+        "rows": 3
+      },
+      "held_out": {
+        "false_reject": 0,
+        "false_safe": 0,
+        "rows": 2
+      }
+    },
+    "top_two_live": {
+      "development": {
+        "false_reject": 0,
+        "false_safe": 0,
+        "rows": 3
+      },
+      "held_out": {
+        "false_reject": 0,
+        "false_safe": 0,
+        "rows": 2
+      }
+    }
+  },
+  "control_metrics": {
+    "aggregate": {
+      "false_reject": 0,
+      "false_safe": 0,
+      "rows": 3
+    },
+    "largest_buffer": {
+      "false_reject": 0,
+      "false_safe": 0,
+      "rows": 3
+    },
+    "peak_live": {
+      "false_reject": 0,
+      "false_safe": 0,
+      "rows": 3
+    },
+    "top_two_live": {
+      "false_reject": 0,
+      "false_safe": 0,
+      "rows": 3
+    }
+  },
+  "control_rows": [
+    {
+      "actual_outcome": "FIT",
+      "candidates": {
+        "aggregate": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "aggregate",
+          "large_allocation_proxy_bytes": 0,
+          "passes": true,
+          "safe_capacity_bytes": 3087015947,
+          "structural_bytes": 80478208,
+          "upper_bytes": 134209525
+        },
+        "largest_buffer": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "largest_buffer",
+          "large_allocation_proxy_bytes": 39452672,
+          "passes": true,
+          "safe_capacity_bytes": 3087015947,
+          "structural_bytes": 80478208,
+          "upper_bytes": 134209525
+        },
+        "peak_live": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "peak_live",
+          "large_allocation_proxy_bytes": 80478208,
+          "passes": true,
+          "safe_capacity_bytes": 3087015947,
+          "structural_bytes": 80478208,
+          "upper_bytes": 134209525
+        },
+        "top_two_live": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "top_two_live",
+          "large_allocation_proxy_bytes": 78905344,
+          "passes": true,
+          "safe_capacity_bytes": 3087015947,
+          "structural_bytes": 80478208,
+          "upper_bytes": 134209525
+        }
+      },
+      "planned_batch": 9632,
+      "workload_id": "MLP-2"
+    },
+    {
+      "actual_outcome": "FIT",
+      "candidates": {
+        "aggregate": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "aggregate",
+          "large_allocation_proxy_bytes": 0,
+          "passes": true,
+          "safe_capacity_bytes": 3087024478,
+          "structural_bytes": 80473092,
+          "upper_bytes": 134200994
+        },
+        "largest_buffer": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "largest_buffer",
+          "large_allocation_proxy_bytes": 18388992,
+          "passes": true,
+          "safe_capacity_bytes": 3087024478,
+          "structural_bytes": 80473092,
+          "upper_bytes": 134200994
+        },
+        "peak_live": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "peak_live",
+          "large_allocation_proxy_bytes": 80473092,
+          "passes": true,
+          "safe_capacity_bytes": 3087024478,
+          "structural_bytes": 80473092,
+          "upper_bytes": 134200994
+        },
+        "top_two_live": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "top_two_live",
+          "large_allocation_proxy_bytes": 36777984,
+          "passes": true,
+          "safe_capacity_bytes": 3087024478,
+          "structural_bytes": 80473092,
+          "upper_bytes": 134200994
+        }
+      },
+      "planned_batch": 5986,
+      "workload_id": "TRAIN-1"
+    },
+    {
+      "actual_outcome": "FIT",
+      "candidates": {
+        "aggregate": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "aggregate",
+          "large_allocation_proxy_bytes": 0,
+          "passes": true,
+          "safe_capacity_bytes": 2684793797,
+          "structural_bytes": 321669120,
+          "upper_bytes": 536431675
+        },
+        "largest_buffer": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "largest_buffer",
+          "large_allocation_proxy_bytes": 214433792,
+          "passes": true,
+          "safe_capacity_bytes": 2684793797,
+          "structural_bytes": 321669120,
+          "upper_bytes": 536431675
+        },
+        "peak_live": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "peak_live",
+          "large_allocation_proxy_bytes": 321669120,
+          "passes": true,
+          "safe_capacity_bytes": 2684793797,
+          "structural_bytes": 321669120,
+          "upper_bytes": 536431675
+        },
+        "top_two_live": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "top_two_live",
+          "large_allocation_proxy_bytes": 321650688,
+          "passes": true,
+          "safe_capacity_bytes": 2684793797,
+          "structural_bytes": 321669120,
+          "upper_bytes": 536431675
+        }
+      },
+      "planned_batch": 409,
+      "workload_id": "CONV-1"
+    }
+  ],
+  "environment": {
+    "backend": "gpu",
+    "device": "cuda:0",
+    "jax_version": "0.11.0"
+  },
+  "production_decision": "NO_CHANGE",
+  "rows": [
+    {
+      "actual_outcome": "FIT",
+      "candidates": {
+        "aggregate": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "aggregate",
+          "large_allocation_proxy_bytes": 0,
+          "passes": true,
+          "safe_capacity_bytes": 2766465020,
+          "structural_bytes": 272695296,
+          "upper_bytes": 454760452
+        },
+        "largest_buffer": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "largest_buffer",
+          "large_allocation_proxy_bytes": 134217728,
+          "passes": true,
+          "safe_capacity_bytes": 2766465020,
+          "structural_bytes": 272695296,
+          "upper_bytes": 454760452
+        },
+        "peak_live": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "peak_live",
+          "large_allocation_proxy_bytes": 272695296,
+          "passes": true,
+          "safe_capacity_bytes": 2766465020,
+          "structural_bytes": 272695296,
+          "upper_bytes": 454760452
+        },
+        "top_two_live": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "top_two_live",
+          "large_allocation_proxy_bytes": 268435456,
+          "passes": true,
+          "safe_capacity_bytes": 2766465020,
+          "structural_bytes": 272695296,
+          "upper_bytes": 454760452
+        }
+      },
+      "sequence": 2048
+    },
+    {
+      "actual_outcome": "FIT",
+      "candidates": {
+        "aggregate": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "aggregate",
+          "large_allocation_proxy_bytes": 0,
+          "passes": true,
+          "safe_capacity_bytes": 2203342398,
+          "structural_bytes": 610369536,
+          "upper_bytes": 1017883074
+        },
+        "largest_buffer": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "largest_buffer",
+          "large_allocation_proxy_bytes": 301989888,
+          "passes": true,
+          "safe_capacity_bytes": 2203342398,
+          "structural_bytes": 610369536,
+          "upper_bytes": 1017883074
+        },
+        "peak_live": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "peak_live",
+          "large_allocation_proxy_bytes": 610369536,
+          "passes": true,
+          "safe_capacity_bytes": 2203342398,
+          "structural_bytes": 610369536,
+          "upper_bytes": 1017883074
+        },
+        "top_two_live": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "top_two_live",
+          "large_allocation_proxy_bytes": 603979776,
+          "passes": true,
+          "safe_capacity_bytes": 2203342398,
+          "structural_bytes": 610369536,
+          "upper_bytes": 1017883074
+        }
+      },
+      "sequence": 3072
+    },
+    {
+      "actual_outcome": "FIT",
+      "candidates": {
+        "aggregate": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "aggregate",
+          "large_allocation_proxy_bytes": 0,
+          "passes": true,
+          "safe_capacity_bytes": 1416391513,
+          "structural_bytes": 1082261504,
+          "upper_bytes": 1804833959
+        },
+        "largest_buffer": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "largest_buffer",
+          "large_allocation_proxy_bytes": 536870912,
+          "passes": true,
+          "safe_capacity_bytes": 1416391513,
+          "structural_bytes": 1082261504,
+          "upper_bytes": 1804833959
+        },
+        "peak_live": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "peak_live",
+          "large_allocation_proxy_bytes": 1082261504,
+          "passes": true,
+          "safe_capacity_bytes": 1416391513,
+          "structural_bytes": 1082261504,
+          "upper_bytes": 1804833959
+        },
+        "top_two_live": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "top_two_live",
+          "large_allocation_proxy_bytes": 1073741824,
+          "passes": true,
+          "safe_capacity_bytes": 1416391513,
+          "structural_bytes": 1082261504,
+          "upper_bytes": 1804833959
+        }
+      },
+      "sequence": 4096
+    },
+    {
+      "actual_outcome": "EXECUTION_OOM",
+      "candidates": {
+        "aggregate": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "aggregate",
+          "large_allocation_proxy_bytes": 0,
+          "passes": true,
+          "safe_capacity_bytes": 938980471,
+          "structural_bytes": 1368539136,
+          "upper_bytes": 2282245001
+        },
+        "largest_buffer": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "largest_buffer",
+          "large_allocation_proxy_bytes": 679477248,
+          "passes": true,
+          "safe_capacity_bytes": 938980471,
+          "structural_bytes": 1368539136,
+          "upper_bytes": 2282245001
+        },
+        "peak_live": {
+          "aggregate_pass": true,
+          "allocator_pass": false,
+          "candidate": "peak_live",
+          "large_allocation_proxy_bytes": 1368539136,
+          "passes": false,
+          "safe_capacity_bytes": 938980471,
+          "structural_bytes": 1368539136,
+          "upper_bytes": 2282245001
+        },
+        "top_two_live": {
+          "aggregate_pass": true,
+          "allocator_pass": false,
+          "candidate": "top_two_live",
+          "large_allocation_proxy_bytes": 1358954496,
+          "passes": false,
+          "safe_capacity_bytes": 938980471,
+          "structural_bytes": 1368539136,
+          "upper_bytes": 2282245001
+        }
+      },
+      "sequence": 4608
+    },
+    {
+      "actual_outcome": "EXECUTION_OOM",
+      "candidates": {
+        "aggregate": {
+          "aggregate_pass": true,
+          "allocator_pass": true,
+          "candidate": "aggregate",
+          "large_allocation_proxy_bytes": 0,
+          "passes": true,
+          "safe_capacity_bytes": 405612364,
+          "structural_bytes": 1688371200,
+          "upper_bytes": 2815613108
+        },
+        "largest_buffer": {
+          "aggregate_pass": true,
+          "allocator_pass": false,
+          "candidate": "largest_buffer",
+          "large_allocation_proxy_bytes": 838860800,
+          "passes": false,
+          "safe_capacity_bytes": 405612364,
+          "structural_bytes": 1688371200,
+          "upper_bytes": 2815613108
+        },
+        "peak_live": {
+          "aggregate_pass": true,
+          "allocator_pass": false,
+          "candidate": "peak_live",
+          "large_allocation_proxy_bytes": 1688371200,
+          "passes": false,
+          "safe_capacity_bytes": 405612364,
+          "structural_bytes": 1688371200,
+          "upper_bytes": 2815613108
+        },
+        "top_two_live": {
+          "aggregate_pass": true,
+          "allocator_pass": false,
+          "candidate": "top_two_live",
+          "large_allocation_proxy_bytes": 1677721600,
+          "passes": false,
+          "safe_capacity_bytes": 405612364,
+          "structural_bytes": 1688371200,
+          "upper_bytes": 2815613108
+        }
+      },
+      "sequence": 5120
+    }
+  ],
+  "split": {
+    "development": [
+      2048,
+      3072,
+      5120
+    ],
+    "held_out": [
+      4096,
+      4608
+    ]
+  },
+  "status": "OBSERVED"
+}
