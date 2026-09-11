@@ -176,6 +176,14 @@ capacity diagnostics are sparse and the threshold is not a literal free-block
 model. The result is **CONTIGUOUS CAPACITY MODEL PROMISING BUT INSUFFICIENT**;
 see `contiguous_capacity_report_2026-09-11.md`.
 
+The capacity-boundary campaign then varied `XLA_CLIENT_MEM_FRACTION` in fresh
+processes for a frozen nine-workload RTX 3050 panel. Five execution thresholds
+were bracketed to about 102--104 MiB, but one previously OOM discriminator FIT
+repeatedly, the known compile-OOM convolution case timed out, and the
+`allocator_limit / 3` hypothesis was unsafe on two measured brackets. The
+result is **CAPACITY THRESHOLDS NOT STABLE ENOUGH**; see
+`capacity_boundary_report_2026-09-11.md`.
+
 The OOM boundary harness runs each target trial in a fresh subprocess and
 keeps intrinsic and controlled-contention tracks separate:
 
