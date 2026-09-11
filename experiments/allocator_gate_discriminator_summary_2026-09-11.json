@@ -1,0 +1,169 @@
+{
+  "status": "COMPUTATIONALLY_VERIFIED",
+  "static_candidates_screened": 1632,
+  "selected_gpu_candidates": 23,
+  "selection_counts": {
+    "AGG_PASS_TOP2_NEAR_PASS": 6,
+    "AGG_PASS_TOP2_REJECT": 14,
+    "MATCHED_TOP2_GROUP": 23,
+    "TOP2_VS_LARGEST_DISAGREE": 3
+  },
+  "coverage": {
+    "B": [
+      1,
+      2,
+      4
+    ],
+    "H": [
+      4,
+      8,
+      12,
+      16
+    ],
+    "D": [
+      32,
+      64,
+      96,
+      128
+    ],
+    "dtype": [
+      "float16",
+      "float32"
+    ]
+  },
+  "runtime_executions": 46,
+  "stable_fit": 20,
+  "stable_oom": 3,
+  "unstable": 0,
+  "timeouts": 0,
+  "candidate_metrics": {
+    "aggregate": {
+      "false_safe": 3,
+      "false_reject": 0,
+      "unique_true_positive_ooms": 0
+    },
+    "largest": {
+      "false_safe": 3,
+      "false_reject": 0,
+      "unique_true_positive_ooms": 0
+    },
+    "top_two": {
+      "false_safe": 0,
+      "false_reject": 14,
+      "unique_true_positive_ooms": 3
+    },
+    "peak_live": {
+      "false_safe": 0,
+      "false_reject": 14,
+      "unique_true_positive_ooms": 3
+    },
+    "multiplier_1.10": {
+      "false_safe": 3,
+      "false_reject": 0,
+      "unique_true_positive_ooms": 0
+    },
+    "multiplier_1.25": {
+      "false_safe": 3,
+      "false_reject": 0,
+      "unique_true_positive_ooms": 0
+    },
+    "multiplier_1.50": {
+      "false_safe": 3,
+      "false_reject": 0,
+      "unique_true_positive_ooms": 0
+    }
+  },
+  "aggregate_pass_top_two_reject": {
+    "stable_rows": 17,
+    "fit": 14,
+    "oom": 3,
+    "unstable": 0
+  },
+  "unique_true_positive_ooms": 3,
+  "correlations_upper_vs_proxy": {
+    "top_two_peak_live_bytes": 0.9998033068416273,
+    "largest_buffer_bytes": 0.9458195676418976
+  },
+  "diagnostic_rows": [
+    {
+      "configuration_id": "DISC-B2-H12-S2560-D64-float32",
+      "outcome": "EXECUTION_OOM",
+      "top_two_bytes": 1258291200,
+      "compiler_temp_bytes": 1258291200,
+      "ratio": 1.0,
+      "absolute_error_bytes": 0,
+      "safe_capacity_proxy_bytes": 1096195782,
+      "largest_free_block_bytes": 1073741824,
+      "peak_pool_bytes": 2283798528,
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [executable_name='jit_attention'] [tf-allocator-allocation-error='']"
+    },
+    {
+      "configuration_id": "DISC-B2-H12-S2560-D32-float32",
+      "outcome": "EXECUTION_OOM",
+      "top_two_bytes": 1258291200,
+      "compiler_temp_bytes": 1258291200,
+      "ratio": 1.0,
+      "absolute_error_bytes": 0,
+      "safe_capacity_proxy_bytes": 1109310720,
+      "largest_free_block_bytes": 1073741824,
+      "peak_pool_bytes": 2283798528,
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [tf-allocator-allocation-error=''] [executable_name='jit_attention']"
+    },
+    {
+      "configuration_id": "DISC-B2-H12-S2560-D96-float32",
+      "outcome": "EXECUTION_OOM",
+      "top_two_bytes": 1258291200,
+      "compiler_temp_bytes": 1258291200,
+      "ratio": 1.0,
+      "absolute_error_bytes": 0,
+      "safe_capacity_proxy_bytes": 1083080845,
+      "largest_free_block_bytes": 1073741824,
+      "peak_pool_bytes": 2418016256,
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [tf-allocator-allocation-error=''] [executable_name='jit_attention']"
+    },
+    {
+      "configuration_id": "DISC-B2-H16-S2560-D96-float16",
+      "outcome": "FIT",
+      "top_two_bytes": 1258291200,
+      "compiler_temp_bytes": 838860800,
+      "ratio": 1.5,
+      "absolute_error_bytes": 419430400,
+      "safe_capacity_proxy_bytes": 1096059168,
+      "largest_free_block_bytes": 536870912,
+      "peak_pool_bytes": 1210056704,
+      "error": ""
+    },
+    {
+      "configuration_id": "DISC-B2-H16-S2560-D64-float16",
+      "outcome": "FIT",
+      "top_two_bytes": 1258291200,
+      "compiler_temp_bytes": 838860800,
+      "ratio": 1.5,
+      "absolute_error_bytes": 419430400,
+      "safe_capacity_proxy_bytes": 1104802460,
+      "largest_free_block_bytes": 536870912,
+      "peak_pool_bytes": 1210056704,
+      "error": ""
+    },
+    {
+      "configuration_id": "DISC-B2-H12-S2816-D128-float16",
+      "outcome": "FIT",
+      "top_two_bytes": 1141899264,
+      "compiler_temp_bytes": 761266176,
+      "ratio": 1.5,
+      "absolute_error_bytes": 380633088,
+      "safe_capacity_proxy_bytes": 1287632883,
+      "largest_free_block_bytes": 536870912,
+      "peak_pool_bytes": 1344274432,
+      "error": ""
+    }
+  ],
+  "planner_impact": {
+    "median_ratio": 0.8421052631578947,
+    "min_ratio": 0.0036900369003690036,
+    "reduced_over_25": 3,
+    "reduced_over_50": 1
+  },
+  "decision": "ALLOCATOR GATE TOO CONSERVATIVE",
+  "production_decision": "NO PRODUCTION CHANGE"
+}

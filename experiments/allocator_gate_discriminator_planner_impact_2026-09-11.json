@@ -1,0 +1,1525 @@
+{
+  "status": "COMPUTATIONALLY_VERIFIED",
+  "source": "batch_planner_boundary_validation_2026-09-09.json",
+  "rows": [
+    {
+      "workload": "mlp",
+      "budget_bytes": 16777216,
+      "recommended_batch": null,
+      "first_top_two_rejected": 1,
+      "recommendation_ratio": null,
+      "trials": [
+        {
+          "batch": 1,
+          "upper": 20997561,
+          "top_two": 8388608,
+          "passes": false
+        }
+      ]
+    },
+    {
+      "workload": "mlp",
+      "budget_bytes": 33554432,
+      "recommended_batch": 920,
+      "first_top_two_rejected": 512,
+      "recommendation_ratio": 0.5565217391304348,
+      "trials": [
+        {
+          "batch": 1,
+          "upper": 20997561,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 2,
+          "upper": 21011223,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 4,
+          "upper": 21038545,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 8,
+          "upper": 21093191,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 16,
+          "upper": 21202482,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 32,
+          "upper": 21421064,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 64,
+          "upper": 21858229,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 128,
+          "upper": 22732558,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 256,
+          "upper": 24481216,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 512,
+          "upper": 27978533,
+          "top_two": 8388608,
+          "passes": false
+        },
+        {
+          "batch": 768,
+          "upper": 31475850,
+          "top_two": 8388608,
+          "passes": false
+        },
+        {
+          "batch": 896,
+          "upper": 33224508,
+          "top_two": 8388608,
+          "passes": false
+        },
+        {
+          "batch": 912,
+          "upper": 33443090,
+          "top_two": 8388608,
+          "passes": false
+        },
+        {
+          "batch": 920,
+          "upper": 33552381,
+          "top_two": 8388608,
+          "passes": false
+        },
+        {
+          "batch": 921,
+          "upper": 33566043,
+          "top_two": 8388608,
+          "passes": false
+        },
+        {
+          "batch": 922,
+          "upper": 33579704,
+          "top_two": 8388608,
+          "passes": false
+        },
+        {
+          "batch": 924,
+          "upper": 33607027,
+          "top_two": 8388608,
+          "passes": false
+        },
+        {
+          "batch": 928,
+          "upper": 33661672,
+          "top_two": 8388608,
+          "passes": false
+        },
+        {
+          "batch": 960,
+          "upper": 34098837,
+          "top_two": 8388608,
+          "passes": false
+        },
+        {
+          "batch": 1024,
+          "upper": 34973166,
+          "top_two": 8388608,
+          "passes": false
+        }
+      ]
+    },
+    {
+      "workload": "mlp",
+      "budget_bytes": 67108864,
+      "recommended_batch": 2048,
+      "first_top_two_rejected": 2048,
+      "recommendation_ratio": 1.0,
+      "trials": [
+        {
+          "batch": 1,
+          "upper": 20997561,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 2,
+          "upper": 21011223,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 4,
+          "upper": 21038545,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 8,
+          "upper": 21093191,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 16,
+          "upper": 21202482,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 32,
+          "upper": 21421064,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 64,
+          "upper": 21858229,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 128,
+          "upper": 22732558,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 256,
+          "upper": 24481216,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 512,
+          "upper": 27978533,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 1024,
+          "upper": 34973166,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 2048,
+          "upper": 55957066,
+          "top_two": 16777216,
+          "passes": false
+        }
+      ]
+    },
+    {
+      "workload": "training_like",
+      "budget_bytes": 16777216,
+      "recommended_batch": null,
+      "first_top_two_rejected": 1,
+      "recommendation_ratio": null,
+      "trials": [
+        {
+          "batch": 1,
+          "upper": 28005856,
+          "top_two": 16781312,
+          "passes": false
+        }
+      ]
+    },
+    {
+      "workload": "training_like",
+      "budget_bytes": 33554432,
+      "recommended_batch": 271,
+      "first_top_two_rejected": 1,
+      "recommendation_ratio": 0.0036900369003690036,
+      "trials": [
+        {
+          "batch": 1,
+          "upper": 28005856,
+          "top_two": 16781312,
+          "passes": false
+        },
+        {
+          "batch": 2,
+          "upper": 28026348,
+          "top_two": 16785408,
+          "passes": false
+        },
+        {
+          "batch": 4,
+          "upper": 28067332,
+          "top_two": 16793600,
+          "passes": false
+        },
+        {
+          "batch": 8,
+          "upper": 28149300,
+          "top_two": 16809984,
+          "passes": false
+        },
+        {
+          "batch": 16,
+          "upper": 28313237,
+          "top_two": 16842752,
+          "passes": false
+        },
+        {
+          "batch": 32,
+          "upper": 28641111,
+          "top_two": 16908288,
+          "passes": false
+        },
+        {
+          "batch": 64,
+          "upper": 29296857,
+          "top_two": 17039360,
+          "passes": false
+        },
+        {
+          "batch": 128,
+          "upper": 30608351,
+          "top_two": 17301504,
+          "passes": false
+        },
+        {
+          "batch": 256,
+          "upper": 33231339,
+          "top_two": 17825792,
+          "passes": false
+        },
+        {
+          "batch": 264,
+          "upper": 33395275,
+          "top_two": 17858560,
+          "passes": false
+        },
+        {
+          "batch": 268,
+          "upper": 33477244,
+          "top_two": 17874944,
+          "passes": false
+        },
+        {
+          "batch": 270,
+          "upper": 33518228,
+          "top_two": 17883136,
+          "passes": false
+        },
+        {
+          "batch": 271,
+          "upper": 33538720,
+          "top_two": 17887232,
+          "passes": false
+        },
+        {
+          "batch": 272,
+          "upper": 33559212,
+          "top_two": 17891328,
+          "passes": false
+        },
+        {
+          "batch": 288,
+          "upper": 33887085,
+          "top_two": 17956864,
+          "passes": false
+        },
+        {
+          "batch": 320,
+          "upper": 34542832,
+          "top_two": 18087936,
+          "passes": false
+        },
+        {
+          "batch": 384,
+          "upper": 35854326,
+          "top_two": 18350080,
+          "passes": false
+        },
+        {
+          "batch": 512,
+          "upper": 38477314,
+          "top_two": 18874368,
+          "passes": false
+        }
+      ]
+    },
+    {
+      "workload": "training_like",
+      "budget_bytes": 67108864,
+      "recommended_batch": 1909,
+      "first_top_two_rejected": 1024,
+      "recommendation_ratio": 0.536406495547407,
+      "trials": [
+        {
+          "batch": 1,
+          "upper": 28005856,
+          "top_two": 16781312,
+          "passes": true
+        },
+        {
+          "batch": 2,
+          "upper": 28026348,
+          "top_two": 16785408,
+          "passes": true
+        },
+        {
+          "batch": 4,
+          "upper": 28067332,
+          "top_two": 16793600,
+          "passes": true
+        },
+        {
+          "batch": 8,
+          "upper": 28149300,
+          "top_two": 16809984,
+          "passes": true
+        },
+        {
+          "batch": 16,
+          "upper": 28313237,
+          "top_two": 16842752,
+          "passes": true
+        },
+        {
+          "batch": 32,
+          "upper": 28641111,
+          "top_two": 16908288,
+          "passes": true
+        },
+        {
+          "batch": 64,
+          "upper": 29296857,
+          "top_two": 17039360,
+          "passes": true
+        },
+        {
+          "batch": 128,
+          "upper": 30608351,
+          "top_two": 17301504,
+          "passes": true
+        },
+        {
+          "batch": 256,
+          "upper": 33231339,
+          "top_two": 17825792,
+          "passes": true
+        },
+        {
+          "batch": 512,
+          "upper": 38477314,
+          "top_two": 18874368,
+          "passes": true
+        },
+        {
+          "batch": 1024,
+          "upper": 48969263,
+          "top_two": 20971520,
+          "passes": false
+        },
+        {
+          "batch": 1536,
+          "upper": 59461213,
+          "top_two": 23068672,
+          "passes": false
+        },
+        {
+          "batch": 1792,
+          "upper": 64707188,
+          "top_two": 24117248,
+          "passes": false
+        },
+        {
+          "batch": 1856,
+          "upper": 66018682,
+          "top_two": 24379392,
+          "passes": false
+        },
+        {
+          "batch": 1888,
+          "upper": 66674429,
+          "top_two": 24510464,
+          "passes": false
+        },
+        {
+          "batch": 1904,
+          "upper": 67002302,
+          "top_two": 24576000,
+          "passes": false
+        },
+        {
+          "batch": 1908,
+          "upper": 67084271,
+          "top_two": 24592384,
+          "passes": false
+        },
+        {
+          "batch": 1909,
+          "upper": 67104763,
+          "top_two": 24596480,
+          "passes": false
+        },
+        {
+          "batch": 1910,
+          "upper": 67125255,
+          "top_two": 24600576,
+          "passes": false
+        },
+        {
+          "batch": 1912,
+          "upper": 67166239,
+          "top_two": 24608768,
+          "passes": false
+        },
+        {
+          "batch": 1920,
+          "upper": 67330176,
+          "top_two": 24641536,
+          "passes": false
+        },
+        {
+          "batch": 2048,
+          "upper": 69953163,
+          "top_two": 25165824,
+          "passes": false
+        }
+      ]
+    },
+    {
+      "workload": "attention",
+      "budget_bytes": 16777216,
+      "recommended_batch": 76,
+      "first_top_two_rejected": 64,
+      "recommendation_ratio": 0.8421052631578947,
+      "trials": [
+        {
+          "batch": 1,
+          "upper": 220290,
+          "top_two": 131072,
+          "passes": true
+        },
+        {
+          "batch": 2,
+          "upper": 440580,
+          "top_two": 262144,
+          "passes": true
+        },
+        {
+          "batch": 4,
+          "upper": 881160,
+          "top_two": 524288,
+          "passes": true
+        },
+        {
+          "batch": 8,
+          "upper": 1762320,
+          "top_two": 1048576,
+          "passes": true
+        },
+        {
+          "batch": 16,
+          "upper": 3524639,
+          "top_two": 2097152,
+          "passes": true
+        },
+        {
+          "batch": 32,
+          "upper": 7049279,
+          "top_two": 4194304,
+          "passes": true
+        },
+        {
+          "batch": 64,
+          "upper": 14098558,
+          "top_two": 8388608,
+          "passes": false
+        },
+        {
+          "batch": 72,
+          "upper": 15860877,
+          "top_two": 9437184,
+          "passes": false
+        },
+        {
+          "batch": 76,
+          "upper": 16742037,
+          "top_two": 9961472,
+          "passes": false
+        },
+        {
+          "batch": 77,
+          "upper": 16962327,
+          "top_two": 10092544,
+          "passes": false
+        },
+        {
+          "batch": 78,
+          "upper": 17182617,
+          "top_two": 10223616,
+          "passes": false
+        },
+        {
+          "batch": 80,
+          "upper": 17623197,
+          "top_two": 10485760,
+          "passes": false
+        },
+        {
+          "batch": 96,
+          "upper": 21147836,
+          "top_two": 12582912,
+          "passes": false
+        },
+        {
+          "batch": 128,
+          "upper": 28197115,
+          "top_two": 16777216,
+          "passes": false
+        }
+      ]
+    },
+    {
+      "workload": "attention",
+      "budget_bytes": 33554432,
+      "recommended_batch": 152,
+      "first_top_two_rejected": 128,
+      "recommendation_ratio": 0.8421052631578947,
+      "trials": [
+        {
+          "batch": 1,
+          "upper": 220290,
+          "top_two": 131072,
+          "passes": true
+        },
+        {
+          "batch": 2,
+          "upper": 440580,
+          "top_two": 262144,
+          "passes": true
+        },
+        {
+          "batch": 4,
+          "upper": 881160,
+          "top_two": 524288,
+          "passes": true
+        },
+        {
+          "batch": 8,
+          "upper": 1762320,
+          "top_two": 1048576,
+          "passes": true
+        },
+        {
+          "batch": 16,
+          "upper": 3524639,
+          "top_two": 2097152,
+          "passes": true
+        },
+        {
+          "batch": 32,
+          "upper": 7049279,
+          "top_two": 4194304,
+          "passes": true
+        },
+        {
+          "batch": 64,
+          "upper": 14098558,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 128,
+          "upper": 28197115,
+          "top_two": 16777216,
+          "passes": false
+        },
+        {
+          "batch": 144,
+          "upper": 31721755,
+          "top_two": 18874368,
+          "passes": false
+        },
+        {
+          "batch": 152,
+          "upper": 33484074,
+          "top_two": 19922944,
+          "passes": false
+        },
+        {
+          "batch": 153,
+          "upper": 33704364,
+          "top_two": 20054016,
+          "passes": false
+        },
+        {
+          "batch": 154,
+          "upper": 33924654,
+          "top_two": 20185088,
+          "passes": false
+        },
+        {
+          "batch": 156,
+          "upper": 34365234,
+          "top_two": 20447232,
+          "passes": false
+        },
+        {
+          "batch": 160,
+          "upper": 35246394,
+          "top_two": 20971520,
+          "passes": false
+        },
+        {
+          "batch": 192,
+          "upper": 42295673,
+          "top_two": 25165824,
+          "passes": false
+        },
+        {
+          "batch": 256,
+          "upper": 56394231,
+          "top_two": 33554432,
+          "passes": false
+        }
+      ]
+    },
+    {
+      "workload": "attention",
+      "budget_bytes": 67108864,
+      "recommended_batch": 304,
+      "first_top_two_rejected": 256,
+      "recommendation_ratio": 0.8421052631578947,
+      "trials": [
+        {
+          "batch": 1,
+          "upper": 220290,
+          "top_two": 131072,
+          "passes": true
+        },
+        {
+          "batch": 2,
+          "upper": 440580,
+          "top_two": 262144,
+          "passes": true
+        },
+        {
+          "batch": 4,
+          "upper": 881160,
+          "top_two": 524288,
+          "passes": true
+        },
+        {
+          "batch": 8,
+          "upper": 1762320,
+          "top_two": 1048576,
+          "passes": true
+        },
+        {
+          "batch": 16,
+          "upper": 3524639,
+          "top_two": 2097152,
+          "passes": true
+        },
+        {
+          "batch": 32,
+          "upper": 7049279,
+          "top_two": 4194304,
+          "passes": true
+        },
+        {
+          "batch": 64,
+          "upper": 14098558,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 128,
+          "upper": 28197115,
+          "top_two": 16777216,
+          "passes": true
+        },
+        {
+          "batch": 256,
+          "upper": 56394231,
+          "top_two": 33554432,
+          "passes": false
+        },
+        {
+          "batch": 288,
+          "upper": 63443509,
+          "top_two": 37748736,
+          "passes": false
+        },
+        {
+          "batch": 304,
+          "upper": 66968149,
+          "top_two": 39845888,
+          "passes": false
+        },
+        {
+          "batch": 305,
+          "upper": 67188439,
+          "top_two": 39976960,
+          "passes": false
+        },
+        {
+          "batch": 306,
+          "upper": 67408729,
+          "top_two": 40108032,
+          "passes": false
+        },
+        {
+          "batch": 308,
+          "upper": 67849309,
+          "top_two": 40370176,
+          "passes": false
+        },
+        {
+          "batch": 312,
+          "upper": 68730468,
+          "top_two": 40894464,
+          "passes": false
+        },
+        {
+          "batch": 320,
+          "upper": 70492788,
+          "top_two": 41943040,
+          "passes": false
+        },
+        {
+          "batch": 384,
+          "upper": 84591346,
+          "top_two": 50331648,
+          "passes": false
+        },
+        {
+          "batch": 512,
+          "upper": 112788461,
+          "top_two": 67108864,
+          "passes": false
+        }
+      ]
+    },
+    {
+      "workload": "convolution",
+      "budget_bytes": 16777216,
+      "recommended_batch": 223,
+      "first_top_two_rejected": 192,
+      "recommendation_ratio": 0.8609865470852018,
+      "trials": [
+        {
+          "batch": 1,
+          "upper": 76579,
+          "top_two": 45056,
+          "passes": true
+        },
+        {
+          "batch": 2,
+          "upper": 151716,
+          "top_two": 90112,
+          "passes": true
+        },
+        {
+          "batch": 4,
+          "upper": 301991,
+          "top_two": 180224,
+          "passes": true
+        },
+        {
+          "batch": 8,
+          "upper": 602542,
+          "top_two": 360448,
+          "passes": true
+        },
+        {
+          "batch": 16,
+          "upper": 1203643,
+          "top_two": 720896,
+          "passes": true
+        },
+        {
+          "batch": 32,
+          "upper": 2405846,
+          "top_two": 1441792,
+          "passes": true
+        },
+        {
+          "batch": 64,
+          "upper": 4810251,
+          "top_two": 2883584,
+          "passes": true
+        },
+        {
+          "batch": 128,
+          "upper": 9619062,
+          "top_two": 5767168,
+          "passes": true
+        },
+        {
+          "batch": 192,
+          "upper": 14427872,
+          "top_two": 8650752,
+          "passes": false
+        },
+        {
+          "batch": 208,
+          "upper": 15630075,
+          "top_two": 9371648,
+          "passes": false
+        },
+        {
+          "batch": 216,
+          "upper": 16231176,
+          "top_two": 9732096,
+          "passes": false
+        },
+        {
+          "batch": 220,
+          "upper": 16531726,
+          "top_two": 9912320,
+          "passes": false
+        },
+        {
+          "batch": 222,
+          "upper": 16682002,
+          "top_two": 10002432,
+          "passes": false
+        },
+        {
+          "batch": 223,
+          "upper": 16757139,
+          "top_two": 10047488,
+          "passes": false
+        },
+        {
+          "batch": 224,
+          "upper": 16832277,
+          "top_two": 10092544,
+          "passes": false
+        },
+        {
+          "batch": 256,
+          "upper": 19236682,
+          "top_two": 11534336,
+          "passes": false
+        }
+      ]
+    },
+    {
+      "workload": "convolution",
+      "budget_bytes": 33554432,
+      "recommended_batch": 446,
+      "first_top_two_rejected": 384,
+      "recommendation_ratio": 0.8609865470852018,
+      "trials": [
+        {
+          "batch": 1,
+          "upper": 76579,
+          "top_two": 45056,
+          "passes": true
+        },
+        {
+          "batch": 2,
+          "upper": 151716,
+          "top_two": 90112,
+          "passes": true
+        },
+        {
+          "batch": 4,
+          "upper": 301991,
+          "top_two": 180224,
+          "passes": true
+        },
+        {
+          "batch": 8,
+          "upper": 602542,
+          "top_two": 360448,
+          "passes": true
+        },
+        {
+          "batch": 16,
+          "upper": 1203643,
+          "top_two": 720896,
+          "passes": true
+        },
+        {
+          "batch": 32,
+          "upper": 2405846,
+          "top_two": 1441792,
+          "passes": true
+        },
+        {
+          "batch": 64,
+          "upper": 4810251,
+          "top_two": 2883584,
+          "passes": true
+        },
+        {
+          "batch": 128,
+          "upper": 9619062,
+          "top_two": 5767168,
+          "passes": true
+        },
+        {
+          "batch": 256,
+          "upper": 19236682,
+          "top_two": 11534336,
+          "passes": true
+        },
+        {
+          "batch": 384,
+          "upper": 28854303,
+          "top_two": 17301504,
+          "passes": false
+        },
+        {
+          "batch": 416,
+          "upper": 31258708,
+          "top_two": 18743296,
+          "passes": false
+        },
+        {
+          "batch": 432,
+          "upper": 32460911,
+          "top_two": 19464192,
+          "passes": false
+        },
+        {
+          "batch": 440,
+          "upper": 33062012,
+          "top_two": 19824640,
+          "passes": false
+        },
+        {
+          "batch": 444,
+          "upper": 33362563,
+          "top_two": 20004864,
+          "passes": false
+        },
+        {
+          "batch": 446,
+          "upper": 33512838,
+          "top_two": 20094976,
+          "passes": false
+        },
+        {
+          "batch": 447,
+          "upper": 33587976,
+          "top_two": 20140032,
+          "passes": false
+        },
+        {
+          "batch": 448,
+          "upper": 33663113,
+          "top_two": 20185088,
+          "passes": false
+        },
+        {
+          "batch": 512,
+          "upper": 38471924,
+          "top_two": 23068672,
+          "passes": false
+        }
+      ]
+    },
+    {
+      "workload": "convolution",
+      "budget_bytes": 67108864,
+      "recommended_batch": 893,
+      "first_top_two_rejected": 768,
+      "recommendation_ratio": 0.8600223964165733,
+      "trials": [
+        {
+          "batch": 1,
+          "upper": 76579,
+          "top_two": 45056,
+          "passes": true
+        },
+        {
+          "batch": 2,
+          "upper": 151716,
+          "top_two": 90112,
+          "passes": true
+        },
+        {
+          "batch": 4,
+          "upper": 301991,
+          "top_two": 180224,
+          "passes": true
+        },
+        {
+          "batch": 8,
+          "upper": 602542,
+          "top_two": 360448,
+          "passes": true
+        },
+        {
+          "batch": 16,
+          "upper": 1203643,
+          "top_two": 720896,
+          "passes": true
+        },
+        {
+          "batch": 32,
+          "upper": 2405846,
+          "top_two": 1441792,
+          "passes": true
+        },
+        {
+          "batch": 64,
+          "upper": 4810251,
+          "top_two": 2883584,
+          "passes": true
+        },
+        {
+          "batch": 128,
+          "upper": 9619062,
+          "top_two": 5767168,
+          "passes": true
+        },
+        {
+          "batch": 256,
+          "upper": 19236682,
+          "top_two": 11534336,
+          "passes": true
+        },
+        {
+          "batch": 512,
+          "upper": 38471924,
+          "top_two": 23068672,
+          "passes": true
+        },
+        {
+          "batch": 768,
+          "upper": 57707165,
+          "top_two": 34603008,
+          "passes": false
+        },
+        {
+          "batch": 832,
+          "upper": 62515975,
+          "top_two": 37486592,
+          "passes": false
+        },
+        {
+          "batch": 864,
+          "upper": 64920381,
+          "top_two": 38928384,
+          "passes": false
+        },
+        {
+          "batch": 880,
+          "upper": 66122583,
+          "top_two": 39649280,
+          "passes": false
+        },
+        {
+          "batch": 888,
+          "upper": 66723685,
+          "top_two": 40009728,
+          "passes": false
+        },
+        {
+          "batch": 892,
+          "upper": 67024235,
+          "top_two": 40189952,
+          "passes": false
+        },
+        {
+          "batch": 893,
+          "upper": 67099373,
+          "top_two": 40235008,
+          "passes": false
+        },
+        {
+          "batch": 894,
+          "upper": 67174510,
+          "top_two": 40280064,
+          "passes": false
+        },
+        {
+          "batch": 896,
+          "upper": 67324786,
+          "top_two": 40370176,
+          "passes": false
+        },
+        {
+          "batch": 1024,
+          "upper": 76942407,
+          "top_two": 46137344,
+          "passes": false
+        }
+      ]
+    },
+    {
+      "workload": "attention",
+      "budget_bytes": 3006477107,
+      "recommended_batch": 8192,
+      "first_top_two_rejected": null,
+      "recommendation_ratio": null,
+      "trials": [
+        {
+          "batch": 1,
+          "upper": 220290,
+          "top_two": 131072,
+          "passes": true
+        },
+        {
+          "batch": 2,
+          "upper": 440580,
+          "top_two": 262144,
+          "passes": true
+        },
+        {
+          "batch": 4,
+          "upper": 881160,
+          "top_two": 524288,
+          "passes": true
+        },
+        {
+          "batch": 8,
+          "upper": 1762320,
+          "top_two": 1048576,
+          "passes": true
+        },
+        {
+          "batch": 16,
+          "upper": 3524639,
+          "top_two": 2097152,
+          "passes": true
+        },
+        {
+          "batch": 32,
+          "upper": 7049279,
+          "top_two": 4194304,
+          "passes": true
+        },
+        {
+          "batch": 64,
+          "upper": 14098558,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 128,
+          "upper": 28197115,
+          "top_two": 16777216,
+          "passes": true
+        },
+        {
+          "batch": 256,
+          "upper": 56394231,
+          "top_two": 33554432,
+          "passes": true
+        },
+        {
+          "batch": 512,
+          "upper": 112788461,
+          "top_two": 67108864,
+          "passes": true
+        },
+        {
+          "batch": 1024,
+          "upper": 225576922,
+          "top_two": 134217728,
+          "passes": true
+        },
+        {
+          "batch": 2048,
+          "upper": 451153844,
+          "top_two": 268435456,
+          "passes": true
+        },
+        {
+          "batch": 4096,
+          "upper": 902307688,
+          "top_two": 536870912,
+          "passes": true
+        },
+        {
+          "batch": 8192,
+          "upper": 1804615377,
+          "top_two": 1073741824,
+          "passes": true
+        }
+      ]
+    },
+    {
+      "workload": "attention",
+      "budget_bytes": 2779984691,
+      "recommended_batch": 8192,
+      "first_top_two_rejected": 8192,
+      "recommendation_ratio": 1.0,
+      "trials": [
+        {
+          "batch": 1,
+          "upper": 220290,
+          "top_two": 131072,
+          "passes": true
+        },
+        {
+          "batch": 2,
+          "upper": 440580,
+          "top_two": 262144,
+          "passes": true
+        },
+        {
+          "batch": 4,
+          "upper": 881160,
+          "top_two": 524288,
+          "passes": true
+        },
+        {
+          "batch": 8,
+          "upper": 1762320,
+          "top_two": 1048576,
+          "passes": true
+        },
+        {
+          "batch": 16,
+          "upper": 3524639,
+          "top_two": 2097152,
+          "passes": true
+        },
+        {
+          "batch": 32,
+          "upper": 7049279,
+          "top_two": 4194304,
+          "passes": true
+        },
+        {
+          "batch": 64,
+          "upper": 14098558,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 128,
+          "upper": 28197115,
+          "top_two": 16777216,
+          "passes": true
+        },
+        {
+          "batch": 256,
+          "upper": 56394231,
+          "top_two": 33554432,
+          "passes": true
+        },
+        {
+          "batch": 512,
+          "upper": 112788461,
+          "top_two": 67108864,
+          "passes": true
+        },
+        {
+          "batch": 1024,
+          "upper": 225576922,
+          "top_two": 134217728,
+          "passes": true
+        },
+        {
+          "batch": 2048,
+          "upper": 451153844,
+          "top_two": 268435456,
+          "passes": true
+        },
+        {
+          "batch": 4096,
+          "upper": 902307688,
+          "top_two": 536870912,
+          "passes": true
+        },
+        {
+          "batch": 8192,
+          "upper": 1804615377,
+          "top_two": 1073741824,
+          "passes": false
+        }
+      ]
+    },
+    {
+      "workload": "attention",
+      "budget_bytes": 1706242867,
+      "recommended_batch": 7745,
+      "first_top_two_rejected": 6144,
+      "recommendation_ratio": 0.7932859909619109,
+      "trials": [
+        {
+          "batch": 1,
+          "upper": 220290,
+          "top_two": 131072,
+          "passes": true
+        },
+        {
+          "batch": 2,
+          "upper": 440580,
+          "top_two": 262144,
+          "passes": true
+        },
+        {
+          "batch": 4,
+          "upper": 881160,
+          "top_two": 524288,
+          "passes": true
+        },
+        {
+          "batch": 8,
+          "upper": 1762320,
+          "top_two": 1048576,
+          "passes": true
+        },
+        {
+          "batch": 16,
+          "upper": 3524639,
+          "top_two": 2097152,
+          "passes": true
+        },
+        {
+          "batch": 32,
+          "upper": 7049279,
+          "top_two": 4194304,
+          "passes": true
+        },
+        {
+          "batch": 64,
+          "upper": 14098558,
+          "top_two": 8388608,
+          "passes": true
+        },
+        {
+          "batch": 128,
+          "upper": 28197115,
+          "top_two": 16777216,
+          "passes": true
+        },
+        {
+          "batch": 256,
+          "upper": 56394231,
+          "top_two": 33554432,
+          "passes": true
+        },
+        {
+          "batch": 512,
+          "upper": 112788461,
+          "top_two": 67108864,
+          "passes": true
+        },
+        {
+          "batch": 1024,
+          "upper": 225576922,
+          "top_two": 134217728,
+          "passes": true
+        },
+        {
+          "batch": 2048,
+          "upper": 451153844,
+          "top_two": 268435456,
+          "passes": true
+        },
+        {
+          "batch": 4096,
+          "upper": 902307688,
+          "top_two": 536870912,
+          "passes": true
+        },
+        {
+          "batch": 6144,
+          "upper": 1353461533,
+          "top_two": 805306368,
+          "passes": false
+        },
+        {
+          "batch": 7168,
+          "upper": 1579038455,
+          "top_two": 939524096,
+          "passes": false
+        },
+        {
+          "batch": 7680,
+          "upper": 1691826916,
+          "top_two": 1006632960,
+          "passes": false
+        },
+        {
+          "batch": 7744,
+          "upper": 1705925473,
+          "top_two": 1015021568,
+          "passes": false
+        },
+        {
+          "batch": 7745,
+          "upper": 1706145763,
+          "top_two": 1015152640,
+          "passes": false
+        },
+        {
+          "batch": 7746,
+          "upper": 1706366053,
+          "top_two": 1015283712,
+          "passes": false
+        },
+        {
+          "batch": 7748,
+          "upper": 1706806633,
+          "top_two": 1015545856,
+          "passes": false
+        },
+        {
+          "batch": 7752,
+          "upper": 1707687793,
+          "top_two": 1016070144,
+          "passes": false
+        },
+        {
+          "batch": 7760,
+          "upper": 1709450113,
+          "top_two": 1017118720,
+          "passes": false
+        },
+        {
+          "batch": 7776,
+          "upper": 1712974752,
+          "top_two": 1019215872,
+          "passes": false
+        },
+        {
+          "batch": 7808,
+          "upper": 1720024031,
+          "top_two": 1023410176,
+          "passes": false
+        },
+        {
+          "batch": 7936,
+          "upper": 1748221146,
+          "top_two": 1040187392,
+          "passes": false
+        },
+        {
+          "batch": 8192,
+          "upper": 1804615377,
+          "top_two": 1073741824,
+          "passes": false
+        }
+      ]
+    }
+  ],
+  "median_ratio": 0.8421052631578947,
+  "min_ratio": 0.0036900369003690036,
+  "reduced_over_25": 3,
+  "reduced_over_50": 1
+}

@@ -1,0 +1,218 @@
+{
+  "rows": [
+    {
+      "compiler_diagnostics": {
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 47185920,
+        "generated_code_size_in_bytes": 0,
+        "output_size_in_bytes": 15728640,
+        "temp_size_in_bytes": 1258291200
+      },
+      "configuration_id": "DISC-B2-H12-S2560-D64-float32",
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [executable_name='jit_attention'] [tf-allocator-allocation-error='']",
+      "outcome": "EXECUTION_OOM",
+      "post_execute_memory_stats": {
+        "bytes_in_use": 67108864,
+        "bytes_limit": 3221225472,
+        "bytes_reserved": 0,
+        "largest_alloc_size": 645922816,
+        "largest_free_block_bytes": 1073741824,
+        "num_allocs": 106,
+        "peak_bytes_in_use": 1378877696,
+        "peak_bytes_reserved": 0,
+        "peak_pool_bytes": 2283798528,
+        "pool_bytes": 2283798528
+      },
+      "pre_execute_memory_stats": {
+        "bytes_in_use": 49283072,
+        "bytes_limit": 3221225472,
+        "bytes_reserved": 0,
+        "largest_alloc_size": 645922816,
+        "largest_free_block_bytes": 1073741824,
+        "num_allocs": 105,
+        "peak_bytes_in_use": 1378877696,
+        "peak_bytes_reserved": 0,
+        "peak_pool_bytes": 2283798528,
+        "pool_bytes": 2283798528
+      }
+    },
+    {
+      "compiler_diagnostics": {
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 23592960,
+        "generated_code_size_in_bytes": 0,
+        "output_size_in_bytes": 7864320,
+        "temp_size_in_bytes": 1258291200
+      },
+      "configuration_id": "DISC-B2-H12-S2560-D32-float32",
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [tf-allocator-allocation-error=''] [executable_name='jit_attention']",
+      "outcome": "EXECUTION_OOM",
+      "post_execute_memory_stats": {
+        "bytes_in_use": 33554432,
+        "bytes_limit": 3221225472,
+        "bytes_reserved": 0,
+        "largest_alloc_size": 645922816,
+        "largest_free_block_bytes": 1073741824,
+        "num_allocs": 106,
+        "peak_bytes_in_use": 1345323264,
+        "peak_bytes_reserved": 0,
+        "peak_pool_bytes": 2283798528,
+        "pool_bytes": 2283798528
+      },
+      "pre_execute_memory_stats": {
+        "bytes_in_use": 24641536,
+        "bytes_limit": 3221225472,
+        "bytes_reserved": 0,
+        "largest_alloc_size": 645922816,
+        "largest_free_block_bytes": 1073741824,
+        "num_allocs": 105,
+        "peak_bytes_in_use": 1345323264,
+        "peak_bytes_reserved": 0,
+        "peak_pool_bytes": 2283798528,
+        "pool_bytes": 2283798528
+      }
+    },
+    {
+      "compiler_diagnostics": {
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 70778880,
+        "generated_code_size_in_bytes": 0,
+        "output_size_in_bytes": 23592960,
+        "temp_size_in_bytes": 1258291200
+      },
+      "configuration_id": "DISC-B2-H12-S2560-D96-float32",
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [tf-allocator-allocation-error=''] [executable_name='jit_attention']",
+      "outcome": "EXECUTION_OOM",
+      "post_execute_memory_stats": {
+        "bytes_in_use": 134217728,
+        "bytes_limit": 3221225472,
+        "bytes_reserved": 0,
+        "largest_alloc_size": 645922816,
+        "largest_free_block_bytes": 1073741824,
+        "num_allocs": 100,
+        "peak_bytes_in_use": 1437073664,
+        "peak_bytes_reserved": 0,
+        "peak_pool_bytes": 2418016256,
+        "pool_bytes": 2418016256
+      },
+      "pre_execute_memory_stats": {
+        "bytes_in_use": 90701824,
+        "bytes_limit": 3221225472,
+        "bytes_reserved": 0,
+        "largest_alloc_size": 645922816,
+        "largest_free_block_bytes": 1073741824,
+        "num_allocs": 99,
+        "peak_bytes_in_use": 1437073664,
+        "peak_bytes_reserved": 0,
+        "peak_pool_bytes": 2418016256,
+        "pool_bytes": 2418016256
+      }
+    },
+    {
+      "compiler_diagnostics": {
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 47185920,
+        "generated_code_size_in_bytes": 0,
+        "output_size_in_bytes": 15728640,
+        "temp_size_in_bytes": 838860800
+      },
+      "configuration_id": "DISC-B2-H16-S2560-D96-float16",
+      "outcome": "FIT",
+      "post_execute_memory_stats": {
+        "bytes_in_use": 67108864,
+        "bytes_limit": 3221225472,
+        "bytes_reserved": 0,
+        "largest_alloc_size": 838860800,
+        "largest_free_block_bytes": 1073741824,
+        "num_allocs": 119,
+        "peak_bytes_in_use": 1194328320,
+        "peak_bytes_reserved": 0,
+        "peak_pool_bytes": 2283798528,
+        "pool_bytes": 2283798528
+      },
+      "pre_execute_memory_stats": {
+        "bytes_in_use": 49283072,
+        "bytes_limit": 3221225472,
+        "bytes_reserved": 0,
+        "largest_alloc_size": 536870912,
+        "largest_free_block_bytes": 536870912,
+        "num_allocs": 117,
+        "peak_bytes_in_use": 1194328320,
+        "peak_bytes_reserved": 0,
+        "peak_pool_bytes": 1210056704,
+        "pool_bytes": 1210056704
+      }
+    },
+    {
+      "compiler_diagnostics": {
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 31457280,
+        "generated_code_size_in_bytes": 0,
+        "output_size_in_bytes": 10485760,
+        "temp_size_in_bytes": 838860800
+      },
+      "configuration_id": "DISC-B2-H16-S2560-D64-float16",
+      "outcome": "FIT",
+      "post_execute_memory_stats": {
+        "bytes_in_use": 54525952,
+        "bytes_limit": 3221225472,
+        "bytes_reserved": 0,
+        "largest_alloc_size": 838860800,
+        "largest_free_block_bytes": 1073741824,
+        "num_allocs": 123,
+        "peak_bytes_in_use": 1189085440,
+        "peak_bytes_reserved": 0,
+        "peak_pool_bytes": 2283798528,
+        "pool_bytes": 2283798528
+      },
+      "pre_execute_memory_stats": {
+        "bytes_in_use": 44040192,
+        "bytes_limit": 3221225472,
+        "bytes_reserved": 0,
+        "largest_alloc_size": 536870912,
+        "largest_free_block_bytes": 536870912,
+        "num_allocs": 121,
+        "peak_bytes_in_use": 1189085440,
+        "peak_bytes_reserved": 0,
+        "peak_pool_bytes": 1210056704,
+        "pool_bytes": 1210056704
+      }
+    },
+    {
+      "compiler_diagnostics": {
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 51904512,
+        "generated_code_size_in_bytes": 0,
+        "output_size_in_bytes": 17301504,
+        "temp_size_in_bytes": 761266176
+      },
+      "configuration_id": "DISC-B2-H12-S2816-D128-float16",
+      "outcome": "FIT",
+      "post_execute_memory_stats": {
+        "bytes_in_use": 101711872,
+        "bytes_limit": 3221225472,
+        "bytes_reserved": 0,
+        "largest_alloc_size": 761266176,
+        "largest_free_block_bytes": 1073741824,
+        "num_allocs": 129,
+        "peak_bytes_in_use": 933757184,
+        "peak_bytes_reserved": 0,
+        "peak_pool_bytes": 2418016256,
+        "pool_bytes": 2418016256
+      },
+      "pre_execute_memory_stats": {
+        "bytes_in_use": 84410368,
+        "bytes_limit": 3221225472,
+        "bytes_reserved": 0,
+        "largest_alloc_size": 397410304,
+        "largest_free_block_bytes": 536870912,
+        "num_allocs": 127,
+        "peak_bytes_in_use": 933757184,
+        "peak_bytes_reserved": 0,
+        "peak_pool_bytes": 1344274432,
+        "pool_bytes": 1344274432
+      }
+    }
+  ],
+  "status": "COMPUTATIONALLY_VERIFIED"
+}

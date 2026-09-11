@@ -1,0 +1,1375 @@
+{
+  "plan": {
+    "budget_bytes": 3221225472,
+    "environment": {
+      "backend": "gpu",
+      "device": "cuda:0",
+      "jax_version": "0.11.0"
+    },
+    "selected_rows": [
+      {
+        "B": 2,
+        "D": 64,
+        "H": 12,
+        "S": 2560,
+        "aggregate_pass": true,
+        "aggregate_score": 0.6596960406750441,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 2125029690,
+        "configuration_id": "DISC-B2-H12-S2560-D64-float32",
+        "dtype": "float32",
+        "family": "attention",
+        "largest_buffer_bytes": 629145600,
+        "largest_pass": true,
+        "largest_score": 0.8550085406750441,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1274265600,
+        "peak_live_pass": false,
+        "peak_live_score": 1.0552801471203566,
+        "selection_categories": [
+          "AGG_PASS_TOP2_REJECT",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1274265600,
+        "top_two_pass": false,
+        "top_two_peak_live_bytes": 1258291200,
+        "top_two_score": 1.050321040675044
+      },
+      {
+        "B": 2,
+        "D": 96,
+        "H": 16,
+        "S": 2560,
+        "aggregate_pass": true,
+        "aggregate_score": 0.6597384512424469,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 2125166304,
+        "configuration_id": "DISC-B2-H16-S2560-D96-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 838860800,
+        "largest_pass": true,
+        "largest_score": 0.9201551179091135,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1274347520,
+        "peak_live_pass": false,
+        "peak_live_score": 1.0553479890028636,
+        "selection_categories": [
+          "AGG_PASS_TOP2_REJECT",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1274347520,
+        "top_two_pass": false,
+        "top_two_peak_live_bytes": 1258291200,
+        "top_two_score": 1.050363451242447
+      },
+      {
+        "B": 4,
+        "D": 96,
+        "H": 8,
+        "S": 2560,
+        "aggregate_pass": true,
+        "aggregate_score": 0.6597384512424469,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 2125166304,
+        "configuration_id": "DISC-B4-H8-S2560-D96-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 838860800,
+        "largest_pass": true,
+        "largest_score": 0.9201551179091135,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1274347520,
+        "peak_live_pass": false,
+        "peak_live_score": 1.0553479890028636,
+        "selection_categories": [
+          "AGG_PASS_TOP2_REJECT",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1274347520,
+        "top_two_pass": false,
+        "top_two_peak_live_bytes": 1258291200,
+        "top_two_score": 1.050363451242447
+      },
+      {
+        "B": 2,
+        "D": 64,
+        "H": 16,
+        "S": 2560,
+        "aggregate_pass": true,
+        "aggregate_score": 0.6570241761704286,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 2116423012,
+        "configuration_id": "DISC-B2-H16-S2560-D64-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 838860800,
+        "largest_pass": true,
+        "largest_score": 0.9174408428370953,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1269104640,
+        "peak_live_pass": false,
+        "peak_live_score": 1.0510061097641785,
+        "selection_categories": [
+          "AGG_PASS_TOP2_REJECT",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1269104640,
+        "top_two_pass": false,
+        "top_two_peak_live_bytes": 1258291200,
+        "top_two_score": 1.0476491761704285
+      },
+      {
+        "B": 4,
+        "D": 64,
+        "H": 8,
+        "S": 2560,
+        "aggregate_pass": true,
+        "aggregate_score": 0.6570241761704286,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 2116423012,
+        "configuration_id": "DISC-B4-H8-S2560-D64-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 838860800,
+        "largest_pass": true,
+        "largest_score": 0.9174408428370953,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1269104640,
+        "peak_live_pass": false,
+        "peak_live_score": 1.0510061097641785,
+        "selection_categories": [
+          "AGG_PASS_TOP2_REJECT",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1269104640,
+        "top_two_pass": false,
+        "top_two_peak_live_bytes": 1258291200,
+        "top_two_score": 1.0476491761704285
+      },
+      {
+        "B": 1,
+        "D": 128,
+        "H": 8,
+        "S": 5120,
+        "aggregate_pass": true,
+        "aggregate_score": 0.656939355035623,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 2116149784,
+        "configuration_id": "DISC-B1-H8-S5120-D128-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 838860800,
+        "largest_pass": true,
+        "largest_score": 0.9173560217022896,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1268940800,
+        "peak_live_pass": false,
+        "peak_live_score": 1.0508704259991646,
+        "selection_categories": [
+          "AGG_PASS_TOP2_REJECT",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1268940800,
+        "top_two_pass": false,
+        "top_two_peak_live_bytes": 1258291200,
+        "top_two_score": 1.0475643550356228
+      },
+      {
+        "B": 2,
+        "D": 128,
+        "H": 4,
+        "S": 5120,
+        "aggregate_pass": true,
+        "aggregate_score": 0.656939355035623,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 2116149784,
+        "configuration_id": "DISC-B2-H4-S5120-D128-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 838860800,
+        "largest_pass": true,
+        "largest_score": 0.9173560217022896,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1268940800,
+        "peak_live_pass": false,
+        "peak_live_score": 1.0508704259991646,
+        "selection_categories": [
+          "AGG_PASS_TOP2_REJECT",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1268940800,
+        "top_two_pass": false,
+        "top_two_peak_live_bytes": 1258291200,
+        "top_two_score": 1.0475643550356228
+      },
+      {
+        "B": 2,
+        "D": 128,
+        "H": 16,
+        "S": 2560,
+        "aggregate_pass": true,
+        "aggregate_score": 0.6624527260040244,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 2133909595,
+        "configuration_id": "DISC-B2-H16-S2560-D128-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 838860800,
+        "largest_pass": true,
+        "largest_score": 0.922869392670691,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1279590400,
+        "peak_live_pass": false,
+        "peak_live_score": 1.0596898679311078,
+        "selection_categories": [
+          "AGG_PASS_TOP2_REJECT",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1279590400,
+        "top_two_pass": false,
+        "top_two_peak_live_bytes": 1258291200,
+        "top_two_score": 1.0530777260040243
+      },
+      {
+        "B": 4,
+        "D": 128,
+        "H": 8,
+        "S": 2560,
+        "aggregate_pass": true,
+        "aggregate_score": 0.6624527260040244,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 2133909595,
+        "configuration_id": "DISC-B4-H8-S2560-D128-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 838860800,
+        "largest_pass": true,
+        "largest_score": 0.922869392670691,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1279590400,
+        "peak_live_pass": false,
+        "peak_live_score": 1.0596898679311078,
+        "selection_categories": [
+          "AGG_PASS_TOP2_REJECT",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1279590400,
+        "top_two_pass": false,
+        "top_two_peak_live_bytes": 1258291200,
+        "top_two_score": 1.0530777260040243
+      },
+      {
+        "B": 2,
+        "D": 32,
+        "H": 12,
+        "S": 2560,
+        "aggregate_pass": true,
+        "aggregate_score": 0.6556246280670166,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 2111914752,
+        "configuration_id": "DISC-B2-H12-S2560-D32-float32",
+        "dtype": "float32",
+        "family": "attention",
+        "largest_buffer_bytes": 629145600,
+        "largest_pass": true,
+        "largest_score": 0.8509371280670166,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1266401280,
+        "peak_live_pass": false,
+        "peak_live_score": 1.048767328262329,
+        "selection_categories": [
+          "AGG_PASS_TOP2_REJECT",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1266401280,
+        "top_two_pass": false,
+        "top_two_peak_live_bytes": 1258291200,
+        "top_two_score": 1.0462496280670166
+      },
+      {
+        "B": 1,
+        "D": 96,
+        "H": 8,
+        "S": 5120,
+        "aggregate_pass": true,
+        "aggregate_score": 0.6555822174996138,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 2111778138,
+        "configuration_id": "DISC-B1-H8-S5120-D96-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 838860800,
+        "largest_pass": true,
+        "largest_score": 0.9159988841662804,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1266319360,
+        "peak_live_pass": false,
+        "peak_live_score": 1.048699486379822,
+        "selection_categories": [
+          "AGG_PASS_TOP2_REJECT",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1266319360,
+        "top_two_pass": false,
+        "top_two_peak_live_bytes": 1258291200,
+        "top_two_score": 1.0462072174996138
+      },
+      {
+        "B": 2,
+        "D": 96,
+        "H": 4,
+        "S": 5120,
+        "aggregate_pass": true,
+        "aggregate_score": 0.6555822174996138,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 2111778138,
+        "configuration_id": "DISC-B2-H4-S5120-D96-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 838860800,
+        "largest_pass": true,
+        "largest_score": 0.9159988841662804,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1266319360,
+        "peak_live_pass": false,
+        "peak_live_score": 1.048699486379822,
+        "selection_categories": [
+          "AGG_PASS_TOP2_REJECT",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1266319360,
+        "top_two_pass": false,
+        "top_two_peak_live_bytes": 1258291200,
+        "top_two_score": 1.0462072174996138
+      },
+      {
+        "B": 2,
+        "D": 96,
+        "H": 12,
+        "S": 2560,
+        "aggregate_pass": true,
+        "aggregate_score": 0.6637674529726306,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 2138144627,
+        "configuration_id": "DISC-B2-H12-S2560-D96-float32",
+        "dtype": "float32",
+        "family": "attention",
+        "largest_buffer_bytes": 629145600,
+        "largest_pass": true,
+        "largest_score": 0.8590799529726306,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1282129920,
+        "peak_live_pass": false,
+        "peak_live_score": 1.0617929656679432,
+        "selection_categories": [
+          "AGG_PASS_TOP2_REJECT",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1282129920,
+        "top_two_pass": false,
+        "top_two_peak_live_bytes": 1258291200,
+        "top_two_score": 1.0543924529726307
+      },
+      {
+        "B": 2,
+        "D": 32,
+        "H": 16,
+        "S": 2560,
+        "aggregate_pass": true,
+        "aggregate_score": 0.6543099010984103,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 2107679720,
+        "configuration_id": "DISC-B2-H16-S2560-D32-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 838860800,
+        "largest_pass": true,
+        "largest_score": 0.914726567765077,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1263861760,
+        "peak_live_pass": false,
+        "peak_live_score": 1.0466642305254936,
+        "selection_categories": [
+          "AGG_PASS_TOP2_REJECT",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1263861760,
+        "top_two_pass": false,
+        "top_two_peak_live_bytes": 1258291200,
+        "top_two_score": 1.0449349010984104
+      },
+      {
+        "B": 2,
+        "D": 128,
+        "H": 12,
+        "S": 2816,
+        "aggregate_pass": true,
+        "aggregate_score": 0.6002661427482963,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 1933592589,
+        "configuration_id": "DISC-B2-H12-S2816-D128-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 761266176,
+        "largest_pass": true,
+        "largest_score": 0.8365942677482963,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1159471104,
+        "peak_live_pass": true,
+        "peak_live_score": 0.96021334733814,
+        "selection_categories": [
+          "AGG_PASS_TOP2_NEAR_PASS",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1159471104,
+        "top_two_pass": true,
+        "top_two_peak_live_bytes": 1141899264,
+        "top_two_score": 0.9547583302482963
+      },
+      {
+        "B": 2,
+        "D": 96,
+        "H": 12,
+        "S": 2816,
+        "aggregate_pass": true,
+        "aggregate_score": 0.598026865782837,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 1926379373,
+        "configuration_id": "DISC-B2-H12-S2816-D96-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 761266176,
+        "largest_pass": true,
+        "largest_score": 0.834354990782837,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1155145728,
+        "peak_live_pass": true,
+        "peak_live_score": 0.9566312969351808,
+        "selection_categories": [
+          "AGG_PASS_TOP2_NEAR_PASS",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1155145728,
+        "top_two_pass": true,
+        "top_two_peak_live_bytes": 1141899264,
+        "top_two_score": 0.952519053282837
+      },
+      {
+        "B": 2,
+        "D": 64,
+        "H": 12,
+        "S": 2816,
+        "aggregate_pass": true,
+        "aggregate_score": 0.5957875891278187,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 1919166158,
+        "configuration_id": "DISC-B2-H12-S2816-D64-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 761266176,
+        "largest_pass": true,
+        "largest_score": 0.8321157141278187,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1150820352,
+        "peak_live_pass": true,
+        "peak_live_score": 0.9530492468426625,
+        "selection_categories": [
+          "AGG_PASS_TOP2_NEAR_PASS",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1150820352,
+        "top_two_pass": true,
+        "top_two_peak_live_bytes": 1141899264,
+        "top_two_score": 0.9502797766278187
+      },
+      {
+        "B": 2,
+        "D": 32,
+        "H": 12,
+        "S": 2816,
+        "aggregate_pass": true,
+        "aggregate_score": 0.5935483121623596,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 1911952942,
+        "configuration_id": "DISC-B2-H12-S2816-D32-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 761266176,
+        "largest_pass": true,
+        "largest_score": 0.8298764371623596,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1146494976,
+        "peak_live_pass": true,
+        "peak_live_score": 0.9494671964397033,
+        "selection_categories": [
+          "AGG_PASS_TOP2_NEAR_PASS",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1146494976,
+        "top_two_pass": true,
+        "top_two_peak_live_bytes": 1141899264,
+        "top_two_score": 0.9480404996623596
+      },
+      {
+        "B": 1,
+        "D": 128,
+        "H": 8,
+        "S": 4864,
+        "aggregate_pass": true,
+        "aggregate_score": 0.5931496530150374,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 1910668771,
+        "configuration_id": "DISC-B1-H8-S4864-D128-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 757071872,
+        "largest_pass": true,
+        "largest_score": 0.828175694681704,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1145724928,
+        "peak_live_pass": true,
+        "peak_live_score": 0.9488294829304019,
+        "selection_categories": [
+          "AGG_PASS_TOP2_NEAR_PASS",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1145724928,
+        "top_two_pass": true,
+        "top_two_peak_live_bytes": 1135607808,
+        "top_two_score": 0.9456887155150374
+      },
+      {
+        "B": 2,
+        "D": 128,
+        "H": 4,
+        "S": 4864,
+        "aggregate_pass": true,
+        "aggregate_score": 0.5931496530150374,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 1910668771,
+        "configuration_id": "DISC-B2-H4-S4864-D128-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 757071872,
+        "largest_pass": true,
+        "largest_score": 0.828175694681704,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1145724928,
+        "peak_live_pass": true,
+        "peak_live_score": 0.9488294829304019,
+        "selection_categories": [
+          "AGG_PASS_TOP2_NEAR_PASS",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1145724928,
+        "top_two_pass": true,
+        "top_two_peak_live_bytes": 1135607808,
+        "top_two_score": 0.9456887155150374
+      },
+      {
+        "B": 4,
+        "D": 32,
+        "H": 8,
+        "S": 2560,
+        "aggregate_pass": true,
+        "aggregate_score": 0.6543099010984103,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 2107679720,
+        "configuration_id": "DISC-B4-H8-S2560-D32-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 838860800,
+        "largest_pass": true,
+        "largest_score": 0.914726567765077,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1263861760,
+        "peak_live_pass": false,
+        "peak_live_score": 1.0466642305254936,
+        "selection_categories": [
+          "TOP2_VS_LARGEST_DISAGREE",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1263861760,
+        "top_two_pass": false,
+        "top_two_peak_live_bytes": 1258291200,
+        "top_two_score": 1.0449349010984104
+      },
+      {
+        "B": 1,
+        "D": 64,
+        "H": 8,
+        "S": 5120,
+        "aggregate_pass": true,
+        "aggregate_score": 0.6542250802740455,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 2107406493,
+        "configuration_id": "DISC-B1-H8-S5120-D64-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 838860800,
+        "largest_pass": true,
+        "largest_score": 0.9146417469407121,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1263697920,
+        "peak_live_pass": false,
+        "peak_live_score": 1.0465285470709205,
+        "selection_categories": [
+          "TOP2_VS_LARGEST_DISAGREE",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1263697920,
+        "top_two_pass": false,
+        "top_two_peak_live_bytes": 1258291200,
+        "top_two_score": 1.0448500802740455
+      },
+      {
+        "B": 2,
+        "D": 64,
+        "H": 4,
+        "S": 5120,
+        "aggregate_pass": true,
+        "aggregate_score": 0.6542250802740455,
+        "budget_bytes": 3221225472,
+        "calibrated_upper_bytes": 2107406493,
+        "configuration_id": "DISC-B2-H4-S5120-D64-float16",
+        "dtype": "float16",
+        "family": "attention",
+        "largest_buffer_bytes": 838860800,
+        "largest_pass": true,
+        "largest_score": 0.9146417469407121,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live_bytes": 1263697920,
+        "peak_live_pass": false,
+        "peak_live_score": 1.0465285470709205,
+        "selection_categories": [
+          "TOP2_VS_LARGEST_DISAGREE",
+          "MATCHED_TOP2_GROUP"
+        ],
+        "structural_peak_bytes": 1263697920,
+        "top_two_pass": false,
+        "top_two_peak_live_bytes": 1258291200,
+        "top_two_score": 1.0448500802740455
+      }
+    ],
+    "selection_counts": {
+      "AGG_PASS_TOP2_NEAR_PASS": 6,
+      "AGG_PASS_TOP2_REJECT": 14,
+      "MATCHED_TOP2_GROUP": 23,
+      "TOP2_VS_LARGEST_DISAGREE": 3
+    },
+    "static_candidates_screened": 1632,
+    "static_screening_seconds": 13.148883944999994,
+    "status": "FROZEN_PLAN"
+  },
+  "results": [
+    {
+      "configuration_id": "DISC-B2-H12-S2560-D64-float32",
+      "outcomes": [
+        {
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [tf-allocator-allocation-error=''] [executable_name='jit_attention']",
+          "outcome": "EXECUTION_OOM"
+        },
+        {
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [tf-allocator-allocation-error=''] [executable_name='jit_attention']",
+          "outcome": "EXECUTION_OOM"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "stable_outcome": "EXECUTION_OOM"
+    },
+    {
+      "configuration_id": "DISC-B2-H16-S2560-D96-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 5039.989920999971,
+          "execution_latency_ms": 43.832726000005096,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 5300.486643999989,
+          "execution_latency_ms": 50.991949999968256,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "stable_outcome": "FIT"
+    },
+    {
+      "configuration_id": "DISC-B4-H8-S2560-D96-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 5315.812612999991,
+          "execution_latency_ms": 44.60810200004062,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 5030.856757999971,
+          "execution_latency_ms": 59.541763000027004,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "stable_outcome": "FIT"
+    },
+    {
+      "configuration_id": "DISC-B2-H16-S2560-D64-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 4209.550702000001,
+          "execution_latency_ms": 42.37791799999968,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 4248.649908000005,
+          "execution_latency_ms": 43.297593000033885,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "stable_outcome": "FIT"
+    },
+    {
+      "configuration_id": "DISC-B4-H8-S2560-D64-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 3945.923052000012,
+          "execution_latency_ms": 42.60362600001599,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 4263.122347999968,
+          "execution_latency_ms": 42.72636499996452,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "stable_outcome": "FIT"
+    },
+    {
+      "configuration_id": "DISC-B1-H8-S5120-D128-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 8636.403703999975,
+          "execution_latency_ms": 45.47084900002574,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 6056.464807999987,
+          "execution_latency_ms": 47.99372600001561,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "stable_outcome": "FIT"
+    },
+    {
+      "configuration_id": "DISC-B2-H4-S5120-D128-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 6184.518567999987,
+          "execution_latency_ms": 51.09263200000669,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 5983.154509999963,
+          "execution_latency_ms": 46.67592399999876,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "stable_outcome": "FIT"
+    },
+    {
+      "configuration_id": "DISC-B2-H16-S2560-D128-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 5604.258319000053,
+          "execution_latency_ms": 45.28005699995674,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 5213.323867000043,
+          "execution_latency_ms": 44.91396200000963,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "stable_outcome": "FIT"
+    },
+    {
+      "configuration_id": "DISC-B4-H8-S2560-D128-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 5519.126718999985,
+          "execution_latency_ms": 47.3102180000069,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 5241.79807400003,
+          "execution_latency_ms": 69.49800000001005,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "stable_outcome": "FIT"
+    },
+    {
+      "configuration_id": "DISC-B2-H12-S2560-D32-float32",
+      "outcomes": [
+        {
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [tf-allocator-allocation-error=''] [executable_name='jit_attention']",
+          "outcome": "EXECUTION_OOM"
+        },
+        {
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [tf-allocator-allocation-error=''] [executable_name='jit_attention']",
+          "outcome": "EXECUTION_OOM"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "stable_outcome": "EXECUTION_OOM"
+    },
+    {
+      "configuration_id": "DISC-B1-H8-S5120-D96-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 5163.277413999993,
+          "execution_latency_ms": 47.78863800004274,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 5373.313129999986,
+          "execution_latency_ms": 62.620562999995855,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "stable_outcome": "FIT"
+    },
+    {
+      "configuration_id": "DISC-B2-H4-S5120-D96-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 5110.635876000004,
+          "execution_latency_ms": 47.26102899996931,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 4760.99325399997,
+          "execution_latency_ms": 46.14157699995758,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "stable_outcome": "FIT"
+    },
+    {
+      "configuration_id": "DISC-B2-H12-S2560-D96-float32",
+      "outcomes": [
+        {
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [tf-allocator-allocation-error=''] [executable_name='jit_attention']",
+          "outcome": "EXECUTION_OOM"
+        },
+        {
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [tf-allocator-allocation-error=''] [executable_name='jit_attention']",
+          "outcome": "EXECUTION_OOM"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "stable_outcome": "EXECUTION_OOM"
+    },
+    {
+      "configuration_id": "DISC-B2-H16-S2560-D32-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 3613.518415000044,
+          "execution_latency_ms": 42.21131700001024,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 3539.4998689999966,
+          "execution_latency_ms": 43.38515900002449,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "stable_outcome": "FIT"
+    },
+    {
+      "configuration_id": "DISC-B2-H12-S2816-D128-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 5580.333094000025,
+          "execution_latency_ms": 69.9954039999966,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 5513.165425000011,
+          "execution_latency_ms": 47.033426999973926,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": true,
+        "top_two": true
+      },
+      "stable_outcome": "FIT"
+    },
+    {
+      "configuration_id": "DISC-B2-H12-S2816-D96-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 4866.946392000045,
+          "execution_latency_ms": 53.965117000075224,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 4676.791872000081,
+          "execution_latency_ms": 48.30397199998515,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": true,
+        "top_two": true
+      },
+      "stable_outcome": "FIT"
+    },
+    {
+      "configuration_id": "DISC-B2-H12-S2816-D64-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 4383.557798999959,
+          "execution_latency_ms": 42.0503049999752,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 4323.555380000016,
+          "execution_latency_ms": 43.861740000011196,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": true,
+        "top_two": true
+      },
+      "stable_outcome": "FIT"
+    },
+    {
+      "configuration_id": "DISC-B2-H12-S2816-D32-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 3616.7136699999674,
+          "execution_latency_ms": 48.918713000034586,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 3761.4157410000644,
+          "execution_latency_ms": 40.87442200000169,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": true,
+        "top_two": true
+      },
+      "stable_outcome": "FIT"
+    },
+    {
+      "configuration_id": "DISC-B1-H8-S4864-D128-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 5112.97963200002,
+          "execution_latency_ms": 46.53716100006022,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 5001.764411000067,
+          "execution_latency_ms": 55.64125299997613,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": true,
+        "top_two": true
+      },
+      "stable_outcome": "FIT"
+    },
+    {
+      "configuration_id": "DISC-B2-H4-S4864-D128-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 5200.214097999947,
+          "execution_latency_ms": 42.43058400004429,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 5315.444041000092,
+          "execution_latency_ms": 49.33843699996032,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": true,
+        "top_two": true
+      },
+      "stable_outcome": "FIT"
+    },
+    {
+      "configuration_id": "DISC-B4-H8-S2560-D32-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 3976.60028100006,
+          "execution_latency_ms": 41.65479599998889,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 3764.724942999919,
+          "execution_latency_ms": 47.02831999998125,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "stable_outcome": "FIT"
+    },
+    {
+      "configuration_id": "DISC-B1-H8-S5120-D64-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 4153.181165999968,
+          "execution_latency_ms": 60.338795999996364,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 3619.117036000034,
+          "execution_latency_ms": 40.73703199992451,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "stable_outcome": "FIT"
+    },
+    {
+      "configuration_id": "DISC-B2-H4-S5120-D64-float16",
+      "outcomes": [
+        {
+          "compile_latency_ms": 3649.340633999941,
+          "execution_latency_ms": 45.9568119999858,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 4310.070225000004,
+          "execution_latency_ms": 45.114136000051985,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction_snapshot": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "stable_outcome": "FIT"
+    }
+  ],
+  "status": "COMPUTATIONALLY_VERIFIED"
+}
