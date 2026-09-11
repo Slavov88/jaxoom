@@ -158,7 +158,8 @@ def main() -> None:
         for fraction in panel["fractions"]:
             row = run_probe(panel, fraction, args.timeout)
             probes.append({**row, "family": panel["family"], "config": panel["config"], "dtype": panel["dtype"], "static_features": next(p["static_features"] for p in planned if p["configuration_id"] == panel["configuration_id"])})
-            print(json.dumps({"id": panel["configuration_id"], "fraction": fraction, "outcome": row.get("outcome"), "limit": row.get("snapshots", [{}])[0].get("allocator_limit_bytes")}, sort_keys=True), flush=True)
+            snapshots = row.get("snapshots") or [{}]
+            print(json.dumps({"id": panel["configuration_id"], "fraction": fraction, "outcome": row.get("outcome"), "limit": row.get("allocator_limit_bytes") or snapshots[0].get("allocator_limit_bytes")}, sort_keys=True), flush=True)
     groups = {}
     for panel in planned:
         values = [r for r in probes if r["configuration_id"] == panel["configuration_id"]]
