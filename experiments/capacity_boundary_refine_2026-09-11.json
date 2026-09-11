@@ -1,0 +1,279 @@
+{
+  "rows": [
+    {
+      "allocator_environment": {
+        "XLA_CLIENT_MEM_FRACTION": "0.875",
+        "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+        "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+      },
+      "allocator_limit_bytes": 3758096384,
+      "compile_status": "SUCCESS",
+      "compiler_memory": {
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 25165824,
+        "output_size_in_bytes": 8388608,
+        "temp_size_in_bytes": 1073741840
+      },
+      "config": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 4096
+      },
+      "configuration_id": "CAP-ATT-S4096-F32",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "execution_status": "FIT",
+      "family": "attention",
+      "fraction": 0.875,
+      "jax_version": "0.11.0",
+      "outcome": "FIT",
+      "repeat": 1,
+      "snapshots": [],
+      "timings": {
+        "compile_seconds": 6.076459959999966,
+        "execution_seconds": 1.3003809889999047
+      }
+    },
+    {
+      "allocator_environment": {
+        "XLA_CLIENT_MEM_FRACTION": "0.8875",
+        "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+        "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+      },
+      "allocator_limit_bytes": 3812622336,
+      "compile_status": "SUCCESS",
+      "compiler_memory": {
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 25165824,
+        "output_size_in_bytes": 8388608,
+        "temp_size_in_bytes": 1073741840
+      },
+      "config": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 4096
+      },
+      "configuration_id": "CAP-ATT-S4096-F32",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "execution_status": "FIT",
+      "family": "attention",
+      "fraction": 0.8875,
+      "jax_version": "0.11.0",
+      "outcome": "FIT",
+      "repeat": 1,
+      "snapshots": [],
+      "timings": {
+        "compile_seconds": 4.286764644999948,
+        "execution_seconds": 0.8996383740000056
+      }
+    },
+    {
+      "allocator_environment": {
+        "XLA_CLIENT_MEM_FRACTION": "0.875",
+        "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+        "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+      },
+      "allocator_limit_bytes": 3758096384,
+      "compile_status": "SUCCESS",
+      "compiler_memory": {
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 28311552,
+        "output_size_in_bytes": 9437184,
+        "temp_size_in_bytes": 1358954496
+      },
+      "config": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 4608
+      },
+      "configuration_id": "CAP-ATT-S4608-F32",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "execution_status": "FIT",
+      "family": "attention",
+      "fraction": 0.875,
+      "jax_version": "0.11.0",
+      "outcome": "FIT",
+      "repeat": 1,
+      "snapshots": [],
+      "timings": {
+        "compile_seconds": 4.619832594000172,
+        "execution_seconds": 0.6479664979999598
+      }
+    },
+    {
+      "allocator_environment": {
+        "XLA_CLIENT_MEM_FRACTION": "0.8875",
+        "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+        "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+      },
+      "allocator_limit_bytes": 3812622336,
+      "compile_status": "SUCCESS",
+      "compiler_memory": {
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 28311552,
+        "output_size_in_bytes": 9437184,
+        "temp_size_in_bytes": 1358954496
+      },
+      "config": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 4608
+      },
+      "configuration_id": "CAP-ATT-S4608-F32",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "execution_status": "FIT",
+      "family": "attention",
+      "fraction": 0.8875,
+      "jax_version": "0.11.0",
+      "outcome": "FIT",
+      "repeat": 1,
+      "snapshots": [],
+      "timings": {
+        "compile_seconds": 4.922360617000095,
+        "execution_seconds": 0.8388669460000528
+      }
+    },
+    {
+      "allocator_environment": {
+        "XLA_CLIENT_MEM_FRACTION": "0.925",
+        "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+        "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+      },
+      "allocator_limit_bytes": 3974103040,
+      "compile_status": "SUCCESS",
+      "compiler_memory": {
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 31457280,
+        "output_size_in_bytes": 10485760,
+        "temp_size_in_bytes": 1677721616
+      },
+      "config": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 5120
+      },
+      "configuration_id": "CAP-ATT-S5120-F32",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "execution_status": "FIT",
+      "family": "attention",
+      "fraction": 0.925,
+      "jax_version": "0.11.0",
+      "outcome": "FIT",
+      "repeat": 1,
+      "snapshots": [],
+      "timings": {
+        "compile_seconds": 4.9838629000000765,
+        "execution_seconds": 1.6700938710000628
+      }
+    },
+    {
+      "allocator_environment": {
+        "XLA_CLIENT_MEM_FRACTION": "0.275",
+        "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+        "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+      },
+      "allocator_limit_bytes": 1182793728,
+      "compile_status": "SUCCESS",
+      "compiler_memory": {
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 23592960,
+        "output_size_in_bytes": 7864320,
+        "temp_size_in_bytes": 419430416
+      },
+      "config": {
+        "head_dim": 96,
+        "heads": 16,
+        "sequence": 2560
+      },
+      "configuration_id": "CAP-ATT-B2-H16-S2560-D96-F16",
+      "device": "cuda:0",
+      "dtype": "float16",
+      "execution_status": "FIT",
+      "family": "attention",
+      "fraction": 0.275,
+      "jax_version": "0.11.0",
+      "outcome": "FIT",
+      "repeat": 1,
+      "snapshots": [],
+      "timings": {
+        "compile_seconds": 4.2001222070000495,
+        "execution_seconds": 0.024022779000006267
+      }
+    },
+    {
+      "allocator_environment": {
+        "XLA_CLIENT_MEM_FRACTION": "0.2875",
+        "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+        "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+      },
+      "allocator_limit_bytes": 1235222528,
+      "compile_status": "SUCCESS",
+      "compiler_memory": {
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 23592960,
+        "output_size_in_bytes": 7864320,
+        "temp_size_in_bytes": 419430400
+      },
+      "config": {
+        "head_dim": 96,
+        "heads": 16,
+        "sequence": 2560
+      },
+      "configuration_id": "CAP-ATT-B2-H16-S2560-D96-F16",
+      "device": "cuda:0",
+      "dtype": "float16",
+      "execution_status": "FIT",
+      "family": "attention",
+      "fraction": 0.2875,
+      "jax_version": "0.11.0",
+      "outcome": "FIT",
+      "repeat": 1,
+      "snapshots": [],
+      "timings": {
+        "compile_seconds": 4.51369109999996,
+        "execution_seconds": 0.030385151000018595
+      }
+    },
+    {
+      "allocator_environment": {
+        "XLA_CLIENT_MEM_FRACTION": "0.925",
+        "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+        "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+      },
+      "allocator_limit_bytes": 3974103040,
+      "compile_status": "SUCCESS",
+      "compiler_memory": {
+        "alias_size_in_bytes": 0,
+        "argument_size_in_bytes": 113271488,
+        "output_size_in_bytes": 150994944,
+        "temp_size_in_bytes": 1220608768
+      },
+      "config": {
+        "batch": 1024,
+        "channels": 3,
+        "height": 96,
+        "out_channels": 16,
+        "width": 96
+      },
+      "configuration_id": "CAP-CONV2-B1024",
+      "device": "cuda:0",
+      "dtype": "float32",
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.14GiB. [executable_name='jit__conv_2_fn'] [tf-allocator-allocation-error='']",
+      "execution_status": "EXECUTION_OOM",
+      "family": "convolution",
+      "fraction": 0.925,
+      "jax_version": "0.11.0",
+      "outcome": "EXECUTION_OOM",
+      "repeat": 1,
+      "snapshots": [],
+      "timings": {
+        "compile_seconds": 21.3310106670001
+      }
+    }
+  ],
+  "status": "COMPUTATIONALLY_VERIFIED"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "FROZEN_THRESHOLD_MODEL_SPLIT",
+  "development": [
+    "CAP-ATT-S4096-F32",
+    "CAP-ATT-S5120-F32",
+    "CAP-ATT-B2-H16-S2560-D96-F16"
+  ],
+  "evaluation": [
+    "CAP-ATT-S4608-F32",
+    "CAP-CONV2-B1024"
+  ],
+  "excluded_controls": [
+    "CAP-ATT-S1024-F32",
+    "CAP-ATT-S2048-F32",
+    "CAP-ATT-B2-H12-S2560-D64-F32",
+    "CAP-CONV1-B2048"
+  ],
+  "rule": "Bracketed workloads only; preserve one attention and one convolution in evaluation; split frozen before capacity-model fitting."
+}

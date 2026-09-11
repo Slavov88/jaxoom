@@ -3,7 +3,7 @@
   "environment_scope": "RTX 3050 Laptop GPU, JAX 0.11.0, CUDA, BFC, PREALLOCATE=false",
   "panel": [
     {
-      "baseline_outcome": "SEE_FROZEN_EVIDENCE",
+      "baseline_outcome": "FIT",
       "config": {
         "head_dim": 64,
         "heads": 8,
@@ -32,7 +32,7 @@
       }
     },
     {
-      "baseline_outcome": "SEE_FROZEN_EVIDENCE",
+      "baseline_outcome": "FIT",
       "config": {
         "head_dim": 64,
         "heads": 8,
@@ -61,7 +61,7 @@
       }
     },
     {
-      "baseline_outcome": "SEE_FROZEN_EVIDENCE",
+      "baseline_outcome": "FIT_OR_UNSTABLE",
       "config": {
         "head_dim": 64,
         "heads": 8,
@@ -91,7 +91,7 @@
       }
     },
     {
-      "baseline_outcome": "SEE_FROZEN_EVIDENCE",
+      "baseline_outcome": "EXECUTION_OOM",
       "config": {
         "head_dim": 64,
         "heads": 8,
@@ -120,7 +120,7 @@
       }
     },
     {
-      "baseline_outcome": "SEE_FROZEN_EVIDENCE",
+      "baseline_outcome": "EXECUTION_OOM",
       "config": {
         "head_dim": 64,
         "heads": 8,
@@ -148,7 +148,7 @@
       }
     },
     {
-      "baseline_outcome": "SEE_FROZEN_EVIDENCE",
+      "baseline_outcome": "EXECUTION_OOM",
       "config": {
         "head_dim": 64,
         "heads": 12,
@@ -178,7 +178,7 @@
       }
     },
     {
-      "baseline_outcome": "SEE_FROZEN_EVIDENCE",
+      "baseline_outcome": "FIT",
       "config": {
         "head_dim": 96,
         "heads": 16,
@@ -207,7 +207,7 @@
       }
     },
     {
-      "baseline_outcome": "SEE_FROZEN_EVIDENCE",
+      "baseline_outcome": "COMPILE_OOM",
       "config": {
         "batch": 2048,
         "channels": 3,
@@ -236,7 +236,7 @@
       }
     },
     {
-      "baseline_outcome": "SEE_FROZEN_EVIDENCE",
+      "baseline_outcome": "EXECUTION_OOM",
       "config": {
         "batch": 1024,
         "channels": 3,
