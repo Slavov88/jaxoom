@@ -1,0 +1,408 @@
+{
+  "baseline_conflicts": [
+    "CAP-ATT-B2-H12-S2560-D64-F32"
+  ],
+  "bracketed_workloads": 5,
+  "decision": "CAPACITY THRESHOLDS NOT STABLE ENOUGH",
+  "environment": {
+    "allocator": "BFC-style",
+    "capacity_control": "XLA_CLIENT_MEM_FRACTION",
+    "capacity_limit_observed": "approximately fraction * 4 GiB",
+    "driver": "566.07",
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "jax": "0.11.0",
+    "jaxlib": "0.11.0",
+    "physical_vram_bytes": 4294967296,
+    "preallocate": false
+  },
+  "incomplete_timeout": 1,
+  "limit_over_3_replay": {
+    "rows": [
+      {
+        "configuration_id": "CAP-ATT-B2-H16-S2560-D96-F16",
+        "first_fit_capacity": 1182793728,
+        "last_oom_capacity": 1073741824,
+        "predicted_capacity": 1258291200,
+        "unsafe": false
+      },
+      {
+        "configuration_id": "CAP-ATT-S4096-F32",
+        "first_fit_capacity": 3758096384,
+        "last_oom_capacity": 3651141632,
+        "predicted_capacity": 3221225472,
+        "unsafe": true
+      },
+      {
+        "configuration_id": "CAP-ATT-S4608-F32",
+        "first_fit_capacity": 3758096384,
+        "last_oom_capacity": 3651141632,
+        "predicted_capacity": 4076863488,
+        "unsafe": false
+      },
+      {
+        "configuration_id": "CAP-ATT-S5120-F32",
+        "first_fit_capacity": 3974103040,
+        "last_oom_capacity": 3865051136,
+        "predicted_capacity": 5033164800,
+        "unsafe": false
+      },
+      {
+        "configuration_id": "CAP-CONV2-B1024",
+        "first_fit_capacity": 4081057792,
+        "last_oom_capacity": 3974103040,
+        "predicted_capacity": 3623878656,
+        "unsafe": true
+      }
+    ]
+  },
+  "model_candidates": {
+    "3.25x_request": {
+      "development": {
+        "N": 3,
+        "max_unsafe_error_bytes": -268435456.0,
+        "median_absolute_error_bytes": 268435456.0,
+        "overconservative_count": 2,
+        "unsafe_rows": [
+          "CAP-ATT-S4096-F32"
+        ],
+        "unsafe_underprediction_count": 1
+      },
+      "formula": "3.25 * request_upper",
+      "held_out": {
+        "N": 2,
+        "max_unsafe_error_bytes": -155189248.0,
+        "median_absolute_error_bytes": 406847488.0,
+        "overconservative_count": 1,
+        "unsafe_rows": [
+          "CAP-CONV2-B1024"
+        ],
+        "unsafe_underprediction_count": 1
+      },
+      "overall": {
+        "N": 5,
+        "max_unsafe_error_bytes": -268435456.0,
+        "median_absolute_error_bytes": 268435456.0,
+        "overconservative_count": 3,
+        "unsafe_rows": [
+          "CAP-ATT-S4096-F32",
+          "CAP-CONV2-B1024"
+        ],
+        "unsafe_underprediction_count": 2
+      },
+      "parameters": {
+        "k": 3.25
+      }
+    },
+    "3x_request_baseline": {
+      "development": {
+        "N": 3,
+        "max_unsafe_error_bytes": -536870912,
+        "median_absolute_error_bytes": 536870912,
+        "overconservative_count": 2,
+        "unsafe_rows": [
+          "CAP-ATT-S4096-F32"
+        ],
+        "unsafe_underprediction_count": 1
+      },
+      "formula": "3 * request_upper",
+      "held_out": {
+        "N": 2,
+        "max_unsafe_error_bytes": -457179136,
+        "median_absolute_error_bytes": 387973120.0,
+        "overconservative_count": 1,
+        "unsafe_rows": [
+          "CAP-CONV2-B1024"
+        ],
+        "unsafe_underprediction_count": 1
+      },
+      "overall": {
+        "N": 5,
+        "max_unsafe_error_bytes": -536870912,
+        "median_absolute_error_bytes": 457179136,
+        "overconservative_count": 3,
+        "unsafe_rows": [
+          "CAP-ATT-S4096-F32",
+          "CAP-CONV2-B1024"
+        ],
+        "unsafe_underprediction_count": 2
+      },
+      "parameters": {
+        "k": 3
+      }
+    },
+    "development_upper_envelope": {
+      "development": {
+        "N": 3,
+        "max_unsafe_error_bytes": 0.0,
+        "median_absolute_error_bytes": 285212672.0,
+        "overconservative_count": 2,
+        "unsafe_rows": [],
+        "unsafe_underprediction_count": 0
+      },
+      "formula": "3.50 * request_upper",
+      "held_out": {
+        "N": 2,
+        "max_unsafe_error_bytes": 146800640.0,
+        "median_absolute_error_bytes": 572522496.0,
+        "overconservative_count": 2,
+        "unsafe_rows": [],
+        "unsafe_underprediction_count": 0
+      },
+      "overall": {
+        "N": 5,
+        "max_unsafe_error_bytes": 0.0,
+        "median_absolute_error_bytes": 285212672.0,
+        "overconservative_count": 4,
+        "unsafe_rows": [],
+        "unsafe_underprediction_count": 0
+      },
+      "parameters": {
+        "k": 3.5
+      }
+    },
+    "request_plus_3x_structural": {
+      "development": {
+        "N": 3,
+        "max_unsafe_error_bytes": 562429952,
+        "median_absolute_error_bytes": 1148157952,
+        "overconservative_count": 3,
+        "unsafe_rows": [],
+        "unsafe_underprediction_count": 0
+      },
+      "formula": "request_upper + 3 * structural_peak",
+      "held_out": {
+        "N": 2,
+        "max_unsafe_error_bytes": 750841856,
+        "median_absolute_error_bytes": 1228658688.0,
+        "overconservative_count": 2,
+        "unsafe_rows": [],
+        "unsafe_underprediction_count": 0
+      },
+      "overall": {
+        "N": 5,
+        "max_unsafe_error_bytes": 562429952,
+        "median_absolute_error_bytes": 1148157952,
+        "overconservative_count": 5,
+        "unsafe_rows": [],
+        "unsafe_underprediction_count": 0
+      },
+      "parameters": {}
+    },
+    "request_plus_structural": {
+      "development": {
+        "N": 3,
+        "max_unsafe_error_bytes": -1602093056,
+        "median_absolute_error_bytes": 608010240,
+        "overconservative_count": 0,
+        "unsafe_rows": [
+          "CAP-ATT-B2-H16-S2560-D96-F16",
+          "CAP-ATT-S4096-F32",
+          "CAP-ATT-S5120-F32"
+        ],
+        "unsafe_underprediction_count": 3
+      },
+      "formula": "request_upper + structural_peak",
+      "held_out": {
+        "N": 2,
+        "max_unsafe_error_bytes": -1665118208,
+        "median_absolute_error_bytes": 1347860480.0,
+        "overconservative_count": 0,
+        "unsafe_rows": [
+          "CAP-ATT-S4608-F32",
+          "CAP-CONV2-B1024"
+        ],
+        "unsafe_underprediction_count": 2
+      },
+      "overall": {
+        "N": 5,
+        "max_unsafe_error_bytes": -1665118208,
+        "median_absolute_error_bytes": 1030602752,
+        "overconservative_count": 0,
+        "unsafe_rows": [
+          "CAP-ATT-B2-H16-S2560-D96-F16",
+          "CAP-ATT-S4096-F32",
+          "CAP-ATT-S4608-F32",
+          "CAP-ATT-S5120-F32",
+          "CAP-CONV2-B1024"
+        ],
+        "unsafe_underprediction_count": 5
+      },
+      "parameters": {}
+    }
+  },
+  "not_bracketed": 4,
+  "panel_count": 9,
+  "probe_count": 81,
+  "probe_outcomes": {
+    "COMPILE_TIMEOUT": 6,
+    "EXECUTION_OOM": 25,
+    "FIT": 50
+  },
+  "production_decision": "NO PRODUCTION CHANGE",
+  "selected_model": "development_upper_envelope",
+  "status": "COMPUTATIONALLY_VERIFIED",
+  "target_compilation_during_prediction": false,
+  "target_execution_during_prediction": false,
+  "thresholds": [
+    {
+      "baseline_outcome": "FIT",
+      "bracket_width": 109051904,
+      "compile_oom_capacities": [],
+      "configuration_id": "CAP-ATT-B2-H16-S2560-D96-F16",
+      "current_probe_conflicts_with_baseline": false,
+      "dtype": "float16",
+      "execution_oom_capacities": [
+        1073741824,
+        1073741824,
+        1073741824
+      ],
+      "family": "attention",
+      "first_fit_capacity": 1182793728,
+      "last_oom_capacity": 1073741824,
+      "monotonicity_violations": 0,
+      "split": "development",
+      "static_features": {
+        "calibrated_central": 637173760,
+        "calibrated_upper": 1062583152,
+        "dtype_bytes": 2,
+        "largest_buffer": 419430400,
+        "peak_live": 637173760,
+        "request_upper": 419430400,
+        "structural_peak": 637173760,
+        "top_two_peak_live": 629145600
+      },
+      "status": "BRACKETED",
+      "violations": []
+    },
+    {
+      "baseline_outcome": "FIT_OR_UNSTABLE",
+      "bracket_width": 106954752,
+      "compile_oom_capacities": [],
+      "configuration_id": "CAP-ATT-S4096-F32",
+      "current_probe_conflicts_with_baseline": false,
+      "dtype": "float32",
+      "execution_oom_capacities": [
+        1933574144,
+        2363490304,
+        2793406464,
+        3221225472,
+        3651141632,
+        3651141632
+      ],
+      "family": "attention",
+      "first_fit_capacity": 3758096384,
+      "last_oom_capacity": 3651141632,
+      "monotonicity_violations": 0,
+      "split": "development",
+      "static_features": {
+        "calibrated_central": 1082261504,
+        "calibrated_upper": 1804833959,
+        "dtype_bytes": 4,
+        "largest_buffer": 536870912,
+        "peak_live": 1082261504,
+        "request_upper": 1073741824,
+        "structural_peak": 1082261504,
+        "top_two_peak_live": 1073741824
+      },
+      "status": "BRACKETED",
+      "violations": []
+    },
+    {
+      "baseline_outcome": "EXECUTION_OOM",
+      "bracket_width": 106954752,
+      "compile_oom_capacities": [],
+      "configuration_id": "CAP-ATT-S4608-F32",
+      "current_probe_conflicts_with_baseline": false,
+      "dtype": "float32",
+      "execution_oom_capacities": [
+        2363490304,
+        2793406464,
+        3221225472,
+        3651141632,
+        3651141632
+      ],
+      "family": "attention",
+      "first_fit_capacity": 3758096384,
+      "last_oom_capacity": 3651141632,
+      "monotonicity_violations": 0,
+      "split": "evaluation",
+      "static_features": {
+        "calibrated_central": 1368539136,
+        "calibrated_upper": 2282245001,
+        "dtype_bytes": 4,
+        "largest_buffer": 679477248,
+        "peak_live": 1368539136,
+        "request_upper": 1358954496,
+        "structural_peak": 1368539136,
+        "top_two_peak_live": 1358954496
+      },
+      "status": "BRACKETED",
+      "violations": []
+    },
+    {
+      "baseline_outcome": "EXECUTION_OOM",
+      "bracket_width": 109051904,
+      "compile_oom_capacities": [],
+      "configuration_id": "CAP-ATT-S5120-F32",
+      "current_probe_conflicts_with_baseline": false,
+      "dtype": "float32",
+      "execution_oom_capacities": [
+        2793406464,
+        3221225472,
+        3651141632,
+        3651141632,
+        3865051136
+      ],
+      "family": "attention",
+      "first_fit_capacity": 3974103040,
+      "last_oom_capacity": 3865051136,
+      "monotonicity_violations": 0,
+      "split": "development",
+      "static_features": {
+        "calibrated_central": 1688371200,
+        "calibrated_upper": 2815613108,
+        "dtype_bytes": 4,
+        "largest_buffer": 838860800,
+        "peak_live": 1688371200,
+        "request_upper": 1677721600,
+        "structural_peak": 1688371200,
+        "top_two_peak_live": 1677721600
+      },
+      "status": "BRACKETED",
+      "violations": []
+    },
+    {
+      "baseline_outcome": "EXECUTION_OOM",
+      "bracket_width": 106954752,
+      "compile_oom_capacities": [],
+      "configuration_id": "CAP-CONV2-B1024",
+      "current_probe_conflicts_with_baseline": false,
+      "dtype": "float32",
+      "execution_oom_capacities": [
+        3651141632,
+        3651141632,
+        3651141632,
+        3865051136,
+        3865051136,
+        3974103040
+      ],
+      "family": "convolution",
+      "first_fit_capacity": 4081057792,
+      "last_oom_capacity": 3974103040,
+      "monotonicity_violations": 0,
+      "split": "evaluation",
+      "static_features": {
+        "calibrated_central": 1207980032,
+        "calibrated_upper": 2014488528,
+        "dtype_bytes": 4,
+        "largest_buffer": 603979776,
+        "peak_live": 1207980032,
+        "request_upper": 1207959552,
+        "structural_peak": 1207980032,
+        "top_two_peak_live": 1207959552
+      },
+      "status": "BRACKETED",
+      "violations": []
+    }
+  ]
+}
