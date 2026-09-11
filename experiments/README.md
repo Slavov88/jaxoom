@@ -167,6 +167,15 @@ study concludes **ALLOCATOR GATE TOO CONSERVATIVE**. No production behavior
 changed. See `allocator_gate_discriminator_report_2026-09-11.md` and its JSON
 artifacts.
 
+The subsequent separated request/capacity study does not add calibrated
+aggregate memory to a peak-live proxy. Its experimental rule compares a small
+dtype-scaled largest-buffer request proxy against an empirical allocator-limit
+threshold. It catches the frozen attention and convolution OOMs and recovers
+the old additive gate's FIT rejections on the small RTX 3050 set, but the
+capacity diagnostics are sparse and the threshold is not a literal free-block
+model. The result is **CONTIGUOUS CAPACITY MODEL PROMISING BUT INSUFFICIENT**;
+see `contiguous_capacity_report_2026-09-11.md`.
+
 The OOM boundary harness runs each target trial in a fresh subprocess and
 keeps intrinsic and controlled-contention tracks separate:
 
