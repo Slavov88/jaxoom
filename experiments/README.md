@@ -158,6 +158,15 @@ configuration failed. This identifies allocator state and JAX capacity limits
 as contributors. It does not justify a production predictor change yet. See
 `execution_oom_diagnosis_report_2026-09-08.md`.
 
+The frozen allocator-gate discriminator study statically screened 1,632
+attention geometries, then evaluated 23 pre-registered RTX 3050 cases in fresh
+subprocesses. Aggregate-only passed 17 disagreement cases; the top-two-live
+gate rejected them, but 14 of those 17 actually FIT. It detected three OOMs
+that aggregate-only missed, at the cost of substantial false rejection, so the
+study concludes **ALLOCATOR GATE TOO CONSERVATIVE**. No production behavior
+changed. See `allocator_gate_discriminator_report_2026-09-11.md` and its JSON
+artifacts.
+
 The OOM boundary harness runs each target trial in a fresh subprocess and
 keeps intrinsic and controlled-contention tracks separate:
 
