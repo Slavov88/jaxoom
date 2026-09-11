@@ -131,7 +131,9 @@ def main():
     if a.run:
         results=[]
         for row in selected:
-            repeats = 3 if .85 <= row["top_two_score"] <= 1.15 else 2
+            # Two fresh repetitions are the ordinary protocol; only rows extremely
+            # close to the frozen boundary receive a third repetition.
+            repeats = 3 if .98 <= row["top_two_score"] <= 1.02 else 2
             outcomes=[probe(row, a.timeout) for _ in range(repeats)]
             stable=outcomes[0]["outcome"] if all(x.get("outcome")==outcomes[0].get("outcome") for x in outcomes) else "UNSTABLE"
             results.append({"configuration_id": row["configuration_id"], "prediction_snapshot": {"aggregate": row["aggregate_pass"], "largest": row["largest_pass"], "top_two": row["top_two_pass"], "peak_live": row["peak_live_pass"], "multipliers": row["multiplier_predictions"]}, "outcomes": outcomes, "stable_outcome": stable})
