@@ -142,6 +142,19 @@ def candidate_table(rows: list[dict[str, Any]]) -> dict[str, Any]:
     return table
 
 
+def baseline_metrics(rows: list[dict[str, Any]], selected_request: str, selected_capacity: str) -> dict[str, dict[str, int]]:
+    predictors = {
+        "aggregate_only": lambda r: r["aggregate_pass"],
+        "old_additive_top_two": lambda r: r["aggregate_pass"] and r["old_top_two_pass"],
+        "old_additive_peak_live": lambda r: r["aggregate_pass"] and r["old_peak_live_pass"],
+        "multiplier_1.10": lambda r: r["aggregate_pass"] and r["multiplier_predictions"]["1.10"],
+        "multiplier_1.25": lambda r: r["aggregate_pass"] and r["multiplier_predictions"]["1.25"],
+        "multiplier_1.50": lambda r: r["aggregate_pass"] and r["multiplier_predictions"]["1.50"],
+        "new_separated": lambda r: prediction(r, selected_request, selected_capacity),
+    }
+    return {name: metrics(rows, fn) for name, fn in predictors.items()}
+
+
 def choose_model(table: dict[str, Any]) -> str:
     # Lexicographic safety-first selection on development data. Ties prefer the
     # simplest request and capacity formulas in the declared order.
@@ -163,6 +176,12 @@ def error_summary(rows: list[dict[str, Any]], request_name: str) -> dict[str, An
         ratios.append(proxy / temp)
         if proxy < temp:
             under.append({"configuration_id": row["configuration_id"], "proxy": proxy, "label": temp})
+    observed = []
+    for row in rows:
+        _, actual_request = _diagnostic_observations(row)
+        if actual_request is not None:
+            proxy = row["request_proxies"][request_name]
+            observed.append({"configuration_id": row["configuration_id"], "proxy": proxy, "actual_request": actual_request, "underprediction_bytes": actual_request - proxy})
     return {
         "N": len(ratios),
         "underprediction_count": len(under),
@@ -171,21 +190,60 @@ def error_summary(rows: list[dict[str, Any]], request_name: str) -> dict[str, An
         "median_proxy_to_temp": statistics.median(ratios) if ratios else None,
         "p90_proxy_to_temp": sorted(ratios)[max(0, math.ceil(.9 * len(ratios)) - 1)] if ratios else None,
         "ratios": ratios,
+        "observed_request_rows": observed,
+        "observed_request_underprediction_count": sum(x["underprediction_bytes"] > 0 for x in observed),
     }
+
+
+def _diagnostic_observations(row: dict[str, Any]) -> tuple[int | None, int | None]:
+    d = row.get("diagnostics") or {}
+    stats = d.get("pre_execute_memory_stats") or {}
+    largest_free = stats.get("largest_free_block_bytes", d.get("largest_free_block_bytes"))
+    actual_request = None
+    errors = []
+    if d.get("error"):
+        errors.append(d["error"])
+    for outcome in d.get("outcomes", []):
+        if outcome.get("error"):
+            errors.append(outcome["error"])
+        after = outcome.get("after_compile") or {}
+        if largest_free is None:
+            largest_free = after.get("allocator_largest_free_block_bytes")
+    for text in errors:
+        match = re.search(r"allocate ([0-9.]+)(GiB|MiB)", text)
+        if match:
+            actual_request = int(float(match.group(1)) * (1024**3 if match.group(2) == "GiB" else 1024**2))
+            break
+    return largest_free, actual_request
 
 
 def capacity_error_summary(rows: list[dict[str, Any]], capacity_name: str) -> dict[str, Any]:
     values = []
     for row in rows:
-        d = row.get("diagnostics") or {}
-        stats = d.get("pre_execute_memory_stats") or {}
-        largest_free = stats.get("largest_free_block_bytes")
-        if largest_free is None:
-            largest_free = d.get("largest_free_block_bytes")
+        largest_free, _ = _diagnostic_observations(row)
         if largest_free is not None:
             cap = capacity_models(row)[capacity_name]
             values.append({"configuration_id": row["configuration_id"], "capacity": cap, "largest_free_block": largest_free, "overprediction_bytes": cap - largest_free})
     return {"N": len(values), "overprediction_count": sum(x["overprediction_bytes"] > 0 for x in values), "rows": values}
+
+
+def historical_attention_rows(request_name: str, capacity_name: str) -> list[dict[str, Any]]:
+    rows = []
+    for sequence in (2048, 3072, 4096, 4608, 5120):
+        shape = (1, 8, sequence, 64)
+        args = tuple(jax.ShapeDtypeStruct(shape, jnp.float32) for _ in range(3))
+        # Keep the historical attention definition local and compilation-free.
+        def attention(q, k, v):
+            scores = jnp.einsum("bhqd,bhkd->bhqk", q, k) / jnp.sqrt(q.shape[-1])
+            weights = jax.nn.softmax(scores, axis=-1)
+            return jnp.einsum("bhqk,bhkd->bhqd", weights, v)
+        report = jaxoom.estimate(attention, *args)
+        live = sorted((b.nbytes for b in report.peak.live_buffers), reverse=True)
+        largest = live[0]
+        request = largest * 2
+        capacity = BUDGET / 3
+        rows.append({"sequence": sequence, "aggregate_pass": jaxoom.calibrate(report, backend="gpu", jax_version=jax.__version__).upper_bytes <= BUDGET, "request_bytes": request, "capacity_bytes": capacity, "separated_pass": request <= capacity})
+    return rows
 
 
 def main() -> None:
@@ -215,6 +273,11 @@ def main() -> None:
         request = row["request_proxies"][request_name]
         capacity = capacity_models(row)[capacity_name]
         result_rows.append({**row, "selected_request_proxy": request, "selected_capacity_lower": capacity, "allocator_risk_ratio": request / capacity, "new_separated_pass": prediction(row, request_name, capacity_name)})
+    baseline = {
+        "development": baseline_metrics([r for r in rows if r["split"] == "development"], request_name, capacity_name),
+        "evaluation": baseline_metrics([r for r in rows if r["split"] == "evaluation"], request_name, capacity_name),
+        "overall": baseline_metrics(rows, request_name, capacity_name),
+    }
     summary = {
         "status": "COMPUTATIONALLY_VERIFIED",
         "rows": len(rows),
@@ -227,6 +290,9 @@ def main() -> None:
         "development": metrics([r for r in rows if r["split"] == "development"], lambda r: prediction(r, request_name, capacity_name)),
         "evaluation": metrics([r for r in rows if r["split"] == "evaluation"], lambda r: prediction(r, request_name, capacity_name)),
         "overall": metrics(rows, lambda r: prediction(r, request_name, capacity_name)),
+        "baseline_metrics": baseline,
+        "recovered_old_top_two_fit_rows": sum(r["actual_binary"] == "FIT" and not r["old_top_two_pass"] and prediction(r, request_name, capacity_name) for r in rows),
+        "historical_attention": historical_attention_rows(request_name, capacity_name),
         "monotonicity": {"request_with_sequence": "PASS", "risk_with_decreasing_budget": "PASS"},
         "production_decision": "NO PRODUCTION CHANGE",
         "decision": "CONTIGUOUS CAPACITY MODEL PROMISING BUT INSUFFICIENT",

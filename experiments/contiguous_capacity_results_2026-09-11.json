@@ -1,0 +1,2669 @@
+{
+  "rows": [
+    {
+      "B": 2,
+      "D": 64,
+      "H": 12,
+      "S": 2560,
+      "actual": "OOM",
+      "actual_binary": "OOM",
+      "actual_outcome": "EXECUTION_OOM",
+      "aggregate_pass": true,
+      "aggregate_score": 0.6596960406750441,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 1.171875,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 2125029690,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 2125029690,
+        "structural_peak": 1274265600
+      },
+      "configuration_id": "DISC-B2-H12-S2560-D64-float32",
+      "diagnostics": {
+        "compiler_diagnostics": {
+          "alias_size_in_bytes": 0,
+          "argument_size_in_bytes": 47185920,
+          "generated_code_size_in_bytes": 0,
+          "output_size_in_bytes": 15728640,
+          "temp_size_in_bytes": 1258291200
+        },
+        "configuration_id": "DISC-B2-H12-S2560-D64-float32",
+        "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [executable_name='jit_attention'] [tf-allocator-allocation-error='']",
+        "outcome": "EXECUTION_OOM",
+        "post_execute_memory_stats": {
+          "bytes_in_use": 67108864,
+          "bytes_limit": 3221225472,
+          "bytes_reserved": 0,
+          "largest_alloc_size": 645922816,
+          "largest_free_block_bytes": 1073741824,
+          "num_allocs": 106,
+          "peak_bytes_in_use": 1378877696,
+          "peak_bytes_reserved": 0,
+          "peak_pool_bytes": 2283798528,
+          "pool_bytes": 2283798528
+        },
+        "pre_execute_memory_stats": {
+          "bytes_in_use": 49283072,
+          "bytes_limit": 3221225472,
+          "bytes_reserved": 0,
+          "largest_alloc_size": 645922816,
+          "largest_free_block_bytes": 1073741824,
+          "num_allocs": 105,
+          "peak_bytes_in_use": 1378877696,
+          "peak_bytes_reserved": 0,
+          "peak_pool_bytes": 2283798528,
+          "pool_bytes": 2283798528
+        }
+      },
+      "dtype": "float32",
+      "dtype_bytes": 4,
+      "family": "attention",
+      "largest_buffer_bytes": 629145600,
+      "largest_pass": true,
+      "largest_score": 0.8550085406750441,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": false,
+      "old_peak_live_pass": false,
+      "old_top_two_pass": false,
+      "outcomes": [
+        {
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [tf-allocator-allocation-error=''] [executable_name='jit_attention']",
+          "outcome": "EXECUTION_OOM"
+        },
+        {
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [tf-allocator-allocation-error=''] [executable_name='jit_attention']",
+          "outcome": "EXECUTION_OOM"
+        }
+      ],
+      "peak_live_bytes": 1274265600,
+      "peak_live_pass": false,
+      "peak_live_score": 1.0552801471203566,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 1258291200,
+        "largest_buffer": 629145600,
+        "peak_live": 1274265600,
+        "primitive_output": 629145600,
+        "top_two_peak_live": 1258291200,
+        "two_x_largest": 1258291200
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 1258291200,
+      "selection_categories": [
+        "AGG_PASS_TOP2_REJECT",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "evaluation",
+      "stable_outcome": "EXECUTION_OOM",
+      "structural_peak_bytes": 1274265600,
+      "top_two_pass": false,
+      "top_two_peak_live_bytes": 1258291200,
+      "top_two_score": 1.050321040675044
+    },
+    {
+      "B": 2,
+      "D": 96,
+      "H": 16,
+      "S": 2560,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.6597384512424469,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.78125,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 2125166304,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 2125166304,
+        "structural_peak": 1274347520
+      },
+      "configuration_id": "DISC-B2-H16-S2560-D96-float16",
+      "diagnostics": {
+        "compiler_diagnostics": {
+          "alias_size_in_bytes": 0,
+          "argument_size_in_bytes": 47185920,
+          "generated_code_size_in_bytes": 0,
+          "output_size_in_bytes": 15728640,
+          "temp_size_in_bytes": 838860800
+        },
+        "configuration_id": "DISC-B2-H16-S2560-D96-float16",
+        "outcome": "FIT",
+        "post_execute_memory_stats": {
+          "bytes_in_use": 67108864,
+          "bytes_limit": 3221225472,
+          "bytes_reserved": 0,
+          "largest_alloc_size": 838860800,
+          "largest_free_block_bytes": 1073741824,
+          "num_allocs": 119,
+          "peak_bytes_in_use": 1194328320,
+          "peak_bytes_reserved": 0,
+          "peak_pool_bytes": 2283798528,
+          "pool_bytes": 2283798528
+        },
+        "pre_execute_memory_stats": {
+          "bytes_in_use": 49283072,
+          "bytes_limit": 3221225472,
+          "bytes_reserved": 0,
+          "largest_alloc_size": 536870912,
+          "largest_free_block_bytes": 536870912,
+          "num_allocs": 117,
+          "peak_bytes_in_use": 1194328320,
+          "peak_bytes_reserved": 0,
+          "peak_pool_bytes": 1210056704,
+          "pool_bytes": 1210056704
+        }
+      },
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 838860800,
+      "largest_pass": true,
+      "largest_score": 0.9201551179091135,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": false,
+      "old_top_two_pass": false,
+      "outcomes": [
+        {
+          "compile_latency_ms": 5039.989920999971,
+          "execution_latency_ms": 43.832726000005096,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 5300.486643999989,
+          "execution_latency_ms": 50.991949999968256,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1274347520,
+      "peak_live_pass": false,
+      "peak_live_score": 1.0553479890028636,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 838860800,
+        "largest_buffer": 838860800,
+        "peak_live": 1274347520,
+        "primitive_output": 838860800,
+        "top_two_peak_live": 1258291200,
+        "two_x_largest": 1677721600
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 838860800,
+      "selection_categories": [
+        "AGG_PASS_TOP2_REJECT",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "development",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1274347520,
+      "top_two_pass": false,
+      "top_two_peak_live_bytes": 1258291200,
+      "top_two_score": 1.050363451242447
+    },
+    {
+      "B": 4,
+      "D": 96,
+      "H": 8,
+      "S": 2560,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.6597384512424469,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.78125,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 2125166304,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 2125166304,
+        "structural_peak": 1274347520
+      },
+      "configuration_id": "DISC-B4-H8-S2560-D96-float16",
+      "diagnostics": null,
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 838860800,
+      "largest_pass": true,
+      "largest_score": 0.9201551179091135,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": false,
+      "old_top_two_pass": false,
+      "outcomes": [
+        {
+          "compile_latency_ms": 5315.812612999991,
+          "execution_latency_ms": 44.60810200004062,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 5030.856757999971,
+          "execution_latency_ms": 59.541763000027004,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1274347520,
+      "peak_live_pass": false,
+      "peak_live_score": 1.0553479890028636,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 838860800,
+        "largest_buffer": 838860800,
+        "peak_live": 1274347520,
+        "primitive_output": 838860800,
+        "top_two_peak_live": 1258291200,
+        "two_x_largest": 1677721600
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 838860800,
+      "selection_categories": [
+        "AGG_PASS_TOP2_REJECT",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "evaluation",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1274347520,
+      "top_two_pass": false,
+      "top_two_peak_live_bytes": 1258291200,
+      "top_two_score": 1.050363451242447
+    },
+    {
+      "B": 2,
+      "D": 64,
+      "H": 16,
+      "S": 2560,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.6570241761704286,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.78125,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 2116423012,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 2116423012,
+        "structural_peak": 1269104640
+      },
+      "configuration_id": "DISC-B2-H16-S2560-D64-float16",
+      "diagnostics": {
+        "compiler_diagnostics": {
+          "alias_size_in_bytes": 0,
+          "argument_size_in_bytes": 31457280,
+          "generated_code_size_in_bytes": 0,
+          "output_size_in_bytes": 10485760,
+          "temp_size_in_bytes": 838860800
+        },
+        "configuration_id": "DISC-B2-H16-S2560-D64-float16",
+        "outcome": "FIT",
+        "post_execute_memory_stats": {
+          "bytes_in_use": 54525952,
+          "bytes_limit": 3221225472,
+          "bytes_reserved": 0,
+          "largest_alloc_size": 838860800,
+          "largest_free_block_bytes": 1073741824,
+          "num_allocs": 123,
+          "peak_bytes_in_use": 1189085440,
+          "peak_bytes_reserved": 0,
+          "peak_pool_bytes": 2283798528,
+          "pool_bytes": 2283798528
+        },
+        "pre_execute_memory_stats": {
+          "bytes_in_use": 44040192,
+          "bytes_limit": 3221225472,
+          "bytes_reserved": 0,
+          "largest_alloc_size": 536870912,
+          "largest_free_block_bytes": 536870912,
+          "num_allocs": 121,
+          "peak_bytes_in_use": 1189085440,
+          "peak_bytes_reserved": 0,
+          "peak_pool_bytes": 1210056704,
+          "pool_bytes": 1210056704
+        }
+      },
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 838860800,
+      "largest_pass": true,
+      "largest_score": 0.9174408428370953,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": false,
+      "old_top_two_pass": false,
+      "outcomes": [
+        {
+          "compile_latency_ms": 4209.550702000001,
+          "execution_latency_ms": 42.37791799999968,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 4248.649908000005,
+          "execution_latency_ms": 43.297593000033885,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1269104640,
+      "peak_live_pass": false,
+      "peak_live_score": 1.0510061097641785,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 838860800,
+        "largest_buffer": 838860800,
+        "peak_live": 1269104640,
+        "primitive_output": 838860800,
+        "top_two_peak_live": 1258291200,
+        "two_x_largest": 1677721600
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 838860800,
+      "selection_categories": [
+        "AGG_PASS_TOP2_REJECT",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "development",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1269104640,
+      "top_two_pass": false,
+      "top_two_peak_live_bytes": 1258291200,
+      "top_two_score": 1.0476491761704285
+    },
+    {
+      "B": 4,
+      "D": 64,
+      "H": 8,
+      "S": 2560,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.6570241761704286,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.78125,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 2116423012,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 2116423012,
+        "structural_peak": 1269104640
+      },
+      "configuration_id": "DISC-B4-H8-S2560-D64-float16",
+      "diagnostics": null,
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 838860800,
+      "largest_pass": true,
+      "largest_score": 0.9174408428370953,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": false,
+      "old_top_two_pass": false,
+      "outcomes": [
+        {
+          "compile_latency_ms": 3945.923052000012,
+          "execution_latency_ms": 42.60362600001599,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 4263.122347999968,
+          "execution_latency_ms": 42.72636499996452,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1269104640,
+      "peak_live_pass": false,
+      "peak_live_score": 1.0510061097641785,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 838860800,
+        "largest_buffer": 838860800,
+        "peak_live": 1269104640,
+        "primitive_output": 838860800,
+        "top_two_peak_live": 1258291200,
+        "two_x_largest": 1677721600
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 838860800,
+      "selection_categories": [
+        "AGG_PASS_TOP2_REJECT",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "evaluation",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1269104640,
+      "top_two_pass": false,
+      "top_two_peak_live_bytes": 1258291200,
+      "top_two_score": 1.0476491761704285
+    },
+    {
+      "B": 1,
+      "D": 128,
+      "H": 8,
+      "S": 5120,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.656939355035623,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.78125,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 2116149784,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 2116149784,
+        "structural_peak": 1268940800
+      },
+      "configuration_id": "DISC-B1-H8-S5120-D128-float16",
+      "diagnostics": null,
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 838860800,
+      "largest_pass": true,
+      "largest_score": 0.9173560217022896,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": false,
+      "old_top_two_pass": false,
+      "outcomes": [
+        {
+          "compile_latency_ms": 8636.403703999975,
+          "execution_latency_ms": 45.47084900002574,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 6056.464807999987,
+          "execution_latency_ms": 47.99372600001561,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1268940800,
+      "peak_live_pass": false,
+      "peak_live_score": 1.0508704259991646,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 838860800,
+        "largest_buffer": 838860800,
+        "peak_live": 1268940800,
+        "primitive_output": 838860800,
+        "top_two_peak_live": 1258291200,
+        "two_x_largest": 1677721600
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 838860800,
+      "selection_categories": [
+        "AGG_PASS_TOP2_REJECT",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "evaluation",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1268940800,
+      "top_two_pass": false,
+      "top_two_peak_live_bytes": 1258291200,
+      "top_two_score": 1.0475643550356228
+    },
+    {
+      "B": 2,
+      "D": 128,
+      "H": 4,
+      "S": 5120,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.656939355035623,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.78125,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 2116149784,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 2116149784,
+        "structural_peak": 1268940800
+      },
+      "configuration_id": "DISC-B2-H4-S5120-D128-float16",
+      "diagnostics": null,
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 838860800,
+      "largest_pass": true,
+      "largest_score": 0.9173560217022896,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": false,
+      "old_top_two_pass": false,
+      "outcomes": [
+        {
+          "compile_latency_ms": 6184.518567999987,
+          "execution_latency_ms": 51.09263200000669,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 5983.154509999963,
+          "execution_latency_ms": 46.67592399999876,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1268940800,
+      "peak_live_pass": false,
+      "peak_live_score": 1.0508704259991646,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 838860800,
+        "largest_buffer": 838860800,
+        "peak_live": 1268940800,
+        "primitive_output": 838860800,
+        "top_two_peak_live": 1258291200,
+        "two_x_largest": 1677721600
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 838860800,
+      "selection_categories": [
+        "AGG_PASS_TOP2_REJECT",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "evaluation",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1268940800,
+      "top_two_pass": false,
+      "top_two_peak_live_bytes": 1258291200,
+      "top_two_score": 1.0475643550356228
+    },
+    {
+      "B": 2,
+      "D": 128,
+      "H": 16,
+      "S": 2560,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.6624527260040244,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.78125,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 2133909595,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 2133909595,
+        "structural_peak": 1279590400
+      },
+      "configuration_id": "DISC-B2-H16-S2560-D128-float16",
+      "diagnostics": null,
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 838860800,
+      "largest_pass": true,
+      "largest_score": 0.922869392670691,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": false,
+      "old_top_two_pass": false,
+      "outcomes": [
+        {
+          "compile_latency_ms": 5604.258319000053,
+          "execution_latency_ms": 45.28005699995674,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 5213.323867000043,
+          "execution_latency_ms": 44.91396200000963,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1279590400,
+      "peak_live_pass": false,
+      "peak_live_score": 1.0596898679311078,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 838860800,
+        "largest_buffer": 838860800,
+        "peak_live": 1279590400,
+        "primitive_output": 838860800,
+        "top_two_peak_live": 1258291200,
+        "two_x_largest": 1677721600
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 838860800,
+      "selection_categories": [
+        "AGG_PASS_TOP2_REJECT",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "evaluation",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1279590400,
+      "top_two_pass": false,
+      "top_two_peak_live_bytes": 1258291200,
+      "top_two_score": 1.0530777260040243
+    },
+    {
+      "B": 4,
+      "D": 128,
+      "H": 8,
+      "S": 2560,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.6624527260040244,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.78125,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 2133909595,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 2133909595,
+        "structural_peak": 1279590400
+      },
+      "configuration_id": "DISC-B4-H8-S2560-D128-float16",
+      "diagnostics": null,
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 838860800,
+      "largest_pass": true,
+      "largest_score": 0.922869392670691,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": false,
+      "old_top_two_pass": false,
+      "outcomes": [
+        {
+          "compile_latency_ms": 5519.126718999985,
+          "execution_latency_ms": 47.3102180000069,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 5241.79807400003,
+          "execution_latency_ms": 69.49800000001005,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1279590400,
+      "peak_live_pass": false,
+      "peak_live_score": 1.0596898679311078,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 838860800,
+        "largest_buffer": 838860800,
+        "peak_live": 1279590400,
+        "primitive_output": 838860800,
+        "top_two_peak_live": 1258291200,
+        "two_x_largest": 1677721600
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 838860800,
+      "selection_categories": [
+        "AGG_PASS_TOP2_REJECT",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "evaluation",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1279590400,
+      "top_two_pass": false,
+      "top_two_peak_live_bytes": 1258291200,
+      "top_two_score": 1.0530777260040243
+    },
+    {
+      "B": 2,
+      "D": 32,
+      "H": 12,
+      "S": 2560,
+      "actual": "OOM",
+      "actual_binary": "OOM",
+      "actual_outcome": "EXECUTION_OOM",
+      "aggregate_pass": true,
+      "aggregate_score": 0.6556246280670166,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 1.171875,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 2111914752,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 2111914752,
+        "structural_peak": 1266401280
+      },
+      "configuration_id": "DISC-B2-H12-S2560-D32-float32",
+      "diagnostics": {
+        "compiler_diagnostics": {
+          "alias_size_in_bytes": 0,
+          "argument_size_in_bytes": 23592960,
+          "generated_code_size_in_bytes": 0,
+          "output_size_in_bytes": 7864320,
+          "temp_size_in_bytes": 1258291200
+        },
+        "configuration_id": "DISC-B2-H12-S2560-D32-float32",
+        "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [tf-allocator-allocation-error=''] [executable_name='jit_attention']",
+        "outcome": "EXECUTION_OOM",
+        "post_execute_memory_stats": {
+          "bytes_in_use": 33554432,
+          "bytes_limit": 3221225472,
+          "bytes_reserved": 0,
+          "largest_alloc_size": 645922816,
+          "largest_free_block_bytes": 1073741824,
+          "num_allocs": 106,
+          "peak_bytes_in_use": 1345323264,
+          "peak_bytes_reserved": 0,
+          "peak_pool_bytes": 2283798528,
+          "pool_bytes": 2283798528
+        },
+        "pre_execute_memory_stats": {
+          "bytes_in_use": 24641536,
+          "bytes_limit": 3221225472,
+          "bytes_reserved": 0,
+          "largest_alloc_size": 645922816,
+          "largest_free_block_bytes": 1073741824,
+          "num_allocs": 105,
+          "peak_bytes_in_use": 1345323264,
+          "peak_bytes_reserved": 0,
+          "peak_pool_bytes": 2283798528,
+          "pool_bytes": 2283798528
+        }
+      },
+      "dtype": "float32",
+      "dtype_bytes": 4,
+      "family": "attention",
+      "largest_buffer_bytes": 629145600,
+      "largest_pass": true,
+      "largest_score": 0.8509371280670166,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": false,
+      "old_peak_live_pass": false,
+      "old_top_two_pass": false,
+      "outcomes": [
+        {
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [tf-allocator-allocation-error=''] [executable_name='jit_attention']",
+          "outcome": "EXECUTION_OOM"
+        },
+        {
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [tf-allocator-allocation-error=''] [executable_name='jit_attention']",
+          "outcome": "EXECUTION_OOM"
+        }
+      ],
+      "peak_live_bytes": 1266401280,
+      "peak_live_pass": false,
+      "peak_live_score": 1.048767328262329,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 1258291200,
+        "largest_buffer": 629145600,
+        "peak_live": 1266401280,
+        "primitive_output": 629145600,
+        "top_two_peak_live": 1258291200,
+        "two_x_largest": 1258291200
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 1258291200,
+      "selection_categories": [
+        "AGG_PASS_TOP2_REJECT",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "development",
+      "stable_outcome": "EXECUTION_OOM",
+      "structural_peak_bytes": 1266401280,
+      "top_two_pass": false,
+      "top_two_peak_live_bytes": 1258291200,
+      "top_two_score": 1.0462496280670166
+    },
+    {
+      "B": 1,
+      "D": 96,
+      "H": 8,
+      "S": 5120,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.6555822174996138,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.78125,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 2111778138,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 2111778138,
+        "structural_peak": 1266319360
+      },
+      "configuration_id": "DISC-B1-H8-S5120-D96-float16",
+      "diagnostics": null,
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 838860800,
+      "largest_pass": true,
+      "largest_score": 0.9159988841662804,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": false,
+      "old_top_two_pass": false,
+      "outcomes": [
+        {
+          "compile_latency_ms": 5163.277413999993,
+          "execution_latency_ms": 47.78863800004274,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 5373.313129999986,
+          "execution_latency_ms": 62.620562999995855,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1266319360,
+      "peak_live_pass": false,
+      "peak_live_score": 1.048699486379822,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 838860800,
+        "largest_buffer": 838860800,
+        "peak_live": 1266319360,
+        "primitive_output": 838860800,
+        "top_two_peak_live": 1258291200,
+        "two_x_largest": 1677721600
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 838860800,
+      "selection_categories": [
+        "AGG_PASS_TOP2_REJECT",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "evaluation",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1266319360,
+      "top_two_pass": false,
+      "top_two_peak_live_bytes": 1258291200,
+      "top_two_score": 1.0462072174996138
+    },
+    {
+      "B": 2,
+      "D": 96,
+      "H": 4,
+      "S": 5120,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.6555822174996138,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.78125,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 2111778138,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 2111778138,
+        "structural_peak": 1266319360
+      },
+      "configuration_id": "DISC-B2-H4-S5120-D96-float16",
+      "diagnostics": null,
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 838860800,
+      "largest_pass": true,
+      "largest_score": 0.9159988841662804,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": false,
+      "old_top_two_pass": false,
+      "outcomes": [
+        {
+          "compile_latency_ms": 5110.635876000004,
+          "execution_latency_ms": 47.26102899996931,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 4760.99325399997,
+          "execution_latency_ms": 46.14157699995758,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1266319360,
+      "peak_live_pass": false,
+      "peak_live_score": 1.048699486379822,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 838860800,
+        "largest_buffer": 838860800,
+        "peak_live": 1266319360,
+        "primitive_output": 838860800,
+        "top_two_peak_live": 1258291200,
+        "two_x_largest": 1677721600
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 838860800,
+      "selection_categories": [
+        "AGG_PASS_TOP2_REJECT",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "evaluation",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1266319360,
+      "top_two_pass": false,
+      "top_two_peak_live_bytes": 1258291200,
+      "top_two_score": 1.0462072174996138
+    },
+    {
+      "B": 2,
+      "D": 96,
+      "H": 12,
+      "S": 2560,
+      "actual": "OOM",
+      "actual_binary": "OOM",
+      "actual_outcome": "EXECUTION_OOM",
+      "aggregate_pass": true,
+      "aggregate_score": 0.6637674529726306,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 1.171875,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 2138144627,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 2138144627,
+        "structural_peak": 1282129920
+      },
+      "configuration_id": "DISC-B2-H12-S2560-D96-float32",
+      "diagnostics": {
+        "compiler_diagnostics": {
+          "alias_size_in_bytes": 0,
+          "argument_size_in_bytes": 70778880,
+          "generated_code_size_in_bytes": 0,
+          "output_size_in_bytes": 23592960,
+          "temp_size_in_bytes": 1258291200
+        },
+        "configuration_id": "DISC-B2-H12-S2560-D96-float32",
+        "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [tf-allocator-allocation-error=''] [executable_name='jit_attention']",
+        "outcome": "EXECUTION_OOM",
+        "post_execute_memory_stats": {
+          "bytes_in_use": 134217728,
+          "bytes_limit": 3221225472,
+          "bytes_reserved": 0,
+          "largest_alloc_size": 645922816,
+          "largest_free_block_bytes": 1073741824,
+          "num_allocs": 100,
+          "peak_bytes_in_use": 1437073664,
+          "peak_bytes_reserved": 0,
+          "peak_pool_bytes": 2418016256,
+          "pool_bytes": 2418016256
+        },
+        "pre_execute_memory_stats": {
+          "bytes_in_use": 90701824,
+          "bytes_limit": 3221225472,
+          "bytes_reserved": 0,
+          "largest_alloc_size": 645922816,
+          "largest_free_block_bytes": 1073741824,
+          "num_allocs": 99,
+          "peak_bytes_in_use": 1437073664,
+          "peak_bytes_reserved": 0,
+          "peak_pool_bytes": 2418016256,
+          "pool_bytes": 2418016256
+        }
+      },
+      "dtype": "float32",
+      "dtype_bytes": 4,
+      "family": "attention",
+      "largest_buffer_bytes": 629145600,
+      "largest_pass": true,
+      "largest_score": 0.8590799529726306,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": false,
+      "old_peak_live_pass": false,
+      "old_top_two_pass": false,
+      "outcomes": [
+        {
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [tf-allocator-allocation-error=''] [executable_name='jit_attention']",
+          "outcome": "EXECUTION_OOM"
+        },
+        {
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.17GiB. [tf-allocator-allocation-error=''] [executable_name='jit_attention']",
+          "outcome": "EXECUTION_OOM"
+        }
+      ],
+      "peak_live_bytes": 1282129920,
+      "peak_live_pass": false,
+      "peak_live_score": 1.0617929656679432,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 1258291200,
+        "largest_buffer": 629145600,
+        "peak_live": 1282129920,
+        "primitive_output": 629145600,
+        "top_two_peak_live": 1258291200,
+        "two_x_largest": 1258291200
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 1258291200,
+      "selection_categories": [
+        "AGG_PASS_TOP2_REJECT",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "development",
+      "stable_outcome": "EXECUTION_OOM",
+      "structural_peak_bytes": 1282129920,
+      "top_two_pass": false,
+      "top_two_peak_live_bytes": 1258291200,
+      "top_two_score": 1.0543924529726307
+    },
+    {
+      "B": 2,
+      "D": 32,
+      "H": 16,
+      "S": 2560,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.6543099010984103,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.78125,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 2107679720,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 2107679720,
+        "structural_peak": 1263861760
+      },
+      "configuration_id": "DISC-B2-H16-S2560-D32-float16",
+      "diagnostics": null,
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 838860800,
+      "largest_pass": true,
+      "largest_score": 0.914726567765077,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": false,
+      "old_top_two_pass": false,
+      "outcomes": [
+        {
+          "compile_latency_ms": 3613.518415000044,
+          "execution_latency_ms": 42.21131700001024,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 3539.4998689999966,
+          "execution_latency_ms": 43.38515900002449,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1263861760,
+      "peak_live_pass": false,
+      "peak_live_score": 1.0466642305254936,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 838860800,
+        "largest_buffer": 838860800,
+        "peak_live": 1263861760,
+        "primitive_output": 838860800,
+        "top_two_peak_live": 1258291200,
+        "two_x_largest": 1677721600
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 838860800,
+      "selection_categories": [
+        "AGG_PASS_TOP2_REJECT",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "evaluation",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1263861760,
+      "top_two_pass": false,
+      "top_two_peak_live_bytes": 1258291200,
+      "top_two_score": 1.0449349010984104
+    },
+    {
+      "B": 2,
+      "D": 128,
+      "H": 12,
+      "S": 2816,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.6002661427482963,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.708984375,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 1933592589,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 1933592589,
+        "structural_peak": 1159471104
+      },
+      "configuration_id": "DISC-B2-H12-S2816-D128-float16",
+      "diagnostics": {
+        "compiler_diagnostics": {
+          "alias_size_in_bytes": 0,
+          "argument_size_in_bytes": 51904512,
+          "generated_code_size_in_bytes": 0,
+          "output_size_in_bytes": 17301504,
+          "temp_size_in_bytes": 761266176
+        },
+        "configuration_id": "DISC-B2-H12-S2816-D128-float16",
+        "outcome": "FIT",
+        "post_execute_memory_stats": {
+          "bytes_in_use": 101711872,
+          "bytes_limit": 3221225472,
+          "bytes_reserved": 0,
+          "largest_alloc_size": 761266176,
+          "largest_free_block_bytes": 1073741824,
+          "num_allocs": 129,
+          "peak_bytes_in_use": 933757184,
+          "peak_bytes_reserved": 0,
+          "peak_pool_bytes": 2418016256,
+          "pool_bytes": 2418016256
+        },
+        "pre_execute_memory_stats": {
+          "bytes_in_use": 84410368,
+          "bytes_limit": 3221225472,
+          "bytes_reserved": 0,
+          "largest_alloc_size": 397410304,
+          "largest_free_block_bytes": 536870912,
+          "num_allocs": 127,
+          "peak_bytes_in_use": 933757184,
+          "peak_bytes_reserved": 0,
+          "peak_pool_bytes": 1344274432,
+          "pool_bytes": 1344274432
+        }
+      },
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 761266176,
+      "largest_pass": true,
+      "largest_score": 0.8365942677482963,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": true,
+      "old_top_two_pass": true,
+      "outcomes": [
+        {
+          "compile_latency_ms": 5580.333094000025,
+          "execution_latency_ms": 69.9954039999966,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 5513.165425000011,
+          "execution_latency_ms": 47.033426999973926,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1159471104,
+      "peak_live_pass": true,
+      "peak_live_score": 0.96021334733814,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": true,
+        "top_two": true
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 761266176,
+        "largest_buffer": 761266176,
+        "peak_live": 1159471104,
+        "primitive_output": 761266176,
+        "top_two_peak_live": 1141899264,
+        "two_x_largest": 1522532352
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 761266176,
+      "selection_categories": [
+        "AGG_PASS_TOP2_NEAR_PASS",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "development",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1159471104,
+      "top_two_pass": true,
+      "top_two_peak_live_bytes": 1141899264,
+      "top_two_score": 0.9547583302482963
+    },
+    {
+      "B": 2,
+      "D": 96,
+      "H": 12,
+      "S": 2816,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.598026865782837,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.708984375,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 1926379373,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 1926379373,
+        "structural_peak": 1155145728
+      },
+      "configuration_id": "DISC-B2-H12-S2816-D96-float16",
+      "diagnostics": null,
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 761266176,
+      "largest_pass": true,
+      "largest_score": 0.834354990782837,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": true,
+      "old_top_two_pass": true,
+      "outcomes": [
+        {
+          "compile_latency_ms": 4866.946392000045,
+          "execution_latency_ms": 53.965117000075224,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 4676.791872000081,
+          "execution_latency_ms": 48.30397199998515,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1155145728,
+      "peak_live_pass": true,
+      "peak_live_score": 0.9566312969351808,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": true,
+        "top_two": true
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 761266176,
+        "largest_buffer": 761266176,
+        "peak_live": 1155145728,
+        "primitive_output": 761266176,
+        "top_two_peak_live": 1141899264,
+        "two_x_largest": 1522532352
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 761266176,
+      "selection_categories": [
+        "AGG_PASS_TOP2_NEAR_PASS",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "evaluation",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1155145728,
+      "top_two_pass": true,
+      "top_two_peak_live_bytes": 1141899264,
+      "top_two_score": 0.952519053282837
+    },
+    {
+      "B": 2,
+      "D": 64,
+      "H": 12,
+      "S": 2816,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.5957875891278187,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.708984375,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 1919166158,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 1919166158,
+        "structural_peak": 1150820352
+      },
+      "configuration_id": "DISC-B2-H12-S2816-D64-float16",
+      "diagnostics": null,
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 761266176,
+      "largest_pass": true,
+      "largest_score": 0.8321157141278187,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": true,
+      "old_top_two_pass": true,
+      "outcomes": [
+        {
+          "compile_latency_ms": 4383.557798999959,
+          "execution_latency_ms": 42.0503049999752,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 4323.555380000016,
+          "execution_latency_ms": 43.861740000011196,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1150820352,
+      "peak_live_pass": true,
+      "peak_live_score": 0.9530492468426625,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": true,
+        "top_two": true
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 761266176,
+        "largest_buffer": 761266176,
+        "peak_live": 1150820352,
+        "primitive_output": 761266176,
+        "top_two_peak_live": 1141899264,
+        "two_x_largest": 1522532352
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 761266176,
+      "selection_categories": [
+        "AGG_PASS_TOP2_NEAR_PASS",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "evaluation",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1150820352,
+      "top_two_pass": true,
+      "top_two_peak_live_bytes": 1141899264,
+      "top_two_score": 0.9502797766278187
+    },
+    {
+      "B": 2,
+      "D": 32,
+      "H": 12,
+      "S": 2816,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.5935483121623596,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.708984375,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 1911952942,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 1911952942,
+        "structural_peak": 1146494976
+      },
+      "configuration_id": "DISC-B2-H12-S2816-D32-float16",
+      "diagnostics": null,
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 761266176,
+      "largest_pass": true,
+      "largest_score": 0.8298764371623596,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": true,
+      "old_top_two_pass": true,
+      "outcomes": [
+        {
+          "compile_latency_ms": 3616.7136699999674,
+          "execution_latency_ms": 48.918713000034586,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 3761.4157410000644,
+          "execution_latency_ms": 40.87442200000169,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1146494976,
+      "peak_live_pass": true,
+      "peak_live_score": 0.9494671964397033,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": true,
+        "top_two": true
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 761266176,
+        "largest_buffer": 761266176,
+        "peak_live": 1146494976,
+        "primitive_output": 761266176,
+        "top_two_peak_live": 1141899264,
+        "two_x_largest": 1522532352
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 761266176,
+      "selection_categories": [
+        "AGG_PASS_TOP2_NEAR_PASS",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "development",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1146494976,
+      "top_two_pass": true,
+      "top_two_peak_live_bytes": 1141899264,
+      "top_two_score": 0.9480404996623596
+    },
+    {
+      "B": 1,
+      "D": 128,
+      "H": 8,
+      "S": 4864,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.5931496530150374,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.705078125,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 1910668771,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 1910668771,
+        "structural_peak": 1145724928
+      },
+      "configuration_id": "DISC-B1-H8-S4864-D128-float16",
+      "diagnostics": null,
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 757071872,
+      "largest_pass": true,
+      "largest_score": 0.828175694681704,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": true,
+      "old_top_two_pass": true,
+      "outcomes": [
+        {
+          "compile_latency_ms": 5112.97963200002,
+          "execution_latency_ms": 46.53716100006022,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 5001.764411000067,
+          "execution_latency_ms": 55.64125299997613,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1145724928,
+      "peak_live_pass": true,
+      "peak_live_score": 0.9488294829304019,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": true,
+        "top_two": true
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 757071872,
+        "largest_buffer": 757071872,
+        "peak_live": 1145724928,
+        "primitive_output": 757071872,
+        "top_two_peak_live": 1135607808,
+        "two_x_largest": 1514143744
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 757071872,
+      "selection_categories": [
+        "AGG_PASS_TOP2_NEAR_PASS",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "evaluation",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1145724928,
+      "top_two_pass": true,
+      "top_two_peak_live_bytes": 1135607808,
+      "top_two_score": 0.9456887155150374
+    },
+    {
+      "B": 2,
+      "D": 128,
+      "H": 4,
+      "S": 4864,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.5931496530150374,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.705078125,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 1910668771,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 1910668771,
+        "structural_peak": 1145724928
+      },
+      "configuration_id": "DISC-B2-H4-S4864-D128-float16",
+      "diagnostics": null,
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 757071872,
+      "largest_pass": true,
+      "largest_score": 0.828175694681704,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": true,
+      "old_top_two_pass": true,
+      "outcomes": [
+        {
+          "compile_latency_ms": 5200.214097999947,
+          "execution_latency_ms": 42.43058400004429,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 5315.444041000092,
+          "execution_latency_ms": 49.33843699996032,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1145724928,
+      "peak_live_pass": true,
+      "peak_live_score": 0.9488294829304019,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": true,
+        "top_two": true
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 757071872,
+        "largest_buffer": 757071872,
+        "peak_live": 1145724928,
+        "primitive_output": 757071872,
+        "top_two_peak_live": 1135607808,
+        "two_x_largest": 1514143744
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 757071872,
+      "selection_categories": [
+        "AGG_PASS_TOP2_NEAR_PASS",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "evaluation",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1145724928,
+      "top_two_pass": true,
+      "top_two_peak_live_bytes": 1135607808,
+      "top_two_score": 0.9456887155150374
+    },
+    {
+      "B": 4,
+      "D": 32,
+      "H": 8,
+      "S": 2560,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.6543099010984103,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.78125,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 2107679720,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 2107679720,
+        "structural_peak": 1263861760
+      },
+      "configuration_id": "DISC-B4-H8-S2560-D32-float16",
+      "diagnostics": null,
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 838860800,
+      "largest_pass": true,
+      "largest_score": 0.914726567765077,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": false,
+      "old_top_two_pass": false,
+      "outcomes": [
+        {
+          "compile_latency_ms": 3976.60028100006,
+          "execution_latency_ms": 41.65479599998889,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 3764.724942999919,
+          "execution_latency_ms": 47.02831999998125,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1263861760,
+      "peak_live_pass": false,
+      "peak_live_score": 1.0466642305254936,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 838860800,
+        "largest_buffer": 838860800,
+        "peak_live": 1263861760,
+        "primitive_output": 838860800,
+        "top_two_peak_live": 1258291200,
+        "two_x_largest": 1677721600
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 838860800,
+      "selection_categories": [
+        "TOP2_VS_LARGEST_DISAGREE",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "development",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1263861760,
+      "top_two_pass": false,
+      "top_two_peak_live_bytes": 1258291200,
+      "top_two_score": 1.0449349010984104
+    },
+    {
+      "B": 1,
+      "D": 64,
+      "H": 8,
+      "S": 5120,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.6542250802740455,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.78125,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 2107406493,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 2107406493,
+        "structural_peak": 1263697920
+      },
+      "configuration_id": "DISC-B1-H8-S5120-D64-float16",
+      "diagnostics": null,
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 838860800,
+      "largest_pass": true,
+      "largest_score": 0.9146417469407121,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": false,
+      "old_top_two_pass": false,
+      "outcomes": [
+        {
+          "compile_latency_ms": 4153.181165999968,
+          "execution_latency_ms": 60.338795999996364,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 3619.117036000034,
+          "execution_latency_ms": 40.73703199992451,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1263697920,
+      "peak_live_pass": false,
+      "peak_live_score": 1.0465285470709205,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 838860800,
+        "largest_buffer": 838860800,
+        "peak_live": 1263697920,
+        "primitive_output": 838860800,
+        "top_two_peak_live": 1258291200,
+        "two_x_largest": 1677721600
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 838860800,
+      "selection_categories": [
+        "TOP2_VS_LARGEST_DISAGREE",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "evaluation",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1263697920,
+      "top_two_pass": false,
+      "top_two_peak_live_bytes": 1258291200,
+      "top_two_score": 1.0448500802740455
+    },
+    {
+      "B": 2,
+      "D": 64,
+      "H": 4,
+      "S": 5120,
+      "actual": "FIT",
+      "actual_binary": "FIT",
+      "actual_outcome": "FIT",
+      "aggregate_pass": true,
+      "aggregate_score": 0.6542250802740455,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 0.78125,
+      "budget_bytes": 3221225472,
+      "calibrated_upper_bytes": 2107406493,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 2107406493,
+        "structural_peak": 1263697920
+      },
+      "configuration_id": "DISC-B2-H4-S5120-D64-float16",
+      "diagnostics": null,
+      "dtype": "float16",
+      "dtype_bytes": 2,
+      "family": "attention",
+      "largest_buffer_bytes": 838860800,
+      "largest_pass": true,
+      "largest_score": 0.9146417469407121,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": true,
+      "old_peak_live_pass": false,
+      "old_top_two_pass": false,
+      "outcomes": [
+        {
+          "compile_latency_ms": 3649.340633999941,
+          "execution_latency_ms": 45.9568119999858,
+          "outcome": "FIT"
+        },
+        {
+          "compile_latency_ms": 4310.070225000004,
+          "execution_latency_ms": 45.114136000051985,
+          "outcome": "FIT"
+        }
+      ],
+      "peak_live_bytes": 1263697920,
+      "peak_live_pass": false,
+      "peak_live_score": 1.0465285470709205,
+      "predictions": {
+        "aggregate": true,
+        "largest": true,
+        "multipliers": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "peak_live": false,
+        "top_two": false
+      },
+      "request_proxies": {
+        "dtype_scaled_largest": 838860800,
+        "largest_buffer": 838860800,
+        "peak_live": 1263697920,
+        "primitive_output": 838860800,
+        "top_two_peak_live": 1258291200,
+        "two_x_largest": 1677721600
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 838860800,
+      "selection_categories": [
+        "TOP2_VS_LARGEST_DISAGREE",
+        "MATCHED_TOP2_GROUP"
+      ],
+      "split": "evaluation",
+      "stable_outcome": "FIT",
+      "structural_peak_bytes": 1263697920,
+      "top_two_pass": false,
+      "top_two_peak_live_bytes": 1258291200,
+      "top_two_score": 1.0448500802740455
+    },
+    {
+      "actual_binary": "OOM",
+      "actual_outcome": "COMPILE_OOM",
+      "aggregate_pass": true,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 2.0,
+      "batch": 2048,
+      "budget_bytes": 3221225472,
+      "calibrated_upper": 2685969904,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 2685969904,
+        "structural_peak": 1610631168
+      },
+      "configuration_id": "CONV-1-B2048",
+      "diagnostics": {
+        "aggregate_pass": true,
+        "batch": 2048,
+        "budget_bytes": 3221225472,
+        "calibrated_upper": 2685969904,
+        "configuration_id": "CONV-1-B2048",
+        "largest": 1073741824,
+        "largest_pass": false,
+        "largest_score": 1.1671681354443233,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": false,
+          "1.50": false
+        },
+        "outcomes": [
+          {
+            "after_compile": {
+              "allocator_fraction_source": null,
+              "allocator_largest_free_block_bytes": 922744832,
+              "allocator_limit_bytes": 3221225472,
+              "allocator_memory_fraction": null,
+              "allocator_mode": "no preallocation",
+              "allocator_preallocate": false,
+              "backend": "gpu",
+              "budget_provenance": "ALLOCATOR_AND_DRIVER",
+              "device_id": 0,
+              "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+              "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+              "driver_free_bytes": 1793064960,
+              "driver_used_bytes": 2364538880,
+              "effective_available_bytes": 1793064960,
+              "external_used_bytes": 80740352,
+              "jax_bytes_in_use": 671109120,
+              "jax_peak_bytes_in_use": 1996513792,
+              "jax_pool_bytes": 2283798528,
+              "limitations": [],
+              "measurement_sources": [
+                "nvidia-smi query",
+                "JAX device.memory_stats",
+                "derived available-memory policy"
+              ],
+              "physical_total_bytes": 4294967296,
+              "timestamp": "2026-09-11T08:05:17.020828+00:00"
+            },
+            "environment": {
+              "allocator_environment": {
+                "TF_GPU_ALLOCATOR": null,
+                "XLA_CLIENT_MEM_FRACTION": null,
+                "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+                "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+                "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+              },
+              "backend": "gpu",
+              "devices": [
+                "cuda:0"
+              ],
+              "jax_version": "0.11.0",
+              "jaxlib_version": "0.11.0",
+              "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+              "python": "3.12.3"
+            },
+            "error": "JaxRuntimeError: NOT_FOUND: Failed to get configs for: 2 out of 7 instructions. See logs for all failures. Example failure: \nAll configs failed during profiling.\nFailures (2):\nEXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.00GiB. [tf-allocator-allocation-error='']\nEXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.00GiB. [tf-allocator-allocation-error='']",
+            "failure_phase": "compile",
+            "outcome": "COMPILE_OOM"
+          },
+          {
+            "after_compile": {
+              "allocator_fraction_source": null,
+              "allocator_largest_free_block_bytes": 922744832,
+              "allocator_limit_bytes": 3221225472,
+              "allocator_memory_fraction": null,
+              "allocator_mode": "no preallocation",
+              "allocator_preallocate": false,
+              "backend": "gpu",
+              "budget_provenance": "ALLOCATOR_AND_DRIVER",
+              "device_id": 0,
+              "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+              "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+              "driver_free_bytes": 1793064960,
+              "driver_used_bytes": 2364538880,
+              "effective_available_bytes": 1793064960,
+              "external_used_bytes": 80740352,
+              "jax_bytes_in_use": 671109120,
+              "jax_peak_bytes_in_use": 1996513792,
+              "jax_pool_bytes": 2283798528,
+              "limitations": [],
+              "measurement_sources": [
+                "nvidia-smi query",
+                "JAX device.memory_stats",
+                "derived available-memory policy"
+              ],
+              "physical_total_bytes": 4294967296,
+              "timestamp": "2026-09-11T08:12:14.703799+00:00"
+            },
+            "environment": {
+              "allocator_environment": {
+                "TF_GPU_ALLOCATOR": null,
+                "XLA_CLIENT_MEM_FRACTION": null,
+                "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+                "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+                "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+              },
+              "backend": "gpu",
+              "devices": [
+                "cuda:0"
+              ],
+              "jax_version": "0.11.0",
+              "jaxlib_version": "0.11.0",
+              "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+              "python": "3.12.3"
+            },
+            "error": "JaxRuntimeError: NOT_FOUND: Failed to get configs for: 2 out of 7 instructions. See logs for all failures. Example failure: \nAll configs failed during profiling.\nFailures (2):\nEXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.00GiB. [tf-allocator-allocation-error='']\nEXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.00GiB. [tf-allocator-allocation-error='']",
+            "failure_phase": "compile",
+            "outcome": "COMPILE_OOM"
+          }
+        ],
+        "peak_live": 1610631168,
+        "peak_live_pass": false,
+        "peak_live_score": 1.3338405241568883,
+        "selection_category": "AGG_PASS_TOP2_REJECT",
+        "stable_outcome": "COMPILE_OOM",
+        "structural_peak": 1610631168,
+        "top_two": 1610612736,
+        "top_two_pass": false,
+        "workload": "CONV-1"
+      },
+      "dtype_bytes": 4,
+      "largest": 1073741824,
+      "largest_pass": false,
+      "largest_score": 1.1671681354443233,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": false,
+        "1.50": false
+      },
+      "new_separated_pass": false,
+      "old_peak_live_pass": false,
+      "old_top_two_pass": false,
+      "outcomes": [
+        {
+          "after_compile": {
+            "allocator_fraction_source": null,
+            "allocator_largest_free_block_bytes": 922744832,
+            "allocator_limit_bytes": 3221225472,
+            "allocator_memory_fraction": null,
+            "allocator_mode": "no preallocation",
+            "allocator_preallocate": false,
+            "backend": "gpu",
+            "budget_provenance": "ALLOCATOR_AND_DRIVER",
+            "device_id": 0,
+            "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+            "driver_free_bytes": 1793064960,
+            "driver_used_bytes": 2364538880,
+            "effective_available_bytes": 1793064960,
+            "external_used_bytes": 80740352,
+            "jax_bytes_in_use": 671109120,
+            "jax_peak_bytes_in_use": 1996513792,
+            "jax_pool_bytes": 2283798528,
+            "limitations": [],
+            "measurement_sources": [
+              "nvidia-smi query",
+              "JAX device.memory_stats",
+              "derived available-memory policy"
+            ],
+            "physical_total_bytes": 4294967296,
+            "timestamp": "2026-09-11T08:05:17.020828+00:00"
+          },
+          "environment": {
+            "allocator_environment": {
+              "TF_GPU_ALLOCATOR": null,
+              "XLA_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+              "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+            },
+            "backend": "gpu",
+            "devices": [
+              "cuda:0"
+            ],
+            "jax_version": "0.11.0",
+            "jaxlib_version": "0.11.0",
+            "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+            "python": "3.12.3"
+          },
+          "error": "JaxRuntimeError: NOT_FOUND: Failed to get configs for: 2 out of 7 instructions. See logs for all failures. Example failure: \nAll configs failed during profiling.\nFailures (2):\nEXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.00GiB. [tf-allocator-allocation-error='']\nEXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.00GiB. [tf-allocator-allocation-error='']",
+          "failure_phase": "compile",
+          "outcome": "COMPILE_OOM"
+        },
+        {
+          "after_compile": {
+            "allocator_fraction_source": null,
+            "allocator_largest_free_block_bytes": 922744832,
+            "allocator_limit_bytes": 3221225472,
+            "allocator_memory_fraction": null,
+            "allocator_mode": "no preallocation",
+            "allocator_preallocate": false,
+            "backend": "gpu",
+            "budget_provenance": "ALLOCATOR_AND_DRIVER",
+            "device_id": 0,
+            "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+            "driver_free_bytes": 1793064960,
+            "driver_used_bytes": 2364538880,
+            "effective_available_bytes": 1793064960,
+            "external_used_bytes": 80740352,
+            "jax_bytes_in_use": 671109120,
+            "jax_peak_bytes_in_use": 1996513792,
+            "jax_pool_bytes": 2283798528,
+            "limitations": [],
+            "measurement_sources": [
+              "nvidia-smi query",
+              "JAX device.memory_stats",
+              "derived available-memory policy"
+            ],
+            "physical_total_bytes": 4294967296,
+            "timestamp": "2026-09-11T08:12:14.703799+00:00"
+          },
+          "environment": {
+            "allocator_environment": {
+              "TF_GPU_ALLOCATOR": null,
+              "XLA_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+              "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+            },
+            "backend": "gpu",
+            "devices": [
+              "cuda:0"
+            ],
+            "jax_version": "0.11.0",
+            "jaxlib_version": "0.11.0",
+            "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+            "python": "3.12.3"
+          },
+          "error": "JaxRuntimeError: NOT_FOUND: Failed to get configs for: 2 out of 7 instructions. See logs for all failures. Example failure: \nAll configs failed during profiling.\nFailures (2):\nEXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.00GiB. [tf-allocator-allocation-error='']\nEXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.00GiB. [tf-allocator-allocation-error='']",
+          "failure_phase": "compile",
+          "outcome": "COMPILE_OOM"
+        }
+      ],
+      "peak_live": 1610631168,
+      "peak_live_pass": false,
+      "peak_live_score": 1.3338405241568883,
+      "request_proxies": {
+        "dtype_scaled_largest": 2147483648,
+        "largest_buffer": 1073741824,
+        "peak_live": 1610631168,
+        "primitive_output": 1073741824,
+        "top_two_peak_live": 1610612736,
+        "two_x_largest": 2147483648
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 2147483648,
+      "selection_category": "AGG_PASS_TOP2_REJECT",
+      "split": "development",
+      "stable_outcome": "COMPILE_OOM",
+      "structural_peak": 1610631168,
+      "top_two": 1610612736,
+      "top_two_pass": false,
+      "workload": "CONV-1"
+    },
+    {
+      "actual_binary": "OOM",
+      "actual_outcome": "EXECUTION_OOM",
+      "aggregate_pass": true,
+      "allocator_limit_bytes": 3221225472,
+      "allocator_risk_ratio": 1.125,
+      "batch": 1024,
+      "budget_bytes": 3221225472,
+      "calibrated_upper": 2014488528,
+      "capacity_features": {
+        "allocator_limit": 3221225472,
+        "calibrated_central": null,
+        "calibrated_upper": 2014488528,
+        "structural_peak": 1207980032
+      },
+      "configuration_id": "CONV-2-B1024",
+      "diagnostics": {
+        "aggregate_pass": true,
+        "batch": 1024,
+        "budget_bytes": 3221225472,
+        "calibrated_upper": 2014488528,
+        "configuration_id": "CONV-2-B1024",
+        "largest": 603979776,
+        "largest_pass": true,
+        "largest_score": 0.8128795474767685,
+        "multiplier_predictions": {
+          "1.10": true,
+          "1.25": true,
+          "1.50": true
+        },
+        "outcomes": [
+          {
+            "after_compile": {
+              "allocator_fraction_source": null,
+              "allocator_largest_free_block_bytes": 1073741824,
+              "allocator_limit_bytes": 3221225472,
+              "allocator_memory_fraction": null,
+              "allocator_mode": "no preallocation",
+              "allocator_preallocate": false,
+              "backend": "gpu",
+              "budget_provenance": "ALLOCATOR_AND_DRIVER",
+              "device_id": 0,
+              "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+              "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+              "driver_free_bytes": 853540864,
+              "driver_used_bytes": 3304062976,
+              "effective_available_bytes": 853540864,
+              "external_used_bytes": 82837504,
+              "jax_bytes_in_use": 1509975552,
+              "jax_peak_bytes_in_use": 2833281024,
+              "jax_pool_bytes": 3221225472,
+              "limitations": [],
+              "measurement_sources": [
+                "nvidia-smi query",
+                "JAX device.memory_stats",
+                "derived available-memory policy"
+              ],
+              "physical_total_bytes": 4294967296,
+              "timestamp": "2026-09-11T08:14:23.010351+00:00"
+            },
+            "environment": {
+              "allocator_environment": {
+                "TF_GPU_ALLOCATOR": null,
+                "XLA_CLIENT_MEM_FRACTION": null,
+                "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+                "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+                "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+              },
+              "backend": "gpu",
+              "devices": [
+                "cuda:0"
+              ],
+              "jax_version": "0.11.0",
+              "jaxlib_version": "0.11.0",
+              "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+              "python": "3.12.3"
+            },
+            "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.14GiB. [tf-allocator-allocation-error=''] [executable_name='jit__conv_2_fn']",
+            "failure_phase": "execute",
+            "outcome": "EXECUTION_OOM"
+          },
+          {
+            "after_compile": {
+              "allocator_fraction_source": null,
+              "allocator_largest_free_block_bytes": 1073741824,
+              "allocator_limit_bytes": 3221225472,
+              "allocator_memory_fraction": null,
+              "allocator_mode": "no preallocation",
+              "allocator_preallocate": false,
+              "backend": "gpu",
+              "budget_provenance": "ALLOCATOR_AND_DRIVER",
+              "device_id": 0,
+              "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+              "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+              "driver_free_bytes": 853540864,
+              "driver_used_bytes": 3304062976,
+              "effective_available_bytes": 853540864,
+              "external_used_bytes": 82837504,
+              "jax_bytes_in_use": 1509975552,
+              "jax_peak_bytes_in_use": 2311172096,
+              "jax_pool_bytes": 3221225472,
+              "limitations": [],
+              "measurement_sources": [
+                "nvidia-smi query",
+                "JAX device.memory_stats",
+                "derived available-memory policy"
+              ],
+              "physical_total_bytes": 4294967296,
+              "timestamp": "2026-09-11T08:16:30.923058+00:00"
+            },
+            "environment": {
+              "allocator_environment": {
+                "TF_GPU_ALLOCATOR": null,
+                "XLA_CLIENT_MEM_FRACTION": null,
+                "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+                "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+                "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+              },
+              "backend": "gpu",
+              "devices": [
+                "cuda:0"
+              ],
+              "jax_version": "0.11.0",
+              "jaxlib_version": "0.11.0",
+              "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+              "python": "3.12.3"
+            },
+            "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.14GiB. [tf-allocator-allocation-error=''] [executable_name='jit__conv_2_fn']",
+            "failure_phase": "execute",
+            "outcome": "EXECUTION_OOM"
+          }
+        ],
+        "peak_live": 1207980032,
+        "peak_live_pass": false,
+        "peak_live_score": 1.0003859053055446,
+        "selection_category": "AGG_PASS_TOP2_REJECT",
+        "stable_outcome": "EXECUTION_OOM",
+        "structural_peak": 1207980032,
+        "top_two": 1207959552,
+        "top_two_pass": false,
+        "workload": "CONV-2"
+      },
+      "dtype_bytes": 4,
+      "largest": 603979776,
+      "largest_pass": true,
+      "largest_score": 0.8128795474767685,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "new_separated_pass": false,
+      "old_peak_live_pass": false,
+      "old_top_two_pass": false,
+      "outcomes": [
+        {
+          "after_compile": {
+            "allocator_fraction_source": null,
+            "allocator_largest_free_block_bytes": 1073741824,
+            "allocator_limit_bytes": 3221225472,
+            "allocator_memory_fraction": null,
+            "allocator_mode": "no preallocation",
+            "allocator_preallocate": false,
+            "backend": "gpu",
+            "budget_provenance": "ALLOCATOR_AND_DRIVER",
+            "device_id": 0,
+            "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+            "driver_free_bytes": 853540864,
+            "driver_used_bytes": 3304062976,
+            "effective_available_bytes": 853540864,
+            "external_used_bytes": 82837504,
+            "jax_bytes_in_use": 1509975552,
+            "jax_peak_bytes_in_use": 2833281024,
+            "jax_pool_bytes": 3221225472,
+            "limitations": [],
+            "measurement_sources": [
+              "nvidia-smi query",
+              "JAX device.memory_stats",
+              "derived available-memory policy"
+            ],
+            "physical_total_bytes": 4294967296,
+            "timestamp": "2026-09-11T08:14:23.010351+00:00"
+          },
+          "environment": {
+            "allocator_environment": {
+              "TF_GPU_ALLOCATOR": null,
+              "XLA_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+              "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+            },
+            "backend": "gpu",
+            "devices": [
+              "cuda:0"
+            ],
+            "jax_version": "0.11.0",
+            "jaxlib_version": "0.11.0",
+            "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+            "python": "3.12.3"
+          },
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.14GiB. [tf-allocator-allocation-error=''] [executable_name='jit__conv_2_fn']",
+          "failure_phase": "execute",
+          "outcome": "EXECUTION_OOM"
+        },
+        {
+          "after_compile": {
+            "allocator_fraction_source": null,
+            "allocator_largest_free_block_bytes": 1073741824,
+            "allocator_limit_bytes": 3221225472,
+            "allocator_memory_fraction": null,
+            "allocator_mode": "no preallocation",
+            "allocator_preallocate": false,
+            "backend": "gpu",
+            "budget_provenance": "ALLOCATOR_AND_DRIVER",
+            "device_id": 0,
+            "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+            "driver_free_bytes": 853540864,
+            "driver_used_bytes": 3304062976,
+            "effective_available_bytes": 853540864,
+            "external_used_bytes": 82837504,
+            "jax_bytes_in_use": 1509975552,
+            "jax_peak_bytes_in_use": 2311172096,
+            "jax_pool_bytes": 3221225472,
+            "limitations": [],
+            "measurement_sources": [
+              "nvidia-smi query",
+              "JAX device.memory_stats",
+              "derived available-memory policy"
+            ],
+            "physical_total_bytes": 4294967296,
+            "timestamp": "2026-09-11T08:16:30.923058+00:00"
+          },
+          "environment": {
+            "allocator_environment": {
+              "TF_GPU_ALLOCATOR": null,
+              "XLA_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+              "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+            },
+            "backend": "gpu",
+            "devices": [
+              "cuda:0"
+            ],
+            "jax_version": "0.11.0",
+            "jaxlib_version": "0.11.0",
+            "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+            "python": "3.12.3"
+          },
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.14GiB. [tf-allocator-allocation-error=''] [executable_name='jit__conv_2_fn']",
+          "failure_phase": "execute",
+          "outcome": "EXECUTION_OOM"
+        }
+      ],
+      "peak_live": 1207980032,
+      "peak_live_pass": false,
+      "peak_live_score": 1.0003859053055446,
+      "request_proxies": {
+        "dtype_scaled_largest": 1207959552,
+        "largest_buffer": 603979776,
+        "peak_live": 1207980032,
+        "primitive_output": 603979776,
+        "top_two_peak_live": 1207959552,
+        "two_x_largest": 1207959552
+      },
+      "selected_capacity_lower": 1073741824.0,
+      "selected_request_proxy": 1207959552,
+      "selection_category": "AGG_PASS_TOP2_REJECT",
+      "split": "evaluation",
+      "stable_outcome": "EXECUTION_OOM",
+      "structural_peak": 1207980032,
+      "top_two": 1207959552,
+      "top_two_pass": false,
+      "workload": "CONV-2"
+    }
+  ],
+  "status": "COMPUTATIONALLY_VERIFIED"
+}

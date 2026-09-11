@@ -1,0 +1,745 @@
+{
+  "baseline_metrics": {
+    "development": {
+      "aggregate_only": {
+        "N": 8,
+        "false_reject": 0,
+        "false_safe": 3
+      },
+      "multiplier_1.10": {
+        "N": 8,
+        "false_reject": 0,
+        "false_safe": 3
+      },
+      "multiplier_1.25": {
+        "N": 8,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "multiplier_1.50": {
+        "N": 8,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "new_separated": {
+        "N": 8,
+        "false_reject": 0,
+        "false_safe": 0
+      },
+      "old_additive_peak_live": {
+        "N": 8,
+        "false_reject": 3,
+        "false_safe": 0
+      },
+      "old_additive_top_two": {
+        "N": 8,
+        "false_reject": 3,
+        "false_safe": 0
+      }
+    },
+    "evaluation": {
+      "aggregate_only": {
+        "N": 17,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "multiplier_1.10": {
+        "N": 17,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "multiplier_1.25": {
+        "N": 17,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "multiplier_1.50": {
+        "N": 17,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "new_separated": {
+        "N": 17,
+        "false_reject": 0,
+        "false_safe": 0
+      },
+      "old_additive_peak_live": {
+        "N": 17,
+        "false_reject": 11,
+        "false_safe": 0
+      },
+      "old_additive_top_two": {
+        "N": 17,
+        "false_reject": 11,
+        "false_safe": 0
+      }
+    },
+    "overall": {
+      "aggregate_only": {
+        "N": 25,
+        "false_reject": 0,
+        "false_safe": 5
+      },
+      "multiplier_1.10": {
+        "N": 25,
+        "false_reject": 0,
+        "false_safe": 5
+      },
+      "multiplier_1.25": {
+        "N": 25,
+        "false_reject": 0,
+        "false_safe": 4
+      },
+      "multiplier_1.50": {
+        "N": 25,
+        "false_reject": 0,
+        "false_safe": 4
+      },
+      "new_separated": {
+        "N": 25,
+        "false_reject": 0,
+        "false_safe": 0
+      },
+      "old_additive_peak_live": {
+        "N": 25,
+        "false_reject": 14,
+        "false_safe": 0
+      },
+      "old_additive_top_two": {
+        "N": 25,
+        "false_reject": 14,
+        "false_safe": 0
+      }
+    }
+  },
+  "candidate_table": {
+    "dtype_scaled_largest__limit_0.28": {
+      "capacity_formula": "limit_0.28",
+      "development": {
+        "N": 8,
+        "false_reject": 0,
+        "false_safe": 0
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 0,
+        "false_safe": 0
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 0,
+        "false_safe": 0
+      },
+      "request_formula": "dtype_scaled_largest"
+    },
+    "dtype_scaled_largest__limit_over_3": {
+      "capacity_formula": "limit_over_3",
+      "development": {
+        "N": 8,
+        "false_reject": 0,
+        "false_safe": 0
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 0,
+        "false_safe": 0
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 0,
+        "false_safe": 0
+      },
+      "request_formula": "dtype_scaled_largest"
+    },
+    "dtype_scaled_largest__limit_over_3_minus_structural_0.05": {
+      "capacity_formula": "limit_over_3_minus_structural_0.05",
+      "development": {
+        "N": 8,
+        "false_reject": 0,
+        "false_safe": 0
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 0,
+        "false_safe": 0
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 0,
+        "false_safe": 0
+      },
+      "request_formula": "dtype_scaled_largest"
+    },
+    "dtype_scaled_largest__limit_over_3_minus_structural_0.10": {
+      "capacity_formula": "limit_over_3_minus_structural_0.10",
+      "development": {
+        "N": 8,
+        "false_reject": 0,
+        "false_safe": 0
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 0,
+        "false_safe": 0
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 0,
+        "false_safe": 0
+      },
+      "request_formula": "dtype_scaled_largest"
+    },
+    "largest_buffer__limit_0.28": {
+      "capacity_formula": "limit_0.28",
+      "development": {
+        "N": 8,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 0,
+        "false_safe": 4
+      },
+      "request_formula": "largest_buffer"
+    },
+    "largest_buffer__limit_over_3": {
+      "capacity_formula": "limit_over_3",
+      "development": {
+        "N": 8,
+        "false_reject": 0,
+        "false_safe": 3
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 0,
+        "false_safe": 5
+      },
+      "request_formula": "largest_buffer"
+    },
+    "largest_buffer__limit_over_3_minus_structural_0.05": {
+      "capacity_formula": "limit_over_3_minus_structural_0.05",
+      "development": {
+        "N": 8,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 0,
+        "false_safe": 4
+      },
+      "request_formula": "largest_buffer"
+    },
+    "largest_buffer__limit_over_3_minus_structural_0.10": {
+      "capacity_formula": "limit_over_3_minus_structural_0.10",
+      "development": {
+        "N": 8,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 0,
+        "false_safe": 4
+      },
+      "request_formula": "largest_buffer"
+    },
+    "peak_live__limit_0.28": {
+      "capacity_formula": "limit_0.28",
+      "development": {
+        "N": 8,
+        "false_reject": 5,
+        "false_safe": 0
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 15,
+        "false_safe": 0
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 20,
+        "false_safe": 0
+      },
+      "request_formula": "peak_live"
+    },
+    "peak_live__limit_over_3": {
+      "capacity_formula": "limit_over_3",
+      "development": {
+        "N": 8,
+        "false_reject": 5,
+        "false_safe": 0
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 15,
+        "false_safe": 0
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 20,
+        "false_safe": 0
+      },
+      "request_formula": "peak_live"
+    },
+    "peak_live__limit_over_3_minus_structural_0.05": {
+      "capacity_formula": "limit_over_3_minus_structural_0.05",
+      "development": {
+        "N": 8,
+        "false_reject": 5,
+        "false_safe": 0
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 15,
+        "false_safe": 0
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 20,
+        "false_safe": 0
+      },
+      "request_formula": "peak_live"
+    },
+    "peak_live__limit_over_3_minus_structural_0.10": {
+      "capacity_formula": "limit_over_3_minus_structural_0.10",
+      "development": {
+        "N": 8,
+        "false_reject": 5,
+        "false_safe": 0
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 15,
+        "false_safe": 0
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 20,
+        "false_safe": 0
+      },
+      "request_formula": "peak_live"
+    },
+    "primitive_output__limit_0.28": {
+      "capacity_formula": "limit_0.28",
+      "development": {
+        "N": 8,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 0,
+        "false_safe": 4
+      },
+      "request_formula": "primitive_output"
+    },
+    "primitive_output__limit_over_3": {
+      "capacity_formula": "limit_over_3",
+      "development": {
+        "N": 8,
+        "false_reject": 0,
+        "false_safe": 3
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 0,
+        "false_safe": 5
+      },
+      "request_formula": "primitive_output"
+    },
+    "primitive_output__limit_over_3_minus_structural_0.05": {
+      "capacity_formula": "limit_over_3_minus_structural_0.05",
+      "development": {
+        "N": 8,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 0,
+        "false_safe": 4
+      },
+      "request_formula": "primitive_output"
+    },
+    "primitive_output__limit_over_3_minus_structural_0.10": {
+      "capacity_formula": "limit_over_3_minus_structural_0.10",
+      "development": {
+        "N": 8,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 0,
+        "false_safe": 2
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 0,
+        "false_safe": 4
+      },
+      "request_formula": "primitive_output"
+    },
+    "top_two_peak_live__limit_0.28": {
+      "capacity_formula": "limit_0.28",
+      "development": {
+        "N": 8,
+        "false_reject": 5,
+        "false_safe": 0
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 15,
+        "false_safe": 0
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 20,
+        "false_safe": 0
+      },
+      "request_formula": "top_two_peak_live"
+    },
+    "top_two_peak_live__limit_over_3": {
+      "capacity_formula": "limit_over_3",
+      "development": {
+        "N": 8,
+        "false_reject": 5,
+        "false_safe": 0
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 15,
+        "false_safe": 0
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 20,
+        "false_safe": 0
+      },
+      "request_formula": "top_two_peak_live"
+    },
+    "top_two_peak_live__limit_over_3_minus_structural_0.05": {
+      "capacity_formula": "limit_over_3_minus_structural_0.05",
+      "development": {
+        "N": 8,
+        "false_reject": 5,
+        "false_safe": 0
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 15,
+        "false_safe": 0
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 20,
+        "false_safe": 0
+      },
+      "request_formula": "top_two_peak_live"
+    },
+    "top_two_peak_live__limit_over_3_minus_structural_0.10": {
+      "capacity_formula": "limit_over_3_minus_structural_0.10",
+      "development": {
+        "N": 8,
+        "false_reject": 5,
+        "false_safe": 0
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 15,
+        "false_safe": 0
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 20,
+        "false_safe": 0
+      },
+      "request_formula": "top_two_peak_live"
+    },
+    "two_x_largest__limit_0.28": {
+      "capacity_formula": "limit_0.28",
+      "development": {
+        "N": 8,
+        "false_reject": 5,
+        "false_safe": 0
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 15,
+        "false_safe": 0
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 20,
+        "false_safe": 0
+      },
+      "request_formula": "two_x_largest"
+    },
+    "two_x_largest__limit_over_3": {
+      "capacity_formula": "limit_over_3",
+      "development": {
+        "N": 8,
+        "false_reject": 5,
+        "false_safe": 0
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 15,
+        "false_safe": 0
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 20,
+        "false_safe": 0
+      },
+      "request_formula": "two_x_largest"
+    },
+    "two_x_largest__limit_over_3_minus_structural_0.05": {
+      "capacity_formula": "limit_over_3_minus_structural_0.05",
+      "development": {
+        "N": 8,
+        "false_reject": 5,
+        "false_safe": 0
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 15,
+        "false_safe": 0
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 20,
+        "false_safe": 0
+      },
+      "request_formula": "two_x_largest"
+    },
+    "two_x_largest__limit_over_3_minus_structural_0.10": {
+      "capacity_formula": "limit_over_3_minus_structural_0.10",
+      "development": {
+        "N": 8,
+        "false_reject": 5,
+        "false_safe": 0
+      },
+      "evaluation": {
+        "N": 17,
+        "false_reject": 15,
+        "false_safe": 0
+      },
+      "overall": {
+        "N": 25,
+        "false_reject": 20,
+        "false_safe": 0
+      },
+      "request_formula": "two_x_largest"
+    }
+  },
+  "decision": "CONTIGUOUS CAPACITY MODEL PROMISING BUT INSUFFICIENT",
+  "development": {
+    "N": 8,
+    "false_reject": 0,
+    "false_safe": 0
+  },
+  "development_rows": 8,
+  "evaluation": {
+    "N": 17,
+    "false_reject": 0,
+    "false_safe": 0
+  },
+  "evaluation_rows": 17,
+  "historical_attention": [
+    {
+      "aggregate_pass": true,
+      "capacity_bytes": 1073741824.0,
+      "request_bytes": 268435456,
+      "separated_pass": true,
+      "sequence": 2048
+    },
+    {
+      "aggregate_pass": true,
+      "capacity_bytes": 1073741824.0,
+      "request_bytes": 603979776,
+      "separated_pass": true,
+      "sequence": 3072
+    },
+    {
+      "aggregate_pass": true,
+      "capacity_bytes": 1073741824.0,
+      "request_bytes": 1073741824,
+      "separated_pass": true,
+      "sequence": 4096
+    },
+    {
+      "aggregate_pass": true,
+      "capacity_bytes": 1073741824.0,
+      "request_bytes": 1358954496,
+      "separated_pass": false,
+      "sequence": 4608
+    },
+    {
+      "aggregate_pass": true,
+      "capacity_bytes": 1073741824.0,
+      "request_bytes": 1677721600,
+      "separated_pass": false,
+      "sequence": 5120
+    }
+  ],
+  "monotonicity": {
+    "request_with_sequence": "PASS",
+    "risk_with_decreasing_budget": "PASS"
+  },
+  "overall": {
+    "N": 25,
+    "false_reject": 0,
+    "false_safe": 0
+  },
+  "production_decision": "NO PRODUCTION CHANGE",
+  "recovered_old_top_two_fit_rows": 14,
+  "rows": 25,
+  "selected_capacity_diagnostics": {
+    "N": 8,
+    "overprediction_count": 4,
+    "rows": [
+      {
+        "capacity": 1073741824.0,
+        "configuration_id": "DISC-B2-H12-S2560-D64-float32",
+        "largest_free_block": 1073741824,
+        "overprediction_bytes": 0.0
+      },
+      {
+        "capacity": 1073741824.0,
+        "configuration_id": "DISC-B2-H16-S2560-D96-float16",
+        "largest_free_block": 536870912,
+        "overprediction_bytes": 536870912.0
+      },
+      {
+        "capacity": 1073741824.0,
+        "configuration_id": "DISC-B2-H16-S2560-D64-float16",
+        "largest_free_block": 536870912,
+        "overprediction_bytes": 536870912.0
+      },
+      {
+        "capacity": 1073741824.0,
+        "configuration_id": "DISC-B2-H12-S2560-D32-float32",
+        "largest_free_block": 1073741824,
+        "overprediction_bytes": 0.0
+      },
+      {
+        "capacity": 1073741824.0,
+        "configuration_id": "DISC-B2-H12-S2560-D96-float32",
+        "largest_free_block": 1073741824,
+        "overprediction_bytes": 0.0
+      },
+      {
+        "capacity": 1073741824.0,
+        "configuration_id": "DISC-B2-H12-S2816-D128-float16",
+        "largest_free_block": 536870912,
+        "overprediction_bytes": 536870912.0
+      },
+      {
+        "capacity": 1073741824.0,
+        "configuration_id": "CONV-1-B2048",
+        "largest_free_block": 922744832,
+        "overprediction_bytes": 150996992.0
+      },
+      {
+        "capacity": 1073741824.0,
+        "configuration_id": "CONV-2-B1024",
+        "largest_free_block": 1073741824,
+        "overprediction_bytes": 0.0
+      }
+    ]
+  },
+  "selected_model": {
+    "capacity_formula": "limit_over_3",
+    "capacity_parameters": "allocator_limit / 3",
+    "request_formula": "dtype_scaled_largest",
+    "request_parameters": "dtype_scaled_largest = largest_buffer * dtype_bytes / 2"
+  },
+  "selected_request_error": {
+    "N": 6,
+    "max_underprediction_bytes": 0,
+    "median_proxy_to_temp": 1.0,
+    "observed_request_rows": [
+      {
+        "actual_request": 1256277934,
+        "configuration_id": "DISC-B2-H12-S2560-D64-float32",
+        "proxy": 1258291200,
+        "underprediction_bytes": -2013266
+      },
+      {
+        "actual_request": 1256277934,
+        "configuration_id": "DISC-B2-H12-S2560-D32-float32",
+        "proxy": 1258291200,
+        "underprediction_bytes": -2013266
+      },
+      {
+        "actual_request": 1256277934,
+        "configuration_id": "DISC-B2-H12-S2560-D96-float32",
+        "proxy": 1258291200,
+        "underprediction_bytes": -2013266
+      },
+      {
+        "actual_request": 1073741824,
+        "configuration_id": "CONV-1-B2048",
+        "proxy": 2147483648,
+        "underprediction_bytes": -1073741824
+      },
+      {
+        "actual_request": 1224065679,
+        "configuration_id": "CONV-2-B1024",
+        "proxy": 1207959552,
+        "underprediction_bytes": 16106127
+      }
+    ],
+    "observed_request_underprediction_count": 1,
+    "p90_proxy_to_temp": 1.0,
+    "ratios": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "underprediction_count": 0,
+    "underpredictions": []
+  },
+  "status": "COMPUTATIONALLY_VERIFIED"
+}
