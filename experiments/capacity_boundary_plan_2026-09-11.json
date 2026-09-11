@@ -1,0 +1,272 @@
+{
+  "capacity_control": "XLA_CLIENT_MEM_FRACTION",
+  "environment_scope": "RTX 3050 Laptop GPU, JAX 0.11.0, CUDA, BFC, PREALLOCATE=false",
+  "panel": [
+    {
+      "baseline_outcome": "SEE_FROZEN_EVIDENCE",
+      "config": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 1024
+      },
+      "configuration_id": "CAP-ATT-S1024-F32",
+      "dtype": "float32",
+      "family": "attention",
+      "fractions": [
+        0.15,
+        0.25,
+        0.35,
+        0.45,
+        0.55
+      ],
+      "selection_reason": "small clear FIT control",
+      "static_features": {
+        "calibrated_central": 69238784,
+        "calibrated_upper": 69238784,
+        "dtype_bytes": 4,
+        "largest_buffer": 33554432,
+        "peak_live": 69238784,
+        "request_upper": 67108864,
+        "structural_peak": 69238784,
+        "top_two_peak_live": 67108864
+      }
+    },
+    {
+      "baseline_outcome": "SEE_FROZEN_EVIDENCE",
+      "config": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 2048
+      },
+      "configuration_id": "CAP-ATT-S2048-F32",
+      "dtype": "float32",
+      "family": "attention",
+      "fractions": [
+        0.25,
+        0.35,
+        0.45,
+        0.55,
+        0.65
+      ],
+      "selection_reason": "historical FIT control near lower transition",
+      "static_features": {
+        "calibrated_central": 272695296,
+        "calibrated_upper": 272695296,
+        "dtype_bytes": 4,
+        "largest_buffer": 134217728,
+        "peak_live": 272695296,
+        "request_upper": 268435456,
+        "structural_peak": 272695296,
+        "top_two_peak_live": 268435456
+      }
+    },
+    {
+      "baseline_outcome": "SEE_FROZEN_EVIDENCE",
+      "config": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 4096
+      },
+      "configuration_id": "CAP-ATT-S4096-F32",
+      "dtype": "float32",
+      "family": "attention",
+      "fractions": [
+        0.45,
+        0.55,
+        0.65,
+        0.75,
+        0.85,
+        0.95
+      ],
+      "selection_reason": "historical FIT/unstable transition",
+      "static_features": {
+        "calibrated_central": 1082261504,
+        "calibrated_upper": 1082261504,
+        "dtype_bytes": 4,
+        "largest_buffer": 536870912,
+        "peak_live": 1082261504,
+        "request_upper": 1073741824,
+        "structural_peak": 1082261504,
+        "top_two_peak_live": 1073741824
+      }
+    },
+    {
+      "baseline_outcome": "SEE_FROZEN_EVIDENCE",
+      "config": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 4608
+      },
+      "configuration_id": "CAP-ATT-S4608-F32",
+      "dtype": "float32",
+      "family": "attention",
+      "fractions": [
+        0.55,
+        0.65,
+        0.75,
+        0.85,
+        0.95
+      ],
+      "selection_reason": "historical execution-OOM boundary",
+      "static_features": {
+        "calibrated_central": 1368539136,
+        "calibrated_upper": 1368539136,
+        "dtype_bytes": 4,
+        "largest_buffer": 679477248,
+        "peak_live": 1368539136,
+        "request_upper": 1358954496,
+        "structural_peak": 1368539136,
+        "top_two_peak_live": 1358954496
+      }
+    },
+    {
+      "baseline_outcome": "SEE_FROZEN_EVIDENCE",
+      "config": {
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 5120
+      },
+      "configuration_id": "CAP-ATT-S5120-F32",
+      "dtype": "float32",
+      "family": "attention",
+      "fractions": [
+        0.65,
+        0.75,
+        0.85,
+        0.95
+      ],
+      "selection_reason": "ATT-2 historical execution-OOM",
+      "static_features": {
+        "calibrated_central": 1688371200,
+        "calibrated_upper": 1688371200,
+        "dtype_bytes": 4,
+        "largest_buffer": 838860800,
+        "peak_live": 1688371200,
+        "request_upper": 1677721600,
+        "structural_peak": 1688371200,
+        "top_two_peak_live": 1677721600
+      }
+    },
+    {
+      "baseline_outcome": "SEE_FROZEN_EVIDENCE",
+      "config": {
+        "head_dim": 64,
+        "heads": 12,
+        "sequence": 2560
+      },
+      "configuration_id": "CAP-ATT-B2-H12-S2560-D64-F32",
+      "dtype": "float32",
+      "family": "attention",
+      "fractions": [
+        0.45,
+        0.55,
+        0.65,
+        0.75,
+        0.85,
+        0.95
+      ],
+      "selection_reason": "discriminator execution-OOM with diagnostic request",
+      "static_features": {
+        "calibrated_central": 637132800,
+        "calibrated_upper": 637132800,
+        "dtype_bytes": 4,
+        "largest_buffer": 314572800,
+        "peak_live": 637132800,
+        "request_upper": 629145600,
+        "structural_peak": 637132800,
+        "top_two_peak_live": 629145600
+      }
+    },
+    {
+      "baseline_outcome": "SEE_FROZEN_EVIDENCE",
+      "config": {
+        "head_dim": 96,
+        "heads": 16,
+        "sequence": 2560
+      },
+      "configuration_id": "CAP-ATT-B2-H16-S2560-D96-F16",
+      "dtype": "float16",
+      "family": "attention",
+      "fractions": [
+        0.25,
+        0.35,
+        0.45,
+        0.55,
+        0.65
+      ],
+      "selection_reason": "discriminator FIT with same request scale",
+      "static_features": {
+        "calibrated_central": 637173760,
+        "calibrated_upper": 637173760,
+        "dtype_bytes": 2,
+        "largest_buffer": 419430400,
+        "peak_live": 637173760,
+        "request_upper": 419430400,
+        "structural_peak": 637173760,
+        "top_two_peak_live": 629145600
+      }
+    },
+    {
+      "baseline_outcome": "SEE_FROZEN_EVIDENCE",
+      "config": {
+        "batch": 2048,
+        "channels": 3,
+        "height": 64,
+        "out_channels": 16,
+        "width": 64
+      },
+      "configuration_id": "CAP-CONV1-B2048",
+      "dtype": "float32",
+      "family": "convolution",
+      "fractions": [
+        0.35,
+        0.55,
+        0.75
+      ],
+      "selection_reason": "known compile-OOM discriminator",
+      "static_features": {
+        "calibrated_central": 1610631168,
+        "calibrated_upper": 1610631168,
+        "dtype_bytes": 4,
+        "largest_buffer": 1073741824,
+        "peak_live": 1610631168,
+        "request_upper": 2147483648,
+        "structural_peak": 1610631168,
+        "top_two_peak_live": 1610612736
+      }
+    },
+    {
+      "baseline_outcome": "SEE_FROZEN_EVIDENCE",
+      "config": {
+        "batch": 1024,
+        "channels": 3,
+        "height": 96,
+        "out_channels": 16,
+        "width": 96
+      },
+      "configuration_id": "CAP-CONV2-B1024",
+      "dtype": "float32",
+      "family": "convolution",
+      "fractions": [
+        0.55,
+        0.65,
+        0.75,
+        0.85,
+        0.95
+      ],
+      "selection_reason": "known execution-OOM discriminator",
+      "static_features": {
+        "calibrated_central": 1207980032,
+        "calibrated_upper": 1207980032,
+        "dtype_bytes": 4,
+        "largest_buffer": 603979776,
+        "peak_live": 1207980032,
+        "request_upper": 1207959552,
+        "structural_peak": 1207980032,
+        "top_two_peak_live": 1207959552
+      }
+    }
+  ],
+  "status": "FROZEN_CAPACITY_PANEL",
+  "target_bracket_width_bytes": 67108864
+}
