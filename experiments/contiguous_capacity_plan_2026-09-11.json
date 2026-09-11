@@ -1,0 +1,178 @@
+{
+  "budget_bytes": 3221225472,
+  "capacity_candidates": [
+    "limit_over_3",
+    "limit_over_3_minus_structural_0.05",
+    "limit_over_3_minus_structural_0.10",
+    "limit_0.28"
+  ],
+  "environment_scope": "RTX 3050 Laptop GPU, JAX 0.11.0, CUDA, BFC, PREALLOCATE=false",
+  "prediction_purity": {
+    "allocator_diagnostics": false,
+    "compiler_memory_analysis": false,
+    "target_compilation": false,
+    "target_execution": false
+  },
+  "request_candidates": [
+    "largest_buffer",
+    "top_two_peak_live",
+    "peak_live",
+    "two_x_largest",
+    "primitive_output",
+    "dtype_scaled_largest"
+  ],
+  "rows": [
+    {
+      "actual_outcome": "EXECUTION_OOM",
+      "configuration_id": "DISC-B2-H12-S2560-D64-float32",
+      "family": "attention",
+      "split": "evaluation"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B2-H16-S2560-D96-float16",
+      "family": "attention",
+      "split": "development"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B4-H8-S2560-D96-float16",
+      "family": "attention",
+      "split": "evaluation"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B2-H16-S2560-D64-float16",
+      "family": "attention",
+      "split": "development"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B4-H8-S2560-D64-float16",
+      "family": "attention",
+      "split": "evaluation"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B1-H8-S5120-D128-float16",
+      "family": "attention",
+      "split": "evaluation"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B2-H4-S5120-D128-float16",
+      "family": "attention",
+      "split": "evaluation"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B2-H16-S2560-D128-float16",
+      "family": "attention",
+      "split": "evaluation"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B4-H8-S2560-D128-float16",
+      "family": "attention",
+      "split": "evaluation"
+    },
+    {
+      "actual_outcome": "EXECUTION_OOM",
+      "configuration_id": "DISC-B2-H12-S2560-D32-float32",
+      "family": "attention",
+      "split": "development"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B1-H8-S5120-D96-float16",
+      "family": "attention",
+      "split": "evaluation"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B2-H4-S5120-D96-float16",
+      "family": "attention",
+      "split": "evaluation"
+    },
+    {
+      "actual_outcome": "EXECUTION_OOM",
+      "configuration_id": "DISC-B2-H12-S2560-D96-float32",
+      "family": "attention",
+      "split": "development"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B2-H16-S2560-D32-float16",
+      "family": "attention",
+      "split": "evaluation"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B2-H12-S2816-D128-float16",
+      "family": "attention",
+      "split": "development"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B2-H12-S2816-D96-float16",
+      "family": "attention",
+      "split": "evaluation"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B2-H12-S2816-D64-float16",
+      "family": "attention",
+      "split": "evaluation"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B2-H12-S2816-D32-float16",
+      "family": "attention",
+      "split": "development"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B1-H8-S4864-D128-float16",
+      "family": "attention",
+      "split": "evaluation"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B2-H4-S4864-D128-float16",
+      "family": "attention",
+      "split": "evaluation"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B4-H8-S2560-D32-float16",
+      "family": "attention",
+      "split": "development"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B1-H8-S5120-D64-float16",
+      "family": "attention",
+      "split": "evaluation"
+    },
+    {
+      "actual_outcome": "FIT",
+      "configuration_id": "DISC-B2-H4-S5120-D64-float16",
+      "family": "attention",
+      "split": "evaluation"
+    },
+    {
+      "actual_outcome": "COMPILE_OOM",
+      "configuration_id": "CONV-1-B2048",
+      "family": "CONV-1",
+      "split": "development"
+    },
+    {
+      "actual_outcome": "EXECUTION_OOM",
+      "configuration_id": "CONV-2-B1024",
+      "family": "CONV-2",
+      "split": "evaluation"
+    }
+  ],
+  "split_rule": "explicit frozen identifier set in contiguous_capacity_study.py",
+  "status": "FROZEN_DEVELOPMENT_EVALUATION_PLAN"
+}
