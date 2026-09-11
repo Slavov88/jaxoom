@@ -45,6 +45,10 @@ Across the previous multi-regime rows plus this discriminator set, calibrated up
 
 The matched top-two geometry rows did not show an additional failure pattern. No robust top-two-vs-peak-live separation was found.
 
+## Non-attention disagreements
+
+A separate frozen static screen found two feasible non-attention disagreement cases: CONV-1 at B=2048 and CONV-2 at B=1024. Both were stable OOM across two fresh runs. CONV-1 failed during compilation; CONV-2 failed during execution. Aggregate-only passed both, while top-two-live and peak-live rejected both. Largest-buffer rejected CONV-1 but passed CONV-2, producing one additional largest-buffer false-safe. These results show that the mechanism is not exclusively attention-specific, but they do not offset the 14 FIT false rejects in the primary attention discriminator set.
+
 ## Planner impact
 
 Offline application to the existing planner boundary traces produced a median first-rejection/recommended-batch ratio of 0.842 and a minimum ratio of 0.0037. Three recommendations were reduced by more than 25%, and one by more than 50%, under this hypothetical rule. This is diagnostic only; planner behavior was not changed.

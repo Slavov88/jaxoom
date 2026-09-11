@@ -1,0 +1,258 @@
+{
+  "status": "COMPUTATIONALLY_VERIFIED",
+  "runtime_executions": 4,
+  "rows": [
+    {
+      "configuration_id": "CONV-1-B2048",
+      "workload": "CONV-1",
+      "batch": 2048,
+      "budget_bytes": 3221225472,
+      "structural_peak": 1610631168,
+      "calibrated_upper": 2685969904,
+      "largest": 1073741824,
+      "top_two": 1610612736,
+      "aggregate_pass": true,
+      "top_two_pass": false,
+      "selection_category": "AGG_PASS_TOP2_REJECT",
+      "peak_live": 1610631168,
+      "peak_live_score": 1.3338405241568883,
+      "largest_score": 1.1671681354443233,
+      "peak_live_pass": false,
+      "largest_pass": false,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": false,
+        "1.50": false
+      },
+      "outcomes": [
+        {
+          "outcome": "COMPILE_OOM",
+          "failure_phase": "compile",
+          "error": "JaxRuntimeError: NOT_FOUND: Failed to get configs for: 2 out of 7 instructions. See logs for all failures. Example failure: \nAll configs failed during profiling.\nFailures (2):\nEXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.00GiB. [tf-allocator-allocation-error='']\nEXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.00GiB. [tf-allocator-allocation-error='']",
+          "environment": {
+            "allocator_environment": {
+              "TF_GPU_ALLOCATOR": null,
+              "XLA_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+              "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+            },
+            "backend": "gpu",
+            "devices": [
+              "cuda:0"
+            ],
+            "jax_version": "0.11.0",
+            "jaxlib_version": "0.11.0",
+            "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+            "python": "3.12.3"
+          },
+          "after_compile": {
+            "allocator_fraction_source": null,
+            "allocator_largest_free_block_bytes": 922744832,
+            "allocator_limit_bytes": 3221225472,
+            "allocator_memory_fraction": null,
+            "allocator_mode": "no preallocation",
+            "allocator_preallocate": false,
+            "backend": "gpu",
+            "budget_provenance": "ALLOCATOR_AND_DRIVER",
+            "device_id": 0,
+            "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+            "driver_free_bytes": 1793064960,
+            "driver_used_bytes": 2364538880,
+            "effective_available_bytes": 1793064960,
+            "external_used_bytes": 80740352,
+            "jax_bytes_in_use": 671109120,
+            "jax_peak_bytes_in_use": 1996513792,
+            "jax_pool_bytes": 2283798528,
+            "limitations": [],
+            "measurement_sources": [
+              "nvidia-smi query",
+              "JAX device.memory_stats",
+              "derived available-memory policy"
+            ],
+            "physical_total_bytes": 4294967296,
+            "timestamp": "2026-09-11T08:05:17.020828+00:00"
+          }
+        },
+        {
+          "outcome": "COMPILE_OOM",
+          "failure_phase": "compile",
+          "error": "JaxRuntimeError: NOT_FOUND: Failed to get configs for: 2 out of 7 instructions. See logs for all failures. Example failure: \nAll configs failed during profiling.\nFailures (2):\nEXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.00GiB. [tf-allocator-allocation-error='']\nEXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.00GiB. [tf-allocator-allocation-error='']",
+          "environment": {
+            "allocator_environment": {
+              "TF_GPU_ALLOCATOR": null,
+              "XLA_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+              "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+            },
+            "backend": "gpu",
+            "devices": [
+              "cuda:0"
+            ],
+            "jax_version": "0.11.0",
+            "jaxlib_version": "0.11.0",
+            "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+            "python": "3.12.3"
+          },
+          "after_compile": {
+            "allocator_fraction_source": null,
+            "allocator_largest_free_block_bytes": 922744832,
+            "allocator_limit_bytes": 3221225472,
+            "allocator_memory_fraction": null,
+            "allocator_mode": "no preallocation",
+            "allocator_preallocate": false,
+            "backend": "gpu",
+            "budget_provenance": "ALLOCATOR_AND_DRIVER",
+            "device_id": 0,
+            "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+            "driver_free_bytes": 1793064960,
+            "driver_used_bytes": 2364538880,
+            "effective_available_bytes": 1793064960,
+            "external_used_bytes": 80740352,
+            "jax_bytes_in_use": 671109120,
+            "jax_peak_bytes_in_use": 1996513792,
+            "jax_pool_bytes": 2283798528,
+            "limitations": [],
+            "measurement_sources": [
+              "nvidia-smi query",
+              "JAX device.memory_stats",
+              "derived available-memory policy"
+            ],
+            "physical_total_bytes": 4294967296,
+            "timestamp": "2026-09-11T08:12:14.703799+00:00"
+          }
+        }
+      ],
+      "stable_outcome": "COMPILE_OOM"
+    },
+    {
+      "configuration_id": "CONV-2-B1024",
+      "workload": "CONV-2",
+      "batch": 1024,
+      "budget_bytes": 3221225472,
+      "structural_peak": 1207980032,
+      "calibrated_upper": 2014488528,
+      "largest": 603979776,
+      "top_two": 1207959552,
+      "aggregate_pass": true,
+      "top_two_pass": false,
+      "selection_category": "AGG_PASS_TOP2_REJECT",
+      "peak_live": 1207980032,
+      "peak_live_score": 1.0003859053055446,
+      "largest_score": 0.8128795474767685,
+      "peak_live_pass": false,
+      "largest_pass": true,
+      "multiplier_predictions": {
+        "1.10": true,
+        "1.25": true,
+        "1.50": true
+      },
+      "outcomes": [
+        {
+          "outcome": "EXECUTION_OOM",
+          "failure_phase": "execute",
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.14GiB. [tf-allocator-allocation-error=''] [executable_name='jit__conv_2_fn']",
+          "environment": {
+            "allocator_environment": {
+              "TF_GPU_ALLOCATOR": null,
+              "XLA_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+              "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+            },
+            "backend": "gpu",
+            "devices": [
+              "cuda:0"
+            ],
+            "jax_version": "0.11.0",
+            "jaxlib_version": "0.11.0",
+            "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+            "python": "3.12.3"
+          },
+          "after_compile": {
+            "allocator_fraction_source": null,
+            "allocator_largest_free_block_bytes": 1073741824,
+            "allocator_limit_bytes": 3221225472,
+            "allocator_memory_fraction": null,
+            "allocator_mode": "no preallocation",
+            "allocator_preallocate": false,
+            "backend": "gpu",
+            "budget_provenance": "ALLOCATOR_AND_DRIVER",
+            "device_id": 0,
+            "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+            "driver_free_bytes": 853540864,
+            "driver_used_bytes": 3304062976,
+            "effective_available_bytes": 853540864,
+            "external_used_bytes": 82837504,
+            "jax_bytes_in_use": 1509975552,
+            "jax_peak_bytes_in_use": 2833281024,
+            "jax_pool_bytes": 3221225472,
+            "limitations": [],
+            "measurement_sources": [
+              "nvidia-smi query",
+              "JAX device.memory_stats",
+              "derived available-memory policy"
+            ],
+            "physical_total_bytes": 4294967296,
+            "timestamp": "2026-09-11T08:14:23.010351+00:00"
+          }
+        },
+        {
+          "outcome": "EXECUTION_OOM",
+          "failure_phase": "execute",
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.14GiB. [tf-allocator-allocation-error=''] [executable_name='jit__conv_2_fn']",
+          "environment": {
+            "allocator_environment": {
+              "TF_GPU_ALLOCATOR": null,
+              "XLA_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+              "XLA_PYTHON_CLIENT_MEM_FRACTION": null,
+              "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+            },
+            "backend": "gpu",
+            "devices": [
+              "cuda:0"
+            ],
+            "jax_version": "0.11.0",
+            "jaxlib_version": "0.11.0",
+            "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+            "python": "3.12.3"
+          },
+          "after_compile": {
+            "allocator_fraction_source": null,
+            "allocator_largest_free_block_bytes": 1073741824,
+            "allocator_limit_bytes": 3221225472,
+            "allocator_memory_fraction": null,
+            "allocator_mode": "no preallocation",
+            "allocator_preallocate": false,
+            "backend": "gpu",
+            "budget_provenance": "ALLOCATOR_AND_DRIVER",
+            "device_id": 0,
+            "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "device_uuid": "GPU-32566b13-ee3e-bbb5-f430-2fb8941d1604",
+            "driver_free_bytes": 853540864,
+            "driver_used_bytes": 3304062976,
+            "effective_available_bytes": 853540864,
+            "external_used_bytes": 82837504,
+            "jax_bytes_in_use": 1509975552,
+            "jax_peak_bytes_in_use": 2311172096,
+            "jax_pool_bytes": 3221225472,
+            "limitations": [],
+            "measurement_sources": [
+              "nvidia-smi query",
+              "JAX device.memory_stats",
+              "derived available-memory policy"
+            ],
+            "physical_total_bytes": 4294967296,
+            "timestamp": "2026-09-11T08:16:30.923058+00:00"
+          }
+        }
+      ],
+      "stable_outcome": "EXECUTION_OOM"
+    }
+  ]
+}
