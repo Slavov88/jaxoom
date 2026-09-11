@@ -1,0 +1,31 @@
+{
+  "status": "FROZEN_SUPPLEMENTAL_PLAN",
+  "rows": [
+    {
+      "configuration_id": "CONV-1-B2048",
+      "workload": "CONV-1",
+      "batch": 2048,
+      "budget_bytes": 3221225472,
+      "structural_peak": 1610631168,
+      "calibrated_upper": 2685969904,
+      "largest": 1073741824,
+      "top_two": 1610612736,
+      "aggregate_pass": true,
+      "top_two_pass": false,
+      "selection_category": "AGG_PASS_TOP2_REJECT"
+    },
+    {
+      "configuration_id": "CONV-2-B1024",
+      "workload": "CONV-2",
+      "batch": 1024,
+      "budget_bytes": 3221225472,
+      "structural_peak": 1207980032,
+      "calibrated_upper": 2014488528,
+      "largest": 603979776,
+      "top_two": 1207959552,
+      "aggregate_pass": true,
+      "top_two_pass": false,
+      "selection_category": "AGG_PASS_TOP2_REJECT"
+    }
+  ]
+}
