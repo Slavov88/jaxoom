@@ -1,0 +1,470 @@
+{
+  "status": "FROZEN_EVALUATION",
+  "rows": [
+    {
+      "configuration_id": "ATT-B1-H8-S4096-D64-F32",
+      "gate_score": 0.893627536483109,
+      "outcomes": [
+        {
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.00GiB. [tf-allocator-allocation-error=''] [executable_name='jit_attention']",
+          "outcome": "EXECUTION_OOM"
+        },
+        {
+          "compile_latency_ms": 5019.9667969999955,
+          "execution_latency_ms": 17.622954000003688,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction": true,
+      "stable_outcome": "UNSTABLE",
+      "family": "attention",
+      "dtype": "float32",
+      "B": 1,
+      "H": 8,
+      "S": 4096,
+      "D": 64,
+      "calibrated_upper_bytes": 1804833959,
+      "top_two_peak_live_bytes": 1073741824,
+      "predictions": {
+        "aggregate": true,
+        "top_two_live": true,
+        "multiplier_1_10": true,
+        "multiplier_1_25": true,
+        "multiplier_1_50": true
+      },
+      "actual_stable": "UNSTABLE"
+    },
+    {
+      "configuration_id": "ATT-B2-H4-S3072-D64-F32",
+      "gate_score": 0.5034924950450659,
+      "outcomes": [
+        {
+          "compile_latency_ms": 4019.599897999996,
+          "execution_latency_ms": 44.3105309999936,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction": true,
+      "stable_outcome": "FIT",
+      "family": "attention",
+      "dtype": "float32",
+      "B": 2,
+      "H": 4,
+      "S": 3072,
+      "D": 64,
+      "calibrated_upper_bytes": 1017883074,
+      "top_two_peak_live_bytes": 603979776,
+      "predictions": {
+        "aggregate": true,
+        "top_two_live": true,
+        "multiplier_1_10": true,
+        "multiplier_1_25": true,
+        "multiplier_1_50": true
+      },
+      "actual_stable": "FIT"
+    },
+    {
+      "configuration_id": "ATT-B1-H4-S4608-D64-F32",
+      "gate_score": 0.5651885482172171,
+      "outcomes": [
+        {
+          "compile_latency_ms": 4034.004553999992,
+          "execution_latency_ms": 47.198944000001575,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction": true,
+      "stable_outcome": "FIT",
+      "family": "attention",
+      "dtype": "float32",
+      "B": 1,
+      "H": 4,
+      "S": 4608,
+      "D": 64,
+      "calibrated_upper_bytes": 1141122500,
+      "top_two_peak_live_bytes": 679477248,
+      "predictions": {
+        "aggregate": true,
+        "top_two_live": true,
+        "multiplier_1_10": true,
+        "multiplier_1_25": true,
+        "multiplier_1_50": true
+      },
+      "actual_stable": "FIT"
+    },
+    {
+      "configuration_id": "ATT-B1-H16-S4096-D32-F32",
+      "gate_score": 1.7829122332235177,
+      "outcomes": [
+        {
+          "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.02GiB. [tf-allocator-allocation-error='']",
+          "outcome": "EXECUTION_OOM"
+        }
+      ],
+      "prediction": false,
+      "stable_outcome": "EXECUTION_OOM",
+      "family": "attention",
+      "dtype": "float32",
+      "B": 1,
+      "H": 16,
+      "S": 4096,
+      "D": 32,
+      "calibrated_upper_bytes": 3595678652,
+      "top_two_peak_live_bytes": 2147483648,
+      "predictions": {
+        "aggregate": false,
+        "top_two_live": false,
+        "multiplier_1_10": false,
+        "multiplier_1_25": false,
+        "multiplier_1_50": false
+      },
+      "actual_stable": "OOM"
+    },
+    {
+      "configuration_id": "ATT-B1-H4-S4096-D128-F32",
+      "gate_score": 0.44898518826812506,
+      "outcomes": [
+        {
+          "compile_latency_ms": 5231.393760999992,
+          "execution_latency_ms": 12.050462999994238,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction": true,
+      "stable_outcome": "FIT",
+      "family": "attention",
+      "dtype": "float32",
+      "B": 1,
+      "H": 4,
+      "S": 4096,
+      "D": 128,
+      "calibrated_upper_bytes": 909411613,
+      "top_two_peak_live_bytes": 536870912,
+      "predictions": {
+        "aggregate": true,
+        "top_two_live": true,
+        "multiplier_1_10": true,
+        "multiplier_1_25": true,
+        "multiplier_1_50": true
+      },
+      "actual_stable": "FIT"
+    },
+    {
+      "configuration_id": "ATT-B1-H8-S3072-D64-F16",
+      "gate_score": 0.3768178119013707,
+      "outcomes": [
+        {
+          "compile_latency_ms": 7596.076061000005,
+          "execution_latency_ms": 6.076755000009371,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction": true,
+      "stable_outcome": "FIT",
+      "family": "attention",
+      "dtype": "float16",
+      "B": 1,
+      "H": 8,
+      "S": 3072,
+      "D": 64,
+      "calibrated_upper_bytes": 760830302,
+      "top_two_peak_live_bytes": 452984832,
+      "predictions": {
+        "aggregate": true,
+        "top_two_live": true,
+        "multiplier_1_10": true,
+        "multiplier_1_25": true,
+        "multiplier_1_50": true
+      },
+      "actual_stable": "FIT"
+    },
+    {
+      "configuration_id": "ATT-B1-H8-S4096-D64-F16",
+      "gate_score": 0.6691519065449635,
+      "outcomes": [
+        {
+          "compile_latency_ms": 3376.4947680000005,
+          "execution_latency_ms": 9.723403000009512,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction": true,
+      "stable_outcome": "FIT",
+      "family": "attention",
+      "dtype": "float16",
+      "B": 1,
+      "H": 8,
+      "S": 4096,
+      "D": 64,
+      "calibrated_upper_bytes": 1350182798,
+      "top_two_peak_live_bytes": 805306368,
+      "predictions": {
+        "aggregate": true,
+        "top_two_live": true,
+        "multiplier_1_10": true,
+        "multiplier_1_25": true,
+        "multiplier_1_50": true
+      },
+      "actual_stable": "FIT"
+    },
+    {
+      "configuration_id": "ATT-B1-H8-S4608-D64-F16",
+      "gate_score": 0.8465804836402336,
+      "outcomes": [
+        {
+          "compile_latency_ms": 3497.8928449999958,
+          "execution_latency_ms": 55.950932000001785,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction": true,
+      "stable_outcome": "FIT",
+      "family": "attention",
+      "dtype": "float16",
+      "B": 1,
+      "H": 8,
+      "S": 4608,
+      "D": 64,
+      "calibrated_upper_bytes": 1707810746,
+      "top_two_peak_live_bytes": 1019215872,
+      "predictions": {
+        "aggregate": true,
+        "top_two_live": true,
+        "multiplier_1_10": true,
+        "multiplier_1_25": true,
+        "multiplier_1_50": true
+      },
+      "actual_stable": "FIT"
+    },
+    {
+      "configuration_id": "ATT-B2-H8-S3072-D32-F16",
+      "gate_score": 0.7520070588216186,
+      "outcomes": [
+        {
+          "compile_latency_ms": 3157.1372319999964,
+          "execution_latency_ms": 47.41543499997647,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction": true,
+      "stable_outcome": "FIT",
+      "family": "attention",
+      "dtype": "float16",
+      "B": 2,
+      "H": 8,
+      "S": 3072,
+      "D": 32,
+      "calibrated_upper_bytes": 1516414629,
+      "top_two_peak_live_bytes": 905969664,
+      "predictions": {
+        "aggregate": true,
+        "top_two_live": true,
+        "multiplier_1_10": true,
+        "multiplier_1_25": true,
+        "multiplier_1_50": true
+      },
+      "actual_stable": "FIT"
+    },
+    {
+      "configuration_id": "ATT-B1-H16-S3072-D32-F16",
+      "gate_score": 0.7520070588216186,
+      "outcomes": [
+        {
+          "compile_latency_ms": 2800.23506500001,
+          "execution_latency_ms": 50.371361999992814,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction": true,
+      "stable_outcome": "FIT",
+      "family": "attention",
+      "dtype": "float16",
+      "B": 1,
+      "H": 16,
+      "S": 3072,
+      "D": 32,
+      "calibrated_upper_bytes": 1516414629,
+      "top_two_peak_live_bytes": 905969664,
+      "predictions": {
+        "aggregate": true,
+        "top_two_live": true,
+        "multiplier_1_10": true,
+        "multiplier_1_25": true,
+        "multiplier_1_50": true
+      },
+      "actual_stable": "FIT"
+    },
+    {
+      "configuration_id": "MLP-2-CONTROL",
+      "gate_score": 0.06615956282864015,
+      "outcomes": [
+        {
+          "compile_latency_ms": 9029.552820999981,
+          "execution_latency_ms": 6.064896999987468,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction": true,
+      "stable_outcome": "FIT",
+      "family": "MLP",
+      "dtype": null,
+      "B": null,
+      "H": null,
+      "S": null,
+      "D": null,
+      "calibrated_upper_bytes": 134209525,
+      "top_two_peak_live_bytes": 78905344,
+      "predictions": {
+        "aggregate": true,
+        "top_two_live": true,
+        "multiplier_1_10": true,
+        "multiplier_1_25": true,
+        "multiplier_1_50": true
+      },
+      "actual_stable": "FIT"
+    },
+    {
+      "configuration_id": "TRAIN-1-CONTROL",
+      "gate_score": 0.053078860665361084,
+      "outcomes": [
+        {
+          "compile_latency_ms": 13988.200225000015,
+          "execution_latency_ms": 521.2140720000207,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction": true,
+      "stable_outcome": "FIT",
+      "family": "training",
+      "dtype": null,
+      "B": null,
+      "H": null,
+      "S": null,
+      "D": null,
+      "calibrated_upper_bytes": 134200994,
+      "top_two_peak_live_bytes": 36777984,
+      "predictions": {
+        "aggregate": true,
+        "top_two_live": true,
+        "multiplier_1_10": true,
+        "multiplier_1_25": true,
+        "multiplier_1_50": true
+      },
+      "actual_stable": "FIT"
+    },
+    {
+      "configuration_id": "CONV-1-CONTROL",
+      "gate_score": 0.2663838251804312,
+      "outcomes": [
+        {
+          "compile_latency_ms": 25114.949010999993,
+          "execution_latency_ms": 14.038425999984838,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction": true,
+      "stable_outcome": "FIT",
+      "family": "convolution",
+      "dtype": null,
+      "B": null,
+      "H": null,
+      "S": null,
+      "D": null,
+      "calibrated_upper_bytes": 536431675,
+      "top_two_peak_live_bytes": 321650688,
+      "predictions": {
+        "aggregate": true,
+        "top_two_live": true,
+        "multiplier_1_10": true,
+        "multiplier_1_25": true,
+        "multiplier_1_50": true
+      },
+      "actual_stable": "FIT"
+    },
+    {
+      "configuration_id": "ATT-B1-H8-S3584-D64-F32",
+      "gate_score": 0.6846660024796923,
+      "outcomes": [
+        {
+          "compile_latency_ms": 4344.721210000017,
+          "execution_latency_ms": 56.378936000015756,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction": true,
+      "stable_outcome": "FIT",
+      "family": "attention",
+      "dtype": "float32",
+      "B": 1,
+      "H": 8,
+      "S": 3584,
+      "D": 64,
+      "calibrated_upper_bytes": 1383379983,
+      "top_two_peak_live_bytes": 822083584,
+      "predictions": {
+        "aggregate": true,
+        "top_two_live": true,
+        "multiplier_1_10": true,
+        "multiplier_1_25": true,
+        "multiplier_1_50": true
+      },
+      "actual_stable": "FIT"
+    },
+    {
+      "configuration_id": "ATT-B4-H4-S2048-D64-F32",
+      "gate_score": 0.44901911665995914,
+      "outcomes": [
+        {
+          "compile_latency_ms": 4380.5921710000175,
+          "execution_latency_ms": 10.16028300000471,
+          "outcome": "FIT"
+        }
+      ],
+      "prediction": true,
+      "stable_outcome": "FIT",
+      "family": "attention",
+      "dtype": "float32",
+      "B": 4,
+      "H": 4,
+      "S": 2048,
+      "D": 64,
+      "calibrated_upper_bytes": 909520904,
+      "top_two_peak_live_bytes": 536870912,
+      "predictions": {
+        "aggregate": true,
+        "top_two_live": true,
+        "multiplier_1_10": true,
+        "multiplier_1_25": true,
+        "multiplier_1_50": true
+      },
+      "actual_stable": "FIT"
+    }
+  ],
+  "metrics": {
+    "aggregate": {
+      "false_safe": 0,
+      "false_reject": 0,
+      "stable_rows": 14
+    },
+    "top_two_live": {
+      "false_safe": 0,
+      "false_reject": 0,
+      "stable_rows": 14
+    },
+    "multiplier_1_10": {
+      "false_safe": 0,
+      "false_reject": 0,
+      "stable_rows": 14
+    },
+    "multiplier_1_25": {
+      "false_safe": 0,
+      "false_reject": 0,
+      "stable_rows": 14
+    },
+    "multiplier_1_50": {
+      "false_safe": 0,
+      "false_reject": 0,
+      "stable_rows": 14
+    }
+  }
+}

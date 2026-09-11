@@ -1,0 +1,54 @@
+{
+  "status": "COMPUTATIONALLY_VERIFIED",
+  "total_rows": 15,
+  "stable_fit": 13,
+  "stable_oom": 1,
+  "unstable": 1,
+  "timeouts": 0,
+  "families": {
+    "attention": 12,
+    "MLP": 1,
+    "training": 1,
+    "convolution": 1
+  },
+  "dtypes": {
+    "float32": 7,
+    "float16": 5,
+    "null": 3
+  },
+  "candidate_metrics": {
+    "aggregate": {
+      "false_safe": 0,
+      "false_reject": 0,
+      "stable_rows": 14
+    },
+    "top_two_live": {
+      "false_safe": 0,
+      "false_reject": 0,
+      "stable_rows": 14
+    },
+    "multiplier_1_10": {
+      "false_safe": 0,
+      "false_reject": 0,
+      "stable_rows": 14
+    },
+    "multiplier_1_25": {
+      "false_safe": 0,
+      "false_reject": 0,
+      "stable_rows": 14
+    },
+    "multiplier_1_50": {
+      "false_safe": 0,
+      "false_reject": 0,
+      "stable_rows": 14
+    }
+  },
+  "top_two_unstable_cases": [
+    "ATT-B1-H8-S4096-D64-F32"
+  ],
+  "matched_proxy_pairs": [
+    "ATT-B2-H8-S3072-D32-F16 / ATT-B1-H16-S3072-D32-F16"
+  ],
+  "production_decision": "NO_CHANGE",
+  "decision": "ALLOCATOR GATE PROMISING BUT INSUFFICIENT"
+}
