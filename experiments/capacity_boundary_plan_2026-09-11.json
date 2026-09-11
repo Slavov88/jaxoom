@@ -22,7 +22,7 @@
       "selection_reason": "small clear FIT control",
       "static_features": {
         "calibrated_central": 69238784,
-        "calibrated_upper": 69238784,
+        "calibrated_upper": 115466094,
         "dtype_bytes": 4,
         "largest_buffer": 33554432,
         "peak_live": 69238784,
@@ -51,7 +51,7 @@
       "selection_reason": "historical FIT control near lower transition",
       "static_features": {
         "calibrated_central": 272695296,
-        "calibrated_upper": 272695296,
+        "calibrated_upper": 454760452,
         "dtype_bytes": 4,
         "largest_buffer": 134217728,
         "peak_live": 272695296,
@@ -81,7 +81,7 @@
       "selection_reason": "historical FIT/unstable transition",
       "static_features": {
         "calibrated_central": 1082261504,
-        "calibrated_upper": 1082261504,
+        "calibrated_upper": 1804833959,
         "dtype_bytes": 4,
         "largest_buffer": 536870912,
         "peak_live": 1082261504,
@@ -110,7 +110,7 @@
       "selection_reason": "historical execution-OOM boundary",
       "static_features": {
         "calibrated_central": 1368539136,
-        "calibrated_upper": 1368539136,
+        "calibrated_upper": 2282245001,
         "dtype_bytes": 4,
         "largest_buffer": 679477248,
         "peak_live": 1368539136,
@@ -138,7 +138,7 @@
       "selection_reason": "ATT-2 historical execution-OOM",
       "static_features": {
         "calibrated_central": 1688371200,
-        "calibrated_upper": 1688371200,
+        "calibrated_upper": 2815613108,
         "dtype_bytes": 4,
         "largest_buffer": 838860800,
         "peak_live": 1688371200,
@@ -168,7 +168,7 @@
       "selection_reason": "discriminator execution-OOM with diagnostic request",
       "static_features": {
         "calibrated_central": 637132800,
-        "calibrated_upper": 637132800,
+        "calibrated_upper": 1062514845,
         "dtype_bytes": 4,
         "largest_buffer": 314572800,
         "peak_live": 637132800,
@@ -197,7 +197,7 @@
       "selection_reason": "discriminator FIT with same request scale",
       "static_features": {
         "calibrated_central": 637173760,
-        "calibrated_upper": 637173760,
+        "calibrated_upper": 1062583152,
         "dtype_bytes": 2,
         "largest_buffer": 419430400,
         "peak_live": 637173760,
@@ -226,7 +226,7 @@
       "selection_reason": "known compile-OOM discriminator",
       "static_features": {
         "calibrated_central": 1610631168,
-        "calibrated_upper": 1610631168,
+        "calibrated_upper": 2685969904,
         "dtype_bytes": 4,
         "largest_buffer": 1073741824,
         "peak_live": 1610631168,
@@ -257,7 +257,7 @@
       "selection_reason": "known execution-OOM discriminator",
       "static_features": {
         "calibrated_central": 1207980032,
-        "calibrated_upper": 1207980032,
+        "calibrated_upper": 2014488528,
         "dtype_bytes": 4,
         "largest_buffer": 603979776,
         "peak_live": 1207980032,
