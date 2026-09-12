@@ -1,0 +1,52 @@
+{
+  "active_sampling": true,
+  "coefficients": [
+    -1.0867220894624747,
+    0.13087702137136337,
+    0.13134050710536097,
+    0.0,
+    0.11972665170946321,
+    0.10298969659667433,
+    0.08774502040739716,
+    0.10634408230088523,
+    0.018931799667098414,
+    0.07187969880686634
+  ],
+  "dataset_hash": "b0eb4498401077cf58f13734e6eb7c172240aa8cba9ccb8273417115cac6d61c",
+  "feature_names": [
+    "structural_peak_over_budget",
+    "calibrated_upper_over_budget",
+    "largest_over_budget",
+    "top_two_peak_live_over_budget",
+    "peak_live_over_budget",
+    "dtype_bytes",
+    "config_numeric_count",
+    "config_numeric_max",
+    "config_numeric_log_product"
+  ],
+  "intercept": -1.0867220894624747,
+  "means": [
+    0.3399926331032599,
+    0.564868204043251,
+    0.0,
+    0.3644012457694108,
+    0.3885593195639188,
+    3.215909090909091,
+    2.909090909090909,
+    3028.7272727272725,
+    13.664660774594761
+  ],
+  "model_hash": "9e7f03a6ca027950e84a42179df3b8743d8f0b81157b500027fb765de1a42e96",
+  "regularization": "L2=1.0; nonnegative first five demand/budget coefficients",
+  "scales": [
+    0.2738258268735599,
+    0.4584361130033815,
+    1.0,
+    0.19361233442525094,
+    0.1911870693641804,
+    0.9764134700334738,
+    1.2715091573363035,
+    2530.394905971259,
+    5.4467703174827
+  ]
+}

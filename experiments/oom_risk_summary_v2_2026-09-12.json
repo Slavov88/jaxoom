@@ -1,0 +1,648 @@
+{
+  "abstention_grid": {
+    "0.10/0.90": {
+      "coverage": 0.0,
+      "false_positive_likely_oom": 0,
+      "false_safe_likely_fit": 0,
+      "fit_coverage": 0,
+      "likely_fit": 0,
+      "likely_oom": 0,
+      "oom_coverage": 0,
+      "p_fit": 0.1,
+      "p_oom": 0.9,
+      "uncertain": 176
+    },
+    "0.15/0.85": {
+      "coverage": 0.03977272727272727,
+      "false_positive_likely_oom": 0,
+      "false_safe_likely_fit": 0,
+      "fit_coverage": 6,
+      "likely_fit": 6,
+      "likely_oom": 1,
+      "oom_coverage": 1,
+      "p_fit": 0.15,
+      "p_oom": 0.85,
+      "uncertain": 169
+    },
+    "0.20/0.80": {
+      "coverage": 0.30113636363636365,
+      "false_positive_likely_oom": 0,
+      "false_safe_likely_fit": 1,
+      "fit_coverage": 52,
+      "likely_fit": 52,
+      "likely_oom": 1,
+      "oom_coverage": 1,
+      "p_fit": 0.2,
+      "p_oom": 0.8,
+      "uncertain": 123
+    },
+    "0.25/0.75": {
+      "coverage": 0.5284090909090909,
+      "false_positive_likely_oom": 0,
+      "false_safe_likely_fit": 6,
+      "fit_coverage": 92,
+      "likely_fit": 92,
+      "likely_oom": 1,
+      "oom_coverage": 1,
+      "p_fit": 0.25,
+      "p_oom": 0.75,
+      "uncertain": 83
+    },
+    "0.30/0.70": {
+      "coverage": 0.7840909090909091,
+      "false_positive_likely_oom": 0,
+      "false_safe_likely_fit": 22,
+      "fit_coverage": 137,
+      "likely_fit": 137,
+      "likely_oom": 1,
+      "oom_coverage": 1,
+      "p_fit": 0.3,
+      "p_oom": 0.7,
+      "uncertain": 38
+    },
+    "0.40/0.60": {
+      "coverage": 0.9204545454545454,
+      "false_positive_likely_oom": 0,
+      "false_safe_likely_fit": 33,
+      "fit_coverage": 161,
+      "likely_fit": 161,
+      "likely_oom": 1,
+      "oom_coverage": 1,
+      "p_fit": 0.4,
+      "p_oom": 0.6,
+      "uncertain": 14
+    },
+    "0.50/0.50": {
+      "coverage": 1.0,
+      "false_positive_likely_oom": 1,
+      "false_safe_likely_fit": 40,
+      "fit_coverage": 169,
+      "likely_fit": 169,
+      "likely_oom": 7,
+      "oom_coverage": 7,
+      "p_fit": 0.5,
+      "p_oom": 0.5,
+      "uncertain": 0
+    }
+  },
+  "dataset": {
+    "execution_oom_groups": 19,
+    "families": {
+      "attention": 172,
+      "autodiff": 3,
+      "convolution": 24,
+      "matmul": 3,
+      "mlp": 15,
+      "other": 2,
+      "reduction": 6,
+      "scan": 3,
+      "training": 13,
+      "transformer": 10
+    },
+    "fit_groups": 75,
+    "new_rows": 60,
+    "old_rows": 191,
+    "outcome_counts": {
+      "COMPILE_OOM": 15,
+      "COMPILE_TIMEOUT": 16,
+      "EXECUTION_OOM": 62,
+      "FIT": 158
+    },
+    "stable_groups": 90,
+    "stable_rows": 176,
+    "total_groups": 123,
+    "total_rows": 251
+  },
+  "decision": "OOM RISK MODEL V2 PROMISING BUT DATA-LIMITED",
+  "family_results": {
+    "attention": {
+      "Brier": 0.17007683591382558,
+      "N": 111,
+      "PR_AUC": 0.7802320964114171,
+      "ROC_AUC": 0.883061383061383,
+      "log_loss": 0.5089604408030447
+    },
+    "autodiff": {
+      "Brier": 0.0191581661900868,
+      "N": 3,
+      "PR_AUC": null,
+      "ROC_AUC": null,
+      "log_loss": 0.14758920638169046
+    },
+    "convolution": {
+      "Brier": 0.3758795721299473,
+      "N": 16,
+      "PR_AUC": 0.696024531024531,
+      "ROC_AUC": 0.6666666666666666,
+      "log_loss": 0.9748210945475944
+    },
+    "matmul": {
+      "Brier": 0.029404832313430457,
+      "N": 3,
+      "PR_AUC": null,
+      "ROC_AUC": null,
+      "log_loss": 0.1880854788436879
+    },
+    "mlp": {
+      "Brier": 0.09952961449060005,
+      "N": 14,
+      "PR_AUC": null,
+      "ROC_AUC": null,
+      "log_loss": 0.36793561932738433
+    },
+    "other": {
+      "Brier": 0.6737112665041264,
+      "N": 1,
+      "PR_AUC": null,
+      "ROC_AUC": null,
+      "log_loss": 1.7192481094698633
+    },
+    "reduction": {
+      "Brier": 0.06606368333687118,
+      "N": 3,
+      "PR_AUC": null,
+      "ROC_AUC": null,
+      "log_loss": 0.2737156401432554
+    },
+    "scan": {
+      "Brier": 0.022380665847032317,
+      "N": 3,
+      "PR_AUC": null,
+      "ROC_AUC": null,
+      "log_loss": 0.16182214237690126
+    },
+    "training": {
+      "Brier": 0.08187791503934486,
+      "N": 13,
+      "PR_AUC": null,
+      "ROC_AUC": null,
+      "log_loss": 0.3301595909903995
+    },
+    "transformer": {
+      "Brier": 0.13158912770290518,
+      "N": 9,
+      "PR_AUC": 0.5,
+      "ROC_AUC": 1.0,
+      "log_loss": 0.4259573359086061
+    }
+  },
+  "inference_purity": {
+    "runtime_allocator_state": false,
+    "target_compilation": false,
+    "target_execution": false
+  },
+  "leave_family_out": "reported for families with a two-class training complement",
+  "model_comparison": {
+    "V1_schema_L2": {
+      "Brier": 0.1504764037924766,
+      "N": 176,
+      "PR_AUC": 0.6797530780755452,
+      "ROC_AUC": 0.8555183946488294,
+      "abstention": {
+        "coverage": 0.011363636363636364,
+        "false_positive_likely_oom": 0,
+        "false_safe_likely_fit": 0,
+        "fit_coverage": 1,
+        "likely_fit": 1,
+        "likely_oom": 1,
+        "oom_coverage": 1,
+        "p_fit": 0.1,
+        "p_oom": 0.9,
+        "uncertain": 174
+      },
+      "calibration": {
+        "ECE": 0.10378729210945464,
+        "N": 176,
+        "bins": [
+          {
+            "N": 61,
+            "hi": 0.2,
+            "lo": 0.0,
+            "mean_probability": 0.16588225267052828,
+            "observed_rate": 0.01639344262295082
+          },
+          {
+            "N": 99,
+            "hi": 0.4,
+            "lo": 0.2,
+            "mean_probability": 0.2767133689430161,
+            "observed_rate": 0.32323232323232326
+          },
+          {
+            "N": 15,
+            "hi": 0.6,
+            "lo": 0.4,
+            "mean_probability": 0.5021572484468754,
+            "observed_rate": 0.8
+          },
+          {
+            "N": 1,
+            "hi": 1.0,
+            "lo": 0.8,
+            "mean_probability": 0.925271749576488,
+            "observed_rate": 1.0
+          }
+        ]
+      },
+      "log_loss": 0.46808485737823113
+    },
+    "V2_compact_L1": {
+      "Brier": 0.15344448972401786,
+      "N": 176,
+      "PR_AUC": 0.6095815691977412,
+      "ROC_AUC": 0.809866220735786,
+      "abstention": {
+        "coverage": 0.028409090909090908,
+        "false_positive_likely_oom": 0,
+        "false_safe_likely_fit": 0,
+        "fit_coverage": 4,
+        "likely_fit": 4,
+        "likely_oom": 1,
+        "oom_coverage": 1,
+        "p_fit": 0.1,
+        "p_oom": 0.9,
+        "uncertain": 171
+      },
+      "calibration": {
+        "ECE": 0.06844131030141919,
+        "N": 176,
+        "bins": [
+          {
+            "N": 64,
+            "hi": 0.2,
+            "lo": 0.0,
+            "mean_probability": 0.16150495659602085,
+            "observed_rate": 0.0625
+          },
+          {
+            "N": 88,
+            "hi": 0.4,
+            "lo": 0.2,
+            "mean_probability": 0.266601590915101,
+            "observed_rate": 0.2727272727272727
+          },
+          {
+            "N": 17,
+            "hi": 0.6,
+            "lo": 0.4,
+            "mean_probability": 0.46021176487582477,
+            "observed_rate": 0.7058823529411765
+          },
+          {
+            "N": 6,
+            "hi": 0.8,
+            "lo": 0.6,
+            "mean_probability": 0.6738508309699979,
+            "observed_rate": 0.8333333333333334
+          },
+          {
+            "N": 1,
+            "hi": 1.0,
+            "lo": 0.8,
+            "mean_probability": 0.963001619857662,
+            "observed_rate": 1.0
+          }
+        ]
+      },
+      "log_loss": 0.47677181636199334
+    },
+    "V2_compact_L2": {
+      "Brier": 0.15530600035116254,
+      "N": 176,
+      "PR_AUC": 0.6499648575487993,
+      "ROC_AUC": 0.8451505016722408,
+      "abstention": {
+        "coverage": 0.0,
+        "false_positive_likely_oom": 0,
+        "false_safe_likely_fit": 0,
+        "fit_coverage": 0,
+        "likely_fit": 0,
+        "likely_oom": 0,
+        "oom_coverage": 0,
+        "p_fit": 0.1,
+        "p_oom": 0.9,
+        "uncertain": 176
+      },
+      "calibration": {
+        "ECE": 0.08801432639501423,
+        "N": 176,
+        "bins": [
+          {
+            "N": 52,
+            "hi": 0.2,
+            "lo": 0.0,
+            "mean_probability": 0.16835085824710014,
+            "observed_rate": 0.019230769230769232
+          },
+          {
+            "N": 109,
+            "hi": 0.4,
+            "lo": 0.2,
+            "mean_probability": 0.27192669772028605,
+            "observed_rate": 0.29357798165137616
+          },
+          {
+            "N": 14,
+            "hi": 0.6,
+            "lo": 0.4,
+            "mean_probability": 0.48068500066706743,
+            "observed_rate": 0.8571428571428571
+          },
+          {
+            "N": 1,
+            "hi": 1.0,
+            "lo": 0.8,
+            "mean_probability": 0.8941231224765791,
+            "observed_rate": 1.0
+          }
+        ]
+      },
+      "log_loss": 0.48024590504900283
+    },
+    "V2_group_balanced_L2": {
+      "Brier": 0.17843893286165544,
+      "N": 176,
+      "PR_AUC": 0.7212956269622797,
+      "ROC_AUC": 0.8876254180602007,
+      "abstention": {
+        "coverage": 0.005681818181818182,
+        "false_positive_likely_oom": 0,
+        "false_safe_likely_fit": 0,
+        "fit_coverage": 0,
+        "likely_fit": 0,
+        "likely_oom": 1,
+        "oom_coverage": 1,
+        "p_fit": 0.1,
+        "p_oom": 0.9,
+        "uncertain": 175
+      },
+      "calibration": {
+        "ECE": 0.2115883716850285,
+        "N": 176,
+        "bins": [
+          {
+            "N": 63,
+            "hi": 0.4,
+            "lo": 0.2,
+            "mean_probability": 0.32401780848424216,
+            "observed_rate": 0.015873015873015872
+          },
+          {
+            "N": 93,
+            "hi": 0.6,
+            "lo": 0.4,
+            "mean_probability": 0.48370372027323877,
+            "observed_rate": 0.3118279569892473
+          },
+          {
+            "N": 18,
+            "hi": 0.8,
+            "lo": 0.6,
+            "mean_probability": 0.6873022253953243,
+            "observed_rate": 0.7777777777777778
+          },
+          {
+            "N": 2,
+            "hi": 1.0,
+            "lo": 0.8,
+            "mean_probability": 0.8932872231188038,
+            "observed_rate": 1.0
+          }
+        ]
+      },
+      "log_loss": 0.5435260054675116
+    },
+    "V2_sign_constrained_L2": {
+      "Brier": 0.1553063593897262,
+      "N": 176,
+      "PR_AUC": 0.6499648575487993,
+      "ROC_AUC": 0.8451505016722408,
+      "abstention": {
+        "coverage": 0.0,
+        "false_positive_likely_oom": 0,
+        "false_safe_likely_fit": 0,
+        "fit_coverage": 0,
+        "likely_fit": 0,
+        "likely_oom": 0,
+        "oom_coverage": 0,
+        "p_fit": 0.1,
+        "p_oom": 0.9,
+        "uncertain": 176
+      },
+      "calibration": {
+        "ECE": 0.08801476941669933,
+        "N": 176,
+        "bins": [
+          {
+            "N": 52,
+            "hi": 0.2,
+            "lo": 0.0,
+            "mean_probability": 0.16835123701784907,
+            "observed_rate": 0.019230769230769232
+          },
+          {
+            "N": 109,
+            "hi": 0.4,
+            "lo": 0.2,
+            "mean_probability": 0.27192638706300754,
+            "observed_rate": 0.29357798165137616
+          },
+          {
+            "N": 14,
+            "hi": 0.6,
+            "lo": 0.4,
+            "mean_probability": 0.48068317054022397,
+            "observed_rate": 0.8571428571428571
+          },
+          {
+            "N": 1,
+            "hi": 1.0,
+            "lo": 0.8,
+            "mean_probability": 0.8941243301581113,
+            "observed_rate": 1.0
+          }
+        ]
+      },
+      "log_loss": 0.4802468300866518
+    },
+    "V2_threshold_tree": {
+      "Brier": 0.2556817670454646,
+      "N": 176,
+      "PR_AUC": 0.4511116717184632,
+      "ROC_AUC": 0.6384615384615384,
+      "abstention": {
+        "coverage": 1.0,
+        "false_positive_likely_oom": 26,
+        "false_safe_likely_fit": 19,
+        "fit_coverage": 123,
+        "likely_fit": 123,
+        "likely_oom": 53,
+        "oom_coverage": 53,
+        "p_fit": 0.1,
+        "p_oom": 0.9,
+        "uncertain": 0
+      },
+      "calibration": {
+        "ECE": 0.2556818181818182,
+        "N": 176,
+        "bins": [
+          {
+            "N": 123,
+            "hi": 0.2,
+            "lo": 0.0,
+            "mean_probability": 0.0,
+            "observed_rate": 0.15447154471544716
+          },
+          {
+            "N": 53,
+            "hi": 1.0,
+            "lo": 0.8,
+            "mean_probability": 1.0,
+            "observed_rate": 0.5094339622641509
+          }
+        ]
+      },
+      "log_loss": 4.121104076175059
+    }
+  },
+  "models": {
+    "V1_schema_L2": {
+      "Brier": 0.1504764037924766,
+      "N": 176,
+      "PR_AUC": 0.6797530780755452,
+      "ROC_AUC": 0.8555183946488294,
+      "log_loss": 0.46808485737823113
+    },
+    "V2_compact_L1": {
+      "Brier": 0.15344448972401786,
+      "N": 176,
+      "PR_AUC": 0.6095815691977412,
+      "ROC_AUC": 0.809866220735786,
+      "log_loss": 0.47677181636199334
+    },
+    "V2_compact_L2": {
+      "Brier": 0.15530600035116254,
+      "N": 176,
+      "PR_AUC": 0.6499648575487993,
+      "ROC_AUC": 0.8451505016722408,
+      "log_loss": 0.48024590504900283
+    },
+    "V2_group_balanced_L2": {
+      "Brier": 0.17843893286165544,
+      "N": 176,
+      "PR_AUC": 0.7212956269622797,
+      "ROC_AUC": 0.8876254180602007,
+      "log_loss": 0.5435260054675116
+    },
+    "V2_sign_constrained_L2": {
+      "Brier": 0.1553063593897262,
+      "N": 176,
+      "PR_AUC": 0.6499648575487993,
+      "ROC_AUC": 0.8451505016722408,
+      "log_loss": 0.4802468300866518
+    },
+    "V2_threshold_tree": {
+      "Brier": 0.2556817670454646,
+      "N": 176,
+      "PR_AUC": 0.4511116717184632,
+      "ROC_AUC": 0.6384615384615384,
+      "log_loss": 4.121104076175059
+    }
+  },
+  "monotonicity": {
+    "v1_violations": 3,
+    "v2_compact_l2_violations": 0,
+    "v2_sign_constrained_violations": 0
+  },
+  "permutation_test": "not rerun separately; V1 group permutation was chance-level",
+  "production_decision": "NO PRODUCTION CHANGE",
+  "selected_model": "V2_sign_constrained_L2",
+  "selected_model_artifact": {
+    "active_sampling": true,
+    "coefficients": [
+      -1.0867220894624747,
+      0.13087702137136337,
+      0.13134050710536097,
+      0.0,
+      0.11972665170946321,
+      0.10298969659667433,
+      0.08774502040739716,
+      0.10634408230088523,
+      0.018931799667098414,
+      0.07187969880686634
+    ],
+    "dataset_hash": "b0eb4498401077cf58f13734e6eb7c172240aa8cba9ccb8273417115cac6d61c",
+    "feature_names": [
+      "structural_peak_over_budget",
+      "calibrated_upper_over_budget",
+      "largest_over_budget",
+      "top_two_peak_live_over_budget",
+      "peak_live_over_budget",
+      "dtype_bytes",
+      "config_numeric_count",
+      "config_numeric_max",
+      "config_numeric_log_product"
+    ],
+    "intercept": -1.0867220894624747,
+    "means": [
+      0.3399926331032599,
+      0.564868204043251,
+      0.0,
+      0.3644012457694108,
+      0.3885593195639188,
+      3.215909090909091,
+      2.909090909090909,
+      3028.7272727272725,
+      13.664660774594761
+    ],
+    "model_hash": "9e7f03a6ca027950e84a42179df3b8743d8f0b81157b500027fb765de1a42e96",
+    "regularization": "L2=1.0; nonnegative first five demand/budget coefficients",
+    "scales": [
+      0.2738258268735599,
+      0.4584361130033815,
+      1.0,
+      0.19361233442525094,
+      0.1911870693641804,
+      0.9764134700334738,
+      1.2715091573363035,
+      2530.394905971259,
+      5.4467703174827
+    ]
+  },
+  "speed": {
+    "feature_count": 9,
+    "feature_extraction": "static JAX tracing only; recorded in campaign generator",
+    "inference_ms_per_1000_rows": 0.013789758000001484,
+    "serialized_model_bytes": 1068
+  },
+  "status": "COMPUTATIONALLY_VERIFIED",
+  "unstable_cases": {
+    "count": 0,
+    "predictions": []
+  },
+  "v1_prospective": {
+    "N_stable_new_groups": 34,
+    "N_stable_new_rows": 34,
+    "abstention": {
+      "coverage": 0.08823529411764706,
+      "false_positive_likely_oom": 0,
+      "false_safe_likely_fit": 0,
+      "fit_coverage": 2,
+      "likely_fit": 2,
+      "likely_oom": 1,
+      "oom_coverage": 1,
+      "p_fit": 0.1,
+      "p_oom": 0.9,
+      "uncertain": 31
+    },
+    "active_sampling_note": "Campaign was selected using frozen V1; these metrics are prospective campaign-conditional, not population calibration.",
+    "errors": [],
+    "metrics": {
+      "Brier": 0.10999762870772495,
+      "N": 34,
+      "PR_AUC": 0.8667730417730417,
+      "ROC_AUC": 0.9734848484848485,
+      "log_loss": 0.3681913772988873
+    }
+  }
+}
