@@ -1,0 +1,58 @@
+{
+  "feature_sets": {
+    "A_aggregate_ratio": [
+      "calibrated_upper_over_budget"
+    ],
+    "B_aggregate_plus_largest": [
+      "calibrated_upper_over_budget",
+      "largest_over_budget"
+    ],
+    "C_memory": [
+      "structural_peak_over_budget",
+      "calibrated_central_over_budget",
+      "calibrated_upper_over_budget",
+      "largest_over_budget",
+      "top_two_peak_live_over_budget",
+      "peak_live_over_budget",
+      "dtype_bytes"
+    ],
+    "D_memory_shape": [
+      "structural_peak_over_budget",
+      "calibrated_central_over_budget",
+      "calibrated_upper_over_budget",
+      "largest_over_budget",
+      "top_two_peak_live_over_budget",
+      "peak_live_over_budget",
+      "dtype_bytes",
+      "config_numeric_count",
+      "config_numeric_max",
+      "config_numeric_log_product",
+      "external_pressure_over_budget"
+    ],
+    "E_memory_shape_logs": [
+      "structural_peak_over_budget",
+      "calibrated_upper_over_budget",
+      "largest_over_budget",
+      "top_two_peak_live_over_budget",
+      "peak_live_over_budget",
+      "dtype_bytes",
+      "config_numeric_count",
+      "config_numeric_max",
+      "config_numeric_log_product",
+      "log_structural",
+      "log_largest",
+      "log_top_two"
+    ]
+  },
+  "forbidden_features": [
+    "actual_failed_allocation_request",
+    "actual_outcome",
+    "capacity_threshold",
+    "compiler_accounted_bytes",
+    "compiler_temp_bytes",
+    "largest_free_block",
+    "post_compile_pool",
+    "runtime_duration"
+  ],
+  "status": "COMPUTATIONALLY_VERIFIED"
+}

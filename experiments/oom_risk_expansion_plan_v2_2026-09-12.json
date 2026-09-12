@@ -1,0 +1,1485 @@
+{
+  "candidate_pool_size": 2365,
+  "coarse_selection_distribution": {
+    "HIGH_RISK": 15,
+    "LOW_RISK": 18,
+    "MODEL_UNCERTAINTY": 27
+  },
+  "environment": {
+    "allocator_environment": {
+      "XLA_CLIENT_MEM_FRACTION": null,
+      "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+      "XLA_PYTHON_CLIENT_PREALLOCATE": null
+    },
+    "backend": "cpu",
+    "devices": [
+      "cpu:0"
+    ],
+    "jax_version": "0.11.0",
+    "jaxlib_version": "0.11.0",
+    "python_version": "3.12.3",
+    "static_only": true
+  },
+  "family_distribution": {
+    "attention": 27,
+    "autodiff": 3,
+    "convolution": 7,
+    "matmul": 3,
+    "mlp": 3,
+    "reduction": 6,
+    "scan": 3,
+    "training": 4,
+    "transformer": 4
+  },
+  "no_capacity_sweeps": true,
+  "outcomes_excluded": true,
+  "seed": 20260912,
+  "selected_candidates": [
+    {
+      "aggregate_score": 0.7665112413180082,
+      "candidate_id": "V2-CAND-00930",
+      "configuration": {
+        "batch": 64,
+        "depth": 6,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "family": "training",
+      "graph_fingerprint": "8295d6ebe0ad38e0",
+      "selection_bucket": "LOW_RISK_NEAR_BOUNDARY",
+      "selection_coarse_bucket": "LOW_RISK",
+      "selection_reason": "V1 low risk but aggregate ratio is near the budget boundary",
+      "shape_summary": {
+        "batch": 64,
+        "depth": 6,
+        "width": 8192
+      },
+      "v1_predicted_probability": 0.2867823756256517,
+      "workload_group_id": "training|{\"batch\":64,\"depth\":6,\"width\":8192}|float32"
+    },
+    {
+      "aggregate_score": 0.800168250497694,
+      "candidate_id": "V2-CAND-01488",
+      "configuration": {
+        "batch": 64,
+        "depth": 12,
+        "width": 8192
+      },
+      "dtype": "float16",
+      "family": "training",
+      "graph_fingerprint": "d44c5483eb434fc5",
+      "selection_bucket": "LOW_RISK_NEAR_BOUNDARY",
+      "selection_coarse_bucket": "LOW_RISK",
+      "selection_reason": "V1 low risk but aggregate ratio is near the budget boundary",
+      "shape_summary": {
+        "batch": 64,
+        "depth": 12,
+        "width": 8192
+      },
+      "v1_predicted_probability": 0.2496185116366098,
+      "workload_group_id": "training|{\"batch\":64,\"depth\":12,\"width\":8192}|float16"
+    },
+    {
+      "aggregate_score": 0.7686826612650847,
+      "candidate_id": "V2-CAND-00992",
+      "configuration": {
+        "batch": 128,
+        "depth": 6,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "family": "mlp",
+      "graph_fingerprint": "8f229dec32b47cdf",
+      "selection_bucket": "LOW_RISK_NEAR_BOUNDARY",
+      "selection_coarse_bucket": "LOW_RISK",
+      "selection_reason": "V1 low risk but aggregate ratio is near the budget boundary",
+      "shape_summary": {
+        "batch": 128,
+        "depth": 6,
+        "width": 8192
+      },
+      "v1_predicted_probability": 0.2894515370326489,
+      "workload_group_id": "mlp|{\"batch\":128,\"depth\":6,\"width\":8192}|float32"
+    },
+    {
+      "aggregate_score": 0.8012539604712323,
+      "candidate_id": "V2-CAND-01659",
+      "configuration": {
+        "batch": 128,
+        "depth": 12,
+        "width": 8192
+      },
+      "dtype": "float16",
+      "family": "training",
+      "graph_fingerprint": "651a782705628250",
+      "selection_bucket": "LOW_RISK_NEAR_BOUNDARY",
+      "selection_coarse_bucket": "LOW_RISK",
+      "selection_reason": "V1 low risk but aggregate ratio is near the budget boundary",
+      "shape_summary": {
+        "batch": 128,
+        "depth": 12,
+        "width": 8192
+      },
+      "v1_predicted_probability": 0.2517979345205799,
+      "workload_group_id": "training|{\"batch\":128,\"depth\":12,\"width\":8192}|float16"
+    },
+    {
+      "aggregate_score": 0.7686826612650847,
+      "candidate_id": "V2-CAND-02019",
+      "configuration": {
+        "batch": 128,
+        "depth": 6,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "family": "training",
+      "graph_fingerprint": "ea6a6ae9084b06a1",
+      "selection_bucket": "LOW_RISK_NEAR_BOUNDARY",
+      "selection_coarse_bucket": "LOW_RISK",
+      "selection_reason": "V1 low risk but aggregate ratio is near the budget boundary",
+      "shape_summary": {
+        "batch": 128,
+        "depth": 6,
+        "width": 8192
+      },
+      "v1_predicted_probability": 0.2894515370326489,
+      "workload_group_id": "training|{\"batch\":128,\"depth\":6,\"width\":8192}|float32"
+    },
+    {
+      "aggregate_score": 0.8164539001007679,
+      "candidate_id": "V2-CAND-01199",
+      "configuration": {
+        "batch": 1024,
+        "depth": 12,
+        "width": 8192
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "graph_fingerprint": "aa6135a069114340",
+      "selection_bucket": "LOW_RISK_NEAR_BOUNDARY",
+      "selection_coarse_bucket": "LOW_RISK",
+      "selection_reason": "V1 low risk but aggregate ratio is near the budget boundary",
+      "shape_summary": {
+        "batch": 1024,
+        "depth": 12,
+        "width": 8192
+      },
+      "v1_predicted_probability": 0.26139899167617336,
+      "workload_group_id": "mlp|{\"batch\":1024,\"depth\":12,\"width\":8192}|float16"
+    },
+    {
+      "aggregate_score": 0.017371359576612084,
+      "candidate_id": "V2-CAND-00277",
+      "configuration": {
+        "batch": 1,
+        "depth": 1,
+        "length": 8192,
+        "width": 512
+      },
+      "dtype": "float16",
+      "family": "reduction",
+      "graph_fingerprint": "5df5c009b1f125c7",
+      "selection_bucket": "LOW_RISK",
+      "selection_coarse_bucket": "LOW_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 1,
+        "depth": 1,
+        "length": 8192,
+        "width": 512
+      },
+      "v1_predicted_probability": 0.10855277213887606,
+      "workload_group_id": "reduction|{\"batch\":1,\"depth\":1,\"length\":8192,\"width\":512}|float16"
+    },
+    {
+      "aggregate_score": 0.0011339519694327771,
+      "candidate_id": "V2-CAND-02107",
+      "configuration": {
+        "batch": 2,
+        "channels": 64,
+        "height": 192,
+        "out_channels": 24,
+        "width": 32
+      },
+      "dtype": "float16",
+      "family": "convolution",
+      "graph_fingerprint": "71e363dbe43bb9df",
+      "selection_bucket": "LOW_RISK",
+      "selection_coarse_bucket": "LOW_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 2,
+        "channels": 64,
+        "height": 192,
+        "out_channels": 24,
+        "width": 32
+      },
+      "v1_predicted_probability": 0.1089112420896873,
+      "workload_group_id": "convolution|{\"batch\":2,\"channels\":64,\"height\":192,\"out_channels\":24,\"width\":32}|float16"
+    },
+    {
+      "aggregate_score": 0.03474271915322417,
+      "candidate_id": "V2-CAND-01267",
+      "configuration": {
+        "batch": 32,
+        "depth": 8,
+        "length": 8192,
+        "width": 32
+      },
+      "dtype": "float16",
+      "family": "reduction",
+      "graph_fingerprint": "4d15764b9a16320f",
+      "selection_bucket": "LOW_RISK",
+      "selection_coarse_bucket": "LOW_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 32,
+        "depth": 8,
+        "length": 8192,
+        "width": 32
+      },
+      "v1_predicted_probability": 0.11551616424921073,
+      "workload_group_id": "reduction|{\"batch\":32,\"depth\":8,\"length\":8192,\"width\":32}|float16"
+    },
+    {
+      "aggregate_score": 0.10422815953049992,
+      "candidate_id": "V2-CAND-00040",
+      "configuration": {
+        "batch": 2048,
+        "depth": 2,
+        "width": 3072
+      },
+      "dtype": "float32",
+      "family": "autodiff",
+      "graph_fingerprint": "07ca0a34a9da0050",
+      "selection_bucket": "LOW_RISK",
+      "selection_coarse_bucket": "LOW_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 2048,
+        "depth": 2,
+        "width": 3072
+      },
+      "v1_predicted_probability": 0.12690759144699218,
+      "workload_group_id": "autodiff|{\"batch\":2048,\"depth\":2,\"width\":3072}|float32"
+    },
+    {
+      "aggregate_score": 0.00037321383881749203,
+      "candidate_id": "V2-CAND-01912",
+      "configuration": {
+        "batch": 256,
+        "depth": 3,
+        "width": 128
+      },
+      "dtype": "float16",
+      "family": "autodiff",
+      "graph_fingerprint": "faa026f3381f7b28",
+      "selection_bucket": "LOW_RISK",
+      "selection_coarse_bucket": "LOW_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 256,
+        "depth": 3,
+        "width": 128
+      },
+      "v1_predicted_probability": 0.08730813123524794,
+      "workload_group_id": "autodiff|{\"batch\":256,\"depth\":3,\"width\":128}|float16"
+    },
+    {
+      "aggregate_score": 0.06948543830644834,
+      "candidate_id": "V2-CAND-00312",
+      "configuration": {
+        "depth": 3,
+        "k": 1536,
+        "m": 4096,
+        "n": 4096
+      },
+      "dtype": "float16",
+      "family": "matmul",
+      "graph_fingerprint": "0fa2437fa6f4716e",
+      "selection_bucket": "LOW_RISK",
+      "selection_coarse_bucket": "LOW_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "depth": 3,
+        "k": 1536,
+        "m": 4096,
+        "n": 4096
+      },
+      "v1_predicted_probability": 0.12780069396211527,
+      "workload_group_id": "matmul|{\"depth\":3,\"k\":1536,\"m\":4096,\"n\":4096}|float16"
+    },
+    {
+      "aggregate_score": 1.1123098678899423,
+      "candidate_id": "V2-CAND-01078",
+      "configuration": {
+        "batch": 128,
+        "depth": 8,
+        "length": 2048,
+        "width": 1024
+      },
+      "dtype": "float32",
+      "family": "reduction",
+      "graph_fingerprint": "1312ba85f8bd961a",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 128,
+        "depth": 8,
+        "length": 2048,
+        "width": 1024
+      },
+      "v1_predicted_probability": 0.5218132123732816,
+      "workload_group_id": "reduction|{\"batch\":128,\"depth\":8,\"length\":2048,\"width\":1024}|float32"
+    },
+    {
+      "aggregate_score": 1.2507808301937342,
+      "candidate_id": "V2-CAND-01252",
+      "configuration": {
+        "batch": 1024,
+        "channels": 48,
+        "height": 128,
+        "out_channels": 96,
+        "width": 64
+      },
+      "dtype": "float16",
+      "family": "convolution",
+      "graph_fingerprint": "9675c0912dabaaa1",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 1024,
+        "channels": 48,
+        "height": 128,
+        "out_channels": 96,
+        "width": 64
+      },
+      "v1_predicted_probability": 0.5701366041157238,
+      "workload_group_id": "convolution|{\"batch\":1024,\"channels\":48,\"height\":128,\"out_channels\":96,\"width\":64}|float16"
+    },
+    {
+      "aggregate_score": 1.3657256024556899,
+      "candidate_id": "V2-CAND-00342",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 80,
+        "heads": 4,
+        "sequence": 6400
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "eca59298ed3ef9f7",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 2,
+        "head_dim": 80,
+        "heads": 4,
+        "sequence": 6400
+      },
+      "v1_predicted_probability": 0.6203288603962811,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":80,\"heads\":4,\"sequence\":6400}|float32"
+    },
+    {
+      "aggregate_score": 1.4719428145153213,
+      "candidate_id": "V2-CAND-00756",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 96,
+        "heads": 4,
+        "sequence": 7680
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "c057b6879ae46c2a",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 2,
+        "head_dim": 96,
+        "heads": 4,
+        "sequence": 7680
+      },
+      "v1_predicted_probability": 0.6293633845893252,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":96,\"heads\":4,\"sequence\":7680}|float16"
+    },
+    {
+      "aggregate_score": 1.4562424304448578,
+      "candidate_id": "V2-CAND-01161",
+      "configuration": {
+        "batch": 4,
+        "head_dim": 160,
+        "heads": 16,
+        "sequence": 2304
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "473b88657d82a934",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 4,
+        "head_dim": 160,
+        "heads": 16,
+        "sequence": 2304
+      },
+      "v1_predicted_probability": 0.6506147904928793,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":160,\"heads\":16,\"sequence\":2304}|float32"
+    },
+    {
+      "aggregate_score": 1.155466839338088,
+      "candidate_id": "V2-CAND-00513",
+      "configuration": {
+        "batch": 8,
+        "head_dim": 160,
+        "heads": 8,
+        "sequence": 2048
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "a521b059b420b329",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 8,
+        "head_dim": 160,
+        "heads": 8,
+        "sequence": 2048
+      },
+      "v1_predicted_probability": 0.5188367812396534,
+      "workload_group_id": "attention|{\"batch\":8,\"head_dim\":160,\"heads\":8,\"sequence\":2048}|float32"
+    },
+    {
+      "aggregate_score": 1.2855230192151355,
+      "candidate_id": "V2-CAND-00594",
+      "configuration": {
+        "batch": 4,
+        "head_dim": 48,
+        "heads": 6,
+        "sequence": 3584
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "6e375e2e8fee86bf",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 4,
+        "head_dim": 48,
+        "heads": 6,
+        "sequence": 3584
+      },
+      "v1_predicted_probability": 0.5791749005708463,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":48,\"heads\":6,\"sequence\":3584}|float32"
+    },
+    {
+      "aggregate_score": 0.977181916862094,
+      "candidate_id": "V2-CAND-00487",
+      "configuration": {
+        "batch": 512,
+        "channels": 24,
+        "height": 96,
+        "out_channels": 96,
+        "width": 80
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "graph_fingerprint": "941df9e913230177",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 512,
+        "channels": 24,
+        "height": 96,
+        "out_channels": 96,
+        "width": 80
+      },
+      "v1_predicted_probability": 0.483244798214154,
+      "workload_group_id": "convolution|{\"batch\":512,\"channels\":24,\"height\":96,\"out_channels\":96,\"width\":80}|float32"
+    },
+    {
+      "aggregate_score": 1.377706581655868,
+      "candidate_id": "V2-CAND-01827",
+      "configuration": {
+        "batch": 4,
+        "head_dim": 96,
+        "heads": 8,
+        "sequence": 3200
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "ff97dcbf8836c841",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 4,
+        "head_dim": 96,
+        "heads": 8,
+        "sequence": 3200
+      },
+      "v1_predicted_probability": 0.6199993622717233,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":96,\"heads\":8,\"sequence\":3200}|float32"
+    },
+    {
+      "aggregate_score": 0.6253725231478403,
+      "candidate_id": "V2-CAND-02485",
+      "configuration": {
+        "batch": 256,
+        "channels": 24,
+        "height": 192,
+        "out_channels": 8,
+        "width": 192
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "graph_fingerprint": "58b3966f23ec4c44",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 256,
+        "channels": 24,
+        "height": 192,
+        "out_channels": 8,
+        "width": 192
+      },
+      "v1_predicted_probability": 0.3250658147823978,
+      "workload_group_id": "convolution|{\"batch\":256,\"channels\":24,\"height\":192,\"out_channels\":8,\"width\":192}|float32"
+    },
+    {
+      "aggregate_score": 1.4508223626863348,
+      "candidate_id": "V2-CAND-01332",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 160,
+        "heads": 8,
+        "sequence": 5376
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "49b3d717c1992a72",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 2,
+        "head_dim": 160,
+        "heads": 8,
+        "sequence": 5376
+      },
+      "v1_predicted_probability": 0.6172722635114414,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":160,\"heads\":8,\"sequence\":5376}|float16"
+    },
+    {
+      "aggregate_score": 1.0632832768973557,
+      "candidate_id": "V2-CAND-01440",
+      "configuration": {
+        "batch": 8,
+        "head_dim": 32,
+        "heads": 16,
+        "sequence": 1408
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "9e7ceefb2b6ca39c",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 8,
+        "head_dim": 32,
+        "heads": 16,
+        "sequence": 1408
+      },
+      "v1_predicted_probability": 0.4748827251212296,
+      "workload_group_id": "attention|{\"batch\":8,\"head_dim\":32,\"heads\":16,\"sequence\":1408}|float32"
+    },
+    {
+      "aggregate_score": 1.1891705001181994,
+      "candidate_id": "V2-CAND-00891",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 32,
+        "heads": 4,
+        "sequence": 6912
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "66a888bf1e7bb9f7",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 2,
+        "head_dim": 32,
+        "heads": 4,
+        "sequence": 6912
+      },
+      "v1_predicted_probability": 0.49860140973416045,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":32,\"heads\":4,\"sequence\":6912}|float16"
+    },
+    {
+      "aggregate_score": 0.8342281598628727,
+      "candidate_id": "V2-CAND-01832",
+      "configuration": {
+        "heads": 16,
+        "layers": 2,
+        "sequence": 3968,
+        "width": 2048
+      },
+      "dtype": "float16",
+      "family": "transformer",
+      "graph_fingerprint": "5aca55d10eb8ca96",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "heads": 16,
+        "layers": 2,
+        "sequence": 3968,
+        "width": 2048
+      },
+      "v1_predicted_probability": 0.34788593379845095,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":2,\"sequence\":3968,\"width\":2048}|float16"
+    },
+    {
+      "aggregate_score": 1.518875384806992,
+      "candidate_id": "V2-CAND-00504",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 96,
+        "heads": 12,
+        "sequence": 5504
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "8fd150856f125c4a",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 1,
+        "head_dim": 96,
+        "heads": 12,
+        "sequence": 5504
+      },
+      "v1_predicted_probability": 0.6822516425055948,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":96,\"heads\":12,\"sequence\":5504}|float32"
+    },
+    {
+      "aggregate_score": 1.1123098678899423,
+      "candidate_id": "V2-CAND-00331",
+      "configuration": {
+        "batch": 128,
+        "depth": 1,
+        "length": 2048,
+        "width": 1024
+      },
+      "dtype": "float32",
+      "family": "reduction",
+      "graph_fingerprint": "e00b594d95b4e6f9",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 128,
+        "depth": 1,
+        "length": 2048,
+        "width": 1024
+      },
+      "v1_predicted_probability": 0.5141808655242028,
+      "workload_group_id": "reduction|{\"batch\":128,\"depth\":1,\"length\":2048,\"width\":1024}|float32"
+    },
+    {
+      "aggregate_score": 1.1117670129031734,
+      "candidate_id": "V2-CAND-01339",
+      "configuration": {
+        "batch": 64,
+        "depth": 2,
+        "length": 2048,
+        "width": 2048
+      },
+      "dtype": "float16",
+      "family": "reduction",
+      "graph_fingerprint": "470d07f401d0328b",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 64,
+        "depth": 2,
+        "length": 2048,
+        "width": 2048
+      },
+      "v1_predicted_probability": 0.438210788015065,
+      "workload_group_id": "reduction|{\"batch\":64,\"depth\":2,\"length\":2048,\"width\":2048}|float16"
+    },
+    {
+      "aggregate_score": 0.7344446276073725,
+      "candidate_id": "V2-CAND-00711",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 48,
+        "heads": 2,
+        "sequence": 7680
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "19d7ac04a1432d54",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 2,
+        "head_dim": 48,
+        "heads": 2,
+        "sequence": 7680
+      },
+      "v1_predicted_probability": 0.3047166651272667,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":48,\"heads\":2,\"sequence\":7680}|float16"
+    },
+    {
+      "aggregate_score": 1.5905227006877025,
+      "candidate_id": "V2-CAND-02304",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 24,
+        "sequence": 4608
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "8544280733215f84",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 24,
+        "sequence": 4608
+      },
+      "v1_predicted_probability": 0.6721032029856997,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":64,\"heads\":24,\"sequence\":4608}|float16"
+    },
+    {
+      "aggregate_score": 0.9012495454559392,
+      "candidate_id": "V2-CAND-01895",
+      "configuration": {
+        "heads": 16,
+        "layers": 4,
+        "sequence": 3328,
+        "width": 2048
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "graph_fingerprint": "790a43b87476be95",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "heads": 16,
+        "layers": 4,
+        "sequence": 3328,
+        "width": 2048
+      },
+      "v1_predicted_probability": 0.40324224018801913,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":4,\"sequence\":3328,\"width\":2048}|float32"
+    },
+    {
+      "aggregate_score": 1.0011698517217777,
+      "candidate_id": "V2-CAND-00108",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 32,
+        "heads": 6,
+        "sequence": 4480
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "98d1442e6e6ab556",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 2,
+        "head_dim": 32,
+        "heads": 6,
+        "sequence": 4480
+      },
+      "v1_predicted_probability": 0.4507068155185363,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":32,\"heads\":6,\"sequence\":4480}|float32"
+    },
+    {
+      "aggregate_score": 1.1813881649563138,
+      "candidate_id": "V2-CAND-01544",
+      "configuration": {
+        "heads": 16,
+        "layers": 1,
+        "sequence": 4096,
+        "width": 2048
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "graph_fingerprint": "e88c6e3a9d0a6f1a",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "heads": 16,
+        "layers": 1,
+        "sequence": 4096,
+        "width": 2048
+      },
+      "v1_predicted_probability": 0.5387930958592634,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":1,\"sequence\":4096,\"width\":2048}|float32"
+    },
+    {
+      "aggregate_score": 1.5987079360350807,
+      "candidate_id": "V2-CAND-00704",
+      "configuration": {
+        "batch": 16,
+        "depth": 12,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "family": "mlp",
+      "graph_fingerprint": "4e7672a7e4f1d088",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 16,
+        "depth": 12,
+        "width": 8192
+      },
+      "v1_predicted_probability": 0.5401561728177854,
+      "workload_group_id": "mlp|{\"batch\":16,\"depth\":12,\"width\":8192}|float32"
+    },
+    {
+      "aggregate_score": 0.7964636893184531,
+      "candidate_id": "V2-CAND-02066",
+      "configuration": {
+        "heads": 12,
+        "layers": 2,
+        "sequence": 3840,
+        "width": 1536
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "graph_fingerprint": "b0cdf500bd30c92b",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "heads": 12,
+        "layers": 2,
+        "sequence": 3840,
+        "width": 1536
+      },
+      "v1_predicted_probability": 0.36805594883162057,
+      "workload_group_id": "transformer|{\"heads\":12,\"layers\":2,\"sequence\":3840,\"width\":1536}|float32"
+    },
+    {
+      "aggregate_score": 0.5733693745019703,
+      "candidate_id": "V2-CAND-01936",
+      "configuration": {
+        "batch": 256,
+        "channels": 48,
+        "height": 32,
+        "out_channels": 128,
+        "width": 192
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "graph_fingerprint": "34e1ac6e3ee712d5",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 256,
+        "channels": 48,
+        "height": 32,
+        "out_channels": 128,
+        "width": 192
+      },
+      "v1_predicted_probability": 0.3099677118627302,
+      "workload_group_id": "convolution|{\"batch\":256,\"channels\":48,\"height\":32,\"out_channels\":128,\"width\":192}|float32"
+    },
+    {
+      "aggregate_score": 1.3028901377371633,
+      "candidate_id": "V2-CAND-00037",
+      "configuration": {
+        "batch": 256,
+        "channels": 64,
+        "height": 160,
+        "out_channels": 32,
+        "width": 160
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "graph_fingerprint": "1254ba234b4a1d93",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 256,
+        "channels": 64,
+        "height": 160,
+        "out_channels": 32,
+        "width": 160
+      },
+      "v1_predicted_probability": 0.6286809818000461,
+      "workload_group_id": "convolution|{\"batch\":256,\"channels\":64,\"height\":160,\"out_channels\":32,\"width\":160}|float32"
+    },
+    {
+      "aggregate_score": 1.3153206687232595,
+      "candidate_id": "V2-CAND-00540",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 48,
+        "heads": 24,
+        "sequence": 2560
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "00e2d8305aa6cd79",
+      "selection_bucket": "MODEL_UNCERTAINTY",
+      "selection_coarse_bucket": "MODEL_UNCERTAINTY",
+      "selection_reason": "V1 probability lies in [0.3, 0.7]",
+      "shape_summary": {
+        "batch": 2,
+        "head_dim": 48,
+        "heads": 24,
+        "sequence": 2560
+      },
+      "v1_predicted_probability": 0.5907728430516104,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":48,\"heads\":24,\"sequence\":2560}|float32"
+    },
+    {
+      "aggregate_score": 1.7483832344183312,
+      "candidate_id": "V2-CAND-02214",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 128,
+        "heads": 32,
+        "sequence": 2944
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "d74d8f180406780b",
+      "selection_bucket": "HIGH_RISK",
+      "selection_coarse_bucket": "HIGH_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 2,
+        "head_dim": 128,
+        "heads": 32,
+        "sequence": 2944
+      },
+      "v1_predicted_probability": 0.7305004822177317,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":128,\"heads\":32,\"sequence\":2944}|float16"
+    },
+    {
+      "aggregate_score": 10.084888516703467,
+      "candidate_id": "V2-CAND-01746",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 96,
+        "heads": 32,
+        "sequence": 6144
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "484740f524b47b70",
+      "selection_bucket": "HIGH_RISK",
+      "selection_coarse_bucket": "HIGH_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 2,
+        "head_dim": 96,
+        "heads": 32,
+        "sequence": 6144
+      },
+      "v1_predicted_probability": 0.9999999153870367,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":96,\"heads\":32,\"sequence\":6144}|float32"
+    },
+    {
+      "aggregate_score": 2.8906010192355853,
+      "candidate_id": "V2-CAND-00585",
+      "configuration": {
+        "batch": 4,
+        "head_dim": 48,
+        "heads": 32,
+        "sequence": 2688
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "bba477990816196e",
+      "selection_bucket": "HIGH_RISK",
+      "selection_coarse_bucket": "HIGH_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 4,
+        "head_dim": 48,
+        "heads": 32,
+        "sequence": 2688
+      },
+      "v1_predicted_probability": 0.9553355044958578,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":48,\"heads\":32,\"sequence\":2688}|float16"
+    },
+    {
+      "aggregate_score": 14.83660848331283,
+      "candidate_id": "V2-CAND-00360",
+      "configuration": {
+        "batch": 8,
+        "head_dim": 80,
+        "heads": 12,
+        "sequence": 7040
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "36d3a8197e608c0a",
+      "selection_bucket": "HIGH_RISK",
+      "selection_coarse_bucket": "HIGH_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 8,
+        "head_dim": 80,
+        "heads": 12,
+        "sequence": 7040
+      },
+      "v1_predicted_probability": 0.9999999999821323,
+      "workload_group_id": "attention|{\"batch\":8,\"head_dim\":80,\"heads\":12,\"sequence\":7040}|float16"
+    },
+    {
+      "aggregate_score": 5.303294561603468,
+      "candidate_id": "V2-CAND-01215",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 48,
+        "heads": 16,
+        "sequence": 7296
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "eac9ae1c8c1ba863",
+      "selection_bucket": "HIGH_RISK",
+      "selection_coarse_bucket": "HIGH_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 2,
+        "head_dim": 48,
+        "heads": 16,
+        "sequence": 7296
+      },
+      "v1_predicted_probability": 0.9994333131697621,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":48,\"heads\":16,\"sequence\":7296}|float16"
+    },
+    {
+      "aggregate_score": 6.0686861645112655,
+      "candidate_id": "V2-CAND-00450",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 32,
+        "heads": 16,
+        "sequence": 7808
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "de70b610adef3f51",
+      "selection_bucket": "HIGH_RISK",
+      "selection_coarse_bucket": "HIGH_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 2,
+        "head_dim": 32,
+        "heads": 16,
+        "sequence": 7808
+      },
+      "v1_predicted_probability": 0.9998585748983088,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":32,\"heads\":16,\"sequence\":7808}|float16"
+    },
+    {
+      "aggregate_score": 2.9644292974361868,
+      "candidate_id": "V2-CAND-00009",
+      "configuration": {
+        "batch": 8,
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 3328
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "084abb6e942a2182",
+      "selection_bucket": "HIGH_RISK",
+      "selection_coarse_bucket": "HIGH_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 8,
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 3328
+      },
+      "v1_predicted_probability": 0.9666474681491907,
+      "workload_group_id": "attention|{\"batch\":8,\"head_dim\":64,\"heads\":8,\"sequence\":3328}|float32"
+    },
+    {
+      "aggregate_score": 3.374857354815736,
+      "candidate_id": "V2-CAND-02268",
+      "configuration": {
+        "batch": 4,
+        "head_dim": 128,
+        "heads": 12,
+        "sequence": 4736
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "90b63589d0bd3eab",
+      "selection_bucket": "HIGH_RISK",
+      "selection_coarse_bucket": "HIGH_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 4,
+        "head_dim": 128,
+        "heads": 12,
+        "sequence": 4736
+      },
+      "v1_predicted_probability": 0.9813171944742455,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":128,\"heads\":12,\"sequence\":4736}|float16"
+    },
+    {
+      "aggregate_score": 12.139696426934634,
+      "candidate_id": "V2-CAND-02475",
+      "configuration": {
+        "batch": 4,
+        "head_dim": 128,
+        "heads": 32,
+        "sequence": 5504
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "b2508d96cd53266d",
+      "selection_bucket": "HIGH_RISK",
+      "selection_coarse_bucket": "HIGH_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 4,
+        "head_dim": 128,
+        "heads": 32,
+        "sequence": 5504
+      },
+      "v1_predicted_probability": 0.9999999975690443,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":128,\"heads\":32,\"sequence\":5504}|float16"
+    },
+    {
+      "aggregate_score": 4.368727291334573,
+      "candidate_id": "V2-CAND-01917",
+      "configuration": {
+        "batch": 8,
+        "head_dim": 160,
+        "heads": 24,
+        "sequence": 2304
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "936b73eaf47f796a",
+      "selection_bucket": "HIGH_RISK",
+      "selection_coarse_bucket": "HIGH_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 8,
+        "head_dim": 160,
+        "heads": 24,
+        "sequence": 2304
+      },
+      "v1_predicted_probability": 0.9971718416031661,
+      "workload_group_id": "attention|{\"batch\":8,\"head_dim\":160,\"heads\":24,\"sequence\":2304}|float32"
+    },
+    {
+      "aggregate_score": 6.091322793354078,
+      "candidate_id": "V2-CAND-00207",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 80,
+        "heads": 24,
+        "sequence": 7808
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "e84011137767ffab",
+      "selection_bucket": "HIGH_RISK",
+      "selection_coarse_bucket": "HIGH_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 1,
+        "head_dim": 80,
+        "heads": 24,
+        "sequence": 7808
+      },
+      "v1_predicted_probability": 0.9998854879591881,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":80,\"heads\":24,\"sequence\":7808}|float32"
+    },
+    {
+      "aggregate_score": 8.896307523172462,
+      "candidate_id": "V2-CAND-01249",
+      "configuration": {
+        "batch": 128,
+        "depth": 1,
+        "length": 8192,
+        "width": 2048
+      },
+      "dtype": "float32",
+      "family": "reduction",
+      "graph_fingerprint": "4567dfcb5d86831e",
+      "selection_bucket": "HIGH_RISK",
+      "selection_coarse_bucket": "HIGH_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 128,
+        "depth": 1,
+        "length": 8192,
+        "width": 2048
+      },
+      "v1_predicted_probability": 0.9999993518641697,
+      "workload_group_id": "reduction|{\"batch\":128,\"depth\":1,\"length\":8192,\"width\":2048}|float32"
+    },
+    {
+      "aggregate_score": 3.4593094747495923,
+      "candidate_id": "V2-CAND-01908",
+      "configuration": {
+        "batch": 4,
+        "head_dim": 32,
+        "heads": 32,
+        "sequence": 2944
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "90bc6a62d1d632af",
+      "selection_bucket": "HIGH_RISK",
+      "selection_coarse_bucket": "HIGH_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 4,
+        "head_dim": 32,
+        "heads": 32,
+        "sequence": 2944
+      },
+      "v1_predicted_probability": 0.9835934318309819,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":32,\"heads\":32,\"sequence\":2944}|float16"
+    },
+    {
+      "aggregate_score": 1.5199987341399643,
+      "candidate_id": "V2-CAND-01918",
+      "configuration": {
+        "batch": 512,
+        "channels": 32,
+        "height": 160,
+        "out_channels": 8,
+        "width": 224
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "graph_fingerprint": "0a963ff292a0fdf5",
+      "selection_bucket": "HIGH_RISK",
+      "selection_coarse_bucket": "HIGH_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 512,
+        "channels": 32,
+        "height": 160,
+        "out_channels": 8,
+        "width": 224
+      },
+      "v1_predicted_probability": 0.7123769681758811,
+      "workload_group_id": "convolution|{\"batch\":512,\"channels\":32,\"height\":160,\"out_channels\":8,\"width\":224}|float32"
+    },
+    {
+      "aggregate_score": 3.6919313186893317,
+      "candidate_id": "V2-CAND-00792",
+      "configuration": {
+        "batch": 8,
+        "head_dim": 160,
+        "heads": 2,
+        "sequence": 7424
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "83ef6777d7b4c7d6",
+      "selection_bucket": "HIGH_RISK",
+      "selection_coarse_bucket": "HIGH_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 8,
+        "head_dim": 160,
+        "heads": 2,
+        "sequence": 7424
+      },
+      "v1_predicted_probability": 0.9911855139924961,
+      "workload_group_id": "attention|{\"batch\":8,\"head_dim\":160,\"heads\":2,\"sequence\":7424}|float32"
+    },
+    {
+      "aggregate_score": 0.006921402116720093,
+      "candidate_id": "V2-CAND-00004",
+      "configuration": {
+        "batch": 1024,
+        "depth": 6,
+        "width": 384
+      },
+      "dtype": "float16",
+      "family": "autodiff",
+      "graph_fingerprint": "b98e6bc013ba4a26",
+      "selection_bucket": "LOW_RISK",
+      "selection_coarse_bucket": "LOW_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 1024,
+        "depth": 6,
+        "width": 384
+      },
+      "v1_predicted_probability": 0.09245824511488503,
+      "workload_group_id": "autodiff|{\"batch\":1024,\"depth\":6,\"width\":384}|float16"
+    },
+    {
+      "aggregate_score": 0.01085709973538255,
+      "candidate_id": "V2-CAND-00006",
+      "configuration": {
+        "depth": 1,
+        "k": 1024,
+        "m": 2048,
+        "n": 1024
+      },
+      "dtype": "float32",
+      "family": "matmul",
+      "graph_fingerprint": "a2a05cf9becdad28",
+      "selection_bucket": "LOW_RISK",
+      "selection_coarse_bucket": "LOW_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "depth": 1,
+        "k": 1024,
+        "m": 2048,
+        "n": 1024
+      },
+      "v1_predicted_probability": 0.12904073343269587,
+      "workload_group_id": "matmul|{\"depth\":1,\"k\":1024,\"m\":2048,\"n\":1024}|float32"
+    },
+    {
+      "aggregate_score": 0.014657084642766445,
+      "candidate_id": "V2-CAND-00015",
+      "configuration": {
+        "depth": 3,
+        "k": 128,
+        "m": 768,
+        "n": 1536
+      },
+      "dtype": "float32",
+      "family": "matmul",
+      "graph_fingerprint": "70320037431fc522",
+      "selection_bucket": "LOW_RISK",
+      "selection_coarse_bucket": "LOW_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "depth": 3,
+        "k": 128,
+        "m": 768,
+        "n": 1536
+      },
+      "v1_predicted_probability": 0.12657102216038196,
+      "workload_group_id": "matmul|{\"depth\":3,\"k\":128,\"m\":768,\"n\":1536}|float32"
+    },
+    {
+      "aggregate_score": 0.0010862401053612718,
+      "candidate_id": "V2-CAND-00008",
+      "configuration": {
+        "batch": 4,
+        "depth": 8,
+        "length": 2048,
+        "width": 32
+      },
+      "dtype": "float32",
+      "family": "scan",
+      "graph_fingerprint": "d4facda18f5b76de",
+      "selection_bucket": "LOW_RISK",
+      "selection_coarse_bucket": "LOW_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 4,
+        "depth": 8,
+        "length": 2048,
+        "width": 32
+      },
+      "v1_predicted_probability": 0.1162983394976917,
+      "workload_group_id": "scan|{\"batch\":4,\"depth\":8,\"length\":2048,\"width\":32}|float32"
+    },
+    {
+      "aggregate_score": 0.004376768330826091,
+      "candidate_id": "V2-CAND-00017",
+      "configuration": {
+        "batch": 32,
+        "depth": 8,
+        "length": 128,
+        "width": 512
+      },
+      "dtype": "float16",
+      "family": "scan",
+      "graph_fingerprint": "571e7cd7a04adfdb",
+      "selection_bucket": "LOW_RISK",
+      "selection_coarse_bucket": "LOW_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 32,
+        "depth": 8,
+        "length": 128,
+        "width": 512
+      },
+      "v1_predicted_probability": 0.10172421922031083,
+      "workload_group_id": "scan|{\"batch\":32,\"depth\":8,\"length\":128,\"width\":512}|float16"
+    },
+    {
+      "aggregate_score": 0.00013677401033831534,
+      "candidate_id": "V2-CAND-00026",
+      "configuration": {
+        "batch": 4,
+        "depth": 2,
+        "length": 128,
+        "width": 64
+      },
+      "dtype": "float32",
+      "family": "scan",
+      "graph_fingerprint": "d87192656c72fbb8",
+      "selection_bucket": "LOW_RISK",
+      "selection_coarse_bucket": "LOW_RISK",
+      "selection_reason": "risk coverage bucket",
+      "shape_summary": {
+        "batch": 4,
+        "depth": 2,
+        "length": 128,
+        "width": 64
+      },
+      "v1_predicted_probability": 0.10923877375342465,
+      "workload_group_id": "scan|{\"batch\":4,\"depth\":2,\"length\":128,\"width\":64}|float32"
+    }
+  ],
+  "selected_count": 60,
+  "selection_date": "2026-09-12",
+  "selection_distribution": {
+    "HIGH_RISK": 15,
+    "LOW_RISK": 12,
+    "LOW_RISK_NEAR_BOUNDARY": 6,
+    "MODEL_UNCERTAINTY": 27
+  },
+  "static_error_count": 0,
+  "status": "FROZEN_BEFORE_RUNTIME",
+  "v1_dataset_hash": "2c3f823b3627be0631419da4a94428bd926abdbecb40edb8612d83f63da6ff50",
+  "v1_model_hash": "1338e8570cd36a70bfa273e7c39e8063d1c1c8f2e2c4ba3cb78dbb264f535d05"
+}

@@ -1,0 +1,642 @@
+{
+  "groups": {
+    "attention|{\"batch\":1,\"head_dim\":128,\"heads\":8,\"sequence\":4864}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "f5e157320b18a343"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":1,\"head_dim\":128,\"heads\":8,\"sequence\":5120}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "a0ba65e8b90cb274"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":1,\"head_dim\":64,\"heads\":8,\"sequence\":5120}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "67b0e11814585215"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":1,\"head_dim\":96,\"heads\":8,\"sequence\":5120}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "116abadb3751b8ab"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":2,\"head_dim\":128,\"heads\":12,\"sequence\":2816}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "302b810f64bfa8a4"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":2,\"head_dim\":128,\"heads\":16,\"sequence\":2560}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "d8468b49c04a03c0"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":2,\"head_dim\":128,\"heads\":4,\"sequence\":4864}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "327281dd2a789dfc"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":2,\"head_dim\":128,\"heads\":4,\"sequence\":5120}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "90f2e937b4245924"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":2,\"head_dim\":32,\"heads\":12,\"sequence\":2560}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "982a8361e0285f3e"
+      ],
+      "outcomes": [
+        "EXECUTION_OOM"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":2,\"head_dim\":32,\"heads\":12,\"sequence\":2816}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "90cbb3c42fa6bd81"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":2,\"head_dim\":32,\"heads\":16,\"sequence\":2560}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "a247df1cfb7cedd1"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":2,\"head_dim\":64,\"heads\":12,\"sequence\":2560}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "a70f3723bab24a22"
+      ],
+      "outcomes": [
+        "EXECUTION_OOM"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":2,\"head_dim\":64,\"heads\":12,\"sequence\":2816}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "3f85fe2f81e1a00e"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":2,\"head_dim\":64,\"heads\":16,\"sequence\":2560}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "be524dd3baad2179"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":2,\"head_dim\":64,\"heads\":4,\"sequence\":5120}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "3c9c33dc97b22aa4"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":2,\"head_dim\":96,\"heads\":12,\"sequence\":2560}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "d31a23f70f8aea52"
+      ],
+      "outcomes": [
+        "EXECUTION_OOM"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":2,\"head_dim\":96,\"heads\":12,\"sequence\":2816}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "55c6cec2cb2c0f5f"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":2,\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "0887d869a80176b5"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":2,\"head_dim\":96,\"heads\":4,\"sequence\":5120}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "7edb5bdfac9f6fd8"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":4,\"head_dim\":128,\"heads\":8,\"sequence\":2560}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "5d2fe4f15f1f36a8"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":4,\"head_dim\":32,\"heads\":8,\"sequence\":2560}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "09988d0a74029dc5"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":4,\"head_dim\":64,\"heads\":8,\"sequence\":2560}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "2fa096cfc8c527ba"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"batch\":4,\"head_dim\":96,\"heads\":8,\"sequence\":2560}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "3e20a6e3739f7892"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"head_dim\":64,\"heads\":12,\"sequence\":2560}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "281bb2b18f3b8a7a"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 18
+    },
+    "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":1024}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "e797dc264000f254"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":1024}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "03de430df6a677dd"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 9
+    },
+    "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":2048}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "9f95809c5add0934"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 4
+    },
+    "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":2048}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "dcb5e4a43c22c0d6"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 9
+    },
+    "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":3072}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "f6393bc9b58ff447"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 3
+    },
+    "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":4096}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "a976dd6d6c14d565"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":4096}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "5752ff8335be9de5"
+      ],
+      "outcomes": [
+        "EXECUTION_OOM",
+        "FIT"
+      ],
+      "rows": 23
+    },
+    "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":4608}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "342735021f88b156"
+      ],
+      "outcomes": [
+        "EXECUTION_OOM",
+        "FIT"
+      ],
+      "rows": 15
+    },
+    "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":5120}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "b6fee9bcf3fefa8a"
+      ],
+      "outcomes": [
+        "EXECUTION_OOM",
+        "FIT"
+      ],
+      "rows": 12
+    },
+    "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":512}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "7fb063bb0bddaeda"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":512}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "bc0d321c6a41d39d"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":6144}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "a20d6cffa0120149"
+      ],
+      "outcomes": [
+        "EXECUTION_OOM"
+      ],
+      "rows": 3
+    },
+    "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":7168}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "5cb219f08a49d236"
+      ],
+      "outcomes": [
+        "EXECUTION_OOM"
+      ],
+      "rows": 1
+    },
+    "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":8192}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "058d400ee7dfc296"
+      ],
+      "outcomes": [
+        "COMPILE_OOM"
+      ],
+      "rows": 2
+    },
+    "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "8bc149a98810aecb"
+      ],
+      "outcomes": [
+        "EXECUTION_OOM",
+        "FIT"
+      ],
+      "rows": 19
+    },
+    "convolution|{\"batch\":1024,\"channels\":3,\"height\":96,\"out_channels\":16,\"width\":96}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "a430c74e9a709bde"
+      ],
+      "outcomes": [
+        "COMPILE_TIMEOUT",
+        "EXECUTION_OOM",
+        "FIT"
+      ],
+      "rows": 16
+    },
+    "convolution|{\"batch\":2048,\"channels\":3,\"height\":64,\"out_channels\":16,\"width\":64}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "a349d94b1543b288"
+      ],
+      "outcomes": [
+        "COMPILE_TIMEOUT"
+      ],
+      "rows": 1
+    },
+    "mlp|{\"batch\":1024,\"depth\":4,\"width\":4096}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "4711387dd697ba28"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "mlp|{\"batch\":1024,\"depth\":4,\"width\":4096}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "a0eafbea749e4050"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "mlp|{\"batch\":1024,\"depth\":4,\"width\":8192}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "0a0daf134010b2b0"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "mlp|{\"batch\":256,\"depth\":2,\"width\":2048}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "e79cdb75f87356c7"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "mlp|{\"batch\":256,\"depth\":2,\"width\":2048}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "ab23f3cc8b9eeef5"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "mlp|{\"batch\":256,\"depth\":4,\"width\":8192}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "cf105eb680275971"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 4
+    },
+    "mlp|{\"batch\":512,\"depth\":4,\"width\":2048}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "d187f2bdcbf1bec7"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "mlp|{\"batch\":512,\"depth\":4,\"width\":2048}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "189bbbd529dfde01"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "mlp|{\"batch\":512,\"depth\":4,\"width\":8192}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "0b6d7cc14b86d079"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "other|{}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "cb81d7011e2c8233"
+      ],
+      "outcomes": [
+        "COMPILE_OOM",
+        "EXECUTION_OOM"
+      ],
+      "rows": 2
+    },
+    "training|{\"batch\":256,\"width\":1024}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "da5d4569cfd10fdc"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "training|{\"batch\":256,\"width\":1024}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "a0fe8b917dd2d794"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "training|{\"batch\":256,\"width\":8192}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "0427a91b64b340e6"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 4
+    },
+    "training|{\"batch\":512,\"width\":1024}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "74a6e9fdefef49ac"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "training|{\"batch\":512,\"width\":1024}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "711167df99d78a74"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "training|{\"batch\":512,\"width\":8192}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "8b059b84a20784c9"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "transformer|{\"heads\":8,\"sequence\":1024,\"width\":2048}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "b969852958952b6d"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "transformer|{\"heads\":8,\"sequence\":2048,\"width\":2048}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "3b71d8e0ee6aaed7"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "transformer|{\"heads\":8,\"sequence\":256,\"width\":256}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "2b97480c6ad8ff5d"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "transformer|{\"heads\":8,\"sequence\":256,\"width\":256}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "8ce5ddf39adea274"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "transformer|{\"heads\":8,\"sequence\":512,\"width\":512}|float16": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "bfeb0bba19d85343"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    },
+    "transformer|{\"heads\":8,\"sequence\":512,\"width\":512}|float32": {
+      "fold_integrity": "single_group",
+      "graph_fingerprints": [
+        "eec55510a53399e0"
+      ],
+      "outcomes": [
+        "FIT"
+      ],
+      "rows": 1
+    }
+  },
+  "status": "COMPUTATIONALLY_VERIFIED"
+}

@@ -1,0 +1,819 @@
+{
+  "selected": {
+    "coefficients": [
+      -1.2050910165058417,
+      0.10167110678064692,
+      0.10538892423213186,
+      0.10237986680071379,
+      0.0,
+      0.07848208681368862,
+      0.07752471646420443,
+      0.0834024390285787,
+      0.10970428185931695,
+      0.022035757871836942,
+      0.08395201175616235,
+      -0.05562429610414357
+    ],
+    "dataset_hash": "2c3f823b3627be0631419da4a94428bd926abdbecb40edb8612d83f63da6ff50",
+    "feature_names": [
+      "structural_peak_over_budget",
+      "calibrated_central_over_budget",
+      "calibrated_upper_over_budget",
+      "largest_over_budget",
+      "top_two_peak_live_over_budget",
+      "peak_live_over_budget",
+      "dtype_bytes",
+      "config_numeric_count",
+      "config_numeric_max",
+      "config_numeric_log_product",
+      "external_pressure_over_budget"
+    ],
+    "forbidden_features_excluded": [
+      "actual_failed_allocation_request",
+      "actual_outcome",
+      "capacity_threshold",
+      "compiler_accounted_bytes",
+      "compiler_temp_bytes",
+      "largest_free_block",
+      "post_compile_pool",
+      "runtime_duration"
+    ],
+    "intercept": -1.2050910165058417,
+    "means": [
+      0.3133144351503003,
+      0.2996597029889238,
+      0.5198705232296642,
+      0.0,
+      0.36514352420811536,
+      0.3673275278458733,
+      3.2535211267605635,
+      2.704225352112676,
+      2729.4647887323945,
+      12.97592751540785,
+      0.06693675605756136
+    ],
+    "regularization": "L2=1.0",
+    "scales": [
+      0.23255000377751864,
+      0.23039481729237635,
+      0.3901199883890973,
+      1.0,
+      0.09197859075923781,
+      0.0926873357816519,
+      0.9673298497855091,
+      1.3150736732661914,
+      2362.3313611827984,
+      5.710685190506472,
+      0.24626159777810855
+    ]
+  },
+  "status": "COMPUTATIONALLY_VERIFIED",
+  "tree": {
+    "fold_choices": [
+      {
+        "direction": 1,
+        "feature": "structural_peak_over_budget",
+        "threshold_standardized": 0.5051554769800808
+      },
+      {
+        "direction": 1,
+        "feature": "calibrated_central_over_budget",
+        "threshold_standardized": 1.0659671517785114
+      },
+      {
+        "direction": 1,
+        "feature": "structural_peak_over_budget",
+        "threshold_standardized": 0.4540065850267432
+      },
+      {
+        "direction": 1,
+        "feature": "structural_peak_over_budget",
+        "threshold_standardized": 0.4060378574924136
+      },
+      {
+        "direction": 1,
+        "feature": "calibrated_central_over_budget",
+        "threshold_standardized": 0.6406556088172174
+      }
+    ],
+    "metrics": {
+      "Brier": 0.21126756338029176,
+      "N": 142,
+      "PR_AUC": 0.42252214574612923,
+      "ROC_AUC": 0.5473856209150327,
+      "log_loss": 3.4052315544537657
+    },
+    "predictions": [
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":2048}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "transformer|{\"heads\":8,\"sequence\":512,\"width\":512}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "training|{\"batch\":256,\"width\":1024}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "mlp|{\"batch\":1024,\"depth\":4,\"width\":4096}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":2048}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":2048}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":2048}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "mlp|{\"batch\":256,\"depth\":4,\"width\":8192}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "mlp|{\"batch\":256,\"depth\":4,\"width\":8192}|float32",
+        "p": 1.0,
+        "y": 0
+      },
+      {
+        "group": "mlp|{\"batch\":256,\"depth\":4,\"width\":8192}|float32",
+        "p": 1.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":7168}|float32",
+        "p": 1.0,
+        "y": 1
+      },
+      {
+        "group": "mlp|{\"batch\":256,\"depth\":4,\"width\":8192}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "transformer|{\"heads\":8,\"sequence\":1024,\"width\":2048}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"batch\":4,\"head_dim\":64,\"heads\":8,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"batch\":1,\"head_dim\":96,\"heads\":8,\"sequence\":5120}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"batch\":2,\"head_dim\":96,\"heads\":12,\"sequence\":2816}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"batch\":2,\"head_dim\":32,\"heads\":12,\"sequence\":2816}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":2048}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":2048}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":2048}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":2048}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":2048}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "convolution|{\"batch\":1024,\"channels\":3,\"height\":96,\"out_channels\":16,\"width\":96}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "convolution|{\"batch\":1024,\"channels\":3,\"height\":96,\"out_channels\":16,\"width\":96}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "convolution|{\"batch\":1024,\"channels\":3,\"height\":96,\"out_channels\":16,\"width\":96}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "convolution|{\"batch\":1024,\"channels\":3,\"height\":96,\"out_channels\":16,\"width\":96}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "convolution|{\"batch\":1024,\"channels\":3,\"height\":96,\"out_channels\":16,\"width\":96}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "convolution|{\"batch\":1024,\"channels\":3,\"height\":96,\"out_channels\":16,\"width\":96}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "convolution|{\"batch\":1024,\"channels\":3,\"height\":96,\"out_channels\":16,\"width\":96}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "convolution|{\"batch\":1024,\"channels\":3,\"height\":96,\"out_channels\":16,\"width\":96}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "convolution|{\"batch\":1024,\"channels\":3,\"height\":96,\"out_channels\":16,\"width\":96}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "convolution|{\"batch\":1024,\"channels\":3,\"height\":96,\"out_channels\":16,\"width\":96}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "convolution|{\"batch\":1024,\"channels\":3,\"height\":96,\"out_channels\":16,\"width\":96}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "convolution|{\"batch\":1024,\"channels\":3,\"height\":96,\"out_channels\":16,\"width\":96}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "convolution|{\"batch\":1024,\"channels\":3,\"height\":96,\"out_channels\":16,\"width\":96}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "convolution|{\"batch\":1024,\"channels\":3,\"height\":96,\"out_channels\":16,\"width\":96}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "convolution|{\"batch\":1024,\"channels\":3,\"height\":96,\"out_channels\":16,\"width\":96}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "mlp|{\"batch\":1024,\"depth\":4,\"width\":4096}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "mlp|{\"batch\":512,\"depth\":4,\"width\":2048}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":3072}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":3072}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":3072}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "training|{\"batch\":256,\"width\":8192}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "training|{\"batch\":256,\"width\":8192}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "training|{\"batch\":256,\"width\":8192}|float32",
+        "p": 1.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":5120}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "training|{\"batch\":256,\"width\":8192}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "transformer|{\"heads\":8,\"sequence\":2048,\"width\":2048}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"batch\":2,\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"batch\":4,\"head_dim\":96,\"heads\":8,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"batch\":2,\"head_dim\":32,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"batch\":2,\"head_dim\":128,\"heads\":12,\"sequence\":2816}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "other|{}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":5120}|float32",
+        "p": 1.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":5120}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":5120}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":5120}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":5120}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":5120}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":5120}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":5120}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":5120}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":5120}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":5120}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "mlp|{\"batch\":512,\"depth\":4,\"width\":2048}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":1024}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":4096}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "transformer|{\"heads\":8,\"sequence\":256,\"width\":256}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "training|{\"batch\":512,\"width\":1024}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "mlp|{\"batch\":1024,\"depth\":4,\"width\":8192}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"batch\":2,\"head_dim\":128,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"batch\":2,\"head_dim\":96,\"heads\":4,\"sequence\":5120}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"batch\":2,\"head_dim\":64,\"heads\":12,\"sequence\":2816}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"batch\":1,\"head_dim\":128,\"heads\":8,\"sequence\":4864}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":4608}|float32",
+        "p": 1.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":4608}|float32",
+        "p": 1.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":4608}|float32",
+        "p": 1.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":4608}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":4608}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":4608}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":4608}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":4608}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":4608}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":4608}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":4608}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":4608}|float32",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":4608}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":4608}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":4608}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":1024}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "transformer|{\"heads\":8,\"sequence\":256,\"width\":256}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "training|{\"batch\":512,\"width\":1024}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":512}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "mlp|{\"batch\":256,\"depth\":2,\"width\":2048}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":1024}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":1024}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":1024}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "mlp|{\"batch\":512,\"depth\":4,\"width\":8192}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"batch\":2,\"head_dim\":64,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"batch\":1,\"head_dim\":128,\"heads\":8,\"sequence\":5120}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"batch\":4,\"head_dim\":128,\"heads\":8,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"batch\":2,\"head_dim\":128,\"heads\":4,\"sequence\":4864}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":1024}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":1024}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":1024}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":1024}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":1024}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 1.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 1.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 1.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 1.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 1.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 1.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 1.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":96,\"heads\":16,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":512}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "mlp|{\"batch\":256,\"depth\":2,\"width\":2048}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":2048}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "transformer|{\"heads\":8,\"sequence\":512,\"width\":512}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "training|{\"batch\":256,\"width\":1024}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":2048}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":2048}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":2048}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":6144}|float32",
+        "p": 1.0,
+        "y": 1
+      },
+      {
+        "group": "training|{\"batch\":512,\"width\":8192}|float32",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":6144}|float32",
+        "p": 1.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"head_dim\":64,\"heads\":8,\"sequence\":6144}|float32",
+        "p": 1.0,
+        "y": 1
+      },
+      {
+        "group": "attention|{\"batch\":2,\"head_dim\":128,\"heads\":4,\"sequence\":5120}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"batch\":4,\"head_dim\":32,\"heads\":8,\"sequence\":2560}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"batch\":1,\"head_dim\":64,\"heads\":8,\"sequence\":5120}|float16",
+        "p": 0.0,
+        "y": 0
+      },
+      {
+        "group": "attention|{\"batch\":2,\"head_dim\":64,\"heads\":4,\"sequence\":5120}|float16",
+        "p": 0.0,
+        "y": 0
+      }
+    ]
+  }
+}
