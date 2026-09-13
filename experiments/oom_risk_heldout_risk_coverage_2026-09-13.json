@@ -1,0 +1,160 @@
+{
+  "operating_points": {
+    "v2": {
+      "0.2": {
+        "coverage": 0.8433734939759037,
+        "false_safe_n": 0,
+        "false_safe_rate": 0.0,
+        "false_safe_upper_95": 0.04189334406688858,
+        "likely_fit_n": 70,
+        "p_fit": 0.2
+      },
+      "0.25": {
+        "coverage": 0.8674698795180723,
+        "false_safe_n": 0,
+        "false_safe_rate": 0.0,
+        "false_safe_upper_95": 0.040753686230639914,
+        "likely_fit_n": 72,
+        "p_fit": 0.25
+      }
+    },
+    "v3": {
+      "0.2": {
+        "coverage": 0.8072289156626506,
+        "false_safe_n": 0,
+        "false_safe_rate": 0.0,
+        "false_safe_upper_95": 0.043727554781889444,
+        "likely_fit_n": 67,
+        "p_fit": 0.2
+      },
+      "0.25": {
+        "coverage": 0.8433734939759037,
+        "false_safe_n": 0,
+        "false_safe_rate": 0.0,
+        "false_safe_upper_95": 0.04189334406688858,
+        "likely_fit_n": 70,
+        "p_fit": 0.25
+      }
+    }
+  },
+  "plan_hash": "4e8319b7b9864043509ca89857a26f1920cfbe6bf1c64197c9f9987fe15a174f",
+  "risk_coverage": {
+    "v2_probability": [
+      {
+        "coverage": 0.0,
+        "false_safe_n": 0,
+        "false_safe_rate": null,
+        "false_safe_upper_95": 1.0,
+        "likely_fit_n": 0,
+        "p_fit": 0.1
+      },
+      {
+        "coverage": 0.46987951807228917,
+        "false_safe_n": 0,
+        "false_safe_rate": 0.0,
+        "false_safe_upper_95": 0.07393758892668655,
+        "likely_fit_n": 39,
+        "p_fit": 0.15
+      },
+      {
+        "coverage": 0.8433734939759037,
+        "false_safe_n": 0,
+        "false_safe_rate": 0.0,
+        "false_safe_upper_95": 0.04189334406688858,
+        "likely_fit_n": 70,
+        "p_fit": 0.2
+      },
+      {
+        "coverage": 0.8674698795180723,
+        "false_safe_n": 0,
+        "false_safe_rate": 0.0,
+        "false_safe_upper_95": 0.040753686230639914,
+        "likely_fit_n": 72,
+        "p_fit": 0.25
+      },
+      {
+        "coverage": 0.9397590361445783,
+        "false_safe_n": 0,
+        "false_safe_rate": 0.0,
+        "false_safe_upper_95": 0.03767863420096847,
+        "likely_fit_n": 78,
+        "p_fit": 0.3
+      },
+      {
+        "coverage": 0.9518072289156626,
+        "false_safe_n": 1,
+        "false_safe_rate": 0.012658227848101266,
+        "false_safe_upper_95": 0.05864463025033958,
+        "likely_fit_n": 79,
+        "p_fit": 0.35
+      },
+      {
+        "coverage": 0.963855421686747,
+        "false_safe_n": 2,
+        "false_safe_rate": 0.025,
+        "false_safe_upper_95": 0.0766108767537717,
+        "likely_fit_n": 80,
+        "p_fit": 0.4
+      }
+    ],
+    "v3_probability": [
+      {
+        "coverage": 0.0,
+        "false_safe_n": 0,
+        "false_safe_rate": null,
+        "false_safe_upper_95": 1.0,
+        "likely_fit_n": 0,
+        "p_fit": 0.1
+      },
+      {
+        "coverage": 0.42168674698795183,
+        "false_safe_n": 0,
+        "false_safe_rate": 0.0,
+        "false_safe_upper_95": 0.08203163585667045,
+        "likely_fit_n": 35,
+        "p_fit": 0.15
+      },
+      {
+        "coverage": 0.8072289156626506,
+        "false_safe_n": 0,
+        "false_safe_rate": 0.0,
+        "false_safe_upper_95": 0.043727554781889444,
+        "likely_fit_n": 67,
+        "p_fit": 0.2
+      },
+      {
+        "coverage": 0.8433734939759037,
+        "false_safe_n": 0,
+        "false_safe_rate": 0.0,
+        "false_safe_upper_95": 0.04189334406688858,
+        "likely_fit_n": 70,
+        "p_fit": 0.25
+      },
+      {
+        "coverage": 0.891566265060241,
+        "false_safe_n": 0,
+        "false_safe_rate": 0.0,
+        "false_safe_upper_95": 0.03967438387031345,
+        "likely_fit_n": 74,
+        "p_fit": 0.3
+      },
+      {
+        "coverage": 0.9397590361445783,
+        "false_safe_n": 0,
+        "false_safe_rate": 0.0,
+        "false_safe_upper_95": 0.03767863420096847,
+        "likely_fit_n": 78,
+        "p_fit": 0.35
+      },
+      {
+        "coverage": 0.9397590361445783,
+        "false_safe_n": 0,
+        "false_safe_rate": 0.0,
+        "false_safe_upper_95": 0.03767863420096847,
+        "likely_fit_n": 78,
+        "p_fit": 0.4
+      }
+    ]
+  },
+  "status": "COMPUTATIONALLY_VERIFIED"
+}
