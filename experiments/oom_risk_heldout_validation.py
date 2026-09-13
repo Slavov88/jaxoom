@@ -118,7 +118,7 @@ def score_plan(plan):
  v1=json.loads(V1_FREEZE.read_text())["model"];v2=json.loads(V2_MODEL.read_text());v3=json.loads(V3_MODEL.read_text());pred=[]
  for c in plan["selected_candidates"]:
   f=expansion().static_features(c["family"],c["configuration"],c["dtype"],json.loads(V1_FREEZE.read_text()));p1=score(f,v1);p2=score(f,v2);p3=score(f,v3);pred.append({"candidate_id":c["candidate_id"],"workload_group_id":c["workload_group_id"],"family":c["family"],"configuration":c["configuration"],"dtype":c["dtype"],"graph_fingerprint":c["graph_fingerprint"],"sampling_stratum":c["sampling_stratum"],"v1_probability":p1,"v2_probability":p2,"v3_probability":p3,"aggregate_score":f.get("calibrated_upper_over_budget"),"aggregate_fit":(f.get("calibrated_upper_over_budget") or 0)<=1,"static_features":f})
- payload={"status":"FROZEN_BEFORE_RUNTIME","plan_hash":digest(plan),"v1_model_hash":json.loads(V1_FREEZE.read_text())["model_hash"],"v2_model_hash":v2["model_hash"],"v3_model_hash":v3["model_hash"],"predictions":pred,"outcomes_excluded":True};payload["prediction_hash"]=digest(payload);return payload
+ payload={"status":"FROZEN_BEFORE_RUNTIME","plan_hash":hashlib.sha256(PLAN.read_bytes()).hexdigest(),"v1_model_hash":json.loads(V1_FREEZE.read_text())["model_hash"],"v2_model_hash":v2["model_hash"],"v3_model_hash":v3["model_hash"],"predictions":pred,"outcomes_excluded":True};payload["prediction_hash"]=digest(payload);return payload
 
 def main():
  ap=argparse.ArgumentParser();ap.add_argument("--stage",choices=("manifest","plan","score"),required=True);ap.add_argument("--seed",type=int,default=20260913);a=ap.parse_args()
