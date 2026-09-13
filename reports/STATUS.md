@@ -2,24 +2,25 @@
 
 ## Current frontier
 
-The V2 experiment-only OOM-risk expansion is complete. A frozen V1 model selected 60 genuinely new static workload groups; 60 fresh-process GPU runs produced 22 FIT, 12 EXECUTION_OOM, 12 COMPILE_OOM, and 14 COMPILE_TIMEOUT outcomes.
+V3 low-risk/boundary enrichment is complete. A static compile-feasibility filter selected 60 fresh-process GPU workloads from 3,709 candidates.
 
 ## Confirmed results
 
-- Frozen-V1 prospective performance on 34 new stable binary groups: ROC-AUC 0.973, PR-AUC 0.867, Brier 0.110.
-- Expanded dataset: 123 total groups, 90 stable binary groups, 19 execution-OOM groups.
-- V2 compact/sign-constrained L2 grouped ROC-AUC 0.845, PR-AUC 0.650, ECE 0.088.
-- V2 compact and sign-constrained formulations have zero budget-monotonicity violations.
+- New outcomes: 31 FIT, 23 EXECUTION_OOM, 5 COMPILE_OOM, 1 COMPILE_TIMEOUT.
+- Combined corpus: 183 independent groups and 42 execution-OOM groups.
+- Frozen V2 prospective FIT policy at `p_fit=0.20`: 46.3% coverage, zero false-safe OOMs on 54 new stable groups.
+- V3 constrained grouped OOF: ROC-AUC 0.916, PR-AUC 0.787, ECE 0.115.
+- V3 budget monotonicity violations: 0.
+- Compile-failure waste declined from 26/60 to 6/60.
 - Production decision: **NO PRODUCTION CHANGE**.
 
 ## Failed or unresolved directions
 
-- V2 conservative `.1/.9` abstention has zero coverage.
-- At approximately 40% coverage, V2 has six false-safe confident-FIT OOMs.
-- The target of 25–40 independent execution-OOM groups was not reached; only 19 exist.
-- Family holdouts outside attention/convolution remain underpowered.
-- The campaign generated many compile failures/timeouts among high-risk candidates; compile and execution mechanisms remain separate.
+- V3 grouped OOF still has one false-safe at approximately 40% FIT coverage.
+- Population calibration is not identified under active sampling.
+- Convolution and several family holdouts remain underpowered.
+- Compile filter is experiment-only and has not been independently validated beyond this campaign.
 
 ## Next highest-value work
 
-Second targeted dataset expansion is the next technical option, but should not begin automatically. If authorized, prioritize independent execution-OOM groups in plausible boundary regimes, not allocator-capacity sweeps or repeated copies of existing graphs. Keep compile-OOM and execution-OOM labels separate.
+Fully held-out OOM-risk validation using the frozen V3 artifact. Do not retrain or expand the model before that evaluation, and do not integrate production behavior.
