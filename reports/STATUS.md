@@ -2,7 +2,7 @@
 
 ## Current frontier
 
-The second fully held-out prospective validation of frozen V2/V3 is complete. The primary panel was selected by a new-seed deterministic, model-independent family/scale design and executed in fresh subprocesses. No production risk gate is enabled.
+The second fully held-out prospective validation is complete. A production-integration design audit was performed, but no public risk API or production gate is enabled.
 
 ## Confirmed results
 
@@ -30,7 +30,10 @@ The second fully held-out prospective validation of frozen V2/V3 is complete. Th
 - Strict near-duplicate clustering reduces the pooled V2 LIKELY_FIT count to 126 and raises the upper bound to approximately 2.35%.
 - Calibration remains campaign-conditional; these panels are not representative workload-prevalence samples.
 - V2 is the primary confirmatory model and has higher coverage than V3 at `p_fit=0.20` in batch 2; both have zero primary false-safes.
+- Production replay covered 224 held-out rows: zero logistic score mismatches and zero threshold-status mismatches.
+- Feature replay found 224 `largest_over_budget` schema/source mismatches; the current coefficient is zero, so scores still match, but exact feature reproducibility fails.
+- `config_numeric_count`, `config_numeric_max`, `config_numeric_log_product`, and `dtype_bytes` lack canonical definitions for arbitrary public callables.
 
 ## Next highest-value work
 
-Production-integration design is the next decision point, but it has not started. Any integration must separately define applicability scope, version/device guards, uncertainty wording, fallback behavior, and compile-risk interaction. Production remains unchanged.
+Resolve the production-compatible feature contract: either define a validated structured workload adapter or redevelop a model using only generic static features. Do not export a public API until this blocker is resolved.
