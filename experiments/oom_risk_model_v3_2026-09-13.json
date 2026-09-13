@@ -1,0 +1,60 @@
+{
+  "active_sampling": true,
+  "coefficients": [
+    -0.8964946014397888,
+    0.1342325318016506,
+    0.13466488252373968,
+    0.0,
+    0.1507882375045133,
+    0.11278541549749066,
+    0.10912801094470392,
+    0.1211670270021239,
+    0.004048734729360055,
+    0.06904947336279033,
+    -0.002825737420185693,
+    0.04830790015993847
+  ],
+  "dataset_hash": "fb6d02fad499a845af19f05e5514b57dad4c727e14554d226b39b1ff4b26fb60",
+  "feature_names": [
+    "structural_peak_over_budget",
+    "calibrated_upper_over_budget",
+    "largest_over_budget",
+    "top_two_peak_live_over_budget",
+    "peak_live_over_budget",
+    "dtype_bytes",
+    "config_numeric_count",
+    "config_numeric_max",
+    "config_numeric_log_product",
+    "largest_over_structural",
+    "top_two_over_structural"
+  ],
+  "intercept": -0.8964946014397888,
+  "means": [
+    0.34513327457230786,
+    0.5739388979075739,
+    0.0,
+    0.3384063596180405,
+    0.38240516586493983,
+    3.1652173913043478,
+    3.091304347826087,
+    3449.6,
+    14.315898200315726,
+    0.5088759673410531,
+    0.9530724203293344
+  ],
+  "model_hash": "7663490267c552569c5b9f1b93cf05dcc113282317c899f55c8e30e06f4b2da8",
+  "regularization": "L2=1.0; nonnegative demand/budget and structural-ratio coefficients",
+  "scales": [
+    0.25607230983655016,
+    0.4285378595026091,
+    1.0,
+    0.1960155679590501,
+    0.19031892002459208,
+    0.9862571741744576,
+    1.181529238806644,
+    2598.934192251155,
+    5.005207497864146,
+    0.09937294896449848,
+    0.1503047073773751
+  ]
+}
