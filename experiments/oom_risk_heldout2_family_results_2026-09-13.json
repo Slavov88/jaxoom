@@ -1,0 +1,202 @@
+{
+  "attention": {
+    "eligible_n": 21,
+    "outcomes": {
+      "EXECUTION_OOM": 9,
+      "FIT": 12
+    },
+    "v2": {
+      "coverage": 0.47619047619047616,
+      "false_safe_n": 0,
+      "false_safe_rate": 0.0,
+      "false_safe_upper_95": 0.2588655508930522,
+      "likely_fit_n": 10,
+      "p_fit": 0.2
+    },
+    "v3": {
+      "coverage": 0.5238095238095238,
+      "false_safe_n": 0,
+      "false_safe_rate": 0.0,
+      "false_safe_upper_95": 0.2384041903808526,
+      "likely_fit_n": 11,
+      "p_fit": 0.2
+    }
+  },
+  "autodiff": {
+    "eligible_n": 12,
+    "outcomes": {
+      "FIT": 12
+    },
+    "v2": {
+      "coverage": 0.9166666666666666,
+      "false_safe_n": 0,
+      "false_safe_rate": 0.0,
+      "false_safe_upper_95": 0.2384041903808526,
+      "likely_fit_n": 11,
+      "p_fit": 0.2
+    },
+    "v3": {
+      "coverage": 1.0,
+      "false_safe_n": 0,
+      "false_safe_rate": 0.0,
+      "false_safe_upper_95": 0.22092219194555585,
+      "likely_fit_n": 12,
+      "p_fit": 0.2
+    }
+  },
+  "convolution": {
+    "eligible_n": 16,
+    "outcomes": {
+      "FIT": 16
+    },
+    "v2": {
+      "coverage": 0.8125,
+      "false_safe_n": 0,
+      "false_safe_rate": 0.0,
+      "false_safe_upper_95": 0.20581666518655062,
+      "likely_fit_n": 13,
+      "p_fit": 0.2
+    },
+    "v3": {
+      "coverage": 0.8125,
+      "false_safe_n": 0,
+      "false_safe_rate": 0.0,
+      "false_safe_upper_95": 0.20581666518655062,
+      "likely_fit_n": 13,
+      "p_fit": 0.2
+    }
+  },
+  "matmul": {
+    "eligible_n": 7,
+    "outcomes": {
+      "FIT": 7
+    },
+    "v2": {
+      "coverage": 1.0,
+      "false_safe_n": 0,
+      "false_safe_rate": 0.0,
+      "false_safe_upper_95": 0.34816365513116077,
+      "likely_fit_n": 7,
+      "p_fit": 0.2
+    },
+    "v3": {
+      "coverage": 1.0,
+      "false_safe_n": 0,
+      "false_safe_rate": 0.0,
+      "false_safe_upper_95": 0.34816365513116077,
+      "likely_fit_n": 7,
+      "p_fit": 0.2
+    }
+  },
+  "mlp": {
+    "eligible_n": 11,
+    "outcomes": {
+      "FIT": 11
+    },
+    "v2": {
+      "coverage": 1.0,
+      "false_safe_n": 0,
+      "false_safe_rate": 0.0,
+      "false_safe_upper_95": 0.2384041903808526,
+      "likely_fit_n": 11,
+      "p_fit": 0.2
+    },
+    "v3": {
+      "coverage": 1.0,
+      "false_safe_n": 0,
+      "false_safe_rate": 0.0,
+      "false_safe_upper_95": 0.2384041903808526,
+      "likely_fit_n": 11,
+      "p_fit": 0.2
+    }
+  },
+  "reduction": {
+    "eligible_n": 7,
+    "outcomes": {
+      "FIT": 7
+    },
+    "v2": {
+      "coverage": 1.0,
+      "false_safe_n": 0,
+      "false_safe_rate": 0.0,
+      "false_safe_upper_95": 0.34816365513116077,
+      "likely_fit_n": 7,
+      "p_fit": 0.2
+    },
+    "v3": {
+      "coverage": 1.0,
+      "false_safe_n": 0,
+      "false_safe_rate": 0.0,
+      "false_safe_upper_95": 0.34816365513116077,
+      "likely_fit_n": 7,
+      "p_fit": 0.2
+    }
+  },
+  "scan": {
+    "eligible_n": 8,
+    "outcomes": {
+      "FIT": 8
+    },
+    "v2": {
+      "coverage": 0.875,
+      "false_safe_n": 0,
+      "false_safe_rate": 0.0,
+      "false_safe_upper_95": 0.34816365513116077,
+      "likely_fit_n": 7,
+      "p_fit": 0.2
+    },
+    "v3": {
+      "coverage": 0.875,
+      "false_safe_n": 0,
+      "false_safe_rate": 0.0,
+      "false_safe_upper_95": 0.34816365513116077,
+      "likely_fit_n": 7,
+      "p_fit": 0.2
+    }
+  },
+  "training": {
+    "eligible_n": 11,
+    "outcomes": {
+      "FIT": 11
+    },
+    "v2": {
+      "coverage": 0.9090909090909091,
+      "false_safe_n": 0,
+      "false_safe_rate": 0.0,
+      "false_safe_upper_95": 0.2588655508930522,
+      "likely_fit_n": 10,
+      "p_fit": 0.2
+    },
+    "v3": {
+      "coverage": 1.0,
+      "false_safe_n": 0,
+      "false_safe_rate": 0.0,
+      "false_safe_upper_95": 0.2384041903808526,
+      "likely_fit_n": 11,
+      "p_fit": 0.2
+    }
+  },
+  "transformer": {
+    "eligible_n": 14,
+    "outcomes": {
+      "EXECUTION_OOM": 1,
+      "FIT": 13
+    },
+    "v2": {
+      "coverage": 0.7857142857142857,
+      "false_safe_n": 0,
+      "false_safe_rate": 0.0,
+      "false_safe_upper_95": 0.2384041903808526,
+      "likely_fit_n": 11,
+      "p_fit": 0.2
+    },
+    "v3": {
+      "coverage": 0.8571428571428571,
+      "false_safe_n": 0,
+      "false_safe_rate": 0.0,
+      "false_safe_upper_95": 0.22092219194555585,
+      "likely_fit_n": 12,
+      "p_fit": 0.2
+    }
+  }
+}
