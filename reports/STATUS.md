@@ -2,7 +2,7 @@
 
 ## Current frontier
 
-The first fully held-out prospective validation of frozen V2/V3 is complete. The panel was selected by a deterministic, model-independent family/scale design and executed in fresh subprocesses. No production risk gate is enabled.
+The second fully held-out prospective validation of frozen V2/V3 is complete. The primary panel was selected by a new-seed deterministic, model-independent family/scale design and executed in fresh subprocesses. No production risk gate is enabled.
 
 ## Confirmed results
 
@@ -18,14 +18,19 @@ The first fully held-out prospective validation of frozen V2/V3 is complete. The
 - Frozen V3 at `p_fit=0.20`: 67/83 LIKELY_FIT, 80.7% coverage, zero false-safe; exact one-sided 95% upper bound 4.4%.
 - Held-out compile failures: 3 COMPILE_OOM and 4 COMPILE_TIMEOUT; none were LIKELY_FIT at `p_fit=0.20`.
 - V2 and V3 held-out budget monotonicity violations: 0.
+- Batch 2 primary: 110 groups; 107 eligible (97 FIT, 10 EXECUTION_OOM).
+- Batch 2 V2 at `p_fit=0.20`: 87/107 LIKELY_FIT, 81.3% coverage, zero false-safe; exact upper bound 3.4%.
+- Pooled primary batches: 190 eligible, 157 V2 LIKELY_FIT, zero false-safe; exact upper bound 1.9%.
+- Supplemental convolution stress: 24 groups, 20 FIT, 4 COMPILE_TIMEOUT; kept outside the pooled bound.
+- Primary environments matched on JAX 0.11.0, jaxlib 0.11.0, GPU backend, and allocator settings.
 
 ## Failed or unresolved directions
 
-- The held-out panel contains only five stable EXECUTION_OOM groups; family-specific confidence bounds remain wide.
-- The random stratified panel produced no convolution execution OOM, so convolution safety is not strongly bounded despite 15 selected convolution groups.
-- Calibration remains campaign-conditional; this panel is not a representative workload prevalence sample.
-- V2 dominates V3 at the candidate `.20` and `.25` operating points on coverage with equal observed safety, but V3 avoids V2 false-safes at `.35` and `.40`.
+- Family-specific bounds remain wide, especially attention and convolution; no family-specific false-safe was observed at `p_fit=0.20`.
+- Strict near-duplicate clustering reduces the pooled V2 LIKELY_FIT count to 126 and raises the upper bound to approximately 2.35%.
+- Calibration remains campaign-conditional; these panels are not representative workload-prevalence samples.
+- V2 is the primary confirmatory model and has higher coverage than V3 at `p_fit=0.20` in batch 2; both have zero primary false-safes.
 
 ## Next highest-value work
 
-Second fully held-out validation batch, with additional independent execution-OOM cases and stronger family-specific safety bounds. Do not begin it automatically; do not retrain or integrate production behavior.
+Production-integration design is the next decision point, but it has not started. Any integration must separately define applicability scope, version/device guards, uncertainty wording, fallback behavior, and compile-risk interaction. Production remains unchanged.
