@@ -1,0 +1,2995 @@
+{
+  "plan_hash": "248a360fec03180508b2dc95e86c0150934e69867f9e65ad3a71157218a5665e",
+  "results": [
+    {
+      "aggregate_score": 0.3061702125377879,
+      "campaign_wall_seconds": 14.84063982963562,
+      "candidate_id": "V2-CAND-01802",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 1024,
+        "depth": 8,
+        "width": 6144
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "mlp",
+      "graph_fingerprint": "160ffcad32c63a31",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1133, 2832, 566.07",
+        "processes": "397, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.14645165411743,
+      "v2_predicted_probability": 0.17264343299099855,
+      "wall_seconds": 10.803266048431396,
+      "workload_group_id": "mlp|{\"batch\":1024,\"depth\":8,\"width\":6144}|float16"
+    },
+    {
+      "aggregate_score": 0.31919873222024703,
+      "campaign_wall_seconds": 11.565948486328125,
+      "candidate_id": "V2-CAND-03827",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2048,
+        "depth": 8,
+        "width": 6144
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "mlp",
+      "graph_fingerprint": "95afa5d43f4eda26",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1149, 2816, 566.07",
+        "processes": "537, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.14987597782927883,
+      "v2_predicted_probability": 0.17563796629312445,
+      "wall_seconds": 9.298938035964966,
+      "workload_group_id": "mlp|{\"batch\":2048,\"depth\":8,\"width\":6144}|float16"
+    },
+    {
+      "aggregate_score": 0.3823056244321581,
+      "campaign_wall_seconds": 7.316114664077759,
+      "candidate_id": "V2-CAND-01748",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 8,
+        "depth": 6,
+        "width": 8192
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "mlp",
+      "graph_fingerprint": "22e02167293501fe",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1113, 2852, 566.07",
+        "processes": "668, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.15645909659538373,
+      "v2_predicted_probability": 0.17873466264131932,
+      "wall_seconds": 5.195384979248047,
+      "workload_group_id": "mlp|{\"batch\":8,\"depth\":6,\"width\":8192}|float16"
+    },
+    {
+      "aggregate_score": 0.3832556206590041,
+      "campaign_wall_seconds": 7.474542856216431,
+      "candidate_id": "V2-CAND-01613",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 64,
+        "depth": 6,
+        "width": 8192
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "mlp",
+      "graph_fingerprint": "5007f2e04cfab985",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1117, 2848, 566.07",
+        "processes": "846, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.16070271500368258,
+      "v2_predicted_probability": 0.1829255907857457,
+      "wall_seconds": 5.328606128692627,
+      "workload_group_id": "mlp|{\"batch\":64,\"depth\":6,\"width\":8192}|float16"
+    },
+    {
+      "aggregate_score": 0.36479855214426743,
+      "campaign_wall_seconds": 11.510305166244507,
+      "candidate_id": "V2-CAND-01003",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2048,
+        "depth": 8,
+        "width": 8192
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "autodiff",
+      "graph_fingerprint": "5eb823a4aa2e82ad",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1149, 2816, 566.07",
+        "processes": "988, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.15892164331604547,
+      "v2_predicted_probability": 0.1830430497075972,
+      "wall_seconds": 9.302297830581665,
+      "workload_group_id": "autodiff|{\"batch\":2048,\"depth\":8,\"width\":8192}|float16"
+    },
+    {
+      "aggregate_score": 0.38434133063254233,
+      "campaign_wall_seconds": 9.469043016433716,
+      "candidate_id": "V2-CAND-03089",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 128,
+        "depth": 6,
+        "width": 8192
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "mlp",
+      "graph_fingerprint": "0b1c2a565c697ae9",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1121, 2844, 566.07",
+        "processes": "1122, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.16227369674108372,
+      "v2_predicted_probability": 0.18444305409688344,
+      "wall_seconds": 7.043711423873901,
+      "workload_group_id": "mlp|{\"batch\":128,\"depth\":6,\"width\":8192}|float16"
+    },
+    {
+      "aggregate_score": 0.38651275057961887,
+      "campaign_wall_seconds": 9.637227296829224,
+      "candidate_id": "V2-CAND-00065",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 256,
+        "depth": 6,
+        "width": 8192
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "mlp",
+      "graph_fingerprint": "9da789f453f4b834",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1121, 2844, 566.07",
+        "processes": "1264, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.16405057162543252,
+      "v2_predicted_probability": 0.18611757278675717,
+      "wall_seconds": 7.53748893737793,
+      "workload_group_id": "mlp|{\"batch\":256,\"depth\":6,\"width\":8192}|float16"
+    },
+    {
+      "aggregate_score": 0.39085559047377183,
+      "campaign_wall_seconds": 11.181939601898193,
+      "candidate_id": "V2-CAND-03900",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 512,
+        "depth": 6,
+        "width": 8192
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "training",
+      "graph_fingerprint": "b98ee1c477ceee72",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1125, 2840, 566.07",
+        "processes": "1396, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.16623406312021574,
+      "v2_predicted_probability": 0.1881007823271961,
+      "wall_seconds": 8.982141733169556,
+      "workload_group_id": "training|{\"batch\":512,\"depth\":6,\"width\":8192}|float16"
+    },
+    {
+      "aggregate_score": 0.4527410589654524,
+      "campaign_wall_seconds": 10.134275197982788,
+      "candidate_id": "V2-CAND-00308",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 256,
+        "depth": 12,
+        "width": 6144
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "mlp",
+      "graph_fingerprint": "315a3d64b5a478eb",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2145, 1820, 566.07",
+        "processes": "1533, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.16987423333070195,
+      "v2_predicted_probability": 0.1902162443099754,
+      "wall_seconds": 7.591827869415283,
+      "workload_group_id": "mlp|{\"batch\":256,\"depth\":12,\"width\":6144}|float16"
+    },
+    {
+      "aggregate_score": 0.3995412702620779,
+      "campaign_wall_seconds": 9.523036241531372,
+      "candidate_id": "V2-CAND-02801",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 1024,
+        "depth": 6,
+        "width": 8192
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "mlp",
+      "graph_fingerprint": "acfa92e32a31622c",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1133, 2832, 566.07",
+        "processes": "1667, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.1692332954518021,
+      "v2_predicted_probability": 0.19070008808954259,
+      "wall_seconds": 7.248626708984375,
+      "workload_group_id": "mlp|{\"batch\":1024,\"depth\":6,\"width\":8192}|float16"
+    },
+    {
+      "aggregate_score": 0.32995404664561034,
+      "campaign_wall_seconds": 7.2880260944366455,
+      "candidate_id": "V2-CAND-03915",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 4,
+        "head_dim": 48,
+        "heads": 16,
+        "sequence": 1280
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "28ac825c45e18990",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1189, 2776, 566.07",
+        "processes": "1818, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.16734658319475432,
+      "v2_predicted_probability": 0.19149852240590853,
+      "wall_seconds": 5.028867959976196,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":48,\"heads\":16,\"sequence\":1280}|float16"
+    },
+    {
+      "aggregate_score": 0.3250174591096786,
+      "campaign_wall_seconds": 8.32550859451294,
+      "candidate_id": "V2-CAND-02979",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 8,
+        "head_dim": 96,
+        "heads": 4,
+        "sequence": 1792
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "567cf3f2cbf0072d",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1197, 2768, 566.07",
+        "processes": "1944, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.16734233860192171,
+      "v2_predicted_probability": 0.1917202786025192,
+      "wall_seconds": 5.941474676132202,
+      "workload_group_id": "attention|{\"batch\":8,\"head_dim\":96,\"heads\":4,\"sequence\":1792}|float16"
+    },
+    {
+      "aggregate_score": 0.3050187662181956,
+      "campaign_wall_seconds": 16.28075361251831,
+      "candidate_id": "V2-CAND-03155",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 12,
+        "layers": 2,
+        "sequence": 2816,
+        "width": 768
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "transformer",
+      "graph_fingerprint": "355de6a964c3f8a9",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1245, 2720, 566.07",
+        "processes": "2078, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.1679629386822838,
+      "v2_predicted_probability": 0.19336729269000244,
+      "wall_seconds": 13.444298267364502,
+      "workload_group_id": "transformer|{\"heads\":12,\"layers\":2,\"sequence\":2816,\"width\":768}|float16"
+    },
+    {
+      "aggregate_score": 0.32745182444097143,
+      "campaign_wall_seconds": 9.12938141822815,
+      "candidate_id": "V2-CAND-02196",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2,
+        "head_dim": 80,
+        "heads": 2,
+        "sequence": 5120
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "9c2a8bd55d05e981",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1185, 2780, 566.07",
+        "processes": "2331, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.17010896446809468,
+      "v2_predicted_probability": 0.19382141280028084,
+      "wall_seconds": 6.4854583740234375,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":80,\"heads\":2,\"sequence\":5120}|float16"
+    },
+    {
+      "aggregate_score": 0.4625124487272967,
+      "campaign_wall_seconds": 13.386494398117065,
+      "candidate_id": "V2-CAND-03323",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 1024,
+        "depth": 12,
+        "width": 6144
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "mlp",
+      "graph_fingerprint": "c2b8c81dfaab3ccc",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2157, 1808, 566.07",
+        "processes": "2468, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.1745911337519346,
+      "v2_predicted_probability": 0.1944179651302472,
+      "wall_seconds": 10.584322214126587,
+      "workload_group_id": "mlp|{\"batch\":1024,\"depth\":12,\"width\":6144}|float16"
+    },
+    {
+      "aggregate_score": 0.34394316519137574,
+      "campaign_wall_seconds": 8.437954664230347,
+      "candidate_id": "V2-CAND-02214",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2,
+        "head_dim": 48,
+        "heads": 4,
+        "sequence": 3712
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "f8169655c4951aed",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1185, 2780, 566.07",
+        "processes": "2605, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.17220937230131173,
+      "v2_predicted_probability": 0.1951681165243181,
+      "wall_seconds": 5.6190807819366455,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":48,\"heads\":4,\"sequence\":3712}|float16"
+    },
+    {
+      "aggregate_score": 0.33945400891407007,
+      "campaign_wall_seconds": 10.237009525299072,
+      "candidate_id": "V2-CAND-00063",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2,
+        "head_dim": 160,
+        "heads": 32,
+        "sequence": 1280
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "1f2a4835b2ee8a2b",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1277, 2688, 566.07",
+        "processes": "2730, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.1715762701738841,
+      "v2_predicted_probability": 0.19530502110073258,
+      "wall_seconds": 7.167697429656982,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":160,\"heads\":32,\"sequence\":1280}|float16"
+    },
+    {
+      "aggregate_score": 0.3122221974293469,
+      "campaign_wall_seconds": 18.241268634796143,
+      "candidate_id": "V2-CAND-01499",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 16,
+        "layers": 3,
+        "sequence": 2432,
+        "width": 1024
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "transformer",
+      "graph_fingerprint": "9610df382d25de29",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1245, 2720, 566.07",
+        "processes": "2866, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.17038271093340146,
+      "v2_predicted_probability": 0.1955583500922636,
+      "wall_seconds": 13.913007736206055,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":3,\"sequence\":2432,\"width\":1024}|float16"
+    },
+    {
+      "aggregate_score": 0.3542892178493702,
+      "campaign_wall_seconds": 28.24545907974243,
+      "candidate_id": "V2-CAND-00027",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 12,
+        "sequence": 3072
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "61a96c11d041a748",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1189, 2776, 566.07",
+        "processes": "3117, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.17503347441612913,
+      "v2_predicted_probability": 0.19747249696835878,
+      "wall_seconds": 25.28382134437561,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":64,\"heads\":12,\"sequence\":3072}|float16"
+    },
+    {
+      "aggregate_score": 0.33231207299438875,
+      "campaign_wall_seconds": 21.76790165901184,
+      "candidate_id": "V2-CAND-00653",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 16,
+        "layers": 1,
+        "sequence": 2560,
+        "width": 768
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "transformer",
+      "graph_fingerprint": "18c26198b141c459",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1257, 2708, 566.07",
+        "processes": "3268, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.17379383275014457,
+      "v2_predicted_probability": 0.19763038815482967,
+      "wall_seconds": 12.256892919540405,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":1,\"sequence\":2560,\"width\":768}|float16"
+    },
+    {
+      "aggregate_score": 1.0770242937499492,
+      "campaign_wall_seconds": 13.607467412948608,
+      "candidate_id": "V2-CAND-02918",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 1024,
+        "depth": 8,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "mlp",
+      "graph_fingerprint": "61bf9cff6bda7511",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 3157, 808, 566.07",
+        "processes": "3999, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "MODEL_DISAGREEMENT",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.38644748770159204,
+      "v2_predicted_probability": 0.3535885878734464,
+      "wall_seconds": 10.836339950561523,
+      "workload_group_id": "mlp|{\"batch\":1024,\"depth\":8,\"width\":8192}|float32"
+    },
+    {
+      "aggregate_score": 0.9034464117305205,
+      "campaign_wall_seconds": 16.89274549484253,
+      "candidate_id": "V2-CAND-00527",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 16,
+        "layers": 3,
+        "sequence": 4096,
+        "width": 2048
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "transformer",
+      "graph_fingerprint": "68d35f938c2809a6",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 3163, 802, 566.07",
+        "processes": "4608, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.3764928494372571,
+      "v2_predicted_probability": 0.3416804852897725,
+      "wall_seconds": 14.488844871520996,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":3,\"sequence\":4096,\"width\":2048}|float16"
+    },
+    {
+      "aggregate_score": 1.1117670129031734,
+      "campaign_wall_seconds": 15.554148197174072,
+      "candidate_id": "V2-CAND-00110",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2048,
+        "depth": 8,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "mlp",
+      "graph_fingerprint": "0f9c4ca82cbefffb",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 3157, 808, 566.07",
+        "processes": "5443, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "MODEL_DISAGREEMENT",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.39965589582685734,
+      "v2_predicted_probability": 0.3628487295026244,
+      "wall_seconds": 13.249852418899536,
+      "workload_group_id": "mlp|{\"batch\":2048,\"depth\":8,\"width\":8192}|float32"
+    },
+    {
+      "aggregate_score": 1.0433672845702633,
+      "campaign_wall_seconds": 7.236017465591431,
+      "candidate_id": "V2-CAND-00524",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 32,
+        "depth": 8,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "mlp",
+      "graph_fingerprint": "adc00a3aa4faf4ba",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 3157, 808, 566.07",
+        "processes": "6069, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "MODEL_DISAGREEMENT",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.3642446214100309,
+      "v2_predicted_probability": 0.33644001681046803,
+      "wall_seconds": 5.143336534500122,
+      "workload_group_id": "mlp|{\"batch\":32,\"depth\":8,\"width\":8192}|float32"
+    },
+    {
+      "aggregate_score": 1.0433672845702633,
+      "campaign_wall_seconds": 7.30935263633728,
+      "candidate_id": "V2-CAND-02118",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 32,
+        "depth": 8,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "training",
+      "graph_fingerprint": "fac602ffdcb68f4a",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 3157, 808, 566.07",
+        "processes": "6211, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "MODEL_DISAGREEMENT",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.3642446214100309,
+      "v2_predicted_probability": 0.33644001681046803,
+      "wall_seconds": 5.24831748008728,
+      "workload_group_id": "training|{\"batch\":32,\"depth\":8,\"width\":8192}|float32"
+    },
+    {
+      "aggregate_score": 1.0425530020901095,
+      "campaign_wall_seconds": 12.652377843856812,
+      "candidate_id": "V2-CAND-02270",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 8,
+        "depth": 8,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "mlp",
+      "graph_fingerprint": "02c7403ad2bfcfc3",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 3157, 808, 566.07",
+        "processes": "6736, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "MODEL_DISAGREEMENT",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.35929466294895007,
+      "v2_predicted_probability": 0.33220618657904066,
+      "wall_seconds": 9.395700931549072,
+      "workload_group_id": "mlp|{\"batch\":8,\"depth\":8,\"width\":8192}|float32"
+    },
+    {
+      "aggregate_score": 2.128020175253423,
+      "campaign_wall_seconds": 90.28661251068115,
+      "candidate_id": "V2-CAND-03691",
+      "compile_feasibility_score": 1.0,
+      "configuration": {
+        "batch": 256,
+        "channels": 16,
+        "height": 224,
+        "out_channels": 96,
+        "width": 160
+      },
+      "dtype": "float32",
+      "error": "subprocess timeout after 90s",
+      "family": "convolution",
+      "graph_fingerprint": "8c80ff7020535970",
+      "outcome": "COMPILE_TIMEOUT",
+      "phase": "compile",
+      "repeat_id": 0,
+      "selection_category": "HIGH_RISK_COMPILE_AUDIT",
+      "status": "COMPILE_TIMEOUT",
+      "v1_predicted_probability": 0.8831395039797715,
+      "v2_predicted_probability": 0.7690579636375661,
+      "workload_group_id": "convolution|{\"batch\":256,\"channels\":16,\"height\":224,\"out_channels\":96,\"width\":160}|float32"
+    },
+    {
+      "aggregate_score": 0.1563422382603362,
+      "campaign_wall_seconds": 6.035120248794556,
+      "candidate_id": "V2-CAND-00004",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 8,
+        "depth": 8,
+        "width": 6144
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "autodiff",
+      "graph_fingerprint": "dc5c1f46d2e25d42",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1111, 2854, 566.07",
+        "processes": "8779, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.13986119920283588,
+      "v2_predicted_probability": 0.17413698202754768,
+      "wall_seconds": 3.733096122741699,
+      "workload_group_id": "autodiff|{\"batch\":8,\"depth\":8,\"width\":6144}|float32"
+    },
+    {
+      "aggregate_score": 0.002374990567114933,
+      "campaign_wall_seconds": 9.17877984046936,
+      "candidate_id": "V2-CAND-00006",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "depth": 2,
+        "k": 768,
+        "m": 256,
+        "n": 1024
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "matmul",
+      "graph_fingerprint": "5a1bff5da6dc9b02",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 225, 3740, 566.07",
+        "processes": "8900, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.10616101090570963,
+      "v2_predicted_probability": 0.14249062343993468,
+      "wall_seconds": 6.899601697921753,
+      "workload_group_id": "matmul|{\"depth\":2,\"k\":768,\"m\":256,\"n\":1024}|float16"
+    },
+    {
+      "aggregate_score": 0.01085709973538255,
+      "campaign_wall_seconds": 6.680976629257202,
+      "candidate_id": "V2-CAND-00015",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "depth": 1,
+        "k": 3072,
+        "m": 512,
+        "n": 1024
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "matmul",
+      "graph_fingerprint": "4f7dfdabd6f88b35",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 239, 3726, 566.07",
+        "processes": "9031, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.12970281906351455,
+      "v2_predicted_probability": 0.17208960222752492,
+      "wall_seconds": 4.5742151737213135,
+      "workload_group_id": "matmul|{\"depth\":1,\"k\":3072,\"m\":512,\"n\":1024}|float32"
+    },
+    {
+      "aggregate_score": 0.000543915250415161,
+      "campaign_wall_seconds": 3.5649476051330566,
+      "candidate_id": "V2-CAND-00008",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 16,
+        "depth": 2,
+        "length": 512,
+        "width": 32
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "scan",
+      "graph_fingerprint": "0e962ceede49a01e",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 111, 3854, 566.07",
+        "processes": "9134, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.09655611211774594,
+      "v2_predicted_probability": 0.13142619385739274,
+      "wall_seconds": 1.474987268447876,
+      "workload_group_id": "scan|{\"batch\":16,\"depth\":2,\"length\":512,\"width\":32}|float16"
+    },
+    {
+      "aggregate_score": 0.008687800315598107,
+      "campaign_wall_seconds": 4.125715732574463,
+      "candidate_id": "V2-CAND-00017",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 4,
+        "depth": 1,
+        "length": 4096,
+        "width": 256
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "scan",
+      "graph_fingerprint": "69a13c230b3cd714",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 151, 3814, 566.07",
+        "processes": "9235, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v1_predicted_probability": 0.10364808913018372,
+      "v2_predicted_probability": 0.13897454451374378,
+      "wall_seconds": 2.0738627910614014,
+      "workload_group_id": "scan|{\"batch\":4,\"depth\":1,\"length\":4096,\"width\":256}|float16"
+    },
+    {
+      "aggregate_score": 0.7951150339606986,
+      "campaign_wall_seconds": 26.7533860206604,
+      "candidate_id": "V2-CAND-02948",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 12,
+        "layers": 2,
+        "sequence": 3968,
+        "width": 504
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.42GiB. [tf-allocator-allocation-error=''] [executable_name='jit_fn']",
+      "family": "transformer",
+      "graph_fingerprint": "e5e1284e44402d2f",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2183, 1782, 566.07",
+        "processes": "421, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:19:24.605646     421 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.42GiB (rounded to 1527522304) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:19:24.605855     421 bfc_allocator.cc:601] **__________________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.37014118567575627,
+      "v2_predicted_probability": 0.3495058042888003,
+      "wall_seconds": 22.088974714279175,
+      "workload_group_id": "transformer|{\"heads\":12,\"layers\":2,\"sequence\":3968,\"width\":504}|float32"
+    },
+    {
+      "aggregate_score": 0.7888695509537386,
+      "campaign_wall_seconds": 21.047847509384155,
+      "candidate_id": "V2-CAND-02129",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 12,
+        "layers": 4,
+        "sequence": 3968,
+        "width": 252
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.42GiB. [tf-allocator-allocation-error=''] [executable_name='jit_fn']",
+      "family": "transformer",
+      "graph_fingerprint": "dc2e6e78b3d47cf9",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2179, 1786, 566.07",
+        "processes": "628, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:19:46.237969     628 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.42GiB (rounded to 1519524864) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:19:46.238122     628 bfc_allocator.cc:601] *___________________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.3682496797430588,
+      "v2_predicted_probability": 0.34823445612859943,
+      "wall_seconds": 18.760342836380005,
+      "workload_group_id": "transformer|{\"heads\":12,\"layers\":4,\"sequence\":3968,\"width\":252}|float32"
+    },
+    {
+      "aggregate_score": 0.8310579715612327,
+      "campaign_wall_seconds": 18.14237141609192,
+      "candidate_id": "V2-CAND-01701",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 4,
+        "head_dim": 64,
+        "heads": 2,
+        "sequence": 4992
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.49GiB. [tf-allocator-allocation-error=''] [executable_name='jit_fn']",
+      "family": "attention",
+      "graph_fingerprint": "61008ad91060aa2e",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2215, 1750, 566.07",
+        "processes": "840, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:20:04.500778     840 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.49GiB (rounded to 1594884352) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:20:04.501029     840 bfc_allocator.cc:601] **__________________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.37839888125660076,
+      "v2_predicted_probability": 0.3534197094176366,
+      "wall_seconds": 15.888173580169678,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":64,\"heads\":2,\"sequence\":4992}|float32"
+    },
+    {
+      "aggregate_score": 0.8160064688421418,
+      "campaign_wall_seconds": 27.812398195266724,
+      "candidate_id": "V2-CAND-00707",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 12,
+        "layers": 3,
+        "sequence": 3840,
+        "width": 1536
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.38GiB. [tf-allocator-allocation-error=''] [executable_name='jit_fn']",
+      "family": "transformer",
+      "graph_fingerprint": "13f538ba753144aa",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2391, 1574, 566.07",
+        "processes": "967, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:20:32.262561     967 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.38GiB (rounded to 1486356480) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:20:32.262772     967 bfc_allocator.cc:601] *********___________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.3753832053833463,
+      "v2_predicted_probability": 0.3538306573386578,
+      "wall_seconds": 25.561933517456055,
+      "workload_group_id": "transformer|{\"heads\":12,\"layers\":3,\"sequence\":3840,\"width\":1536}|float32"
+    },
+    {
+      "aggregate_score": 0.8470573499798775,
+      "campaign_wall_seconds": 18.630847454071045,
+      "candidate_id": "V2-CAND-03231",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 4,
+        "head_dim": 64,
+        "heads": 12,
+        "sequence": 2048
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.50GiB. [tf-allocator-allocation-error=''] [executable_name='jit_fn']",
+      "family": "attention",
+      "graph_fingerprint": "cd2579e5ed637a9d",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2295, 1670, 566.07",
+        "processes": "1192, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:20:50.952718    1192 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.50GiB (rounded to 1610612736) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:20:50.953000    1192 bfc_allocator.cc:601] ***_________________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.38093150981052704,
+      "v2_predicted_probability": 0.3550708692271799,
+      "wall_seconds": 16.388818502426147,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":64,\"heads\":12,\"sequence\":2048}|float32"
+    },
+    {
+      "aggregate_score": 0.8363508076822317,
+      "campaign_wall_seconds": 34.22727632522583,
+      "candidate_id": "V2-CAND-00891",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2,
+        "head_dim": 128,
+        "heads": 4,
+        "sequence": 4992
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.49GiB. [tf-allocator-allocation-error=''] [executable_name='jit_fn']",
+      "family": "attention",
+      "graph_fingerprint": "573d8ef2c5f025e7",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2295, 1670, 566.07",
+        "processes": "1320, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:21:24.093440    1320 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.49GiB (rounded to 1594884096) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:21:24.093959    1320 bfc_allocator.cc:601] ***_________________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.3824229064341448,
+      "v2_predicted_probability": 0.35660027003822437,
+      "wall_seconds": 29.459428071975708,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":128,\"heads\":4,\"sequence\":4992}|float32"
+    },
+    {
+      "aggregate_score": 0.7973225028717402,
+      "campaign_wall_seconds": 31.28866720199585,
+      "candidate_id": "V2-CAND-02574",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2,
+        "head_dim": 64,
+        "heads": 12,
+        "sequence": 2816
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.42GiB. [executable_name='jit_fn'] [tf-allocator-allocation-error='']",
+      "family": "attention",
+      "graph_fingerprint": "0b7f4b7fe1e0aef8",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2295, 1670, 566.07",
+        "processes": "1452, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:21:56.379065    1452 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.42GiB (rounded to 1522532352) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:21:56.379360    1452 bfc_allocator.cc:601] ***_________________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.36078710194946423,
+      "v2_predicted_probability": 0.3413015999165989,
+      "wall_seconds": 24.061867237091064,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":64,\"heads\":12,\"sequence\":2816}|float32"
+    },
+    {
+      "aggregate_score": 0.797093485924197,
+      "campaign_wall_seconds": 25.257486581802368,
+      "candidate_id": "V2-CAND-01917",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2,
+        "head_dim": 48,
+        "heads": 8,
+        "sequence": 3456
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.42GiB. [executable_name='jit_fn'] [tf-allocator-allocation-error='']",
+      "family": "attention",
+      "graph_fingerprint": "b392957038b865ff",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2215, 1750, 566.07",
+        "processes": "1580, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:22:21.783558    1580 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.42GiB (rounded to 1528824064) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:22:21.783756    1580 bfc_allocator.cc:601] **__________________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.36082386460973676,
+      "v2_predicted_probability": 0.34115463278313135,
+      "wall_seconds": 22.15272545814514,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":48,\"heads\":8,\"sequence\":3456}|float32"
+    },
+    {
+      "aggregate_score": 0.7904986460458691,
+      "campaign_wall_seconds": 31.3148512840271,
+      "candidate_id": "V2-CAND-02525",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 16,
+        "layers": 4,
+        "sequence": 3072,
+        "width": 2048
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.20GiB. [executable_name='jit_fn'] [tf-allocator-allocation-error='']",
+      "family": "transformer",
+      "graph_fingerprint": "2df7605d4e9beb8a",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2647, 1318, 566.07",
+        "processes": "1701, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:22:53.010988    1701 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.20GiB (rounded to 1283457024) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:22:53.011241    1701 bfc_allocator.cc:601] *************_______________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.35546215594541186,
+      "v2_predicted_probability": 0.34023224960642817,
+      "wall_seconds": 29.01383638381958,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":4,\"sequence\":3072,\"width\":2048}|float32"
+    },
+    {
+      "aggregate_score": 0.853155986471862,
+      "campaign_wall_seconds": 18.35161781311035,
+      "candidate_id": "V2-CAND-01053",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2,
+        "head_dim": 32,
+        "heads": 2,
+        "sequence": 7168
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.53GiB. [executable_name='jit_fn'] [tf-allocator-allocation-error='']",
+      "family": "attention",
+      "graph_fingerprint": "353ff506ae4c6137",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2203, 1762, 566.07",
+        "processes": "1921, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:23:11.481173    1921 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.53GiB (rounded to 1644167168) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:23:11.481338    1921 bfc_allocator.cc:601] *___________________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.389522113459214,
+      "v2_predicted_probability": 0.3607714505059943,
+      "wall_seconds": 15.365755081176758,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":32,\"heads\":2,\"sequence\":7168}|float32"
+    },
+    {
+      "aggregate_score": 0.903461255421565,
+      "campaign_wall_seconds": 18.74549651145935,
+      "candidate_id": "V2-CAND-01026",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 4,
+        "head_dim": 80,
+        "heads": 2,
+        "sequence": 6016
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.08GiB. [tf-allocator-allocation-error=''] [executable_name='jit_fn']",
+      "family": "attention",
+      "graph_fingerprint": "140518d5bba655ca",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2213, 1752, 566.07",
+        "processes": "2043, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:23:30.105557    2043 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.08GiB (rounded to 1158152448) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:23:30.105768    2043 bfc_allocator.cc:601] *___________________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.37253629964528895,
+      "v2_predicted_probability": 0.33659759293490904,
+      "wall_seconds": 16.40708589553833,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":80,\"heads\":2,\"sequence\":6016}|float16"
+    },
+    {
+      "aggregate_score": 0.903461255421565,
+      "campaign_wall_seconds": 19.383602142333984,
+      "candidate_id": "V2-CAND-03321",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 1,
+        "head_dim": 80,
+        "heads": 8,
+        "sequence": 6016
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.08GiB. [executable_name='jit_fn'] [tf-allocator-allocation-error='']",
+      "family": "attention",
+      "graph_fingerprint": "19bc02a4bfbbd02f",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2213, 1752, 566.07",
+        "processes": "2180, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:23:49.591723    2180 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.08GiB (rounded to 1158152448) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:23:49.591920    2180 bfc_allocator.cc:601] *___________________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.37253629964528895,
+      "v2_predicted_probability": 0.33659759293490904,
+      "wall_seconds": 16.810895681381226,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":80,\"heads\":8,\"sequence\":6016}|float16"
+    },
+    {
+      "aggregate_score": 0.7472775286471384,
+      "campaign_wall_seconds": 22.78513765335083,
+      "candidate_id": "V2-CAND-01841",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 12,
+        "layers": 3,
+        "sequence": 3840,
+        "width": 504
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.33GiB. [tf-allocator-allocation-error=''] [executable_name='jit_fn']",
+      "family": "transformer",
+      "graph_fingerprint": "86da6e58306e4952",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2199, 1766, 566.07",
+        "processes": "2337, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:24:12.453142    2337 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.33GiB (rounded to 1431062016) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:24:12.453397    2337 bfc_allocator.cc:601] **__________________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.35093062155041077,
+      "v2_predicted_probability": 0.3365875318217724,
+      "wall_seconds": 20.375508069992065,
+      "workload_group_id": "transformer|{\"heads\":12,\"layers\":3,\"sequence\":3840,\"width\":504}|float32"
+    },
+    {
+      "aggregate_score": 0.8713670748561325,
+      "campaign_wall_seconds": 17.02955150604248,
+      "candidate_id": "V2-CAND-00621",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 4,
+        "head_dim": 32,
+        "heads": 2,
+        "sequence": 5120
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.56GiB. [executable_name='jit_fn'] [tf-allocator-allocation-error='']",
+      "family": "attention",
+      "graph_fingerprint": "3b84f7a8c9875859",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2207, 1758, 566.07",
+        "processes": "2545, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:24:29.496789    2545 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.56GiB (rounded to 1677721600) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:24:29.497063    2545 bfc_allocator.cc:601] *___________________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.39398043041585423,
+      "v2_predicted_probability": 0.3635770236968184,
+      "wall_seconds": 14.651343822479248,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":32,\"heads\":2,\"sequence\":5120}|float32"
+    },
+    {
+      "aggregate_score": 0.8569559713792457,
+      "campaign_wall_seconds": 19.481891632080078,
+      "candidate_id": "V2-CAND-03834",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2,
+        "head_dim": 96,
+        "heads": 2,
+        "sequence": 7168
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.53GiB. [executable_name='jit_fn'] [tf-allocator-allocation-error='']",
+      "family": "attention",
+      "graph_fingerprint": "6f2650ff20bb5833",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2215, 1750, 566.07",
+        "processes": "2667, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:24:49.022550    2667 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.53GiB (rounded to 1644167168) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:24:49.022798    2667 bfc_allocator.cc:601] **__________________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.39454925422098436,
+      "v2_predicted_probability": 0.3649104480173787,
+      "wall_seconds": 17.189106702804565,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":96,\"heads\":2,\"sequence\":7168}|float32"
+    },
+    {
+      "aggregate_score": 0.8703152933192673,
+      "campaign_wall_seconds": 20.03824806213379,
+      "candidate_id": "V2-CAND-00549",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 1,
+        "head_dim": 160,
+        "heads": 16,
+        "sequence": 3584
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.53GiB. [tf-allocator-allocation-error=''] [executable_name='jit_fn']",
+      "family": "attention",
+      "graph_fingerprint": "4bb5db37286ad4ca",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2391, 1574, 566.07",
+        "processes": "2795, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:25:08.904848    2795 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.53GiB (rounded to 1644167168) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:25:08.905033    2795 bfc_allocator.cc:601] *****x______________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.3949413301150595,
+      "v2_predicted_probability": 0.3651527788952643,
+      "wall_seconds": 17.759217262268066,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":160,\"heads\":16,\"sequence\":3584}|float32"
+    },
+    {
+      "aggregate_score": 0.7402781981878485,
+      "campaign_wall_seconds": 29.4705069065094,
+      "candidate_id": "V2-CAND-01850",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 12,
+        "layers": 1,
+        "sequence": 3840,
+        "width": 384
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.32GiB. [tf-allocator-allocation-error=''] [executable_name='jit_fn']",
+      "family": "transformer",
+      "graph_fingerprint": "601931d2bacd23f0",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2215, 1750, 566.07",
+        "processes": "2931, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:25:34.436666    2931 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.32GiB (rounded to 1415577856) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:25:34.436866    2931 bfc_allocator.cc:601] *___________________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.3442974015540407,
+      "v2_predicted_probability": 0.33117008386629165,
+      "wall_seconds": 22.819506883621216,
+      "workload_group_id": "transformer|{\"heads\":12,\"layers\":1,\"sequence\":3840,\"width\":384}|float32"
+    },
+    {
+      "aggregate_score": 0.8937131914599336,
+      "campaign_wall_seconds": 27.38540244102478,
+      "candidate_id": "V2-CAND-01521",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 4,
+        "head_dim": 96,
+        "heads": 12,
+        "sequence": 2432
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.06GiB. [executable_name='jit_fn'] [tf-allocator-allocation-error='']",
+      "family": "attention",
+      "graph_fingerprint": "982d21d8413f2225",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2301, 1664, 566.07",
+        "processes": "3109, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:26:05.930757    3109 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.06GiB (rounded to 1135607808) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:26:05.931011    3109 bfc_allocator.cc:601] ***_________________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.3633829169828267,
+      "v2_predicted_probability": 0.33038672729756546,
+      "wall_seconds": 16.371516227722168,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":96,\"heads\":12,\"sequence\":2432}|float16"
+    },
+    {
+      "aggregate_score": 0.726438974415041,
+      "campaign_wall_seconds": 27.040087699890137,
+      "candidate_id": "V2-CAND-00149",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 12,
+        "layers": 3,
+        "sequence": 3712,
+        "width": 1020
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.27GiB. [tf-allocator-allocation-error=''] [executable_name='jit_fn']",
+      "family": "transformer",
+      "graph_fingerprint": "5e87c26c91af2107",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2391, 1574, 566.07",
+        "processes": "3243, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:26:32.959552    3243 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.27GiB (rounded to 1368215040) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:26:32.959773    3243 bfc_allocator.cc:601] ****________________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.34119795198789526,
+      "v2_predicted_probability": 0.33023355379901187,
+      "wall_seconds": 24.624415397644043,
+      "workload_group_id": "transformer|{\"heads\":12,\"layers\":3,\"sequence\":3712,\"width\":1020}|float32"
+    },
+    {
+      "aggregate_score": 0.7518032640202321,
+      "campaign_wall_seconds": 37.13326668739319,
+      "candidate_id": "V2-CAND-02466",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 8,
+        "head_dim": 80,
+        "heads": 8,
+        "sequence": 1664
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.32GiB. [tf-allocator-allocation-error=''] [executable_name='jit_fn']",
+      "family": "attention",
+      "graph_fingerprint": "eaacef9b2a6f33b9",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2391, 1574, 566.07",
+        "processes": "3458, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:27:08.345569    3458 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.32GiB (rounded to 1417674752) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:27:08.354344    3458 bfc_allocator.cc:601] *****x______________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.34080685972074226,
+      "v2_predicted_probability": 0.3278130816624801,
+      "wall_seconds": 31.999974250793457,
+      "workload_group_id": "attention|{\"batch\":8,\"head_dim\":80,\"heads\":8,\"sequence\":1664}|float32"
+    },
+    {
+      "aggregate_score": 0.8724867132663437,
+      "campaign_wall_seconds": 28.392794370651245,
+      "candidate_id": "V2-CAND-00167",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 16,
+        "layers": 2,
+        "sequence": 3584,
+        "width": 768
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.55GiB. [executable_name='jit_fn'] [tf-allocator-allocation-error='']",
+      "family": "transformer",
+      "graph_fingerprint": "00dbb0b51a2979e0",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2199, 1766, 566.07",
+        "processes": "3586, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:27:38.718858    3586 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.55GiB (rounded to 1666188288) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:27:38.719066    3586 bfc_allocator.cc:601] ***_________________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.4035934451776607,
+      "v2_predicted_probability": 0.3725542047050285,
+      "wall_seconds": 22.91156506538391,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":2,\"sequence\":3584,\"width\":768}|float32"
+    },
+    {
+      "aggregate_score": 0.7428716030660464,
+      "campaign_wall_seconds": 20.05809998512268,
+      "candidate_id": "V2-CAND-01674",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 1,
+        "head_dim": 80,
+        "heads": 16,
+        "sequence": 3328
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.32GiB. [executable_name='jit_fn'] [tf-allocator-allocation-error='']",
+      "family": "attention",
+      "graph_fingerprint": "eb36cc8ff521d309",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2295, 1670, 566.07",
+        "processes": "3796, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:27:58.778043    3796 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.32GiB (rounded to 1417674752) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:27:58.778337    3796 bfc_allocator.cc:601] ***_________________________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.3393966993991597,
+      "v2_predicted_probability": 0.32677793551808154,
+      "wall_seconds": 17.75542449951172,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":80,\"heads\":16,\"sequence\":3328}|float32"
+    },
+    {
+      "aggregate_score": 0.9032810106017394,
+      "campaign_wall_seconds": 37.34926128387451,
+      "candidate_id": "V2-CAND-02300",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 12,
+        "layers": 4,
+        "sequence": 3840,
+        "width": 2040
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.41GiB. [tf-allocator-allocation-error=''] [executable_name='jit_fn']",
+      "family": "transformer",
+      "graph_fingerprint": "bf64cf559684a878",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2647, 1318, 566.07",
+        "processes": "3932, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "EXECUTION_OOM",
+      "phase": "execute",
+      "repeat_id": 0,
+      "selection_category": "MODERATE_BOUNDARY",
+      "status": "EXECUTION_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "W0913 12:28:35.498424    3932 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.41GiB (rounded to 1509582848) from the lower end requested by op \nIf this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.\nCurrent allocation summary follows.\nW0913 12:28:35.498685    3932 bfc_allocator.cc:601] *************_______________________________________________________________________________________\n",
+      "v1_predicted_probability": 0.4043687429914836,
+      "v2_predicted_probability": 0.37367260510892014,
+      "wall_seconds": 34.02281332015991,
+      "workload_group_id": "transformer|{\"heads\":12,\"layers\":4,\"sequence\":3840,\"width\":2040}|float32"
+    },
+    {
+      "aggregate_score": 2.34521942419796,
+      "campaign_wall_seconds": 8.659482955932617,
+      "candidate_id": "V2-CAND-01531",
+      "compile_feasibility_score": 1.0,
+      "configuration": {
+        "batch": 512,
+        "channels": 48,
+        "height": 192,
+        "out_channels": 96,
+        "width": 80
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Failed to get configs for: 3 out of 4 instructions. See logs for all failures. Example failure: \nOut of memory while trying to allocate 2.83GiB. [tf-allocator-allocation-error='']",
+      "family": "convolution",
+      "graph_fingerprint": "6e2808484780aa5d",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2127, 1838, 566.07",
+        "processes": "4138, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "COMPILE_OOM",
+      "phase": "compile",
+      "repeat_id": 0,
+      "selection_category": "HIGH_RISK_COMPILE_AUDIT",
+      "status": "COMPILE_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "to 4.22GiB (4530014256 bytes), down from 4.22GiB (4530014256 bytes) originally\nE0913 12:28:44.542150    4202 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (4530014224) exceeds the base limit (3435554406). This indicates an error in the calculation!\nW0913 12:28:44.542661    4202 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.81GiB (3019898896 bytes) by rematerialization; only reduced to 7.03GiB (7549913136 bytes), down from 7.03GiB (7549913136 bytes) originally\nE0913 12:28:44.565304    4206 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (4530014224) exceeds the base limit (3435554406). This indicates an error in the calculation!\nW0913 12:28:44.575391    4206 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.81GiB (3019898896 bytes) by rematerialization; only reduced to 7.03GiB (7549913136 bytes), down from 7.03GiB (7549913136 bytes) originally\nE0913 12:28:44.582149    4205 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (4530014224) exceeds the base limit (3435554406). This indicates an error in the calculation!\nW0913 12:28:44.582749    4205 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.81GiB (3019898896 bytes) by rematerialization; only reduced to 2.81GiB (3019991200 bytes), down from 2.81GiB (3019991200 bytes) originally\nE0913 12:28:44.589092    4210 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (4530014224) exceeds the base limit (3435554406). This indicates an error in the calculation!\nW0913 12:28:44.589580    4210 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.81GiB (3019898896 bytes) by rematerialization; only reduced to 7.03GiB (7549913136 bytes), down from 7.03GiB (7549913136 bytes) originally\nE0913 12:28:44.597339    4209 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (4530014224) exceeds the base limit (3435554406). This indicates an error in the calculation!\nW0913 12:28:44.597786    4209 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.81GiB (3019898896 bytes) by rematerialization; only reduced to 7.03GiB (7549913136 bytes), down from 7.03GiB (7549913136 bytes) originally\nE0913 12:28:44.616544    4208 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (4530014224) exceeds the base limit (3435554406). This indicates an error in the calculation!\nW0913 12:28:44.643712    4209 bfc_allocator.cc:363] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.42GiB from the lower end with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.\nE0913 12:28:44.645128    4138 config_assigner.cc:478] Could not get config for HLO: %cudnn-conv.1 = (f32[512,96,192,80]{3,2,1,0}, u8[0]{0}) custom-call(%wrapped_transpose, %wrapped_transpose.1), window={size=3x3 pad=1_1x1_1}, dim_labels=bf01_oi01->bf01, custom_call_target=\"__cudnn$convForward\", metadata={op_name=\"jit(fn)/conv_general_dilated\" stack_frame_id=5}, backend_config={\"operation_queue_id\":\"0\",\"cudnn_conv_backend_config\":{\"activation_mode\":\"kNone\",\"conv_result_scale\":1,\"side_input_scale\":0,\"leakyrelu_alpha\":0},\"force_earliest_schedule\":false,\"reification_cost\":[],\"device_type\":\"DEVICE_TYPE_INVALID\"}. Status: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.42GiB. [tf-allocator-allocation-error='']\n=== Source Location Trace: ===\nexternal/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:269\nexternal/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:192\nexternal/xla/xla/stream_executor/gpu/redzone_allocator.cc:93\nexternal/xla/xla/stream_executor/gpu/redzone_allocator.cc:262\nexternal/xla/xla/service/gpu/autotuning/redzone_buffers.cc:107\nexternal/xla/xla/service/gpu/autotuning/redzone_buffers.cc:89\nexternal/xla/xla/backends/gpu/autotuner/gpu_profiler.cc:269\nexternal/xla/xla/backends/autotuner/config_runner.cc:69\nexternal/xla/xla/backends/autotuner/config_assigner.cc:417\n\n",
+      "v1_predicted_probability": 0.919259788269535,
+      "v2_predicted_probability": 0.816458392937774,
+      "wall_seconds": 4.612513542175293,
+      "workload_group_id": "convolution|{\"batch\":512,\"channels\":48,\"height\":192,\"out_channels\":96,\"width\":80}|float32"
+    },
+    {
+      "aggregate_score": 2.225705445753423,
+      "campaign_wall_seconds": 3.8331518173217773,
+      "candidate_id": "V2-CAND-00826",
+      "compile_feasibility_score": 1.0,
+      "configuration": {
+        "batch": 128,
+        "depth": 2,
+        "length": 8192,
+        "width": 512
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Failed to get configs for: 2 out of 2 instructions. See logs for all failures. Example failure: \nOut of memory while trying to allocate 2.02GiB. [tf-allocator-allocation-error='']",
+      "family": "reduction",
+      "graph_fingerprint": "82bbc5dc7a216c26",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2055, 1910, 566.07",
+        "processes": "4265, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "COMPILE_OOM",
+      "phase": "compile",
+      "repeat_id": 0,
+      "selection_category": "HIGH_RISK_COMPILE_AUDIT",
+      "status": "COMPILE_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "5\n\nE0913 12:28:48.937590    4265 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory\nE0913 12:28:48.937595    4265 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: ===\nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:48.937598    4265 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7a8a900014f0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: ===\nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:48.937601    4265 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory\nE0913 12:28:48.937606    4265 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: ===\nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:48.937634    4265 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7a8a900014f0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: ===\nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:48.937643    4265 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory\nE0913 12:28:48.937650    4265 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: ===\nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:48.937653    4265 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7a8a900014f0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: ===\nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:48.937656    4265 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory\nE0913 12:28:48.937660    4265 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: ===\nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:48.937664    4265 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7a8a900014f0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: ===\nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:48.937667    4265 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory\nE0913 12:28:48.937978    4265 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory\nE0913 12:28:48.938021    4265 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory\nE0913 12:28:48.938028    4265 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory\nE0913 12:28:48.938040    4265 cuda_device_allocator.cc:302] [0] Failed to synchronize before device memory deallocation at 0x700000000: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: ===\nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:48.939498    4265 cuda_device_allocator.cc:302] [0] Failed to synchronize before device memory deallocation at 0x702000000: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: ===\nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:48.941046    4265 cuda_device_allocator.cc:302] [0] Failed to synchronize before device memory deallocation at 0x782000000: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: ===\nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:48.964524    4265 cuda_host_allocator.cc:107] [0] Failed to free host memory at 0x204e00000: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: ===\nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\n",
+      "v1_predicted_probability": 0.8957789774514443,
+      "v2_predicted_probability": 0.7803538442325844,
+      "wall_seconds": 1.7068488597869873,
+      "workload_group_id": "reduction|{\"batch\":128,\"depth\":2,\"length\":8192,\"width\":512}|float32"
+    },
+    {
+      "aggregate_score": 2.2246197357798847,
+      "campaign_wall_seconds": 3.7826030254364014,
+      "candidate_id": "V2-CAND-02086",
+      "compile_feasibility_score": 1.0,
+      "configuration": {
+        "batch": 64,
+        "depth": 2,
+        "length": 8192,
+        "width": 1024
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Failed to get configs for: 2 out of 2 instructions. See logs for all failures. Example failure: \nOut of memory while trying to allocate 2.02GiB. [tf-allocator-allocation-error='']",
+      "family": "reduction",
+      "graph_fingerprint": "ae970344c7a8cc0e",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2055, 1910, 566.07",
+        "processes": "4353, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "COMPILE_OOM",
+      "phase": "compile",
+      "repeat_id": 0,
+      "selection_category": "HIGH_RISK_COMPILE_AUDIT",
+      "status": "COMPILE_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "28:52.716523    4353 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory\nE0913 12:28:52.716529    4353 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: === \nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:52.716536    4353 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7f15500014f0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: === \nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:52.716539    4353 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory\nE0913 12:28:52.716543    4353 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: === \nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:52.716548    4353 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7f15500014f0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: === \nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:52.716551    4353 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory\nE0913 12:28:52.716556    4353 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: === \nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:52.716559    4353 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7f15500014f0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: === \nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:52.716562    4353 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory\nE0913 12:28:52.716567    4353 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: === \nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:52.716596    4353 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7f15500014f0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: === \nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:52.716605    4353 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory\nE0913 12:28:52.716950    4353 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory\nE0913 12:28:52.716993    4353 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory\nE0913 12:28:52.716999    4353 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory\nE0913 12:28:52.717012    4353 cuda_device_allocator.cc:302] [0] Failed to synchronize before device memory deallocation at 0x700000000: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: === \nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:52.718890    4353 cuda_device_allocator.cc:302] [0] Failed to synchronize before device memory deallocation at 0x702000000: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: === \nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:52.720313    4353 cuda_device_allocator.cc:302] [0] Failed to synchronize before device memory deallocation at 0x782000000: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: === \nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\nE0913 12:28:52.744487    4353 cuda_host_allocator.cc:107] [0] Failed to free host memory at 0x204e00000: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory\n=== Source Location Trace: === \nexternal/xla/xla/stream_executor/cuda/cuda_status.cc:45\n\n",
+      "v1_predicted_probability": 0.8956470898559072,
+      "v2_predicted_probability": 0.7801870370015355,
+      "wall_seconds": 1.7618680000305176,
+      "workload_group_id": "reduction|{\"batch\":64,\"depth\":2,\"length\":8192,\"width\":1024}|float32"
+    },
+    {
+      "aggregate_score": 2.5015330332690255,
+      "campaign_wall_seconds": 4.950011968612671,
+      "candidate_id": "V2-CAND-01999",
+      "compile_feasibility_score": 1.0,
+      "configuration": {
+        "batch": 256,
+        "channels": 32,
+        "height": 192,
+        "out_channels": 96,
+        "width": 192
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Failed to get configs for: 3 out of 4 instructions. See logs for all failures. Example failure: \nOut of memory while trying to allocate 1.14GiB. [tf-allocator-allocation-error='']",
+      "family": "convolution",
+      "graph_fingerprint": "699593053856fd5e",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2127, 1838, 566.07",
+        "processes": "4441, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "COMPILE_OOM",
+      "phase": "compile",
+      "repeat_id": 0,
+      "selection_category": "HIGH_RISK_COMPILE_AUDIT",
+      "status": "COMPILE_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "    4441 config_assigner.cc:478] Could not get config for HLO: %cudnn-conv.1 = (f32[256,96,192,192]{3,2,1,0}, u8[0]{0}) custom-call(%wrapped_transpose, %wrapped_transpose.1), window={size=3x3 pad=1_1x1_1}, dim_labels=bf01_oi01->bf01, custom_call_target=\"__cudnn$convForward\", metadata={op_name=\"jit(fn)/conv_general_dilated\" stack_frame_id=5}, backend_config={\"operation_queue_id\":\"0\",\"cudnn_conv_backend_config\":{\"activation_mode\":\"kNone\",\"conv_result_scale\":1,\"side_input_scale\":0,\"leakyrelu_alpha\":0},\"force_earliest_schedule\":false,\"reification_cost\":[],\"device_type\":\"DEVICE_TYPE_INVALID\"}. Status: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.14GiB. [tf-allocator-allocation-error='']\n=== Source Location Trace: === \nexternal/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:269\nexternal/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:192\nexternal/xla/xla/stream_executor/gpu/redzone_allocator.cc:93\nexternal/xla/xla/stream_executor/gpu/redzone_allocator.cc:262\nexternal/xla/xla/service/gpu/autotuning/redzone_buffers.cc:107\nexternal/xla/xla/service/gpu/autotuning/redzone_buffers.cc:89\nexternal/xla/xla/backends/gpu/autotuner/gpu_profiler.cc:269\nexternal/xla/xla/backends/autotuner/config_runner.cc:69\nexternal/xla/xla/backends/autotuner/config_assigner.cc:417\n\nE0913 12:28:57.254145    4441 config_assigner.cc:478] Could not get config for HLO: %wrapped_transpose.2 = f32[256,192,192,96]{3,2,1,0} fusion(%get-tuple-element.1.0), kind=kInput, calls=\n(param_0.2: f32[256,96,192,192]) -> f32[256,192,192,96] {\n  %param_0.2 = f32[256,96,192,192]{3,2,1,0} parameter(0)\n  ROOT %transpose.2.1 = f32[256,192,192,96]{3,2,1,0} transpose(%param_0.2), dimensions={0,2,3,1}, metadata={op_name=\"jit(fn)/conv_general_dilated\" stack_frame_id=5}\n}, metadata={op_name=\"jit(fn)/conv_general_dilated\" stack_frame_id=5}. Status: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 3.39GiB. [tf-allocator-allocation-error='']\n=== Source Location Trace: === \nexternal/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:269\nexternal/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:192\nexternal/xla/xla/stream_executor/gpu/redzone_allocator.cc:93\nexternal/xla/xla/stream_executor/gpu/redzone_allocator.cc:262\nexternal/xla/xla/service/gpu/autotuning/redzone_buffers.cc:107\nexternal/xla/xla/service/gpu/autotuning/redzone_buffers.cc:89\nexternal/xla/xla/backends/gpu/autotuner/gpu_profiler.cc:269\nexternal/xla/xla/backends/autotuner/config_runner.cc:69\nexternal/xla/xla/backends/autotuner/config_assigner.cc:417\n\nW0913 12:28:57.333368    4506 bfc_allocator.cc:363] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.14GiB from the lower end with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.\nE0913 12:28:57.333596    4441 config_assigner.cc:478] Could not get config for HLO: %wrapped_transpose = f32[256,32,192,192]{3,2,1,0} fusion(%x.1), kind=kInput, calls=\n(param_0: f32[256,192,192,32]) -> f32[256,32,192,192] {\n  %param_0 = f32[256,192,192,32]{3,2,1,0} parameter(0)\n  ROOT %transpose.4 = f32[256,32,192,192]{3,2,1,0} transpose(%param_0), dimensions={0,3,1,2}, metadata={op_name=\"x\"}\n}, metadata={op_name=\"x\"}. Status: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.14GiB. [tf-allocator-allocation-error='']\n=== Source Location Trace: === \nexternal/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:269\nexternal/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:192\nexternal/xla/xla/stream_executor/gpu/redzone_allocator.cc:93\nexternal/xla/xla/stream_executor/gpu/redzone_allocator.cc:262\nexternal/xla/xla/service/gpu/autotuning/redzone_buffers.cc:107\nexternal/xla/xla/service/gpu/autotuning/redzone_buffers.cc:89\nexternal/xla/xla/backends/gpu/autotuner/gpu_profiler.cc:269\nexternal/xla/xla/backends/autotuner/config_runner.cc:69\nexternal/xla/xla/backends/autotuner/config_assigner.cc:417\n\n",
+      "v1_predicted_probability": 0.9376102960209916,
+      "v2_predicted_probability": 0.8436610051204833,
+      "wall_seconds": 2.3655142784118652,
+      "workload_group_id": "convolution|{\"batch\":256,\"channels\":32,\"height\":192,\"out_channels\":96,\"width\":192}|float32"
+    },
+    {
+      "aggregate_score": 1.8761163766469193,
+      "campaign_wall_seconds": 14.867924451828003,
+      "candidate_id": "V2-CAND-03754",
+      "compile_feasibility_score": 1.0,
+      "configuration": {
+        "batch": 512,
+        "channels": 64,
+        "height": 128,
+        "out_channels": 8,
+        "width": 192
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "error": "JaxRuntimeError: RESOURCE_EXHAUSTED: Failed to get configs for: 2 out of 4 instructions. See logs for all failures. Example failure: \nOut of memory while trying to allocate 3.02GiB. [tf-allocator-allocation-error='']",
+      "family": "convolution",
+      "graph_fingerprint": "15876d1d111f308a",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 2159, 1806, 566.07",
+        "processes": "4563, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "COMPILE_OOM",
+      "phase": "compile",
+      "repeat_id": 0,
+      "selection_category": "HIGH_RISK_COMPILE_AUDIT",
+      "status": "COMPILE_OOM",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": " (4026550320 bytes), down from 3.75GiB (4026550320 bytes) originally\nE0913 12:29:11.891051    4628 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (3623897104) exceeds the base limit (3435554406). This indicates an error in the calculation!\nW0913 12:29:11.891683    4628 hlo_rematerialization.cc:3282] Can't reduce memory use below 384.00MiB (402653200 bytes) by rematerialization; only reduced to 3.38GiB (3623897136 bytes), down from 3.38GiB (3623897136 bytes) originally\nE0913 12:29:11.907296    4636 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (3623897104) exceeds the base limit (3435554406). This indicates an error in the calculation!\nW0913 12:29:11.907916    4636 hlo_rematerialization.cc:3282] Can't reduce memory use below 384.00MiB (402653200 bytes) by rematerialization; only reduced to 384.14MiB (402800800 bytes), down from 384.14MiB (402800800 bytes) originally\nE0913 12:29:11.911789    4632 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (3623897104) exceeds the base limit (3435554406). This indicates an error in the calculation!\nE0913 12:29:11.911864    4630 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (3623897104) exceeds the base limit (3435554406). This indicates an error in the calculation!\nW0913 12:29:11.912416    4632 hlo_rematerialization.cc:3282] Can't reduce memory use below 384.00MiB (402653200 bytes) by rematerialization; only reduced to 384.00MiB (402655520 bytes), down from 384.00MiB (402655520 bytes) originally\nW0913 12:29:11.912446    4630 hlo_rematerialization.cc:3282] Can't reduce memory use below 384.00MiB (402653200 bytes) by rematerialization; only reduced to 3.75GiB (4026550320 bytes), down from 3.75GiB (4026550320 bytes) originally\nE0913 12:29:11.912808    4631 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (3623897104) exceeds the base limit (3435554406). This indicates an error in the calculation!\nE0913 12:29:11.912824    4627 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (3623897104) exceeds the base limit (3435554406). This indicates an error in the calculation!\nW0913 12:29:11.913228    4627 hlo_rematerialization.cc:3282] Can't reduce memory use below 384.00MiB (402653200 bytes) by rematerialization; only reduced to 3.75GiB (4026550320 bytes), down from 3.75GiB (4026550320 bytes) originally\nW0913 12:29:11.954023    4627 bfc_allocator.cc:363] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.02GiB from the lower end with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.\nE0913 12:29:11.955240    4563 config_assigner.cc:478] Could not get config for HLO: %cudnn-conv.1 = (f32[512,8,128,192]{3,2,1,0}, u8[0]{0}) custom-call(%wrapped_transpose, %wrapped_transpose.1), window={size=3x3 pad=1_1x1_1}, dim_labels=bf01_oi01->bf01, custom_call_target=\"__cudnn$convForward\", metadata={op_name=\"jit(fn)/conv_general_dilated\" stack_frame_id=5}, backend_config={\"operation_queue_id\":\"0\",\"cudnn_conv_backend_config\":{\"activation_mode\":\"kNone\",\"conv_result_scale\":1,\"side_input_scale\":0,\"leakyrelu_alpha\":0},\"force_earliest_schedule\":false,\"reification_cost\":[],\"device_type\":\"DEVICE_TYPE_INVALID\"}. Status: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 3.02GiB. [tf-allocator-allocation-error='']\n=== Source Location Trace: === \nexternal/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:269\nexternal/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:192\nexternal/xla/xla/stream_executor/gpu/redzone_allocator.cc:93\nexternal/xla/xla/stream_executor/gpu/redzone_allocator.cc:262\nexternal/xla/xla/service/gpu/autotuning/redzone_buffers.cc:107\nexternal/xla/xla/service/gpu/autotuning/redzone_buffers.cc:89\nexternal/xla/xla/backends/gpu/autotuner/gpu_profiler.cc:269\nexternal/xla/xla/backends/autotuner/config_runner.cc:69\nexternal/xla/xla/backends/autotuner/config_assigner.cc:417\n\n",
+      "v1_predicted_probability": 0.825910663232134,
+      "v2_predicted_probability": 0.7058777761354339,
+      "wall_seconds": 12.564493179321289,
+      "workload_group_id": "convolution|{\"batch\":512,\"channels\":64,\"height\":128,\"out_channels\":8,\"width\":192}|float32"
+    }
+  ],
+  "status": "COMPUTATIONALLY_VERIFIED"
+}
