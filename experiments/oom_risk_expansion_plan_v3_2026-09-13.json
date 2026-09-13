@@ -1,0 +1,1574 @@
+{
+  "candidate_pool_size": 3709,
+  "capacity_sweeps": false,
+  "compile_filter_hash": "82d9fcb487f82ad7f9d83f8a8dcc093941bc9638d547c10753c82aae4ec890db",
+  "family_distribution": {
+    "attention": 20,
+    "autodiff": 2,
+    "convolution": 4,
+    "matmul": 2,
+    "mlp": 13,
+    "reduction": 2,
+    "scan": 2,
+    "training": 2,
+    "transformer": 13
+  },
+  "filter_is_experiment_only": true,
+  "filter_rejected_count": 336,
+  "filter_retained_count": 3373,
+  "outcomes_excluded": true,
+  "seed": 20260913,
+  "selected_candidates": [
+    {
+      "aggregate_score": 0.3061702125377879,
+      "candidate_id": "V2-CAND-01802",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 1024,
+        "depth": 8,
+        "width": 6144
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "graph_fingerprint": "160ffcad32c63a31",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "batch": 1024,
+        "depth": 8,
+        "width": 6144
+      },
+      "v1_predicted_probability": 0.14645165411743,
+      "v2_predicted_probability": 0.17264343299099855,
+      "workload_group_id": "mlp|{\"batch\":1024,\"depth\":8,\"width\":6144}|float16"
+    },
+    {
+      "aggregate_score": 0.31919873222024703,
+      "candidate_id": "V2-CAND-03827",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2048,
+        "depth": 8,
+        "width": 6144
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "graph_fingerprint": "95afa5d43f4eda26",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "batch": 2048,
+        "depth": 8,
+        "width": 6144
+      },
+      "v1_predicted_probability": 0.14987597782927883,
+      "v2_predicted_probability": 0.17563796629312445,
+      "workload_group_id": "mlp|{\"batch\":2048,\"depth\":8,\"width\":6144}|float16"
+    },
+    {
+      "aggregate_score": 0.3823056244321581,
+      "candidate_id": "V2-CAND-01748",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 8,
+        "depth": 6,
+        "width": 8192
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "graph_fingerprint": "22e02167293501fe",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "batch": 8,
+        "depth": 6,
+        "width": 8192
+      },
+      "v1_predicted_probability": 0.15645909659538373,
+      "v2_predicted_probability": 0.17873466264131932,
+      "workload_group_id": "mlp|{\"batch\":8,\"depth\":6,\"width\":8192}|float16"
+    },
+    {
+      "aggregate_score": 0.3832556206590041,
+      "candidate_id": "V2-CAND-01613",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 64,
+        "depth": 6,
+        "width": 8192
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "graph_fingerprint": "5007f2e04cfab985",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "batch": 64,
+        "depth": 6,
+        "width": 8192
+      },
+      "v1_predicted_probability": 0.16070271500368258,
+      "v2_predicted_probability": 0.1829255907857457,
+      "workload_group_id": "mlp|{\"batch\":64,\"depth\":6,\"width\":8192}|float16"
+    },
+    {
+      "aggregate_score": 0.36479855214426743,
+      "candidate_id": "V2-CAND-01003",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2048,
+        "depth": 8,
+        "width": 8192
+      },
+      "dtype": "float16",
+      "family": "autodiff",
+      "graph_fingerprint": "5eb823a4aa2e82ad",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "batch": 2048,
+        "depth": 8,
+        "width": 8192
+      },
+      "v1_predicted_probability": 0.15892164331604547,
+      "v2_predicted_probability": 0.1830430497075972,
+      "workload_group_id": "autodiff|{\"batch\":2048,\"depth\":8,\"width\":8192}|float16"
+    },
+    {
+      "aggregate_score": 0.38434133063254233,
+      "candidate_id": "V2-CAND-03089",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 128,
+        "depth": 6,
+        "width": 8192
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "graph_fingerprint": "0b1c2a565c697ae9",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "batch": 128,
+        "depth": 6,
+        "width": 8192
+      },
+      "v1_predicted_probability": 0.16227369674108372,
+      "v2_predicted_probability": 0.18444305409688344,
+      "workload_group_id": "mlp|{\"batch\":128,\"depth\":6,\"width\":8192}|float16"
+    },
+    {
+      "aggregate_score": 0.38651275057961887,
+      "candidate_id": "V2-CAND-00065",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 256,
+        "depth": 6,
+        "width": 8192
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "graph_fingerprint": "9da789f453f4b834",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "batch": 256,
+        "depth": 6,
+        "width": 8192
+      },
+      "v1_predicted_probability": 0.16405057162543252,
+      "v2_predicted_probability": 0.18611757278675717,
+      "workload_group_id": "mlp|{\"batch\":256,\"depth\":6,\"width\":8192}|float16"
+    },
+    {
+      "aggregate_score": 0.39085559047377183,
+      "candidate_id": "V2-CAND-03900",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 512,
+        "depth": 6,
+        "width": 8192
+      },
+      "dtype": "float16",
+      "family": "training",
+      "graph_fingerprint": "b98ee1c477ceee72",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "batch": 512,
+        "depth": 6,
+        "width": 8192
+      },
+      "v1_predicted_probability": 0.16623406312021574,
+      "v2_predicted_probability": 0.1881007823271961,
+      "workload_group_id": "training|{\"batch\":512,\"depth\":6,\"width\":8192}|float16"
+    },
+    {
+      "aggregate_score": 0.4527410589654524,
+      "candidate_id": "V2-CAND-00308",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 256,
+        "depth": 12,
+        "width": 6144
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "graph_fingerprint": "315a3d64b5a478eb",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "batch": 256,
+        "depth": 12,
+        "width": 6144
+      },
+      "v1_predicted_probability": 0.16987423333070195,
+      "v2_predicted_probability": 0.1902162443099754,
+      "workload_group_id": "mlp|{\"batch\":256,\"depth\":12,\"width\":6144}|float16"
+    },
+    {
+      "aggregate_score": 0.3995412702620779,
+      "candidate_id": "V2-CAND-02801",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 1024,
+        "depth": 6,
+        "width": 8192
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "graph_fingerprint": "acfa92e32a31622c",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "batch": 1024,
+        "depth": 6,
+        "width": 8192
+      },
+      "v1_predicted_probability": 0.1692332954518021,
+      "v2_predicted_probability": 0.19070008808954259,
+      "workload_group_id": "mlp|{\"batch\":1024,\"depth\":6,\"width\":8192}|float16"
+    },
+    {
+      "aggregate_score": 0.32995404664561034,
+      "candidate_id": "V2-CAND-03915",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 4,
+        "head_dim": 48,
+        "heads": 16,
+        "sequence": 1280
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "28ac825c45e18990",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "batch": 4,
+        "head_dim": 48,
+        "heads": 16,
+        "sequence": 1280
+      },
+      "v1_predicted_probability": 0.16734658319475432,
+      "v2_predicted_probability": 0.19149852240590853,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":48,\"heads\":16,\"sequence\":1280}|float16"
+    },
+    {
+      "aggregate_score": 0.3250174591096786,
+      "candidate_id": "V2-CAND-02979",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 8,
+        "head_dim": 96,
+        "heads": 4,
+        "sequence": 1792
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "567cf3f2cbf0072d",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "batch": 8,
+        "head_dim": 96,
+        "heads": 4,
+        "sequence": 1792
+      },
+      "v1_predicted_probability": 0.16734233860192171,
+      "v2_predicted_probability": 0.1917202786025192,
+      "workload_group_id": "attention|{\"batch\":8,\"head_dim\":96,\"heads\":4,\"sequence\":1792}|float16"
+    },
+    {
+      "aggregate_score": 0.3050187662181956,
+      "candidate_id": "V2-CAND-03155",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 12,
+        "layers": 2,
+        "sequence": 2816,
+        "width": 768
+      },
+      "dtype": "float16",
+      "family": "transformer",
+      "graph_fingerprint": "355de6a964c3f8a9",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "heads": 12,
+        "layers": 2,
+        "sequence": 2816,
+        "width": 768
+      },
+      "v1_predicted_probability": 0.1679629386822838,
+      "v2_predicted_probability": 0.19336729269000244,
+      "workload_group_id": "transformer|{\"heads\":12,\"layers\":2,\"sequence\":2816,\"width\":768}|float16"
+    },
+    {
+      "aggregate_score": 0.32745182444097143,
+      "candidate_id": "V2-CAND-02196",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2,
+        "head_dim": 80,
+        "heads": 2,
+        "sequence": 5120
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "9c2a8bd55d05e981",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "batch": 2,
+        "head_dim": 80,
+        "heads": 2,
+        "sequence": 5120
+      },
+      "v1_predicted_probability": 0.17010896446809468,
+      "v2_predicted_probability": 0.19382141280028084,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":80,\"heads\":2,\"sequence\":5120}|float16"
+    },
+    {
+      "aggregate_score": 0.4625124487272967,
+      "candidate_id": "V2-CAND-03323",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 1024,
+        "depth": 12,
+        "width": 6144
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "graph_fingerprint": "c2b8c81dfaab3ccc",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "batch": 1024,
+        "depth": 12,
+        "width": 6144
+      },
+      "v1_predicted_probability": 0.1745911337519346,
+      "v2_predicted_probability": 0.1944179651302472,
+      "workload_group_id": "mlp|{\"batch\":1024,\"depth\":12,\"width\":6144}|float16"
+    },
+    {
+      "aggregate_score": 0.34394316519137574,
+      "candidate_id": "V2-CAND-02214",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2,
+        "head_dim": 48,
+        "heads": 4,
+        "sequence": 3712
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "f8169655c4951aed",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "batch": 2,
+        "head_dim": 48,
+        "heads": 4,
+        "sequence": 3712
+      },
+      "v1_predicted_probability": 0.17220937230131173,
+      "v2_predicted_probability": 0.1951681165243181,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":48,\"heads\":4,\"sequence\":3712}|float16"
+    },
+    {
+      "aggregate_score": 0.33945400891407007,
+      "candidate_id": "V2-CAND-00063",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2,
+        "head_dim": 160,
+        "heads": 32,
+        "sequence": 1280
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "1f2a4835b2ee8a2b",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "batch": 2,
+        "head_dim": 160,
+        "heads": 32,
+        "sequence": 1280
+      },
+      "v1_predicted_probability": 0.1715762701738841,
+      "v2_predicted_probability": 0.19530502110073258,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":160,\"heads\":32,\"sequence\":1280}|float16"
+    },
+    {
+      "aggregate_score": 0.3122221974293469,
+      "candidate_id": "V2-CAND-01499",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 16,
+        "layers": 3,
+        "sequence": 2432,
+        "width": 1024
+      },
+      "dtype": "float16",
+      "family": "transformer",
+      "graph_fingerprint": "9610df382d25de29",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "heads": 16,
+        "layers": 3,
+        "sequence": 2432,
+        "width": 1024
+      },
+      "v1_predicted_probability": 0.17038271093340146,
+      "v2_predicted_probability": 0.1955583500922636,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":3,\"sequence\":2432,\"width\":1024}|float16"
+    },
+    {
+      "aggregate_score": 0.3542892178493702,
+      "candidate_id": "V2-CAND-00027",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 12,
+        "sequence": 3072
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "61a96c11d041a748",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 12,
+        "sequence": 3072
+      },
+      "v1_predicted_probability": 0.17503347441612913,
+      "v2_predicted_probability": 0.19747249696835878,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":64,\"heads\":12,\"sequence\":3072}|float16"
+    },
+    {
+      "aggregate_score": 0.33231207299438875,
+      "candidate_id": "V2-CAND-00653",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 16,
+        "layers": 1,
+        "sequence": 2560,
+        "width": 768
+      },
+      "dtype": "float16",
+      "family": "transformer",
+      "graph_fingerprint": "18c26198b141c459",
+      "selection_category": "LOW_RISK_CHALLENGER",
+      "selection_coarse_bucket": "LOW_RISK_CHALLENGER",
+      "selection_reason": "V2 low-risk challenger with nontrivial aggregate demand",
+      "shape_summary": {
+        "heads": 16,
+        "layers": 1,
+        "sequence": 2560,
+        "width": 768
+      },
+      "v1_predicted_probability": 0.17379383275014457,
+      "v2_predicted_probability": 0.19763038815482967,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":1,\"sequence\":2560,\"width\":768}|float16"
+    },
+    {
+      "aggregate_score": 0.7951150339606986,
+      "candidate_id": "V2-CAND-02948",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 12,
+        "layers": 2,
+        "sequence": 3968,
+        "width": 504
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "graph_fingerprint": "e5e1284e44402d2f",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "heads": 12,
+        "layers": 2,
+        "sequence": 3968,
+        "width": 504
+      },
+      "v1_predicted_probability": 0.37014118567575627,
+      "v2_predicted_probability": 0.3495058042888003,
+      "workload_group_id": "transformer|{\"heads\":12,\"layers\":2,\"sequence\":3968,\"width\":504}|float32"
+    },
+    {
+      "aggregate_score": 0.7888695509537386,
+      "candidate_id": "V2-CAND-02129",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 12,
+        "layers": 4,
+        "sequence": 3968,
+        "width": 252
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "graph_fingerprint": "dc2e6e78b3d47cf9",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "heads": 12,
+        "layers": 4,
+        "sequence": 3968,
+        "width": 252
+      },
+      "v1_predicted_probability": 0.3682496797430588,
+      "v2_predicted_probability": 0.34823445612859943,
+      "workload_group_id": "transformer|{\"heads\":12,\"layers\":4,\"sequence\":3968,\"width\":252}|float32"
+    },
+    {
+      "aggregate_score": 0.8310579715612327,
+      "candidate_id": "V2-CAND-01701",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 4,
+        "head_dim": 64,
+        "heads": 2,
+        "sequence": 4992
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "61008ad91060aa2e",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "batch": 4,
+        "head_dim": 64,
+        "heads": 2,
+        "sequence": 4992
+      },
+      "v1_predicted_probability": 0.37839888125660076,
+      "v2_predicted_probability": 0.3534197094176366,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":64,\"heads\":2,\"sequence\":4992}|float32"
+    },
+    {
+      "aggregate_score": 1.0770242937499492,
+      "candidate_id": "V2-CAND-02918",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 1024,
+        "depth": 8,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "family": "mlp",
+      "graph_fingerprint": "61bf9cff6bda7511",
+      "selection_category": "MODEL_DISAGREEMENT",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V1/V2 logistic versus aggregate disagreement",
+      "shape_summary": {
+        "batch": 1024,
+        "depth": 8,
+        "width": 8192
+      },
+      "v1_predicted_probability": 0.38644748770159204,
+      "v2_predicted_probability": 0.3535885878734464,
+      "workload_group_id": "mlp|{\"batch\":1024,\"depth\":8,\"width\":8192}|float32"
+    },
+    {
+      "aggregate_score": 0.8160064688421418,
+      "candidate_id": "V2-CAND-00707",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 12,
+        "layers": 3,
+        "sequence": 3840,
+        "width": 1536
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "graph_fingerprint": "13f538ba753144aa",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "heads": 12,
+        "layers": 3,
+        "sequence": 3840,
+        "width": 1536
+      },
+      "v1_predicted_probability": 0.3753832053833463,
+      "v2_predicted_probability": 0.3538306573386578,
+      "workload_group_id": "transformer|{\"heads\":12,\"layers\":3,\"sequence\":3840,\"width\":1536}|float32"
+    },
+    {
+      "aggregate_score": 0.8470573499798775,
+      "candidate_id": "V2-CAND-03231",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 4,
+        "head_dim": 64,
+        "heads": 12,
+        "sequence": 2048
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "cd2579e5ed637a9d",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "batch": 4,
+        "head_dim": 64,
+        "heads": 12,
+        "sequence": 2048
+      },
+      "v1_predicted_probability": 0.38093150981052704,
+      "v2_predicted_probability": 0.3550708692271799,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":64,\"heads\":12,\"sequence\":2048}|float32"
+    },
+    {
+      "aggregate_score": 0.8363508076822317,
+      "candidate_id": "V2-CAND-00891",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2,
+        "head_dim": 128,
+        "heads": 4,
+        "sequence": 4992
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "573d8ef2c5f025e7",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "batch": 2,
+        "head_dim": 128,
+        "heads": 4,
+        "sequence": 4992
+      },
+      "v1_predicted_probability": 0.3824229064341448,
+      "v2_predicted_probability": 0.35660027003822437,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":128,\"heads\":4,\"sequence\":4992}|float32"
+    },
+    {
+      "aggregate_score": 0.9034464117305205,
+      "candidate_id": "V2-CAND-00527",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 16,
+        "layers": 3,
+        "sequence": 4096,
+        "width": 2048
+      },
+      "dtype": "float16",
+      "family": "transformer",
+      "graph_fingerprint": "68d35f938c2809a6",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "heads": 16,
+        "layers": 3,
+        "sequence": 4096,
+        "width": 2048
+      },
+      "v1_predicted_probability": 0.3764928494372571,
+      "v2_predicted_probability": 0.3416804852897725,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":3,\"sequence\":4096,\"width\":2048}|float16"
+    },
+    {
+      "aggregate_score": 0.7973225028717402,
+      "candidate_id": "V2-CAND-02574",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2,
+        "head_dim": 64,
+        "heads": 12,
+        "sequence": 2816
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "0b7f4b7fe1e0aef8",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "batch": 2,
+        "head_dim": 64,
+        "heads": 12,
+        "sequence": 2816
+      },
+      "v1_predicted_probability": 0.36078710194946423,
+      "v2_predicted_probability": 0.3413015999165989,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":64,\"heads\":12,\"sequence\":2816}|float32"
+    },
+    {
+      "aggregate_score": 0.797093485924197,
+      "candidate_id": "V2-CAND-01917",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2,
+        "head_dim": 48,
+        "heads": 8,
+        "sequence": 3456
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "b392957038b865ff",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "batch": 2,
+        "head_dim": 48,
+        "heads": 8,
+        "sequence": 3456
+      },
+      "v1_predicted_probability": 0.36082386460973676,
+      "v2_predicted_probability": 0.34115463278313135,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":48,\"heads\":8,\"sequence\":3456}|float32"
+    },
+    {
+      "aggregate_score": 0.7904986460458691,
+      "candidate_id": "V2-CAND-02525",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 16,
+        "layers": 4,
+        "sequence": 3072,
+        "width": 2048
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "graph_fingerprint": "2df7605d4e9beb8a",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "heads": 16,
+        "layers": 4,
+        "sequence": 3072,
+        "width": 2048
+      },
+      "v1_predicted_probability": 0.35546215594541186,
+      "v2_predicted_probability": 0.34023224960642817,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":4,\"sequence\":3072,\"width\":2048}|float32"
+    },
+    {
+      "aggregate_score": 0.853155986471862,
+      "candidate_id": "V2-CAND-01053",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2,
+        "head_dim": 32,
+        "heads": 2,
+        "sequence": 7168
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "353ff506ae4c6137",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "batch": 2,
+        "head_dim": 32,
+        "heads": 2,
+        "sequence": 7168
+      },
+      "v1_predicted_probability": 0.389522113459214,
+      "v2_predicted_probability": 0.3607714505059943,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":32,\"heads\":2,\"sequence\":7168}|float32"
+    },
+    {
+      "aggregate_score": 1.1117670129031734,
+      "candidate_id": "V2-CAND-00110",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2048,
+        "depth": 8,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "family": "mlp",
+      "graph_fingerprint": "0f9c4ca82cbefffb",
+      "selection_category": "MODEL_DISAGREEMENT",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V1/V2 logistic versus aggregate disagreement",
+      "shape_summary": {
+        "batch": 2048,
+        "depth": 8,
+        "width": 8192
+      },
+      "v1_predicted_probability": 0.39965589582685734,
+      "v2_predicted_probability": 0.3628487295026244,
+      "workload_group_id": "mlp|{\"batch\":2048,\"depth\":8,\"width\":8192}|float32"
+    },
+    {
+      "aggregate_score": 0.903461255421565,
+      "candidate_id": "V2-CAND-01026",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 4,
+        "head_dim": 80,
+        "heads": 2,
+        "sequence": 6016
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "140518d5bba655ca",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "batch": 4,
+        "head_dim": 80,
+        "heads": 2,
+        "sequence": 6016
+      },
+      "v1_predicted_probability": 0.37253629964528895,
+      "v2_predicted_probability": 0.33659759293490904,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":80,\"heads\":2,\"sequence\":6016}|float16"
+    },
+    {
+      "aggregate_score": 0.903461255421565,
+      "candidate_id": "V2-CAND-03321",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 1,
+        "head_dim": 80,
+        "heads": 8,
+        "sequence": 6016
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "19bc02a4bfbbd02f",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "batch": 1,
+        "head_dim": 80,
+        "heads": 8,
+        "sequence": 6016
+      },
+      "v1_predicted_probability": 0.37253629964528895,
+      "v2_predicted_probability": 0.33659759293490904,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":80,\"heads\":8,\"sequence\":6016}|float16"
+    },
+    {
+      "aggregate_score": 0.7472775286471384,
+      "candidate_id": "V2-CAND-01841",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 12,
+        "layers": 3,
+        "sequence": 3840,
+        "width": 504
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "graph_fingerprint": "86da6e58306e4952",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "heads": 12,
+        "layers": 3,
+        "sequence": 3840,
+        "width": 504
+      },
+      "v1_predicted_probability": 0.35093062155041077,
+      "v2_predicted_probability": 0.3365875318217724,
+      "workload_group_id": "transformer|{\"heads\":12,\"layers\":3,\"sequence\":3840,\"width\":504}|float32"
+    },
+    {
+      "aggregate_score": 1.0433672845702633,
+      "candidate_id": "V2-CAND-00524",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 32,
+        "depth": 8,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "family": "mlp",
+      "graph_fingerprint": "adc00a3aa4faf4ba",
+      "selection_category": "MODEL_DISAGREEMENT",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V1/V2 logistic versus aggregate disagreement",
+      "shape_summary": {
+        "batch": 32,
+        "depth": 8,
+        "width": 8192
+      },
+      "v1_predicted_probability": 0.3642446214100309,
+      "v2_predicted_probability": 0.33644001681046803,
+      "workload_group_id": "mlp|{\"batch\":32,\"depth\":8,\"width\":8192}|float32"
+    },
+    {
+      "aggregate_score": 1.0433672845702633,
+      "candidate_id": "V2-CAND-02118",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 32,
+        "depth": 8,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "family": "training",
+      "graph_fingerprint": "fac602ffdcb68f4a",
+      "selection_category": "MODEL_DISAGREEMENT",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V1/V2 logistic versus aggregate disagreement",
+      "shape_summary": {
+        "batch": 32,
+        "depth": 8,
+        "width": 8192
+      },
+      "v1_predicted_probability": 0.3642446214100309,
+      "v2_predicted_probability": 0.33644001681046803,
+      "workload_group_id": "training|{\"batch\":32,\"depth\":8,\"width\":8192}|float32"
+    },
+    {
+      "aggregate_score": 0.8713670748561325,
+      "candidate_id": "V2-CAND-00621",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 4,
+        "head_dim": 32,
+        "heads": 2,
+        "sequence": 5120
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "3b84f7a8c9875859",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "batch": 4,
+        "head_dim": 32,
+        "heads": 2,
+        "sequence": 5120
+      },
+      "v1_predicted_probability": 0.39398043041585423,
+      "v2_predicted_probability": 0.3635770236968184,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":32,\"heads\":2,\"sequence\":5120}|float32"
+    },
+    {
+      "aggregate_score": 0.8569559713792457,
+      "candidate_id": "V2-CAND-03834",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 2,
+        "head_dim": 96,
+        "heads": 2,
+        "sequence": 7168
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "6f2650ff20bb5833",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "batch": 2,
+        "head_dim": 96,
+        "heads": 2,
+        "sequence": 7168
+      },
+      "v1_predicted_probability": 0.39454925422098436,
+      "v2_predicted_probability": 0.3649104480173787,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":96,\"heads\":2,\"sequence\":7168}|float32"
+    },
+    {
+      "aggregate_score": 0.8703152933192673,
+      "candidate_id": "V2-CAND-00549",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 1,
+        "head_dim": 160,
+        "heads": 16,
+        "sequence": 3584
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "4bb5db37286ad4ca",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "batch": 1,
+        "head_dim": 160,
+        "heads": 16,
+        "sequence": 3584
+      },
+      "v1_predicted_probability": 0.3949413301150595,
+      "v2_predicted_probability": 0.3651527788952643,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":160,\"heads\":16,\"sequence\":3584}|float32"
+    },
+    {
+      "aggregate_score": 1.0425530020901095,
+      "candidate_id": "V2-CAND-02270",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 8,
+        "depth": 8,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "family": "mlp",
+      "graph_fingerprint": "02c7403ad2bfcfc3",
+      "selection_category": "MODEL_DISAGREEMENT",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V1/V2 logistic versus aggregate disagreement",
+      "shape_summary": {
+        "batch": 8,
+        "depth": 8,
+        "width": 8192
+      },
+      "v1_predicted_probability": 0.35929466294895007,
+      "v2_predicted_probability": 0.33220618657904066,
+      "workload_group_id": "mlp|{\"batch\":8,\"depth\":8,\"width\":8192}|float32"
+    },
+    {
+      "aggregate_score": 0.7402781981878485,
+      "candidate_id": "V2-CAND-01850",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 12,
+        "layers": 1,
+        "sequence": 3840,
+        "width": 384
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "graph_fingerprint": "601931d2bacd23f0",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "heads": 12,
+        "layers": 1,
+        "sequence": 3840,
+        "width": 384
+      },
+      "v1_predicted_probability": 0.3442974015540407,
+      "v2_predicted_probability": 0.33117008386629165,
+      "workload_group_id": "transformer|{\"heads\":12,\"layers\":1,\"sequence\":3840,\"width\":384}|float32"
+    },
+    {
+      "aggregate_score": 0.8937131914599336,
+      "candidate_id": "V2-CAND-01521",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 4,
+        "head_dim": 96,
+        "heads": 12,
+        "sequence": 2432
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "graph_fingerprint": "982d21d8413f2225",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "batch": 4,
+        "head_dim": 96,
+        "heads": 12,
+        "sequence": 2432
+      },
+      "v1_predicted_probability": 0.3633829169828267,
+      "v2_predicted_probability": 0.33038672729756546,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":96,\"heads\":12,\"sequence\":2432}|float16"
+    },
+    {
+      "aggregate_score": 0.726438974415041,
+      "candidate_id": "V2-CAND-00149",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 12,
+        "layers": 3,
+        "sequence": 3712,
+        "width": 1020
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "graph_fingerprint": "5e87c26c91af2107",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "heads": 12,
+        "layers": 3,
+        "sequence": 3712,
+        "width": 1020
+      },
+      "v1_predicted_probability": 0.34119795198789526,
+      "v2_predicted_probability": 0.33023355379901187,
+      "workload_group_id": "transformer|{\"heads\":12,\"layers\":3,\"sequence\":3712,\"width\":1020}|float32"
+    },
+    {
+      "aggregate_score": 0.7518032640202321,
+      "candidate_id": "V2-CAND-02466",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 8,
+        "head_dim": 80,
+        "heads": 8,
+        "sequence": 1664
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "eaacef9b2a6f33b9",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "batch": 8,
+        "head_dim": 80,
+        "heads": 8,
+        "sequence": 1664
+      },
+      "v1_predicted_probability": 0.34080685972074226,
+      "v2_predicted_probability": 0.3278130816624801,
+      "workload_group_id": "attention|{\"batch\":8,\"head_dim\":80,\"heads\":8,\"sequence\":1664}|float32"
+    },
+    {
+      "aggregate_score": 0.8724867132663437,
+      "candidate_id": "V2-CAND-00167",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 16,
+        "layers": 2,
+        "sequence": 3584,
+        "width": 768
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "graph_fingerprint": "00dbb0b51a2979e0",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "heads": 16,
+        "layers": 2,
+        "sequence": 3584,
+        "width": 768
+      },
+      "v1_predicted_probability": 0.4035934451776607,
+      "v2_predicted_probability": 0.3725542047050285,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":2,\"sequence\":3584,\"width\":768}|float32"
+    },
+    {
+      "aggregate_score": 0.7428716030660464,
+      "candidate_id": "V2-CAND-01674",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 1,
+        "head_dim": 80,
+        "heads": 16,
+        "sequence": 3328
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "graph_fingerprint": "eb36cc8ff521d309",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "batch": 1,
+        "head_dim": 80,
+        "heads": 16,
+        "sequence": 3328
+      },
+      "v1_predicted_probability": 0.3393966993991597,
+      "v2_predicted_probability": 0.32677793551808154,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":80,\"heads\":16,\"sequence\":3328}|float32"
+    },
+    {
+      "aggregate_score": 0.9032810106017394,
+      "candidate_id": "V2-CAND-02300",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "heads": 12,
+        "layers": 4,
+        "sequence": 3840,
+        "width": 2040
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "graph_fingerprint": "bf64cf559684a878",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "heads": 12,
+        "layers": 4,
+        "sequence": 3840,
+        "width": 2040
+      },
+      "v1_predicted_probability": 0.4043687429914836,
+      "v2_predicted_probability": 0.37367260510892014,
+      "workload_group_id": "transformer|{\"heads\":12,\"layers\":4,\"sequence\":3840,\"width\":2040}|float32"
+    },
+    {
+      "aggregate_score": 2.34521942419796,
+      "candidate_id": "V2-CAND-01531",
+      "compile_feasibility_score": 1.0,
+      "configuration": {
+        "batch": 512,
+        "channels": 48,
+        "height": 192,
+        "out_channels": 96,
+        "width": 80
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "graph_fingerprint": "6e2808484780aa5d",
+      "selection_category": "HIGH_RISK_COMPILE_AUDIT",
+      "selection_coarse_bucket": "HIGH_RISK_COMPILE_AUDIT",
+      "selection_reason": "small audit slice retained despite compile filter rejection",
+      "shape_summary": {
+        "batch": 512,
+        "channels": 48,
+        "height": 192,
+        "out_channels": 96,
+        "width": 80
+      },
+      "v1_predicted_probability": 0.919259788269535,
+      "v2_predicted_probability": 0.816458392937774,
+      "workload_group_id": "convolution|{\"batch\":512,\"channels\":48,\"height\":192,\"out_channels\":96,\"width\":80}|float32"
+    },
+    {
+      "aggregate_score": 2.225705445753423,
+      "candidate_id": "V2-CAND-00826",
+      "compile_feasibility_score": 1.0,
+      "configuration": {
+        "batch": 128,
+        "depth": 2,
+        "length": 8192,
+        "width": 512
+      },
+      "dtype": "float32",
+      "family": "reduction",
+      "graph_fingerprint": "82bbc5dc7a216c26",
+      "selection_category": "HIGH_RISK_COMPILE_AUDIT",
+      "selection_coarse_bucket": "HIGH_RISK_COMPILE_AUDIT",
+      "selection_reason": "small audit slice retained despite compile filter rejection",
+      "shape_summary": {
+        "batch": 128,
+        "depth": 2,
+        "length": 8192,
+        "width": 512
+      },
+      "v1_predicted_probability": 0.8957789774514443,
+      "v2_predicted_probability": 0.7803538442325844,
+      "workload_group_id": "reduction|{\"batch\":128,\"depth\":2,\"length\":8192,\"width\":512}|float32"
+    },
+    {
+      "aggregate_score": 2.2246197357798847,
+      "candidate_id": "V2-CAND-02086",
+      "compile_feasibility_score": 1.0,
+      "configuration": {
+        "batch": 64,
+        "depth": 2,
+        "length": 8192,
+        "width": 1024
+      },
+      "dtype": "float32",
+      "family": "reduction",
+      "graph_fingerprint": "ae970344c7a8cc0e",
+      "selection_category": "HIGH_RISK_COMPILE_AUDIT",
+      "selection_coarse_bucket": "HIGH_RISK_COMPILE_AUDIT",
+      "selection_reason": "small audit slice retained despite compile filter rejection",
+      "shape_summary": {
+        "batch": 64,
+        "depth": 2,
+        "length": 8192,
+        "width": 1024
+      },
+      "v1_predicted_probability": 0.8956470898559072,
+      "v2_predicted_probability": 0.7801870370015355,
+      "workload_group_id": "reduction|{\"batch\":64,\"depth\":2,\"length\":8192,\"width\":1024}|float32"
+    },
+    {
+      "aggregate_score": 2.128020175253423,
+      "candidate_id": "V2-CAND-03691",
+      "compile_feasibility_score": 1.0,
+      "configuration": {
+        "batch": 256,
+        "channels": 16,
+        "height": 224,
+        "out_channels": 96,
+        "width": 160
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "graph_fingerprint": "8c80ff7020535970",
+      "selection_category": "HIGH_RISK_COMPILE_AUDIT",
+      "selection_coarse_bucket": "HIGH_RISK_COMPILE_AUDIT",
+      "selection_reason": "small audit slice retained despite compile filter rejection",
+      "shape_summary": {
+        "batch": 256,
+        "channels": 16,
+        "height": 224,
+        "out_channels": 96,
+        "width": 160
+      },
+      "v1_predicted_probability": 0.8831395039797715,
+      "v2_predicted_probability": 0.7690579636375661,
+      "workload_group_id": "convolution|{\"batch\":256,\"channels\":16,\"height\":224,\"out_channels\":96,\"width\":160}|float32"
+    },
+    {
+      "aggregate_score": 2.5015330332690255,
+      "candidate_id": "V2-CAND-01999",
+      "compile_feasibility_score": 1.0,
+      "configuration": {
+        "batch": 256,
+        "channels": 32,
+        "height": 192,
+        "out_channels": 96,
+        "width": 192
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "graph_fingerprint": "699593053856fd5e",
+      "selection_category": "HIGH_RISK_COMPILE_AUDIT",
+      "selection_coarse_bucket": "HIGH_RISK_COMPILE_AUDIT",
+      "selection_reason": "small audit slice retained despite compile filter rejection",
+      "shape_summary": {
+        "batch": 256,
+        "channels": 32,
+        "height": 192,
+        "out_channels": 96,
+        "width": 192
+      },
+      "v1_predicted_probability": 0.9376102960209916,
+      "v2_predicted_probability": 0.8436610051204833,
+      "workload_group_id": "convolution|{\"batch\":256,\"channels\":32,\"height\":192,\"out_channels\":96,\"width\":192}|float32"
+    },
+    {
+      "aggregate_score": 1.8761163766469193,
+      "candidate_id": "V2-CAND-03754",
+      "compile_feasibility_score": 1.0,
+      "configuration": {
+        "batch": 512,
+        "channels": 64,
+        "height": 128,
+        "out_channels": 8,
+        "width": 192
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "graph_fingerprint": "15876d1d111f308a",
+      "selection_category": "HIGH_RISK_COMPILE_AUDIT",
+      "selection_coarse_bucket": "HIGH_RISK_COMPILE_AUDIT",
+      "selection_reason": "small audit slice retained despite compile filter rejection",
+      "shape_summary": {
+        "batch": 512,
+        "channels": 64,
+        "height": 128,
+        "out_channels": 8,
+        "width": 192
+      },
+      "v1_predicted_probability": 0.825910663232134,
+      "v2_predicted_probability": 0.7058777761354339,
+      "workload_group_id": "convolution|{\"batch\":512,\"channels\":64,\"height\":128,\"out_channels\":8,\"width\":192}|float32"
+    },
+    {
+      "aggregate_score": 0.1563422382603362,
+      "candidate_id": "V2-CAND-00004",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 8,
+        "depth": 8,
+        "width": 6144
+      },
+      "dtype": "float32",
+      "family": "autodiff",
+      "graph_fingerprint": "dc5c1f46d2e25d42",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "batch": 8,
+        "depth": 8,
+        "width": 6144
+      },
+      "v1_predicted_probability": 0.13986119920283588,
+      "v2_predicted_probability": 0.17413698202754768,
+      "workload_group_id": "autodiff|{\"batch\":8,\"depth\":8,\"width\":6144}|float32"
+    },
+    {
+      "aggregate_score": 0.002374990567114933,
+      "candidate_id": "V2-CAND-00006",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "depth": 2,
+        "k": 768,
+        "m": 256,
+        "n": 1024
+      },
+      "dtype": "float16",
+      "family": "matmul",
+      "graph_fingerprint": "5a1bff5da6dc9b02",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "depth": 2,
+        "k": 768,
+        "m": 256,
+        "n": 1024
+      },
+      "v1_predicted_probability": 0.10616101090570963,
+      "v2_predicted_probability": 0.14249062343993468,
+      "workload_group_id": "matmul|{\"depth\":2,\"k\":768,\"m\":256,\"n\":1024}|float16"
+    },
+    {
+      "aggregate_score": 0.01085709973538255,
+      "candidate_id": "V2-CAND-00015",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "depth": 1,
+        "k": 3072,
+        "m": 512,
+        "n": 1024
+      },
+      "dtype": "float32",
+      "family": "matmul",
+      "graph_fingerprint": "4f7dfdabd6f88b35",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "depth": 1,
+        "k": 3072,
+        "m": 512,
+        "n": 1024
+      },
+      "v1_predicted_probability": 0.12970281906351455,
+      "v2_predicted_probability": 0.17208960222752492,
+      "workload_group_id": "matmul|{\"depth\":1,\"k\":3072,\"m\":512,\"n\":1024}|float32"
+    },
+    {
+      "aggregate_score": 0.000543915250415161,
+      "candidate_id": "V2-CAND-00008",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 16,
+        "depth": 2,
+        "length": 512,
+        "width": 32
+      },
+      "dtype": "float16",
+      "family": "scan",
+      "graph_fingerprint": "0e962ceede49a01e",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "batch": 16,
+        "depth": 2,
+        "length": 512,
+        "width": 32
+      },
+      "v1_predicted_probability": 0.09655611211774594,
+      "v2_predicted_probability": 0.13142619385739274,
+      "workload_group_id": "scan|{\"batch\":16,\"depth\":2,\"length\":512,\"width\":32}|float16"
+    },
+    {
+      "aggregate_score": 0.008687800315598107,
+      "candidate_id": "V2-CAND-00017",
+      "compile_feasibility_score": 0.0,
+      "configuration": {
+        "batch": 4,
+        "depth": 1,
+        "length": 4096,
+        "width": 256
+      },
+      "dtype": "float16",
+      "family": "scan",
+      "graph_fingerprint": "69a13c230b3cd714",
+      "selection_category": "MODERATE_BOUNDARY",
+      "selection_coarse_bucket": "MODERATE_BOUNDARY",
+      "selection_reason": "V2 moderate-risk boundary candidate",
+      "shape_summary": {
+        "batch": 4,
+        "depth": 1,
+        "length": 4096,
+        "width": 256
+      },
+      "v1_predicted_probability": 0.10364808913018372,
+      "v2_predicted_probability": 0.13897454451374378,
+      "workload_group_id": "scan|{\"batch\":4,\"depth\":1,\"length\":4096,\"width\":256}|float16"
+    }
+  ],
+  "selected_count": 60,
+  "selection_category_distribution": {
+    "HIGH_RISK_COMPILE_AUDIT": 6,
+    "LOW_RISK_CHALLENGER": 20,
+    "MODEL_DISAGREEMENT": 5,
+    "MODERATE_BOUNDARY": 29
+  },
+  "selection_date": "2026-09-13",
+  "selection_distribution": {
+    "HIGH_RISK_COMPILE_AUDIT": 6,
+    "LOW_RISK_CHALLENGER": 20,
+    "MODERATE_BOUNDARY": 34
+  },
+  "static_error_count": 0,
+  "status": "FROZEN_BEFORE_RUNTIME",
+  "v1_model_hash": "1338e8570cd36a70bfa273e7c39e8063d1c1c8f2e2c4ba3cb78dbb264f535d05",
+  "v2_model_hash": "9e7f03a6ca027950e84a42179df3b8743d8f0b81157b500027fb765de1a42e96"
+}

@@ -1,0 +1,36 @@
+{
+  "feature_names": [
+    "structural_peak_over_budget",
+    "calibrated_upper_over_budget",
+    "largest_over_budget",
+    "top_two_peak_live_over_budget",
+    "peak_live_over_budget",
+    "dtype_bytes",
+    "config_numeric_count",
+    "config_numeric_max",
+    "config_numeric_log_product"
+  ],
+  "historical_grouped_audit": {
+    "N": 191,
+    "compile_failure_recall_at_rule": 1.0,
+    "compile_failures": 5,
+    "compile_success_retention_at_rule": 0.8924731182795699,
+    "groups": 63,
+    "rule_rejected_rows": 25
+  },
+  "logistic_coefficients": [
+    -4.315040921449642,
+    0.01189963817679769,
+    0.016081567636144142,
+    0.0,
+    0.0035931663536429128,
+    0.0035646333253563527,
+    0.00971418711000419,
+    0.008819006127597274,
+    0.00018667757377819274,
+    0.0002372463628205297
+  ],
+  "model_hash": "82d9fcb487f82ad7f9d83f8a8dcc093941bc9638d547c10753c82aae4ec890db",
+  "selected_method": "static_shape_rule",
+  "threshold_description": "max_input_numel or workspace_numel >= 300,000,000; convolution workspace >= 100,000,000"
+}
