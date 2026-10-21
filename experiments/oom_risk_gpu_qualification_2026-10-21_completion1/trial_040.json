@@ -1,0 +1,133 @@
+{
+  "applicability": {
+    "gpu_runtime_qualified": false,
+    "oom_score": null,
+    "pipeline_contract_hash": "84dc466cddc79b12590a7034f830fd189b57f36c28e3e4347c3df26d7cfb5471",
+    "policy_hash": "26872f92d9bf745dcfd5645007b0e46020c77a48a4c28c20260dccd4e3aada3d",
+    "public_api_enabled": false,
+    "reasons": [],
+    "reference_is_runtime_quota": false,
+    "spec_hash": "73f328dff0072fc67b165499564a8686835885db91c9c0b53ef5192e512bd611",
+    "status": "ELIGIBLE_FOR_QUALIFICATION"
+  },
+  "backend_verified": true,
+  "command": [
+    "/home/slavov/.venvs/jaxoom-cuda-20261021/env/bin/python",
+    "-m",
+    "experiments.oom_risk_gpu_qualification",
+    "--child",
+    "73f328dff0072fc67b165499564a8686835885db91c9c0b53ef5192e512bd611",
+    "--plan",
+    "experiments/oom_risk_gpu_qualification_2026-10-21_run1/plan.json",
+    "--replay",
+    "experiments/oom_risk_gpu_qualification_2026-10-21_completion1/gpu_replay.json"
+  ],
+  "event": "result",
+  "expected_probability": 0.15910147527273044,
+  "fresh_features": {
+    "calibrated_upper_over_budget": 0.004344960421445087,
+    "config_numeric_count": 4.0,
+    "config_numeric_log_product": 15.249238210737348,
+    "config_numeric_max": 2048.0,
+    "dtype_bytes": 4.0,
+    "largest_over_budget": 0.0,
+    "peak_live_over_budget": 0.002605438232421875,
+    "structural_peak_over_budget": 0.002605438232421875,
+    "top_two_peak_live_over_budget": 0.0026041666666666665
+  },
+  "fresh_probability": 0.15910147527273044,
+  "gpu_runtime_executed": true,
+  "index": 40,
+  "likely_fit": true,
+  "nvidia_after": {
+    "compute_process_count": 1,
+    "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "driver_version": "566.07",
+    "free_memory_bytes": 4003463168,
+    "observed_at_utc": "2026-10-21T14:37:53.336127+00:00",
+    "physical_memory_bytes": 4294967296,
+    "raw_gpu": "NVIDIA GeForce RTX 3050 Laptop GPU, 566.07, 4096, 147, 3818, 2\n",
+    "raw_processes": "5727\n",
+    "used_memory_bytes": 154140672,
+    "utilization_percent": 2
+  },
+  "outcome": "FIT",
+  "outputs": [
+    {
+      "dtype": "float32",
+      "shape": [
+        2048,
+        8,
+        64
+      ]
+    }
+  ],
+  "packages": {
+    "jax": "0.11.0",
+    "jax-cuda12-pjrt": "0.11.0",
+    "jax-cuda12-plugin": "0.11.0",
+    "jaxlib": "0.11.0",
+    "jaxoom": "0.1.0",
+    "numpy": "2.5.3",
+    "nvidia-cublas-cu12": "12.4.5.8",
+    "nvidia-cuda-cccl-cu12": "12.9.27",
+    "nvidia-cuda-cupti-cu12": "12.9.79",
+    "nvidia-cuda-nvcc-cu12": "12.9.86",
+    "nvidia-cuda-nvrtc-cu12": "12.4.127",
+    "nvidia-cuda-runtime-cu12": "12.4.127",
+    "nvidia-cudnn-cu12": "9.25.1.1",
+    "nvidia-cufft-cu12": "11.4.1.4",
+    "nvidia-cusolver-cu12": "11.6.1.9",
+    "nvidia-cusparse-cu12": "12.3.1.170",
+    "nvidia-nccl-cu12": "2.21.5",
+    "nvidia-nvjitlink-cu12": "12.4.127",
+    "nvidia-nvshmem-cu12": "3.7.2",
+    "scipy": "1.18.0"
+  },
+  "phase": "complete",
+  "pid": 5727,
+  "plan_hash": "3660a87699b31f3bc92df1207204e6568071543fd1ae7792ae3515a9054c6dc5",
+  "platform_version": "PJRT C API\ncuda 12090",
+  "policy_hash": "26872f92d9bf745dcfd5645007b0e46020c77a48a4c28c20260dccd4e3aada3d",
+  "returncode": 0,
+  "runtime": {
+    "allocator": "bfc",
+    "backend": "gpu",
+    "compute_process_count": 0,
+    "default_matmul_precision": null,
+    "device_count": 1,
+    "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "donation": false,
+    "driver_version": "566.07",
+    "free_memory_bytes": 4156555264,
+    "fresh_process": true,
+    "gpu_vendor": "NVIDIA",
+    "jax_enable_x64": false,
+    "jax_version": "0.11.0",
+    "jaxlib_version": "0.11.0",
+    "memory_fraction": null,
+    "observed_at_utc": "2026-10-21T14:37:50.605288+00:00",
+    "physical_memory_bytes": 4294967296,
+    "preallocate": "false",
+    "raw_gpu": "NVIDIA GeForce RTX 3050 Laptop GPU, 566.07, 4096, 0, 3964, 0\n",
+    "raw_processes": "",
+    "sharding": false,
+    "tf_gpu_allocator": null,
+    "used_memory_bytes": 0,
+    "utilization_percent": 0,
+    "xla_flags": null
+  },
+  "spec": {
+    "configuration": {
+      "batch": 8,
+      "depth": 4,
+      "length": 2048,
+      "width": 64
+    },
+    "dtype": "float32",
+    "family": "scan",
+    "version": "frozen-v2-workload-1"
+  },
+  "spec_hash": "73f328dff0072fc67b165499564a8686835885db91c9c0b53ef5192e512bd611",
+  "wall_seconds": 3.3588597489999756
+}

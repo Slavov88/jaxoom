@@ -1,0 +1,41 @@
+{
+  "status": "COMPUTATIONALLY_VERIFIED",
+  "fresh_tracing_and_replay_pass": true,
+  "public_api_enabled": false,
+  "public_api_absent": true,
+  "runtime_gpu_validation": "NOT_RUN",
+  "arbitrary_callable_support": "DISABLED",
+  "reference_is_runtime_quota": false,
+  "rows": 224,
+  "completed": 224,
+  "feature_mismatches": 0,
+  "feature_mismatches_by_name": {
+    "structural_peak_over_budget": 0,
+    "calibrated_upper_over_budget": 0,
+    "largest_over_budget": 0,
+    "top_two_peak_live_over_budget": 0,
+    "peak_live_over_budget": 0,
+    "dtype_bytes": 0,
+    "config_numeric_count": 0,
+    "config_numeric_max": 0,
+    "config_numeric_log_product": 0
+  },
+  "score_mismatches": 0,
+  "decision_mismatches": 0,
+  "max_feature_delta": 0.0,
+  "max_probability_delta": 1.1102230246251565e-16,
+  "tolerance": 1e-12,
+  "errors": [],
+  "purity": {
+    "target_calls_with_tracers": 224,
+    "concrete_target_calls": 0,
+    "blocked_compile_calls": 0
+  },
+  "purity_pass": true,
+  "contract_hash": "84dc466cddc79b12590a7034f830fd189b57f36c28e3e4347c3df26d7cfb5471",
+  "prediction_file_sha256": {
+    "oom_risk_heldout_predictions_2026-09-13.json": "116ff4a1a75831e4867fc7c7a7f203459c9ea0f37174d0854ec5b263f2de0e63",
+    "oom_risk_heldout2_predictions_2026-09-13.json": "f265eb9697b341cfc99cb7bb33504ae2e4d0b3aa68e6688f4c7f7c9620f3b0bb",
+    "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json": "2ed9d119cd91b290867251d4017d9805168ab6e5486b6664f41e17e4d494ce09"
+  }
+}

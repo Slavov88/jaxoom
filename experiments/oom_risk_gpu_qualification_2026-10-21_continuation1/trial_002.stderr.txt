@@ -1,0 +1,267 @@
+E1021 17:13:29.879696     768 config_assigner.cc:478] Could not get config for HLO: %gemm_fusion_dot.3 = f16[32,5888,5888]{2,1,0} fusion(%bitcast.40.0, %bitcast.40.0), kind=kCustom, calls=
+(parameter_0: f16[32,32,5888], parameter_1: f16[32,32,5888]) -> f16[32,5888,5888] {
+  %parameter_0 = f16[32,32,5888]{2,1,0} parameter(0)
+  %transpose.8 = f16[32,5888,32]{2,1,0} transpose(%parameter_0), dimensions={0,2,1}, metadata={op_name="jit(fn)/reshape" stack_frame_id=7}
+  %parameter_1 = f16[32,32,5888]{2,1,0} parameter(1)
+  %dot.5 = f16[32,5888,5888]{2,1,0} dot(%transpose.8, %parameter_1), lhs_batch_dims={0}, lhs_contracting_dims={2}, rhs_batch_dims={0}, rhs_contracting_dims={1}, metadata={op_name="jit(fn)/bshd,bthd->bhst/dot_general" stack_frame_id=8}
+  %constant.1 = f16[] constant(0.17676)
+  %broadcast.3 = f16[32,5888,5888]{2,1,0} broadcast(%constant.1), dimensions={}, metadata={op_name="jit(fn)/div" stack_frame_id=8}
+  ROOT %multiply.1 = f16[32,5888,5888]{2,1,0} multiply(%dot.5, %broadcast.3), metadata={op_name="jit(fn)/div" stack_frame_id=8}
+}, metadata={op_name="jit(fn)/bshd,bthd->bhst/dot_general" stack_frame_id=8}, backend_config={"operation_queue_id":"0","fusion_backend_config":{"kind":"__triton_gemm"},"force_earliest_schedule":false,"reification_cost":[],"device_type":"DEVICE_TYPE_INVALID"}. Status: NOT_FOUND: All configs failed during profiling.
+Failures (15):
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/backends/autotuner/config_selector.cc:55
+external/xla/xla/backends/autotuner/config_assigner.cc:426
+
+E1021 17:13:30.168247     768 config_assigner.cc:478] Could not get config for HLO: %gemm_fusion_dot.4 = f16[32,32,5888]{2,1,0} fusion(%bitcast.40.0, %bitcast.39.0), kind=kCustom, calls=
+(parameter_0.1: f16[32,32,5888], parameter_1.1: f16[32,5888,5888]) -> f16[32,32,5888] {
+  %parameter_1.1 = f16[32,5888,5888]{2,1,0} parameter(1)
+  %parameter_0.1 = f16[32,32,5888]{2,1,0} parameter(0)
+  %dot.7 = f16[32,5888,32]{1,2,0} dot(%parameter_1.1, %parameter_0.1), lhs_batch_dims={0}, lhs_contracting_dims={2}, rhs_batch_dims={0}, rhs_contracting_dims={2}, metadata={op_name="jit(fn)/bhst,bthd->bshd/dot_general" stack_frame_id=9}
+  ROOT %bitcast.41 = f16[32,32,5888]{2,1,0} bitcast(%dot.7), metadata={op_name="jit(fn)/bhst,bthd->bshd/dot_general" stack_frame_id=9}
+}, metadata={op_name="jit(fn)/bhst,bthd->bshd/dot_general" stack_frame_id=9}, backend_config={"operation_queue_id":"0","fusion_backend_config":{"kind":"__triton_gemm"},"force_earliest_schedule":false,"reification_cost":[],"device_type":"DEVICE_TYPE_INVALID"}. Status: RESOURCE_EXHAUSTED: Failed to enqueue async memset operation: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+external/xla/xla/stream_executor/gpu/redzone_allocator.cc:120
+external/xla/xla/stream_executor/gpu/redzone_allocator.cc:262
+external/xla/xla/service/gpu/autotuning/redzone_buffers.cc:107
+external/xla/xla/service/gpu/autotuning/redzone_buffers.cc:89
+external/xla/xla/backends/gpu/autotuner/gpu_profiler.cc:269
+external/xla/xla/backends/autotuner/config_runner.cc:69
+external/xla/xla/backends/autotuner/config_assigner.cc:417
+
+E1021 17:13:30.168563     768 cuda_executor.cc:1393] failed to query device memory info: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.168651     768 se_gpu_pjrt_client.cc:1183] Failed to query available memory for GPU 0
+E1021 17:13:30.255599     768 cuda_executor.cc:312] [0] failed to unload module 0x25a83990; leaking: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.291288     768 local_device_state.cc:164] Error when closing device: RESOURCE_EXHAUSTED: Could not synchronize CUDA stream: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.291872     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.291981     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292031     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292057     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292078     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292087     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292094     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292098     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292102     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292107     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292116     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292120     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292126     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292129     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292133     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292137     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292141     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292144     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292149     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292154     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292158     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292162     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292192     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292200     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292207     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292210     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292213     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292217     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292248     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292259     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292264     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292267     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292272     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292276     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292280     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292284     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292289     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292321     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292331     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292337     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292341     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292344     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292349     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292355     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292359     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292363     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292366     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292370     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292378     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292405     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292414     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292420     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292424     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292427     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292432     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292435     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292438     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292442     768 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292446     768 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x79aee00014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.292449     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292863     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292912     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292918     768 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1021 17:13:30.292932     768 cuda_device_allocator.cc:302] [0] Failed to synchronize before device memory deallocation at 0x700000000: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.293970     768 cuda_device_allocator.cc:302] [0] Failed to synchronize before device memory deallocation at 0x700200000: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.295317     768 cuda_device_allocator.cc:302] [0] Failed to synchronize before device memory deallocation at 0x702000000: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.296589     768 cuda_device_allocator.cc:302] [0] Failed to synchronize before device memory deallocation at 0x704000000: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.297727     768 cuda_device_allocator.cc:302] [0] Failed to synchronize before device memory deallocation at 0x706000000: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1021 17:13:30.316441     768 cuda_host_allocator.cc:107] [0] Failed to free host memory at 0x204e00000: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+

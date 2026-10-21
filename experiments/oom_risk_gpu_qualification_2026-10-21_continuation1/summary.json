@@ -1,0 +1,21 @@
+{
+  "all_checks_pass": false,
+  "attempted": 46,
+  "coverage_complete": false,
+  "likely_fit_count": 34,
+  "likely_fit_failures": 0,
+  "new_trials": 15,
+  "not_run": 154,
+  "outcomes": {
+    "COMPILE_OOM": 2,
+    "COMPILE_TIMEOUT": 1,
+    "EXECUTE_TIMEOUT": 1,
+    "EXECUTION_OOM": 5,
+    "FIT": 37
+  },
+  "previous_plan_hash": "3660a87699b31f3bc92df1207204e6568071543fd1ae7792ae3515a9054c6dc5",
+  "public_api_enabled": false,
+  "status": "GPU_QUALIFICATION_INCOMPLETE",
+  "stop_reason": "COMPILE_TIMEOUT",
+  "unresolved": 2
+}

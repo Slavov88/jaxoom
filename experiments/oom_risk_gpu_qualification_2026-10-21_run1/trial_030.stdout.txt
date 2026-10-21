@@ -1,0 +1,4 @@
+{"event": "phase", "phase": "initialization"}
+{"event": "phase", "phase": "initialization"}
+{"event": "phase", "phase": "compile"}
+{"event": "phase", "phase": "execute"}

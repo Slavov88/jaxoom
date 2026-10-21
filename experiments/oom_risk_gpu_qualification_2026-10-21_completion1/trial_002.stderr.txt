@@ -1,0 +1,104 @@
+E1021 17:28:23.615023     770 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (4831838208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1021 17:28:23.614996     769 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (4831838208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1021 17:28:23.999691     760 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 7.03GiB (7550355663 bytes), down from 7.03GiB (7550355663 bytes) originally
+W1021 17:28:23.999864     759 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 7.03GiB (7550355663 bytes), down from 7.03GiB (7550355663 bytes) originally
+W1021 17:28:23.999750     756 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 4.78GiB (5133846576 bytes), down from 4.78GiB (5133846576 bytes) originally
+W1021 17:28:24.002289     764 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 7.03GiB (7550945487 bytes), down from 7.03GiB (7550945487 bytes) originally
+W1021 17:28:24.069252     760 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 4.78GiB (5133846576 bytes), down from 4.78GiB (5133846576 bytes) originally
+W1021 17:28:24.069262     762 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 4.78GiB (5133846576 bytes), down from 4.78GiB (5133846576 bytes) originally
+W1021 17:28:24.069262     756 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 4.78GiB (5133846576 bytes), down from 4.78GiB (5133846576 bytes) originally
+W1021 17:28:24.070344     761 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 4.78GiB (5133846576 bytes), down from 4.78GiB (5133846576 bytes) originally
+W1021 17:28:24.070387     771 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 4.78GiB (5133846576 bytes), down from 4.78GiB (5133846576 bytes) originally
+W1021 17:28:24.070356     767 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 4.78GiB (5133846576 bytes), down from 4.78GiB (5133846576 bytes) originally
+W1021 17:28:24.070356     759 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 4.78GiB (5133846576 bytes), down from 4.78GiB (5133846576 bytes) originally
+W1021 17:28:24.070833     763 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 4.78GiB (5133846576 bytes), down from 4.78GiB (5133846576 bytes) originally
+W1021 17:28:24.070902     765 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 4.78GiB (5133846576 bytes), down from 4.78GiB (5133846576 bytes) originally
+W1021 17:28:24.070878     768 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 4.78GiB (5133846576 bytes), down from 4.78GiB (5133846576 bytes) originally
+W1021 17:28:24.111297     762 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 10.31GiB (11072981024 bytes), down from 10.31GiB (11072981024 bytes) originally
+W1021 17:28:24.112308     766 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 4.78GiB (5133846576 bytes), down from 4.78GiB (5133846576 bytes) originally
+W1021 17:28:24.113594     761 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 4.78GiB (5133846576 bytes), down from 4.78GiB (5133846576 bytes) originally
+W1021 17:28:24.115655     765 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 4.78GiB (5136206031 bytes), down from 4.78GiB (5136206031 bytes) originally
+W1021 17:28:24.118836     768 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 4.78GiB (5133846576 bytes), down from 4.78GiB (5133846576 bytes) originally
+W1021 17:28:24.118836     763 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 7.03GiB (7550355663 bytes), down from 7.03GiB (7550355663 bytes) originally
+W1021 17:28:24.118836     767 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 4.78GiB (5133846576 bytes), down from 4.78GiB (5133846576 bytes) originally
+W1021 17:28:24.121986     760 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.88GiB (3097664737 bytes) by rematerialization; only reduced to 4.78GiB (5133846576 bytes), down from 4.78GiB (5133846576 bytes) originally
+W1021 17:28:33.891887     769 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.25GiB (rounded to 2415919104) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:28:33.892223     769 bfc_allocator.cc:601] **********______*****************************************************************************_______
+W1021 17:28:43.892803     769 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.25GiB (rounded to 2415919104) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:28:43.892967     769 bfc_allocator.cc:601] **********______*****************************************************************************_______
+E1021 17:28:43.893379     729 config_assigner.cc:478] Could not get config for HLO: %wrapped_transpose.2 = f32[256,192,192,64]{3,2,1,0} fusion(%get-tuple-element.1.0), kind=kInput, calls=
+(param_0.2: f32[256,64,192,192]) -> f32[256,192,192,64] {
+  %param_0.2 = f32[256,64,192,192]{3,2,1,0} parameter(0)
+  ROOT %transpose.2.1 = f32[256,192,192,64]{3,2,1,0} transpose(%param_0.2), dimensions={0,2,3,1}, metadata={op_name="jit(fn)/conv_general_dilated" stack_frame_id=6}
+}, metadata={op_name="jit(fn)/conv_general_dilated" stack_frame_id=6}. Status: NOT_FOUND: All configs failed during profiling.
+Failures (2):
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.25GiB. [tf-allocator-allocation-error='']
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.25GiB. [tf-allocator-allocation-error='']
+=== Source Location Trace: === 
+external/xla/xla/backends/autotuner/config_selector.cc:55
+external/xla/xla/backends/autotuner/config_assigner.cc:426
+
+W1021 17:28:53.961451     760 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.25GiB (rounded to 2415919104) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:28:53.961602     760 bfc_allocator.cc:601] **********______***********_________________________________________________________________________
+W1021 17:29:03.964377     760 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.25GiB (rounded to 2415919104) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:29:03.964492     760 bfc_allocator.cc:601] **********______***********_________________________________________________________________________
+W1021 17:29:13.965951     760 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.25GiB (rounded to 2415919104) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:29:13.966461     760 bfc_allocator.cc:601] **********______***********_________________________________________________________________________
+W1021 17:29:23.968639     760 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.25GiB (rounded to 2415919104) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:29:23.968930     760 bfc_allocator.cc:601] **********______***********_________________________________________________________________________
+W1021 17:29:33.971360     760 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.25GiB (rounded to 2415919104) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:29:33.971490     760 bfc_allocator.cc:601] **********______***********_________________________________________________________________________
+W1021 17:29:43.972867     760 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.25GiB (rounded to 2415919104) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:29:43.973003     760 bfc_allocator.cc:601] **********______***********_________________________________________________________________________
+W1021 17:29:53.974384     760 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.25GiB (rounded to 2415919104) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:29:53.974490     760 bfc_allocator.cc:601] **********______***********_________________________________________________________________________
+W1021 17:30:03.975851     760 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.25GiB (rounded to 2415919104) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:30:03.976115     760 bfc_allocator.cc:601] **********______***********_________________________________________________________________________
+W1021 17:30:13.977948     760 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.25GiB (rounded to 2415919104) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:30:13.978126     760 bfc_allocator.cc:601] **********______***********_________________________________________________________________________
+W1021 17:30:23.978703     760 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.25GiB (rounded to 2415919104) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:30:23.978867     760 bfc_allocator.cc:601] **********______***********_________________________________________________________________________
+W1021 17:30:33.980327     760 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.25GiB (rounded to 2415919104) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:30:33.980523     760 bfc_allocator.cc:601] **********______***********_________________________________________________________________________
+W1021 17:30:43.982104     760 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.25GiB (rounded to 2415919104) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:30:43.982315     760 bfc_allocator.cc:601] **********______***********_________________________________________________________________________
+W1021 17:30:53.984129     760 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.25GiB (rounded to 2415919104) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:30:53.984263     760 bfc_allocator.cc:601] **********______***********_________________________________________________________________________
+W1021 17:31:03.985787     760 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.25GiB (rounded to 2415919104) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:31:03.985977     760 bfc_allocator.cc:601] **********______***********_________________________________________________________________________
+W1021 17:31:13.987336     760 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.25GiB (rounded to 2415919104) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:31:13.987493     760 bfc_allocator.cc:601] **********______***********_________________________________________________________________________

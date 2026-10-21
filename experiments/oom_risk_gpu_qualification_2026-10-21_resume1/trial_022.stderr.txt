@@ -1,0 +1,113 @@
+W1021 17:52:56.299344    2721 bfc_allocator.cc:363] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.85GiB from the lower end with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+E1021 17:52:56.300139    2686 config_assigner.cc:478] Could not get config for HLO: %gemm_fusion_dot.4 = f32[24,80,5632]{2,1,0} fusion(%bitcast.40.0, %bitcast.39.0), kind=kCustom, calls=
+(parameter_0.1: f32[24,80,5632], parameter_1.1: f32[24,5632,5632]) -> f32[24,80,5632] {
+  %parameter_0.1 = f32[24,80,5632]{2,1,0} parameter(0)
+  %parameter_1.1 = f32[24,5632,5632]{2,1,0} parameter(1)
+  ROOT %dot.6 = f32[24,80,5632]{2,1,0} dot(%parameter_0.1, %parameter_1.1), lhs_batch_dims={0}, lhs_contracting_dims={2}, rhs_batch_dims={0}, rhs_contracting_dims={2}, metadata={op_name="jit(fn)/bhst,bthd->bshd/dot_general" stack_frame_id=9}
+}, metadata={op_name="jit(fn)/bhst,bthd->bshd/dot_general" stack_frame_id=9}, backend_config={"operation_queue_id":"0","fusion_backend_config":{"kind":"__triton_gemm"},"force_earliest_schedule":false,"reification_cost":[],"device_type":"DEVICE_TYPE_INVALID"}. Status: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.85GiB. [tf-allocator-allocation-error='']
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:269
+external/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:192
+external/xla/xla/stream_executor/gpu/redzone_allocator.cc:93
+external/xla/xla/stream_executor/gpu/redzone_allocator.cc:262
+external/xla/xla/service/gpu/autotuning/redzone_buffers.cc:107
+external/xla/xla/service/gpu/autotuning/redzone_buffers.cc:89
+external/xla/xla/backends/gpu/autotuner/gpu_profiler.cc:269
+external/xla/xla/backends/autotuner/config_runner.cc:69
+external/xla/xla/backends/autotuner/config_assigner.cc:417
+
+W1021 17:53:06.321397    2715 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.84GiB (rounded to 3045064704) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:53:06.321782    2715 bfc_allocator.cc:601] *****************xxxxxxxx***********************xx***********************___________________________
+W1021 17:53:16.322232    2715 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.84GiB (rounded to 3045064704) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:53:16.322497    2715 bfc_allocator.cc:601] *****************xxxxxxxx***********************xx***********************___________________________
+W1021 17:53:26.323198    2715 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.84GiB (rounded to 3045064704) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:53:26.323509    2715 bfc_allocator.cc:601] *****************xxxxxxxx***********************xx***********************___________________________
+W1021 17:53:36.324530    2715 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.84GiB (rounded to 3045064704) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:53:36.324774    2715 bfc_allocator.cc:601] *****************xxxxxxxx***********************xx***********************___________________________
+W1021 17:53:46.325085    2715 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.84GiB (rounded to 3045064704) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:53:46.325215    2715 bfc_allocator.cc:601] *****************xxxxxxxx***********************xx***********************___________________________
+W1021 17:53:56.325747    2715 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.84GiB (rounded to 3045064704) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:53:56.326186    2715 bfc_allocator.cc:601] *****************xxxxxxxx***********************xx***********************___________________________
+W1021 17:54:06.326724    2715 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.84GiB (rounded to 3045064704) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:54:06.326856    2715 bfc_allocator.cc:601] *****************xxxxxxxx***********************xx***********************___________________________
+W1021 17:54:16.327256    2715 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.84GiB (rounded to 3045064704) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:54:16.327564    2715 bfc_allocator.cc:601] *****************xxxxxxxx***********************xx***********************___________________________
+W1021 17:54:26.328159    2715 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.84GiB (rounded to 3045064704) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:54:26.328364    2715 bfc_allocator.cc:601] *****************xxxxxxxx***********************xx***********************___________________________
+W1021 17:54:36.329007    2715 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.84GiB (rounded to 3045064704) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:54:36.329413    2715 bfc_allocator.cc:601] *****************xxxxxxxx***********************xx***********************___________________________
+W1021 17:54:46.330032    2715 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.84GiB (rounded to 3045064704) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:54:46.330343    2715 bfc_allocator.cc:601] *****************xxxxxxxx***********************xx***********************___________________________
+W1021 17:54:56.330769    2715 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.84GiB (rounded to 3045064704) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:54:56.330896    2715 bfc_allocator.cc:601] *****************xxxxxxxx***********************xx***********************___________________________
+W1021 17:55:06.331536    2715 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.84GiB (rounded to 3045064704) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:55:06.331671    2715 bfc_allocator.cc:601] *****************xxxxxxxx***********************xx***********************___________________________
+W1021 17:55:16.332145    2715 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.84GiB (rounded to 3045064704) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:55:16.332318    2715 bfc_allocator.cc:601] *****************xxxxxxxx***********************xx***********************___________________________
+W1021 17:55:26.332752    2715 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.84GiB (rounded to 3045064704) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:55:26.332940    2715 bfc_allocator.cc:601] *****************xxxxxxxx***********************xx***********************___________________________
+W1021 17:55:36.333569    2715 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.84GiB (rounded to 3045064704) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1021 17:55:36.333729    2715 bfc_allocator.cc:601] *****************xxxxxxxx***********************xx***********************___________________________
+E1021 17:55:36.334200    2686 config_assigner.cc:478] Could not get config for HLO: %gemm_fusion_dot.3 = f32[24,5632,5632]{2,1,0} fusion(%bitcast.40.0, %bitcast.40.0), kind=kCustom, calls=
+(parameter_0: f32[24,80,5632], parameter_1: f32[24,80,5632]) -> f32[24,5632,5632] {
+  %parameter_0 = f32[24,80,5632]{2,1,0} parameter(0)
+  %transpose.8 = f32[24,5632,80]{2,1,0} transpose(%parameter_0), dimensions={0,2,1}, metadata={op_name="jit(fn)/reshape" stack_frame_id=7}
+  %parameter_1 = f32[24,80,5632]{2,1,0} parameter(1)
+  %dot.5 = f32[24,5632,5632]{2,1,0} dot(%transpose.8, %parameter_1), lhs_batch_dims={0}, lhs_contracting_dims={2}, rhs_batch_dims={0}, rhs_contracting_dims={1}, metadata={op_name="jit(fn)/bshd,bthd->bhst/dot_general" stack_frame_id=8}
+  %constant.1 = f32[] constant(0.111803398)
+  %broadcast.3 = f32[24,5632,5632]{2,1,0} broadcast(%constant.1), dimensions={}, metadata={op_name="jit(fn)/div" stack_frame_id=8}
+  ROOT %multiply.1 = f32[24,5632,5632]{2,1,0} multiply(%dot.5, %broadcast.3), metadata={op_name="jit(fn)/div" stack_frame_id=8}
+}, metadata={op_name="jit(fn)/bshd,bthd->bhst/dot_general" stack_frame_id=8}, backend_config={"operation_queue_id":"0","fusion_backend_config":{"kind":"__triton_gemm"},"force_earliest_schedule":false,"reification_cost":[],"device_type":"DEVICE_TYPE_INVALID"}. Status: NOT_FOUND: All configs failed during profiling.
+Failures (16):
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.84GiB. [tf-allocator-allocation-error='']
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.84GiB. [tf-allocator-allocation-error='']
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.84GiB. [tf-allocator-allocation-error='']
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.84GiB. [tf-allocator-allocation-error='']
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.84GiB. [tf-allocator-allocation-error='']
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.84GiB. [tf-allocator-allocation-error='']
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.84GiB. [tf-allocator-allocation-error='']
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.84GiB. [tf-allocator-allocation-error='']
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.84GiB. [tf-allocator-allocation-error='']
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.84GiB. [tf-allocator-allocation-error='']
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.84GiB. [tf-allocator-allocation-error='']
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.84GiB. [tf-allocator-allocation-error='']
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.84GiB. [tf-allocator-allocation-error='']
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.84GiB. [tf-allocator-allocation-error='']
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.84GiB. [tf-allocator-allocation-error='']
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 2.84GiB. [tf-allocator-allocation-error='']
+=== Source Location Trace: ===
+external/xla/xla/backends/autotuner/config_selector.cc:55
+external/xla/xla/backends/autotuner/config_assigner.cc:426
+

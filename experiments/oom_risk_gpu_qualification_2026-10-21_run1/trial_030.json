@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/home/slavov/.venvs/jaxoom-cuda-20261021/env/bin/python",
+    "-m",
+    "experiments.oom_risk_gpu_qualification",
+    "--child",
+    "79d41b9f50e65f75c8b48f17096d2ab1478a53cda2d0254f4335206e742a2a2d",
+    "--plan",
+    "experiments/oom_risk_gpu_qualification_2026-10-21_run1/plan.json",
+    "--replay",
+    "experiments/oom_risk_gpu_qualification_2026-10-21_run1/gpu_replay.json"
+  ],
+  "expected_probability": 0.7052589449165493,
+  "gpu_runtime_executed": true,
+  "index": 30,
+  "is_pilot": false,
+  "likely_fit": false,
+  "outcome": "EXECUTE_TIMEOUT",
+  "phase": "execute",
+  "returncode": null,
+  "spec_hash": "79d41b9f50e65f75c8b48f17096d2ab1478a53cda2d0254f4335206e742a2a2d"
+}

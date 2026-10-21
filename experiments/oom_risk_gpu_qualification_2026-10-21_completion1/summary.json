@@ -1,0 +1,21 @@
+{
+  "all_checks_pass": false,
+  "attempted": 96,
+  "coverage_complete": false,
+  "likely_fit_count": 76,
+  "likely_fit_failures": 1,
+  "new_trials": 50,
+  "not_run": 104,
+  "outcomes": {
+    "COMPILE_OOM": 3,
+    "COMPILE_TIMEOUT": 3,
+    "EXECUTE_TIMEOUT": 1,
+    "EXECUTION_OOM": 5,
+    "FIT": 83,
+    "INVALID_CHILD_PROVENANCE_OR_REPLAY": 1
+  },
+  "public_api_enabled": false,
+  "status": "GPU_QUALIFICATION_INCOMPLETE",
+  "stop_reason": "INVALID_CHILD_PROVENANCE_OR_REPLAY",
+  "unresolved": 5
+}

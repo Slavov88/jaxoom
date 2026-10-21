@@ -1,0 +1,18 @@
+{
+  "all_checks_pass": false,
+  "false_safe_execution_ooms": 0,
+  "likely_fit_failures": 0,
+  "outcomes": {
+    "COMPILE_OOM": 1,
+    "EXECUTE_TIMEOUT": 1,
+    "EXECUTION_OOM": 2,
+    "FIT": 27
+  },
+  "pilot_count": 18,
+  "plan_hash": "3660a87699b31f3bc92df1207204e6568071543fd1ae7792ae3515a9054c6dc5",
+  "policy_hash": "26872f92d9bf745dcfd5645007b0e46020c77a48a4c28c20260dccd4e3aada3d",
+  "public_api_enabled": false,
+  "runtime_trials": 31,
+  "status": "GPU_QUALIFICATION_STOPPED",
+  "stop_reason": "EXECUTE_TIMEOUT"
+}

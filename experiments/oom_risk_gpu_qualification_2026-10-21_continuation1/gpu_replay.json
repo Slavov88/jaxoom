@@ -1,0 +1,4456 @@
+{
+  "arbitrary_callable_support": "DISABLED",
+  "completed": 224,
+  "contract": {
+    "adapter_source_sha256": "a4f4a4443eeb75b3b73abd1ac0812ed6134822e528e6c6760c8aa3a1da1b8288",
+    "dimension_max": 2147483647,
+    "dtypes": [
+      "float16",
+      "float32"
+    ],
+    "family_fields": {
+      "attention": [
+        "batch",
+        "heads",
+        "sequence",
+        "head_dim"
+      ],
+      "autodiff": [
+        "batch",
+        "width",
+        "depth"
+      ],
+      "convolution": [
+        "batch",
+        "height",
+        "width",
+        "channels",
+        "out_channels"
+      ],
+      "matmul": [
+        "m",
+        "k",
+        "n",
+        "depth"
+      ],
+      "mlp": [
+        "batch",
+        "width",
+        "depth"
+      ],
+      "reduction": [
+        "batch",
+        "length",
+        "width",
+        "depth"
+      ],
+      "scan": [
+        "batch",
+        "length",
+        "width",
+        "depth"
+      ],
+      "training": [
+        "batch",
+        "width",
+        "depth"
+      ],
+      "transformer": [
+        "sequence",
+        "width",
+        "heads",
+        "layers"
+      ]
+    },
+    "feature_names": [
+      "structural_peak_over_budget",
+      "calibrated_upper_over_budget",
+      "largest_over_budget",
+      "top_two_peak_live_over_budget",
+      "peak_live_over_budget",
+      "dtype_bytes",
+      "config_numeric_count",
+      "config_numeric_max",
+      "config_numeric_log_product"
+    ],
+    "feature_version": "frozen-v2-legacy-zero-1",
+    "fit_threshold": 0.2,
+    "jax": "0.11.0",
+    "jaxlib": "0.11.0",
+    "legacy_largest_feature": 0.0,
+    "legacy_scan_depth": "metadata_only",
+    "model_file_sha256": "5b2eeedf9a180af1c79678e94ecf3401b0256b4906e1d8f5180f058d3b354ae3",
+    "model_hash": "9e7f03a6ca027950e84a42179df3b8743d8f0b81157b500027fb765de1a42e96",
+    "public_api_enabled": false,
+    "reference_bytes": 3221225472,
+    "reference_is_runtime_quota": false,
+    "runtime_applicability": "NOT_QUALIFIED; historical RTX 3050 campaign only",
+    "spec_version": "frozen-v2-workload-1",
+    "static_analysis_source_sha256": {
+      "__init__.py": "f8f2f2f0145cfa792dfd82c059ad41a73119b9cd758495c4b784110a65f7c94c",
+      "analysis/__init__.py": "3a8edc62917405ebf8a891ab806b4e61dccf970dbcf43bd1b709b3c2bd72477c",
+      "analysis/liveness.py": "c20e5fc68aa208d989e0846ec0b243198c3970bbd7081f370b8bf38d4fec7e58",
+      "analysis/peak.py": "ba6ba4fdd7956c130068942e09ed83917db3dd5cd3e9f87e951802f44814814e",
+      "analysis/tensor_size.py": "7e9c185003bae3f1371ea8959e263142bb7d3c27871453d1981139efe936e196",
+      "api.py": "7300906fc030385efcb237469e8507513c534bbcdc4bf5be1993507539e672b4",
+      "batch_planner.py": "d4a03112bcc0fd34e95ed332837b2ecd0dd92c62406e9f724312e062b54ec283",
+      "calibration.py": "2db7237d72d48de56997e782b24d0a284da68ccd295e58a9bde6621076ac3bec",
+      "calibration_defaults.py": "eb6a35c56dc183fd96616b6ae3ffcaa6efbe4f26e02d24a5294433d2f861ec21",
+      "compiler/__init__.py": "f811b6b7947da2b72df2bbdf4bee9ee78d6838f803e4e4ff2ccc6c6c10499d26",
+      "compiler/comparison.py": "a3ab16b473136044dc0ab6c5990f0e09bc4e55c2c0b91d12a238a65b1c858e89",
+      "compiler/memory_analysis.py": "b6c6c603801a607b57aa004988cc57e4fc8aa139f5796cec597a48bb1433bf86",
+      "device.py": "892bdf8485a5e61754622ad47f236c186644a63a332f2b485634b263c6b11c68",
+      "donation.py": "0d80a6d812d37c3f3ebb15834372549f5718d2cc90d04d326ac0bf42d845a7c7",
+      "reports/__init__.py": "17dd8d22ca03fbfadce75568a67fba2a63eefaccae9600ed02d067a343abd2b6",
+      "reports/console.py": "2a7d46d318c842ecacdb8e582e9fdcf6932f49530ea780d69d0814862beed840",
+      "tracing/__init__.py": "dcfb6d9c22460bc881b6b2c9363f584fefcf1cbff3467f10dfbd601b2258f32c",
+      "tracing/jaxpr.py": "e00a2f679df5232fd1f4ecc5e9c39dc49f9c3ab3f2767c3eb2696f5473b51f9b",
+      "types.py": "5bb0bb9caf20478552d7c6529a13cf327616571030b5d50b3beac3de130c7c2e"
+    },
+    "template_source_sha256": "b0afa5a7e04f6d254ff8a807772cb0c0ff0958858a579d058f22564916dca04b",
+    "unroll_resource_limit": 64,
+    "upper_ratio": 1.66765051935476
+  },
+  "contract_hash": "84dc466cddc79b12590a7034f830fd189b57f36c28e3e4347c3df26d7cfb5471",
+  "decision_mismatches": 0,
+  "errors": [],
+  "feature_mismatches": 0,
+  "feature_mismatches_by_name": {
+    "calibrated_upper_over_budget": 0,
+    "config_numeric_count": 0,
+    "config_numeric_log_product": 0,
+    "config_numeric_max": 0,
+    "dtype_bytes": 0,
+    "largest_over_budget": 0,
+    "peak_live_over_budget": 0,
+    "structural_peak_over_budget": 0,
+    "top_two_peak_live_over_budget": 0
+  },
+  "fresh_tracing_and_replay_pass": true,
+  "max_feature_delta": 0.0,
+  "max_probability_delta": 1.1102230246251565e-16,
+  "prediction_file_sha256": {
+    "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json": "2ed9d119cd91b290867251d4017d9805168ab6e5486b6664f41e17e4d494ce09",
+    "oom_risk_heldout2_predictions_2026-09-13.json": "f265eb9697b341cfc99cb7bb33504ae2e4d0b3aa68e6688f4c7f7c9620f3b0bb",
+    "oom_risk_heldout_predictions_2026-09-13.json": "116ff4a1a75831e4867fc7c7a7f203459c9ea0f37174d0854ec5b263f2de0e63"
+  },
+  "provenance": {
+    "backend": "gpu",
+    "command": [
+      "/home/slavov/.venvs/jaxoom-cuda-20261021/env/bin/python",
+      "/mnt/c/Users/Slavo/jaxoom/experiments/oom_risk_workload_replay.py",
+      "--output",
+      "experiments/oom_risk_gpu_qualification_2026-10-21_continuation1/gpu_replay.json"
+    ],
+    "devices": [
+      "cuda:0"
+    ],
+    "git_commit": "5ae0e5b604bf16b92962bbc059a128d3a8b08cfd",
+    "git_status": "M experiments/accelerator_calibration_2026-09-07.csv\n M experiments/accelerator_calibration_cpu_2026-09-07.csv\n M experiments/accelerator_calibration_cpu_2026-09-07.json\n M experiments/accelerator_calibration_cpu_2026-09-07_v2.csv\n M experiments/accelerator_calibration_cpu_2026-09-07_v2.json\n M experiments/accelerator_calibration_gpu_2026-09-07_v2.csv\n M experiments/allocator_aware_safety_gate_report_2026-09-10.md\n M experiments/allocator_gate_dataset_2026-09-10.json\n M experiments/allocator_gate_discriminator_candidates_2026-09-11.json\n M experiments/allocator_gate_discriminator_summary_2026-09-11.json\n M experiments/allocator_gate_multiregime_candidates_2026-09-11.json\n M experiments/allocator_gate_multiregime_report_2026-09-11.md\n M experiments/allocator_gate_multiregime_summary_2026-09-11.json\n M experiments/allocator_gate_split_2026-09-10.json\n M experiments/allocator_residency_campaign_summary_2026-09-09.json\n M experiments/allocator_residency_holdout_2026-09-08.json\n M experiments/allocator_residency_model_comparison_2026-09-08.json\n M experiments/allocator_residency_summary_2026-09-08.json\n M experiments/allocator_residency_t4_long_candidate_configurations.json\n M experiments/allocator_residency_t4_long_new_thresholds.json\n M experiments/allocator_residency_t4_long_paired_rtx_t4.json\n M experiments/allocator_residency_t4_long_raw_probes.json\n M experiments/allocator_residency_t4_long_scale_searches.json\n M experiments/allocator_residency_t4_long_summary_2026-09-09.json\n M experiments/allocator_residency_t4_phase_c_candidate_ranking.json\n M experiments/allocator_residency_t4_phase_c_fraction_map_phase_c.json\n M experiments/allocator_residency_t4_phase_c_new_thresholds.json\n M experiments/allocator_residency_t4_phase_c_paired_comparison.json\n M experiments/allocator_residency_t4_phase_c_raw_probes.json\n M experiments/allocator_residency_t4_phase_c_summary.json\n M experiments/allocator_residency_t4_phase_c_summary_2026-09-09.json\n M experiments/allocator_residency_t4_raw_2026-09-09.json\n M experiments/allocator_residency_t4_refined_paired_2026-09-09.json\n M experiments/allocator_residency_t4_refined_raw_2026-09-09.json\n M experiments/allocator_residency_t4_refined_summary_2026-09-09.json\n M experiments/allocator_residency_t4_refined_thresholds_2026-09-09.json\n M experiments/allocator_residency_t4_summary_2026-09-09.json\n M experiments/allocator_residency_threshold_matrix_2026-09-08.json\n M experiments/allocator_residency_thresholds_2026-09-08.json\n M experiments/allocator_residency_thresholds_2026-09-09.json\n M experiments/allocator_residency_validation_2026-09-08.json\n M experiments/batch_planner_boundary_validation.py\n M experiments/capacity_boundary_plan_2026-09-11.json\n M experiments/capacity_boundary_results_2026-09-11.json\n M experiments/capacity_boundary_split_2026-09-11.json\n M experiments/capacity_boundary_summary_2026-09-11.json\n M experiments/compiler_calibration_2026-09-07.csv\n M experiments/compiler_calibration_2026-09-07.json\n M experiments/compiler_calibration_2026-09-07_v2.csv\n M experiments/compiler_calibration_2026-09-07_v2.json\n M experiments/compiler_calibration_report.md\n M experiments/compiler_drift_cases_2026-09-08.json\n M experiments/compiler_drift_cases_t4_returned_2026-09-08.json\n M experiments/compiler_introspection_pair_report_2026-09-08.md\n M experiments/compiler_introspection_t4_2026-09-08.json\n M experiments/compiler_introspection_t4_environment_2026-09-08.json\n M experiments/device_budget_correction_2026-09-08.json\n M experiments/donation_validation_report_2026-09-08.md\n M experiments/donation_validation_summary_2026-09-08.json\n M experiments/execution_memory_contention_2026-09-08.json\n M experiments/execution_memory_validation_summary_2026-09-08.json\n M experiments/execution_oom_allocator_policy_2026-09-08.json\n M experiments/execution_oom_diagnosis_summary_2026-09-08.json\n M experiments/execution_oom_false_fit_2026-09-08.json\n M experiments/execution_oom_false_fit_corrected_2026-09-08.json\n M experiments/gpu_calibration_report.md\n M experiments/jax_0_11_gpu_calibration_2026-09-08.csv\n M experiments/jax_0_11_gpu_calibration_2026-09-08_v2.csv\n M experiments/jax_version_validation_2026-09-08_jax011_gpu.json\n M experiments/jax_version_validation_2026-09-08_jax062_gpu.json\n M experiments/jaxoom_t4_allocator_residency_colab.ipynb\n M experiments/jaxoom_t4_allocator_residency_long_campaign_colab.ipynb\n M experiments/jaxoom_t4_allocator_residency_refinement_colab.ipynb\n M experiments/jaxoom_t4_compiler_introspection_colab.ipynb\n M experiments/jaxoom_t4_validation_colab.ipynb\n M experiments/oom_boundary_validation_2026-09-08.json\n M experiments/oom_boundary_validation_reserve_sensitivity_2026-09-08.json\n M experiments/oom_boundary_validation_summary_2026-09-08.json\n M experiments/oom_risk_heldout2_validation_manifest_2026-09-13.json\n M experiments/oom_risk_heldout_predictions_2026-09-13.json\n M experiments/oom_risk_heldout_results_2026-09-13.json\n M experiments/oom_risk_heldout_validation_manifest_2026-09-13.json\n M experiments/runtime_validation_2026-09-07_v2.json\n M experiments/runtime_validation_summary_2026-09-07_v3.json\n M experiments/t4_paired_candidate_manifest_2026-09-09.json\n M experiments/uncertainty_calibration_2026-09-07_v2.csv\n M experiments/uncertainty_calibration_2026-09-07_v2.json\n M experiments/validation_2026-09-07.md\n M experiments/validation_2026-09-07.txt\n M experiments/version_calibration_comparison_2026-09-08.json\n M reports/STATUS.md\n M reports/att2_false_safe_analysis_v1.json\n M reports/planner_boundaries_v1.json\n?? experiment-plan.md\n?? experiments/oom_risk_applicability.py\n?? experiments/oom_risk_gpu_continuation.py\n?? experiments/oom_risk_gpu_qualification.py\n?? experiments/oom_risk_gpu_qualification_2026-10-21_continuation1/\n?? experiments/oom_risk_gpu_qualification_2026-10-21_run1/\n?? experiments/oom_risk_gpu_startup_2026-10-21.json\n?? experiments/oom_risk_radeon_preflight.py\n?? experiments/oom_risk_radeon_preflight_2026-10-20.json\n?? experiments/oom_risk_radeon_preflight_2026-10-20_final.json\n?? experiments/oom_risk_workload_replay.py\n?? experiments/oom_risk_workload_replay_2026-10-20_final.json\n?? experiments/oom_risk_workload_replay_2026-10-20_pilot.json\n?? experiments/oom_risk_workload_replay_2026-10-20_run1.json\n?? experiments/oom_risk_workload_spec.py\n?? research/GPU_QUALIFICATION_2026-10-21.md\n?? research/RESTRICTED_APPLICABILITY_AND_GPU_QUALIFICATION.md\n?? research/WORKLOAD_SPEC_V2_CONTRACT.md\n?? tests/test_oom_risk_applicability.py\n?? tests/test_oom_risk_gpu_continuation.py\n?? tests/test_oom_risk_gpu_qualification.py\n?? tests/test_oom_risk_radeon_preflight.py\n?? tests/test_oom_risk_workload_spec.py",
+    "jax": "0.11.0",
+    "jax_enable_x64": false,
+    "jaxlib": "0.11.0",
+    "machine": "x86_64",
+    "numpy": "2.5.3",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "seed": null,
+    "utc": "2026-10-21T14:10:48.846929+00:00"
+  },
+  "public_api_absent": true,
+  "public_api_enabled": false,
+  "purity": {
+    "blocked_compile_calls": 0,
+    "concrete_target_calls": 0,
+    "target_calls_with_tracers": 224
+  },
+  "purity_pass": true,
+  "reference_is_runtime_quota": false,
+  "replayed_rows": [
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0000",
+      "features": {
+        "calibrated_upper_over_budget": 0.020369785167594686,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 12.882116901315456,
+        "config_numeric_max": 768.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.01221466064453125,
+        "structural_peak_over_budget": 0.01221466064453125,
+        "top_two_peak_live_over_budget": 0.01171875
+      },
+      "fresh_probability": 0.15633593833213721,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.15633593833213721,
+      "spec_hash": "29c1000e315cf3ae069088122a9c8736fbeee661dc08594a8b96ef1ec9d2ab4a"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0001",
+      "features": {
+        "calibrated_upper_over_budget": 0.00998132196375892,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 11.495830169541591,
+        "config_numeric_max": 768.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.005985260009765625,
+        "structural_peak_over_budget": 0.005985260009765625,
+        "top_two_peak_live_over_budget": 0.005859375
+      },
+      "fresh_probability": 0.15226128990903984,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.1522612899090398,
+      "spec_hash": "e25eb3ede2c9afa6f6e7ea2ef0f2a38c270282416c855a81e58c4c2f85347e29"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0002",
+      "features": {
+        "calibrated_upper_over_budget": 0.0033292278485450404,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 11.090370147631774,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0019963582356770835,
+        "structural_peak_over_budget": 0.0019963582356770835,
+        "top_two_peak_live_over_budget": 0.001953125
+      },
+      "fresh_probability": 0.12871747863182573,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.12871747863182575,
+      "spec_hash": "23b3c69fd6a26afe6fb3fe1867a98ede76ae726d51d8ad6fd6a1716486ac2d7d"
+    },
+    {
+      "absolute_probability_delta": 5.551115123125783e-17,
+      "candidate_id": "HOLDOUT-0003",
+      "features": {
+        "calibrated_upper_over_budget": 0.01792269667254948,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 12.476653064769005,
+        "config_numeric_max": 1024.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.010747273763020834,
+        "structural_peak_over_budget": 0.010747273763020834,
+        "top_two_peak_live_over_budget": 0.010416666666666666
+      },
+      "fresh_probability": 0.1554892593586878,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.15548925935868785,
+      "spec_hash": "e59d91ce3a7b9953c784a2e3080893810321a0890b3127bd90e79fe7b756e038"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0004",
+      "features": {
+        "calibrated_upper_over_budget": 0.006658455697090081,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 11.783509698884497,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.003992716471354167,
+        "structural_peak_over_budget": 0.003992716471354167,
+        "top_two_peak_live_over_budget": 0.00390625
+      },
+      "fresh_probability": 0.1302207898968864,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.1302207898968864,
+      "spec_hash": "bafec214b335dc96ee6ed976cba0ac7c05800a86bbf7057eaa12ba1ce7c37a7c"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0005",
+      "features": {
+        "calibrated_upper_over_budget": 0.943142682638013,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.367021219902783,
+        "config_numeric_max": 3072.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.5655517578125,
+        "structural_peak_over_budget": 0.5655517578125,
+        "top_two_peak_live_over_budget": 0.5625
+      },
+      "fresh_probability": 0.34345520785618877,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.34345520785618877,
+      "spec_hash": "0987ddb630d30404bad9ad2d1df5630c1828e2f16c243f1598b9bdc8e14b04fd"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0006",
+      "features": {
+        "calibrated_upper_over_budget": 0.4773731039901015,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.87784675889774,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.2862548828125,
+        "structural_peak_over_budget": 0.2862548828125,
+        "top_two_peak_live_over_budget": 0.28125
+      },
+      "fresh_probability": 0.22374189832452726,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.22374189832452726,
+      "spec_hash": "342964d2bc54b22c30fb36b6bf918530a6e182adddcc72863db31f137c994835"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0007",
+      "features": {
+        "calibrated_upper_over_budget": 0.15883597628497942,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 13.980727494565434,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.095245361328125,
+        "structural_peak_over_budget": 0.095245361328125,
+        "top_two_peak_live_over_budget": 0.09375
+      },
+      "fresh_probability": 0.18381762779291272,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.18381762779291272,
+      "spec_hash": "9076c5ee5a2ff155100ed470bb11a1527db96dea4b769a184b5300c69afad243"
+    },
+    {
+      "absolute_probability_delta": 1.1102230246251565e-16,
+      "candidate_id": "HOLDOUT-0008",
+      "features": {
+        "calibrated_upper_over_budget": 1.120724120184864,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.249238210737348,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.6720377604166666,
+        "structural_peak_over_budget": 0.6720377604166666,
+        "top_two_peak_live_over_budget": 0.6666666666666666
+      },
+      "fresh_probability": 0.43687094799608356,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.43687094799608367,
+      "spec_hash": "1b159a405b21642bf949677f74cf466677180ba510dd14e0465209108c979a97"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0009",
+      "features": {
+        "calibrated_upper_over_budget": 0.16699152425026875,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 14.491552779247453,
+        "config_numeric_max": 1280.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.10013580322265625,
+        "structural_peak_over_budget": 0.10013580322265625,
+        "top_two_peak_live_over_budget": 0.09765625
+      },
+      "fresh_probability": 0.18601057087093373,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.18601057087093373,
+      "spec_hash": "69706f32fcb73cdfe7dfdaf00bd5d68c2350945db5941100d3376949c6d86eca"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0010",
+      "features": {
+        "calibrated_upper_over_budget": 0.47643158987242384,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.079339218093526,
+        "config_numeric_max": 3072.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.2856903076171875,
+        "structural_peak_over_budget": 0.2856903076171875,
+        "top_two_peak_live_over_budget": 0.28125
+      },
+      "fresh_probability": 0.25651677618782065,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.25651677618782065,
+      "spec_hash": "e8eea5afe22711435d1544d1dabd0b2b94ba3852511403f05eddc3e6b3ef857a"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0011",
+      "features": {
+        "calibrated_upper_over_budget": 1.7454484246461106,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.184699705494344,
+        "config_numeric_max": 5120.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 1.0466512044270833,
+        "structural_peak_over_budget": 1.0466512044270833,
+        "top_two_peak_live_over_budget": 1.0416666666666667
+      },
+      "fresh_probability": 0.6364489775859138,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.6364489775859138,
+      "spec_hash": "b684be24bed1a3d2843ddd32d9e065255e0ebc3a1058acebe61f409b739c42f2"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0012",
+      "features": {
+        "calibrated_upper_over_budget": 2.125582629131192,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 16.46563336728583,
+        "config_numeric_max": 4608.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 1.27459716796875,
+        "structural_peak_over_budget": 1.27459716796875,
+        "top_two_peak_live_over_budget": 1.265625
+      },
+      "fresh_probability": 0.7052589449165493,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.7052589449165493,
+      "spec_hash": "79d41b9f50e65f75c8b48f17096d2ab1478a53cda2d0254f4335206e742a2a2d"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0013",
+      "features": {
+        "calibrated_upper_over_budget": 1.7454484246461106,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.184699705494344,
+        "config_numeric_max": 5120.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 1.0466512044270833,
+        "structural_peak_over_budget": 1.0466512044270833,
+        "top_two_peak_live_over_budget": 1.0416666666666667
+      },
+      "fresh_probability": 0.6364489775859138,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.6364489775859138,
+      "spec_hash": "a5bb2841ff94c869d13c5bc425ae3f1d2217e34e752ef36880dc3f5dfe594387"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0014",
+      "features": {
+        "calibrated_upper_over_budget": 0.9504203323043866,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.590164728831477,
+        "config_numeric_max": 3072.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.569915771484375,
+        "structural_peak_over_budget": 0.569915771484375,
+        "top_two_peak_live_over_budget": 0.5625
+      },
+      "fresh_probability": 0.38728511752380684,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.38728511752380684,
+      "spec_hash": "6336edd3e7ba2a7f144ddc7efbcee433d004f2827fbb64df36c2c70095adba15"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0015",
+      "features": {
+        "calibrated_upper_over_budget": 3.4526764653800073,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.612143631864555,
+        "config_numeric_max": 5888.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 2.0703837076822915,
+        "structural_peak_over_budget": 2.0703837076822915,
+        "top_two_peak_live_over_budget": 2.06640625
+      },
+      "fresh_probability": 0.9279227334673099,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.9279227334673099,
+      "spec_hash": "5791ebc228b3a23a7f6e46feae8dd82c62a4832dd5b4f42fcec6a1c6a4dd3dc4"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0016",
+      "features": {
+        "calibrated_upper_over_budget": 2.514707869334637,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.654703239372669,
+        "config_numeric_max": 6144.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 1.5079345703125,
+        "structural_peak_over_budget": 1.5079345703125,
+        "top_two_peak_live_over_budget": 1.5
+      },
+      "fresh_probability": 0.8244257316449902,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.8244257316449902,
+      "spec_hash": "91c7eb4acbd15cbf2ce7984b5ab5b0bb091f58af03633b7bd8952e03b52190e6"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0017",
+      "features": {
+        "calibrated_upper_over_budget": 0.6413068278852098,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 14.828024870546928,
+        "config_numeric_max": 7168.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.3845570882161458,
+        "structural_peak_over_budget": 0.3845570882161458,
+        "top_two_peak_live_over_budget": 0.3828125
+      },
+      "fresh_probability": 0.26776345805765744,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.26776345805765744,
+      "spec_hash": "57646b0f2ad4ab33ea3b7107437b93d2185fd09abcd93bbdb2ee06564c35dbcc"
+    },
+    {
+      "absolute_probability_delta": 5.551115123125783e-17,
+      "candidate_id": "HOLDOUT-0018",
+      "features": {
+        "calibrated_upper_over_budget": 0.0005523973595834287,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 15.942385272088025,
+        "config_numeric_max": 32.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0003312428792317708,
+        "structural_peak_over_budget": 0.0003312428792317708,
+        "top_two_peak_live_over_budget": 0.0003255208333333333
+      },
+      "fresh_probability": 0.14532290794339361,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.14532290794339356,
+      "spec_hash": "874d848b06e9ea02051ecc4b4e54b141301acf61f9d8d93501f8e4f250e504e3"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0019",
+      "features": {
+        "calibrated_upper_over_budget": 0.002757745743333009,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 16.060168294498933,
+        "config_numeric_max": 96.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0016536712646484375,
+        "structural_peak_over_budget": 0.0016536712646484375,
+        "top_two_peak_live_over_budget": 0.00164794921875
+      },
+      "fresh_probability": 0.1697769245376265,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.1697769245376265,
+      "spec_hash": "3794f0a8111946b02a695965ec2e6c4ef39b68663b5e3e38d7dbe7b995e88d43"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0020",
+      "features": {
+        "calibrated_upper_over_budget": 0.0008238248529679925,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 16.347850340459765,
+        "config_numeric_max": 96.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0004940032958984375,
+        "structural_peak_over_budget": 0.0004940032958984375,
+        "top_two_peak_live_over_budget": 0.00048828125
+      },
+      "fresh_probability": 0.1460913670673447,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.14609136706734469,
+      "spec_hash": "8b9bf993aea6bf69270e9c952d20517c8c9abe770f81dc047852a8118d1db679"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0021",
+      "features": {
+        "calibrated_upper_over_budget": 0.0002905122390131659,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 14.556091268595896,
+        "config_numeric_max": 32.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.00017420450846354166,
+        "structural_peak_over_budget": 0.00017420450846354166,
+        "top_two_peak_live_over_budget": 0.00016276041666666666
+      },
+      "fresh_probability": 0.1664961419484979,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.1664961419484979,
+      "spec_hash": "cbcdcb34e9f66109f131b80aeafdf08b7124c71da2f5a93286d195f242d89321"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0022",
+      "features": {
+        "calibrated_upper_over_budget": 0.002036898996986016,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 16.16552879956038,
+        "config_numeric_max": 80.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0012214183807373047,
+        "structural_peak_over_budget": 0.0012214183807373047,
+        "top_two_peak_live_over_budget": 0.001220703125
+      },
+      "fresh_probability": 0.14596843516983174,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.14596843516983174,
+      "spec_hash": "66deb18bb46057e65aca3834afd3fe8a14763a999841ab5b9583fc9e034e3b58"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0023",
+      "features": {
+        "calibrated_upper_over_budget": 0.04940696057560134,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 19.68005477400043,
+        "config_numeric_max": 112.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.02962668736775716,
+        "structural_peak_over_budget": 0.02962668736775716,
+        "top_two_peak_live_over_budget": 0.029622395833333332
+      },
+      "fresh_probability": 0.15976931595358232,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.15976931595358232,
+      "spec_hash": "ca0e10c497a6ee6032b1ae689d03c480dd70f5087261f90d16214357f935b5aa"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0024",
+      "features": {
+        "calibrated_upper_over_budget": 0.05878370032844862,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 18.92236907551967,
+        "config_numeric_max": 112.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.035249412059783936,
+        "structural_peak_over_budget": 0.035249412059783936,
+        "top_two_peak_live_over_budget": 0.035247802734375
+      },
+      "fresh_probability": 0.16002217339545802,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.160022173395458,
+      "spec_hash": "08c207de333ef1914bfd9d69f9b9cf080b5cc98284eec51f728babb2268f9b02"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0025",
+      "features": {
+        "calibrated_upper_over_budget": 0.014269028148318201,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 19.497733217774137,
+        "config_numeric_max": 112.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.008556365966796875,
+        "structural_peak_over_budget": 0.008556365966796875,
+        "top_two_peak_live_over_budget": 0.008544921875
+      },
+      "fresh_probability": 0.15356969185825625,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.15356969185825625,
+      "spec_hash": "4d62ef97810cd7f50cc85fc7e09088c61fc788c4c457a2d68c3402f28297ee63"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0026",
+      "features": {
+        "calibrated_upper_over_budget": 0.11726621951494587,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 20.21905127355048,
+        "config_numeric_max": 128.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.07031822204589844,
+        "structural_peak_over_budget": 0.07031822204589844,
+        "top_two_peak_live_over_budget": 0.0703125
+      },
+      "fresh_probability": 0.19988532464788128,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.19988532464788128,
+      "spec_hash": "09ef9cd0fa7437cd7e609eca24ecab234ce4ee718500d8af8d797a4a4d55b2cf"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0027",
+      "features": {
+        "calibrated_upper_over_budget": 0.10423292864607965,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 20.79441541772968,
+        "config_numeric_max": 128.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.06250286102294922,
+        "structural_peak_over_budget": 0.06250286102294922,
+        "top_two_peak_live_over_budget": 0.0625
+      },
+      "fresh_probability": 0.1714112841212835,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.1714112841212835,
+      "spec_hash": "962be98f38ecc39cdbd175541dc194023277dfe0d176efd8c4fd808c40ea33cb"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0028",
+      "features": {
+        "calibrated_upper_over_budget": 0.39086036166017896,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 20.912198453282585,
+        "config_numeric_max": 192.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.23437786102294922,
+        "structural_peak_over_budget": 0.23437786102294922,
+        "top_two_peak_live_over_budget": 0.234375
+      },
+      "fresh_probability": 0.2629372356095438,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.2629372356095438,
+      "spec_hash": "5d13004b9e2f64b7a454eb0dea165ccfee1113f5343b2f08c20698c421d6c523"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0029",
+      "features": {
+        "calibrated_upper_over_budget": 0.5211598720439911,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 21.89302770577691,
+        "config_numeric_max": 192.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.3125114440917969,
+        "structural_peak_over_budget": 0.3125114440917969,
+        "top_two_peak_live_over_budget": 0.3125
+      },
+      "fresh_probability": 0.29885873257974666,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.29885873257974666,
+      "spec_hash": "5ff28ceceb594b460047ec3d3aae329b690f5fdbd58376995b77eece00ee6851"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0030",
+      "features": {
+        "calibrated_upper_over_budget": 0.5211431728915661,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 21.89302770577691,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.3125014305114746,
+        "structural_peak_over_budget": 0.3125014305114746,
+        "top_two_peak_live_over_budget": 0.3125
+      },
+      "fresh_probability": 0.263066961315076,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.263066961315076,
+      "spec_hash": "f1ec66f8b00387df6667d6c4386a91aa4b29000605fd76543424e38577357167"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0031",
+      "features": {
+        "calibrated_upper_over_budget": 1.4070896680783929,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 22.298492813781593,
+        "config_numeric_max": 256.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.8437557220458984,
+        "structural_peak_over_budget": 0.8437557220458984,
+        "top_two_peak_live_over_budget": 0.84375
+      },
+      "fresh_probability": 0.5684448870661212,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.5684448870661212,
+      "spec_hash": "67e50ae9c1a8d9b599fc898762c2ce6e34880e916ba4d81e390182871f41e59c"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0032",
+      "features": {
+        "calibrated_upper_over_budget": 4.6902766280580765,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 23.502465617962656,
+        "config_numeric_max": 1024.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 2.8125057220458984,
+        "structural_peak_over_budget": 2.8125057220458984,
+        "top_two_peak_live_over_budget": 2.8125
+      },
+      "fresh_probability": 0.9885327196303109,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.9885327196303109,
+      "spec_hash": "bf8cafe845fb0b3170c894178e3d71244ea2ae2f1a915db21b1f0f8f6fd65d2f"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0033",
+      "features": {
+        "calibrated_upper_over_budget": 0.00018660640170188762,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 10.109566325223746,
+        "config_numeric_max": 256.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.00011189778645833333,
+        "structural_peak_over_budget": 0.00011189778645833333,
+        "top_two_peak_live_over_budget": 8.138020833333333e-05
+      },
+      "fresh_probability": 0.11765620923063436,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.11765620923063436,
+      "spec_hash": "68e00c9737bcd2b7642f1aa960eb6be51ab2d536ebc9ee08c12e633ccf3590b1"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0034",
+      "features": {
+        "calibrated_upper_over_budget": 6.149529146994023e-05,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 8.318010277546872,
+        "config_numeric_max": 128.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 3.6875406901041664e-05,
+        "structural_peak_over_budget": 3.6875406901041664e-05,
+        "top_two_peak_live_over_budget": 2.0345052083333332e-05
+      },
+      "fresh_probability": 0.11511102115445834,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.11511102115445834,
+      "spec_hash": "6c3680195085e1159f0c1c9587bf4a4a567390a8400355143c17f5c5f2e94b17"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0035",
+      "features": {
+        "calibrated_upper_over_budget": 0.0013571374669228188,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 12.476653064769005,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0008138020833333334,
+        "structural_peak_over_budget": 0.0008138020833333334,
+        "top_two_peak_live_over_budget": 0.00048828125
+      },
+      "fresh_probability": 0.14177416289263475,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.14177416289263475,
+      "spec_hash": "1eb0c9172feefaa54cc0c59eb023f42e809923a92431f83b1f23d29abd29c11c"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0036",
+      "features": {
+        "calibrated_upper_over_budget": 0.0018999924536919465,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 12.882116901315456,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0011393229166666667,
+        "structural_peak_over_budget": 0.0011393229166666667,
+        "top_two_peak_live_over_budget": 0.0006510416666666666
+      },
+      "fresh_probability": 0.1424981928539696,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.14249819285396964,
+      "spec_hash": "da28d1d7271ae27a6324a58517bda3e075d11f92315759cfd696e3fcf445031a"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0037",
+      "features": {
+        "calibrated_upper_over_budget": 0.006921401081306376,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 12.594435676571663,
+        "config_numeric_max": 768.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.004150390625,
+        "structural_peak_over_budget": 0.004150390625,
+        "top_two_peak_live_over_budget": 0.00146484375
+      },
+      "fresh_probability": 0.14288009266144297,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.14288009266144297,
+      "spec_hash": "706ca1cdeb5e3ac9ea1502a7f172613c896682a61996f7904f65bc12b9a3bfb1"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0038",
+      "features": {
+        "calibrated_upper_over_budget": 0.011807095962228524,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 15.654703239372669,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.007080078125,
+        "structural_peak_over_budget": 0.007080078125,
+        "top_two_peak_live_over_budget": 0.0029296875
+      },
+      "fresh_probability": 0.1278743152653792,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.12787431526537918,
+      "spec_hash": "e181f20d036b0e1a25758eaec708c1eba9f8548a62211ace4a2b99e87a3c0b16"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0039",
+      "features": {
+        "calibrated_upper_over_budget": 0.1335423267452054,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 17.44646257614597,
+        "config_numeric_max": 3072.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.080078125,
+        "structural_peak_over_budget": 0.080078125,
+        "top_two_peak_live_over_budget": 0.0234375
+      },
+      "fresh_probability": 0.1703360231970011,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.17033602319700109,
+      "spec_hash": "a0f1e37ff48138722135a31708a63fecd801b3440b75b476ed44899449e40c94"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0040",
+      "features": {
+        "calibrated_upper_over_budget": 0.06514259841229532,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 17.04099748128328,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0390625,
+        "structural_peak_over_budget": 0.0390625,
+        "top_two_peak_live_over_budget": 0.010416666666666666
+      },
+      "fresh_probability": 0.15901086200987535,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.15901086200987535,
+      "spec_hash": "e13e0f1a4e82ff226f3643d8b632ffd0af669dc95b3708b7935efe6a29918f2d"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0041",
+      "features": {
+        "calibrated_upper_over_budget": 0.11074241730090202,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 16.753315422076977,
+        "config_numeric_max": 6144.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.06640625,
+        "structural_peak_over_budget": 0.06640625,
+        "top_two_peak_live_over_budget": 0.046875
+      },
+      "fresh_probability": 0.1474078078569773,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.14740780785697727,
+      "spec_hash": "5f4c42a31680f3d4e74fe60143dbaef4ecf9d82b138c2f779e4f7e0ba8234513"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0042",
+      "features": {
+        "calibrated_upper_over_budget": 0.00017812429253362,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 9.416459832284596,
+        "config_numeric_max": 256.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0001068115234375,
+        "structural_peak_over_budget": 0.0001068115234375,
+        "top_two_peak_live_over_budget": 8.138020833333333e-05
+      },
+      "fresh_probability": 0.1167091870668787,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.1167091870668787,
+      "spec_hash": "586b4b33624e2692a344cf694c751203dc24ce1e25434a95b991931c32237cb9"
+    },
+    {
+      "absolute_probability_delta": 4.163336342344337e-17,
+      "candidate_id": "HOLDOUT-0043",
+      "features": {
+        "calibrated_upper_over_budget": 0.0002544632750480286,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 10.109566325223746,
+        "config_numeric_max": 384.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.000152587890625,
+        "structural_peak_over_budget": 0.000152587890625,
+        "top_two_peak_live_over_budget": 0.0001373291015625
+      },
+      "fresh_probability": 0.11776557593534819,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.11776557593534814,
+      "spec_hash": "d802cc81dbc29b6ddb5d4b15046d202263953172d8921176a3731a11fef0e33b"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0044",
+      "features": {
+        "calibrated_upper_over_budget": 0.007124971701344799,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 13.287581161714915,
+        "config_numeric_max": 768.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0042724609375,
+        "structural_peak_over_budget": 0.0042724609375,
+        "top_two_peak_live_over_budget": 0.00146484375
+      },
+      "fresh_probability": 0.1440264685613803,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.1440264685613803,
+      "spec_hash": "997a96d543ed3eedf6c0bf997b5abb6a7bf9890fc1777c1eb0ad21d58d6c6d18"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0045",
+      "features": {
+        "calibrated_upper_over_budget": 0.0023410621304418627,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 12.882116901315456,
+        "config_numeric_max": 768.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.00140380859375,
+        "structural_peak_over_budget": 0.00140380859375,
+        "top_two_peak_live_over_budget": 0.000732421875
+      },
+      "fresh_probability": 0.1221675488174053,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.1221675488174053,
+      "spec_hash": "89d0c9aba86fe0354ae84213a6523047aac1afdd686394c78ee5d077e6a5ccf8"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0046",
+      "features": {
+        "calibrated_upper_over_budget": 0.005292836120998994,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 14.268409355089746,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.003173828125,
+        "structural_peak_over_budget": 0.003173828125,
+        "top_two_peak_live_over_budget": 0.002197265625
+      },
+      "fresh_probability": 0.12515751895573068,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.12515751895573066,
+      "spec_hash": "536be1f196b037b5d69862aabcdf51d9aaaa40b5df73474174b796138d50419a"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0047",
+      "features": {
+        "calibrated_upper_over_budget": 0.030399879259071144,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 15.942385272088025,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.018229166666666668,
+        "structural_peak_over_budget": 0.018229166666666668,
+        "top_two_peak_live_over_budget": 0.010416666666666666
+      },
+      "fresh_probability": 0.15300319973531187,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.15300319973531187,
+      "spec_hash": "3cb55e5c59ac3179156bc9d9773e6c0a5cd5c9f2c8f832ada32ff1bdcb9f6845"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0048",
+      "features": {
+        "calibrated_upper_over_budget": 0.06948543830644834,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 16.63553239304333,
+        "config_numeric_max": 4096.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.041666666666666664,
+        "structural_peak_over_budget": 0.041666666666666664,
+        "top_two_peak_live_over_budget": 0.020833333333333332
+      },
+      "fresh_probability": 0.13883135483052783,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.13883135483052783,
+      "spec_hash": "e2f65525254e5fb26bc15f4fae8871d6894efe70766efa780f871d883c405fa5"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0049",
+      "features": {
+        "calibrated_upper_over_budget": 0.027685604325225505,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 15.367021219902783,
+        "config_numeric_max": 3072.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0166015625,
+        "structural_peak_over_budget": 0.0166015625,
+        "top_two_peak_live_over_budget": 0.01171875
+      },
+      "fresh_probability": 0.13095671693800506,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.13095671693800506,
+      "spec_hash": "169708dc24acaa5c90219cd2f1b0927cbc462d981a8e2ea1adb2a9333e708718"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0050",
+      "features": {
+        "calibrated_upper_over_budget": 0.13897087661289667,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 17.328679543800956,
+        "config_numeric_max": 8192.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.08333333333333333,
+        "structural_peak_over_budget": 0.08333333333333333,
+        "top_two_peak_live_over_budget": 0.0625
+      },
+      "fresh_probability": 0.15483073680559084,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.1548307368055908,
+      "spec_hash": "030dd48b397bf432f7e18f63cdf328fa1f2c405a9e27e80e3082cd74012d96b0"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0051",
+      "features": {
+        "calibrated_upper_over_budget": 0.0014949717409071678,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 13.169798337985775,
+        "config_numeric_max": 256.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.000896453857421875,
+        "structural_peak_over_budget": 0.000896453857421875,
+        "top_two_peak_live_over_budget": 0.00048828125
+      },
+      "fresh_probability": 0.13131636955740716,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.13131636955740716,
+      "spec_hash": "f7bc914a95faf4a720e39c001d570637df09d36439828d7c7548b6f1303964ff"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0052",
+      "features": {
+        "calibrated_upper_over_budget": 0.003971217486218296,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 13.287581161714915,
+        "config_numeric_max": 768.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0023813247680664062,
+        "structural_peak_over_budget": 0.0023813247680664062,
+        "top_two_peak_live_over_budget": 0.00146484375
+      },
+      "fresh_probability": 0.13225550325445173,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.13225550325445173,
+      "spec_hash": "266a893c423b2a42b457cf4f9e4f5a000bf91e6204ea7b985b9d4f22716c9ff0"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0053",
+      "features": {
+        "calibrated_upper_over_budget": 0.005975645909044537,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 13.862944564872768,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0035832722981770835,
+        "structural_peak_over_budget": 0.0035832722981770835,
+        "top_two_peak_live_over_budget": 0.0026041666666666665
+      },
+      "fresh_probability": 0.15534838033148524,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.15534838033148524,
+      "spec_hash": "4a4a2f176ab2768afdd1852003523275839f79958f4288bc35992842dbc7ecdc"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0054",
+      "features": {
+        "calibrated_upper_over_budget": 0.033126877356669186,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.654703239372669,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.019864400227864582,
+        "structural_peak_over_budget": 0.019864400227864582,
+        "top_two_peak_live_over_budget": 0.017578125
+      },
+      "fresh_probability": 0.1408695996765294,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.1408695996765294,
+      "spec_hash": "4b78b1a1c14ed3556c01d0cf97c9df2c7dee207878154fa54d5bd23f74c75eba"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0055",
+      "features": {
+        "calibrated_upper_over_budget": 0.03040836136823941,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.249238210737348,
+        "config_numeric_max": 1024.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0182342529296875,
+        "structural_peak_over_budget": 0.0182342529296875,
+        "top_two_peak_live_over_budget": 0.010416666666666666
+      },
+      "fresh_probability": 0.1618668382252698,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.16186683822526976,
+      "spec_hash": "fde06aee3899aadf6f28d653ee898b8d6eddfffcab463500130d1cec15342e2b"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0056",
+      "features": {
+        "calibrated_upper_over_budget": 0.049953261419220074,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 16.16552879956038,
+        "config_numeric_max": 1280.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.029954274495442707,
+        "structural_peak_over_budget": 0.029954274495442707,
+        "top_two_peak_live_over_budget": 0.016276041666666668
+      },
+      "fresh_probability": 0.16669170857335947,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.16669170857335947,
+      "spec_hash": "898c751d3c163d019829fa0662a75c5a1d70dd7cb2bfce890892c32f1fe0abbd"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0057",
+      "features": {
+        "calibrated_upper_over_budget": 0.3127523292523636,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 18.42729181260085,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.18754069010416666,
+        "structural_peak_over_budget": 0.18754069010416666,
+        "top_two_peak_live_over_budget": 0.16666666666666666
+      },
+      "fresh_probability": 0.22353831742577768,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.22353831742577768,
+      "spec_hash": "d9f39a46f5a2be20b6af09de0d9fc7c8d57b048a0d739bcdc4b809cddb346bb2"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0058",
+      "features": {
+        "calibrated_upper_over_budget": 0.1205477354994194,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 17.04099748128328,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.07228597005208333,
+        "structural_peak_over_budget": 0.07228597005208333,
+        "top_two_peak_live_over_budget": 0.0625
+      },
+      "fresh_probability": 0.15711638061311964,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.15711638061311964,
+      "spec_hash": "7422bb564a3a7960bc02850db5e229efc492e0fd98e11629982768d0bc64e6af"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0059",
+      "features": {
+        "calibrated_upper_over_budget": 0.22480982139576497,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 17.73414464197501,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.13480631510416666,
+        "structural_peak_over_budget": 0.13480631510416666,
+        "top_two_peak_live_over_budget": 0.125
+      },
+      "fresh_probability": 0.17673681688157405,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.17673681688157405,
+      "spec_hash": "47dd028bcd4eb4c82db2f55c8db4ddb68f648091b8051ef806f2fa228a22a18b"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0060",
+      "features": {
+        "calibrated_upper_over_budget": 0.11729060557880462,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 17.328679543800956,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.07033284505208333,
+        "structural_peak_over_budget": 0.07033284505208333,
+        "top_two_peak_live_over_budget": 0.0625
+      },
+      "fresh_probability": 0.15723264778481144,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.1572326477848114,
+      "spec_hash": "324c8b8129daa74c851921571c133195733ff01ae6f82756f018915a43d3c64b"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0061",
+      "features": {
+        "calibrated_upper_over_budget": 0.5950284402631417,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 19.27458966731142,
+        "config_numeric_max": 3584.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.3568064371744792,
+        "structural_peak_over_budget": 0.3568064371744792,
+        "top_two_peak_live_over_budget": 0.2552083333333333
+      },
+      "fresh_probability": 0.28602184103393474,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.28602184103393474,
+      "spec_hash": "941607bf1ae367b365a3550cf41d188919ae321662fa133bf659a5c7b36cb18d"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0062",
+      "features": {
+        "calibrated_upper_over_budget": 0.5038203203767601,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 18.42729181260085,
+        "config_numeric_max": 4096.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.3021138509114583,
+        "structural_peak_over_budget": 0.3021138509114583,
+        "top_two_peak_live_over_budget": 0.1875
+      },
+      "fresh_probability": 0.2600442678716809,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.2600442678716809,
+      "spec_hash": "50a9609b55123095b6a8e8b9eaaf346cb9a43c4f08f42c2385f5a430cc684e88"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0063",
+      "features": {
+        "calibrated_upper_over_budget": 3.3929472086787305e-05,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 8.318010277546872,
+        "config_numeric_max": 128.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 2.0345672965049744e-05,
+        "structural_peak_over_budget": 2.0345672965049744e-05,
+        "top_two_peak_live_over_budget": 2.0345052083333332e-05
+      },
+      "fresh_probability": 0.11510850498496338,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.11510850498496338,
+      "spec_hash": "93d8b6da7292553a97ae224209cc3f39c67944ec5b743dfe06432b2322666853"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0064",
+      "features": {
+        "calibrated_upper_over_budget": 0.0006107139309427022,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 8.030409562130485,
+        "config_numeric_max": 384.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0003662121792634328,
+        "structural_peak_over_budget": 0.0003662121792634328,
+        "top_two_peak_live_over_budget": 0.0003662109375
+      },
+      "fresh_probability": 0.13458538126060537,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.13458538126060537,
+      "spec_hash": "1604295ac3fbc3e7494be4d654a3c2120979e89427d2a608cac583ce92cffcc5"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0065",
+      "features": {
+        "calibrated_upper_over_budget": 0.00013571581751971556,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 9.704121561132915,
+        "config_numeric_max": 128.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 8.138145009676616e-05,
+        "structural_peak_over_budget": 8.138145009676616e-05,
+        "top_two_peak_live_over_budget": 2.0345052083333332e-05
+      },
+      "fresh_probability": 0.1368766788807882,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.13687667888078817,
+      "spec_hash": "02ef5e23f992d6cad76eac89ea75bdf056ffe36bd37e50341df924048f5acf12"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0066",
+      "features": {
+        "calibrated_upper_over_budget": 0.013028521753286495,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 14.268409355089746,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.007812501241763433,
+        "structural_peak_over_budget": 0.007812501241763433,
+        "top_two_peak_live_over_budget": 0.001953125
+      },
+      "fresh_probability": 0.1470459727373946,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.1470459727373946,
+      "spec_hash": "a6de672cee1e3d7b601d74985d21a953bd557dfc92e2d38d5806c25e1cd84067"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0067",
+      "features": {
+        "calibrated_upper_over_budget": 0.002239277855836368,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 13.287581161714915,
+        "config_numeric_max": 768.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0013427740583817165,
+        "structural_peak_over_budget": 0.0013427740583817165,
+        "top_two_peak_live_over_budget": 0.0003662109375
+      },
+      "fresh_probability": 0.12270834362949005,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.12270834362949003,
+      "spec_hash": "7da4f6e5ec2ca8c5e44c6e0a617f0b6a9a71f89b53ba31b17ca0d5f8fbf42089"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0068",
+      "features": {
+        "calibrated_upper_over_budget": 0.00542855193851871,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 13.575262810312072,
+        "config_numeric_max": 1024.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.003255209575096766,
+        "structural_peak_over_budget": 0.003255209575096766,
+        "top_two_peak_live_over_budget": 0.0006510416666666666
+      },
+      "fresh_probability": 0.1444817764389244,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.14448177643892438,
+      "spec_hash": "7c534ed067d3f1287cf176a4691b75dbc627183c6559e639e0f0b4503278c5c9"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0069",
+      "features": {
+        "calibrated_upper_over_budget": 0.016285651673901263,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 14.673874251270396,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.009765626241763433,
+        "structural_peak_over_budget": 0.009765626241763433,
+        "top_two_peak_live_over_budget": 0.001953125
+      },
+      "fresh_probability": 0.14808620596042815,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.14808620596042812,
+      "spec_hash": "a10a4fc1dbef6753bb982909fcddbf9f24b8aed6bc1af2b722edce1e5e327289"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0070",
+      "features": {
+        "calibrated_upper_over_budget": 0.023885620453255332,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 15.654703239372669,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.014322917287548384,
+        "structural_peak_over_budget": 0.014322917287548384,
+        "top_two_peak_live_over_budget": 0.00390625
+      },
+      "fresh_probability": 0.12958565231045685,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.12958565231045682,
+      "spec_hash": "e8961d810aae0e5f25fd34fee4708539f6b94bee58a4f1580b13ffc28054638f"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0071",
+      "features": {
+        "calibrated_upper_over_budget": 0.009228535810488886,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 14.961556217758405,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.005533854787548383,
+        "structural_peak_over_budget": 0.005533854787548383,
+        "top_two_peak_live_over_budget": 0.0009765625
+      },
+      "fresh_probability": 0.1268922362172402,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.1268922362172402,
+      "spec_hash": "7790656b546ba2789c0059ba48ffd1ff27a10a1a46dde1b76adbd6e73204c2c0"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0072",
+      "features": {
+        "calibrated_upper_over_budget": 0.31268447444984493,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 17.73414464197501,
+        "config_numeric_max": 6144.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.18750000124176344,
+        "structural_peak_over_budget": 0.18750000124176344,
+        "top_two_peak_live_over_budget": 0.03125
+      },
+      "fresh_probability": 0.19923175846484498,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.19923175846484498,
+      "spec_hash": "6407a7685479989bb15e3e16b38579a2373ef282223b86709138c31fe7ac8afe"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0073",
+      "features": {
+        "calibrated_upper_over_budget": 0.00013624387851529862,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 11.090370147631774,
+        "config_numeric_max": 256.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 8.169809977213542e-05,
+        "structural_peak_over_budget": 8.169809977213542e-05,
+        "top_two_peak_live_over_budget": 8.138020833333333e-05
+      },
+      "fresh_probability": 0.12805343955058723,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.1280534395505872,
+      "spec_hash": "8d145e15188a00973ecdc51a623f86b56dde5b7f22e919bec41a78c685a314cd"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0074",
+      "features": {
+        "calibrated_upper_over_budget": 0.000543915250415161,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 12.476653064769005,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0003261566162109375,
+        "structural_peak_over_budget": 0.0003261566162109375,
+        "top_two_peak_live_over_budget": 0.0003255208333333333
+      },
+      "fresh_probability": 0.1521515073785569,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.1521515073785569,
+      "spec_hash": "cef54cbd0cbe59b2f8e6d45e11201c0e946d2f5beb32996ab8ccd15f97cb49ce"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0075",
+      "features": {
+        "calibrated_upper_over_budget": 0.004344960421445087,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.249238210737348,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.002605438232421875,
+        "structural_peak_over_budget": 0.002605438232421875,
+        "top_two_peak_live_over_budget": 0.0026041666666666665
+      },
+      "fresh_probability": 0.15910147527273044,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.15910147527273044,
+      "spec_hash": "73f328dff0072fc67b165499564a8686835885db91c9c0b53ef5192e512bd611"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0076",
+      "features": {
+        "calibrated_upper_over_budget": 0.0043470809487371545,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 14.556091268595896,
+        "config_numeric_max": 1024.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0026067097981770835,
+        "structural_peak_over_budget": 0.0026067097981770835,
+        "top_two_peak_live_over_budget": 0.0026041666666666665
+      },
+      "fresh_probability": 0.13453241776279465,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.13453241776279462,
+      "spec_hash": "d1654985da398f1747b3effb4913b2a3544c762c53a4e831a3aa241952407ece"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0077",
+      "features": {
+        "calibrated_upper_over_budget": 0.03475120126239243,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 18.021826709459738,
+        "config_numeric_max": 4096.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.020838419596354168,
+        "structural_peak_over_budget": 0.020838419596354168,
+        "top_two_peak_live_over_budget": 0.020833333333333332
+      },
+      "fresh_probability": 0.171576304755478,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.171576304755478,
+      "spec_hash": "a490ee7962de4197bd84f3ac1e321580ff7ef48e1679c3f5c9245ceb43ef262b"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0078",
+      "features": {
+        "calibrated_upper_over_budget": 0.0347596833715607,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 18.714973882569105,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.020843505859375,
+        "structural_peak_over_budget": 0.020843505859375,
+        "top_two_peak_live_over_budget": 0.020833333333333332
+      },
+      "fresh_probability": 0.14674104950938316,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.14674104950938316,
+      "spec_hash": "bc2adfb48f26fa02b1ab2b054d992985b17fcb0faafce10026454345d51edb80"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0079",
+      "features": {
+        "calibrated_upper_over_budget": 0.5560192201982789,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 20.79441541772968,
+        "config_numeric_max": 4096.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.3334147135416667,
+        "structural_peak_over_budget": 0.3334147135416667,
+        "top_two_peak_live_over_budget": 0.3333333333333333
+      },
+      "fresh_probability": 0.2936872694504389,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.2936872694504389,
+      "spec_hash": "167b7e981e1b26c18fea5914d485371f79ed5cdc12a2f2d187c34e509bd5b6b0"
+    },
+    {
+      "absolute_probability_delta": 5.551115123125783e-17,
+      "candidate_id": "HOLDOUT-0080",
+      "features": {
+        "calibrated_upper_over_budget": 0.0013571374669228188,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 19.81358616627016,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0008138020833333334,
+        "structural_peak_over_budget": 0.0008138020833333334,
+        "top_two_peak_live_over_budget": 0.0003255208333333333
+      },
+      "fresh_probability": 0.1418508288648396,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.14185082886483955,
+      "spec_hash": "68b0076be5c2b7d6209060b533ed36469261c9c64d185a3bc92e60d8ec38e89c"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0081",
+      "features": {
+        "calibrated_upper_over_budget": 0.004885694880922148,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 20.912198453282585,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0029296875,
+        "structural_peak_over_budget": 0.0029296875,
+        "top_two_peak_live_over_budget": 0.001953125
+      },
+      "fresh_probability": 0.16882961924826187,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.16882961924826187,
+      "spec_hash": "0f1b1050aa10bbbc7db5a48a1fc70f06e8bd35a0c6f5580d274f2827c091106c"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0082",
+      "features": {
+        "calibrated_upper_over_budget": 0.004342839894153021,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 20.50673334558834,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0026041666666666665,
+        "structural_peak_over_budget": 0.0026041666666666665,
+        "top_two_peak_live_over_budget": 0.001953125
+      },
+      "fresh_probability": 0.1443634907404995,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.1443634907404995,
+      "spec_hash": "31d6118a7888b497ad524bebcd5a9da49ddd8bd2c976f16a1cd178990c4788d7"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0083",
+      "features": {
+        "calibrated_upper_over_budget": 0.017371359576612084,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 22.18070977815108,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.010416666666666666,
+        "structural_peak_over_budget": 0.010416666666666666,
+        "top_two_peak_live_over_budget": 0.0078125
+      },
+      "fresh_probability": 0.17385310929094072,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.17385310929094072,
+      "spec_hash": "9d5d2b758ac1c7dd9ca62bae859010ebf9579366db7c911c132afb6cf68525ef"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0084",
+      "features": {
+        "calibrated_upper_over_budget": 0.0217141994707651,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 23.97246924718511,
+        "config_numeric_max": 3072.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.013020833333333334,
+        "structural_peak_over_budget": 0.013020833333333334,
+        "top_two_peak_live_over_budget": 0.0078125
+      },
+      "fresh_probability": 0.1540617813934934,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.1540617813934934,
+      "spec_hash": "eb74d150fa8ed34ef350864898c6f26ecafe42914532e84bdbcb1bb9de06be29"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0085",
+      "features": {
+        "calibrated_upper_over_budget": 1.72292842480436e-05,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 8.318010277546872,
+        "config_numeric_max": 128.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 1.0331471761067709e-05,
+        "structural_peak_over_budget": 1.0331471761067709e-05,
+        "top_two_peak_live_over_budget": 1.0172526041666666e-05
+      },
+      "fresh_probability": 0.14476732820676766,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.14476732820676766,
+      "spec_hash": "e95105c2e9df86a3cc41d0c2dba4bd8f7b0779f494bf07d6c5cddfcb878bed64"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0086",
+      "features": {
+        "calibrated_upper_over_budget": 0.002179902056244778,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 13.862944564872768,
+        "config_numeric_max": 1024.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0013071695963541667,
+        "structural_peak_over_budget": 0.0013071695963541667,
+        "top_two_peak_live_over_budget": 0.0013020833333333333
+      },
+      "fresh_probability": 0.1552990525489257,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.1552990525489257,
+      "spec_hash": "bb226983e8c200e9377b497da11103dd37f70606f091a9a196ff90808374b308"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0087",
+      "features": {
+        "calibrated_upper_over_budget": 0.017371359576612084,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 17.328679543800956,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.010416666666666666,
+        "structural_peak_over_budget": 0.010416666666666666,
+        "top_two_peak_live_over_budget": 0.0078125
+      },
+      "fresh_probability": 0.14156862771372788,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.14156862771372786,
+      "spec_hash": "bd470cd7f36d83d6774023844c21c25e9a4a22eb8526e99cc5d08c48017f29c5"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "HOLDOUT-0088",
+      "features": {
+        "calibrated_upper_over_budget": 0.017371359576612084,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.249238210737348,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.010416666666666666,
+        "structural_peak_over_budget": 0.010416666666666666,
+        "top_two_peak_live_over_budget": 0.0078125
+      },
+      "fresh_probability": 0.13826638787493017,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.13826638787493017,
+      "spec_hash": "8cfc172401f3612787a9273f52022effb51a53731cebc88ba166f47b8a40ec0e"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "HOLDOUT-0089",
+      "features": {
+        "calibrated_upper_over_budget": 0.13897087661289667,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 18.021826709459738,
+        "config_numeric_max": 8192.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.08333333333333333,
+        "structural_peak_over_budget": 0.08333333333333333,
+        "top_two_peak_live_over_budget": 0.0625
+      },
+      "fresh_probability": 0.16736462396624602,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "saved_probability": 0.167364623966246,
+      "spec_hash": "37cbe27144bb952d376fd0a42dc5db5bdf9bf14de67ad76e7350043eea00a8f1"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0000",
+      "features": {
+        "calibrated_upper_over_budget": 0.0016985423609455904,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 11.090370147631774,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.001018524169921875,
+        "structural_peak_over_budget": 0.001018524169921875,
+        "top_two_peak_live_over_budget": 0.0009765625
+      },
+      "fresh_probability": 0.12848604723614443,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.12848604723614443,
+      "spec_hash": "97a2649be3ae95940841b2f52a14462ce9d7137642a88e190115d8108a4f5872"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0001",
+      "features": {
+        "calibrated_upper_over_budget": 0.014873378426557268,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 12.18897226387732,
+        "config_numeric_max": 768.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.00891876220703125,
+        "structural_peak_over_budget": 0.00891876220703125,
+        "top_two_peak_live_over_budget": 0.0087890625
+      },
+      "fresh_probability": 0.13223264099580212,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.13223264099580212,
+      "spec_hash": "45a660eb3859636f9e5f9bf0a0d805d91874fe76de63dd3023885ac80caf9f59"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0002",
+      "features": {
+        "calibrated_upper_over_budget": 0.013316911394180161,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 12.476653064769005,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.007985432942708334,
+        "structural_peak_over_budget": 0.007985432942708334,
+        "top_two_peak_live_over_budget": 0.0078125
+      },
+      "fresh_probability": 0.1322191528498766,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1322191528498766,
+      "spec_hash": "648d2f7acce6375345a9d3353ac575d0920c2c40fa158b4e9eec89c706ed9fa9"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0003",
+      "features": {
+        "calibrated_upper_over_budget": 0.006794169443782362,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 12.476653064769005,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0040740966796875,
+        "structural_peak_over_budget": 0.0040740966796875,
+        "top_two_peak_live_over_budget": 0.00390625
+      },
+      "fresh_probability": 0.13127421490190688,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.13127421490190688,
+      "spec_hash": "eb54fde201f95c23d439f88a397aeef56e23acd104957c62cdaa06f7cbe83bb8"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "H2-0004",
+      "features": {
+        "calibrated_upper_over_budget": 0.0016646139242725202,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 10.397238225511654,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0009981791178385417,
+        "structural_peak_over_budget": 0.0009981791178385417,
+        "top_two_peak_live_over_budget": 0.0009765625
+      },
+      "fresh_probability": 0.12746187432947906,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.12746187432947909,
+      "spec_hash": "d8b48a3a30d4a236059107fbe331e2786e50bc9c5b86d074158ca0d964a1adb8"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0005",
+      "features": {
+        "calibrated_upper_over_budget": 0.002311374748352926,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 11.090370147631774,
+        "config_numeric_max": 256.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0013860066731770833,
+        "structural_peak_over_budget": 0.0013860066731770833,
+        "top_two_peak_live_over_budget": 0.0013020833333333333
+      },
+      "fresh_probability": 0.14984118728249793,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.14984118728249793,
+      "spec_hash": "faae1cec29142d20b8e106ec1de729a219cc90f2634bf7048fba417c264c99de"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0006",
+      "features": {
+        "calibrated_upper_over_budget": 0.1185162703536193,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 13.287581161714915,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.07106781005859375,
+        "structural_peak_over_budget": 0.07106781005859375,
+        "top_two_peak_live_over_budget": 0.0703125
+      },
+      "fresh_probability": 0.17501900879622323,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.17501900879622323,
+      "spec_hash": "230f0d162ccf94c567e2017f70c38b6d18ab0f4971f62c0896847c7452258351"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0007",
+      "features": {
+        "calibrated_upper_over_budget": 0.6288296452986882,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 14.961556217758405,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.3770751953125,
+        "structural_peak_over_budget": 0.3770751953125,
+        "top_two_peak_live_over_budget": 0.375
+      },
+      "fresh_probability": 0.2575854528578186,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.2575854528578186,
+      "spec_hash": "ef9fbf8e409eeafa2830389d4880dfb9d9b8f59108aa56760aa74fe4089ebf56"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0008",
+      "features": {
+        "calibrated_upper_over_budget": 0.633613554869591,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.184699705494344,
+        "config_numeric_max": 3072.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.37994384765625,
+        "structural_peak_over_budget": 0.37994384765625,
+        "top_two_peak_live_over_budget": 0.375
+      },
+      "fresh_probability": 0.29651808305339766,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.29651808305339766,
+      "spec_hash": "9c437a86e5d987cffa36f03317e18c95ed7270e60647defce449bfae250343ee"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0009",
+      "features": {
+        "calibrated_upper_over_budget": 0.6352421198298984,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.367021219902783,
+        "config_numeric_max": 3072.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.38092041015625,
+        "structural_peak_over_budget": 0.38092041015625,
+        "top_two_peak_live_over_budget": 0.375
+      },
+      "fresh_probability": 0.29732502996217,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.29732502996217,
+      "spec_hash": "df43812b6e6829687359aa4385d343c1afa093a069526c9d232f020047aea231"
+    },
+    {
+      "absolute_probability_delta": 5.551115123125783e-17,
+      "candidate_id": "H2-0010",
+      "features": {
+        "calibrated_upper_over_budget": 0.041583540197432,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 13.61608475396976,
+        "config_numeric_max": 1280.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.024935404459635418,
+        "structural_peak_over_budget": 0.024935404459635418,
+        "top_two_peak_live_over_budget": 0.0244140625
+      },
+      "fresh_probability": 0.13882314302086593,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.13882314302086587,
+      "spec_hash": "d0794e3f7459ccd2d9259e0367a7a6cbd08edd1a76f5e7c6709a0425d8620e69"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0011",
+      "features": {
+        "calibrated_upper_over_budget": 0.15802169380482572,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 14.268409355089746,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.094757080078125,
+        "structural_peak_over_budget": 0.094757080078125,
+        "top_two_peak_live_over_budget": 0.09375
+      },
+      "fresh_probability": 0.15928930635779592,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.15928930635779592,
+      "spec_hash": "ea57889aa23dd73e30e6123734b772d2c858076d4794d130151266b14e3fe60c"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0012",
+      "features": {
+        "calibrated_upper_over_budget": 2.824236997103059,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.367021219902783,
+        "config_numeric_max": 4608.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 1.69354248046875,
+        "structural_peak_over_budget": 1.69354248046875,
+        "top_two_peak_live_over_budget": 1.6875
+      },
+      "fresh_probability": 0.8726571176395989,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.8726571176395989,
+      "spec_hash": "6cafd81d5e7f91aba57d0809437352c641584e15720b015f5fc1cb64f6c8d5b0"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0013",
+      "features": {
+        "calibrated_upper_over_budget": 0.8767956247238238,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.184699705494344,
+        "config_numeric_max": 5120.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.5257670084635416,
+        "structural_peak_over_budget": 0.5257670084635416,
+        "top_two_peak_live_over_budget": 0.5208333333333334
+      },
+      "fresh_probability": 0.36806907394003213,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.36806907394003213,
+      "spec_hash": "b34fec653bd5feec2923b61d4e781ce5377f8e2b0543f58ed31005f1c43c0e27"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0014",
+      "features": {
+        "calibrated_upper_over_budget": 2.241176812876343,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.942385272088025,
+        "config_numeric_max": 4096.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 1.3439127604166667,
+        "structural_peak_over_budget": 1.3439127604166667,
+        "top_two_peak_live_over_budget": 1.3333333333333333
+      },
+      "fresh_probability": 0.7661893086432818,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.7661893086432818,
+      "spec_hash": "c01f7b2d84cf46aa24e635fe7bf0a29c8b1ea9d76b6af42d8f1ec58668343c32"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0015",
+      "features": {
+        "calibrated_upper_over_budget": 0.32020810321127086,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 13.729413308487294,
+        "config_numeric_max": 3584.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.19201151529947916,
+        "structural_peak_over_budget": 0.19201151529947916,
+        "top_two_peak_live_over_budget": 0.19140625
+      },
+      "fresh_probability": 0.1894759937275099,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1894759937275099,
+      "spec_hash": "16b6a77a2b19d100e109b876cf8852f63d64005cf49a8456808d54fea3bdce23"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0016",
+      "features": {
+        "calibrated_upper_over_budget": 0.42132332660618915,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.249238210737348,
+        "config_numeric_max": 4096.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.2526448567708333,
+        "structural_peak_over_budget": 0.2526448567708333,
+        "top_two_peak_live_over_budget": 0.25
+      },
+      "fresh_probability": 0.21371328598534775,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.21371328598534775,
+      "spec_hash": "75021627de9ae9f180f00aa7b3ece17b59cc3213ff6d1c369f0f996ed4a90e2a"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0017",
+      "features": {
+        "calibrated_upper_over_budget": 0.7097235204364565,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 14.897017717813588,
+        "config_numeric_max": 4608.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.4255828857421875,
+        "structural_peak_over_budget": 0.4255828857421875,
+        "top_two_peak_live_over_budget": 0.421875
+      },
+      "fresh_probability": 0.3188530181744044,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.3188530181744044,
+      "spec_hash": "a8e594822bef3ebff96f30f43082a828ccfdc44bce2d2c4020d65944a1dfea11"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0018",
+      "features": {
+        "calibrated_upper_over_budget": 1.7139119427584915,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.521171869454673,
+        "config_numeric_max": 7168.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 1.027740478515625,
+        "structural_peak_over_budget": 1.027740478515625,
+        "top_two_peak_live_over_budget": 1.0208333333333333
+      },
+      "fresh_probability": 0.6314876223342349,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.6314876223342349,
+      "spec_hash": "066d6154cb5cca7b1329823e85a48367fd838e153b6809fb010d52c7b8d65047"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0019",
+      "features": {
+        "calibrated_upper_over_budget": 3.1755744409618725,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 16.196300455337212,
+        "config_numeric_max": 5632.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 1.9042205810546875,
+        "structural_peak_over_budget": 1.9042205810546875,
+        "top_two_peak_live_over_budget": 1.890625
+      },
+      "fresh_probability": 0.9155770366370731,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.9155770366370731,
+      "spec_hash": "e9742d88dbe1f86afeb2259f21a77ef0451fc184506cd0e56bfb4084271186d6"
+    },
+    {
+      "absolute_probability_delta": 5.551115123125783e-17,
+      "candidate_id": "H2-0020",
+      "features": {
+        "calibrated_upper_over_budget": 0.9662352248486217,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.233489857553629,
+        "config_numeric_max": 5376.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.5793991088867188,
+        "structural_peak_over_budget": 0.5793991088867188,
+        "top_two_peak_live_over_budget": 0.57421875
+      },
+      "fresh_probability": 0.39537140921879665,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.3953714092187967,
+      "spec_hash": "9b60404b6e0c03a867d1b7a90d34979a52cf2efa355a84495c8178dc6034f259"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0021",
+      "features": {
+        "calibrated_upper_over_budget": 2.310043057213508,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.612143631864555,
+        "config_numeric_max": 5888.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 1.3852081298828125,
+        "structural_peak_over_budget": 1.3852081298828125,
+        "top_two_peak_live_over_budget": 1.3776041666666667
+      },
+      "fresh_probability": 0.7833091287021986,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.7833091287021986,
+      "spec_hash": "c67d9f48decdd5829f57abea52aa29f9210b83f552176e16fc1b9185d7bca81e"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "H2-0022",
+      "features": {
+        "calibrated_upper_over_budget": 0.00020476341664021048,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 13.862944564872768,
+        "config_numeric_max": 64.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0001227855682373047,
+        "structural_peak_over_budget": 0.0001227855682373047,
+        "top_two_peak_live_over_budget": 0.0001220703125
+      },
+      "fresh_probability": 0.1419234729841671,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.14192347298416708,
+      "spec_hash": "bf72548a90282cb4410c8d8da9e962d1ee666774f44641bf02d7d16e9534cf85"
+    },
+    {
+      "absolute_probability_delta": 5.551115123125783e-17,
+      "candidate_id": "H2-0023",
+      "features": {
+        "calibrated_upper_over_budget": 0.0010952523463525563,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 16.63553239304333,
+        "config_numeric_max": 64.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0006567637125651041,
+        "structural_peak_over_budget": 0.0006567637125651041,
+        "top_two_peak_live_over_budget": 0.0006510416666666666
+      },
+      "fresh_probability": 0.1465786756145948,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.14657867561459476,
+      "spec_hash": "f9561e6563b20e8c8793a1bd9c760ed238da8cbe70fe9991f83d44fe3cb4b591"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0024",
+      "features": {
+        "calibrated_upper_over_budget": 0.0012309660930448381,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 15.654703239372669,
+        "config_numeric_max": 48.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0007381439208984375,
+        "structural_peak_over_budget": 0.0007381439208984375,
+        "top_two_peak_live_over_budget": 0.000732421875
+      },
+      "fresh_probability": 0.1687021612655318,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1687021612655318,
+      "spec_hash": "74c4b08215b6f43537cb7f04a4286d571a7426a45e9902ec543ce8fbe8123703"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0025",
+      "features": {
+        "calibrated_upper_over_budget": 0.00048437482004259495,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 13.287581161714915,
+        "config_numeric_max": 64.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0002904534339904785,
+        "structural_peak_over_budget": 0.0002904534339904785,
+        "top_two_peak_live_over_budget": 0.0002899169921875
+      },
+      "fresh_probability": 0.16425346322389991,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.16425346322389991,
+      "spec_hash": "fe5a8e9e262c9bca17b84289d596bdb496bfdef98af08585894aa672a2c922ee"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0026",
+      "features": {
+        "calibrated_upper_over_budget": 0.00033988076503159854,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 14.086087925452278,
+        "config_numeric_max": 80.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.00020380814870198569,
+        "structural_peak_over_budget": 0.00020380814870198569,
+        "top_two_peak_live_over_budget": 0.00020345052083333334
+      },
+      "fresh_probability": 0.14231799942774867,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.14231799942774867,
+      "spec_hash": "9d4fcbfa4fc8281e985f135c7b15ada0b305cda472f10156e195dc77b4bd3712"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "H2-0027",
+      "features": {
+        "calibrated_upper_over_budget": 0.05212362110265054,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 20.50673334558834,
+        "config_numeric_max": 128.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.03125572204589844,
+        "structural_peak_over_budget": 0.03125572204589844,
+        "top_two_peak_live_over_budget": 0.03125
+      },
+      "fresh_probability": 0.1617214069295281,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.16172140692952808,
+      "spec_hash": "7d006f80b38d35181c41a223baae71e2adde006ae11a1992fe72389fb9a21dc5"
+    },
+    {
+      "absolute_probability_delta": 8.326672684688674e-17,
+      "candidate_id": "H2-0028",
+      "features": {
+        "calibrated_upper_over_budget": 0.009509504641274034,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 18.58144249100895,
+        "config_numeric_max": 112.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0057023366292317705,
+        "structural_peak_over_budget": 0.0057023366292317705,
+        "top_two_peak_live_over_budget": 0.005696614583333333
+      },
+      "fresh_probability": 0.15122929045413142,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.15122929045413133,
+      "spec_hash": "1473a88292aa7021dcaa86befc48f2e3a1ac9a7bbed1ff827ba336bfe705e351"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0029",
+      "features": {
+        "calibrated_upper_over_budget": 0.002447618626868225,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 17.04099748128328,
+        "config_numeric_max": 96.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0014677047729492188,
+        "structural_peak_over_budget": 0.0014677047729492188,
+        "top_two_peak_live_over_budget": 0.00146484375
+      },
+      "fresh_probability": 0.14749489013687928,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.14749489013687928,
+      "spec_hash": "5e196d4193eab77561bb127ceac6bb1cb39edf9cbdfe8d9572a0cdde1991197b"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "H2-0030",
+      "features": {
+        "calibrated_upper_over_budget": 0.029333254031161493,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 20.21905127355048,
+        "config_numeric_max": 96.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.017589569091796875,
+        "structural_peak_over_budget": 0.017589569091796875,
+        "top_two_peak_live_over_budget": 0.017578125
+      },
+      "fresh_probability": 0.1573089547632195,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.15730895476321946,
+      "spec_hash": "4fd4f70fd3e0903dfde9bb92060115bd33199d6838e73432a9406cb702c0d2ba"
+    },
+    {
+      "absolute_probability_delta": 5.551115123125783e-17,
+      "candidate_id": "H2-0031",
+      "features": {
+        "calibrated_upper_over_budget": 0.004752366727433442,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 17.41829169993616,
+        "config_numeric_max": 112.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.002849737803141276,
+        "structural_peak_over_budget": 0.002849737803141276,
+        "top_two_peak_live_over_budget": 0.0028483072916666665
+      },
+      "fresh_probability": 0.14850613109277405,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.148506131092774,
+      "spec_hash": "6b978d6c67343f26ec804028e0754510fb4617d3b68b69b3170c0f4575390ce8"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0032",
+      "features": {
+        "calibrated_upper_over_budget": 0.09773298236407157,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 21.42302407671744,
+        "config_numeric_max": 160.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.058605194091796875,
+        "structural_peak_over_budget": 0.058605194091796875,
+        "top_two_peak_live_over_budget": 0.05859375
+      },
+      "fresh_probability": 0.17145314461376598,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.17145314461376598,
+      "spec_hash": "49dd639abeb9c1db113b9d3724702b55ea8eca245e537eb329a981e2e61e9cff"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "H2-0033",
+      "features": {
+        "calibrated_upper_over_budget": 0.02320749798310587,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 17.851927675423816,
+        "config_numeric_max": 128.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.01391628384590149,
+        "structural_peak_over_budget": 0.01391628384590149,
+        "top_two_peak_live_over_budget": 0.013916015625
+      },
+      "fresh_probability": 0.15223970851831528,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.15223970851831525,
+      "spec_hash": "73a3335297af4fa6acad7498ccfd7a472644ef443c691065831d0ce604099216"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0034",
+      "features": {
+        "calibrated_upper_over_budget": 0.27360845570445463,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 21.06634913299158,
+        "config_numeric_max": 192.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.16406822204589844,
+        "structural_peak_over_budget": 0.16406822204589844,
+        "top_two_peak_live_over_budget": 0.1640625
+      },
+      "fresh_probability": 0.23554240972576107,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.23554240972576107,
+      "spec_hash": "c5aa2dc4737fd5365a16b98cb590854449793e21cecbc95bf2bf2b81f1a197b2"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0035",
+      "features": {
+        "calibrated_upper_over_budget": 0.047502196935502235,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 19.497733217774137,
+        "config_numeric_max": 160.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.028484503428141277,
+        "structural_peak_over_budget": 0.028484503428141277,
+        "top_two_peak_live_over_budget": 0.028483072916666668
+      },
+      "fresh_probability": 0.15917171825161322,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.15917171825161322,
+      "spec_hash": "17bbef241de1ccc9ab46c7b9317aedb0f44fddea2aab34b8a4691ec1aba04a2d"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0036",
+      "features": {
+        "calibrated_upper_over_budget": 0.4169174010250971,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 21.199880525527405,
+        "config_numeric_max": 256.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.2500028610229492,
+        "structural_peak_over_budget": 0.2500028610229492,
+        "top_two_peak_live_over_budget": 0.25
+      },
+      "fresh_probability": 0.27022726230802196,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.27022726230802196,
+      "spec_hash": "2e5c5b5f6122510b57106d3428901e60918dad8f71e613e3059930c27f54f9c5"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0037",
+      "features": {
+        "calibrated_upper_over_budget": 3.126854266162989,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 23.502465617962656,
+        "config_numeric_max": 1024.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 1.8750057220458984,
+        "structural_peak_over_budget": 1.8750057220458984,
+        "top_two_peak_live_over_budget": 1.875
+      },
+      "fresh_probability": 0.9224400663866666,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.9224400663866666,
+      "spec_hash": "da880cb66638758a68cc8a2f2ad7a7e8c3243923c66ec8d19d770a89cc8188a5"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0038",
+      "features": {
+        "calibrated_upper_over_budget": 0.9092838920331915,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 21.646167627932307,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.5452484687169393,
+        "structural_peak_over_budget": 0.5452484687169393,
+        "top_two_peak_live_over_budget": 0.5452473958333334
+      },
+      "fresh_probability": 0.36781606697775515,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.36781606697775515,
+      "spec_hash": "5ea9745fb661409ad4931437221a3b896bb0c7f422c53caa0d4aa22be40c8430"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0039",
+      "features": {
+        "calibrated_upper_over_budget": 0.7817123737441455,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 22.11617125702903,
+        "config_numeric_max": 1024.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.4687507152557373,
+        "structural_peak_over_budget": 0.4687507152557373,
+        "top_two_peak_live_over_budget": 0.46875
+      },
+      "fresh_probability": 0.3333241191203105,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.3333241191203105,
+      "spec_hash": "b78fb72245df7ac8d8cf2aa872844992b653247e80eff0dc0b08c3c6c030d766"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "H2-0040",
+      "features": {
+        "calibrated_upper_over_budget": 0.0004834802225912543,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 9.416459832284596,
+        "config_numeric_max": 384.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0002899169921875,
+        "structural_peak_over_budget": 0.0002899169921875,
+        "top_two_peak_live_over_budget": 0.000274658203125
+      },
+      "fresh_probability": 0.13670995228695812,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1367099522869581,
+      "spec_hash": "c141727849e097e17fad15909a9e8454285d50b205027a33b7f6fcf1daec5cf4"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0041",
+      "features": {
+        "calibrated_upper_over_budget": 0.00020357062003842284,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 10.802693161352469,
+        "config_numeric_max": 256.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0001220703125,
+        "structural_peak_over_budget": 0.0001220703125,
+        "top_two_peak_live_over_budget": 8.138020833333333e-05
+      },
+      "fresh_probability": 0.11861070668983799,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.11861070668983799,
+      "spec_hash": "4a8f861d5a474f2698026df327dfd8dc378f8e1ac2c00aae26fc3c43518915c0"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0042",
+      "features": {
+        "calibrated_upper_over_budget": 0.0008312466984902266,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 9.011035410141815,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0004984537760416666,
+        "structural_peak_over_budget": 0.0004984537760416666,
+        "top_two_peak_live_over_budget": 0.00048828125
+      },
+      "fresh_probability": 0.13624457236200796,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.13624457236200796,
+      "spec_hash": "4ce6c71154dc8040e299447b0004593989360f1e85789630fff2282fd6f110fc"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0043",
+      "features": {
+        "calibrated_upper_over_budget": 0.008753536661652182,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 12.882116901315456,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0052490234375,
+        "structural_peak_over_budget": 0.0052490234375,
+        "top_two_peak_live_over_budget": 0.0029296875
+      },
+      "fresh_probability": 0.12355244061814324,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.12355244061814324,
+      "spec_hash": "16a854b26a0c100f4b177d8ade6417bb63e463f6adca6eed8811b7068a44bf20"
+    },
+    {
+      "absolute_probability_delta": 5.551115123125783e-17,
+      "candidate_id": "H2-0044",
+      "features": {
+        "calibrated_upper_over_budget": 0.0016285649603073828,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 12.882116901315456,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0009765625,
+        "structural_peak_over_budget": 0.0009765625,
+        "top_two_peak_live_over_budget": 0.0003255208333333333
+      },
+      "fresh_probability": 0.12186700528742353,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.12186700528742347,
+      "spec_hash": "413566676862088f9bcead1e91d7f108fd1ffaef0aff48326660b048943d05cb"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0045",
+      "features": {
+        "calibrated_upper_over_budget": 0.027685604325225505,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 13.980727494565434,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0166015625,
+        "structural_peak_over_budget": 0.0166015625,
+        "top_two_peak_live_over_budget": 0.005859375
+      },
+      "fresh_probability": 0.14852627830528056,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.14852627830528056,
+      "spec_hash": "8a2a704ab25b3942ce67f2c754e57b8dbc29bd0b351480aa98d96990f412c862"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0046",
+      "features": {
+        "calibrated_upper_over_budget": 0.026057039364918124,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 14.961556217758405,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.015625,
+        "structural_peak_over_budget": 0.015625,
+        "top_two_peak_live_over_budget": 0.010416666666666666
+      },
+      "fresh_probability": 0.15083415830348607,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.15083415830348607,
+      "spec_hash": "acb4e332fd7b088ba7d27c863a8a8adc8cd8b48ff23fcfb83800747ec59ac283"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0047",
+      "features": {
+        "calibrated_upper_over_budget": 0.1259423569304376,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 15.249238210737348,
+        "config_numeric_max": 4096.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.07552083333333333,
+        "structural_peak_over_budget": 0.07552083333333333,
+        "top_two_peak_live_over_budget": 0.041666666666666664
+      },
+      "fresh_probability": 0.16796477626349973,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.16796477626349973,
+      "spec_hash": "c0e3e4387cbe7fec0176c82642d070f96d81de2731f830c13441298b7561ddda"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0048",
+      "features": {
+        "calibrated_upper_over_budget": 0.006921401081306376,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 13.980727494565434,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.004150390625,
+        "structural_peak_over_budget": 0.004150390625,
+        "top_two_peak_live_over_budget": 0.0029296875
+      },
+      "fresh_probability": 0.12495136251397036,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.12495136251397036,
+      "spec_hash": "658114c51f221342b74019435eb6150cdb08bf48624f32fc1775adb361bbd592"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0049",
+      "features": {
+        "calibrated_upper_over_budget": 0.1628564960307383,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 17.73414464197501,
+        "config_numeric_max": 6144.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.09765625,
+        "structural_peak_over_budget": 0.09765625,
+        "top_two_peak_live_over_budget": 0.046875
+      },
+      "fresh_probability": 0.1550625481898031,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1550625481898031,
+      "spec_hash": "5b46995bc2393afa308d6bc82290a89d411cff67e35358db9dffd679f6bdd010"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0050",
+      "features": {
+        "calibrated_upper_over_budget": 0.22148483460180404,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 16.753315422076977,
+        "config_numeric_max": 6144.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.1328125,
+        "structural_peak_over_budget": 0.1328125,
+        "top_two_peak_live_over_budget": 0.09375
+      },
+      "fresh_probability": 0.19044463147058696,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.19044463147058696,
+      "spec_hash": "3065b406a64b8c74545165ebe0454c90257f52196d1e023e4dea5e4a15cfb1ca"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0051",
+      "features": {
+        "calibrated_upper_over_budget": 0.00018660640170188762,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 10.109566325223746,
+        "config_numeric_max": 256.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.00011189778645833333,
+        "structural_peak_over_budget": 0.00011189778645833333,
+        "top_two_peak_live_over_budget": 8.138020833333333e-05
+      },
+      "fresh_probability": 0.11765620923063436,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.11765620923063436,
+      "spec_hash": "c07062e4cfd6a7d606c3c4523d14ac5cdc1426a2275237b32d433e5260f81ecf"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0052",
+      "features": {
+        "calibrated_upper_over_budget": 0.00017176271065741928,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 8.723394022000136,
+        "config_numeric_max": 384.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.000102996826171875,
+        "structural_peak_over_budget": 0.000102996826171875,
+        "top_two_peak_live_over_budget": 9.918212890625e-05
+      },
+      "fresh_probability": 0.1355886305533322,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1355886305533322,
+      "spec_hash": "30d84c6b925f37994d6adf668deb0cc2687874cfc450c767cc765b9bf250dc10"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0053",
+      "features": {
+        "calibrated_upper_over_budget": 0.00029687382088936664,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 9.011035410141815,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.00017801920572916666,
+        "structural_peak_over_budget": 0.00017801920572916666,
+        "top_two_peak_live_over_budget": 0.00017293294270833334
+      },
+      "fresh_probability": 0.13616528946556175,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.13616528946556175,
+      "spec_hash": "d18a51d3d7067e9cd6f77691017084685c6e0c3173b45bb02318dce0c8c5026f"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0054",
+      "features": {
+        "calibrated_upper_over_budget": 0.008142824801536915,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 12.882116901315456,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0048828125,
+        "structural_peak_over_budget": 0.0048828125,
+        "top_two_peak_live_over_budget": 0.00439453125
+      },
+      "fresh_probability": 0.14441141084650297,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.14441141084650297,
+      "spec_hash": "4b746817fb431378a46bb0ff455bcefdd7e7dfabcd5f7f5cf6810198d3a006f4"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "H2-0055",
+      "features": {
+        "calibrated_upper_over_budget": 0.0020357062003842287,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 11.495830169541591,
+        "config_numeric_max": 768.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.001220703125,
+        "structural_peak_over_budget": 0.001220703125,
+        "top_two_peak_live_over_budget": 0.0010986328125
+      },
+      "fresh_probability": 0.14055659858958233,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1405565985895823,
+      "spec_hash": "73ba033e1e2254c8b55c200708a4fa38385e24192a9628417820a0e14832633b"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0056",
+      "features": {
+        "calibrated_upper_over_budget": 0.0035624858506723995,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 13.287581161714915,
+        "config_numeric_max": 768.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.00213623046875,
+        "structural_peak_over_budget": 0.00213623046875,
+        "top_two_peak_live_over_budget": 0.000732421875
+      },
+      "fresh_probability": 0.12286045105065234,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.12286045105065234,
+      "spec_hash": "c03b1a151d068ec08c3889e3ac4ff59c0d5d3559571c1a37e320934f1ea03c55"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "H2-0057",
+      "features": {
+        "calibrated_upper_over_budget": 0.0472283838489141,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 17.04099748128328,
+        "config_numeric_max": 3072.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0283203125,
+        "structural_peak_over_budget": 0.0283203125,
+        "top_two_peak_live_over_budget": 0.01171875
+      },
+      "fresh_probability": 0.13553015211619462,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1355301521161946,
+      "spec_hash": "0b5b4c458b314bf2177e572b2508424f20b7e134f9a43fd92d8eb8334abe8d4e"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0058",
+      "features": {
+        "calibrated_upper_over_budget": 0.025242756884764433,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 16.060168294498933,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.01513671875,
+        "structural_peak_over_budget": 0.01513671875,
+        "top_two_peak_live_over_budget": 0.0078125
+      },
+      "fresh_probability": 0.15239801941572795,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.15239801941572795,
+      "spec_hash": "b33407c7fca824ddb51a9d739e3afcebdb080ef09b1037ac3e20b80f399b9c84"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0059",
+      "features": {
+        "calibrated_upper_over_budget": 0.0187284970435349,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 15.367021219902783,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.01123046875,
+        "structural_peak_over_budget": 0.01123046875,
+        "top_two_peak_live_over_budget": 0.005859375
+      },
+      "fresh_probability": 0.14982951439371986,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.14982951439371986,
+      "spec_hash": "96c27e58f24edb80e56ed2e834b4b08ecd4847482e1b8604ab69225e57e3cec4"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0060",
+      "features": {
+        "calibrated_upper_over_budget": 0.3257129920614766,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 17.73414464197501,
+        "config_numeric_max": 6144.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.1953125,
+        "structural_peak_over_budget": 0.1953125,
+        "top_two_peak_live_over_budget": 0.09375
+      },
+      "fresh_probability": 0.20738203152793325,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.20738203152793325,
+      "spec_hash": "d85bf19db32b52c1f1448bdd14ad028e0b878fe24475d5eec58ac106eeaf64b8"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0061",
+      "features": {
+        "calibrated_upper_over_budget": 0.07165685825352484,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 16.347850340459765,
+        "config_numeric_max": 6144.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.04296875,
+        "structural_peak_over_budget": 0.04296875,
+        "top_two_peak_live_over_budget": 0.03515625
+      },
+      "fresh_probability": 0.14152254889367444,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.14152254889367444,
+      "spec_hash": "2d5a862522695a4d0137e9fad23fafb79f65c2e980ca0a5e0e141ffb65199e81"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0062",
+      "features": {
+        "calibrated_upper_over_budget": 0.007065596937166927,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 13.862944564872768,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.004236857096354167,
+        "structural_peak_over_budget": 0.004236857096354167,
+        "top_two_peak_live_over_budget": 0.00390625
+      },
+      "fresh_probability": 0.13340277620851873,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.13340277620851873,
+      "spec_hash": "ce3bbdfb59cd8b4227cfc0abeed07d37a438371ddce021915368d986d887de3d"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0063",
+      "features": {
+        "calibrated_upper_over_budget": 0.0013581977305688524,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 11.783509698884497,
+        "config_numeric_max": 256.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0008144378662109375,
+        "structural_peak_over_budget": 0.0008144378662109375,
+        "top_two_peak_live_over_budget": 0.0003255208333333333
+      },
+      "fresh_probability": 0.15082333717179086,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.15082333717179086,
+      "spec_hash": "c971662eef3aa4c28b41927e3b98c5f4e63a69309be2913e929839febb17ae7b"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "H2-0064",
+      "features": {
+        "calibrated_upper_over_budget": 0.015348376539980257,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 14.268409355089746,
+        "config_numeric_max": 768.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.009203592936197916,
+        "structural_peak_over_budget": 0.009203592936197916,
+        "top_two_peak_live_over_budget": 0.0087890625
+      },
+      "fresh_probability": 0.13546325619527405,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.13546325619527402,
+      "spec_hash": "4a845d42ab65f482c2f5b5fd02f4e3451c2d999699503c3fec06b0d02d51ec73"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0065",
+      "features": {
+        "calibrated_upper_over_budget": 0.005701037624721873,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 13.575262810312072,
+        "config_numeric_max": 768.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.003418604532877604,
+        "structural_peak_over_budget": 0.003418604532877604,
+        "top_two_peak_live_over_budget": 0.00146484375
+      },
+      "fresh_probability": 0.13287030720217502,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.13287030720217502,
+      "spec_hash": "450e4edb0027440665e7936ea62fb883885a23584039c578cc97672af390e782"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0066",
+      "features": {
+        "calibrated_upper_over_budget": 0.04521388292145054,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.87784675889774,
+        "config_numeric_max": 1280.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.027112325032552082,
+        "structural_peak_over_budget": 0.027112325032552082,
+        "top_two_peak_live_over_budget": 0.0244140625
+      },
+      "fresh_probability": 0.142827941399757,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.142827941399757,
+      "spec_hash": "c227543c92bcac33c3eddc26cb4c8595d9d797065ce8e42846e63897d0881495"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0067",
+      "features": {
+        "calibrated_upper_over_budget": 0.11511918563172813,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 17.73414464197501,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.06903076171875,
+        "structural_peak_over_budget": 0.06903076171875,
+        "top_two_peak_live_over_budget": 0.041666666666666664
+      },
+      "fresh_probability": 0.18056210006750717,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.18056210006750717,
+      "spec_hash": "7dd734d418d5ccc3875c9fbfeb81be673049e579580f46a32715a1ab9fe6397e"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0068",
+      "features": {
+        "calibrated_upper_over_budget": 0.03611045925660732,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.184699705494344,
+        "config_numeric_max": 1280.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.021653493245442707,
+        "structural_peak_over_budget": 0.021653493245442707,
+        "top_two_peak_live_over_budget": 0.016276041666666668
+      },
+      "fresh_probability": 0.16320033040183088,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.16320033040183088,
+      "spec_hash": "b32ffce934f0b469096b26fe44e2d9ce6c329a0e2876036a81b20faf5d3a6e0c"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "H2-0069",
+      "features": {
+        "calibrated_upper_over_budget": 0.029731913162070068,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 16.283311824620384,
+        "config_numeric_max": 1280.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.017828623453776043,
+        "structural_peak_over_budget": 0.017828623453776043,
+        "top_two_peak_live_over_budget": 0.01220703125
+      },
+      "fresh_probability": 0.14087160448335942,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1408716044833594,
+      "spec_hash": "598715a3a14e1c358fc095ee7b4f35236afc42dfa94deeb67f448d3c26240a6b"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0070",
+      "features": {
+        "calibrated_upper_over_budget": 0.20525007765373982,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 18.139609743460436,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.123077392578125,
+        "structural_peak_over_budget": 0.123077392578125,
+        "top_two_peak_live_over_budget": 0.09375
+      },
+      "fresh_probability": 0.1987353528746433,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1987353528746433,
+      "spec_hash": "5638b3f7e2b6516cca1142997b5c1c62b9baa371f437f4085063f959944189d2"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0071",
+      "features": {
+        "calibrated_upper_over_budget": 0.21012729042549372,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 18.65043536192824,
+        "config_numeric_max": 2560.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.12600199381510416,
+        "structural_peak_over_budget": 0.12600199381510416,
+        "top_two_peak_live_over_budget": 0.09765625
+      },
+      "fresh_probability": 0.17468831838295604,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.17468831838295604,
+      "spec_hash": "85d729ae6750cee3cb727b2831d65bc7e00cab44b6b0c00ca66f30053309076e"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0072",
+      "features": {
+        "calibrated_upper_over_budget": 0.33012368882897575,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 18.42729181260085,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.19795735677083334,
+        "structural_peak_over_budget": 0.19795735677083334,
+        "top_two_peak_live_over_budget": 0.16666666666666666
+      },
+      "fresh_probability": 0.2262518654565019,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.2262518654565019,
+      "spec_hash": "2101a3685cdb233029437cd3cbc8f752ff9a604f1ed676491a796257d515c04f"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0073",
+      "features": {
+        "calibrated_upper_over_budget": 0.3399120428091565,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 18.244970257793717,
+        "config_numeric_max": 2560.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.203826904296875,
+        "structural_peak_over_budget": 0.203826904296875,
+        "top_two_peak_live_over_budget": 0.1953125
+      },
+      "fresh_probability": 0.20078159421355715,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.20078159421355715,
+      "spec_hash": "1ffee03ad135ffdce210cb81af6c225e57f7d1d255514b08aa8ebfcc637ed929"
+    },
+    {
+      "absolute_probability_delta": 5.551115123125783e-17,
+      "candidate_id": "H2-0074",
+      "features": {
+        "calibrated_upper_over_budget": 0.8828179222332938,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 18.9381174323932,
+        "config_numeric_max": 4096.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.5293782552083334,
+        "structural_peak_over_budget": 0.5293782552083334,
+        "top_two_peak_live_over_budget": 0.5
+      },
+      "fresh_probability": 0.33495614926651207,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.3349561492665121,
+      "spec_hash": "ad9469c793b51515f988b626c6e70324ac23579083e73de719ff9773ea9dc96f"
+    },
+    {
+      "absolute_probability_delta": 5.551115123125783e-17,
+      "candidate_id": "H2-0075",
+      "features": {
+        "calibrated_upper_over_budget": 0.25409854435379303,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 18.244970257793717,
+        "config_numeric_max": 4096.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.15236918131510416,
+        "structural_peak_over_budget": 0.15236918131510416,
+        "top_two_peak_live_over_budget": 0.09765625
+      },
+      "fresh_probability": 0.1813521975505391,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.18135219755053916,
+      "spec_hash": "b208feb003b0de926aaeb7ee0d2723f48f7523a53768c9a56de75ad7ca3312ea"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "H2-0076",
+      "features": {
+        "calibrated_upper_over_budget": 0.0006107139309427022,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 9.416459832284596,
+        "config_numeric_max": 384.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0003662121792634328,
+        "structural_peak_over_budget": 0.0003662121792634328,
+        "top_two_peak_live_over_budget": 0.0003662109375
+      },
+      "fresh_probability": 0.13673009154558413,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1367300915455841,
+      "spec_hash": "9321a03503639503b2c9f238906dcbf93a890d867efcfcce19f77e9dc1c07624"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0077",
+      "features": {
+        "calibrated_upper_over_budget": 0.0003053569654713511,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 10.802693161352469,
+        "config_numeric_max": 384.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0001831060896317164,
+        "structural_peak_over_budget": 0.0001831060896317164,
+        "top_two_peak_live_over_budget": 0.00018310546875
+      },
+      "fresh_probability": 0.11872698424560854,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.11872698424560854,
+      "spec_hash": "60b6a08db40ac3200fd2dd7d495d44b3e31436d5dddbbd447024e94d15798cc3"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0078",
+      "features": {
+        "calibrated_upper_over_budget": 0.0010857120443656888,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 10.109566325223746,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0006510429084300995,
+        "structural_peak_over_budget": 0.0006510429084300995,
+        "top_two_peak_live_over_budget": 0.0006510416666666666
+      },
+      "fresh_probability": 0.13799872104082492,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.13799872104082492,
+      "spec_hash": "1abb546a91d435c847cb8c7c5c446b2cb43177e9d874111e5abc2185da505bc7"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0079",
+      "features": {
+        "calibrated_upper_over_budget": 0.002171422017903944,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 12.476653064769005,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0013020845750967662,
+        "structural_peak_over_budget": 0.0013020845750967662,
+        "top_two_peak_live_over_budget": 0.0003255208333333333
+      },
+      "fresh_probability": 0.1418507193816148,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1418507193816148,
+      "spec_hash": "c8eaf7a90476b408b3918b8fb4160a578723f1b35af0670e05aee20fee474d27"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0080",
+      "features": {
+        "calibrated_upper_over_budget": 0.004885695916335865,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 13.980727494565434,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0029296881208817163,
+        "structural_peak_over_budget": 0.0029296881208817163,
+        "top_two_peak_live_over_budget": 0.0029296875
+      },
+      "fresh_probability": 0.12475203909099984,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.12475203909099984,
+      "spec_hash": "2bfeefb5e3c02390407cbd1a2facc6b02d1c27eacf27121109e46be33d6ee6b8"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0081",
+      "features": {
+        "calibrated_upper_over_budget": 0.00977139183267173,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 13.575262810312072,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0058593762417634325,
+        "structural_peak_over_budget": 0.0058593762417634325,
+        "top_two_peak_live_over_budget": 0.005859375
+      },
+      "fresh_probability": 0.14583969019638857,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.14583969019638857,
+      "spec_hash": "31a9e26b6425600b20dc972c09b524525c9efe2d5365fa8b1cf125227ef614af"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0082",
+      "features": {
+        "calibrated_upper_over_budget": 0.002442849511288508,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 12.594435676571663,
+        "config_numeric_max": 768.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0014648449917634327,
+        "structural_peak_over_budget": 0.0014648449917634327,
+        "top_two_peak_live_over_budget": 0.00146484375
+      },
+      "fresh_probability": 0.1423893026415132,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1423893026415132,
+      "spec_hash": "41e1f98b8e2f19236ce23f06cee888307fb8b7e0bb2fc3dbf3665e2ef4f228a7"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0083",
+      "features": {
+        "calibrated_upper_over_budget": 0.08468537897139762,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 17.04099748128328,
+        "config_numeric_max": 3072.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.050781250620881714,
+        "structural_peak_over_budget": 0.050781250620881714,
+        "top_two_peak_live_over_budget": 0.01171875
+      },
+      "fresh_probability": 0.1395111385828065,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1395111385828065,
+      "spec_hash": "b210aa41850a5240cd7ed509790257803bce45e82775dfcc58924cdeceee107e"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0084",
+      "features": {
+        "calibrated_upper_over_budget": 0.01954278055910231,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 14.268409355089746,
+        "config_numeric_max": 3072.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.011718750620881716,
+        "structural_peak_over_budget": 0.011718750620881716,
+        "top_two_peak_live_over_budget": 0.01171875
+      },
+      "fresh_probability": 0.12849617132914234,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.12849617132914234,
+      "spec_hash": "4ef73dbde34c1d6f8733c374b628efd24e37a7102c55df7417f94634c235cf6d"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "H2-0085",
+      "features": {
+        "calibrated_upper_over_budget": 0.05211408080066368,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 16.060168294498933,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.031250001241763435,
+        "structural_peak_over_budget": 0.031250001241763435,
+        "top_two_peak_live_over_budget": 0.00390625
+      },
+      "fresh_probability": 0.15471596757307787,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1547159675730779,
+      "spec_hash": "48cd9791f70c89409f4c9950524e6e3c2766bea7dc5f11241fa046ceeda2d27d"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0086",
+      "features": {
+        "calibrated_upper_over_budget": 0.0781711191301681,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 16.060168294498933,
+        "config_numeric_max": 6144.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.046875000620881714,
+        "structural_peak_over_budget": 0.046875000620881714,
+        "top_two_peak_live_over_budget": 0.046875
+      },
+      "fresh_probability": 0.14265471988495057,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.14265471988495057,
+      "spec_hash": "1a72119bbcdad10498759169bf1157ff29c8724f567dd5d8b9cc088b462cd4db"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0087",
+      "features": {
+        "calibrated_upper_over_budget": 0.4169126319095174,
+        "config_numeric_count": 3.0,
+        "config_numeric_log_product": 18.139609743460436,
+        "config_numeric_max": 6144.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.2500000012417634,
+        "structural_peak_over_budget": 0.2500000012417634,
+        "top_two_peak_live_over_budget": 0.03125
+      },
+      "fresh_probability": 0.2154551833145867,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.2154551833145867,
+      "spec_hash": "f5afeed526897a77c1a94f96f918d5e7bc9e4accc66bdd798b9c0f9cd88a2cbc"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "H2-0088",
+      "features": {
+        "calibrated_upper_over_budget": 8.548375646144709e-06,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 10.397238225511654,
+        "config_numeric_max": 128.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 5.125999450683594e-06,
+        "structural_peak_over_budget": 5.125999450683594e-06,
+        "top_two_peak_live_over_budget": 5.086263020833333e-06
+      },
+      "fresh_probability": 0.12691151105749496,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.12691151105749493,
+      "spec_hash": "a470461741a3b886c9f89c9236f3f3067854ad370a90f796b89ebe30d0babcca"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0089",
+      "features": {
+        "calibrated_upper_over_budget": 3.399470315094756e-05,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 10.397238225511654,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 2.0384788513183594e-05,
+        "structural_peak_over_budget": 2.0384788513183594e-05,
+        "top_two_peak_live_over_budget": 2.0345052083333332e-05
+      },
+      "fresh_probability": 0.12723377447085799,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.12723377447085799,
+      "spec_hash": "419bf494cafc59d7871036df2e16785bc7361d5bc0d63084e3781b4442510b87"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0090",
+      "features": {
+        "calibrated_upper_over_budget": 0.0043470809487371545,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.942385272088025,
+        "config_numeric_max": 1024.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0026067097981770835,
+        "structural_peak_over_budget": 0.0026067097981770835,
+        "top_two_peak_live_over_budget": 0.0026041666666666665
+      },
+      "fresh_probability": 0.13667679686727272,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.13667679686727272,
+      "spec_hash": "0aca84549e0f0641bf92beea07bd5a939bd408377a11b52037e12ba18d736f4e"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0091",
+      "features": {
+        "calibrated_upper_over_budget": 0.0043470809487371545,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.249238210737348,
+        "config_numeric_max": 1024.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0026067097981770835,
+        "structural_peak_over_budget": 0.0026067097981770835,
+        "top_two_peak_live_over_budget": 0.0026041666666666665
+      },
+      "fresh_probability": 0.1580794091399571,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1580794091399571,
+      "spec_hash": "b17267bd318f6d9612d39d93d7fd564ade9beef597617112b7277b74e05d63af"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0092",
+      "features": {
+        "calibrated_upper_over_budget": 0.004344960421445087,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 15.942385272088025,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.002605438232421875,
+        "structural_peak_over_budget": 0.002605438232421875,
+        "top_two_peak_live_over_budget": 0.0026041666666666665
+      },
+      "fresh_probability": 0.1375830972328968,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1375830972328968,
+      "spec_hash": "bbd8f17adf703dfdff42d75c63e0434e0b5159acdbe35bd772626e2802474367"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0093",
+      "features": {
+        "calibrated_upper_over_budget": 0.03475120126239243,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 16.63553239304333,
+        "config_numeric_max": 4096.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.020838419596354168,
+        "structural_peak_over_budget": 0.020838419596354168,
+        "top_two_peak_live_over_budget": 0.020833333333333332
+      },
+      "fresh_probability": 0.16899155314354655,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.16899155314354655,
+      "spec_hash": "2aef016610eb47f47a6bf3a4a7888d89bfdd5b96000e625d24caacf76c06c85e"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0094",
+      "features": {
+        "calibrated_upper_over_budget": 0.03475120126239243,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 17.328679543800956,
+        "config_numeric_max": 4096.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.020838419596354168,
+        "structural_peak_over_budget": 0.020838419596354168,
+        "top_two_peak_live_over_budget": 0.020833333333333332
+      },
+      "fresh_probability": 0.17028003109861214,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.17028003109861214,
+      "spec_hash": "2a1cb50c7a67873c1eebfa347c634221f7b7c431145e1059efd6c39fbd74c101"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0095",
+      "features": {
+        "calibrated_upper_over_budget": 0.5559513633249328,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 18.714973882569105,
+        "config_numeric_max": 8192.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.3333740234375,
+        "structural_peak_over_budget": 0.3333740234375,
+        "top_two_peak_live_over_budget": 0.3333333333333333
+      },
+      "fresh_probability": 0.2943395743139489,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.2943395743139489,
+      "spec_hash": "ee2b103106068d57e7bec61b4276b77e63c203d2e45774bacd9e08b3030fc87a"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0096",
+      "features": {
+        "calibrated_upper_over_budget": 0.0016285649603073828,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 18.714973882569105,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0009765625,
+        "structural_peak_over_budget": 0.0009765625,
+        "top_two_peak_live_over_budget": 0.0006510416666666666
+      },
+      "fresh_probability": 0.1632385633076629,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1632385633076629,
+      "spec_hash": "c97e093346c85463528c8d000dfe2abc2e24e9e1e85ee6d6ebd170c8bf12b4c0"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0097",
+      "features": {
+        "calibrated_upper_over_budget": 0.0010857099735382552,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 19.12043898819374,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0006510416666666666,
+        "structural_peak_over_budget": 0.0006510416666666666,
+        "top_two_peak_live_over_budget": 0.0003255208333333333
+      },
+      "fresh_probability": 0.14071156780431168,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.14071156780431168,
+      "spec_hash": "3828da673176ad2d1c9709dd9f4395164509765f05bec10915298c40f3a36346"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0098",
+      "features": {
+        "calibrated_upper_over_budget": 0.0013571374669228188,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 19.408121059403758,
+        "config_numeric_max": 1024.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0008138020833333334,
+        "structural_peak_over_budget": 0.0008138020833333334,
+        "top_two_peak_live_over_budget": 0.0006510416666666666
+      },
+      "fresh_probability": 0.1416903599962243,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1416903599962243,
+      "spec_hash": "f2800f9e429223d99b8f817ea173eb42fd73cea0a99ff931b8e4dc8af02e51a8"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0099",
+      "features": {
+        "calibrated_upper_over_budget": 0.006107118601152685,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 21.60534563342861,
+        "config_numeric_max": 1536.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.003662109375,
+        "structural_peak_over_budget": 0.003662109375,
+        "top_two_peak_live_over_budget": 0.00244140625
+      },
+      "fresh_probability": 0.1463987359381456,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.1463987359381456,
+      "spec_hash": "ba8f9e653c7718d35c5d31c5c8e5bd099c0f72d12cce30d583b0889b3082bbab"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0100",
+      "features": {
+        "calibrated_upper_over_budget": 0.02279990944430336,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 23.27932206666397,
+        "config_numeric_max": 3072.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.013671875,
+        "structural_peak_over_budget": 0.013671875,
+        "top_two_peak_live_over_budget": 0.009765625
+      },
+      "fresh_probability": 0.15315603554798135,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.15315603554798135,
+      "spec_hash": "ff438521282d6ab641d7b1e7e0b5d154196be2e5fa1abba3c80202bb99364cce"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0101",
+      "features": {
+        "calibrated_upper_over_budget": 0.011942809708920808,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 22.586174886181634,
+        "config_numeric_max": 3072.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.007161458333333333,
+        "structural_peak_over_budget": 0.007161458333333333,
+        "top_two_peak_live_over_budget": 0.005859375
+      },
+      "fresh_probability": 0.15041480747265304,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.15041480747265304,
+      "spec_hash": "539117be0df21efaae12ec4c9a2ef61ea5263c02cae1b972a2122beec6e689a0"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0102",
+      "features": {
+        "calibrated_upper_over_budget": 0.026057039364918124,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 24.37793435528034,
+        "config_numeric_max": 3072.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.015625,
+        "structural_peak_over_budget": 0.015625,
+        "top_two_peak_live_over_budget": 0.0078125
+      },
+      "fresh_probability": 0.15527018680505195,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.15527018680505195,
+      "spec_hash": "fa474576f6c61e45e242a23a0120e7d4629692df2dce0c2dc2926afd0b60cd3b"
+    },
+    {
+      "absolute_probability_delta": 5.551115123125783e-17,
+      "candidate_id": "H2-0103",
+      "features": {
+        "calibrated_upper_over_budget": 0.0005428549867691276,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 13.169798337985775,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0003255208333333333,
+        "structural_peak_over_budget": 0.0003255208333333333,
+        "top_two_peak_live_over_budget": 0.000244140625
+      },
+      "fresh_probability": 0.13142034083545767,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.13142034083545762,
+      "spec_hash": "91f087314d9d3dc09f45ac0186a135a61058679015a389d942a1b99039d0bdff"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0104",
+      "features": {
+        "calibrated_upper_over_budget": 6.785687334614095e-05,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 11.783509698884497,
+        "config_numeric_max": 256.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 4.0690104166666664e-05,
+        "structural_peak_over_budget": 4.0690104166666664e-05,
+        "top_two_peak_live_over_budget": 3.0517578125e-05
+      },
+      "fresh_probability": 0.12906783119253917,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.12906783119253917,
+      "spec_hash": "2e91454dd106cba39521772841612b027764f7cbc756be0fc2c877e615f6c4f9"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0105",
+      "features": {
+        "calibrated_upper_over_budget": 0.002175661001660644,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 13.862944564872768,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.00130462646484375,
+        "structural_peak_over_budget": 0.00130462646484375,
+        "top_two_peak_live_over_budget": 0.0013020833333333333
+      },
+      "fresh_probability": 0.154796707844372,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.154796707844372,
+      "spec_hash": "06f889360b417b66a5c742d76148969cc8d6765fed153d39342ec70c63c91b4f"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0106",
+      "features": {
+        "calibrated_upper_over_budget": 0.017405288013285152,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 17.328679543800956,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.01043701171875,
+        "structural_peak_over_budget": 0.01043701171875,
+        "top_two_peak_live_over_budget": 0.010416666666666666
+      },
+      "fresh_probability": 0.16507360169531657,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.16507360169531657,
+      "spec_hash": "bf328b368df503e0b2b957c23ad011c0f0f194c9630b99d81295bd995113dabf"
+    },
+    {
+      "absolute_probability_delta": 5.551115123125783e-17,
+      "candidate_id": "H2-0107",
+      "features": {
+        "calibrated_upper_over_budget": 0.06962115205314061,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 17.328679543800956,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.041748046875,
+        "structural_peak_over_budget": 0.041748046875,
+        "top_two_peak_live_over_budget": 0.041666666666666664
+      },
+      "fresh_probability": 0.17438892056716127,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.17438892056716132,
+      "spec_hash": "0656ef125816240725570b8ca117aa7c5f872314cd2436b5929bf70dce48c900"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0108",
+      "features": {
+        "calibrated_upper_over_budget": 0.06948543830644834,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 17.328679543800956,
+        "config_numeric_max": 2048.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.041666666666666664,
+        "structural_peak_over_budget": 0.041666666666666664,
+        "top_two_peak_live_over_budget": 0.03125
+      },
+      "fresh_probability": 0.14916969223598603,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.14916969223598603,
+      "spec_hash": "b70ce35575a8e2aa3004ba5754e936a5d3e77e97e053cf1b3588d485685e05be"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0109",
+      "features": {
+        "calibrated_upper_over_budget": 0.06948543830644834,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 17.328679543800956,
+        "config_numeric_max": 4096.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.041666666666666664,
+        "structural_peak_over_budget": 0.041666666666666664,
+        "top_two_peak_live_over_budget": 0.03125
+      },
+      "fresh_probability": 0.15112488445994232,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "saved_probability": 0.15112488445994232,
+      "spec_hash": "5bfc49bce6825227166b03cac588b3b471ff62ff98b9557a804ec3063772afd6"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "H2-0000",
+      "features": {
+        "calibrated_upper_over_budget": 0.00038408050577561813,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 14.673874251270396,
+        "config_numeric_max": 48.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.00023031234741210938,
+        "structural_peak_over_budget": 0.00023031234741210938,
+        "top_two_peak_live_over_budget": 0.0002288818359375
+      },
+      "fresh_probability": 0.14324486761206043,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.1432448676120604,
+      "spec_hash": "b29b9a03b5f7f92ff513c9aa35e87972d4ce3f1dcce091200c0c7f3611d575e7"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0001",
+      "features": {
+        "calibrated_upper_over_budget": 0.005686591532544667,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 15.87784675889774,
+        "config_numeric_max": 80.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0034099419911702475,
+        "structural_peak_over_budget": 0.0034099419911702475,
+        "top_two_peak_live_over_budget": 0.0034077962239583335
+      },
+      "fresh_probability": 0.1699443156876358,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.1699443156876358,
+      "spec_hash": "4727a9e64c1e1362f70030bc28f85195a3bf32ca251cbed6a1746cb022127e80"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0002",
+      "features": {
+        "calibrated_upper_over_budget": 0.002452389813275375,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 17.44646257614597,
+        "config_numeric_max": 96.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0014705657958984375,
+        "structural_peak_over_budget": 0.0014705657958984375,
+        "top_two_peak_live_over_budget": 0.00146484375
+      },
+      "fresh_probability": 0.14816951300970033,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.14816951300970033,
+      "spec_hash": "87bd8d6803a2692cb4077d3a3a409ed7c9c10d0b05c144dd3010f567644cb11f"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0003",
+      "features": {
+        "calibrated_upper_over_budget": 0.0010369378458207163,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 15.87784675889774,
+        "config_numeric_max": 96.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.000621795654296875,
+        "structural_peak_over_budget": 0.000621795654296875,
+        "top_two_peak_live_over_budget": 0.0006103515625
+      },
+      "fresh_probability": 0.1691309682565956,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.1691309682565956,
+      "spec_hash": "7b96149c412e640a371f5c1276607eaf505026ed52848cd4bc6451d59ecbccca"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0004",
+      "features": {
+        "calibrated_upper_over_budget": 0.0005040725305915602,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 14.021549455177297,
+        "config_numeric_max": 80.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.00030226508776346844,
+        "structural_peak_over_budget": 0.00030226508776346844,
+        "top_two_peak_live_over_budget": 0.0003019968668619792
+      },
+      "fresh_probability": 0.14223945457205997,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.14223945457205997,
+      "spec_hash": "f8f5a7ee21f8aafafb75a734b8cd0a6c6346893dc886d962c04629dace6713f1"
+    },
+    {
+      "absolute_probability_delta": 5.551115123125783e-17,
+      "candidate_id": "H2-0005",
+      "features": {
+        "calibrated_upper_over_budget": 0.00024218741002129748,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 13.287581161714915,
+        "config_numeric_max": 96.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.00014522671699523926,
+        "structural_peak_over_budget": 0.00014522671699523926,
+        "top_two_peak_live_over_budget": 0.00014495849609375
+      },
+      "fresh_probability": 0.14103608634742032,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.14103608634742026,
+      "spec_hash": "973812efb82ff3c61a30cbf31f3a78d50cf22153c2d0f3e7949bed0e35d37368"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0006",
+      "features": {
+        "calibrated_upper_over_budget": 0.0031180697167896908,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 15.926636917012097,
+        "config_numeric_max": 112.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.0018697381019592285,
+        "structural_peak_over_budget": 0.0018697381019592285,
+        "top_two_peak_live_over_budget": 0.00186920166015625
+      },
+      "fresh_probability": 0.14577615001224414,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.14577615001224414,
+      "spec_hash": "fb1564ccb0f12292ad92cff805be9813616dc738e1b9dd6f260472a96140566e"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "H2-0007",
+      "features": {
+        "calibrated_upper_over_budget": 0.017399986695054985,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 19.81358616627016,
+        "config_numeric_max": 128.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.010433832804361979,
+        "structural_peak_over_budget": 0.010433832804361979,
+        "top_two_peak_live_over_budget": 0.010416666666666666
+      },
+      "fresh_probability": 0.154645290841353,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.15464529084135298,
+      "spec_hash": "0bd0d906cc936a2dca760feeaf27b755b71f4080314429aa259a6d0ee8a2cdb4"
+    },
+    {
+      "absolute_probability_delta": 5.551115123125783e-17,
+      "candidate_id": "H2-0008",
+      "features": {
+        "calibrated_upper_over_budget": 0.10749065496499531,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 18.832756917397646,
+        "config_numeric_max": 128.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.06445634365081787,
+        "structural_peak_over_budget": 0.06445634365081787,
+        "top_two_peak_live_over_budget": 0.064453125
+      },
+      "fresh_probability": 0.1950240889277952,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.19502408892779527,
+      "spec_hash": "fcb56a7165466a152037e1fea4b7ae32c90274f30819bd55ba4933d72acfed49"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0009",
+      "features": {
+        "calibrated_upper_over_budget": 0.008144017598138702,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 17.5518230891547,
+        "config_numeric_max": 80.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.004883527755737305,
+        "structural_peak_over_budget": 0.004883527755737305,
+        "top_two_peak_live_over_budget": 0.0048828125
+      },
+      "fresh_probability": 0.14924361452980414,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.14924361452980414,
+      "spec_hash": "bb20e4817ccbc822ba5e7c407507966ceeea733aa6ee8bf7e828a59bfc75a5d6"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0010",
+      "features": {
+        "calibrated_upper_over_budget": 0.011438124213408883,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 18.58144249100895,
+        "config_numeric_max": 112.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.00685882568359375,
+        "structural_peak_over_budget": 0.00685882568359375,
+        "top_two_peak_live_over_budget": 0.0068359375
+      },
+      "fresh_probability": 0.17612427201591327,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.17612427201591327,
+      "spec_hash": "3e9912e7ac3121797351b756e40783c35fccc4e578f768d6e24715feb9b1fe5a"
+    },
+    {
+      "absolute_probability_delta": 8.326672684688674e-17,
+      "candidate_id": "H2-0011",
+      "features": {
+        "calibrated_upper_over_budget": 0.04343794131434451,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 20.32441178904274,
+        "config_numeric_max": 128.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.026047388712565105,
+        "structural_peak_over_budget": 0.026047388712565105,
+        "top_two_peak_live_over_budget": 0.026041666666666668
+      },
+      "fresh_probability": 0.15991165070363889,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.1599116507036388,
+      "spec_hash": "b74157f8a1b171020bbc82f3e25aab605218e1c553e94654b80db5c1d19435c0"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "H2-0012",
+      "features": {
+        "calibrated_upper_over_budget": 0.13029473919740492,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 20.32441178904274,
+        "config_numeric_max": 160.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.07813072204589844,
+        "structural_peak_over_budget": 0.07813072204589844,
+        "top_two_peak_live_over_budget": 0.078125
+      },
+      "fresh_probability": 0.20280164656959576,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.2028016465695958,
+      "spec_hash": "fb44bf276a5a44edf20642c902729957c856ab4371cc6c1daf32a76612e3f250"
+    },
+    {
+      "absolute_probability_delta": 5.551115123125783e-17,
+      "candidate_id": "H2-0013",
+      "features": {
+        "calibrated_upper_over_budget": 0.19543733760970025,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 20.32441178904274,
+        "config_numeric_max": 160.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.11719322204589844,
+        "structural_peak_over_budget": 0.11719322204589844,
+        "top_two_peak_live_over_budget": 0.1171875
+      },
+      "fresh_probability": 0.2164723073782031,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.21647230737820305,
+      "spec_hash": "d2602067b47ad1e596a409df71ee7a6bf42053916d626aa94ee6b3c59f2f989a"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "H2-0014",
+      "features": {
+        "calibrated_upper_over_budget": 0.04071650960088814,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 19.34358253851454,
+        "config_numeric_max": 160.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.02441549301147461,
+        "structural_peak_over_budget": 0.02441549301147461,
+        "top_two_peak_live_over_budget": 0.0244140625
+      },
+      "fresh_probability": 0.15775401635983546,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.15775401635983544,
+      "spec_hash": "af407b10a8afb0856cfde12856875c378238a6a0de4d73e6b6543227455d10e5"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "H2-0015",
+      "features": {
+        "calibrated_upper_over_budget": 0.09311394379012683,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 20.932817740468426,
+        "config_numeric_max": 112.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.05583540598551432,
+        "structural_peak_over_budget": 0.05583540598551432,
+        "top_two_peak_live_over_budget": 0.055826822916666664
+      },
+      "fresh_probability": 0.16965956992069423,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.1696595699206942,
+      "spec_hash": "e00b13a3ba322c84a37aaa59357852b91a5fd3cfb22b5da226e4f527af811c53"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0016",
+      "features": {
+        "calibrated_upper_over_budget": 0.5211598720439911,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 23.097000509885536,
+        "config_numeric_max": 256.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.3125114440917969,
+        "structural_peak_over_budget": 0.3125114440917969,
+        "top_two_peak_live_over_budget": 0.3125
+      },
+      "fresh_probability": 0.26578771914974103,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.26578771914974103,
+      "spec_hash": "be04bcb016f8ed81a9220704349acfa4bc8ca589047f7ae5952307a90f9b4439"
+    },
+    {
+      "absolute_probability_delta": 2.7755575615628914e-17,
+      "candidate_id": "H2-0017",
+      "features": {
+        "calibrated_upper_over_budget": 0.08469253471559463,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 20.21905127355048,
+        "config_numeric_max": 128.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.05078554153442383,
+        "structural_peak_over_budget": 0.05078554153442383,
+        "top_two_peak_live_over_budget": 0.05078125
+      },
+      "fresh_probability": 0.16686532120316724,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.16686532120316722,
+      "spec_hash": "2c79e02be85ccb7359a470d5410d2a4d4cb1d3a6cae014faeb15493670b78929"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0018",
+      "features": {
+        "calibrated_upper_over_budget": 0.46903147975493337,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 22.298492813781593,
+        "config_numeric_max": 1024.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.2812528610229492,
+        "structural_peak_over_budget": 0.2812528610229492,
+        "top_two_peak_live_over_budget": 0.28125
+      },
+      "fresh_probability": 0.25219684116197466,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.25219684116197466,
+      "spec_hash": "e117fd0e8408f1ff3d205d02fde07bf756f42842936173b7fa0407a25a957993"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0019",
+      "features": {
+        "calibrated_upper_over_budget": 0.833830030863787,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 22.87385695859461,
+        "config_numeric_max": 1024.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.5000028610229492,
+        "structural_peak_over_budget": 0.5000028610229492,
+        "top_two_peak_live_over_budget": 0.5
+      },
+      "fresh_probability": 0.3504273305474599,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.3504273305474599,
+      "spec_hash": "c6fd6e9b67e7965aaa72e294600e5b75e6e30557439c0c6c35f4323034d27e04"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0020",
+      "features": {
+        "calibrated_upper_over_budget": 0.1737159813593244,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 21.017558968857628,
+        "config_numeric_max": 256.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.10416809717814128,
+        "structural_peak_over_budget": 0.10416809717814128,
+        "top_two_peak_live_over_budget": 0.10416666666666667
+      },
+      "fresh_probability": 0.18486554034089914,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.18486554034089914,
+      "spec_hash": "77afbb13d7f0cb6fec6538c7013855acad659fbb13a539af38e97f0394275abf"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0021",
+      "features": {
+        "calibrated_upper_over_budget": 0.46902909416172983,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 20.912198453282585,
+        "config_numeric_max": 256.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.2812514305114746,
+        "structural_peak_over_budget": 0.2812514305114746,
+        "top_two_peak_live_over_budget": 0.28125
+      },
+      "fresh_probability": 0.2826725289294508,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.2826725289294508,
+      "spec_hash": "6993e5967b48ca218256dd3c5e78d093f12e610ab11aa881543415ca3dd9a50e"
+    },
+    {
+      "absolute_probability_delta": 5.551115123125783e-17,
+      "candidate_id": "H2-0022",
+      "features": {
+        "calibrated_upper_over_budget": 0.5211431728915661,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 21.017558968857628,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.3125014305114746,
+        "structural_peak_over_budget": 0.3125014305114746,
+        "top_two_peak_live_over_budget": 0.3125
+      },
+      "fresh_probability": 0.2969399154357899,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.29693991543578985,
+      "spec_hash": "dc57a1086de2b94bb55f5c539ff0199074c9792636df1ba2c7fe35861ff5f332"
+    },
+    {
+      "absolute_probability_delta": 0.0,
+      "candidate_id": "H2-0023",
+      "features": {
+        "calibrated_upper_over_budget": 4.364557672013591,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 22.521636365054412,
+        "config_numeric_max": 1024.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 2.617189645767212,
+        "structural_peak_over_budget": 2.617189645767212,
+        "top_two_peak_live_over_budget": 2.6171875
+      },
+      "fresh_probability": 0.9825552539744113,
+      "panel": "oom_risk_heldout2_conv_stress_predictions_2026-09-13.json",
+      "saved_probability": 0.9825552539744113,
+      "spec_hash": "777a3c6a94880de89fc0904c9ff500a79ec32783108849a528a8d7e0d9408d97"
+    }
+  ],
+  "rows": 224,
+  "runtime_gpu_validation": "NOT_RUN",
+  "score_mismatches": 0,
+  "source_sha256": {
+    "experiments/oom_risk_expansion_v2.py": "8dce47c246fe476341e098fe6932fe23c0ba7c7eb63020547c1b81018e269eff",
+    "experiments/oom_risk_workload_replay.py": "7b1542924d5d807ad8ca5397eead410bffd65b3d7e58a78df0d0cecd3231b5d3",
+    "experiments/oom_risk_workload_spec.py": "a4f4a4443eeb75b3b73abd1ac0812ed6134822e528e6c6760c8aa3a1da1b8288",
+    "src/jaxoom/__init__.py": "f8f2f2f0145cfa792dfd82c059ad41a73119b9cd758495c4b784110a65f7c94c",
+    "src/jaxoom/analysis/__init__.py": "3a8edc62917405ebf8a891ab806b4e61dccf970dbcf43bd1b709b3c2bd72477c",
+    "src/jaxoom/analysis/liveness.py": "c20e5fc68aa208d989e0846ec0b243198c3970bbd7081f370b8bf38d4fec7e58",
+    "src/jaxoom/analysis/peak.py": "ba6ba4fdd7956c130068942e09ed83917db3dd5cd3e9f87e951802f44814814e",
+    "src/jaxoom/analysis/tensor_size.py": "7e9c185003bae3f1371ea8959e263142bb7d3c27871453d1981139efe936e196",
+    "src/jaxoom/api.py": "7300906fc030385efcb237469e8507513c534bbcdc4bf5be1993507539e672b4",
+    "src/jaxoom/batch_planner.py": "d4a03112bcc0fd34e95ed332837b2ecd0dd92c62406e9f724312e062b54ec283",
+    "src/jaxoom/calibration.py": "2db7237d72d48de56997e782b24d0a284da68ccd295e58a9bde6621076ac3bec",
+    "src/jaxoom/calibration_defaults.py": "eb6a35c56dc183fd96616b6ae3ffcaa6efbe4f26e02d24a5294433d2f861ec21",
+    "src/jaxoom/compiler/__init__.py": "f811b6b7947da2b72df2bbdf4bee9ee78d6838f803e4e4ff2ccc6c6c10499d26",
+    "src/jaxoom/compiler/comparison.py": "a3ab16b473136044dc0ab6c5990f0e09bc4e55c2c0b91d12a238a65b1c858e89",
+    "src/jaxoom/compiler/memory_analysis.py": "b6c6c603801a607b57aa004988cc57e4fc8aa139f5796cec597a48bb1433bf86",
+    "src/jaxoom/device.py": "892bdf8485a5e61754622ad47f236c186644a63a332f2b485634b263c6b11c68",
+    "src/jaxoom/donation.py": "0d80a6d812d37c3f3ebb15834372549f5718d2cc90d04d326ac0bf42d845a7c7",
+    "src/jaxoom/reports/__init__.py": "17dd8d22ca03fbfadce75568a67fba2a63eefaccae9600ed02d067a343abd2b6",
+    "src/jaxoom/reports/console.py": "2a7d46d318c842ecacdb8e582e9fdcf6932f49530ea780d69d0814862beed840",
+    "src/jaxoom/tracing/__init__.py": "dcfb6d9c22460bc881b6b2c9363f584fefcf1cbff3467f10dfbd601b2258f32c",
+    "src/jaxoom/tracing/jaxpr.py": "e00a2f679df5232fd1f4ecc5e9c39dc49f9c3ab3f2767c3eb2696f5473b51f9b",
+    "src/jaxoom/types.py": "5bb0bb9caf20478552d7c6529a13cf327616571030b5d50b3beac3de130c7c2e"
+  },
+  "status": "COMPUTATIONALLY_VERIFIED",
+  "tolerance": 1e-12
+}

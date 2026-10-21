@@ -1,0 +1,9 @@
+{
+  "status": "INFRASTRUCTURE_STARTUP_FAILURE",
+  "gpu_runtime_trials": 0,
+  "public_api_enabled": false,
+  "error": "Wsl/Service/CreateInstance/HCS_E_CONNECTION_TIMEOUT",
+  "observation": "WSL restarted; uptime reset and /tmp CUDA environment was removed before the qualification output directory was created.",
+  "classification": "No target workload outcome; not a model failure or FIT observation.",
+  "repair": "Restore from existing cached wheels in persistent /home/slavov/.venvs/jaxoom-cuda-20261021 with a transient 2 GiB installation memory limit. Keep model, policy, pilots and thresholds unchanged."
+}
