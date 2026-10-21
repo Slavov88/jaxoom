@@ -1,0 +1,36 @@
+{
+  "frozen_v2_sha256": "5b2eeedf9a180af1c79678e94ecf3401b0256b4906e1d8f5180f058d3b354ae3",
+  "junit": {
+    "linux.xml": {
+      "errors": 0,
+      "failures": 0,
+      "sha256": "01b68a5589a64dbd46d2008447b3ea8e563c9609cfb67b391766c6853b9e4e60",
+      "skipped": 0,
+      "tests": 417
+    },
+    "linux_final.xml": {
+      "errors": 0,
+      "failures": 0,
+      "sha256": "01a073d730f972d83a3326f3f1faabad2b0ff80c3c051df8712768e7dc9026ae",
+      "skipped": 0,
+      "tests": 447
+    },
+    "windows.xml": {
+      "errors": 0,
+      "failures": 0,
+      "sha256": "ea27d57472bf2355d5defbdb27e1b70d815d10545c65f468e844a3b9610453b8",
+      "skipped": 0,
+      "tests": 417
+    },
+    "windows_final.xml": {
+      "errors": 0,
+      "failures": 0,
+      "sha256": "117aa3786406f7565e65d11ecefd397780b3cb29ebb0d5b643aa73113ec9d611",
+      "skipped": 0,
+      "tests": 447
+    }
+  },
+  "public_api_enabled": false,
+  "tested_sources_committed_unchanged_as": "9415ce4f390893956c3037303f0ac7eb6a7f0084",
+  "verified": true
+}

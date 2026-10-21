@@ -116,3 +116,14 @@ Current CPU environment is isolated on D: with JAX/jaxlib 0.11.0. C: is nearly
 full; do not install a large GPU stack there. WSL lacks a ROCm runtime. GPU
 execution time is unavailable until the selected backend passes stage 1.
 No runtime or accuracy value may replace `--` in a report before its stage runs.
+
+## Separately frozen timeout diagnosis and measured child sources
+
+The 2026-10-21 follow-up protocol is recorded in
+`research/GPU_TIMEOUT_DIAGNOSTIC_PROTOCOL_2026-10-21.md`. It selects the five
+uncertain historical timeouts for one fixed 600-second diagnostic attempt each,
+with independently measured child source/plan/replay hashes and unchanged
+model/runtime/policy. Results and portable audit instructions are in
+`research/GPU_TIMEOUT_DIAGNOSTICS_2026-10-21.md`. That separate diagnostic stage
+does not retroactively pass this plan's original qualification or enable a
+public API. Historical outcome artifacts and their stop conditions are intact.

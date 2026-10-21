@@ -1,0 +1,174 @@
+{
+  "acquisition_audit_sha256": "1efa8fa559335e600b130b05acac5db4e65214cf76a1ff2a9122d80b49abf5e7",
+  "attempts_per_recipe": 1,
+  "candidates": [
+    {
+      "candidate_id": "HOLDOUT-0012",
+      "expected_features": {
+        "calibrated_upper_over_budget": 2.125582629131192,
+        "config_numeric_count": 4.0,
+        "config_numeric_log_product": 16.46563336728583,
+        "config_numeric_max": 4608.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 1.27459716796875,
+        "structural_peak_over_budget": 1.27459716796875,
+        "top_two_peak_live_over_budget": 1.265625
+      },
+      "expected_probability": 0.7052589449165493,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "spec": {
+        "configuration": {
+          "batch": 2,
+          "head_dim": 96,
+          "heads": 16,
+          "sequence": 4608
+        },
+        "dtype": "float16",
+        "family": "attention",
+        "version": "frozen-v2-workload-1"
+      },
+      "spec_hash": "79d41b9f50e65f75c8b48f17096d2ab1478a53cda2d0254f4335206e742a2a2d",
+      "structural_bytes": 4105764864.0
+    },
+    {
+      "candidate_id": "HOLDOUT-0028",
+      "expected_features": {
+        "calibrated_upper_over_budget": 0.39086036166017896,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 20.912198453282585,
+        "config_numeric_max": 192.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.23437786102294922,
+        "structural_peak_over_budget": 0.23437786102294922,
+        "top_two_peak_live_over_budget": 0.234375
+      },
+      "expected_probability": 0.2629372356095438,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "spec": {
+        "configuration": {
+          "batch": 128,
+          "channels": 8,
+          "height": 192,
+          "out_channels": 32,
+          "width": 192
+        },
+        "dtype": "float32",
+        "family": "convolution",
+        "version": "frozen-v2-workload-1"
+      },
+      "spec_hash": "5d13004b9e2f64b7a454eb0dea165ccfee1113f5343b2f08c20698c421d6c523",
+      "structural_bytes": 754983936.0
+    },
+    {
+      "candidate_id": "HOLDOUT-0029",
+      "expected_features": {
+        "calibrated_upper_over_budget": 0.5211598720439911,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 21.89302770577691,
+        "config_numeric_max": 192.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.3125114440917969,
+        "structural_peak_over_budget": 0.3125114440917969,
+        "top_two_peak_live_over_budget": 0.3125
+      },
+      "expected_probability": 0.29885873257974666,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "spec": {
+        "configuration": {
+          "batch": 128,
+          "channels": 16,
+          "height": 128,
+          "out_channels": 64,
+          "width": 192
+        },
+        "dtype": "float32",
+        "family": "convolution",
+        "version": "frozen-v2-workload-1"
+      },
+      "spec_hash": "5ff28ceceb594b460047ec3d3aae329b690f5fdbd58376995b77eece00ee6851",
+      "structural_bytes": 1006669824.0
+    },
+    {
+      "candidate_id": "HOLDOUT-0031",
+      "expected_features": {
+        "calibrated_upper_over_budget": 1.4070896680783929,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 22.298492813781593,
+        "config_numeric_max": 256.0,
+        "dtype_bytes": 4.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.8437557220458984,
+        "structural_peak_over_budget": 0.8437557220458984,
+        "top_two_peak_live_over_budget": 0.84375
+      },
+      "expected_probability": 0.5684448870661212,
+      "panel": "oom_risk_heldout_predictions_2026-09-13.json",
+      "spec": {
+        "configuration": {
+          "batch": 256,
+          "channels": 8,
+          "height": 192,
+          "out_channels": 64,
+          "width": 192
+        },
+        "dtype": "float32",
+        "family": "convolution",
+        "version": "frozen-v2-workload-1"
+      },
+      "spec_hash": "67e50ae9c1a8d9b599fc898762c2ce6e34880e916ba4d81e390182871f41e59c",
+      "structural_bytes": 2717927424.0
+    },
+    {
+      "candidate_id": "H2-0038",
+      "expected_features": {
+        "calibrated_upper_over_budget": 0.9092838920331915,
+        "config_numeric_count": 5.0,
+        "config_numeric_log_product": 21.646167627932307,
+        "config_numeric_max": 512.0,
+        "dtype_bytes": 2.0,
+        "largest_over_budget": 0.0,
+        "peak_live_over_budget": 0.5452484687169393,
+        "structural_peak_over_budget": 0.5452484687169393,
+        "top_two_peak_live_over_budget": 0.5452473958333334
+      },
+      "expected_probability": 0.36781606697775515,
+      "panel": "oom_risk_heldout2_predictions_2026-09-13.json",
+      "spec": {
+        "configuration": {
+          "batch": 512,
+          "channels": 3,
+          "height": 160,
+          "out_channels": 64,
+          "width": 160
+        },
+        "dtype": "float16",
+        "family": "convolution",
+        "version": "frozen-v2-workload-1"
+      },
+      "spec_hash": "5ea9745fb661409ad4931437221a3b896bb0c7f422c53caa0d4aa22be40c8430",
+      "structural_bytes": 1756368256.0
+    }
+  ],
+  "git_commit": "eaa8c5ebe37106144a03c99390748fad358a88b9",
+  "max_campaign_seconds": 3600,
+  "original_plan_hash": "3660a87699b31f3bc92df1207204e6568071543fd1ae7792ae3515a9054c6dc5",
+  "original_qualification_pass": false,
+  "plan_hash": "5d463f171320967f4480b9d3bc0eb4e7e2acefa2132efca33a9f6a669c920623",
+  "protocol": "restricted-v2-timeout-diagnostics-1",
+  "public_api_enabled": false,
+  "seed": null,
+  "source_sha256": {
+    "experiments/oom_risk_applicability.py": "eb0ff15870a016357aa1aca35d63d46fb41c2394cb969793c94937d5afd2dda5",
+    "experiments/oom_risk_gpu_completion.py": "6e5ee9343d83c4609359fe3f1fedf54da4fa671a5c9c7cdb3e600f5173129e01",
+    "experiments/oom_risk_gpu_continuation.py": "817a4348dd023b8741be4e2ac1eb8ae4ff867aca30da55797d468e48c3893c70",
+    "experiments/oom_risk_gpu_diagnostics.py": "f7ebf44a51d06241e5532706dd158f16b901f6a015bc48544db18db37dc9160d",
+    "experiments/oom_risk_gpu_qualification.py": "3127da19a508b32c64e6a1cb2f17e17d854a40aaba28456fb29627a08e215fad",
+    "experiments/oom_risk_gpu_resume.py": "76d7bd344786efc2020005909fee3acd148075082919d4e60502a980f1ca0b0e",
+    "experiments/oom_risk_workload_replay.py": "7b1542924d5d807ad8ca5397eead410bffd65b3d7e58a78df0d0cecd3231b5d3",
+    "experiments/oom_risk_workload_spec.py": "a4f4a4443eeb75b3b73abd1ac0812ed6134822e528e6c6760c8aa3a1da1b8288"
+  },
+  "timeout_seconds": 600
+}
