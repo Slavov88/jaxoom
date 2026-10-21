@@ -1,0 +1,6 @@
+{
+  "status": "FAILED",
+  "fresh_tracing_and_replay_pass": false,
+  "public_api_enabled": false,
+  "error": "Pilot loader incorrectly required candidate IDs to be unique across independent panels; supplemental H2 IDs overlap primary H2 IDs. No fresh replay completed. Fixed by using (panel, candidate_id)."
+}
