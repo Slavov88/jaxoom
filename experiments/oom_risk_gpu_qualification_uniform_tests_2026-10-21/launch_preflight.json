@@ -1,0 +1,10 @@
+{
+  "fresh_campaign_started": false,
+  "gpu_runtime_trials": 0,
+  "host_free_bytes": 498708480,
+  "min_host_free_bytes": 536870912,
+  "model_sha256": "5b2eeedf9a180af1c79678e94ecf3401b0256b4906e1d8f5180f058d3b354ae3",
+  "observed_at_utc": "2026-10-21T16:33:33.598404+00:00",
+  "public_api_enabled": false,
+  "status": "BLOCKED_HOST_STORAGE"
+}

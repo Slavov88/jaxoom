@@ -2,6 +2,8 @@
 
 ## Current frontier
 
+The fresh uniform 600-second qualification runner and portable auditor are implemented and committed, with 102 new regression tests. Full Windows and Linux CPU suites each passed 549 tests, zero failures/errors/skips, with source-bound JUnit evidence. The new 200-recipe GPU campaign is NOT_RUN: launch preflight measured 475.6 MiB free on C:, below the frozen 512 MiB requirement. Public OOM-risk exports stay disabled. See `research/GPU_UNIFORM_QUALIFICATION_READINESS_2026-10-21.md`; storage/telemetry measurements are timestamped snapshots and need a fresh check before launch.
+
 The five formerly unresolved recipes now have terminal results in a separately frozen 600-second diagnostic stage: 2 execution OOM, 2 compile OOM and 1 FIT. The original 180-second qualification remains incomplete; no historical timeout was relabeled and the public OOM-risk API stays disabled. New children independently measure source/plan/replay hashes before GPU work. Portable persisted audits passed on Windows and Linux, as did all 447 regression tests on each platform. See `research/GPU_TIMEOUT_DIAGNOSTICS_2026-10-21.md`.
 
 Historical NVIDIA acquisition covered all 200 unique primary recipes: 175 FIT, 15 execution OOM, 5 compile OOM and 5 timeouts under its original bound. All 157 LIKELY_FIT recipes fit. One preflight-only telemetry failure remains separate infrastructure evidence (201 launches). These original records are preserved in full; the longer diagnostic results supplement them without upgrading the old qualification.
@@ -54,5 +56,7 @@ Historical NVIDIA acquisition covered all 200 unique primary recipes: 175 FIT, 1
 - The preceding Radeon result remains historical. On 2026-10-21 the user authorized the idle NVIDIA GPU; its qualification STOPPED at HOLDOUT-0012 (attention float16, batch 2, heads 16, sequence 4608, head_dim 96; score 0.7052589449165493). Execution emitted allocation warnings but no terminal result by 180 s. Outcome remains UNKNOWN FIT/OOM; 169 recipes unrun.
 
 ## Next highest-value work
+
+Free host storage, recheck the exact source-bound regression manifest and strict idle environment, then execute the fresh 200-recipe campaign under `research/GPU_UNIFORM_QUALIFICATION_PROTOCOL_2026-10-21.md`. The runner and auditor are ready; CPU tests do not substitute for fresh GPU replay/runtime coverage. Retain public API disablement even if restricted qualification passes, pending the separate release decision.
 
 Keep the public API disabled and preserve the original qualification and separate diagnostics. All five diagnostic outcomes are now terminal, but the old 180-second gate remains incomplete. A fresh qualification/release decision must predeclare a suitable bound and use independently attested children across the intended exact scope; the selective longer diagnostics cannot retroactively qualify the historical campaign. H2-0038 FIT after the old timeout also confirms that allocation warnings are insufficient to classify terminal OOM. Generic callables, dynamic budgets, or AMD support still require separate validation. See `research/GPU_TIMEOUT_DIAGNOSTIC_PROTOCOL_2026-10-21.md` and the diagnostic results report.

@@ -1,0 +1,66 @@
+{
+  "auditor_sha256": "21b6bd4ab74a8e8c331848a06273369bffea8159f8fba582ace471f2aef91427",
+  "code_commit": "c92f91c8878b76a0affb207d681bd1eb65a99c85",
+  "junit": {
+    "linux": {
+      "path": "experiments/oom_risk_gpu_qualification_uniform_tests_2026-10-21/linux.xml",
+      "sha256": "fc91cc6b861d1ebddb298cbeb14158997749ebdf97f82339b7a43de8e38f36cf",
+      "tests": 549
+    },
+    "windows": {
+      "path": "experiments/oom_risk_gpu_qualification_uniform_tests_2026-10-21/windows.xml",
+      "sha256": "75e622f2fb69e6b00eb71f58c75ac9578a605f8b6bb397f783b3bfa875a0d81a",
+      "tests": 549
+    }
+  },
+  "source_sha256": {
+    "experiments/oom_risk_applicability.py": "eb0ff15870a016357aa1aca35d63d46fb41c2394cb969793c94937d5afd2dda5",
+    "experiments/oom_risk_gpu_completion.py": "6e5ee9343d83c4609359fe3f1fedf54da4fa671a5c9c7cdb3e600f5173129e01",
+    "experiments/oom_risk_gpu_continuation.py": "817a4348dd023b8741be4e2ac1eb8ae4ff867aca30da55797d468e48c3893c70",
+    "experiments/oom_risk_gpu_diagnostics.py": "f7ebf44a51d06241e5532706dd158f16b901f6a015bc48544db18db37dc9160d",
+    "experiments/oom_risk_gpu_qualification.py": "3127da19a508b32c64e6a1cb2f17e17d854a40aaba28456fb29627a08e215fad",
+    "experiments/oom_risk_gpu_resume.py": "76d7bd344786efc2020005909fee3acd148075082919d4e60502a980f1ca0b0e",
+    "experiments/oom_risk_gpu_uniform_qualification.py": "6659b4464e33d99ff28d561a219ef8ddd4335c9abcdb9ed7745e75a1e5602b47",
+    "experiments/oom_risk_workload_replay.py": "7b1542924d5d807ad8ca5397eead410bffd65b3d7e58a78df0d0cecd3231b5d3",
+    "experiments/oom_risk_workload_spec.py": "a4f4a4443eeb75b3b73abd1ac0812ed6134822e528e6c6760c8aa3a1da1b8288"
+  },
+  "suite": "full",
+  "test_source_sha256": {
+    "tests/test_allocator_aware_safety_gate.py": "6ffb35a5f03df972a6823131670c23d26c9779e565cfee4fa31a8d7e49757457",
+    "tests/test_allocator_residency.py": "43b3f01f19ef31dbaa858be9b41fbf419bdcbac06780af5e07c0205dd4eb3b77",
+    "tests/test_allocator_residency_campaign.py": "054cd9d48e2b56974515ec03ca4057ab4fc5ca6017bbdbbc9d43d51ddaced04f",
+    "tests/test_batch_planner.py": "5c73913596483f2d5c388e24ff82d6a7eb44eb1ba9bf1448abdc5fd8d9b05c51",
+    "tests/test_calibration.py": "660ec468bd91e1aac76848c237e017cd48f7f2c0daae87e051413b67df528e66",
+    "tests/test_compiler.py": "284872ce3e434076e7221a479bc74b1ab055c919c7d0668567c5f66818f13f82",
+    "tests/test_device.py": "c5104e1eb0254f10cc1f2b9822790e4628216dab33d8c48dc45499c8aafc5efe",
+    "tests/test_donation.py": "d7c525a8cbcfcdba1a20420a982076e03b1cce67ac90f8a17306aae03e4449ad",
+    "tests/test_estimate.py": "273c10aa2d835dc60c888c6f6005d8292a3bd0eaa486d73633de0424ad71d4a3",
+    "tests/test_execution_diagnosis.py": "5f12ef14ba3681e0dd2eee194034b01bbd266c8ac11b2dccf0a06c5fd30fa2c6",
+    "tests/test_liveness.py": "e2d0ce25783dfc5eb262cc40bc0ac72bcc2cb191c5b69f7a4e84e81ed1225386",
+    "tests/test_oom_boundary.py": "5c7d81e1f93b2b7dda0b0efb5414b10eac814c0515fc63e960694a139073612e",
+    "tests/test_oom_risk_applicability.py": "ff4b80f8ff455995773dd66eb4220c80b2c6e369e66aa5a6220a0125dc71de58",
+    "tests/test_oom_risk_expansion_v2.py": "6f17bfedc5293565411d7a3e2142cead3559428f8c3d339266cc3ed8c9858e6e",
+    "tests/test_oom_risk_gpu_completion.py": "2954efae7261527299be574e454252526f20d9369eb4c35f513966bfd248938c",
+    "tests/test_oom_risk_gpu_continuation.py": "530677c30ba161d07c813892c58fd427eac37e75dd04b0263c861a539e8e5199",
+    "tests/test_oom_risk_gpu_diagnostic_audit.py": "9f8971badf940bf13b4907bea6f8d3744d5dc508ea0314a05e50911d5c625380",
+    "tests/test_oom_risk_gpu_diagnostics.py": "542253389866b96779c8e5265df34aa1ff81223ad8677e7012c746ee31bef31a",
+    "tests/test_oom_risk_gpu_qualification.py": "03bc15d7ea7e0541e9a31bb1a6616f5b4463443c31798690be111bb7666df775",
+    "tests/test_oom_risk_gpu_resume.py": "67000f823412f2ed1e8c95cf7810cad2a32a86c7322140173433e16caba6ee05",
+    "tests/test_oom_risk_gpu_uniform_audit.py": "c88fb0dd7a57bdbf2e5af9a440ddfbd8a24d51ddf27c4fd4c00d41b58bf316a1",
+    "tests/test_oom_risk_gpu_uniform_qualification.py": "3f83ab6d1ee8fd6dac890d07b22b985ea081d362b7240ff2e6b7ee6f358643ee",
+    "tests/test_oom_risk_heldout.py": "e0c86e0f4a3a961882be073e210b36907185288ec7ca80c64c22ce4ae64b53b5",
+    "tests/test_oom_risk_heldout2.py": "dc1f9077083141736de7d74fd5125343d69eaf5b23d52191a464e1021f72c0bb",
+    "tests/test_oom_risk_model.py": "92d0e2df629e94e029d545feb48e17c154fa187395e4d25149ef51a8996689c2",
+    "tests/test_oom_risk_production_design.py": "1871d37be0c69abfe75f89d4e96c478fd2a486df342d9b3aac3140e4b84b76c8",
+    "tests/test_oom_risk_radeon_preflight.py": "99616df09764612ef8c014139d581b9e9cee0e050be2daff970fbd5b0514853d",
+    "tests/test_oom_risk_v3.py": "f8a03b04c82fba6a170877eaca1dfb373857dc0af029c35c998a6b18df29f472",
+    "tests/test_oom_risk_workload_spec.py": "612c9efc2b393536a3bb6ad5601c96da29e6b602ca9a0143e34000257be6a26d",
+    "tests/test_planner_boundary_validation.py": "57e27f3dc61000de8dae758d0d4e3e4a30f5f6c86835fd867634350873b84722",
+    "tests/test_t4_allocator_residency.py": "a353c4ff1360e035db322a2fb927387e68ff5a895fd805ec0db93153da756ce3",
+    "tests/test_t4_allocator_residency_refinement.py": "cda34122bbbd329fd0fc28fd1dd4e5044d111e5e00b73d3fe1ea9222862b9f54",
+    "tests/test_t4_allocator_residency_targeting.py": "9d20e8c273122ba900e855049966d431523cd831814c25874624e5678856a12e",
+    "tests/test_t4_long_campaign.py": "051a9440ae2e09c07bbaa1bd0ce16cdb1b4e0d91fcef8982209b6f9e1fe7b010",
+    "tests/test_t4_missing_family.py": "e6aeea41d38c2ee61de6a529b2276ea1bde76e721c4992d9b7ccdb4d969a7209",
+    "tests/test_tensor_size.py": "1e1f6dc3ee4f814c300239b564d0b4b2081db9498b370eceb195f98d21f402d9"
+  }
+}
