@@ -127,3 +127,13 @@ model/runtime/policy. Results and portable audit instructions are in
 `research/GPU_TIMEOUT_DIAGNOSTICS_2026-10-21.md`. That separate diagnostic stage
 does not retroactively pass this plan's original qualification or enable a
 public API. Historical outcome artifacts and their stop conditions are intact.
+
+## Fresh uniform qualification
+
+The next separately recorded campaign is specified in
+`research/GPU_UNIFORM_QUALIFICATION_PROTOCOL_2026-10-21.md`: original 200 recipes,
+original 18 pilots, a uniform 600-second child limit, measured child sources,
+fresh 224-row CUDA replay, source-bound Windows/Linux regression evidence and
+independent persisted audit. No prior runtime result satisfies new coverage.
+Public exports remain disabled even on a restricted qualification pass;
+historical campaigns retain their own outcomes.
