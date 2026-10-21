@@ -2,4 +2,5 @@
 # checkout's core.autocrlf setting rewrite frozen models, evidence, or sources.
 experiments/oom_risk_* -text
 experiments/oom_risk_gpu_qualification_*/** -text
+experiments/oom_risk_gpu_diagnostics_*/** -text
 src/jaxoom/** -text
