@@ -1,0 +1,127 @@
+E1107 21:36:40.575548   14422 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (8053063680) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.575558   14421 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (8053063680) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.624498   14420 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (4026531840) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.624503   14423 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (4026531840) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:36:40.633887   14422 bfc_allocator.cc:363] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.77GiB from the lower end with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+W1107 21:36:40.713527   14420 bfc_allocator.cc:363] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.89GiB from the lower end with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+E1107 21:36:40.764620   14381 config_assigner.cc:478] Could not get config for HLO: %wrapped_transpose.2 = f32[1024,192,160,32]{3,2,1,0} fusion(%get-tuple-element.1.0), kind=kInput, calls=
+(param_0.2: f32[1024,32,192,160]) -> f32[1024,192,160,32] {
+  %param_0.2 = f32[1024,32,192,160]{3,2,1,0} parameter(0)
+  ROOT %transpose.2.1 = f32[1024,192,160,32]{3,2,1,0} transpose(%param_0.2), dimensions={0,2,3,1}, metadata={op_name="jit(fn)/conv_general_dilated" stack_frame_id=7}
+}, metadata={op_name="jit(fn)/conv_general_dilated" stack_frame_id=7}. Status: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 3.77GiB. [tf-allocator-allocation-error='']
+=== Source Location Trace: === 
+external/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:269
+external/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:192
+external/xla/xla/stream_executor/gpu/redzone_allocator.cc:93
+external/xla/xla/stream_executor/gpu/redzone_allocator.cc:262
+external/xla/xla/service/gpu/autotuning/redzone_buffers.cc:107
+external/xla/xla/service/gpu/autotuning/redzone_buffers.cc:89
+external/xla/xla/backends/gpu/autotuner/gpu_profiler.cc:269
+external/xla/xla/backends/autotuner/config_runner.cc:69
+external/xla/xla/backends/autotuner/config_assigner.cc:417
+
+E1107 21:36:40.764704   14381 config_assigner.cc:478] Could not get config for HLO: %wrapped_transpose = f32[1024,16,192,160]{3,2,1,0} fusion(%x.1), kind=kInput, calls=
+(param_0: f32[1024,192,160,16]) -> f32[1024,16,192,160] {
+  %param_0 = f32[1024,192,160,16]{3,2,1,0} parameter(0)
+  ROOT %transpose.4 = f32[1024,16,192,160]{3,2,1,0} transpose(%param_0), dimensions={0,3,1,2}, metadata={op_name="x"}
+}, metadata={op_name="x"}. Status: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.89GiB. [tf-allocator-allocation-error='']
+=== Source Location Trace: === 
+external/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:269
+external/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:192
+external/xla/xla/stream_executor/gpu/redzone_allocator.cc:93
+external/xla/xla/stream_executor/gpu/redzone_allocator.cc:262
+external/xla/xla/service/gpu/autotuning/redzone_buffers.cc:107
+external/xla/xla/service/gpu/autotuning/redzone_buffers.cc:89
+external/xla/xla/backends/gpu/autotuner/gpu_profiler.cc:269
+external/xla/xla/backends/autotuner/config_runner.cc:69
+external/xla/xla/backends/autotuner/config_assigner.cc:417
+
+E1107 21:36:40.764925   14419 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.764977   14416 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.764990   14411 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.765002   14412 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.764933   14422 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.765032   14413 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.765074   14417 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.764929   14423 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.764950   14414 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:36:40.765346   14419 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 9.38GiB (10066348080 bytes), down from 9.38GiB (10066348080 bytes) originally
+W1107 21:36:40.765430   14422 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 9.38GiB (10066348080 bytes), down from 9.38GiB (10066348080 bytes) originally
+W1107 21:36:40.765460   14412 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 9.38GiB (10066348080 bytes), down from 9.38GiB (10066348080 bytes) originally
+W1107 21:36:40.765494   14423 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 3.75GiB (4026716320 bytes), down from 3.75GiB (4026716320 bytes) originally
+E1107 21:36:40.765486   14409 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.765030   14420 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:36:40.765597   14417 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 3.75GiB (4026716320 bytes), down from 3.75GiB (4026716320 bytes) originally
+E1107 21:36:40.764926   14418 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.765096   14408 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.764937   14415 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:36:40.765424   14411 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 9.38GiB (10066348080 bytes), down from 9.38GiB (10066348080 bytes) originally
+E1107 21:36:40.765028   14421 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:36:40.765428   14416 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 9.38GiB (10066348080 bytes), down from 9.38GiB (10066348080 bytes) originally
+W1107 21:36:40.765454   14413 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 9.38GiB (10066348080 bytes), down from 9.38GiB (10066348080 bytes) originally
+W1107 21:36:40.766154   14418 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 3.75GiB (4026583200 bytes), down from 3.75GiB (4026583200 bytes) originally
+W1107 21:36:40.766201   14415 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 3.75GiB (4026532448 bytes), down from 3.75GiB (4026532448 bytes) originally
+W1107 21:36:40.765661   14414 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 3.75GiB (4026716320 bytes), down from 3.75GiB (4026716320 bytes) originally
+W1107 21:36:40.765870   14409 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 5.62GiB (6039816240 bytes), down from 5.62GiB (6039816240 bytes) originally
+W1107 21:36:40.766412   14421 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 9.38GiB (10066348080 bytes), down from 9.38GiB (10066348080 bytes) originally
+W1107 21:36:40.766082   14408 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 5.62GiB (6039816240 bytes), down from 5.62GiB (6039816240 bytes) originally
+E1107 21:36:40.765456   14410 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.766589   14420 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:36:40.766898   14420 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 5.62GiB (6039816240 bytes), down from 5.62GiB (6039816240 bytes) originally
+W1107 21:36:40.766897   14410 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 9.38GiB (10066348080 bytes), down from 9.38GiB (10066348080 bytes) originally
+E1107 21:36:40.801031   14422 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:36:40.801820   14422 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 9.38GiB (10066348080 bytes), down from 9.38GiB (10066348080 bytes) originally
+E1107 21:36:40.802358   14423 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:36:40.802829   14423 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 9.38GiB (10066348080 bytes), down from 9.38GiB (10066348080 bytes) originally
+E1107 21:36:40.805208   14419 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:36:40.805536   14419 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 5.62GiB (6039816240 bytes), down from 5.62GiB (6039816240 bytes) originally
+E1107 21:36:40.807519   14411 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:36:40.807846   14411 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 5.62GiB (6039816240 bytes), down from 5.62GiB (6039816240 bytes) originally
+E1107 21:36:40.808107   14412 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.808958   14412 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:36:40.809273   14412 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 5.62GiB (6039816240 bytes), down from 5.62GiB (6039816240 bytes) originally
+E1107 21:36:40.810293   14416 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.810494   14420 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.810522   14421 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.810632   14418 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.810870   14414 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:36:40.810882   14421 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 3.75GiB (4026716320 bytes), down from 3.75GiB (4026716320 bytes) originally
+E1107 21:36:40.810899   14409 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:36:40.810881   14420 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 9.38GiB (10066348080 bytes), down from 9.38GiB (10066348080 bytes) originally
+W1107 21:36:40.810985   14418 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 16.88GiB (18123344079 bytes), down from 16.88GiB (18123344079 bytes) originally
+E1107 21:36:40.811066   14417 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:36:40.811158   14409 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 9.38GiB (10066348080 bytes), down from 9.38GiB (10066348080 bytes) originally
+W1107 21:36:40.811160   14414 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 9.38GiB (10066348080 bytes), down from 9.38GiB (10066348080 bytes) originally
+E1107 21:36:40.811242   14413 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.811255   14410 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.811244   14408 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:36:40.811365   14416 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 9.38GiB (10066348080 bytes), down from 9.38GiB (10066348080 bytes) originally
+W1107 21:36:40.811454   14417 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 20.63GiB (22147909839 bytes), down from 20.63GiB (22147909839 bytes) originally
+W1107 21:36:40.811579   14408 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 19.88GiB (21340637216 bytes), down from 19.88GiB (21340637216 bytes) originally
+W1107 21:36:40.811582   14413 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 16.88GiB (18121377999 bytes), down from 16.88GiB (18121377999 bytes) originally
+W1107 21:36:40.811606   14410 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 9.38GiB (10070280399 bytes), down from 9.38GiB (10070280399 bytes) originally
+E1107 21:36:40.811937   14415 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:36:40.812358   14415 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 9.38GiB (10066348080 bytes), down from 9.38GiB (10066348080 bytes) originally
+E1107 21:36:40.845593   14411 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.845593   14423 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:36:40.845593   14412 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:36:40.845980   14411 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 3.75GiB (4026716320 bytes), down from 3.75GiB (4026716320 bytes) originally
+E1107 21:36:40.846014   14415 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:36:40.846039   14412 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 20.63GiB (22147909839 bytes), down from 20.63GiB (22147909839 bytes) originally
+W1107 21:36:40.845980   14423 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 5.62GiB (6039816240 bytes), down from 5.62GiB (6039816240 bytes) originally
+E1107 21:36:40.846412   14419 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (6039816208) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:36:40.846505   14415 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 4.15GiB (4456579104 bytes), down from 4.15GiB (4456579104 bytes) originally
+W1107 21:36:40.846850   14419 hlo_rematerialization.cc:3282] Can't reduce memory use below 3.75GiB (4026531856 bytes) by rematerialization; only reduced to 9.38GiB (10066348080 bytes), down from 9.38GiB (10066348080 bytes) originally
+W1107 21:36:40.867083   14412 bfc_allocator.cc:363] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.89GiB from the lower end with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+E1107 21:36:40.867821   14381 config_assigner.cc:478] Could not get config for HLO: %cudnn-conv.1 = (f32[1024,32,192,160]{3,2,1,0}, u8[0]{0}) custom-call(%wrapped_transpose, %wrapped_transpose.1), window={size=3x3 pad=1_1x1_1}, dim_labels=bf01_oi01->bf01, custom_call_target="__cudnn$convForward", metadata={op_name="jit(fn)/conv_general_dilated" stack_frame_id=7}, backend_config={"operation_queue_id":"0","cudnn_conv_backend_config":{"activation_mode":"kNone","conv_result_scale":1,"side_input_scale":0,"leakyrelu_alpha":0},"force_earliest_schedule":false,"reification_cost":[],"device_type":"DEVICE_TYPE_INVALID"}. Status: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 1.89GiB. [tf-allocator-allocation-error='']
+=== Source Location Trace: === 
+external/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:269
+external/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:192
+external/xla/xla/stream_executor/gpu/redzone_allocator.cc:93
+external/xla/xla/stream_executor/gpu/redzone_allocator.cc:262
+external/xla/xla/service/gpu/autotuning/redzone_buffers.cc:107
+external/xla/xla/service/gpu/autotuning/redzone_buffers.cc:89
+external/xla/xla/backends/gpu/autotuner/gpu_profiler.cc:269
+external/xla/xla/backends/autotuner/config_runner.cc:69
+external/xla/xla/backends/autotuner/config_assigner.cc:417
+

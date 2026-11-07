@@ -1,0 +1,397 @@
+E1107 21:11:26.323022    5167 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (16106127360) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:11:26.323390    5168 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (16106127360) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.412052    5167 bfc_allocator.cc:363] Allocator (GPU_0_bfc) ran out of memory trying to allocate 7.52GiB from the lower end with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+E1107 21:11:26.473080    5167 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:11:26.473106    5162 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:11:26.473127    5166 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:11:26.473208    5169 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:11:26.473080    5168 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:11:26.473347    5157 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:11:26.473217    5165 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:11:26.473434    5155 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:11:26.473460    5160 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:11:26.473497    5159 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:11:26.473356    5161 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.473619    5166 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 7.50GiB (8053248160 bytes), down from 7.50GiB (8053248160 bytes) originally
+E1107 21:11:26.473382    5164 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:11:26.473686    5158 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.473785    5155 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 8.44GiB (9059715120 bytes), down from 8.44GiB (9059715120 bytes) originally
+W1107 21:11:26.473494    5167 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 7.50GiB (8053248160 bytes), down from 7.50GiB (8053248160 bytes) originally
+W1107 21:11:26.473922    5161 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 8.44GiB (9059715120 bytes), down from 8.44GiB (9059715120 bytes) originally
+W1107 21:11:26.473971    5157 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 15.94GiB (17112778800 bytes), down from 15.94GiB (17112778800 bytes) originally
+W1107 21:11:26.474024    5159 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 7.50GiB (8053064000 bytes), down from 7.50GiB (8053064000 bytes) originally
+W1107 21:11:26.473725    5168 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 7.50GiB (8053248160 bytes), down from 7.50GiB (8053248160 bytes) originally
+W1107 21:11:26.474155    5160 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 7.50GiB (8053248160 bytes), down from 7.50GiB (8053248160 bytes) originally
+W1107 21:11:26.473804    5165 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 7.50GiB (8053115168 bytes), down from 7.50GiB (8053115168 bytes) originally
+W1107 21:11:26.473829    5169 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 7.50GiB (8053248160 bytes), down from 7.50GiB (8053248160 bytes) originally
+E1107 21:11:26.473080    5163 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.474452    5158 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 15.94GiB (17112778800 bytes), down from 15.94GiB (17112778800 bytes) originally
+E1107 21:11:26.473235    5156 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.474165    5164 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 8.44GiB (9059715120 bytes), down from 8.44GiB (9059715120 bytes) originally
+E1107 21:11:26.473480    5154 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.474827    5163 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 8.44GiB (9059715120 bytes), down from 8.44GiB (9059715120 bytes) originally
+W1107 21:11:26.474965    5154 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 15.94GiB (17112778800 bytes), down from 15.94GiB (17112778800 bytes) originally
+W1107 21:11:26.475635    5156 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 8.44GiB (9059715120 bytes), down from 8.44GiB (9059715120 bytes) originally
+E1107 21:11:26.476217    5162 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.477067    5162 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 15.94GiB (17112778800 bytes), down from 15.94GiB (17112778800 bytes) originally
+E1107 21:11:26.513146    5169 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.513599    5169 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 15.94GiB (17112778800 bytes), down from 15.94GiB (17112778800 bytes) originally
+E1107 21:11:26.516631    5159 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:11:26.516631    5167 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.517113    5159 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 15.94GiB (17112778800 bytes), down from 15.94GiB (17112778800 bytes) originally
+W1107 21:11:26.517112    5167 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 15.94GiB (17112778800 bytes), down from 15.94GiB (17112778800 bytes) originally
+E1107 21:11:26.519071    5166 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:11:26.519065    5163 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.519483    5166 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 15.94GiB (17112778800 bytes), down from 15.94GiB (17112778800 bytes) originally
+E1107 21:11:26.519830    5168 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:11:26.520353    5163 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.520450    5168 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 23.44GiB (25167808719 bytes), down from 23.44GiB (25167808719 bytes) originally
+W1107 21:11:26.520798    5163 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 23.44GiB (25169774799 bytes), down from 23.44GiB (25169774799 bytes) originally
+E1107 21:11:26.522064    5158 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:11:26.522064    5156 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.522496    5156 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 15.94GiB (17112778800 bytes), down from 15.94GiB (17112778800 bytes) originally
+W1107 21:11:26.522497    5158 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 39.75GiB (42681255968 bytes), down from 39.75GiB (42681255968 bytes) originally
+E1107 21:11:26.523725    5155 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.524184    5155 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 15.94GiB (17112778800 bytes), down from 15.94GiB (17112778800 bytes) originally
+E1107 21:11:26.526606    5162 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:11:26.526606    5165 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.527077    5162 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 15.94GiB (17112778800 bytes), down from 15.94GiB (17112778800 bytes) originally
+W1107 21:11:26.527076    5165 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 23.44GiB (25167808719 bytes), down from 23.44GiB (25167808719 bytes) originally
+E1107 21:11:26.528331    5154 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:11:26.528330    5160 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.528757    5154 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 15.94GiB (17112778800 bytes), down from 15.94GiB (17112778800 bytes) originally
+E1107 21:11:26.528756    5157 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.528904    5160 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 8.10GiB (8697020448 bytes), down from 8.10GiB (8697020448 bytes) originally
+E1107 21:11:26.528757    5161 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.529261    5157 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 15.94GiB (17112778800 bytes), down from 15.94GiB (17112778800 bytes) originally
+W1107 21:11:26.529260    5161 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 15.94GiB (17112778800 bytes), down from 15.94GiB (17112778800 bytes) originally
+E1107 21:11:26.546525    5127 config_assigner.cc:478] Could not get config for HLO: %wrapped_transpose.2 = f32[1024,192,160,64]{3,2,1,0} fusion(%get-tuple-element.1.0), kind=kInput, calls=
+(param_0.2: f32[1024,64,192,160]) -> f32[1024,192,160,64] {
+  %param_0.2 = f32[1024,64,192,160]{3,2,1,0} parameter(0)
+  ROOT %transpose.2.1 = f32[1024,192,160,64]{3,2,1,0} transpose(%param_0.2), dimensions={0,2,3,1}, metadata={op_name="jit(fn)/conv_general_dilated" stack_frame_id=7}
+}, metadata={op_name="jit(fn)/conv_general_dilated" stack_frame_id=7}. Status: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 7.52GiB. [tf-allocator-allocation-error='']
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:269
+external/xla/xla/stream_executor/integrations/tf_allocator_adapter.cc:192
+external/xla/xla/stream_executor/gpu/redzone_allocator.cc:93
+external/xla/xla/stream_executor/gpu/redzone_allocator.cc:262
+external/xla/xla/service/gpu/autotuning/redzone_buffers.cc:107
+external/xla/xla/service/gpu/autotuning/redzone_buffers.cc:89
+external/xla/xla/backends/gpu/autotuner/gpu_profiler.cc:269
+external/xla/xla/backends/autotuner/config_runner.cc:69
+external/xla/xla/backends/autotuner/config_assigner.cc:417
+
+E1107 21:11:26.546918    5167 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.547385    5167 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 15.94GiB (17112778800 bytes), down from 15.94GiB (17112778800 bytes) originally
+E1107 21:11:26.549754    5166 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.550107    5166 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 15.94GiB (17112778800 bytes), down from 15.94GiB (17112778800 bytes) originally
+E1107 21:11:26.551509    5156 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.551889    5156 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 15.94GiB (17120643279 bytes), down from 15.94GiB (17120643279 bytes) originally
+E1107 21:11:26.552972    5169 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+E1107 21:11:26.553435    5168 gpu_hlo_schedule.cc:969] The byte size of input/output arguments (9059715088) exceeds the base limit (3435554406). This indicates an error in the calculation!
+W1107 21:11:26.553470    5169 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 8.44GiB (9059715120 bytes), down from 8.44GiB (9059715120 bytes) originally
+W1107 21:11:26.553763    5168 hlo_rematerialization.cc:3282] Can't reduce memory use below 7.50GiB (8053063696 bytes) by rematerialization; only reduced to 23.44GiB (25167808719 bytes), down from 23.44GiB (25167808719 bytes) originally
+W1107 21:11:36.638491    5168 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 7.50GiB (rounded to 8053063680) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1107 21:11:36.638676    5168 bfc_allocator.cc:601] ********************************x***********************************________________________________
+W1107 21:11:46.639734    5168 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 7.50GiB (rounded to 8053063680) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1107 21:11:46.639869    5168 bfc_allocator.cc:601] ********************************x***********************************________________________________
+E1107 21:11:46.640128    5127 config_assigner.cc:478] Could not get config for HLO: %cudnn-conv.1 = (f32[1024,64,192,160]{3,2,1,0}, u8[0]{0}) custom-call(%wrapped_transpose, %wrapped_transpose.1), window={size=3x3 pad=1_1x1_1}, dim_labels=bf01_oi01->bf01, custom_call_target="__cudnn$convForward", metadata={op_name="jit(fn)/conv_general_dilated" stack_frame_id=7}, backend_config={"operation_queue_id":"0","cudnn_conv_backend_config":{"activation_mode":"kNone","conv_result_scale":1,"side_input_scale":0,"leakyrelu_alpha":0},"force_earliest_schedule":false,"reification_cost":[],"device_type":"DEVICE_TYPE_INVALID"}. Status: NOT_FOUND: All configs failed during profiling.
+Failures (38):
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 7.50GiB. [tf-allocator-allocation-error='']
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: [0] Failed to load in-memory CUBIN (compiled for a different GPU?).: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+EXECUTION FAILED: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 7.50GiB. [tf-allocator-allocation-error='']
+=== Source Location Trace: ===
+external/xla/xla/backends/autotuner/config_selector.cc:55
+external/xla/xla/backends/autotuner/config_assigner.cc:426
+
+E1107 21:11:46.640361    5127 config_assigner.cc:478] Could not get config for HLO: %wrapped_transpose.1 = f32[64,8,3,3]{3,2,1,0} fusion(%kernel.1), kind=kLoop, calls=
+(param_0.1: f32[3,3,8,64]) -> f32[64,8,3,3] {
+  %param_0.1 = f32[3,3,8,64]{3,2,1,0} parameter(0)
+  ROOT %transpose.1.1 = f32[64,8,3,3]{3,2,1,0} transpose(%param_0.1), dimensions={3,2,0,1}, metadata={op_name="kernel"}
+}, metadata={op_name="kernel"}. Status: RESOURCE_EXHAUSTED: Failed to enqueue async memset operation: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+external/xla/xla/stream_executor/gpu/redzone_allocator.cc:120
+external/xla/xla/stream_executor/gpu/redzone_allocator.cc:262
+external/xla/xla/service/gpu/autotuning/redzone_buffers.cc:107
+external/xla/xla/service/gpu/autotuning/redzone_buffers.cc:89
+external/xla/xla/backends/gpu/autotuner/gpu_profiler.cc:269
+external/xla/xla/backends/autotuner/config_runner.cc:69
+external/xla/xla/backends/autotuner/config_assigner.cc:417
+
+E1107 21:11:46.640385    5127 config_assigner.cc:478] Could not get config for HLO: %wrapped_transpose = f32[1024,8,192,160]{3,2,1,0} fusion(%x.1), kind=kInput, calls=
+(param_0: f32[1024,192,160,8]) -> f32[1024,8,192,160] {
+  %param_0 = f32[1024,192,160,8]{3,2,1,0} parameter(0)
+  ROOT %transpose.4 = f32[1024,8,192,160]{3,2,1,0} transpose(%param_0), dimensions={0,3,1,2}, metadata={op_name="x"}
+}, metadata={op_name="x"}. Status: RESOURCE_EXHAUSTED: Failed to enqueue async memset operation: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+external/xla/xla/stream_executor/gpu/redzone_allocator.cc:120
+external/xla/xla/stream_executor/gpu/redzone_allocator.cc:262
+external/xla/xla/service/gpu/autotuning/redzone_buffers.cc:107
+external/xla/xla/service/gpu/autotuning/redzone_buffers.cc:89
+external/xla/xla/backends/gpu/autotuner/gpu_profiler.cc:269
+external/xla/xla/backends/autotuner/config_runner.cc:69
+external/xla/xla/backends/autotuner/config_assigner.cc:417
+
+E1107 21:11:46.640566    5127 cuda_executor.cc:1393] failed to query device memory info: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.640637    5127 se_gpu_pjrt_client.cc:1183] Failed to query available memory for GPU 0
+E1107 21:11:46.720026    5127 cuda_executor.cc:312] [0] failed to unload module 0x29edc3a0; leaking: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.720619    5127 cuda_executor.cc:312] [0] failed to unload module 0x29ee6600; leaking: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.750625    5127 local_device_state.cc:164] Error when closing device: RESOURCE_EXHAUSTED: Could not synchronize CUDA stream: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751052    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751103    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751119    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751126    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751131    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751136    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751141    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751144    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751148    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751153    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751186    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751196    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751203    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751210    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751214    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751218    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751249    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751259    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751265    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751299    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751309    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751316    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751320    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751324    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751328    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751332    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751335    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751340    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751343    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751347    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751350    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751353    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751357    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751361    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751364    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751368    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751372    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751375    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751379    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751383    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751387    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751391    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751395    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751398    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751401    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751406    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751409    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751413    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751419    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751424    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751428    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751432    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751439    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751444    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751449    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751452    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751456    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751460    5127 cuda_stream.cc:319] stream not idle on destroy: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751467    5127 cuda_stream.cc:324] failed to destroy CUDA stream for executor 0x7b54840014c0: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.751471    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751767    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751807    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751812    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751815    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751818    5127 cuda_event.cc:50] Error destroying CUDA event: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+E1107 21:11:46.751831    5127 cuda_device_allocator.cc:302] [0] Failed to synchronize before device memory deallocation at 0x700000000: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.753252    5127 cuda_device_allocator.cc:302] [0] Failed to synchronize before device memory deallocation at 0x702000000: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.754489    5127 cuda_device_allocator.cc:302] [0] Failed to synchronize before device memory deallocation at 0x742000000: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.757040    5127 cuda_device_allocator.cc:302] [0] Failed to synchronize before device memory deallocation at 0x782000000: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+
+E1107 21:11:46.775216    5127 cuda_host_allocator.cc:107] [0] Failed to free host memory at 0x204e00000: RESOURCE_EXHAUSTED: : CUDA_ERROR_OUT_OF_MEMORY: out of memory
+=== Source Location Trace: ===
+external/xla/xla/stream_executor/cuda/cuda_status.cc:45
+

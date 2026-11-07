@@ -1,0 +1,15 @@
+{
+  "host_free_bytes": 13754425344,
+  "idle": {
+    "compute_process_count": 0,
+    "device_kind": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "driver_version": "566.07",
+    "free_memory_bytes": 4156555264,
+    "observed_at_utc": "2026-11-07T19:14:18.013644+00:00",
+    "physical_memory_bytes": 4294967296,
+    "raw_gpu": "NVIDIA GeForce RTX 3050 Laptop GPU, 566.07, 4096, 0, 3964, 0\n",
+    "raw_processes": "",
+    "used_memory_bytes": 0,
+    "utilization_percent": 0
+  }
+}

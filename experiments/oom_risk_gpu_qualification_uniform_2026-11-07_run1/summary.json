@@ -1,0 +1,21 @@
+{
+  "attempted": 200,
+  "coverage_complete": true,
+  "false_safe_execution_ooms": 0,
+  "final_checks_pass": true,
+  "historical_qualification_pass": false,
+  "likely_fit_count": 157,
+  "likely_fit_failures": 0,
+  "not_run": 0,
+  "outcomes": {
+    "COMPILE_OOM": 7,
+    "EXECUTION_OOM": 17,
+    "FIT": 176
+  },
+  "pilot_count": 18,
+  "pilots_fit": 18,
+  "public_api_enabled": false,
+  "runtime_checks_pass": true,
+  "status": "GPU_UNIFORM_RUNTIME_PASS",
+  "stop_reason": null
+}
