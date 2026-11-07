@@ -1,0 +1,117 @@
+W1108 00:46:29.531861    4941 hlo_rematerialization.cc:3282] Can't reduce memory use below 2.90GiB (3112746721 bytes) by rematerialization; only reduced to 4.78GiB (5133864992 bytes), down from 4.78GiB (5133864992 bytes) originally
+W1108 00:46:39.447022    4938 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:46:39.447193    4938 bfc_allocator.cc:601] ********xxx_________*******************************_________*******************************_________
+W1108 00:46:50.308011    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.69GiB (rounded to 1812173568) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:46:50.308211    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:47:00.309385    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:47:00.309525    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:47:10.310890    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:47:10.311090    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:47:20.312341    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:47:20.312481    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:47:30.313774    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:47:30.313914    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:47:40.315302    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:47:40.315445    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:47:50.316695    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:47:50.316835    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:48:00.318020    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:48:00.318160    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:48:10.319126    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:48:10.319266    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:48:20.320466    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:48:20.320595    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:48:30.321841    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:48:30.321952    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:48:40.323328    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:48:40.323466    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:48:50.325076    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:48:50.325218    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:49:00.326488    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:49:00.326633    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:49:10.328032    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:49:10.328176    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:49:20.329557    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:49:20.329701    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:49:30.330933    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:49:30.331127    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:49:40.332526    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:49:40.332668    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:49:50.333996    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:49:50.334135    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:50:00.335363    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:50:00.335502    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:50:10.336701    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:50:10.336841    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:50:20.338333    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:50:20.338474    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:50:30.339712    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:50:30.339854    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:50:40.341271    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:50:40.341407    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:50:50.342738    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:50:50.342880    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:51:00.344190    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:51:00.344332    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:51:10.345530    4928 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.00MiB (rounded to 805306368) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:51:10.345670    4928 bfc_allocator.cc:601] ********xx*********x*******************************_________*******************************_________
+W1108 00:51:20.463487    4899 bfc_allocator.cc:590] Allocator (GPU_0_bfc) ran out of memory trying to allocate 768.13MiB (rounded to 805446144) from the lower end requested by op 
+If this is caused by memory fragmentation, the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' may improve the situation.
+Current allocation summary follows.
+W1108 00:51:20.463628    4899 bfc_allocator.cc:601] ********xxx_________*******************************_________*******************************_________
