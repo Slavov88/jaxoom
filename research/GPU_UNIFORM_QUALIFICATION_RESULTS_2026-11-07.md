@@ -36,3 +36,13 @@ Windows audit used Python 3.13 with jax 0.6.2 (audit reads persisted evidence on
   one observation. No wall-clock tail guarantee; the 600 s bound is an observed
   protocol bound.
 - Release/export is a separate decision under `RELEASE_DECISION_CRITERIA_2026-11-07.md`.
+
+## Reproduction (run 2, 2026-11-08)
+
+COMPUTATIONALLY VERIFIED. A second fresh campaign under the same frozen protocol
+(`experiments/oom_risk_gpu_qualification_uniform_2026-11-08_run2/`, same commit
+lineage and environment) returned the same summary (200/200, 18/18 pilots,
+157/157 LIKELY_FIT FIT, 176 FIT / 17 execution OOM / 7 compile OOM, zero
+timeouts), and both Windows and Linux audits passed. All 200 per-recipe outcomes
+are identical to run 1 (0 differences). Same machine, same population, so this
+shows run-to-run stability here, not independence or new accuracy evidence.

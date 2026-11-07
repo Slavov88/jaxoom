@@ -2,6 +2,8 @@
 
 ## Current frontier
 
+2026-11-08 (COMPUTATIONALLY VERIFIED): run 2 reproduced run 1 exactly (200/200 per-recipe outcomes identical, both audits pass). Batch-3 fresh panel (180 unseen recipes, 125 LIKELY_FIT) is frozen, with predictions committed before any runtime result; runtime pending. Draft protocol: `research/FRESH_PANEL_PROTOCOL_DRAFT_2026-11-08.md`.
+
 2026-11-07 RESULT (COMPUTATIONALLY VERIFIED): the fresh uniform 600 s campaign completed 200/200 recipes, 18/18 pilots FIT, 157/157 LIKELY_FIT recipes FIT, zero false-safe OOMs, zero timeouts (176 FIT, 17 execution OOM, 7 compile OOM). Independent audits passed on Windows and Linux. Single run, same population as before; public API stays disabled. See `research/GPU_UNIFORM_QUALIFICATION_RESULTS_2026-11-07.md`. Next: reproduce once, then the separate release review.
 
 2026-11-07 preflight (OBSERVED snapshot): the storage blocker has cleared (C: 13.98 GB free vs 512 MiB required), the RTX 3050 is idle, the frozen validation manifest still validates against current sources, and WSL starts. The 200-recipe campaign is still NOT_RUN, with zero GPU trials. Residual risk: the WSL swap file is on D:, which has about 3 MB free; the first WSL start failed on swap creation and a retry succeeded, so free D: space or move the swap before a 3-hour run. Release criteria were predeclared in `research/RELEASE_DECISION_CRITERIA_2026-11-07.md`. The new preflight lives outside the source-hashed set (`experiments/oom_risk_gpu_uniform_launch_preflight.py`).
