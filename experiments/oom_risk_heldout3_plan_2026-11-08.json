@@ -1,0 +1,3487 @@
+{
+  "compile_filter_used": false,
+  "date": "2026-11-08",
+  "generator": "oom_risk_heldout3_validation.py",
+  "generator_sha256": "f09b666fa8aeb8630260e6a05a49d2b43628f7b274186c7cd198749c31291055",
+  "outcomes_excluded": true,
+  "overlap_audit": {
+    "near_duplicate_definition": "same family and dtype with all but one configuration scalar equal",
+    "prior_exact_fingerprint_overlaps": 0,
+    "prior_group_overlaps": 0,
+    "prior_rows_checked": 977,
+    "vs_prior_near_duplicate_pairs": 138,
+    "within_panel_near_duplicate_pairs": 35
+  },
+  "panel": "BATCH3_CONFIRMATORY",
+  "population_size": 5710,
+  "sampling_quotas": {
+    "attention": {
+      "large": 10,
+      "medium": 10,
+      "near_device": 14,
+      "small": 10
+    },
+    "autodiff": {
+      "large": 4,
+      "medium": 5,
+      "near_device": 3,
+      "small": 4
+    },
+    "convolution": {
+      "large": 8,
+      "medium": 8,
+      "near_device": 10,
+      "small": 8
+    },
+    "matmul": {
+      "large": 3,
+      "medium": 3,
+      "near_device": 2,
+      "small": 3
+    },
+    "mlp": {
+      "large": 4,
+      "medium": 4,
+      "near_device": 3,
+      "small": 4
+    },
+    "reduction": {
+      "large": 3,
+      "medium": 3,
+      "near_device": 2,
+      "small": 3
+    },
+    "scan": {
+      "large": 3,
+      "medium": 4,
+      "near_device": 2,
+      "small": 3
+    },
+    "training": {
+      "large": 4,
+      "medium": 4,
+      "near_device": 3,
+      "small": 4
+    },
+    "transformer": {
+      "large": 6,
+      "medium": 6,
+      "near_device": 4,
+      "small": 6
+    }
+  },
+  "seed": 20261108,
+  "selected_candidates": [
+    {
+      "candidate_id": "H3-0000",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 768
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "54254f57720ca680",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "small"
+      },
+      "size_proxy": 9437184,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":64,\"heads\":8,\"sequence\":768}|float16"
+    },
+    {
+      "candidate_id": "H3-0001",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 512
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "35d320f7adcdf221",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "small"
+      },
+      "size_proxy": 4194304,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":64,\"heads\":8,\"sequence\":512}|float16"
+    },
+    {
+      "candidate_id": "H3-0002",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 32,
+        "heads": 8,
+        "sequence": 768
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "0f21739d61b7a5d8",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "small"
+      },
+      "size_proxy": 9437184,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":32,\"heads\":8,\"sequence\":768}|float16"
+    },
+    {
+      "candidate_id": "H3-0003",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 4,
+        "sequence": 256
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "3a546d5afee22c73",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "small"
+      },
+      "size_proxy": 262144,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":64,\"heads\":4,\"sequence\":256}|float16"
+    },
+    {
+      "candidate_id": "H3-0004",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 2,
+        "sequence": 1024
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "ad162a5307ab62e9",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "small"
+      },
+      "size_proxy": 2097152,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":64,\"heads\":2,\"sequence\":1024}|float16"
+    },
+    {
+      "candidate_id": "H3-0005",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 32,
+        "heads": 8,
+        "sequence": 1024
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "79b7f9ae7211bb7f",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "small"
+      },
+      "size_proxy": 8388608,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":32,\"heads\":8,\"sequence\":1024}|float16"
+    },
+    {
+      "candidate_id": "H3-0006",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 2,
+        "sequence": 1024
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "1af2d0b2defdbc68",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "small"
+      },
+      "size_proxy": 2097152,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":64,\"heads\":2,\"sequence\":1024}|float32"
+    },
+    {
+      "candidate_id": "H3-0007",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 64,
+        "heads": 2,
+        "sequence": 768
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "8011457faf25d56b",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "small"
+      },
+      "size_proxy": 2359296,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":64,\"heads\":2,\"sequence\":768}|float16"
+    },
+    {
+      "candidate_id": "H3-0008",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 4,
+        "sequence": 512
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "6aa86f7b293af13e",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "small"
+      },
+      "size_proxy": 1048576,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":64,\"heads\":4,\"sequence\":512}|float32"
+    },
+    {
+      "candidate_id": "H3-0009",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 32,
+        "heads": 4,
+        "sequence": 768
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "266537efbcc2db79",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "small"
+      },
+      "size_proxy": 4718592,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":32,\"heads\":4,\"sequence\":768}|float16"
+    },
+    {
+      "candidate_id": "H3-0010",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 48,
+        "heads": 8,
+        "sequence": 2048
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "1fd37bb82bbb59e1",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "medium"
+      },
+      "size_proxy": 67108864,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":48,\"heads\":8,\"sequence\":2048}|float16"
+    },
+    {
+      "candidate_id": "H3-0011",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 80,
+        "heads": 8,
+        "sequence": 3072
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "ff6af95205f76e69",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "medium"
+      },
+      "size_proxy": 75497472,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":80,\"heads\":8,\"sequence\":3072}|float32"
+    },
+    {
+      "candidate_id": "H3-0012",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 48,
+        "heads": 12,
+        "sequence": 2560
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "f6b149a3c97b6f82",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "medium"
+      },
+      "size_proxy": 78643200,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":48,\"heads\":12,\"sequence\":2560}|float32"
+    },
+    {
+      "candidate_id": "H3-0013",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 1536
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "ef746cbeb40ac225",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "medium"
+      },
+      "size_proxy": 37748736,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":64,\"heads\":8,\"sequence\":1536}|float16"
+    },
+    {
+      "candidate_id": "H3-0014",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 1536
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "a168920134a2aebf",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "medium"
+      },
+      "size_proxy": 18874368,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":64,\"heads\":8,\"sequence\":1536}|float32"
+    },
+    {
+      "candidate_id": "H3-0015",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 80,
+        "heads": 4,
+        "sequence": 1536
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "91d4a6c175913b85",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "medium"
+      },
+      "size_proxy": 9437184,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":80,\"heads\":4,\"sequence\":1536}|float16"
+    },
+    {
+      "candidate_id": "H3-0016",
+      "configuration": {
+        "batch": 4,
+        "head_dim": 80,
+        "heads": 8,
+        "sequence": 2560
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "29683aec55ab5182",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "medium"
+      },
+      "size_proxy": 209715200,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":80,\"heads\":8,\"sequence\":2560}|float32"
+    },
+    {
+      "candidate_id": "H3-0017",
+      "configuration": {
+        "batch": 4,
+        "head_dim": 32,
+        "heads": 4,
+        "sequence": 2048
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "f4c6199d603ce82c",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "medium"
+      },
+      "size_proxy": 67108864,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":32,\"heads\":4,\"sequence\":2048}|float32"
+    },
+    {
+      "candidate_id": "H3-0018",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 64,
+        "heads": 16,
+        "sequence": 2048
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "a9c8308ab6b4471a",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "medium"
+      },
+      "size_proxy": 134217728,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":64,\"heads\":16,\"sequence\":2048}|float16"
+    },
+    {
+      "candidate_id": "H3-0019",
+      "configuration": {
+        "batch": 4,
+        "head_dim": 96,
+        "heads": 12,
+        "sequence": 1280
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "e26c6f0b4fb05135",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "medium"
+      },
+      "size_proxy": 78643200,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":96,\"heads\":12,\"sequence\":1280}|float16"
+    },
+    {
+      "candidate_id": "H3-0020",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 128,
+        "heads": 8,
+        "sequence": 4608
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "7968560f27578594",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "size_proxy": 169869312,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":128,\"heads\":8,\"sequence\":4608}|float16"
+    },
+    {
+      "candidate_id": "H3-0021",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 48,
+        "heads": 4,
+        "sequence": 4608
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "f63fbf7c859cc9af",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "size_proxy": 84934656,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":48,\"heads\":4,\"sequence\":4608}|float16"
+    },
+    {
+      "candidate_id": "H3-0022",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 32,
+        "heads": 12,
+        "sequence": 3584
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "5fc0295d4c1e262d",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "size_proxy": 154140672,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":32,\"heads\":12,\"sequence\":3584}|float32"
+    },
+    {
+      "candidate_id": "H3-0023",
+      "configuration": {
+        "batch": 4,
+        "head_dim": 128,
+        "heads": 16,
+        "sequence": 3072
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "2d3db802c8b2baa9",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "size_proxy": 603979776,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":128,\"heads\":16,\"sequence\":3072}|float16"
+    },
+    {
+      "candidate_id": "H3-0024",
+      "configuration": {
+        "batch": 4,
+        "head_dim": 80,
+        "heads": 12,
+        "sequence": 4608
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "4712a9cc5715b47e",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "size_proxy": 1019215872,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":80,\"heads\":12,\"sequence\":4608}|float32"
+    },
+    {
+      "candidate_id": "H3-0025",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 16,
+        "sequence": 5120
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "2b2fb8692149f55a",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "size_proxy": 419430400,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":64,\"heads\":16,\"sequence\":5120}|float16"
+    },
+    {
+      "candidate_id": "H3-0026",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 96,
+        "heads": 12,
+        "sequence": 5120
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "b046b5e3268dbe50",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "size_proxy": 629145600,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":96,\"heads\":12,\"sequence\":5120}|float32"
+    },
+    {
+      "candidate_id": "H3-0027",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 80,
+        "heads": 12,
+        "sequence": 3584
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "21b42796ba376d84",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "size_proxy": 308281344,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":80,\"heads\":12,\"sequence\":3584}|float32"
+    },
+    {
+      "candidate_id": "H3-0028",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 32,
+        "heads": 12,
+        "sequence": 4096
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "42720ee92f15dfa2",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "size_proxy": 201326592,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":32,\"heads\":12,\"sequence\":4096}|float32"
+    },
+    {
+      "candidate_id": "H3-0029",
+      "configuration": {
+        "batch": 4,
+        "head_dim": 128,
+        "heads": 12,
+        "sequence": 5120
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "a31aee807e21afe3",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "size_proxy": 1258291200,
+      "workload_group_id": "attention|{\"batch\":4,\"head_dim\":128,\"heads\":12,\"sequence\":5120}|float16"
+    },
+    {
+      "candidate_id": "H3-0030",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 32,
+        "heads": 4,
+        "sequence": 5376
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "b11f03da4e2b24ca",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "near_device"
+      },
+      "size_proxy": 231211008,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":32,\"heads\":4,\"sequence\":5376}|float32"
+    },
+    {
+      "candidate_id": "H3-0031",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 96,
+        "heads": 16,
+        "sequence": 7168
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "bb7a6825c0a8ea9a",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "near_device"
+      },
+      "size_proxy": 822083584,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":96,\"heads\":16,\"sequence\":7168}|float32"
+    },
+    {
+      "candidate_id": "H3-0032",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 16,
+        "sequence": 7168
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "8cdd75425c623ebc",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "near_device"
+      },
+      "size_proxy": 822083584,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":64,\"heads\":16,\"sequence\":7168}|float16"
+    },
+    {
+      "candidate_id": "H3-0033",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 64,
+        "heads": 8,
+        "sequence": 6144
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "0eb8999cf942d46c",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "near_device"
+      },
+      "size_proxy": 603979776,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":64,\"heads\":8,\"sequence\":6144}|float16"
+    },
+    {
+      "candidate_id": "H3-0034",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 80,
+        "heads": 4,
+        "sequence": 6144
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "b13c4bc5ced8d007",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "near_device"
+      },
+      "size_proxy": 150994944,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":80,\"heads\":4,\"sequence\":6144}|float16"
+    },
+    {
+      "candidate_id": "H3-0035",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 64,
+        "heads": 4,
+        "sequence": 6656
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "9635319c29173c09",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "near_device"
+      },
+      "size_proxy": 354418688,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":64,\"heads\":4,\"sequence\":6656}|float16"
+    },
+    {
+      "candidate_id": "H3-0036",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 48,
+        "heads": 12,
+        "sequence": 6144
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "385a029c8f3e4f6b",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "near_device"
+      },
+      "size_proxy": 452984832,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":48,\"heads\":12,\"sequence\":6144}|float32"
+    },
+    {
+      "candidate_id": "H3-0037",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 48,
+        "heads": 8,
+        "sequence": 6656
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "f68d211bc45910b4",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "near_device"
+      },
+      "size_proxy": 708837376,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":48,\"heads\":8,\"sequence\":6656}|float16"
+    },
+    {
+      "candidate_id": "H3-0038",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 16,
+        "sequence": 7168
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "6b0a1e2b57516b75",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "near_device"
+      },
+      "size_proxy": 822083584,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":64,\"heads\":16,\"sequence\":7168}|float32"
+    },
+    {
+      "candidate_id": "H3-0039",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 96,
+        "heads": 4,
+        "sequence": 6656
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "97d9965565fa4380",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "near_device"
+      },
+      "size_proxy": 354418688,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":96,\"heads\":4,\"sequence\":6656}|float32"
+    },
+    {
+      "candidate_id": "H3-0040",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 32,
+        "heads": 8,
+        "sequence": 7168
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "6d607a3b004c82c2",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "near_device"
+      },
+      "size_proxy": 822083584,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":32,\"heads\":8,\"sequence\":7168}|float16"
+    },
+    {
+      "candidate_id": "H3-0041",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 80,
+        "heads": 4,
+        "sequence": 6656
+      },
+      "dtype": "float16",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "417f333a946366bf",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "near_device"
+      },
+      "size_proxy": 354418688,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":80,\"heads\":4,\"sequence\":6656}|float16"
+    },
+    {
+      "candidate_id": "H3-0042",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 96,
+        "heads": 16,
+        "sequence": 5888
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "eb92f0dfa30d0ab4",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "near_device"
+      },
+      "size_proxy": 554696704,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":96,\"heads\":16,\"sequence\":5888}|float32"
+    },
+    {
+      "candidate_id": "H3-0043",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 80,
+        "heads": 12,
+        "sequence": 7168
+      },
+      "dtype": "float32",
+      "family": "attention",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "8dfd7ab6f6cb8a5a",
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "near_device"
+      },
+      "size_proxy": 616562688,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":80,\"heads\":12,\"sequence\":7168}|float32"
+    },
+    {
+      "candidate_id": "H3-0044",
+      "configuration": {
+        "batch": 2,
+        "channels": 16,
+        "height": 32,
+        "out_channels": 16,
+        "width": 80
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "c6034b9eb624bbfa",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "small"
+      },
+      "size_proxy": 81920,
+      "workload_group_id": "convolution|{\"batch\":2,\"channels\":16,\"height\":32,\"out_channels\":16,\"width\":80}|float32"
+    },
+    {
+      "candidate_id": "H3-0045",
+      "configuration": {
+        "batch": 1,
+        "channels": 3,
+        "height": 96,
+        "out_channels": 8,
+        "width": 64
+      },
+      "dtype": "float16",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "84fafa69c5cc89d9",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "small"
+      },
+      "size_proxy": 49152,
+      "workload_group_id": "convolution|{\"batch\":1,\"channels\":3,\"height\":96,\"out_channels\":8,\"width\":64}|float16"
+    },
+    {
+      "candidate_id": "H3-0046",
+      "configuration": {
+        "batch": 1,
+        "channels": 3,
+        "height": 80,
+        "out_channels": 8,
+        "width": 80
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "faf6485ac3a1d5fa",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "small"
+      },
+      "size_proxy": 51200,
+      "workload_group_id": "convolution|{\"batch\":1,\"channels\":3,\"height\":80,\"out_channels\":8,\"width\":80}|float32"
+    },
+    {
+      "candidate_id": "H3-0047",
+      "configuration": {
+        "batch": 8,
+        "channels": 16,
+        "height": 48,
+        "out_channels": 64,
+        "width": 80
+      },
+      "dtype": "float16",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "63d0a6e63e38177e",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "small"
+      },
+      "size_proxy": 1966080,
+      "workload_group_id": "convolution|{\"batch\":8,\"channels\":16,\"height\":48,\"out_channels\":64,\"width\":80}|float16"
+    },
+    {
+      "candidate_id": "H3-0048",
+      "configuration": {
+        "batch": 2,
+        "channels": 32,
+        "height": 96,
+        "out_channels": 64,
+        "width": 96
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "c3889eced7cc53eb",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "small"
+      },
+      "size_proxy": 1179648,
+      "workload_group_id": "convolution|{\"batch\":2,\"channels\":32,\"height\":96,\"out_channels\":64,\"width\":96}|float32"
+    },
+    {
+      "candidate_id": "H3-0049",
+      "configuration": {
+        "batch": 4,
+        "channels": 16,
+        "height": 32,
+        "out_channels": 32,
+        "width": 48
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "a73fc0d9eca22421",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "small"
+      },
+      "size_proxy": 196608,
+      "workload_group_id": "convolution|{\"batch\":4,\"channels\":16,\"height\":32,\"out_channels\":32,\"width\":48}|float32"
+    },
+    {
+      "candidate_id": "H3-0050",
+      "configuration": {
+        "batch": 8,
+        "channels": 8,
+        "height": 80,
+        "out_channels": 16,
+        "width": 96
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "f23add8bf1f104ed",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "small"
+      },
+      "size_proxy": 983040,
+      "workload_group_id": "convolution|{\"batch\":8,\"channels\":8,\"height\":80,\"out_channels\":16,\"width\":96}|float32"
+    },
+    {
+      "candidate_id": "H3-0051",
+      "configuration": {
+        "batch": 4,
+        "channels": 3,
+        "height": 96,
+        "out_channels": 8,
+        "width": 48
+      },
+      "dtype": "float16",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "1924d7cf7fb40db3",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "small"
+      },
+      "size_proxy": 147456,
+      "workload_group_id": "convolution|{\"batch\":4,\"channels\":3,\"height\":96,\"out_channels\":8,\"width\":48}|float16"
+    },
+    {
+      "candidate_id": "H3-0052",
+      "configuration": {
+        "batch": 32,
+        "channels": 16,
+        "height": 112,
+        "out_channels": 32,
+        "width": 80
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "0f1f1461920c8830",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "medium"
+      },
+      "size_proxy": 9175040,
+      "workload_group_id": "convolution|{\"batch\":32,\"channels\":16,\"height\":112,\"out_channels\":32,\"width\":80}|float32"
+    },
+    {
+      "candidate_id": "H3-0053",
+      "configuration": {
+        "batch": 16,
+        "channels": 32,
+        "height": 128,
+        "out_channels": 16,
+        "width": 80
+      },
+      "dtype": "float16",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "4688202ec7cc9e26",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "medium"
+      },
+      "size_proxy": 2621440,
+      "workload_group_id": "convolution|{\"batch\":16,\"channels\":32,\"height\":128,\"out_channels\":16,\"width\":80}|float16"
+    },
+    {
+      "candidate_id": "H3-0054",
+      "configuration": {
+        "batch": 32,
+        "channels": 8,
+        "height": 96,
+        "out_channels": 64,
+        "width": 96
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "432bc3d2887592a6",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "medium"
+      },
+      "size_proxy": 18874368,
+      "workload_group_id": "convolution|{\"batch\":32,\"channels\":8,\"height\":96,\"out_channels\":64,\"width\":96}|float32"
+    },
+    {
+      "candidate_id": "H3-0055",
+      "configuration": {
+        "batch": 16,
+        "channels": 8,
+        "height": 64,
+        "out_channels": 32,
+        "width": 128
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "433706b363aa10b1",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "medium"
+      },
+      "size_proxy": 4194304,
+      "workload_group_id": "convolution|{\"batch\":16,\"channels\":8,\"height\":64,\"out_channels\":32,\"width\":128}|float32"
+    },
+    {
+      "candidate_id": "H3-0056",
+      "configuration": {
+        "batch": 64,
+        "channels": 16,
+        "height": 96,
+        "out_channels": 32,
+        "width": 80
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "be12128d64c3c8e1",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "medium"
+      },
+      "size_proxy": 15728640,
+      "workload_group_id": "convolution|{\"batch\":64,\"channels\":16,\"height\":96,\"out_channels\":32,\"width\":80}|float32"
+    },
+    {
+      "candidate_id": "H3-0057",
+      "configuration": {
+        "batch": 32,
+        "channels": 32,
+        "height": 80,
+        "out_channels": 16,
+        "width": 128
+      },
+      "dtype": "float16",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "8d6ed65bc272d12e",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "medium"
+      },
+      "size_proxy": 5242880,
+      "workload_group_id": "convolution|{\"batch\":32,\"channels\":32,\"height\":80,\"out_channels\":16,\"width\":128}|float16"
+    },
+    {
+      "candidate_id": "H3-0058",
+      "configuration": {
+        "batch": 8,
+        "channels": 3,
+        "height": 80,
+        "out_channels": 32,
+        "width": 128
+      },
+      "dtype": "float16",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "8198c0648bc6b9d8",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "medium"
+      },
+      "size_proxy": 2621440,
+      "workload_group_id": "convolution|{\"batch\":8,\"channels\":3,\"height\":80,\"out_channels\":32,\"width\":128}|float16"
+    },
+    {
+      "candidate_id": "H3-0059",
+      "configuration": {
+        "batch": 32,
+        "channels": 3,
+        "height": 80,
+        "out_channels": 32,
+        "width": 64
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "223dc9f2c517b1cf",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "medium"
+      },
+      "size_proxy": 5242880,
+      "workload_group_id": "convolution|{\"batch\":32,\"channels\":3,\"height\":80,\"out_channels\":32,\"width\":64}|float32"
+    },
+    {
+      "candidate_id": "H3-0060",
+      "configuration": {
+        "batch": 256,
+        "channels": 32,
+        "height": 128,
+        "out_channels": 64,
+        "width": 160
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "a2b2dec8693aec0c",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "large"
+      },
+      "size_proxy": 335544320,
+      "workload_group_id": "convolution|{\"batch\":256,\"channels\":32,\"height\":128,\"out_channels\":64,\"width\":160}|float32"
+    },
+    {
+      "candidate_id": "H3-0061",
+      "configuration": {
+        "batch": 64,
+        "channels": 16,
+        "height": 128,
+        "out_channels": 96,
+        "width": 128
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "aea7177fddda8c47",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "large"
+      },
+      "size_proxy": 100663296,
+      "workload_group_id": "convolution|{\"batch\":64,\"channels\":16,\"height\":128,\"out_channels\":96,\"width\":128}|float32"
+    },
+    {
+      "candidate_id": "H3-0062",
+      "configuration": {
+        "batch": 64,
+        "channels": 32,
+        "height": 192,
+        "out_channels": 32,
+        "width": 160
+      },
+      "dtype": "float16",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "3502de846ef2362b",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "large"
+      },
+      "size_proxy": 62914560,
+      "workload_group_id": "convolution|{\"batch\":64,\"channels\":32,\"height\":192,\"out_channels\":32,\"width\":160}|float16"
+    },
+    {
+      "candidate_id": "H3-0063",
+      "configuration": {
+        "batch": 64,
+        "channels": 8,
+        "height": 192,
+        "out_channels": 96,
+        "width": 128
+      },
+      "dtype": "float16",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "52426bea6cc367f8",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "large"
+      },
+      "size_proxy": 150994944,
+      "workload_group_id": "convolution|{\"batch\":64,\"channels\":8,\"height\":192,\"out_channels\":96,\"width\":128}|float16"
+    },
+    {
+      "candidate_id": "H3-0064",
+      "configuration": {
+        "batch": 256,
+        "channels": 32,
+        "height": 192,
+        "out_channels": 32,
+        "width": 192
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "a40a6c9c5e19db93",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "large"
+      },
+      "size_proxy": 301989888,
+      "workload_group_id": "convolution|{\"batch\":256,\"channels\":32,\"height\":192,\"out_channels\":32,\"width\":192}|float32"
+    },
+    {
+      "candidate_id": "H3-0065",
+      "configuration": {
+        "batch": 128,
+        "channels": 3,
+        "height": 160,
+        "out_channels": 32,
+        "width": 128
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "c36b99e3b75e3fe3",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "large"
+      },
+      "size_proxy": 83886080,
+      "workload_group_id": "convolution|{\"batch\":128,\"channels\":3,\"height\":160,\"out_channels\":32,\"width\":128}|float32"
+    },
+    {
+      "candidate_id": "H3-0066",
+      "configuration": {
+        "batch": 64,
+        "channels": 8,
+        "height": 128,
+        "out_channels": 32,
+        "width": 160
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "19a14e51e8bb8669",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "large"
+      },
+      "size_proxy": 41943040,
+      "workload_group_id": "convolution|{\"batch\":64,\"channels\":8,\"height\":128,\"out_channels\":32,\"width\":160}|float32"
+    },
+    {
+      "candidate_id": "H3-0067",
+      "configuration": {
+        "batch": 256,
+        "channels": 8,
+        "height": 96,
+        "out_channels": 16,
+        "width": 160
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "17a8c70825be3200",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "large"
+      },
+      "size_proxy": 62914560,
+      "workload_group_id": "convolution|{\"batch\":256,\"channels\":8,\"height\":96,\"out_channels\":16,\"width\":160}|float32"
+    },
+    {
+      "candidate_id": "H3-0068",
+      "configuration": {
+        "batch": 256,
+        "channels": 16,
+        "height": 160,
+        "out_channels": 64,
+        "width": 192
+      },
+      "dtype": "float16",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "bd867ed90638e4a4",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "near_device"
+      },
+      "size_proxy": 503316480,
+      "workload_group_id": "convolution|{\"batch\":256,\"channels\":16,\"height\":160,\"out_channels\":64,\"width\":192}|float16"
+    },
+    {
+      "candidate_id": "H3-0069",
+      "configuration": {
+        "batch": 512,
+        "channels": 3,
+        "height": 128,
+        "out_channels": 64,
+        "width": 96
+      },
+      "dtype": "float16",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "db894f3b803e3f64",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "near_device"
+      },
+      "size_proxy": 402653184,
+      "workload_group_id": "convolution|{\"batch\":512,\"channels\":3,\"height\":128,\"out_channels\":64,\"width\":96}|float16"
+    },
+    {
+      "candidate_id": "H3-0070",
+      "configuration": {
+        "batch": 1024,
+        "channels": 16,
+        "height": 96,
+        "out_channels": 64,
+        "width": 160
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "62493532bfdd3c09",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "near_device"
+      },
+      "size_proxy": 1006632960,
+      "workload_group_id": "convolution|{\"batch\":1024,\"channels\":16,\"height\":96,\"out_channels\":64,\"width\":160}|float32"
+    },
+    {
+      "candidate_id": "H3-0071",
+      "configuration": {
+        "batch": 512,
+        "channels": 16,
+        "height": 96,
+        "out_channels": 32,
+        "width": 192
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "b8f7bb626583b4f9",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "near_device"
+      },
+      "size_proxy": 301989888,
+      "workload_group_id": "convolution|{\"batch\":512,\"channels\":16,\"height\":96,\"out_channels\":32,\"width\":192}|float32"
+    },
+    {
+      "candidate_id": "H3-0072",
+      "configuration": {
+        "batch": 256,
+        "channels": 8,
+        "height": 96,
+        "out_channels": 32,
+        "width": 192
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "bdffb9b7dbd1238c",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "near_device"
+      },
+      "size_proxy": 150994944,
+      "workload_group_id": "convolution|{\"batch\":256,\"channels\":8,\"height\":96,\"out_channels\":32,\"width\":192}|float32"
+    },
+    {
+      "candidate_id": "H3-0073",
+      "configuration": {
+        "batch": 256,
+        "channels": 16,
+        "height": 96,
+        "out_channels": 16,
+        "width": 160
+      },
+      "dtype": "float16",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "6ec0be8dc3df16bd",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "near_device"
+      },
+      "size_proxy": 62914560,
+      "workload_group_id": "convolution|{\"batch\":256,\"channels\":16,\"height\":96,\"out_channels\":16,\"width\":160}|float16"
+    },
+    {
+      "candidate_id": "H3-0074",
+      "configuration": {
+        "batch": 512,
+        "channels": 16,
+        "height": 160,
+        "out_channels": 16,
+        "width": 96
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "43d6f32a9269ec42",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "near_device"
+      },
+      "size_proxy": 125829120,
+      "workload_group_id": "convolution|{\"batch\":512,\"channels\":16,\"height\":160,\"out_channels\":16,\"width\":96}|float32"
+    },
+    {
+      "candidate_id": "H3-0075",
+      "configuration": {
+        "batch": 1024,
+        "channels": 8,
+        "height": 160,
+        "out_channels": 64,
+        "width": 192
+      },
+      "dtype": "float16",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "f039ac65b40150f2",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "near_device"
+      },
+      "size_proxy": 2013265920,
+      "workload_group_id": "convolution|{\"batch\":1024,\"channels\":8,\"height\":160,\"out_channels\":64,\"width\":192}|float16"
+    },
+    {
+      "candidate_id": "H3-0076",
+      "configuration": {
+        "batch": 512,
+        "channels": 16,
+        "height": 160,
+        "out_channels": 32,
+        "width": 192
+      },
+      "dtype": "float16",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "162db57a1d7c0bb6",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "near_device"
+      },
+      "size_proxy": 503316480,
+      "workload_group_id": "convolution|{\"batch\":512,\"channels\":16,\"height\":160,\"out_channels\":32,\"width\":192}|float16"
+    },
+    {
+      "candidate_id": "H3-0077",
+      "configuration": {
+        "batch": 1024,
+        "channels": 8,
+        "height": 128,
+        "out_channels": 16,
+        "width": 192
+      },
+      "dtype": "float32",
+      "family": "convolution",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "52d663265b61589f",
+      "sampling_stratum": {
+        "family": "convolution",
+        "scale": "near_device"
+      },
+      "size_proxy": 402653184,
+      "workload_group_id": "convolution|{\"batch\":1024,\"channels\":8,\"height\":128,\"out_channels\":16,\"width\":192}|float32"
+    },
+    {
+      "candidate_id": "H3-0078",
+      "configuration": {
+        "batch": 16,
+        "depth": 2,
+        "width": 256
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "6d7d01ab26e194cb",
+      "sampling_stratum": {
+        "family": "mlp",
+        "scale": "small"
+      },
+      "size_proxy": 65536,
+      "workload_group_id": "mlp|{\"batch\":16,\"depth\":2,\"width\":256}|float16"
+    },
+    {
+      "candidate_id": "H3-0079",
+      "configuration": {
+        "batch": 32,
+        "depth": 4,
+        "width": 384
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "421f5c3ead4f636c",
+      "sampling_stratum": {
+        "family": "mlp",
+        "scale": "small"
+      },
+      "size_proxy": 147456,
+      "workload_group_id": "mlp|{\"batch\":32,\"depth\":4,\"width\":384}|float16"
+    },
+    {
+      "candidate_id": "H3-0080",
+      "configuration": {
+        "batch": 32,
+        "depth": 2,
+        "width": 512
+      },
+      "dtype": "float32",
+      "family": "mlp",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "4d2726a4ad2c23ce",
+      "sampling_stratum": {
+        "family": "mlp",
+        "scale": "small"
+      },
+      "size_proxy": 262144,
+      "workload_group_id": "mlp|{\"batch\":32,\"depth\":2,\"width\":512}|float32"
+    },
+    {
+      "candidate_id": "H3-0081",
+      "configuration": {
+        "batch": 64,
+        "depth": 2,
+        "width": 384
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "9415b741d79ae361",
+      "sampling_stratum": {
+        "family": "mlp",
+        "scale": "small"
+      },
+      "size_proxy": 147456,
+      "workload_group_id": "mlp|{\"batch\":64,\"depth\":2,\"width\":384}|float16"
+    },
+    {
+      "candidate_id": "H3-0082",
+      "configuration": {
+        "batch": 128,
+        "depth": 3,
+        "width": 768
+      },
+      "dtype": "float32",
+      "family": "mlp",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "a6b10b394176fe12",
+      "sampling_stratum": {
+        "family": "mlp",
+        "scale": "medium"
+      },
+      "size_proxy": 589824,
+      "workload_group_id": "mlp|{\"batch\":128,\"depth\":3,\"width\":768}|float32"
+    },
+    {
+      "candidate_id": "H3-0083",
+      "configuration": {
+        "batch": 256,
+        "depth": 6,
+        "width": 1024
+      },
+      "dtype": "float32",
+      "family": "mlp",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "53982baeeac0bba0",
+      "sampling_stratum": {
+        "family": "mlp",
+        "scale": "medium"
+      },
+      "size_proxy": 1048576,
+      "workload_group_id": "mlp|{\"batch\":256,\"depth\":6,\"width\":1024}|float32"
+    },
+    {
+      "candidate_id": "H3-0084",
+      "configuration": {
+        "batch": 128,
+        "depth": 6,
+        "width": 768
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "930477b7c19fae94",
+      "sampling_stratum": {
+        "family": "mlp",
+        "scale": "medium"
+      },
+      "size_proxy": 589824,
+      "workload_group_id": "mlp|{\"batch\":128,\"depth\":6,\"width\":768}|float16"
+    },
+    {
+      "candidate_id": "H3-0085",
+      "configuration": {
+        "batch": 256,
+        "depth": 4,
+        "width": 1536
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "868751e5eba36cc6",
+      "sampling_stratum": {
+        "family": "mlp",
+        "scale": "medium"
+      },
+      "size_proxy": 2359296,
+      "workload_group_id": "mlp|{\"batch\":256,\"depth\":4,\"width\":1536}|float16"
+    },
+    {
+      "candidate_id": "H3-0086",
+      "configuration": {
+        "batch": 1024,
+        "depth": 4,
+        "width": 2048
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "22450a7af4bf61c8",
+      "sampling_stratum": {
+        "family": "mlp",
+        "scale": "large"
+      },
+      "size_proxy": 4194304,
+      "workload_group_id": "mlp|{\"batch\":1024,\"depth\":4,\"width\":2048}|float16"
+    },
+    {
+      "candidate_id": "H3-0087",
+      "configuration": {
+        "batch": 1024,
+        "depth": 6,
+        "width": 2048
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "39ee1fb103de018b",
+      "sampling_stratum": {
+        "family": "mlp",
+        "scale": "large"
+      },
+      "size_proxy": 4194304,
+      "workload_group_id": "mlp|{\"batch\":1024,\"depth\":6,\"width\":2048}|float16"
+    },
+    {
+      "candidate_id": "H3-0088",
+      "configuration": {
+        "batch": 512,
+        "depth": 4,
+        "width": 4096
+      },
+      "dtype": "float16",
+      "family": "mlp",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "88a83efb61784f28",
+      "sampling_stratum": {
+        "family": "mlp",
+        "scale": "large"
+      },
+      "size_proxy": 16777216,
+      "workload_group_id": "mlp|{\"batch\":512,\"depth\":4,\"width\":4096}|float16"
+    },
+    {
+      "candidate_id": "H3-0089",
+      "configuration": {
+        "batch": 1024,
+        "depth": 2,
+        "width": 2048
+      },
+      "dtype": "float32",
+      "family": "mlp",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "d3a68ce9b9f2a7d5",
+      "sampling_stratum": {
+        "family": "mlp",
+        "scale": "large"
+      },
+      "size_proxy": 4194304,
+      "workload_group_id": "mlp|{\"batch\":1024,\"depth\":2,\"width\":2048}|float32"
+    },
+    {
+      "candidate_id": "H3-0090",
+      "configuration": {
+        "batch": 512,
+        "depth": 4,
+        "width": 6144
+      },
+      "dtype": "float32",
+      "family": "mlp",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "aa783479fec06092",
+      "sampling_stratum": {
+        "family": "mlp",
+        "scale": "near_device"
+      },
+      "size_proxy": 37748736,
+      "workload_group_id": "mlp|{\"batch\":512,\"depth\":4,\"width\":6144}|float32"
+    },
+    {
+      "candidate_id": "H3-0091",
+      "configuration": {
+        "batch": 1024,
+        "depth": 3,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "family": "mlp",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "f9affceaca0718b3",
+      "sampling_stratum": {
+        "family": "mlp",
+        "scale": "near_device"
+      },
+      "size_proxy": 67108864,
+      "workload_group_id": "mlp|{\"batch\":1024,\"depth\":3,\"width\":8192}|float32"
+    },
+    {
+      "candidate_id": "H3-0092",
+      "configuration": {
+        "batch": 2048,
+        "depth": 2,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "family": "mlp",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "8a59b0561110d0cf",
+      "sampling_stratum": {
+        "family": "mlp",
+        "scale": "near_device"
+      },
+      "size_proxy": 67108864,
+      "workload_group_id": "mlp|{\"batch\":2048,\"depth\":2,\"width\":8192}|float32"
+    },
+    {
+      "candidate_id": "H3-0093",
+      "configuration": {
+        "batch": 32,
+        "depth": 1,
+        "width": 128
+      },
+      "dtype": "float32",
+      "family": "training",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "c002a0741dc0f39f",
+      "sampling_stratum": {
+        "family": "training",
+        "scale": "small"
+      },
+      "size_proxy": 16384,
+      "workload_group_id": "training|{\"batch\":32,\"depth\":1,\"width\":128}|float32"
+    },
+    {
+      "candidate_id": "H3-0094",
+      "configuration": {
+        "batch": 8,
+        "depth": 3,
+        "width": 256
+      },
+      "dtype": "float32",
+      "family": "training",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "23a563d88683f6d6",
+      "sampling_stratum": {
+        "family": "training",
+        "scale": "small"
+      },
+      "size_proxy": 65536,
+      "workload_group_id": "training|{\"batch\":8,\"depth\":3,\"width\":256}|float32"
+    },
+    {
+      "candidate_id": "H3-0095",
+      "configuration": {
+        "batch": 8,
+        "depth": 3,
+        "width": 128
+      },
+      "dtype": "float16",
+      "family": "training",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "513c13ae4aa1ed6f",
+      "sampling_stratum": {
+        "family": "training",
+        "scale": "small"
+      },
+      "size_proxy": 16384,
+      "workload_group_id": "training|{\"batch\":8,\"depth\":3,\"width\":128}|float16"
+    },
+    {
+      "candidate_id": "H3-0096",
+      "configuration": {
+        "batch": 16,
+        "depth": 2,
+        "width": 384
+      },
+      "dtype": "float32",
+      "family": "training",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "69a7982f042ce423",
+      "sampling_stratum": {
+        "family": "training",
+        "scale": "small"
+      },
+      "size_proxy": 147456,
+      "workload_group_id": "training|{\"batch\":16,\"depth\":2,\"width\":384}|float32"
+    },
+    {
+      "candidate_id": "H3-0097",
+      "configuration": {
+        "batch": 256,
+        "depth": 3,
+        "width": 768
+      },
+      "dtype": "float32",
+      "family": "training",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "35162fe40db5d232",
+      "sampling_stratum": {
+        "family": "training",
+        "scale": "medium"
+      },
+      "size_proxy": 589824,
+      "workload_group_id": "training|{\"batch\":256,\"depth\":3,\"width\":768}|float32"
+    },
+    {
+      "candidate_id": "H3-0098",
+      "configuration": {
+        "batch": 128,
+        "depth": 4,
+        "width": 768
+      },
+      "dtype": "float32",
+      "family": "training",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "56d6ae8bc6e91f0b",
+      "sampling_stratum": {
+        "family": "training",
+        "scale": "medium"
+      },
+      "size_proxy": 589824,
+      "workload_group_id": "training|{\"batch\":128,\"depth\":4,\"width\":768}|float32"
+    },
+    {
+      "candidate_id": "H3-0099",
+      "configuration": {
+        "batch": 128,
+        "depth": 3,
+        "width": 512
+      },
+      "dtype": "float16",
+      "family": "training",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "0bf03bb24e0cb9f5",
+      "sampling_stratum": {
+        "family": "training",
+        "scale": "medium"
+      },
+      "size_proxy": 262144,
+      "workload_group_id": "training|{\"batch\":128,\"depth\":3,\"width\":512}|float16"
+    },
+    {
+      "candidate_id": "H3-0100",
+      "configuration": {
+        "batch": 128,
+        "depth": 3,
+        "width": 768
+      },
+      "dtype": "float16",
+      "family": "training",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "6381673077ba3a8e",
+      "sampling_stratum": {
+        "family": "training",
+        "scale": "medium"
+      },
+      "size_proxy": 589824,
+      "workload_group_id": "training|{\"batch\":128,\"depth\":3,\"width\":768}|float16"
+    },
+    {
+      "candidate_id": "H3-0101",
+      "configuration": {
+        "batch": 256,
+        "depth": 6,
+        "width": 3072
+      },
+      "dtype": "float16",
+      "family": "training",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "f92afb613e33e3a1",
+      "sampling_stratum": {
+        "family": "training",
+        "scale": "large"
+      },
+      "size_proxy": 9437184,
+      "workload_group_id": "training|{\"batch\":256,\"depth\":6,\"width\":3072}|float16"
+    },
+    {
+      "candidate_id": "H3-0102",
+      "configuration": {
+        "batch": 1024,
+        "depth": 4,
+        "width": 3072
+      },
+      "dtype": "float16",
+      "family": "training",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "50f044af5ef839e6",
+      "sampling_stratum": {
+        "family": "training",
+        "scale": "large"
+      },
+      "size_proxy": 9437184,
+      "workload_group_id": "training|{\"batch\":1024,\"depth\":4,\"width\":3072}|float16"
+    },
+    {
+      "candidate_id": "H3-0103",
+      "configuration": {
+        "batch": 256,
+        "depth": 4,
+        "width": 4096
+      },
+      "dtype": "float16",
+      "family": "training",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "ce658ef1280a7a71",
+      "sampling_stratum": {
+        "family": "training",
+        "scale": "large"
+      },
+      "size_proxy": 16777216,
+      "workload_group_id": "training|{\"batch\":256,\"depth\":4,\"width\":4096}|float16"
+    },
+    {
+      "candidate_id": "H3-0104",
+      "configuration": {
+        "batch": 512,
+        "depth": 4,
+        "width": 2048
+      },
+      "dtype": "float16",
+      "family": "training",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "6ac1fe7bf38b0ff0",
+      "sampling_stratum": {
+        "family": "training",
+        "scale": "large"
+      },
+      "size_proxy": 4194304,
+      "workload_group_id": "training|{\"batch\":512,\"depth\":4,\"width\":2048}|float16"
+    },
+    {
+      "candidate_id": "H3-0105",
+      "configuration": {
+        "batch": 1024,
+        "depth": 4,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "family": "training",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "0773e249f3b2fe37",
+      "sampling_stratum": {
+        "family": "training",
+        "scale": "near_device"
+      },
+      "size_proxy": 67108864,
+      "workload_group_id": "training|{\"batch\":1024,\"depth\":4,\"width\":8192}|float32"
+    },
+    {
+      "candidate_id": "H3-0106",
+      "configuration": {
+        "batch": 512,
+        "depth": 6,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "family": "training",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "5b2b0d16d67e72dd",
+      "sampling_stratum": {
+        "family": "training",
+        "scale": "near_device"
+      },
+      "size_proxy": 67108864,
+      "workload_group_id": "training|{\"batch\":512,\"depth\":6,\"width\":8192}|float32"
+    },
+    {
+      "candidate_id": "H3-0107",
+      "configuration": {
+        "batch": 2048,
+        "depth": 6,
+        "width": 8192
+      },
+      "dtype": "float32",
+      "family": "training",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "c193a86615cd9146",
+      "sampling_stratum": {
+        "family": "training",
+        "scale": "near_device"
+      },
+      "size_proxy": 67108864,
+      "workload_group_id": "training|{\"batch\":2048,\"depth\":6,\"width\":8192}|float32"
+    },
+    {
+      "candidate_id": "H3-0108",
+      "configuration": {
+        "heads": 2,
+        "layers": 1,
+        "sequence": 384,
+        "width": 384
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "bff7d3cb4e550422",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "small"
+      },
+      "size_proxy": 294912,
+      "workload_group_id": "transformer|{\"heads\":2,\"layers\":1,\"sequence\":384,\"width\":384}|float32"
+    },
+    {
+      "candidate_id": "H3-0109",
+      "configuration": {
+        "heads": 4,
+        "layers": 2,
+        "sequence": 512,
+        "width": 256
+      },
+      "dtype": "float16",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "99b3554c674ceb42",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "small"
+      },
+      "size_proxy": 1048576,
+      "workload_group_id": "transformer|{\"heads\":4,\"layers\":2,\"sequence\":512,\"width\":256}|float16"
+    },
+    {
+      "candidate_id": "H3-0110",
+      "configuration": {
+        "heads": 8,
+        "layers": 1,
+        "sequence": 384,
+        "width": 768
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "5e6d0dd43d1dc9df",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "small"
+      },
+      "size_proxy": 1179648,
+      "workload_group_id": "transformer|{\"heads\":8,\"layers\":1,\"sequence\":384,\"width\":768}|float32"
+    },
+    {
+      "candidate_id": "H3-0111",
+      "configuration": {
+        "heads": 2,
+        "layers": 2,
+        "sequence": 512,
+        "width": 256
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "a109983eaa36e5ef",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "small"
+      },
+      "size_proxy": 524288,
+      "workload_group_id": "transformer|{\"heads\":2,\"layers\":2,\"sequence\":512,\"width\":256}|float32"
+    },
+    {
+      "candidate_id": "H3-0112",
+      "configuration": {
+        "heads": 4,
+        "layers": 2,
+        "sequence": 384,
+        "width": 256
+      },
+      "dtype": "float16",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "a9f443a853e0f7e6",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "small"
+      },
+      "size_proxy": 589824,
+      "workload_group_id": "transformer|{\"heads\":4,\"layers\":2,\"sequence\":384,\"width\":256}|float16"
+    },
+    {
+      "candidate_id": "H3-0113",
+      "configuration": {
+        "heads": 8,
+        "layers": 1,
+        "sequence": 256,
+        "width": 768
+      },
+      "dtype": "float16",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "53686bcab918c3b5",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "small"
+      },
+      "size_proxy": 524288,
+      "workload_group_id": "transformer|{\"heads\":8,\"layers\":1,\"sequence\":256,\"width\":768}|float16"
+    },
+    {
+      "candidate_id": "H3-0114",
+      "configuration": {
+        "heads": 16,
+        "layers": 2,
+        "sequence": 1536,
+        "width": 1024
+      },
+      "dtype": "float16",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "5f5f15b806475811",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "medium"
+      },
+      "size_proxy": 37748736,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":2,\"sequence\":1536,\"width\":1024}|float16"
+    },
+    {
+      "candidate_id": "H3-0115",
+      "configuration": {
+        "heads": 4,
+        "layers": 1,
+        "sequence": 768,
+        "width": 1536
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "d7f7add4cf91defa",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "medium"
+      },
+      "size_proxy": 2359296,
+      "workload_group_id": "transformer|{\"heads\":4,\"layers\":1,\"sequence\":768,\"width\":1536}|float32"
+    },
+    {
+      "candidate_id": "H3-0116",
+      "configuration": {
+        "heads": 16,
+        "layers": 1,
+        "sequence": 1024,
+        "width": 1024
+      },
+      "dtype": "float16",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "69826346c7449a5e",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "medium"
+      },
+      "size_proxy": 16777216,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":1,\"sequence\":1024,\"width\":1024}|float16"
+    },
+    {
+      "candidate_id": "H3-0117",
+      "configuration": {
+        "heads": 16,
+        "layers": 2,
+        "sequence": 768,
+        "width": 768
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "ea030e6b5e8b0148",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "medium"
+      },
+      "size_proxy": 9437184,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":2,\"sequence\":768,\"width\":768}|float32"
+    },
+    {
+      "candidate_id": "H3-0118",
+      "configuration": {
+        "heads": 8,
+        "layers": 1,
+        "sequence": 1536,
+        "width": 768
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "52e9c96b11e902d2",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "medium"
+      },
+      "size_proxy": 18874368,
+      "workload_group_id": "transformer|{\"heads\":8,\"layers\":1,\"sequence\":1536,\"width\":768}|float32"
+    },
+    {
+      "candidate_id": "H3-0119",
+      "configuration": {
+        "heads": 16,
+        "layers": 2,
+        "sequence": 1536,
+        "width": 512
+      },
+      "dtype": "float16",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "70db303ca2b4eafe",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "medium"
+      },
+      "size_proxy": 37748736,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":2,\"sequence\":1536,\"width\":512}|float16"
+    },
+    {
+      "candidate_id": "H3-0120",
+      "configuration": {
+        "heads": 8,
+        "layers": 1,
+        "sequence": 2560,
+        "width": 1024
+      },
+      "dtype": "float16",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "e2d609e7f8efaebc",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "large"
+      },
+      "size_proxy": 52428800,
+      "workload_group_id": "transformer|{\"heads\":8,\"layers\":1,\"sequence\":2560,\"width\":1024}|float16"
+    },
+    {
+      "candidate_id": "H3-0121",
+      "configuration": {
+        "heads": 8,
+        "layers": 4,
+        "sequence": 2048,
+        "width": 1536
+      },
+      "dtype": "float16",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "f7626b094017f8e0",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "large"
+      },
+      "size_proxy": 33554432,
+      "workload_group_id": "transformer|{\"heads\":8,\"layers\":4,\"sequence\":2048,\"width\":1536}|float16"
+    },
+    {
+      "candidate_id": "H3-0122",
+      "configuration": {
+        "heads": 8,
+        "layers": 2,
+        "sequence": 2560,
+        "width": 1536
+      },
+      "dtype": "float16",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "e8d6686451f35c52",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "large"
+      },
+      "size_proxy": 52428800,
+      "workload_group_id": "transformer|{\"heads\":8,\"layers\":2,\"sequence\":2560,\"width\":1536}|float16"
+    },
+    {
+      "candidate_id": "H3-0123",
+      "configuration": {
+        "heads": 16,
+        "layers": 1,
+        "sequence": 2560,
+        "width": 1536
+      },
+      "dtype": "float16",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "1b7431710e8967a9",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "large"
+      },
+      "size_proxy": 104857600,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":1,\"sequence\":2560,\"width\":1536}|float16"
+    },
+    {
+      "candidate_id": "H3-0124",
+      "configuration": {
+        "heads": 8,
+        "layers": 3,
+        "sequence": 2048,
+        "width": 1536
+      },
+      "dtype": "float16",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "e1cfbc53b386bab1",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "large"
+      },
+      "size_proxy": 33554432,
+      "workload_group_id": "transformer|{\"heads\":8,\"layers\":3,\"sequence\":2048,\"width\":1536}|float16"
+    },
+    {
+      "candidate_id": "H3-0125",
+      "configuration": {
+        "heads": 8,
+        "layers": 3,
+        "sequence": 2560,
+        "width": 1536
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "712555dc77ea77a9",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "large"
+      },
+      "size_proxy": 52428800,
+      "workload_group_id": "transformer|{\"heads\":8,\"layers\":3,\"sequence\":2560,\"width\":1536}|float32"
+    },
+    {
+      "candidate_id": "H3-0126",
+      "configuration": {
+        "heads": 16,
+        "layers": 1,
+        "sequence": 2560,
+        "width": 4096
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "90aa72ad7b89a00d",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "near_device"
+      },
+      "size_proxy": 104857600,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":1,\"sequence\":2560,\"width\":4096}|float32"
+    },
+    {
+      "candidate_id": "H3-0127",
+      "configuration": {
+        "heads": 16,
+        "layers": 1,
+        "sequence": 3072,
+        "width": 3072
+      },
+      "dtype": "float32",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "14f7644755ba4a9b",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "near_device"
+      },
+      "size_proxy": 150994944,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":1,\"sequence\":3072,\"width\":3072}|float32"
+    },
+    {
+      "candidate_id": "H3-0128",
+      "configuration": {
+        "heads": 16,
+        "layers": 2,
+        "sequence": 3072,
+        "width": 2048
+      },
+      "dtype": "float16",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "388441730ca77de4",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "near_device"
+      },
+      "size_proxy": 150994944,
+      "workload_group_id": "transformer|{\"heads\":16,\"layers\":2,\"sequence\":3072,\"width\":2048}|float16"
+    },
+    {
+      "candidate_id": "H3-0129",
+      "configuration": {
+        "heads": 8,
+        "layers": 3,
+        "sequence": 3072,
+        "width": 2560
+      },
+      "dtype": "float16",
+      "family": "transformer",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "e77892bb726c2e08",
+      "sampling_stratum": {
+        "family": "transformer",
+        "scale": "near_device"
+      },
+      "size_proxy": 75497472,
+      "workload_group_id": "transformer|{\"heads\":8,\"layers\":3,\"sequence\":3072,\"width\":2560}|float16"
+    },
+    {
+      "candidate_id": "H3-0130",
+      "configuration": {
+        "batch": 16,
+        "depth": 3,
+        "width": 128
+      },
+      "dtype": "float16",
+      "family": "autodiff",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "4ce23e026bdd9e5b",
+      "sampling_stratum": {
+        "family": "autodiff",
+        "scale": "small"
+      },
+      "size_proxy": 16384,
+      "workload_group_id": "autodiff|{\"batch\":16,\"depth\":3,\"width\":128}|float16"
+    },
+    {
+      "candidate_id": "H3-0131",
+      "configuration": {
+        "batch": 64,
+        "depth": 3,
+        "width": 256
+      },
+      "dtype": "float32",
+      "family": "autodiff",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "099f338396eee365",
+      "sampling_stratum": {
+        "family": "autodiff",
+        "scale": "small"
+      },
+      "size_proxy": 65536,
+      "workload_group_id": "autodiff|{\"batch\":64,\"depth\":3,\"width\":256}|float32"
+    },
+    {
+      "candidate_id": "H3-0132",
+      "configuration": {
+        "batch": 16,
+        "depth": 4,
+        "width": 256
+      },
+      "dtype": "float16",
+      "family": "autodiff",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "4435ba3ad1ef65dd",
+      "sampling_stratum": {
+        "family": "autodiff",
+        "scale": "small"
+      },
+      "size_proxy": 65536,
+      "workload_group_id": "autodiff|{\"batch\":16,\"depth\":4,\"width\":256}|float16"
+    },
+    {
+      "candidate_id": "H3-0133",
+      "configuration": {
+        "batch": 16,
+        "depth": 1,
+        "width": 256
+      },
+      "dtype": "float16",
+      "family": "autodiff",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "a2653ccacb8588a6",
+      "sampling_stratum": {
+        "family": "autodiff",
+        "scale": "small"
+      },
+      "size_proxy": 65536,
+      "workload_group_id": "autodiff|{\"batch\":16,\"depth\":1,\"width\":256}|float16"
+    },
+    {
+      "candidate_id": "H3-0134",
+      "configuration": {
+        "batch": 512,
+        "depth": 4,
+        "width": 1536
+      },
+      "dtype": "float16",
+      "family": "autodiff",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "199edc30671c7fba",
+      "sampling_stratum": {
+        "family": "autodiff",
+        "scale": "medium"
+      },
+      "size_proxy": 2359296,
+      "workload_group_id": "autodiff|{\"batch\":512,\"depth\":4,\"width\":1536}|float16"
+    },
+    {
+      "candidate_id": "H3-0135",
+      "configuration": {
+        "batch": 64,
+        "depth": 4,
+        "width": 1536
+      },
+      "dtype": "float32",
+      "family": "autodiff",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "548427c0125d2ca5",
+      "sampling_stratum": {
+        "family": "autodiff",
+        "scale": "medium"
+      },
+      "size_proxy": 2359296,
+      "workload_group_id": "autodiff|{\"batch\":64,\"depth\":4,\"width\":1536}|float32"
+    },
+    {
+      "candidate_id": "H3-0136",
+      "configuration": {
+        "batch": 128,
+        "depth": 2,
+        "width": 1024
+      },
+      "dtype": "float16",
+      "family": "autodiff",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "5625a4e85b732c81",
+      "sampling_stratum": {
+        "family": "autodiff",
+        "scale": "medium"
+      },
+      "size_proxy": 1048576,
+      "workload_group_id": "autodiff|{\"batch\":128,\"depth\":2,\"width\":1024}|float16"
+    },
+    {
+      "candidate_id": "H3-0137",
+      "configuration": {
+        "batch": 256,
+        "depth": 4,
+        "width": 768
+      },
+      "dtype": "float32",
+      "family": "autodiff",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "271680aaef87ab77",
+      "sampling_stratum": {
+        "family": "autodiff",
+        "scale": "medium"
+      },
+      "size_proxy": 589824,
+      "workload_group_id": "autodiff|{\"batch\":256,\"depth\":4,\"width\":768}|float32"
+    },
+    {
+      "candidate_id": "H3-0138",
+      "configuration": {
+        "batch": 512,
+        "depth": 4,
+        "width": 512
+      },
+      "dtype": "float16",
+      "family": "autodiff",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "0a00825a70074403",
+      "sampling_stratum": {
+        "family": "autodiff",
+        "scale": "medium"
+      },
+      "size_proxy": 262144,
+      "workload_group_id": "autodiff|{\"batch\":512,\"depth\":4,\"width\":512}|float16"
+    },
+    {
+      "candidate_id": "H3-0139",
+      "configuration": {
+        "batch": 512,
+        "depth": 2,
+        "width": 4096
+      },
+      "dtype": "float32",
+      "family": "autodiff",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "3b710bd224cfe3b7",
+      "sampling_stratum": {
+        "family": "autodiff",
+        "scale": "large"
+      },
+      "size_proxy": 16777216,
+      "workload_group_id": "autodiff|{\"batch\":512,\"depth\":2,\"width\":4096}|float32"
+    },
+    {
+      "candidate_id": "H3-0140",
+      "configuration": {
+        "batch": 256,
+        "depth": 6,
+        "width": 3072
+      },
+      "dtype": "float32",
+      "family": "autodiff",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "f085d17bbbd7cc5c",
+      "sampling_stratum": {
+        "family": "autodiff",
+        "scale": "large"
+      },
+      "size_proxy": 9437184,
+      "workload_group_id": "autodiff|{\"batch\":256,\"depth\":6,\"width\":3072}|float32"
+    },
+    {
+      "candidate_id": "H3-0141",
+      "configuration": {
+        "batch": 2048,
+        "depth": 2,
+        "width": 2048
+      },
+      "dtype": "float16",
+      "family": "autodiff",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "1fee9de4abbde17f",
+      "sampling_stratum": {
+        "family": "autodiff",
+        "scale": "large"
+      },
+      "size_proxy": 4194304,
+      "workload_group_id": "autodiff|{\"batch\":2048,\"depth\":2,\"width\":2048}|float16"
+    },
+    {
+      "candidate_id": "H3-0142",
+      "configuration": {
+        "batch": 2048,
+        "depth": 2,
+        "width": 3072
+      },
+      "dtype": "float16",
+      "family": "autodiff",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "df02252f174010f6",
+      "sampling_stratum": {
+        "family": "autodiff",
+        "scale": "large"
+      },
+      "size_proxy": 9437184,
+      "workload_group_id": "autodiff|{\"batch\":2048,\"depth\":2,\"width\":3072}|float16"
+    },
+    {
+      "candidate_id": "H3-0143",
+      "configuration": {
+        "batch": 2048,
+        "depth": 2,
+        "width": 6144
+      },
+      "dtype": "float32",
+      "family": "autodiff",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "4c574591a9da6a75",
+      "sampling_stratum": {
+        "family": "autodiff",
+        "scale": "near_device"
+      },
+      "size_proxy": 37748736,
+      "workload_group_id": "autodiff|{\"batch\":2048,\"depth\":2,\"width\":6144}|float32"
+    },
+    {
+      "candidate_id": "H3-0144",
+      "configuration": {
+        "batch": 512,
+        "depth": 2,
+        "width": 6144
+      },
+      "dtype": "float32",
+      "family": "autodiff",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "a97bf000144561dd",
+      "sampling_stratum": {
+        "family": "autodiff",
+        "scale": "near_device"
+      },
+      "size_proxy": 37748736,
+      "workload_group_id": "autodiff|{\"batch\":512,\"depth\":2,\"width\":6144}|float32"
+    },
+    {
+      "candidate_id": "H3-0145",
+      "configuration": {
+        "batch": 512,
+        "depth": 4,
+        "width": 6144
+      },
+      "dtype": "float32",
+      "family": "autodiff",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "d25924f649590f87",
+      "sampling_stratum": {
+        "family": "autodiff",
+        "scale": "near_device"
+      },
+      "size_proxy": 37748736,
+      "workload_group_id": "autodiff|{\"batch\":512,\"depth\":4,\"width\":6144}|float32"
+    },
+    {
+      "candidate_id": "H3-0146",
+      "configuration": {
+        "batch": 1,
+        "depth": 2,
+        "length": 256,
+        "width": 64
+      },
+      "dtype": "float16",
+      "family": "scan",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "af4e9188e09f0623",
+      "sampling_stratum": {
+        "family": "scan",
+        "scale": "small"
+      },
+      "size_proxy": 16384,
+      "workload_group_id": "scan|{\"batch\":1,\"depth\":2,\"length\":256,\"width\":64}|float16"
+    },
+    {
+      "candidate_id": "H3-0147",
+      "configuration": {
+        "batch": 2,
+        "depth": 8,
+        "length": 256,
+        "width": 128
+      },
+      "dtype": "float16",
+      "family": "scan",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "23a61294dcbe7ec8",
+      "sampling_stratum": {
+        "family": "scan",
+        "scale": "small"
+      },
+      "size_proxy": 65536,
+      "workload_group_id": "scan|{\"batch\":2,\"depth\":8,\"length\":256,\"width\":128}|float16"
+    },
+    {
+      "candidate_id": "H3-0148",
+      "configuration": {
+        "batch": 4,
+        "depth": 2,
+        "length": 128,
+        "width": 64
+      },
+      "dtype": "float16",
+      "family": "scan",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "d47fd33eda2883d6",
+      "sampling_stratum": {
+        "family": "scan",
+        "scale": "small"
+      },
+      "size_proxy": 32768,
+      "workload_group_id": "scan|{\"batch\":4,\"depth\":2,\"length\":128,\"width\":64}|float16"
+    },
+    {
+      "candidate_id": "H3-0149",
+      "configuration": {
+        "batch": 4,
+        "depth": 1,
+        "length": 1024,
+        "width": 128
+      },
+      "dtype": "float16",
+      "family": "scan",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "c1ecd553ec617420",
+      "sampling_stratum": {
+        "family": "scan",
+        "scale": "medium"
+      },
+      "size_proxy": 524288,
+      "workload_group_id": "scan|{\"batch\":4,\"depth\":1,\"length\":1024,\"width\":128}|float16"
+    },
+    {
+      "candidate_id": "H3-0150",
+      "configuration": {
+        "batch": 16,
+        "depth": 1,
+        "length": 512,
+        "width": 256
+      },
+      "dtype": "float32",
+      "family": "scan",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "0746ab4ec46f0fdd",
+      "sampling_stratum": {
+        "family": "scan",
+        "scale": "medium"
+      },
+      "size_proxy": 2097152,
+      "workload_group_id": "scan|{\"batch\":16,\"depth\":1,\"length\":512,\"width\":256}|float32"
+    },
+    {
+      "candidate_id": "H3-0151",
+      "configuration": {
+        "batch": 16,
+        "depth": 4,
+        "length": 2048,
+        "width": 128
+      },
+      "dtype": "float16",
+      "family": "scan",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "5f1141c1acfb3ea1",
+      "sampling_stratum": {
+        "family": "scan",
+        "scale": "medium"
+      },
+      "size_proxy": 4194304,
+      "workload_group_id": "scan|{\"batch\":16,\"depth\":4,\"length\":2048,\"width\":128}|float16"
+    },
+    {
+      "candidate_id": "H3-0152",
+      "configuration": {
+        "batch": 4,
+        "depth": 4,
+        "length": 2048,
+        "width": 128
+      },
+      "dtype": "float16",
+      "family": "scan",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "caa8b8a3d34c49e1",
+      "sampling_stratum": {
+        "family": "scan",
+        "scale": "medium"
+      },
+      "size_proxy": 1048576,
+      "workload_group_id": "scan|{\"batch\":4,\"depth\":4,\"length\":2048,\"width\":128}|float16"
+    },
+    {
+      "candidate_id": "H3-0153",
+      "configuration": {
+        "batch": 16,
+        "depth": 8,
+        "length": 4096,
+        "width": 512
+      },
+      "dtype": "float32",
+      "family": "scan",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "3b9d7584ec5d3d50",
+      "sampling_stratum": {
+        "family": "scan",
+        "scale": "large"
+      },
+      "size_proxy": 33554432,
+      "workload_group_id": "scan|{\"batch\":16,\"depth\":8,\"length\":4096,\"width\":512}|float32"
+    },
+    {
+      "candidate_id": "H3-0154",
+      "configuration": {
+        "batch": 16,
+        "depth": 1,
+        "length": 2048,
+        "width": 512
+      },
+      "dtype": "float32",
+      "family": "scan",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "24c31f31e18706f2",
+      "sampling_stratum": {
+        "family": "scan",
+        "scale": "large"
+      },
+      "size_proxy": 16777216,
+      "workload_group_id": "scan|{\"batch\":16,\"depth\":1,\"length\":2048,\"width\":512}|float32"
+    },
+    {
+      "candidate_id": "H3-0155",
+      "configuration": {
+        "batch": 32,
+        "depth": 2,
+        "length": 2048,
+        "width": 256
+      },
+      "dtype": "float32",
+      "family": "scan",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "4c5d7928959253a7",
+      "sampling_stratum": {
+        "family": "scan",
+        "scale": "large"
+      },
+      "size_proxy": 16777216,
+      "workload_group_id": "scan|{\"batch\":32,\"depth\":2,\"length\":2048,\"width\":256}|float32"
+    },
+    {
+      "candidate_id": "H3-0156",
+      "configuration": {
+        "batch": 64,
+        "depth": 1,
+        "length": 4096,
+        "width": 1024
+      },
+      "dtype": "float32",
+      "family": "scan",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "7d844b3db32cd9db",
+      "sampling_stratum": {
+        "family": "scan",
+        "scale": "near_device"
+      },
+      "size_proxy": 268435456,
+      "workload_group_id": "scan|{\"batch\":64,\"depth\":1,\"length\":4096,\"width\":1024}|float32"
+    },
+    {
+      "candidate_id": "H3-0157",
+      "configuration": {
+        "batch": 64,
+        "depth": 4,
+        "length": 4096,
+        "width": 1024
+      },
+      "dtype": "float32",
+      "family": "scan",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "ca44d4717c3ae574",
+      "sampling_stratum": {
+        "family": "scan",
+        "scale": "near_device"
+      },
+      "size_proxy": 268435456,
+      "workload_group_id": "scan|{\"batch\":64,\"depth\":4,\"length\":4096,\"width\":1024}|float32"
+    },
+    {
+      "candidate_id": "H3-0158",
+      "configuration": {
+        "depth": 3,
+        "k": 128,
+        "m": 512,
+        "n": 128
+      },
+      "dtype": "float16",
+      "family": "matmul",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "e22d0e7f08d1d13c",
+      "sampling_stratum": {
+        "family": "matmul",
+        "scale": "small"
+      },
+      "size_proxy": 65536,
+      "workload_group_id": "matmul|{\"depth\":3,\"k\":128,\"m\":512,\"n\":128}|float16"
+    },
+    {
+      "candidate_id": "H3-0159",
+      "configuration": {
+        "depth": 2,
+        "k": 512,
+        "m": 128,
+        "n": 128
+      },
+      "dtype": "float32",
+      "family": "matmul",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "4a5d9f5a35dd941e",
+      "sampling_stratum": {
+        "family": "matmul",
+        "scale": "small"
+      },
+      "size_proxy": 65536,
+      "workload_group_id": "matmul|{\"depth\":2,\"k\":512,\"m\":128,\"n\":128}|float32"
+    },
+    {
+      "candidate_id": "H3-0160",
+      "configuration": {
+        "depth": 2,
+        "k": 128,
+        "m": 256,
+        "n": 512
+      },
+      "dtype": "float16",
+      "family": "matmul",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "582588888a9a16b9",
+      "sampling_stratum": {
+        "family": "matmul",
+        "scale": "small"
+      },
+      "size_proxy": 131072,
+      "workload_group_id": "matmul|{\"depth\":2,\"k\":128,\"m\":256,\"n\":512}|float16"
+    },
+    {
+      "candidate_id": "H3-0161",
+      "configuration": {
+        "depth": 1,
+        "k": 1536,
+        "m": 1024,
+        "n": 512
+      },
+      "dtype": "float32",
+      "family": "matmul",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "1dd4748377e9ce85",
+      "sampling_stratum": {
+        "family": "matmul",
+        "scale": "medium"
+      },
+      "size_proxy": 1572864,
+      "workload_group_id": "matmul|{\"depth\":1,\"k\":1536,\"m\":1024,\"n\":512}|float32"
+    },
+    {
+      "candidate_id": "H3-0162",
+      "configuration": {
+        "depth": 3,
+        "k": 512,
+        "m": 768,
+        "n": 512
+      },
+      "dtype": "float32",
+      "family": "matmul",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "5533fe9902b8968a",
+      "sampling_stratum": {
+        "family": "matmul",
+        "scale": "medium"
+      },
+      "size_proxy": 393216,
+      "workload_group_id": "matmul|{\"depth\":3,\"k\":512,\"m\":768,\"n\":512}|float32"
+    },
+    {
+      "candidate_id": "H3-0163",
+      "configuration": {
+        "depth": 3,
+        "k": 1536,
+        "m": 1024,
+        "n": 1024
+      },
+      "dtype": "float32",
+      "family": "matmul",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "75cd36b30b51e525",
+      "sampling_stratum": {
+        "family": "matmul",
+        "scale": "medium"
+      },
+      "size_proxy": 1572864,
+      "workload_group_id": "matmul|{\"depth\":3,\"k\":1536,\"m\":1024,\"n\":1024}|float32"
+    },
+    {
+      "candidate_id": "H3-0164",
+      "configuration": {
+        "depth": 2,
+        "k": 3072,
+        "m": 1024,
+        "n": 2048
+      },
+      "dtype": "float32",
+      "family": "matmul",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "5dbf550a051b50df",
+      "sampling_stratum": {
+        "family": "matmul",
+        "scale": "large"
+      },
+      "size_proxy": 6291456,
+      "workload_group_id": "matmul|{\"depth\":2,\"k\":3072,\"m\":1024,\"n\":2048}|float32"
+    },
+    {
+      "candidate_id": "H3-0165",
+      "configuration": {
+        "depth": 3,
+        "k": 2048,
+        "m": 2048,
+        "n": 3072
+      },
+      "dtype": "float32",
+      "family": "matmul",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "9a76ef0b45cd8247",
+      "sampling_stratum": {
+        "family": "matmul",
+        "scale": "large"
+      },
+      "size_proxy": 6291456,
+      "workload_group_id": "matmul|{\"depth\":3,\"k\":2048,\"m\":2048,\"n\":3072}|float32"
+    },
+    {
+      "candidate_id": "H3-0166",
+      "configuration": {
+        "depth": 3,
+        "k": 3072,
+        "m": 1024,
+        "n": 3072
+      },
+      "dtype": "float16",
+      "family": "matmul",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "e91c6699d8820007",
+      "sampling_stratum": {
+        "family": "matmul",
+        "scale": "large"
+      },
+      "size_proxy": 9437184,
+      "workload_group_id": "matmul|{\"depth\":3,\"k\":3072,\"m\":1024,\"n\":3072}|float16"
+    },
+    {
+      "candidate_id": "H3-0167",
+      "configuration": {
+        "depth": 1,
+        "k": 2048,
+        "m": 4096,
+        "n": 3072
+      },
+      "dtype": "float16",
+      "family": "matmul",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "5038402a51ea3168",
+      "sampling_stratum": {
+        "family": "matmul",
+        "scale": "near_device"
+      },
+      "size_proxy": 12582912,
+      "workload_group_id": "matmul|{\"depth\":1,\"k\":2048,\"m\":4096,\"n\":3072}|float16"
+    },
+    {
+      "candidate_id": "H3-0168",
+      "configuration": {
+        "depth": 3,
+        "k": 2048,
+        "m": 4096,
+        "n": 4096
+      },
+      "dtype": "float16",
+      "family": "matmul",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "bf7ad4cda4b8a31e",
+      "sampling_stratum": {
+        "family": "matmul",
+        "scale": "near_device"
+      },
+      "size_proxy": 16777216,
+      "workload_group_id": "matmul|{\"depth\":3,\"k\":2048,\"m\":4096,\"n\":4096}|float16"
+    },
+    {
+      "candidate_id": "H3-0169",
+      "configuration": {
+        "batch": 4,
+        "depth": 2,
+        "length": 128,
+        "width": 128
+      },
+      "dtype": "float32",
+      "family": "reduction",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "38885ce3f213d866",
+      "sampling_stratum": {
+        "family": "reduction",
+        "scale": "small"
+      },
+      "size_proxy": 65536,
+      "workload_group_id": "reduction|{\"batch\":4,\"depth\":2,\"length\":128,\"width\":128}|float32"
+    },
+    {
+      "candidate_id": "H3-0170",
+      "configuration": {
+        "batch": 1,
+        "depth": 2,
+        "length": 128,
+        "width": 32
+      },
+      "dtype": "float16",
+      "family": "reduction",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "47e04030d426c498",
+      "sampling_stratum": {
+        "family": "reduction",
+        "scale": "small"
+      },
+      "size_proxy": 4096,
+      "workload_group_id": "reduction|{\"batch\":1,\"depth\":2,\"length\":128,\"width\":32}|float16"
+    },
+    {
+      "candidate_id": "H3-0171",
+      "configuration": {
+        "batch": 1,
+        "depth": 2,
+        "length": 128,
+        "width": 64
+      },
+      "dtype": "float16",
+      "family": "reduction",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "4ab357a52609f6cb",
+      "sampling_stratum": {
+        "family": "reduction",
+        "scale": "small"
+      },
+      "size_proxy": 8192,
+      "workload_group_id": "reduction|{\"batch\":1,\"depth\":2,\"length\":128,\"width\":64}|float16"
+    },
+    {
+      "candidate_id": "H3-0172",
+      "configuration": {
+        "batch": 16,
+        "depth": 1,
+        "length": 2048,
+        "width": 128
+      },
+      "dtype": "float32",
+      "family": "reduction",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "d882de7da9f199d5",
+      "sampling_stratum": {
+        "family": "reduction",
+        "scale": "medium"
+      },
+      "size_proxy": 4194304,
+      "workload_group_id": "reduction|{\"batch\":16,\"depth\":1,\"length\":2048,\"width\":128}|float32"
+    },
+    {
+      "candidate_id": "H3-0173",
+      "configuration": {
+        "batch": 8,
+        "depth": 1,
+        "length": 512,
+        "width": 64
+      },
+      "dtype": "float16",
+      "family": "reduction",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "6df6d93017a2f5f7",
+      "sampling_stratum": {
+        "family": "reduction",
+        "scale": "medium"
+      },
+      "size_proxy": 262144,
+      "workload_group_id": "reduction|{\"batch\":8,\"depth\":1,\"length\":512,\"width\":64}|float16"
+    },
+    {
+      "candidate_id": "H3-0174",
+      "configuration": {
+        "batch": 16,
+        "depth": 4,
+        "length": 512,
+        "width": 256
+      },
+      "dtype": "float32",
+      "family": "reduction",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "845e080ca46ee135",
+      "sampling_stratum": {
+        "family": "reduction",
+        "scale": "medium"
+      },
+      "size_proxy": 2097152,
+      "workload_group_id": "reduction|{\"batch\":16,\"depth\":4,\"length\":512,\"width\":256}|float32"
+    },
+    {
+      "candidate_id": "H3-0175",
+      "configuration": {
+        "batch": 8,
+        "depth": 8,
+        "length": 4096,
+        "width": 128
+      },
+      "dtype": "float32",
+      "family": "reduction",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "b0597acad6c00ee5",
+      "sampling_stratum": {
+        "family": "reduction",
+        "scale": "large"
+      },
+      "size_proxy": 4194304,
+      "workload_group_id": "reduction|{\"batch\":8,\"depth\":8,\"length\":4096,\"width\":128}|float32"
+    },
+    {
+      "candidate_id": "H3-0176",
+      "configuration": {
+        "batch": 32,
+        "depth": 1,
+        "length": 2048,
+        "width": 512
+      },
+      "dtype": "float32",
+      "family": "reduction",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "6bca95381aebda13",
+      "sampling_stratum": {
+        "family": "reduction",
+        "scale": "large"
+      },
+      "size_proxy": 33554432,
+      "workload_group_id": "reduction|{\"batch\":32,\"depth\":1,\"length\":2048,\"width\":512}|float32"
+    },
+    {
+      "candidate_id": "H3-0177",
+      "configuration": {
+        "batch": 16,
+        "depth": 4,
+        "length": 2048,
+        "width": 256
+      },
+      "dtype": "float32",
+      "family": "reduction",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "4b177ccc47ca273c",
+      "sampling_stratum": {
+        "family": "reduction",
+        "scale": "large"
+      },
+      "size_proxy": 8388608,
+      "workload_group_id": "reduction|{\"batch\":16,\"depth\":4,\"length\":2048,\"width\":256}|float32"
+    },
+    {
+      "candidate_id": "H3-0178",
+      "configuration": {
+        "batch": 64,
+        "depth": 4,
+        "length": 4096,
+        "width": 256
+      },
+      "dtype": "float16",
+      "family": "reduction",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "a8e9e4ee3c3fdbcb",
+      "sampling_stratum": {
+        "family": "reduction",
+        "scale": "near_device"
+      },
+      "size_proxy": 67108864,
+      "workload_group_id": "reduction|{\"batch\":64,\"depth\":4,\"length\":4096,\"width\":256}|float16"
+    },
+    {
+      "candidate_id": "H3-0179",
+      "configuration": {
+        "batch": 32,
+        "depth": 4,
+        "length": 8192,
+        "width": 1024
+      },
+      "dtype": "float16",
+      "family": "reduction",
+      "generator_seed": 20261108,
+      "graph_fingerprint": "4aa7e35f4e0092d6",
+      "sampling_stratum": {
+        "family": "reduction",
+        "scale": "near_device"
+      },
+      "size_proxy": 268435456,
+      "workload_group_id": "reduction|{\"batch\":32,\"depth\":4,\"length\":8192,\"width\":1024}|float16"
+    }
+  ],
+  "selected_count": 180,
+  "selection_independent_of_model_predictions": true,
+  "status": "FROZEN_BEFORE_SCORING"
+}
