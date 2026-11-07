@@ -2,6 +2,8 @@
 
 ## Current frontier
 
+2026-11-07 RESULT (COMPUTATIONALLY VERIFIED): the fresh uniform 600 s campaign completed 200/200 recipes, 18/18 pilots FIT, 157/157 LIKELY_FIT recipes FIT, zero false-safe OOMs, zero timeouts (176 FIT, 17 execution OOM, 7 compile OOM). Independent audits passed on Windows and Linux. Single run, same population as before; public API stays disabled. See `research/GPU_UNIFORM_QUALIFICATION_RESULTS_2026-11-07.md`. Next: reproduce once, then the separate release review.
+
 2026-11-07 preflight (OBSERVED snapshot): the storage blocker has cleared (C: 13.98 GB free vs 512 MiB required), the RTX 3050 is idle, the frozen validation manifest still validates against current sources, and WSL starts. The 200-recipe campaign is still NOT_RUN, with zero GPU trials. Residual risk: the WSL swap file is on D:, which has about 3 MB free; the first WSL start failed on swap creation and a retry succeeded, so free D: space or move the swap before a 3-hour run. Release criteria were predeclared in `research/RELEASE_DECISION_CRITERIA_2026-11-07.md`. The new preflight lives outside the source-hashed set (`experiments/oom_risk_gpu_uniform_launch_preflight.py`).
 
 The fresh uniform 600-second qualification runner and portable auditor are implemented and committed, with 102 new regression tests. Full Windows and Linux CPU suites each passed 549 tests, zero failures/errors/skips, with source-bound JUnit evidence. The new 200-recipe GPU campaign is NOT_RUN: launch preflight measured 475.6 MiB free on C:, below the frozen 512 MiB requirement. Public OOM-risk exports stay disabled. See `research/GPU_UNIFORM_QUALIFICATION_READINESS_2026-10-21.md`; storage/telemetry measurements are timestamped snapshots and need a fresh check before launch.
