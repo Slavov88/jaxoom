@@ -1,0 +1,29 @@
+{
+  "blockers": [],
+  "checks": {
+    "gpu_idle": true,
+    "host_storage": true,
+    "wsl_starts": true
+  },
+  "fresh_campaign_started": false,
+  "gpu": {
+    "driver": "566.07",
+    "idle": true,
+    "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "ok": true,
+    "total_mib": 4096,
+    "used_mib": 0,
+    "util_pct": 0
+  },
+  "gpu_runtime_trials": 0,
+  "host_free_bytes": 13980704768,
+  "min_host_free_bytes": 536870912,
+  "observed_at_utc": "2026-11-07T18:29:57.867845+00:00",
+  "public_api_enabled": false,
+  "status": "READY",
+  "wsl_detail": "",
+  "wsl_exit_code": 0,
+  "wsl_python": "/home/slavov/.venvs/jaxoom-cuda-20261021/env/bin/python",
+  "wsl_swap_drive_free_bytes": 3428352,
+  "wsl_swapfile": "D:\\03_Projects\\Competitions\\quantum-circuit-compilation\\runtime\\wsl-swap.vhdx"
+}
