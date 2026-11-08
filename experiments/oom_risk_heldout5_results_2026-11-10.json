@@ -1,0 +1,1671 @@
+{
+  "plan_hash": "0689d8654a6ee860d75edeee81ea86c7e41a808f9c46625fc54e4867c4be7e90",
+  "prediction_hash": "f7ee5c1ec96b6229a85d3f2e4b224ca05810ad3b653b46f1e0559cf4e388f9e9",
+  "results": [
+    {
+      "aggregate_score": 0.32745182444097143,
+      "campaign_wall_seconds": 6.642882585525513,
+      "candidate_id": "H5-0000",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 80,
+        "heads": 4,
+        "sequence": 5120
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "57d29c3481acac2a",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1185, 2780, 566.07",
+        "processes": "43924, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.19382141280028084,
+      "v3_probability": 0.16835199909328327,
+      "wall_seconds": 5.060075044631958,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":80,\"heads\":4,\"sequence\":5120}|float16"
+    },
+    {
+      "aggregate_score": 0.32210809566496285,
+      "campaign_wall_seconds": 5.137866020202637,
+      "candidate_id": "H5-0001",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 96,
+        "heads": 4,
+        "sequence": 3584
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "9d16aa270d393ff0",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1189, 2776, 566.07",
+        "processes": "44045, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.19197654388500127,
+      "v3_probability": 0.16786272397459134,
+      "wall_seconds": 3.619699239730835,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":96,\"heads\":4,\"sequence\":3584}|float16"
+    },
+    {
+      "aggregate_score": 0.1596248124376283,
+      "campaign_wall_seconds": 6.196265935897827,
+      "candidate_id": "H5-0002",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 128,
+        "heads": 4,
+        "sequence": 3072
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "d49d4370b35a170b",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1183, 2782, 566.07",
+        "processes": "44146, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.1862295346222119,
+      "v3_probability": 0.16478220430615342,
+      "wall_seconds": 4.599730730056763,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":128,\"heads\":4,\"sequence\":3072}|float32"
+    },
+    {
+      "aggregate_score": 0.3264339713407793,
+      "campaign_wall_seconds": 5.711385488510132,
+      "candidate_id": "H5-0003",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 32,
+        "heads": 4,
+        "sequence": 5120
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "cceb2d0618467af6",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1181, 2784, 566.07",
+        "processes": "44254, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.19179753659109283,
+      "v3_probability": 0.16645059224378717,
+      "wall_seconds": 4.115633964538574,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":32,\"heads\":4,\"sequence\":5120}|float16"
+    },
+    {
+      "aggregate_score": 0.3271125400742407,
+      "campaign_wall_seconds": 5.613203287124634,
+      "candidate_id": "H5-0004",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 4,
+        "sequence": 5120
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "e6e375647a0ec223",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1185, 2780, 566.07",
+        "processes": "44368, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.19331427605881374,
+      "v3_probability": 0.1678747968542772,
+      "wall_seconds": 4.028186559677124,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":64,\"heads\":4,\"sequence\":5120}|float16"
+    },
+    {
+      "aggregate_score": 0.3567320652898312,
+      "campaign_wall_seconds": 6.11294412612915,
+      "candidate_id": "H5-0005",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 128,
+        "heads": 12,
+        "sequence": 3072
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "a641224a3ca57f52",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1197, 2768, 566.07",
+        "processes": "44488, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.1992752172966808,
+      "v3_probability": 0.17579215951666263,
+      "wall_seconds": 4.679165363311768,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":128,\"heads\":12,\"sequence\":3072}|float16"
+    },
+    {
+      "aggregate_score": 0.16057904971905843,
+      "campaign_wall_seconds": 5.834712266921997,
+      "candidate_id": "H5-0006",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 4,
+        "sequence": 3584
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "256d086c280ad8df",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 669, 3296, 566.07",
+        "processes": "44605, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.16034719467023867,
+      "v3_probability": 0.1360418341882406,
+      "wall_seconds": 4.311932563781738,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":64,\"heads\":4,\"sequence\":3584}|float16"
+    },
+    {
+      "aggregate_score": 0.3284696775411635,
+      "campaign_wall_seconds": 6.633252859115601,
+      "candidate_id": "H5-0007",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 128,
+        "heads": 4,
+        "sequence": 5120
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "44ff156a4b377608",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1157, 2808, 566.07",
+        "processes": "44710, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.19493553099527836,
+      "v3_probability": 0.16940263652324936,
+      "wall_seconds": 5.162945032119751,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":128,\"heads\":4,\"sequence\":5120}|float16"
+    },
+    {
+      "aggregate_score": 0.32677325570751,
+      "campaign_wall_seconds": 6.017801284790039,
+      "candidate_id": "H5-0008",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 48,
+        "heads": 4,
+        "sequence": 5120
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "84a15a19e673a19a",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1181, 2784, 566.07",
+        "processes": "44835, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.19267563115342667,
+      "v3_probability": 0.16727461919022554,
+      "wall_seconds": 4.548210859298706,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":48,\"heads\":4,\"sequence\":5120}|float16"
+    },
+    {
+      "aggregate_score": 0.21520383276270186,
+      "campaign_wall_seconds": 5.936076402664185,
+      "candidate_id": "H5-0009",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 80,
+        "heads": 4,
+        "sequence": 3584
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "5d871e76bf550af3",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1151, 2814, 566.07",
+        "processes": "44947, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.19713536916431496,
+      "v3_probability": 0.17567941503069578,
+      "wall_seconds": 4.426694869995117,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":80,\"heads\":4,\"sequence\":3584}|float32"
+    },
+    {
+      "aggregate_score": 0.21377883842243292,
+      "campaign_wall_seconds": 4.9343345165252686,
+      "candidate_id": "H5-0010",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 32,
+        "heads": 4,
+        "sequence": 3584
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "438d3b226ebb7beb",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1175, 2790, 566.07",
+        "processes": "45051, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.1950279786604344,
+      "v3_probability": 0.1736550443993166,
+      "wall_seconds": 3.453862190246582,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":32,\"heads\":4,\"sequence\":3584}|float32"
+    },
+    {
+      "aggregate_score": 0.11891068842994375,
+      "campaign_wall_seconds": 5.995448112487793,
+      "candidate_id": "H5-0011",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 128,
+        "heads": 4,
+        "sequence": 3072
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "ad18234a0386db2a",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 641, 3324, 566.07",
+        "processes": "45149, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.15376055339007622,
+      "v3_probability": 0.12983088588784647,
+      "wall_seconds": 4.521945953369141,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":128,\"heads\":4,\"sequence\":3072}|float16"
+    },
+    {
+      "aggregate_score": 0.3230580918918088,
+      "campaign_wall_seconds": 5.784712314605713,
+      "candidate_id": "H5-0012",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 128,
+        "heads": 8,
+        "sequence": 3584
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "cf4ae99fbba6a46a",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1189, 2776, 566.07",
+        "processes": "45271, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.19269854737253025,
+      "v3_probability": 0.16854877857623496,
+      "wall_seconds": 4.322386264801025,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":128,\"heads\":8,\"sequence\":3584}|float16"
+    },
+    {
+      "aggregate_score": 0.32068310132469385,
+      "campaign_wall_seconds": 4.871187925338745,
+      "candidate_id": "H5-0013",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 48,
+        "heads": 8,
+        "sequence": 3584
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "1b26b9d6776eb4d3",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1185, 2780, 566.07",
+        "processes": "45388, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.1903647067326236,
+      "v3_probability": 0.16633673257998077,
+      "wall_seconds": 3.3939075469970703,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":48,\"heads\":8,\"sequence\":3584}|float16"
+    },
+    {
+      "aggregate_score": 0.16105404783248142,
+      "campaign_wall_seconds": 5.42427396774292,
+      "candidate_id": "H5-0014",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 96,
+        "heads": 4,
+        "sequence": 3584
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "b5fcfade70fe380a",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 673, 3292, 566.07",
+        "processes": "45486, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.16112644282338565,
+      "v3_probability": 0.1367557792848486,
+      "wall_seconds": 3.981121063232422,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":96,\"heads\":4,\"sequence\":3584}|float16"
+    },
+    {
+      "aggregate_score": 0.2644764049211685,
+      "campaign_wall_seconds": 4.884790658950806,
+      "candidate_id": "H5-0015",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 32,
+        "heads": 4,
+        "sequence": 4608
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "61d6e340768e7671",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1181, 2784, 566.07",
+        "processes": "45604, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.17915796950888077,
+      "v3_probability": 0.15410582623847616,
+      "wall_seconds": 3.407461643218994,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":32,\"heads\":4,\"sequence\":4608}|float16"
+    },
+    {
+      "aggregate_score": 0.265697828641399,
+      "campaign_wall_seconds": 5.681455135345459,
+      "candidate_id": "H5-0016",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 96,
+        "heads": 4,
+        "sequence": 4608
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "9da8bf08b8e22165",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1185, 2780, 566.07",
+        "processes": "45701, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.18146251296570132,
+      "v3_probability": 0.15625025854034635,
+      "wall_seconds": 4.1682960987091064,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":96,\"heads\":4,\"sequence\":4608}|float16"
+    },
+    {
+      "aggregate_score": 0.2090330983427872,
+      "campaign_wall_seconds": 4.8940110206604,
+      "candidate_id": "H5-0017",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 32,
+        "heads": 4,
+        "sequence": 4096
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "bcf63670fd4a8a40",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 669, 3296, 566.07",
+        "processes": "45819, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.16830835314566847,
+      "v3_probability": 0.14365339404310376,
+      "wall_seconds": 3.4799718856811523,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":32,\"heads\":4,\"sequence\":4096}|float16"
+    },
+    {
+      "aggregate_score": 0.32163309755153985,
+      "campaign_wall_seconds": 6.1416168212890625,
+      "candidate_id": "H5-0018",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 80,
+        "heads": 8,
+        "sequence": 3584
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "52fa2b6f6c6dc135",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1189, 2776, 566.07",
+        "processes": "45916, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.1915376679400348,
+      "v3_probability": 0.1674465143625053,
+      "wall_seconds": 4.707780361175537,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":80,\"heads\":8,\"sequence\":3584}|float16"
+    },
+    {
+      "aggregate_score": 0.32210809566496285,
+      "campaign_wall_seconds": 5.335859060287476,
+      "candidate_id": "H5-0019",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 96,
+        "heads": 8,
+        "sequence": 3584
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "5f567640a98a42bb",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1189, 2776, 566.07",
+        "processes": "46029, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.19197654388500127,
+      "v3_probability": 0.16786272397459134,
+      "wall_seconds": 3.8805689811706543,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":96,\"heads\":8,\"sequence\":3584}|float16"
+    },
+    {
+      "aggregate_score": 0.32115809943811685,
+      "campaign_wall_seconds": 4.863597869873047,
+      "candidate_id": "H5-0020",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 64,
+        "heads": 4,
+        "sequence": 3584
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "066d2a3aab8146d5",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1185, 2780, 566.07",
+        "processes": "46142, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.1910162966602715,
+      "v3_probability": 0.166952790791908,
+      "wall_seconds": 3.4519734382629395,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":64,\"heads\":4,\"sequence\":3584}|float16"
+    },
+    {
+      "aggregate_score": 0.26539247271134137,
+      "campaign_wall_seconds": 5.121851444244385,
+      "candidate_id": "H5-0021",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 80,
+        "heads": 4,
+        "sequence": 4608
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "0df810028517d3e8",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1185, 2780, 566.07",
+        "processes": "46242, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.18106482823990017,
+      "v3_probability": 0.15587941068866118,
+      "wall_seconds": 3.679649829864502,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":80,\"heads\":4,\"sequence\":4608}|float16"
+    },
+    {
+      "aggregate_score": 0.32020810321127086,
+      "campaign_wall_seconds": 3.9141504764556885,
+      "candidate_id": "H5-0022",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 32,
+        "heads": 4,
+        "sequence": 3584
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "8203972ed5255ed9",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1181, 2784, 566.07",
+        "processes": "46360, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.1894759937275099,
+      "v3_probability": 0.16549796433631966,
+      "wall_seconds": 2.4331412315368652,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":32,\"heads\":4,\"sequence\":3584}|float16"
+    },
+    {
+      "aggregate_score": 0.32068310132469385,
+      "campaign_wall_seconds": 4.791719913482666,
+      "candidate_id": "H5-0023",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 48,
+        "heads": 4,
+        "sequence": 3584
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "741be54eb75c5b75",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1185, 2780, 566.07",
+        "processes": "46452, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.1903647067326236,
+      "v3_probability": 0.16633673257998077,
+      "wall_seconds": 3.3753514289855957,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":48,\"heads\":4,\"sequence\":3584}|float16"
+    },
+    {
+      "aggregate_score": 0.21011880831632546,
+      "campaign_wall_seconds": 5.623217821121216,
+      "candidate_id": "H5-0024",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 96,
+        "heads": 4,
+        "sequence": 4096
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "a5b1623584a9db42",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1185, 2780, 566.07",
+        "processes": "46544, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.1704851250378253,
+      "v3_probability": 0.14566080776027832,
+      "wall_seconds": 4.197437524795532,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":96,\"heads\":4,\"sequence\":4096}|float16"
+    },
+    {
+      "aggregate_score": 0.3230580918918088,
+      "campaign_wall_seconds": 5.380100965499878,
+      "candidate_id": "H5-0025",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 128,
+        "heads": 4,
+        "sequence": 3584
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "3e710a17024e2872",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1189, 2776, 566.07",
+        "processes": "46662, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.19269854737253025,
+      "v3_probability": 0.16854877857623496,
+      "wall_seconds": 3.984330177307129,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":128,\"heads\":4,\"sequence\":3584}|float16"
+    },
+    {
+      "aggregate_score": 0.21662882710297085,
+      "campaign_wall_seconds": 5.955491065979004,
+      "candidate_id": "H5-0026",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 128,
+        "heads": 4,
+        "sequence": 3584
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "fd8b4531ef6c2dce",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1183, 2782, 566.07",
+        "processes": "46767, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.1983218525406712,
+      "v3_probability": 0.17682436386838302,
+      "wall_seconds": 4.546234607696533,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":128,\"heads\":4,\"sequence\":3584}|float32"
+    },
+    {
+      "aggregate_score": 0.21567883087612486,
+      "campaign_wall_seconds": 6.255083799362183,
+      "candidate_id": "H5-0027",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 96,
+        "heads": 4,
+        "sequence": 3584
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "b0ee181e8f876d90",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1183, 2782, 566.07",
+        "processes": "46875, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.1975839364856503,
+      "v3_probability": 0.17611175964354275,
+      "wall_seconds": 4.751210451126099,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":96,\"heads\":4,\"sequence\":3584}|float32"
+    },
+    {
+      "aggregate_score": 0.32163309755153985,
+      "campaign_wall_seconds": 5.470614194869995,
+      "candidate_id": "H5-0028",
+      "configuration": {
+        "batch": 2,
+        "head_dim": 80,
+        "heads": 4,
+        "sequence": 3584
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "0379b05f169182e4",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1189, 2776, 566.07",
+        "processes": "46979, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.1915376679400348,
+      "v3_probability": 0.1674465143625053,
+      "wall_seconds": 3.988102436065674,
+      "workload_group_id": "attention|{\"batch\":2,\"head_dim\":80,\"heads\":4,\"sequence\":3584}|float16"
+    },
+    {
+      "aggregate_score": 0.21425383653585592,
+      "campaign_wall_seconds": 5.202738285064697,
+      "candidate_id": "H5-0029",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 48,
+        "heads": 4,
+        "sequence": 3584
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "b0945caf3a92d762",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1179, 2786, 566.07",
+        "processes": "47080, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.19593643665457142,
+      "v3_probability": 0.17452650715716256,
+      "wall_seconds": 3.7968246936798096,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":48,\"heads\":4,\"sequence\":3584}|float32"
+    },
+    {
+      "aggregate_score": 0.21472883464927892,
+      "campaign_wall_seconds": 4.992226600646973,
+      "candidate_id": "H5-0030",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 4,
+        "sequence": 3584
+      },
+      "dtype": "float32",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "44a451823cbf4d43",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1179, 2786, 566.07",
+        "processes": "47177, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.1966024663728475,
+      "v3_probability": 0.17516652399655536,
+      "wall_seconds": 3.6137492656707764,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":64,\"heads\":4,\"sequence\":3584}|float32"
+    },
+    {
+      "aggregate_score": 0.26508711678128377,
+      "campaign_wall_seconds": 5.3172407150268555,
+      "candidate_id": "H5-0031",
+      "configuration": {
+        "batch": 1,
+        "head_dim": 64,
+        "heads": 4,
+        "sequence": 4608
+      },
+      "dtype": "float16",
+      "environment": {
+        "allocator_environment": {
+          "XLA_CLIENT_MEM_FRACTION": null,
+          "XLA_PYTHON_CLIENT_ALLOCATOR": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "backend": "gpu",
+        "devices": [
+          "cuda:0"
+        ],
+        "jax_version": "0.11.0",
+        "jaxlib_version": "0.11.0",
+        "nvidia_before": {
+          "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 0, 3964, 566.07",
+          "processes": "",
+          "returncode": 0
+        },
+        "python_version": "3.12.3"
+      },
+      "family": "attention",
+      "graph_fingerprint": "859d448076bab0f0",
+      "nvidia_after": {
+        "gpu": "0, NVIDIA GeForce RTX 3050 Laptop GPU, 4096, 1185, 2780, 566.07",
+        "processes": "47281, [Not Found], [N/A]",
+        "returncode": 0
+      },
+      "outcome": "FIT",
+      "phase": "complete",
+      "repeat_id": 0,
+      "sampling_stratum": {
+        "family": "attention",
+        "scale": "large"
+      },
+      "status": "FIT",
+      "subprocess_returncode": 0,
+      "subprocess_stderr_tail": "",
+      "v2_probability": 0.18058809174813875,
+      "v3_probability": 0.15543533749041719,
+      "wall_seconds": 3.8190605640411377,
+      "workload_group_id": "attention|{\"batch\":1,\"head_dim\":64,\"heads\":4,\"sequence\":4608}|float16"
+    }
+  ],
+  "status": "COMPUTATIONALLY_VERIFIED"
+}
