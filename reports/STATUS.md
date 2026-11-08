@@ -2,6 +2,8 @@
 
 ## Current frontier
 
+2026-11-08 BATCH 3 (COMPUTATIONALLY VERIFIED): 180 unseen recipes, predictions frozen before runtime; 125 V2 LIKELY_FIT, all FIT (zero false-safe); exact bound 2.37% alone, 1.06% pooled with the 157 earlier. Attention (16) and convolution (20) per-family bounds stay wide. Looser runner than the uniform qualification. See `research/BATCH3_CONFIRMATORY_RESULTS_2026-11-08.md`. Next: attention/convolution-focused panel, then the separate release review.
+
 2026-11-08 (COMPUTATIONALLY VERIFIED): run 2 reproduced run 1 exactly (200/200 per-recipe outcomes identical, both audits pass). Batch-3 fresh panel (180 unseen recipes, 125 LIKELY_FIT) is frozen, with predictions committed before any runtime result; runtime pending. Draft protocol: `research/FRESH_PANEL_PROTOCOL_DRAFT_2026-11-08.md`.
 
 2026-11-07 RESULT (COMPUTATIONALLY VERIFIED): the fresh uniform 600 s campaign completed 200/200 recipes, 18/18 pilots FIT, 157/157 LIKELY_FIT recipes FIT, zero false-safe OOMs, zero timeouts (176 FIT, 17 execution OOM, 7 compile OOM). Independent audits passed on Windows and Linux. Single run, same population as before; public API stays disabled. See `research/GPU_UNIFORM_QUALIFICATION_RESULTS_2026-11-07.md`. Next: reproduce once, then the separate release review.
