@@ -2,6 +2,8 @@
 
 ## Current frontier
 
+2026-11-09 BATCH 4 (COMPUTATIONALLY VERIFIED): 160 unseen attention/convolution LIKELY_FIT recipes, all FIT; per-family exact bound 3.68% alone (about 3% pooled with batch 3); all-batch pooled LIKELY_FIT bound 0.68% (442 trials, zero failures). Attention coverage is small/medium only. Looser runner; one run. See `research/BATCH4_ATTENTION_CONV_RESULTS_2026-11-09.md`. Next: large/near-device attention panel, reproduce batch 3/4, then the separate release review.
+
 2026-11-08 BATCH 3 (COMPUTATIONALLY VERIFIED): 180 unseen recipes, predictions frozen before runtime; 125 V2 LIKELY_FIT, all FIT (zero false-safe); exact bound 2.37% alone, 1.06% pooled with the 157 earlier. Attention (16) and convolution (20) per-family bounds stay wide. Looser runner than the uniform qualification. See `research/BATCH3_CONFIRMATORY_RESULTS_2026-11-08.md`. Next: attention/convolution-focused panel, then the separate release review.
 
 2026-11-08 (COMPUTATIONALLY VERIFIED): run 2 reproduced run 1 exactly (200/200 per-recipe outcomes identical, both audits pass). Batch-3 fresh panel (180 unseen recipes, 125 LIKELY_FIT) is frozen, with predictions committed before any runtime result; runtime pending. Draft protocol: `research/FRESH_PANEL_PROTOCOL_DRAFT_2026-11-08.md`.
