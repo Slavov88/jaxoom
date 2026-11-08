@@ -18,19 +18,21 @@ h2, base = h3.h2, h3.base
 SEED = 20261109
 PLAN = ROOT / "oom_risk_heldout4_plan_2026-11-09.json"
 PRED = ROOT / "oom_risk_heldout4_predictions_2026-11-09.json"
-MANIFEST = ROOT / "oom_risk_heldout4_validation_manifest_2026-11-09.json"
+MANIFEST = ROOT / "oom_risk_heldout4_validation_manifest_2026-11-09_amendment1.json"
 TARGET = {"attention": 80, "convolution": 80}
 POP_PER_CELL = {"attention": 220, "convolution": 160}
 SCALES = ("small", "medium", "large", "near_device")
-BANDS = (("boundary", 0.10, 0.20), ("low", 0.0, 0.10))
+BANDS = (("boundary", 0.0, 0.20),)  # amendment 1: V2 LIKELY_FIT scores never fall below ~0.126, so the low band is empty
 
 def manifest():
     models = {}
     for name, path in (("v2", h2.V2), ("v3", h2.V3)):
         x = json.loads(path.read_text()); models[name] = {"model_hash": x["model_hash"], "artifact_sha256": h2.file_sha(path)}
-    x = {"status": "FROZEN_BEFORE_BATCH4_PANEL", "date": "2026-11-09", "primary_model": "V2", "models": models,
+    x = {"status": "FROZEN_BEFORE_BATCH4_PANEL_AMENDMENT1", "date": "2026-11-09", "primary_model": "V2", "models": models,
          "likely_fit_rule": "v2_probability < 0.20", "target_likely_fit": TARGET, "population_per_cell": POP_PER_CELL,
-         "band_rule": "half boundary [0.10,0.20), half low [0,0.10), balanced across scales", "seed": SEED,
+         "band_rule": "all LIKELY_FIT (p<0.20), balanced across scales; amendment 1 of the 2026-11-09 manifest: the low band [0,0.10) is empty because observed V2 LIKELY_FIT scores are >=0.126, so the full target is drawn from the occupied range",
+         "amends": "oom_risk_heldout4_validation_manifest_2026-11-09.json",
+         "amendment_made_before_any_runtime_outcome": True, "seed": SEED,
          "no_retraining": True, "selection_uses_model_scores_only": True, "selection_uses_outcomes": False,
          "excluded_prior": "all rows of batches 1-3 incl. batch-3 plan",
          "kill_criterion": "any selected LIKELY_FIT recipe that is execution or compile OOM fails the per-family false-safe claim"}
@@ -55,7 +57,7 @@ def build():
         lf = [t for t in scored if t[2] < 0.20]
         rng = np.random.default_rng(SEED + 100); chosen = []
         for bname, lo, hi in BANDS:
-            need = TARGET[fam] // 2; per_scale = {s: [t for t in lf if t[0]["sampling_stratum"]["scale"] == s and lo <= t[2] < hi] for s in SCALES}
+            need = TARGET[fam]; per_scale = {s: [t for t in lf if t[0]["sampling_stratum"]["scale"] == s and lo <= t[2] < hi] for s in SCALES}
             for s in SCALES: rng.shuffle(per_scale[s])
             got = []
             while len(got) < need and any(per_scale.values()):

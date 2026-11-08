@@ -1,0 +1,33 @@
+{
+  "amendment_made_before_any_runtime_outcome": true,
+  "amends": "oom_risk_heldout4_validation_manifest_2026-11-09.json",
+  "band_rule": "all LIKELY_FIT (p<0.20), balanced across scales; amendment 1 of the 2026-11-09 manifest: the low band [0,0.10) is empty because observed V2 LIKELY_FIT scores are >=0.126, so the full target is drawn from the occupied range",
+  "date": "2026-11-09",
+  "excluded_prior": "all rows of batches 1-3 incl. batch-3 plan",
+  "kill_criterion": "any selected LIKELY_FIT recipe that is execution or compile OOM fails the per-family false-safe claim",
+  "likely_fit_rule": "v2_probability < 0.20",
+  "models": {
+    "v2": {
+      "artifact_sha256": "5b2eeedf9a180af1c79678e94ecf3401b0256b4906e1d8f5180f058d3b354ae3",
+      "model_hash": "9e7f03a6ca027950e84a42179df3b8743d8f0b81157b500027fb765de1a42e96"
+    },
+    "v3": {
+      "artifact_sha256": "305b7cb690e4c95f9bda13ae733233dd7de31d6c7265c0e80e060162baea576a",
+      "model_hash": "7663490267c552569c5b9f1b93cf05dcc113282317c899f55c8e30e06f4b2da8"
+    }
+  },
+  "no_retraining": true,
+  "population_per_cell": {
+    "attention": 220,
+    "convolution": 160
+  },
+  "primary_model": "V2",
+  "seed": 20261109,
+  "selection_uses_model_scores_only": true,
+  "selection_uses_outcomes": false,
+  "status": "FROZEN_BEFORE_BATCH4_PANEL_AMENDMENT1",
+  "target_likely_fit": {
+    "attention": 80,
+    "convolution": 80
+  }
+}
